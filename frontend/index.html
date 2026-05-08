@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ITB Engine</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+</head>
+<body>
+<header>
+  <h1>ITB Engine</h1>
+  <p class="subtitle">Information-Theoretic Bootstrap &mdash; quantum gravity theory-space exclusions.</p>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>Single-theory check</h2>
+    <form id="check-form">
+      <label>g_4 <input type="number" name="g_4" step="0.1" value="0.5"></label>
+      <label>g_6 <input type="number" name="g_6" step="0.1" value="0.5"></label>
+      <fieldset>
+        <legend>Constraints</legend>
+        <label><input type="checkbox" name="c" value="scalar_positivity_g4" checked> Scalar positivity g_4</label>
+        <label><input type="checkbox" name="c" value="scalar_positivity_g6" checked> Scalar positivity g_6</label>
+      </fieldset>
+      <button type="submit">Check</button>
+    </form>
+    <pre id="check-result"></pre>
+  </section>
+
+  <section class="panel">
+    <h2>Sweep theory space</h2>
+    <form id="sweep-form">
+      <label>x param <input type="text" name="x_param" value="g_4"></label>
+      <label>x min <input type="number" name="x_min" step="0.1" value="-1"></label>
+      <label>x max <input type="number" name="x_max" step="0.1" value="1"></label>
+      <label>x steps <input type="number" name="x_steps" min="2" value="31"></label>
+      <label>y param <input type="text" name="y_param" value="g_6"></label>
+      <label>y min <input type="number" name="y_min" step="0.1" value="-1"></label>
+      <label>y max <input type="number" name="y_max" step="0.1" value="1"></label>
+      <label>y steps <input type="number" name="y_steps" min="2" value="31"></label>
+      <button type="submit">Run sweep</button>
+    </form>
+    <div id="sweep-plot"></div>
+  </section>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
