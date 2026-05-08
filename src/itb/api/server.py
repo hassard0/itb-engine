@@ -63,6 +63,10 @@ from itb.importance import constraint_importance
 from itb.mapper import sweep_2d
 from itb.observables import ScalarForwardAmplitude
 from itb.battery import run_full_battery
+from itb.experiment_priority import (
+    ExperimentForecast,
+    rank_experiments,
+)
 from itb.path_distance import path_through_allowed_region
 from itb.perturbation import smallest_violating_perturbation
 from itb.phase_components import phase_components
@@ -248,6 +252,18 @@ class MeasurementRequest(BaseModel):
 class FrameworkReportRequest(BaseModel):
     frameworks: list[str]
     constraints: list[str]
+
+
+class ExperimentPriorityRequest(BaseModel):
+    base_constraints: list[str]
+    experiments: list[dict]   # [{label, coefficient_name, central_value, sigma}]
+    x_param: str = "g_4"
+    x_range: tuple[float, float] = (0.0, 2.0)
+    x_steps: int = 21
+    y_param: str = "g_6"
+    y_range: tuple[float, float] = (0.0, 2.0)
+    y_steps: int = 21
+    fixed_coefficients: dict[str, float] | None = None
 
 
 class BatteryRequest(BaseModel):
@@ -567,6 +583,39 @@ def fingerprint(req: FingerprintRequest) -> dict:
             for fp in fps
         ],
         "distance_matrix": matrix,
+    }
+
+
+@app.post("/experiment-priority")
+def experiment_priority(req: ExperimentPriorityRequest) -> dict:
+    constraints = _resolve_constraints(req.base_constraints)
+    forecasts: list[ExperimentForecast] = []
+    for e in req.experiments:
+        forecasts.append(ExperimentForecast(
+            label=e["label"],
+            coefficient_name=e["coefficient_name"],
+            central_value=float(e["central_value"]),
+            sigma=float(e["sigma"]),
+            sigma_threshold=float(e.get("sigma_threshold", 2.0)),
+        ))
+    rankings = rank_experiments(
+        base_constraints=constraints,
+        experiments=forecasts,
+        x_param=req.x_param, x_range=req.x_range, x_steps=req.x_steps,
+        y_param=req.y_param, y_range=req.y_range, y_steps=req.y_steps,
+        fixed_coefficients=req.fixed_coefficients,
+    )
+    return {
+        "baseline_allowed": rankings[0].baseline_allowed if rankings else 0,
+        "rankings": [
+            {
+                "label": r.label,
+                "coefficient_name": r.coefficient_name,
+                "cells_excluded": r.cells_excluded,
+                "fraction_excluded": r.fraction_excluded,
+            }
+            for r in rankings
+        ],
     }
 
 
