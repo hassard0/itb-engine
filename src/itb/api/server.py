@@ -1,8 +1,10 @@
-"""FastAPI server exposing engine, mapper, and metadata to a localhost UI."""
+"""FastAPI server exposing engine, mapper, perturbation, fisher, and
+metadata to a localhost UI."""
 
 import json
 from pathlib import Path
 
+import numpy as np
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -13,17 +15,22 @@ from itb.constraints.scalar_positivity import (
     ScalarPositivityG4,
     ScalarPositivityG6,
 )
+from itb.constraints.scalar_positivity_sdp import ScalarPositivityG4SDP
 from itb.engine import check
+from itb.fisher import fisher_metric
 from itb.frameworks.base import Framework
 from itb.frameworks.pure_gr import PureGR
 from itb.mapper import sweep_2d
-from itb.plotting import build_allowed_region_figure
+from itb.observables import ScalarForwardAmplitude
+from itb.perturbation import smallest_violating_perturbation
+from itb.plotting import build_allowed_region_figure, build_binding_class_figure
 from itb.theory import Theory
 
 
 CONSTRAINTS: dict[str, type[Constraint]] = {
     "scalar_positivity_g4": ScalarPositivityG4,
     "scalar_positivity_g6": ScalarPositivityG6,
+    "scalar_positivity_g4_sdp": ScalarPositivityG4SDP,
 }
 
 FRAMEWORKS: dict[str, type[Framework]] = {
@@ -43,6 +50,7 @@ def _resolve_constraints(names: list[str]) -> list[Constraint]:
 class CheckRequest(BaseModel):
     coefficients: dict[str, float]
     constraints: list[str]
+    tolerance: float | None = None
 
 
 class SweepRequest(BaseModel):
@@ -54,9 +62,22 @@ class SweepRequest(BaseModel):
     y_steps: int
     constraints: list[str]
     fixed_coefficients: dict[str, float] | None = None
+    color_by: str = "feasibility"
 
 
-app = FastAPI(title="ITB Engine", version="0.1.0")
+class PerturbationRequest(BaseModel):
+    coefficients: dict[str, float]
+    constraints: list[str]
+
+
+class FisherRequest(BaseModel):
+    coefficients: dict[str, float]
+    params: list[str]
+    s_values: list[float]
+    sigma: float
+
+
+app = FastAPI(title="ITB Engine", version="0.2.0")
 
 
 @app.get("/health")
@@ -95,14 +116,21 @@ def list_frameworks() -> list[dict]:
 def check_theory(req: CheckRequest) -> dict:
     theory = Theory(coefficients=req.coefficients)
     constraints = _resolve_constraints(req.constraints)
-    report = check(theory, constraints)
+    kwargs = {}
+    if req.tolerance is not None:
+        kwargs["tolerance"] = req.tolerance
+    report = check(theory, constraints, **kwargs)
     return {
         "feasible": report.feasible,
+        "binding": report.binding,
+        "binding_class": report.binding_class,
+        "tolerance": report.tolerance,
         "results": [
             {
                 "constraint_name": r.constraint_name,
                 "satisfied": r.satisfied,
                 "margin": r.margin,
+                "signed_distance_margin": r.signed_distance_margin,
                 "details": r.details,
             }
             for r in report.results
@@ -123,15 +151,40 @@ def sweep(req: SweepRequest) -> dict:
         constraints=constraints,
         fixed_coefficients=req.fixed_coefficients,
     )
-    fig = build_allowed_region_figure(result)
+    if req.color_by == "binding_class":
+        fig = build_binding_class_figure(result)
+    else:
+        fig = build_allowed_region_figure(result)
     return {
         "x_param": result.x_param,
         "x_values": result.x_values.tolist(),
         "y_param": result.y_param,
         "y_values": result.y_values.tolist(),
         "grid": result.feasibility_grid.tolist(),
+        "binding_grid": result.binding_grid.tolist(),
+        "binding_class_grid": result.binding_class_grid.tolist(),
         "figure": json.loads(fig.to_json()),
     }
+
+
+@app.post("/perturbation")
+def perturbation(req: PerturbationRequest) -> dict:
+    theory = Theory(coefficients=req.coefficients)
+    constraints = _resolve_constraints(req.constraints)
+    res = smallest_violating_perturbation(theory, constraints)
+    return {
+        "distance": res.distance,
+        "binding_constraint": res.binding_constraint,
+        "perturbed_coefficients": res.perturbed_theory.coefficients,
+    }
+
+
+@app.post("/fisher")
+def fisher(req: FisherRequest) -> dict:
+    theory = Theory(coefficients=req.coefficients)
+    obs = ScalarForwardAmplitude(s_values=np.array(req.s_values))
+    g = fisher_metric(observable=obs, theory=theory, params=req.params, sigma=req.sigma)
+    return {"metric": g.tolist(), "params": req.params}
 
 
 _FRONTEND_DIR = Path(__file__).resolve().parents[3] / "frontend"
