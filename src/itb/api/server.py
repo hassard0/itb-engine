@@ -23,7 +23,12 @@ from itb.voxel import slice_voxel, voxel_sweep_3d
 from itb.constraints.base import Constraint
 from itb.constraints.bekenstein_tight import BekensteinTight
 from itb.constraints.eft_validity import EFTValidityBox
+from itb.constraints.experimental import MeasuredWilsonCoefficient
 from itb.constraints.graviton_eft import GravitonMixedPositivity
+from itb.constraints.spin_decomposed import (
+    SpinTwoPositivity,
+    SpinZeroPositivity,
+)
 from itb.constraints.scalar_convexity import ScalarConvexityG6vsG4
 from itb.constraints.scalar_positivity import (
     ScalarPositivityG4,
@@ -34,6 +39,8 @@ from itb.engine import check
 from itb.fisher import fisher_metric
 from itb.fragility import fragility_map_2d
 from itb.frameworks.base import Framework
+from itb.frameworks.asymptotic_safety import AsymptoticSafety
+from itb.frameworks.lqg_induced import LQGInduced
 from itb.frameworks.pure_gr import PureGR
 from itb.frameworks.string_tree_eft import StringTreeEFT
 from itb.importance import constraint_importance
@@ -42,6 +49,7 @@ from itb.observables import ScalarForwardAmplitude
 from itb.path_distance import path_through_allowed_region
 from itb.perturbation import smallest_violating_perturbation
 from itb.phase_components import phase_components
+from itb.report import render_framework_comparison
 from itb.plotting import (
     build_allowed_region_figure,
     build_binding_class_figure,
@@ -58,12 +66,16 @@ CONSTRAINTS: dict[str, type[Constraint]] = {
     "graviton_mixed_positivity": GravitonMixedPositivity,
     "bekenstein_tight": BekensteinTight,
     "eft_validity_box": EFTValidityBox,
+    "spin_zero_positivity": SpinZeroPositivity,
+    "spin_two_positivity": SpinTwoPositivity,
     "scalar_positivity_g4_sdp": ScalarPositivityG4SDP,
 }
 
 FRAMEWORKS: dict[str, type[Framework]] = {
     "pure_gr": PureGR,
     "string_tree_eft": StringTreeEFT,
+    "asymptotic_safety": AsymptoticSafety,
+    "lqg_induced": LQGInduced,
 }
 
 
@@ -193,6 +205,20 @@ class VoxelRequest(BaseModel):
 
 
 class FingerprintRequest(BaseModel):
+    frameworks: list[str]
+    constraints: list[str]
+
+
+class MeasurementRequest(BaseModel):
+    coefficient_name: str
+    central_value: float
+    sigma: float
+    sigma_threshold: float = 2.0
+    experiment_label: str = "synthetic"
+    coefficients: dict[str, float]
+
+
+class FrameworkReportRequest(BaseModel):
     frameworks: list[str]
     constraints: list[str]
 
@@ -502,6 +528,36 @@ def fingerprint(req: FingerprintRequest) -> dict:
         ],
         "distance_matrix": matrix,
     }
+
+
+@app.post("/measurement")
+def measurement(req: MeasurementRequest) -> dict:
+    c = MeasuredWilsonCoefficient(
+        coefficient_name=req.coefficient_name,
+        central_value=req.central_value,
+        sigma=req.sigma,
+        sigma_threshold=req.sigma_threshold,
+        experiment_label=req.experiment_label,
+    )
+    r = c.evaluate(Theory(coefficients=req.coefficients))
+    return {
+        "constraint_name": r.constraint_name,
+        "satisfied": r.satisfied,
+        "margin": r.margin,
+        "details": r.details,
+    }
+
+
+@app.post("/framework-report")
+def framework_report(req: FrameworkReportRequest) -> dict:
+    constraints = _resolve_constraints(req.constraints)
+    fws = []
+    for n in req.frameworks:
+        if n not in FRAMEWORKS:
+            raise HTTPException(400, f"Unknown framework: {n}")
+        fws.append(FRAMEWORKS[n]())
+    md = render_framework_comparison(fws, constraints)
+    return {"markdown": md, "framework_count": len(fws)}
 
 
 @app.post("/phases")
