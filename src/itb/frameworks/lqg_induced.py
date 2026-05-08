@@ -25,8 +25,11 @@ class LQGInduced(Framework):
         # and asymptotic-safety (0.43). LQG-induced has comparable graviton-
         # to-matter coefficients, qualitatively distinct from the others.
         # g_8 satisfies dispersion tower: g_6^2 = 0.2025 <= 0.6 * 0.4 = 0.24 ✓
+        # g_R3: spin-foam amplitudes generate larger cubic-curvature
+        # corrections than string-tree-level. g_R3 = 0.30 satisfies
+        # g_R3 <= g_4^2 = 0.36 ✓ (with small margin)
         return Theory(
-            coefficients={"g_4": 0.6, "g_6": 0.45, "g_R2": 0.3, "g_8": 0.4},
+            coefficients={"g_4": 0.6, "g_6": 0.45, "g_R2": 0.3, "g_8": 0.4, "g_R3": 0.30},
             name=self.name,
             source=self.citation,
         )

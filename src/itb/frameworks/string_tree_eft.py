@@ -31,12 +31,16 @@ class StringTreeEFT(Framework):
         #   |g_*| <= 2  (EFT validity, Λ in O(1) units)   ✓
         # g_8 added in v1.0: must satisfy g_6^2 <= g_4 * g_8.
         # 0.4^2 = 0.16, 0.5 * 0.4 = 0.2 ✓ (with margin 0.04)
+        # g_R3 added in v1.2: cubic graviton self-coupling. String tree-level
+        # produces small cubic curvature corrections (suppressed by α'^3).
+        # g_R3 = 0.15 satisfies g_R3 <= g_4^2 = 0.25 ✓
         return Theory(
             coefficients={
                 "g_4": 0.5,
                 "g_6": 0.4,
                 "g_R2": 0.2,
                 "g_8": 0.4,
+                "g_R3": 0.15,
             },
             name=self.name,
             source=self.citation,

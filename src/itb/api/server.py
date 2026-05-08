@@ -35,6 +35,10 @@ from itb.constraints.holographic_entropy import (
 from itb.constraints.eft_validity import EFTValidityBox
 from itb.constraints.experimental import MeasuredWilsonCoefficient
 from itb.constraints.graviton_eft import GravitonMixedPositivity
+from itb.constraints.graviton_self_coupling import (
+    CubicCurvaturePositivity,
+    CubicGravitonMatterBound,
+)
 from itb.constraints.ligo_graviton_mass import LIGOGravitonMassBound
 from itb.constraints.swampland import WeakGravityConjecture
 from itb.constraints.spin_decomposed import (
@@ -89,6 +93,8 @@ CONSTRAINTS: dict[str, type[Constraint]] = {
     "ligo_graviton_mass_bound": LIGOGravitonMassBound,
     "holographic_subadditivity": HolographicSubadditivity,
     "bnossw_monogamy": BNOSSWMonogamy,
+    "cubic_curvature_positivity": CubicCurvaturePositivity,
+    "cubic_graviton_matter_bound": CubicGravitonMatterBound,
     "scalar_positivity_g4_sdp": ScalarPositivityG4SDP,
 }
 
