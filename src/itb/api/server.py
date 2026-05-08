@@ -40,6 +40,12 @@ from itb.constraints.graviton_self_coupling import (
     CubicGravitonMatterBound,
 )
 from itb.constraints.ligo_graviton_mass import LIGOGravitonMassBound
+from itb.constraints.parity_violation import (
+    LIGOBirefringenceBound,
+    LeftHandedGravitonPositivity,
+    ParityViolatingPositivity,
+    RightHandedGravitonPositivity,
+)
 from itb.constraints.swampland import WeakGravityConjecture
 from itb.constraints.spin_decomposed import (
     SpinTwoPositivity,
@@ -99,6 +105,10 @@ CONSTRAINTS: dict[str, type[Constraint]] = {
     "bnossw_monogamy": BNOSSWMonogamy,
     "cubic_curvature_positivity": CubicCurvaturePositivity,
     "cubic_graviton_matter_bound": CubicGravitonMatterBound,
+    "parity_violating_positivity": ParityViolatingPositivity,
+    "left_handed_graviton_positivity": LeftHandedGravitonPositivity,
+    "right_handed_graviton_positivity": RightHandedGravitonPositivity,
+    "ligo_birefringence_bound": LIGOBirefringenceBound,
     "scalar_positivity_g4_sdp": ScalarPositivityG4SDP,
 }
 

@@ -34,6 +34,9 @@ class StringTreeEFT(Framework):
         # g_R3 added in v1.2: cubic graviton self-coupling. String tree-level
         # produces small cubic curvature corrections (suppressed by α'^3).
         # g_R3 = 0.15 satisfies g_R3 <= g_4^2 = 0.25 ✓
+        # Tree-level bosonic string is parity-CONSERVING (no Pontryagin
+        # coupling at this order). g_R2_parity = 0 distinguishes string-EFT
+        # from LQG-induced (which has non-zero g_R2_parity from Holst term).
         return Theory(
             coefficients={
                 "g_4": 0.5,
@@ -41,6 +44,7 @@ class StringTreeEFT(Framework):
                 "g_R2": 0.2,
                 "g_8": 0.4,
                 "g_R3": 0.15,
+                "g_R2_parity": 0.0,
             },
             name=self.name,
             source=self.citation,

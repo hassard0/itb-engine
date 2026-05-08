@@ -28,8 +28,16 @@ class LQGInduced(Framework):
         # g_R3: spin-foam amplitudes generate larger cubic-curvature
         # corrections than string-tree-level. g_R3 = 0.30 satisfies
         # g_R3 <= g_4^2 = 0.36 ✓ (with small margin)
+        # LQG canonically uses the Holst term γ * ε^μνρσ R_μνρσ which is
+        # parity-violating. The Immirzi parameter γ controls its strength.
+        # Typical γ ~ 0.2-0.3 → non-zero g_R2_parity. This is a discriminating
+        # feature: LQG is parity-violating by construction; string and AS are
+        # parity-conserving at our truncation order.
         return Theory(
-            coefficients={"g_4": 0.6, "g_6": 0.45, "g_R2": 0.3, "g_8": 0.4, "g_R3": 0.30},
+            coefficients={
+                "g_4": 0.6, "g_6": 0.45, "g_R2": 0.3, "g_8": 0.4, "g_R3": 0.30,
+                "g_R2_parity": 0.08,
+            },
             name=self.name,
             source=self.citation,
         )
