@@ -31,6 +31,9 @@ const ALL_CONSTRAINTS = [
   "scalar_positivity_g4",
   "scalar_positivity_g6",
   "scalar_convexity_g6_vs_g4",
+  "graviton_mixed_positivity",
+  "bekenstein_tight",
+  "eft_validity_box",
 ];
 
 document.getElementById("adversarial-form").addEventListener("submit", async (e) => {
@@ -67,6 +70,23 @@ document.getElementById("path-form").addEventListener("submit", async (e) => {
   } catch (err) { out.textContent = String(err); }
 });
 
+document.getElementById("phases-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const body = {
+    x_param: "g_4", x_range: [-1, 1], x_steps: 31,
+    y_param: "g_6", y_range: [-1, 1], y_steps: 31,
+    constraints: ALL_CONSTRAINTS,
+  };
+  const out = document.getElementById("phases-result");
+  try {
+    const data = await postJSON("/phases", body);
+    out.textContent = JSON.stringify({
+      n_components: data.n_components,
+      component_sizes: data.component_sizes,
+    }, null, 2);
+  } catch (err) { out.textContent = String(err); }
+});
+
 document.getElementById("completeness-form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const body = {
@@ -95,6 +115,7 @@ document.getElementById("sweep-form").addEventListener("submit", async (e) => {
     y_steps: parseInt(fd.get("y_steps"), 10),
     constraints: ALL_CONSTRAINTS,
     color_by: fd.get("color_by"),
+    overlay_frameworks: fd.getAll("fw"),
   };
   try {
     const data = await postJSON("/sweep", body);

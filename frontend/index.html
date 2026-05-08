@@ -20,10 +20,12 @@
       <label>g_6 <input type="number" name="g_6" step="0.1" value="0.5"></label>
       <fieldset>
         <legend>Constraints</legend>
-        <label><input type="checkbox" name="c" value="scalar_positivity_g4" checked> g_4 positivity</label>
-        <label><input type="checkbox" name="c" value="scalar_positivity_g6" checked> g_6 positivity</label>
-        <label><input type="checkbox" name="c" value="scalar_convexity_g6_vs_g4" checked> convexity g_6 &ge; g_4&sup2;</label>
-        <label><input type="checkbox" name="c" value="graviton_mixed_positivity"> graviton mixed g_R2&sup2; &le; g_4 g_6</label>
+        <label><input type="checkbox" name="c" value="scalar_positivity_g4" checked> g_4 positivity (A)</label>
+        <label><input type="checkbox" name="c" value="scalar_positivity_g6" checked> g_6 positivity (A)</label>
+        <label><input type="checkbox" name="c" value="scalar_convexity_g6_vs_g4" checked> convexity g_6 &ge; g_4&sup2; (A)</label>
+        <label><input type="checkbox" name="c" value="graviton_mixed_positivity"> graviton mixed (A)</label>
+        <label><input type="checkbox" name="c" value="bekenstein_tight"> Bekenstein tight (B)</label>
+        <label><input type="checkbox" name="c" value="eft_validity_box"> EFT validity box (C)</label>
       </fieldset>
       <label>g_R2 (optional) <input type="number" name="g_R2" step="0.1" value="0"></label>
       <button type="submit">Check</button>
@@ -49,9 +51,23 @@
           <option value="per_constraint">per binding constraint</option>
         </select>
       </label>
+      <fieldset>
+        <legend>Overlay frameworks</legend>
+        <label><input type="checkbox" name="fw" value="pure_gr"> pure GR</label>
+        <label><input type="checkbox" name="fw" value="string_tree_eft" checked> string tree EFT</label>
+      </fieldset>
       <button type="submit">Run sweep</button>
     </form>
     <div id="sweep-plot"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Phase decomposition</h2>
+    <p class="hint">Count disconnected components of the allowed region. Multiple components = different UV-completion phases.</p>
+    <form id="phases-form">
+      <button type="submit">Compute</button>
+    </form>
+    <pre id="phases-result"></pre>
   </section>
 
   <section class="panel">

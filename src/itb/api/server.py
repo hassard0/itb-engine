@@ -13,6 +13,8 @@ from pydantic import BaseModel
 from itb.adversarial import adversarial_bootstrap
 from itb.completeness import check_boundedness
 from itb.constraints.base import Constraint
+from itb.constraints.bekenstein_tight import BekensteinTight
+from itb.constraints.eft_validity import EFTValidityBox
 from itb.constraints.graviton_eft import GravitonMixedPositivity
 from itb.constraints.scalar_convexity import ScalarConvexityG6vsG4
 from itb.constraints.scalar_positivity import (
@@ -25,11 +27,13 @@ from itb.fisher import fisher_metric
 from itb.fragility import fragility_map_2d
 from itb.frameworks.base import Framework
 from itb.frameworks.pure_gr import PureGR
+from itb.frameworks.string_tree_eft import StringTreeEFT
 from itb.importance import constraint_importance
 from itb.mapper import sweep_2d
 from itb.observables import ScalarForwardAmplitude
 from itb.path_distance import path_through_allowed_region
 from itb.perturbation import smallest_violating_perturbation
+from itb.phase_components import phase_components
 from itb.plotting import (
     build_allowed_region_figure,
     build_binding_class_figure,
@@ -44,11 +48,14 @@ CONSTRAINTS: dict[str, type[Constraint]] = {
     "scalar_positivity_g6": ScalarPositivityG6,
     "scalar_convexity_g6_vs_g4": ScalarConvexityG6vsG4,
     "graviton_mixed_positivity": GravitonMixedPositivity,
+    "bekenstein_tight": BekensteinTight,
+    "eft_validity_box": EFTValidityBox,
     "scalar_positivity_g4_sdp": ScalarPositivityG4SDP,
 }
 
 FRAMEWORKS: dict[str, type[Framework]] = {
     "pure_gr": PureGR,
+    "string_tree_eft": StringTreeEFT,
 }
 
 
@@ -77,6 +84,7 @@ class SweepRequest(BaseModel):
     constraints: list[str]
     fixed_coefficients: dict[str, float] | None = None
     color_by: str = "feasibility"  # feasibility | binding_class | per_constraint
+    overlay_frameworks: list[str] | None = None
 
 
 class PerturbationRequest(BaseModel):
@@ -134,6 +142,16 @@ class CompletenessRequest(BaseModel):
     starting_box: float = 2.0
     max_box: float = 8.0
     steps_per_axis: int = 11
+
+
+class PhasesRequest(BaseModel):
+    x_param: str
+    x_range: tuple[float, float]
+    x_steps: int
+    y_param: str
+    y_range: tuple[float, float]
+    y_steps: int
+    constraints: list[str]
 
 
 app = FastAPI(title="ITB Engine", version="0.2.0")
@@ -216,6 +234,39 @@ def sweep(req: SweepRequest) -> dict:
         fig = build_per_constraint_figure(result)
     else:
         fig = build_allowed_region_figure(result)
+
+    overlay = []
+    if req.overlay_frameworks:
+        import plotly.graph_objects as go
+        for fw_name in req.overlay_frameworks:
+            if fw_name not in FRAMEWORKS:
+                continue
+            theory = FRAMEWORKS[fw_name]().encode()
+            x_val = theory.coefficients.get(req.x_param)
+            y_val = theory.coefficients.get(req.y_param)
+            if x_val is None or y_val is None:
+                continue
+            fig.add_trace(go.Scatter(
+                x=[x_val],
+                y=[y_val],
+                mode="markers+text",
+                marker=dict(size=14, color="#1f1f1f", symbol="star"),
+                text=[fw_name],
+                textposition="top center",
+                name=fw_name,
+                hovertemplate=(
+                    f"{fw_name}<br>"
+                    f"{req.x_param}=%{{x:.3f}}<br>"
+                    f"{req.y_param}=%{{y:.3f}}<extra></extra>"
+                ),
+            ))
+            overlay.append({
+                "name": fw_name,
+                "coefficients": theory.coefficients,
+                req.x_param: x_val,
+                req.y_param: y_val,
+            })
+
     return {
         "x_param": result.x_param,
         "x_values": result.x_values.tolist(),
@@ -225,6 +276,7 @@ def sweep(req: SweepRequest) -> dict:
         "binding_grid": result.binding_grid.tolist(),
         "binding_class_grid": result.binding_class_grid.tolist(),
         "figure": json.loads(fig.to_json()),
+        "overlay_frameworks": overlay,
     }
 
 
@@ -288,6 +340,28 @@ def completeness(req: CompletenessRequest) -> dict:
         "final_box_size": report.final_box_size,
         "unbounded_directions": report.unbounded_directions,
         "fraction_allowed_at_final_box": report.fraction_allowed_at_final_box,
+    }
+
+
+@app.post("/phases")
+def phases(req: PhasesRequest) -> dict:
+    constraints = _resolve_constraints(req.constraints)
+    sweep = sweep_2d(
+        x_param=req.x_param,
+        x_range=req.x_range,
+        x_steps=req.x_steps,
+        y_param=req.y_param,
+        y_range=req.y_range,
+        y_steps=req.y_steps,
+        constraints=constraints,
+    )
+    dec = phase_components(sweep)
+    return {
+        "n_components": dec.n_components,
+        "component_sizes": dec.component_sizes,
+        "label_grid": dec.label_grid.tolist(),
+        "x_values": sweep.x_values.tolist(),
+        "y_values": sweep.y_values.tolist(),
     }
 
 
