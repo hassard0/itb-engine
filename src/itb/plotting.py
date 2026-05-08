@@ -70,3 +70,80 @@ def build_binding_class_figure(sweep: SweepResult) -> go.Figure:
         template="plotly_white",
     )
     return fig
+
+
+_PER_CONSTRAINT_PALETTE = [
+    "#cf3535",  # red
+    "#1f6feb",  # blue
+    "#b35900",  # orange
+    "#7a3ea8",  # purple
+    "#0a8b7a",  # teal
+    "#c2185b",  # magenta
+    "#5d4037",  # brown
+]
+
+
+def build_per_constraint_figure(sweep) -> go.Figure:
+    """Render the sweep with one color per binding constraint (not class).
+
+    Allowed cells are shown in light gray; each binding constraint gets its own
+    color from a palette. Different constraints binding in different regions
+    become visually distinct.
+    """
+    fig = go.Figure()
+
+    # Allowed cells as a faint background heatmap
+    allowed_z = sweep.feasibility_grid.astype(float).T
+    fig.add_trace(
+        go.Heatmap(
+            x=sweep.x_values,
+            y=sweep.y_values,
+            z=allowed_z,
+            colorscale=[[0, "#ffffff"], [1, "#e3f0e6"]],
+            zmin=0,
+            zmax=1,
+            showscale=False,
+            name="allowed",
+            hovertemplate=(
+                f"{sweep.x_param}=%{{x:.3f}}<br>"
+                f"{sweep.y_param}=%{{y:.3f}}<br>"
+                "feasible<extra></extra>"
+            ),
+        )
+    )
+
+    # Each unique binding-constraint name gets its own color trace via scatter
+    binding = sweep.binding_grid
+    unique_names = sorted({str(v) for v in binding.flatten() if v})
+    color_map = {n: _PER_CONSTRAINT_PALETTE[i % len(_PER_CONSTRAINT_PALETTE)]
+                 for i, n in enumerate(unique_names)}
+    for name in unique_names:
+        xs, ys = [], []
+        for i, x in enumerate(sweep.x_values):
+            for j, y in enumerate(sweep.y_values):
+                if binding[i, j] == name:
+                    xs.append(float(x))
+                    ys.append(float(y))
+        fig.add_trace(
+            go.Scatter(
+                x=xs,
+                y=ys,
+                mode="markers",
+                marker=dict(color=color_map[name], size=6, symbol="square"),
+                name=name,
+                hovertemplate=(
+                    f"{sweep.x_param}=%{{x:.3f}}<br>"
+                    f"{sweep.y_param}=%{{y:.3f}}<br>"
+                    f"binding={name}<extra></extra>"
+                ),
+            )
+        )
+
+    fig.update_layout(
+        title="Binding constraint per cell (gray=allowed)",
+        xaxis_title=sweep.x_param,
+        yaxis_title=sweep.y_param,
+        template="plotly_white",
+        legend=dict(orientation="h", y=-0.15),
+    )
+    return fig
