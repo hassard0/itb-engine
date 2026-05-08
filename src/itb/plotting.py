@@ -147,3 +147,29 @@ def build_per_constraint_figure(sweep) -> go.Figure:
         legend=dict(orientation="h", y=-0.15),
     )
     return fig
+
+
+def build_fragility_figure(fmap) -> go.Figure:
+    """Heatmap of distance-to-nearest-violation across the sweep."""
+    z = fmap.distance_grid.T
+    fig = go.Figure(
+        data=go.Heatmap(
+            x=fmap.x_values,
+            y=fmap.y_values,
+            z=z,
+            colorscale="Viridis",
+            colorbar=dict(title="distance"),
+            hovertemplate=(
+                f"{fmap.x_param}=%{{x:.3f}}<br>"
+                f"{fmap.y_param}=%{{y:.3f}}<br>"
+                "fragility_distance=%{z:.3f}<extra></extra>"
+            ),
+        )
+    )
+    fig.update_layout(
+        title="Fragility map: distance to nearest constraint violation",
+        xaxis_title=fmap.x_param,
+        yaxis_title=fmap.y_param,
+        template="plotly_white",
+    )
+    return fig
