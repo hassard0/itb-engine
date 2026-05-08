@@ -57,3 +57,44 @@ def test_axes_must_match():
     b = Region(_grid([[True]]), {"x": np.array([1.0]), "y": np.array([0.0])}, {})
     with pytest.raises(ValueError):
         _ = a & b
+
+
+def test_region_from_sweep_carries_binding():
+    from itb.constraints.scalar_positivity import (
+        ScalarPositivityG4,
+        ScalarPositivityG6,
+    )
+    from itb.mapper import sweep_2d
+    from itb.regions import region_from_sweep
+
+    s = sweep_2d(
+        x_param="g_4", x_range=(-1.0, 1.0), x_steps=5,
+        y_param="g_6", y_range=(-1.0, 1.0), y_steps=5,
+        constraints=[ScalarPositivityG4(), ScalarPositivityG6()],
+    )
+    r = region_from_sweep(s)
+    assert r.feasibility.shape == (5, 5)
+    assert r.binding.get("grid") is not None
+    assert r.binding.get("class_grid") is not None
+
+
+def test_intersection_drops_binding():
+    from itb.constraints.scalar_positivity import (
+        ScalarPositivityG4,
+        ScalarPositivityG6,
+    )
+    from itb.mapper import sweep_2d
+    from itb.regions import region_from_sweep
+
+    s1 = sweep_2d(
+        x_param="g_4", x_range=(-1.0, 1.0), x_steps=3,
+        y_param="g_6", y_range=(-1.0, 1.0), y_steps=3,
+        constraints=[ScalarPositivityG4()],
+    )
+    s2 = sweep_2d(
+        x_param="g_4", x_range=(-1.0, 1.0), x_steps=3,
+        y_param="g_6", y_range=(-1.0, 1.0), y_steps=3,
+        constraints=[ScalarPositivityG6()],
+    )
+    inter = region_from_sweep(s1) & region_from_sweep(s2)
+    assert inter.binding == {}
