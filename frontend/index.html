@@ -20,8 +20,8 @@
       <label>g_6 <input type="number" name="g_6" step="0.1" value="0.5"></label>
       <fieldset>
         <legend>Constraints</legend>
-        <label><input type="checkbox" name="c" value="scalar_positivity_g4" checked> Scalar positivity g_4</label>
-        <label><input type="checkbox" name="c" value="scalar_positivity_g6" checked> Scalar positivity g_6</label>
+        <label><input type="checkbox" name="c" value="scalar_positivity_g4" checked> g_4 positivity</label>
+        <label><input type="checkbox" name="c" value="scalar_positivity_g6" checked> g_6 positivity</label>
       </fieldset>
       <button type="submit">Check</button>
     </form>
@@ -39,9 +39,37 @@
       <label>y min <input type="number" name="y_min" step="0.1" value="-1"></label>
       <label>y max <input type="number" name="y_max" step="0.1" value="1"></label>
       <label>y steps <input type="number" name="y_steps" min="2" value="31"></label>
+      <label>color
+        <select name="color_by">
+          <option value="feasibility">feasible / not</option>
+          <option value="binding_class">binding constraint class</option>
+        </select>
+      </label>
       <button type="submit">Run sweep</button>
     </form>
     <div id="sweep-plot"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Smallest violating perturbation (negative-result mode)</h2>
+    <form id="perturb-form">
+      <label>g_4 <input type="number" name="g_4" step="0.1" value="0.5"></label>
+      <label>g_6 <input type="number" name="g_6" step="0.1" value="0.5"></label>
+      <button type="submit">Find</button>
+    </form>
+    <pre id="perturb-result"></pre>
+  </section>
+
+  <section class="panel">
+    <h2>Fisher information metric</h2>
+    <form id="fisher-form">
+      <label>g_4 <input type="number" name="g_4" step="0.1" value="0.5"></label>
+      <label>g_6 <input type="number" name="g_6" step="0.1" value="0.5"></label>
+      <label>s values (csv) <input type="text" name="s_values" value="0.5,1.0,1.5"></label>
+      <label>sigma <input type="number" name="sigma" step="0.05" value="0.1"></label>
+      <button type="submit">Compute</button>
+    </form>
+    <pre id="fisher-result"></pre>
   </section>
 </main>
 
