@@ -28,6 +28,10 @@ from itb.constraints.dispersion_tower import (
     DispersionTowerCauchySchwarz,
     ScalarPositivityG8,
 )
+from itb.constraints.holographic_entropy import (
+    BNOSSWMonogamy,
+    HolographicSubadditivity,
+)
 from itb.constraints.eft_validity import EFTValidityBox
 from itb.constraints.experimental import MeasuredWilsonCoefficient
 from itb.constraints.graviton_eft import GravitonMixedPositivity
@@ -83,6 +87,8 @@ CONSTRAINTS: dict[str, type[Constraint]] = {
     "dispersion_tower_g6_squared_bound": DispersionTowerCauchySchwarz,
     "weak_gravity_conjecture": WeakGravityConjecture,
     "ligo_graviton_mass_bound": LIGOGravitonMassBound,
+    "holographic_subadditivity": HolographicSubadditivity,
+    "bnossw_monogamy": BNOSSWMonogamy,
     "scalar_positivity_g4_sdp": ScalarPositivityG4SDP,
 }
 
