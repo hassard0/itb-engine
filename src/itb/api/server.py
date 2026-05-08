@@ -28,6 +28,8 @@ from itb.constraints.anomaly_flow import (
     tHooftAnomalyMatching,
 )
 from itb.constraints.complexity_cutoff import ComplexityCutoff
+from itb.constraints.quantum_focusing import QuantumFocusingConjecture
+from itb.constraints.spin_four_positivity import SpinFourPositivity
 from itb.constraints.cubic_parity import ParityViolatingCubicBound
 from itb.constraints.causality import CausalityBound
 from itb.constraints.dispersion_tower import (
@@ -68,6 +70,7 @@ from itb.fisher import fisher_metric
 from itb.fragility import fragility_map_2d
 from itb.frameworks.base import Framework
 from itb.frameworks.asymptotic_safety import AsymptoticSafety
+from itb.frameworks.cdt import CausalDynamicalTriangulation
 from itb.frameworks.lqg_induced import LQGInduced
 from itb.frameworks.pure_gr import PureGR
 from itb.frameworks.string_tree_eft import StringTreeEFT
@@ -119,6 +122,8 @@ CONSTRAINTS: dict[str, type[Constraint]] = {
     "generalized_anomaly_inflow": GeneralizedAnomalyInflow,
     "t_hooft_anomaly_matching": tHooftAnomalyMatching,
     "complexity_cutoff": ComplexityCutoff,
+    "quantum_focusing_conjecture": QuantumFocusingConjecture,
+    "spin_four_positivity": SpinFourPositivity,
     "scalar_positivity_g4_sdp": ScalarPositivityG4SDP,
 }
 
@@ -127,6 +132,7 @@ FRAMEWORKS: dict[str, type[Framework]] = {
     "string_tree_eft": StringTreeEFT,
     "asymptotic_safety": AsymptoticSafety,
     "lqg_induced": LQGInduced,
+    "cdt": CausalDynamicalTriangulation,
 }
 
 

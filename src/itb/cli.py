@@ -41,6 +41,16 @@ def cmd_serve(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_research_agent(args: argparse.Namespace) -> int:
+    from itb.research_agent.runner import run_agent
+    log = run_agent(iterations=args.iterations, model=args.model)
+    print(f"\nCompleted {len(log)} iterations.")
+    for entry in log:
+        if "summary" in entry:
+            print(f"  iter {entry['iteration']}: {entry['summary'][:200]}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="itb", description="ITB Engine CLI")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -55,6 +65,14 @@ def main(argv: list[str] | None = None) -> int:
     p_serve.add_argument("--port", type=int, default=8000)
     p_serve.add_argument("--reload", action="store_true")
     p_serve.set_defaults(fn=cmd_serve)
+
+    p_agent = sub.add_parser(
+        "research-agent",
+        help="Run the LLM-powered physicist research agent loop",
+    )
+    p_agent.add_argument("--iterations", type=int, default=5)
+    p_agent.add_argument("--model", default="claude-opus-4-7")
+    p_agent.set_defaults(fn=cmd_research_agent)
 
     args = parser.parse_args(argv)
     return args.fn(args)
