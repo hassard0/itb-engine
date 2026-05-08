@@ -136,6 +136,49 @@
   </section>
 
   <section class="panel">
+    <h2>Sensitivity (Bayesian feasibility probability)</h2>
+    <p class="hint">Sample Wilson coefficients from a Gaussian prior with std σ; report probability of feasibility.</p>
+    <form id="sensitivity-form">
+      <label>g_4 <input type="number" name="g_4" step="0.1" value="0.5"></label>
+      <label>g_6 <input type="number" name="g_6" step="0.1" value="0.4"></label>
+      <label>g_R2 <input type="number" name="g_R2" step="0.1" value="0.2"></label>
+      <label>σ <input type="number" name="sigma" step="0.01" value="0.05"></label>
+      <label>samples <input type="number" name="n_samples" min="10" value="200"></label>
+      <button type="submit">Compute</button>
+    </form>
+    <pre id="sensitivity-result"></pre>
+  </section>
+
+  <section class="panel">
+    <h2>Cross-class duality (A vs B)</h2>
+    <p class="hint">Compare amplitude-bootstrap vs information-theoretic allowed regions. IoU = 1 → dual classes.</p>
+    <form id="duality-form">
+      <label>g_R2 <input type="number" name="g_R2" step="0.1" value="0.5"></label>
+      <button type="submit">Compute</button>
+    </form>
+    <pre id="duality-result"></pre>
+  </section>
+
+  <section class="panel">
+    <h2>Theory fingerprint matrix</h2>
+    <p class="hint">Pairwise distances between framework predictions. Zero entries are observably indistinguishable.</p>
+    <form id="fingerprint-form">
+      <button type="submit">Compute</button>
+    </form>
+    <pre id="fingerprint-result"></pre>
+  </section>
+
+  <section class="panel">
+    <h2>3D voxel slice</h2>
+    <p class="hint">Sweep over (g_4, g_6, g_R2); fix g_R2 to a value and visualize the 2D slice.</p>
+    <form id="voxel-form">
+      <label>g_R2 slice <input type="number" name="g_R2" step="0.1" value="0.3"></label>
+      <button type="submit">Compute</button>
+    </form>
+    <pre id="voxel-result"></pre>
+  </section>
+
+  <section class="panel">
     <h2>Fisher information metric</h2>
     <form id="fisher-form">
       <label>g_4 <input type="number" name="g_4" step="0.1" value="0.5"></label>

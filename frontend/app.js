@@ -70,6 +70,82 @@ document.getElementById("path-form").addEventListener("submit", async (e) => {
   } catch (err) { out.textContent = String(err); }
 });
 
+document.getElementById("sensitivity-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const body = {
+    coefficients: {
+      g_4: parseFloat(fd.get("g_4")),
+      g_6: parseFloat(fd.get("g_6")),
+      g_R2: parseFloat(fd.get("g_R2")),
+    },
+    constraints: ALL_CONSTRAINTS,
+    sigma: parseFloat(fd.get("sigma")),
+    n_samples: parseInt(fd.get("n_samples"), 10),
+  };
+  const out = document.getElementById("sensitivity-result");
+  try {
+    const data = await postJSON("/sensitivity/probability", body);
+    out.textContent = JSON.stringify(data, null, 2);
+  } catch (err) { out.textContent = String(err); }
+});
+
+document.getElementById("duality-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const body = {
+    constraints: ALL_CONSTRAINTS,
+    x_param: "g_4", x_range: [0, 2], x_steps: 21,
+    y_param: "g_6", y_range: [0, 2], y_steps: 21,
+    fixed_coefficients: { g_R2: parseFloat(fd.get("g_R2")) },
+  };
+  const out = document.getElementById("duality-result");
+  try {
+    const data = await postJSON("/duality", body);
+    out.textContent = JSON.stringify(data, null, 2);
+  } catch (err) { out.textContent = String(err); }
+});
+
+document.getElementById("fingerprint-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const body = {
+    frameworks: ["pure_gr", "string_tree_eft"],
+    constraints: ALL_CONSTRAINTS,
+  };
+  const out = document.getElementById("fingerprint-result");
+  try {
+    const data = await postJSON("/fingerprint", body);
+    out.textContent = JSON.stringify(data, null, 2);
+  } catch (err) { out.textContent = String(err); }
+});
+
+document.getElementById("voxel-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const body = {
+    x_param: "g_4", x_range: [-1, 1], x_steps: 15,
+    y_param: "g_6", y_range: [-1, 1], y_steps: 15,
+    z_param: "g_R2", z_range: [0, 1], z_steps: 9,
+    constraints: ALL_CONSTRAINTS,
+    slice_axis: "g_R2",
+    slice_value: parseFloat(fd.get("g_R2")),
+  };
+  const out = document.getElementById("voxel-result");
+  try {
+    const data = await postJSON("/voxel", body);
+    const summary = {
+      shape: data.shape,
+      total_feasible_voxels: data.total_feasible_voxels,
+      slice_axis: data.slice && data.slice.fixed_axis,
+      slice_value: data.slice && data.slice.fixed_value,
+      slice_feasible_count: data.slice
+        ? data.slice.feasibility_grid.flat().filter(Boolean).length
+        : 0,
+    };
+    out.textContent = JSON.stringify(summary, null, 2);
+  } catch (err) { out.textContent = String(err); }
+});
+
 document.getElementById("phases-form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const body = {

@@ -12,6 +12,14 @@ from pydantic import BaseModel
 
 from itb.adversarial import adversarial_bootstrap
 from itb.completeness import check_boundedness
+from itb.duality import cross_class_duality_2d
+from itb.fingerprint import (
+    fingerprint_distance,
+    fingerprint_framework,
+    fingerprint_matrix,
+)
+from itb.sensitivity import feasibility_probability, sensitivity_grid_2d
+from itb.voxel import slice_voxel, voxel_sweep_3d
 from itb.constraints.base import Constraint
 from itb.constraints.bekenstein_tight import BekensteinTight
 from itb.constraints.eft_validity import EFTValidityBox
@@ -142,6 +150,51 @@ class CompletenessRequest(BaseModel):
     starting_box: float = 2.0
     max_box: float = 8.0
     steps_per_axis: int = 11
+
+
+class SensitivityProbabilityRequest(BaseModel):
+    coefficients: dict[str, float]
+    constraints: list[str]
+    sigma: float = 0.1
+    n_samples: int = 200
+
+
+class SensitivityGridRequest(BaseModel):
+    x_param: str
+    x_range: tuple[float, float]
+    x_steps: int
+    y_param: str
+    y_range: tuple[float, float]
+    y_steps: int
+    constraints: list[str]
+    sigma: float = 0.1
+    n_samples: int = 80
+    fixed_coefficients: dict[str, float] | None = None
+
+
+class DualityRequest(BaseModel):
+    constraints: list[str]
+    x_param: str
+    x_range: tuple[float, float]
+    x_steps: int
+    y_param: str
+    y_range: tuple[float, float]
+    y_steps: int
+    fixed_coefficients: dict[str, float] | None = None
+
+
+class VoxelRequest(BaseModel):
+    x_param: str; x_range: tuple[float, float]; x_steps: int
+    y_param: str; y_range: tuple[float, float]; y_steps: int
+    z_param: str; z_range: tuple[float, float]; z_steps: int
+    constraints: list[str]
+    slice_axis: str | None = None
+    slice_value: float | None = None
+
+
+class FingerprintRequest(BaseModel):
+    frameworks: list[str]
+    constraints: list[str]
 
 
 class PhasesRequest(BaseModel):
@@ -340,6 +393,114 @@ def completeness(req: CompletenessRequest) -> dict:
         "final_box_size": report.final_box_size,
         "unbounded_directions": report.unbounded_directions,
         "fraction_allowed_at_final_box": report.fraction_allowed_at_final_box,
+    }
+
+
+@app.post("/sensitivity/probability")
+def sensitivity_probability(req: SensitivityProbabilityRequest) -> dict:
+    constraints = _resolve_constraints(req.constraints)
+    res = feasibility_probability(
+        nominal=req.coefficients,
+        constraints=constraints,
+        sigma=req.sigma,
+        n_samples=req.n_samples,
+    )
+    return {
+        "nominal_feasible": res.nominal_feasible,
+        "p_feasible": res.p_feasible,
+        "n_samples": res.n_samples,
+        "margin_mean": res.margin_mean,
+        "margin_std": res.margin_std,
+    }
+
+
+@app.post("/sensitivity/grid")
+def sensitivity_grid(req: SensitivityGridRequest) -> dict:
+    constraints = _resolve_constraints(req.constraints)
+    res = sensitivity_grid_2d(
+        x_param=req.x_param, x_range=req.x_range, x_steps=req.x_steps,
+        y_param=req.y_param, y_range=req.y_range, y_steps=req.y_steps,
+        constraints=constraints,
+        sigma=req.sigma, n_samples=req.n_samples,
+        fixed_coefficients=req.fixed_coefficients,
+    )
+    return {
+        "x_param": res["x_param"],
+        "x_values": res["x_values"].tolist(),
+        "y_param": res["y_param"],
+        "y_values": res["y_values"].tolist(),
+        "p_grid": res["p_grid"].tolist(),
+    }
+
+
+@app.post("/duality")
+def duality(req: DualityRequest) -> dict:
+    constraints = _resolve_constraints(req.constraints)
+    rep = cross_class_duality_2d(
+        constraints=constraints,
+        x_param=req.x_param, x_range=req.x_range, x_steps=req.x_steps,
+        y_param=req.y_param, y_range=req.y_range, y_steps=req.y_steps,
+        fixed_coefficients=req.fixed_coefficients,
+    )
+    return {
+        "iou": rep.iou,
+        "a_only_count": rep.a_only_count,
+        "b_only_count": rep.b_only_count,
+        "both_count": rep.both_count,
+        "x_values": rep.x_values.tolist(),
+        "y_values": rep.y_values.tolist(),
+    }
+
+
+@app.post("/voxel")
+def voxel(req: VoxelRequest) -> dict:
+    constraints = _resolve_constraints(req.constraints)
+    res = voxel_sweep_3d(
+        x_param=req.x_param, x_range=req.x_range, x_steps=req.x_steps,
+        y_param=req.y_param, y_range=req.y_range, y_steps=req.y_steps,
+        z_param=req.z_param, z_range=req.z_range, z_steps=req.z_steps,
+        constraints=constraints,
+    )
+    out: dict = {
+        "axes": {k: v.tolist() for k, v in res.axes.items()},
+        "shape": list(res.feasibility_voxels.shape),
+        "total_feasible_voxels": int(res.feasibility_voxels.sum()),
+    }
+    if req.slice_axis is not None and req.slice_value is not None:
+        sl = slice_voxel(res, fixed_axis=req.slice_axis, fixed_value=req.slice_value)
+        out["slice"] = {
+            "fixed_axis": sl["fixed_axis"],
+            "fixed_value": sl["fixed_value"],
+            "x_param": sl["x_param"],
+            "x_values": sl["x_values"].tolist(),
+            "y_param": sl["y_param"],
+            "y_values": sl["y_values"].tolist(),
+            "feasibility_grid": sl["feasibility_grid"].tolist(),
+        }
+    return out
+
+
+@app.post("/fingerprint")
+def fingerprint(req: FingerprintRequest) -> dict:
+    constraints = _resolve_constraints(req.constraints)
+    fps = []
+    for fname in req.frameworks:
+        if fname not in FRAMEWORKS:
+            raise HTTPException(400, f"Unknown framework: {fname}")
+        fps.append(fingerprint_framework(FRAMEWORKS[fname](), constraints))
+    matrix = fingerprint_matrix(fps).tolist()
+    return {
+        "fingerprints": [
+            {
+                "framework_name": fp.framework_name,
+                "coefficients": fp.coefficients,
+                "feasible": fp.feasible,
+                "fragility_distance": fp.fragility_distance,
+                "n_binding": fp.n_binding,
+            }
+            for fp in fps
+        ],
+        "distance_matrix": matrix,
     }
 
 
