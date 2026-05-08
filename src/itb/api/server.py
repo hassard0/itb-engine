@@ -27,6 +27,7 @@ from itb.constraints.anomaly_flow import (
     GeneralizedAnomalyInflow,
     tHooftAnomalyMatching,
 )
+from itb.constraints.complexity_cutoff import ComplexityCutoff
 from itb.constraints.cubic_parity import ParityViolatingCubicBound
 from itb.constraints.causality import CausalityBound
 from itb.constraints.dispersion_tower import (
@@ -117,6 +118,7 @@ CONSTRAINTS: dict[str, type[Constraint]] = {
     "parity_violating_cubic_bound": ParityViolatingCubicBound,
     "generalized_anomaly_inflow": GeneralizedAnomalyInflow,
     "t_hooft_anomaly_matching": tHooftAnomalyMatching,
+    "complexity_cutoff": ComplexityCutoff,
     "scalar_positivity_g4_sdp": ScalarPositivityG4SDP,
 }
 
