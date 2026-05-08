@@ -4,17 +4,72 @@
 
 A localhost research platform that constrains the space of possible quantum gravity theories by simultaneously imposing every well-established consistency condition we can encode — amplitude bootstrap, holographic-information bounds, gravitational universality, anomaly flow, computational complexity bounds — and asking which UV completions survive, how robust they are, and what experiments would tighten the picture.
 
-The engine is at v1.8.0, ~302 tests, 24 active constraints across 7 Wilson coefficients, 4 candidate-framework encoders, 18 iteration cycles documented, and a non-empty intersection of all 24 constraints found by numerical search.
+The engine is at **v1.20.0**, **351 tests**, **33 active constraints** across 7 Wilson coefficients, **6 candidate-framework encoders**, **27 iteration cycles documented**, and a non-empty intersection of all 31 constraints found by numerical search at toy precision. See the full [research report](docs/results/2026-05-08-RESEARCH-REPORT-v1.20.md).
 
 ```
 git clone https://github.com/hassard0/itb-engine
 cd itb-engine
 python -m venv .venv && .\.venv\Scripts\Activate.ps1
 pip install -e ".[dev]"
-pytest                              # all 302+ tests
+pytest                              # all 351 tests
 itb serve                           # localhost web app
 itb check --g4 0.5 --g6 0.4         # CLI feasibility check
+itb research-agent --iterations 5   # LLM-powered Dr. M. (needs ANTHROPIC_API_KEY)
 ```
+
+---
+
+## The 5-year-old version: three new things the engine found
+
+Imagine you have a bunch of guesses for how gravity works at the tiniest sizes. Each guess is a recipe. We built a robot that knows lots of "rules" — things scientists already figured out that any correct recipe has to follow. The robot tries each guess against all the rules and tells us which ones break.
+
+After running the robot for a long time and looking at what it learned, here are the **three most surprising things it told us**:
+
+### 1. The "no-no list" we use to rule out theories was missing the most important rules
+
+For a long time, scientists used two big lists of rules:
+
+- **Bouncing rules** — about how particles smash together and bounce
+- **Hugging rules** — about how regions of space share information
+
+The robot found that **almost none of those rules actually do anything** when applied to the popular gravity guesses. They're all easily passed. The rules that *actually* keep us out of trouble are a different list called the **"swampland rules"** — rules about which theories are even allowed to exist in a universe with gravity at all.
+
+> **Implication:** The field has been spending a lot of time on the bouncing rules and the hugging rules. The robot is saying: maybe spend more time on the swampland rules. That's where the real fences are.
+
+### 2. One famous gravity guess fails one specific sharing rule — and only that one
+
+There's a gravity guess called **Loop Quantum Gravity (LQG)**. The robot tested it against many "information sharing" rules from holography. We expected LQG to either pass them all or fail them all.
+
+What actually happened: **LQG fails the simplest sharing rule** (the one with three regions, called "n=3 monogamy") **but passes the harder ones** (with four or five regions). The break is very specific — it's not that LQG is broken in general, it's that LQG is incompatible with one *exact* form of holographic information sharing.
+
+> **Implication:** Critics of LQG have been saying "LQG is non-holographic" without specifying *how*. The robot has now pointed at a specific equation and said "this one breaks; the others don't." That's a much more precise complaint than "non-holographic," and one a researcher could verify or refute against the actual published forms.
+
+### 3. The experiment scientists should run next has changed
+
+Before the swampland rules were turned on, the robot ranked experiments and said: **"Look at gravitational waves with super precision — measure if they twist as they travel."** That was experiment #1.
+
+After the swampland rules were turned on, the robot's ranking flipped:
+
+| rank | before swampland | after swampland |
+|---|---|---|
+| 1 | LIGO gravity-wave twist | **CMB-S4 precision matter measurement** |
+| 2 | Eöt-Wash equivalence test | **Bouwmeester optomechanical collapse** |
+| 3 | LIGO gravity-wave twist (again) | Bouwmeester optomechanical collapse |
+| 4 | — | Eöt-Wash equivalence test |
+| 5 | — | LIGO gravity-wave twist (dropped from #1) |
+
+LIGO gravity-wave twist measurements **dropped from #1 to #5**. The new top experiments are:
+
+1. **Looking at the leftover light from the Big Bang very carefully** (CMB-S4)
+2. **Putting tiny mirrors in two places at once and watching gravity make them choose** (Bouwmeester optomechanical experiments)
+
+> **Implication:** If the swampland rules are correct (and they're at least plausible), the field's experimental priorities should reorder. CMB precision and macroscopic optomechanical collapse tests should be weighted above gravitational-wave birefringence updates.
+
+### One important caveat the 5-year-old should also hear
+
+The robot is using **toy versions of all the rules** — close to the real ones in shape, but with simplified numbers. Imagine the robot is using a paper map of a city that has the right streets but the wrong house numbers. The map is good enough to find big patterns ("the swampland district has all the fences") but not good enough to tell you whether your specific friend's house is fenced in. To get exact answers, someone with the real published numbers would need to fix the map.
+
+That's the next step. The robot is ready; the map upgrade is the work.
 
 ---
 
