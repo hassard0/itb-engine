@@ -23,6 +23,11 @@ from itb.voxel import slice_voxel, voxel_sweep_3d
 from itb.constraints.base import Constraint
 from itb.constraints.bekenstein_tight import BekensteinTight
 from itb.constraints.anomaly import AnomalyCancellation
+from itb.constraints.anomaly_flow import (
+    GeneralizedAnomalyInflow,
+    tHooftAnomalyMatching,
+)
+from itb.constraints.cubic_parity import ParityViolatingCubicBound
 from itb.constraints.causality import CausalityBound
 from itb.constraints.dispersion_tower import (
     DispersionTowerCauchySchwarz,
@@ -109,6 +114,9 @@ CONSTRAINTS: dict[str, type[Constraint]] = {
     "left_handed_graviton_positivity": LeftHandedGravitonPositivity,
     "right_handed_graviton_positivity": RightHandedGravitonPositivity,
     "ligo_birefringence_bound": LIGOBirefringenceBound,
+    "parity_violating_cubic_bound": ParityViolatingCubicBound,
+    "generalized_anomaly_inflow": GeneralizedAnomalyInflow,
+    "t_hooft_anomaly_matching": tHooftAnomalyMatching,
     "scalar_positivity_g4_sdp": ScalarPositivityG4SDP,
 }
 
