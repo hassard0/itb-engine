@@ -10,7 +10,10 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
+from itb.adversarial import adversarial_bootstrap
+from itb.completeness import check_boundedness
 from itb.constraints.base import Constraint
+from itb.constraints.graviton_eft import GravitonMixedPositivity
 from itb.constraints.scalar_convexity import ScalarConvexityG6vsG4
 from itb.constraints.scalar_positivity import (
     ScalarPositivityG4,
@@ -25,6 +28,7 @@ from itb.frameworks.pure_gr import PureGR
 from itb.importance import constraint_importance
 from itb.mapper import sweep_2d
 from itb.observables import ScalarForwardAmplitude
+from itb.path_distance import path_through_allowed_region
 from itb.perturbation import smallest_violating_perturbation
 from itb.plotting import (
     build_allowed_region_figure,
@@ -39,6 +43,7 @@ CONSTRAINTS: dict[str, type[Constraint]] = {
     "scalar_positivity_g4": ScalarPositivityG4,
     "scalar_positivity_g6": ScalarPositivityG6,
     "scalar_convexity_g6_vs_g4": ScalarConvexityG6vsG4,
+    "graviton_mixed_positivity": GravitonMixedPositivity,
     "scalar_positivity_g4_sdp": ScalarPositivityG4SDP,
 }
 
@@ -104,6 +109,31 @@ class ImportanceRequest(BaseModel):
     y_range: tuple[float, float]
     y_steps: int
     constraints: list[str]
+
+
+class AdversarialRequest(BaseModel):
+    initial_guess: dict[str, float]
+    constraints: list[str]
+
+
+class PathRequest(BaseModel):
+    start: dict[str, float]
+    end: dict[str, float]
+    x_param: str
+    x_range: tuple[float, float]
+    x_steps: int
+    y_param: str
+    y_range: tuple[float, float]
+    y_steps: int
+    constraints: list[str]
+
+
+class CompletenessRequest(BaseModel):
+    constraints: list[str]
+    params: list[str]
+    starting_box: float = 2.0
+    max_box: float = 8.0
+    steps_per_axis: int = 11
 
 
 app = FastAPI(title="ITB Engine", version="0.2.0")
@@ -207,6 +237,57 @@ def perturbation(req: PerturbationRequest) -> dict:
         "distance": res.distance,
         "binding_constraint": res.binding_constraint,
         "perturbed_coefficients": res.perturbed_theory.coefficients,
+    }
+
+
+@app.post("/adversarial")
+def adversarial(req: AdversarialRequest) -> dict:
+    constraints = _resolve_constraints(req.constraints)
+    res = adversarial_bootstrap(constraints=constraints, initial_guess=req.initial_guess)
+    return {
+        "coefficients": res.theory.coefficients,
+        "n_binding": res.n_binding,
+        "binding_names": res.binding_names,
+        "objective_value": res.objective_value,
+    }
+
+
+@app.post("/path")
+def path(req: PathRequest) -> dict:
+    constraints = _resolve_constraints(req.constraints)
+    res = path_through_allowed_region(
+        start=req.start,
+        end=req.end,
+        x_param=req.x_param,
+        x_range=req.x_range,
+        x_steps=req.x_steps,
+        y_param=req.y_param,
+        y_range=req.y_range,
+        y_steps=req.y_steps,
+        constraints=constraints,
+    )
+    return {
+        "connected": res.connected,
+        "distance": res.distance if res.connected else None,
+        "path_points": res.path_points,
+    }
+
+
+@app.post("/completeness")
+def completeness(req: CompletenessRequest) -> dict:
+    constraints = _resolve_constraints(req.constraints)
+    report = check_boundedness(
+        constraints=constraints,
+        params=req.params,
+        starting_box=req.starting_box,
+        max_box=req.max_box,
+        steps_per_axis=req.steps_per_axis,
+    )
+    return {
+        "bounded": report.bounded,
+        "final_box_size": report.final_box_size,
+        "unbounded_directions": report.unbounded_directions,
+        "fraction_allowed_at_final_box": report.fraction_allowed_at_final_box,
     }
 
 

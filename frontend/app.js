@@ -16,6 +16,10 @@ document.getElementById("check-form").addEventListener("submit", async (e) => {
     g_4: parseFloat(fd.get("g_4")),
     g_6: parseFloat(fd.get("g_6")),
   };
+  const gR2Raw = fd.get("g_R2");
+  if (gR2Raw !== null && gR2Raw !== "") {
+    coefficients.g_R2 = parseFloat(gR2Raw);
+  }
   const out = document.getElementById("check-result");
   try {
     const data = await postJSON("/check", { coefficients, constraints });
@@ -28,6 +32,56 @@ const ALL_CONSTRAINTS = [
   "scalar_positivity_g6",
   "scalar_convexity_g6_vs_g4",
 ];
+
+document.getElementById("adversarial-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const body = {
+    initial_guess: {
+      g_4: parseFloat(fd.get("g_4")),
+      g_6: parseFloat(fd.get("g_6")),
+    },
+    constraints: ALL_CONSTRAINTS,
+  };
+  const out = document.getElementById("adversarial-result");
+  try {
+    const data = await postJSON("/adversarial", body);
+    out.textContent = JSON.stringify(data, null, 2);
+  } catch (err) { out.textContent = String(err); }
+});
+
+document.getElementById("path-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const body = {
+    start: { g_4: parseFloat(fd.get("sx")), g_6: parseFloat(fd.get("sy")) },
+    end: { g_4: parseFloat(fd.get("ex")), g_6: parseFloat(fd.get("ey")) },
+    x_param: "g_4", x_range: [-1, 1], x_steps: 31,
+    y_param: "g_6", y_range: [-1, 1], y_steps: 31,
+    constraints: ALL_CONSTRAINTS,
+  };
+  const out = document.getElementById("path-result");
+  try {
+    const data = await postJSON("/path", body);
+    out.textContent = JSON.stringify(data, null, 2);
+  } catch (err) { out.textContent = String(err); }
+});
+
+document.getElementById("completeness-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const body = {
+    constraints: ALL_CONSTRAINTS,
+    params: ["g_4", "g_6"],
+    starting_box: 2.0,
+    max_box: 8.0,
+    steps_per_axis: 11,
+  };
+  const out = document.getElementById("completeness-result");
+  try {
+    const data = await postJSON("/completeness", body);
+    out.textContent = JSON.stringify(data, null, 2);
+  } catch (err) { out.textContent = String(err); }
+});
 
 document.getElementById("sweep-form").addEventListener("submit", async (e) => {
   e.preventDefault();
