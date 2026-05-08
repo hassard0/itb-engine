@@ -36,7 +36,7 @@ class LQGInduced(Framework):
         return Theory(
             coefficients={
                 "g_4": 0.6, "g_6": 0.45, "g_R2": 0.3, "g_8": 0.4, "g_R3": 0.30,
-                "g_R2_parity": 0.08,
+                "g_R2_parity": 0.08, "g_R3_parity": 0.04,
             },
             name=self.name,
             source=self.citation,

@@ -15,6 +15,7 @@ class PureGR(Framework):
             coefficients={
                 "g_4": 0.0, "g_6": 0.0, "g_R2": 0.0, "g_8": 0.0, "g_R3": 0.0,
                 "g_R2_parity": 0.0,
+                "g_R3_parity": 0.0,
             },
             name=self.name,
             source=self.citation,

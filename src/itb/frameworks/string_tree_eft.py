@@ -45,6 +45,7 @@ class StringTreeEFT(Framework):
                 "g_8": 0.4,
                 "g_R3": 0.15,
                 "g_R2_parity": 0.0,
+                "g_R3_parity": 0.0,
             },
             name=self.name,
             source=self.citation,
