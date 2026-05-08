@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "itb"
+version = "0.1.0"
+description = "Information-Theoretic Bootstrap engine for quantum gravity theory-space exclusions"
+requires-python = ">=3.11"
+dependencies = [
+    "cvxpy>=1.5",
+    "numpy>=1.26",
+    "scipy>=1.12",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.27",
+    "plotly>=5.20",
+    "pydantic>=2.6",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "httpx>=0.27",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+itb = "itb.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
