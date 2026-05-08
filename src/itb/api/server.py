@@ -24,9 +24,15 @@ from itb.constraints.base import Constraint
 from itb.constraints.bekenstein_tight import BekensteinTight
 from itb.constraints.anomaly import AnomalyCancellation
 from itb.constraints.causality import CausalityBound
+from itb.constraints.dispersion_tower import (
+    DispersionTowerCauchySchwarz,
+    ScalarPositivityG8,
+)
 from itb.constraints.eft_validity import EFTValidityBox
 from itb.constraints.experimental import MeasuredWilsonCoefficient
 from itb.constraints.graviton_eft import GravitonMixedPositivity
+from itb.constraints.ligo_graviton_mass import LIGOGravitonMassBound
+from itb.constraints.swampland import WeakGravityConjecture
 from itb.constraints.spin_decomposed import (
     SpinTwoPositivity,
     SpinZeroPositivity,
@@ -73,6 +79,10 @@ CONSTRAINTS: dict[str, type[Constraint]] = {
     "spin_two_positivity": SpinTwoPositivity,
     "causality_bound": CausalityBound,
     "anomaly_cancellation": AnomalyCancellation,
+    "scalar_positivity_g8": ScalarPositivityG8,
+    "dispersion_tower_g6_squared_bound": DispersionTowerCauchySchwarz,
+    "weak_gravity_conjecture": WeakGravityConjecture,
+    "ligo_graviton_mass_bound": LIGOGravitonMassBound,
     "scalar_positivity_g4_sdp": ScalarPositivityG4SDP,
 }
 

@@ -24,8 +24,9 @@ class LQGInduced(Framework):
         # Distinctive: g_R2 / sqrt(g_4*g_6) ≈ 0.58, larger than string-EFT (0.45)
         # and asymptotic-safety (0.43). LQG-induced has comparable graviton-
         # to-matter coefficients, qualitatively distinct from the others.
+        # g_8 satisfies dispersion tower: g_6^2 = 0.2025 <= 0.6 * 0.4 = 0.24 ✓
         return Theory(
-            coefficients={"g_4": 0.6, "g_6": 0.45, "g_R2": 0.3},
+            coefficients={"g_4": 0.6, "g_6": 0.45, "g_R2": 0.3, "g_8": 0.4},
             name=self.name,
             source=self.citation,
         )

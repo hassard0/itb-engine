@@ -29,11 +29,14 @@ class StringTreeEFT(Framework):
         #   g_R2^2 <= g_4 * g_6  (Caron-Huot)             ✓ (0.04 <= 0.20)
         #   g_R2^2 <= 0.5 * g_4 * g_6  (Bekenstein-tight) ✓ (0.04 <= 0.10)
         #   |g_*| <= 2  (EFT validity, Λ in O(1) units)   ✓
+        # g_8 added in v1.0: must satisfy g_6^2 <= g_4 * g_8.
+        # 0.4^2 = 0.16, 0.5 * 0.4 = 0.2 ✓ (with margin 0.04)
         return Theory(
             coefficients={
                 "g_4": 0.5,
                 "g_6": 0.4,
                 "g_R2": 0.2,
+                "g_8": 0.4,
             },
             name=self.name,
             source=self.citation,

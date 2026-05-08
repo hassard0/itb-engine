@@ -12,7 +12,7 @@ class PureGR(Framework):
 
     def encode(self) -> Theory:
         return Theory(
-            coefficients={"g_4": 0.0, "g_6": 0.0},
+            coefficients={"g_4": 0.0, "g_6": 0.0, "g_R2": 0.0, "g_8": 0.0},
             name=self.name,
             source=self.citation,
         )

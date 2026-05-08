@@ -25,8 +25,9 @@ class AsymptoticSafety(Framework):
         #   g_6 = 0.3 (>= 0.16 ✓)
         #   g_R2 = 0.15 (Bekenstein: 0.0225 <= 0.5*0.4*0.3 = 0.06 ✓)
         # Smaller g_R2 than string EFT — distinctive AS signature.
+        # g_8 satisfies dispersion tower: g_6^2 = 0.09 <= 0.4 * 0.3 = 0.12 ✓
         return Theory(
-            coefficients={"g_4": 0.4, "g_6": 0.3, "g_R2": 0.15},
+            coefficients={"g_4": 0.4, "g_6": 0.3, "g_R2": 0.15, "g_8": 0.3},
             name=self.name,
             source=self.citation,
         )
