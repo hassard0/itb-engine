@@ -22,6 +22,8 @@ from itb.sensitivity import feasibility_probability, sensitivity_grid_2d
 from itb.voxel import slice_voxel, voxel_sweep_3d
 from itb.constraints.base import Constraint
 from itb.constraints.bekenstein_tight import BekensteinTight
+from itb.constraints.anomaly import AnomalyCancellation
+from itb.constraints.causality import CausalityBound
 from itb.constraints.eft_validity import EFTValidityBox
 from itb.constraints.experimental import MeasuredWilsonCoefficient
 from itb.constraints.graviton_eft import GravitonMixedPositivity
@@ -46,6 +48,7 @@ from itb.frameworks.string_tree_eft import StringTreeEFT
 from itb.importance import constraint_importance
 from itb.mapper import sweep_2d
 from itb.observables import ScalarForwardAmplitude
+from itb.battery import run_full_battery
 from itb.path_distance import path_through_allowed_region
 from itb.perturbation import smallest_violating_perturbation
 from itb.phase_components import phase_components
@@ -68,6 +71,8 @@ CONSTRAINTS: dict[str, type[Constraint]] = {
     "eft_validity_box": EFTValidityBox,
     "spin_zero_positivity": SpinZeroPositivity,
     "spin_two_positivity": SpinTwoPositivity,
+    "causality_bound": CausalityBound,
+    "anomaly_cancellation": AnomalyCancellation,
     "scalar_positivity_g4_sdp": ScalarPositivityG4SDP,
 }
 
@@ -221,6 +226,19 @@ class MeasurementRequest(BaseModel):
 class FrameworkReportRequest(BaseModel):
     frameworks: list[str]
     constraints: list[str]
+
+
+class BatteryRequest(BaseModel):
+    constraints: list[str]
+    frameworks: list[str]
+    x_param: str = "g_4"
+    x_range: tuple[float, float] = (-1.0, 2.0)
+    x_steps: int = 21
+    y_param: str = "g_6"
+    y_range: tuple[float, float] = (-1.0, 2.0)
+    y_steps: int = 21
+    fixed_coefficients: dict[str, float] | None = None
+    label: str = "battery"
 
 
 class PhasesRequest(BaseModel):
@@ -528,6 +546,24 @@ def fingerprint(req: FingerprintRequest) -> dict:
         ],
         "distance_matrix": matrix,
     }
+
+
+@app.post("/battery")
+def battery(req: BatteryRequest) -> dict:
+    constraints = _resolve_constraints(req.constraints)
+    fws = []
+    for n in req.frameworks:
+        if n not in FRAMEWORKS:
+            raise HTTPException(400, f"Unknown framework: {n}")
+        fws.append(FRAMEWORKS[n]())
+    md = run_full_battery(
+        constraints=constraints, frameworks=fws,
+        x_param=req.x_param, x_range=req.x_range, x_steps=req.x_steps,
+        y_param=req.y_param, y_range=req.y_range, y_steps=req.y_steps,
+        fixed_coefficients=req.fixed_coefficients,
+        label=req.label,
+    )
+    return {"markdown": md, "length": len(md)}
 
 
 @app.post("/measurement")
