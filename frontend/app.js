@@ -23,6 +23,12 @@ document.getElementById("check-form").addEventListener("submit", async (e) => {
   } catch (err) { out.textContent = String(err); }
 });
 
+const ALL_CONSTRAINTS = [
+  "scalar_positivity_g4",
+  "scalar_positivity_g6",
+  "scalar_convexity_g6_vs_g4",
+];
+
 document.getElementById("sweep-form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const fd = new FormData(e.target);
@@ -33,13 +39,50 @@ document.getElementById("sweep-form").addEventListener("submit", async (e) => {
     y_param: fd.get("y_param"),
     y_range: [parseFloat(fd.get("y_min")), parseFloat(fd.get("y_max"))],
     y_steps: parseInt(fd.get("y_steps"), 10),
-    constraints: ["scalar_positivity_g4", "scalar_positivity_g6"],
+    constraints: ALL_CONSTRAINTS,
     color_by: fd.get("color_by"),
   };
   try {
     const data = await postJSON("/sweep", body);
     Plotly.newPlot("sweep-plot", data.figure.data, data.figure.layout, { responsive: true });
   } catch (err) { document.getElementById("sweep-plot").textContent = String(err); }
+});
+
+document.getElementById("fragility-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const body = {
+    x_param: "g_4",
+    x_range: [-1, 1],
+    x_steps: parseInt(fd.get("x_steps"), 10),
+    y_param: "g_6",
+    y_range: [-1, 1],
+    y_steps: parseInt(fd.get("y_steps"), 10),
+    constraints: ALL_CONSTRAINTS,
+  };
+  try {
+    const data = await postJSON("/fragility", body);
+    Plotly.newPlot("fragility-plot", data.figure.data, data.figure.layout, { responsive: true });
+  } catch (err) { document.getElementById("fragility-plot").textContent = String(err); }
+});
+
+document.getElementById("importance-form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const body = {
+    x_param: "g_4",
+    x_range: [-1, 1],
+    x_steps: parseInt(fd.get("x_steps"), 10),
+    y_param: "g_6",
+    y_range: [-1, 1],
+    y_steps: parseInt(fd.get("y_steps"), 10),
+    constraints: ALL_CONSTRAINTS,
+  };
+  const out = document.getElementById("importance-result");
+  try {
+    const data = await postJSON("/importance", body);
+    out.textContent = JSON.stringify(data, null, 2);
+  } catch (err) { out.textContent = String(err); }
 });
 
 document.getElementById("perturb-form").addEventListener("submit", async (e) => {

@@ -17,3 +17,5 @@ button:hover { background: #1856b3; }
 pre { background: #0f1115; color: #d8e0e8; padding: 0.75rem; border-radius: 4px; overflow-x: auto; font-size: 0.85rem; }
 #sweep-plot { min-height: 480px; }
 select { padding: 0.4rem; border: 1px solid #cbd2d9; border-radius: 4px; margin-top: 0.25rem; }
+.hint { font-size: 0.85rem; color: #52606d; margin: 0 0 0.75rem; }
+#fragility-plot { min-height: 480px; }

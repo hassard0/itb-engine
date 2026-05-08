@@ -11,6 +11,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from itb.constraints.base import Constraint
+from itb.constraints.scalar_convexity import ScalarConvexityG6vsG4
 from itb.constraints.scalar_positivity import (
     ScalarPositivityG4,
     ScalarPositivityG6,
@@ -18,18 +19,26 @@ from itb.constraints.scalar_positivity import (
 from itb.constraints.scalar_positivity_sdp import ScalarPositivityG4SDP
 from itb.engine import check
 from itb.fisher import fisher_metric
+from itb.fragility import fragility_map_2d
 from itb.frameworks.base import Framework
 from itb.frameworks.pure_gr import PureGR
+from itb.importance import constraint_importance
 from itb.mapper import sweep_2d
 from itb.observables import ScalarForwardAmplitude
 from itb.perturbation import smallest_violating_perturbation
-from itb.plotting import build_allowed_region_figure, build_binding_class_figure
+from itb.plotting import (
+    build_allowed_region_figure,
+    build_binding_class_figure,
+    build_fragility_figure,
+    build_per_constraint_figure,
+)
 from itb.theory import Theory
 
 
 CONSTRAINTS: dict[str, type[Constraint]] = {
     "scalar_positivity_g4": ScalarPositivityG4,
     "scalar_positivity_g6": ScalarPositivityG6,
+    "scalar_convexity_g6_vs_g4": ScalarConvexityG6vsG4,
     "scalar_positivity_g4_sdp": ScalarPositivityG4SDP,
 }
 
@@ -62,7 +71,7 @@ class SweepRequest(BaseModel):
     y_steps: int
     constraints: list[str]
     fixed_coefficients: dict[str, float] | None = None
-    color_by: str = "feasibility"
+    color_by: str = "feasibility"  # feasibility | binding_class | per_constraint
 
 
 class PerturbationRequest(BaseModel):
@@ -75,6 +84,26 @@ class FisherRequest(BaseModel):
     params: list[str]
     s_values: list[float]
     sigma: float
+
+
+class FragilityRequest(BaseModel):
+    x_param: str
+    x_range: tuple[float, float]
+    x_steps: int
+    y_param: str
+    y_range: tuple[float, float]
+    y_steps: int
+    constraints: list[str]
+
+
+class ImportanceRequest(BaseModel):
+    x_param: str
+    x_range: tuple[float, float]
+    x_steps: int
+    y_param: str
+    y_range: tuple[float, float]
+    y_steps: int
+    constraints: list[str]
 
 
 app = FastAPI(title="ITB Engine", version="0.2.0")
@@ -153,6 +182,8 @@ def sweep(req: SweepRequest) -> dict:
     )
     if req.color_by == "binding_class":
         fig = build_binding_class_figure(result)
+    elif req.color_by == "per_constraint":
+        fig = build_per_constraint_figure(result)
     else:
         fig = build_allowed_region_figure(result)
     return {
@@ -176,6 +207,56 @@ def perturbation(req: PerturbationRequest) -> dict:
         "distance": res.distance,
         "binding_constraint": res.binding_constraint,
         "perturbed_coefficients": res.perturbed_theory.coefficients,
+    }
+
+
+@app.post("/fragility")
+def fragility(req: FragilityRequest) -> dict:
+    constraints = _resolve_constraints(req.constraints)
+    fmap = fragility_map_2d(
+        x_param=req.x_param,
+        x_range=req.x_range,
+        x_steps=req.x_steps,
+        y_param=req.y_param,
+        y_range=req.y_range,
+        y_steps=req.y_steps,
+        constraints=constraints,
+    )
+    fig = build_fragility_figure(fmap)
+    return {
+        "x_param": fmap.x_param,
+        "x_values": fmap.x_values.tolist(),
+        "y_param": fmap.y_param,
+        "y_values": fmap.y_values.tolist(),
+        "distance_grid": fmap.distance_grid.tolist(),
+        "most_fragile_grid": fmap.most_fragile_grid.tolist(),
+        "figure": json.loads(fig.to_json()),
+    }
+
+
+@app.post("/importance")
+def importance(req: ImportanceRequest) -> dict:
+    constraints = _resolve_constraints(req.constraints)
+    report = constraint_importance(
+        x_param=req.x_param,
+        x_range=req.x_range,
+        x_steps=req.x_steps,
+        y_param=req.y_param,
+        y_range=req.y_range,
+        y_steps=req.y_steps,
+        constraints=constraints,
+    )
+    return {
+        "baseline_allowed_count": report.baseline_allowed_count,
+        "total_cells": report.total_cells,
+        "scores": [
+            {
+                "constraint_name": s.constraint_name,
+                "allowed_region_growth": s.allowed_region_growth,
+                "growth_fraction": s.growth_fraction,
+            }
+            for s in report.scores
+        ],
     }
 
 

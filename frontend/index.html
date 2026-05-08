@@ -22,6 +22,7 @@
         <legend>Constraints</legend>
         <label><input type="checkbox" name="c" value="scalar_positivity_g4" checked> g_4 positivity</label>
         <label><input type="checkbox" name="c" value="scalar_positivity_g6" checked> g_6 positivity</label>
+        <label><input type="checkbox" name="c" value="scalar_convexity_g6_vs_g4" checked> convexity g_6 &ge; g_4&sup2;</label>
       </fieldset>
       <button type="submit">Check</button>
     </form>
@@ -43,6 +44,7 @@
         <select name="color_by">
           <option value="feasibility">feasible / not</option>
           <option value="binding_class">binding constraint class</option>
+          <option value="per_constraint">per binding constraint</option>
         </select>
       </label>
       <button type="submit">Run sweep</button>
@@ -58,6 +60,28 @@
       <button type="submit">Find</button>
     </form>
     <pre id="perturb-result"></pre>
+  </section>
+
+  <section class="panel">
+    <h2>Fragility map</h2>
+    <p class="hint">For each cell in the sweep, compute the smallest perturbation that violates feasibility, and color by distance.</p>
+    <form id="fragility-form">
+      <label>x steps <input type="number" name="x_steps" min="3" value="21"></label>
+      <label>y steps <input type="number" name="y_steps" min="3" value="21"></label>
+      <button type="submit">Run fragility</button>
+    </form>
+    <div id="fragility-plot"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Constraint importance ranking</h2>
+    <p class="hint">Remove each constraint in turn; report how much the allowed region grows. Larger = more important.</p>
+    <form id="importance-form">
+      <label>x steps <input type="number" name="x_steps" min="3" value="21"></label>
+      <label>y steps <input type="number" name="y_steps" min="3" value="21"></label>
+      <button type="submit">Compute</button>
+    </form>
+    <pre id="importance-result"></pre>
   </section>
 
   <section class="panel">
