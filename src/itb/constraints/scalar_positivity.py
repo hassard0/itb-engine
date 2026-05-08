@@ -18,12 +18,21 @@ class ScalarPositivityG4(Constraint):
 
     def evaluate(self, theory: Theory) -> ConstraintResult:
         g4 = theory.coefficients.get("g_4", 0.0)
+        grad = self.gradient(theory)
         return ConstraintResult(
             constraint_name=self.name,
             satisfied=g4 >= 0,
             margin=g4,
+            signed_distance_margin=self._signed_distance(g4, grad),
             details={"bound": "g_4 >= 0", "value": g4},
         )
+
+    def gradient(self, theory: Theory) -> dict[str, float]:
+        out = {k: 0.0 for k in theory.coefficients}
+        out.setdefault("g_4", 0.0)
+        out.setdefault("g_6", 0.0)
+        out["g_4"] = 1.0
+        return out
 
 
 class ScalarPositivityG6(Constraint):
@@ -33,9 +42,18 @@ class ScalarPositivityG6(Constraint):
 
     def evaluate(self, theory: Theory) -> ConstraintResult:
         g6 = theory.coefficients.get("g_6", 0.0)
+        grad = self.gradient(theory)
         return ConstraintResult(
             constraint_name=self.name,
             satisfied=g6 >= 0,
             margin=g6,
+            signed_distance_margin=self._signed_distance(g6, grad),
             details={"bound": "g_6 >= 0", "value": g6},
         )
+
+    def gradient(self, theory: Theory) -> dict[str, float]:
+        out = {k: 0.0 for k in theory.coefficients}
+        out.setdefault("g_4", 0.0)
+        out.setdefault("g_6", 0.0)
+        out["g_6"] = 1.0
+        return out
