@@ -34,7 +34,30 @@ def _build_system_prompt() -> str:
     """Augment the persona with tool descriptions in a structured-output
     format. We ask the model to emit one tool call at a time wrapped in
     <tool>...</tool> tags with a JSON body."""
-    tool_doc = ["", "## Tools available", "", "Call exactly ONE tool per turn by emitting:", "", "```", "<tool>", "{", '  "name": "tool_name_here",', '  "input": { ... arguments ... }', "}", "</tool>", "```", "", "After the tool runs, you'll see its result, then take your next action.", "", "When you've made a meaningful step this iteration and want to advance,", "call `mark_iteration_complete` with a one-paragraph summary.", "", "### Tool catalog", ""]
+    tool_doc = [
+        "",
+        "## CRITICAL OUTPUT RULE",
+        "",
+        "EVERY response of yours MUST end with exactly one tool call wrapped in <tool>...</tool> tags.",
+        "Plain-text reasoning is fine inside your response, but the response MUST end with a tool call.",
+        "If you have nothing more to do, call `mark_iteration_complete` with a summary — that is itself a tool call.",
+        "",
+        "Format:",
+        "",
+        "```",
+        "<tool>",
+        "{",
+        '  "name": "tool_name_here",',
+        '  "input": { ... arguments ... }',
+        "}",
+        "</tool>",
+        "```",
+        "",
+        "After exploring (≤ 2 read-only tools), you should propose a new module via `propose_new_module` OR run an analysis (intersection, etc.) OR call `mark_iteration_complete`. Do NOT keep listing/reading; act decisively after at most 2 reads.",
+        "",
+        "### Tool catalog",
+        "",
+    ]
     for t in TOOL_SCHEMAS:
         tool_doc.append(f"**{t['name']}** — {t['description']}")
         props = t["input_schema"].get("properties", {})
