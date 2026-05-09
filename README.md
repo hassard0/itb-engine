@@ -15,6 +15,11 @@ pytest                              # all 351 tests
 itb serve                           # localhost web app
 itb check --g4 0.5 --g6 0.4         # CLI feasibility check
 itb research-agent --iterations 5   # LLM-powered Dr. M. (needs ANTHROPIC_API_KEY)
+
+# OR run Dr. M. on a local LLM (Gemma 4 / llama.cpp / Ollama / vLLM):
+itb research-agent --backend local --iterations 3 \
+                   --base-url http://192.168.4.193:8080 \
+                   --model gemma-4-26b-a4b-it
 ```
 
 ---
