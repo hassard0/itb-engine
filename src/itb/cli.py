@@ -42,12 +42,29 @@ def cmd_serve(args: argparse.Namespace) -> int:
 
 
 def cmd_research_agent(args: argparse.Namespace) -> int:
-    from itb.research_agent.runner import run_agent
-    log = run_agent(iterations=args.iterations, model=args.model)
-    print(f"\nCompleted {len(log)} iterations.")
+    if args.backend == "local":
+        from itb.research_agent.local_runner import run_local_agent
+        model = args.model
+        if model.startswith("claude"):
+            model = "gemma-4-26b-a4b-it"
+        log = run_local_agent(
+            base_url=args.base_url,
+            model=model,
+            iterations=args.iterations,
+            max_tokens=args.max_tokens,
+            temperature=args.temperature,
+        )
+    else:
+        from itb.research_agent.runner import run_agent
+        log = run_agent(iterations=args.iterations, model=args.model)
+    print(f"\nCompleted {len(log)} iteration entries.")
     for entry in log:
         if "summary" in entry:
             print(f"  iter {entry['iteration']}: {entry['summary'][:200]}")
+        elif "error" in entry:
+            print(f"  iter {entry['iteration']}: ERROR {entry['error']}")
+        elif "outcome" in entry:
+            print(f"  iter {entry['iteration']}: {entry['outcome']}")
     return 0
 
 
@@ -72,6 +89,16 @@ def main(argv: list[str] | None = None) -> int:
     )
     p_agent.add_argument("--iterations", type=int, default=5)
     p_agent.add_argument("--model", default="claude-opus-4-7")
+    p_agent.add_argument(
+        "--backend", choices=("anthropic", "local"), default="anthropic",
+        help="anthropic = Anthropic SDK; local = OpenAI-compatible HTTP server",
+    )
+    p_agent.add_argument(
+        "--base-url", default="http://192.168.4.193:8080",
+        help="Base URL for local backend (default: Pluto Gemma 4 endpoint)",
+    )
+    p_agent.add_argument("--max-tokens", type=int, default=4096)
+    p_agent.add_argument("--temperature", type=float, default=0.6)
     p_agent.set_defaults(fn=cmd_research_agent)
 
     args = parser.parse_args(argv)
