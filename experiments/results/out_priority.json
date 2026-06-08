@@ -1,0 +1,174 @@
+{
+  "g_R2 x g_R2_parity": [
+    {
+      "label": "LIGO_O5_graviton_mass",
+      "observable": "g_R2",
+      "cells_excluded": 33,
+      "fraction": 1.0,
+      "baseline": 33
+    },
+    {
+      "label": "Eot_Wash_equivalence",
+      "observable": "g_R2",
+      "cells_excluded": 33,
+      "fraction": 1.0,
+      "baseline": 33
+    },
+    {
+      "label": "CMB_S4_TIGHT",
+      "observable": "g_4",
+      "cells_excluded": 33,
+      "fraction": 1.0,
+      "baseline": 33
+    },
+    {
+      "label": "Bouwmeester_collapse_test",
+      "observable": "g_R2",
+      "cells_excluded": 33,
+      "fraction": 1.0,
+      "baseline": 33
+    },
+    {
+      "label": "Bouwmeester_g_R3",
+      "observable": "g_R3",
+      "cells_excluded": 33,
+      "fraction": 1.0,
+      "baseline": 33
+    },
+    {
+      "label": "INVENTED_precision_g8",
+      "observable": "g_8",
+      "cells_excluded": 33,
+      "fraction": 1.0,
+      "baseline": 33
+    },
+    {
+      "label": "LIGO_O5_birefringence",
+      "observable": "g_R2_parity",
+      "cells_excluded": 28,
+      "fraction": 0.8484848484848485,
+      "baseline": 33
+    },
+    {
+      "label": "LIGO_O4_birefringence",
+      "observable": "g_R2_parity",
+      "cells_excluded": 18,
+      "fraction": 0.5454545454545454,
+      "baseline": 33
+    },
+    {
+      "label": "CMB_S4_inflationary_EFT",
+      "observable": "g_4",
+      "cells_excluded": 0,
+      "fraction": 0.0,
+      "baseline": 33
+    },
+    {
+      "label": "Lattice_QCD_g6_bound",
+      "observable": "g_6",
+      "cells_excluded": 0,
+      "fraction": 0.0,
+      "baseline": 33
+    },
+    {
+      "label": "Atomic_clock_Lorentz",
+      "observable": "g_8",
+      "cells_excluded": 0,
+      "fraction": 0.0,
+      "baseline": 33
+    },
+    {
+      "label": "INVENTED_cubic_parity_gR3p",
+      "observable": "g_R3_parity",
+      "cells_excluded": 0,
+      "fraction": 0.0,
+      "baseline": 33
+    }
+  ],
+  "g_R3 x g_R3_parity": [
+    {
+      "label": "LIGO_O5_graviton_mass",
+      "observable": "g_R2",
+      "cells_excluded": 7,
+      "fraction": 1.0,
+      "baseline": 7
+    },
+    {
+      "label": "Eot_Wash_equivalence",
+      "observable": "g_R2",
+      "cells_excluded": 7,
+      "fraction": 1.0,
+      "baseline": 7
+    },
+    {
+      "label": "CMB_S4_TIGHT",
+      "observable": "g_4",
+      "cells_excluded": 7,
+      "fraction": 1.0,
+      "baseline": 7
+    },
+    {
+      "label": "Bouwmeester_collapse_test",
+      "observable": "g_R2",
+      "cells_excluded": 7,
+      "fraction": 1.0,
+      "baseline": 7
+    },
+    {
+      "label": "INVENTED_precision_g8",
+      "observable": "g_8",
+      "cells_excluded": 7,
+      "fraction": 1.0,
+      "baseline": 7
+    },
+    {
+      "label": "Bouwmeester_g_R3",
+      "observable": "g_R3",
+      "cells_excluded": 6,
+      "fraction": 0.8571428571428571,
+      "baseline": 7
+    },
+    {
+      "label": "LIGO_O5_birefringence",
+      "observable": "g_R2_parity",
+      "cells_excluded": 0,
+      "fraction": 0.0,
+      "baseline": 7
+    },
+    {
+      "label": "LIGO_O4_birefringence",
+      "observable": "g_R2_parity",
+      "cells_excluded": 0,
+      "fraction": 0.0,
+      "baseline": 7
+    },
+    {
+      "label": "CMB_S4_inflationary_EFT",
+      "observable": "g_4",
+      "cells_excluded": 0,
+      "fraction": 0.0,
+      "baseline": 7
+    },
+    {
+      "label": "Lattice_QCD_g6_bound",
+      "observable": "g_6",
+      "cells_excluded": 0,
+      "fraction": 0.0,
+      "baseline": 7
+    },
+    {
+      "label": "Atomic_clock_Lorentz",
+      "observable": "g_8",
+      "cells_excluded": 0,
+      "fraction": 0.0,
+      "baseline": 7
+    },
+    {
+      "label": "INVENTED_cubic_parity_gR3p",
+      "observable": "g_R3_parity",
+      "cells_excluded": 0,
+      "fraction": 0.0,
+      "baseline": 7
+    }
+  ]
+}
