@@ -84,6 +84,39 @@ class GravitationalBirefringence(Observable):
         return np.stack(cols, axis=1)
 
 
+class HolographicEtaOverS(Observable):
+    """Shear viscosity / entropy density of a putative AdS/CFT dual, in KSS units.
+
+    In Gauss-Bonnet / R^2 higher-derivative gravity the AdS5/CFT4 dual plasma has
+    (Brigante-Liu-Myers-Shenker-Yaida; Dr. M.-confirmed standard form)
+        eta/s = (1/4pi) (1 - 8 lambda_GB),     lambda_GB = lam_map * g_R2,
+    so a positive curvature coupling LOWERS eta/s below the KSS bound 1/4pi. We
+    report eta/s in units of 1/4pi (= 1 - 8*lam_map*g_R2): values < 1 mean KSS is
+    violated by the dual. Causality (Brigante et al lambda_GB <= 9/100) caps the
+    violation at eta/s >= (1 - 0.72) = 0.28 KSS-units.
+
+    IMPORTANT (Dr. M.): the toy g_R2 (~0.2-0.4) CANNOT be lambda_GB directly — that
+    would give eta/s < 0 (unphysical) and violate causality. lam_map ~ 0.22 maps
+    the toy g_R2 to lambda_GB so the largest framework g_R2 (~0.4) sits just under
+    the causality bound. This mapping is order-of-magnitude; the *ordering* by g_R2
+    is the robust content.
+    """
+
+    name = "holographic_eta_over_s"
+
+    def __init__(self, lam_map: float = 0.22):
+        self.lam_map = float(lam_map)
+
+    def predict(self, theory: Theory) -> np.ndarray:
+        gR2 = theory.coefficients.get("g_R2", 0.0)
+        return np.array([1.0 - 8.0 * self.lam_map * gR2])   # eta/s in units of 1/4pi
+
+    def jacobian(self, theory: Theory, params: list[str]) -> np.ndarray:
+        cols = [np.array([-8.0 * self.lam_map]) if p == "g_R2" else np.array([0.0])
+                for p in params]
+        return np.stack(cols, axis=1)
+
+
 class GIEPhaseCorrection(Observable):
     """Fractional change of the GIE entangling phase from the R^2 Yukawa at the
     superposition scale r (single kinematic point). Negative: the scalar reduces

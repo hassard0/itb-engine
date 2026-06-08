@@ -41,7 +41,9 @@ def predict(name: str) -> dict:
         raise KeyError(f"unknown framework '{name}'. Known: {sorted(FRAMEWORKS)}")
     fw = FRAMEWORKS[name]
     c = fw.encode().coefficients
+    from itb.gravitational_observables import HolographicEtaOverS
     gR2 = c.get("g_R2", 0.0); gR3 = c.get("g_R3", 0.0)
+    eta_s = float(HolographicEtaOverS().predict(fw.encode())[0])
     parity = abs(c.get("g_R2_parity", 0.0)) + abs(c.get("g_R3_parity", 0.0))
     sc = engine_validity(fw)
     # sub-mm Yukawa range at the dark-energy cutoff (lambda_Y = hbar c / m0, m0 = E/sqrt(6 g_R2))
@@ -59,6 +61,7 @@ def predict(name: str) -> dict:
                                                     round(parity * 1.0 * 100, 1)],
             "cosmic_birefringence_sibling": ("parity-violating (EM birefringence expected)"
                                              if parity > 0.02 else "parity-conserving (no EB)"),
+            "holographic_eta_over_s_KSS_units": round(eta_s, 3),
         },
         "parity_violating": parity > 0.02,
     }
@@ -85,4 +88,5 @@ def render(name: str) -> str:
     L.append(f"    GW birefringence |g_R2_parity|:            {o['gw_birefringence_g_R2_parity']}")
     L.append(f"    chiral Hellings-Downs circ. pol. Pi_V:     {o['chiral_HD_circular_polarization_pct'][0]}-{o['chiral_HD_circular_polarization_pct'][1]}%")
     L.append(f"    cosmic-birefringence (EM sibling):         {o['cosmic_birefringence_sibling']}")
+    L.append(f"    holographic eta/s (KSS units, <1 = KSS-violated): {o['holographic_eta_over_s_KSS_units']}")
     return "\n".join(L)
