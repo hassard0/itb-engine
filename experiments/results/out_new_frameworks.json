@@ -1,0 +1,36 @@
+{
+  "horava_lifshitz": {
+    "feasible_canonical": false,
+    "binding": "cft_flat_space_bound",
+    "g_R2_over_g_R3": 1.125,
+    "n_violated": 9,
+    "violated": [
+      "cubic_graviton_matter_bound",
+      "cft_flat_space_bound",
+      "graviton_forward_positivity",
+      "bekenstein_tight",
+      "left_handed_graviton_positivity",
+      "generalized_anomaly_inflow"
+    ],
+    "prefactor_robustness": 0.0
+  },
+  "causal_set": {
+    "feasible_canonical": true,
+    "binding": null,
+    "g_R2_over_g_R3": 2.5,
+    "n_violated": 0,
+    "violated": [],
+    "prefactor_robustness": 0.427
+  },
+  "group_field_theory": {
+    "feasible_canonical": false,
+    "binding": "graviton_forward_positivity",
+    "g_R2_over_g_R3": 1.0,
+    "n_violated": 2,
+    "violated": [
+      "cft_flat_space_bound",
+      "graviton_forward_positivity"
+    ],
+    "prefactor_robustness": 0.0355
+  }
+}
