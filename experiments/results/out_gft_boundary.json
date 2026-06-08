@@ -1,0 +1,90 @@
+{
+  "gft_base": {
+    "g_4": 0.58,
+    "g_6": 0.43,
+    "g_8": 0.4,
+    "g_R2": 0.28,
+    "g_R2_parity": 0.07,
+    "g_R3_parity": 0.04
+  },
+  "scan": [
+    {
+      "ratio": 1.0,
+      "g_R3": 0.28,
+      "feasible": false,
+      "robustness": 0.029333333333333333,
+      "binding": "graviton_forward_positivity"
+    },
+    {
+      "ratio": 1.1,
+      "g_R3": 0.2545454545454546,
+      "feasible": false,
+      "robustness": 0.058666666666666666,
+      "binding": "cft_flat_space_bound"
+    },
+    {
+      "ratio": 1.2,
+      "g_R3": 0.23333333333333336,
+      "feasible": false,
+      "robustness": 0.09866666666666667,
+      "binding": "cft_flat_space_bound"
+    },
+    {
+      "ratio": 1.3,
+      "g_R3": 0.2153846153846154,
+      "feasible": true,
+      "robustness": 0.132,
+      "binding": null
+    },
+    {
+      "ratio": 1.4,
+      "g_R3": 0.20000000000000004,
+      "feasible": true,
+      "robustness": 0.16333333333333333,
+      "binding": null
+    },
+    {
+      "ratio": 1.5,
+      "g_R3": 0.18666666666666668,
+      "feasible": true,
+      "robustness": 0.20533333333333334,
+      "binding": null
+    },
+    {
+      "ratio": 1.6,
+      "g_R3": 0.17500000000000002,
+      "feasible": true,
+      "robustness": 0.24,
+      "binding": null
+    },
+    {
+      "ratio": 1.7000000000000002,
+      "g_R3": 0.16470588235294117,
+      "feasible": true,
+      "robustness": 0.24733333333333332,
+      "binding": null
+    },
+    {
+      "ratio": 1.8,
+      "g_R3": 0.15555555555555556,
+      "feasible": true,
+      "robustness": 0.254,
+      "binding": null
+    },
+    {
+      "ratio": 1.9,
+      "g_R3": 0.1473684210526316,
+      "feasible": true,
+      "robustness": 0.25866666666666666,
+      "binding": null
+    },
+    {
+      "ratio": 2.0,
+      "g_R3": 0.14,
+      "feasible": true,
+      "robustness": 0.2633333333333333,
+      "binding": null
+    }
+  ],
+  "feasible_from_ratio": 1.3
+}
