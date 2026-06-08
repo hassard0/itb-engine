@@ -1,0 +1,46 @@
+{
+  "submm": {
+    "best_separation_um": 93.16582914572864,
+    "lambda_Y_um": {
+      "string_tree_eft": 90.05471716314108,
+      "asymptotic_safety": 77.98967279390266,
+      "lqg_induced": 110.29405299017714,
+      "cdt": 94.45018418016276,
+      "discovered_novel": 74.26102218975085,
+      "discovered_parity_violating": 126.5581205003588,
+      "discovered_high_g8": 92.27862530131233
+    },
+    "delta_at_best": {
+      "string_tree_eft": -0.11846245593561697,
+      "asymptotic_safety": -0.10094250721401278,
+      "lqg_induced": -0.14322817350686493,
+      "cdt": -0.12430537219912532,
+      "discovered_novel": -0.09506592384319873,
+      "discovered_parity_violating": -0.15965136150234668,
+      "discovered_high_g8": -0.12145314952848174
+    },
+    "required_precision_all_pairs": 0.001426111335321792,
+    "pairs_total": 21,
+    "pairs_resolvable_at_1pct": 14,
+    "pairs_resolvable_at_0p1pct": 21
+  },
+  "birefringence": {
+    "g_R2_parity": {
+      "string_tree_eft": 0.0,
+      "asymptotic_safety": 0.0,
+      "lqg_induced": 0.08,
+      "cdt": 0.0,
+      "discovered_novel": 0.021,
+      "discovered_parity_violating": 0.092,
+      "discovered_high_g8": 0.033
+    },
+    "ligo_o3_bound": 0.1,
+    "parity_violating_frameworks": {
+      "lqg_induced": 0.08,
+      "discovered_novel": 0.021,
+      "discovered_parity_violating": 0.092,
+      "discovered_high_g8": 0.033
+    },
+    "needed_sensitivity": 0.0105
+  }
+}
