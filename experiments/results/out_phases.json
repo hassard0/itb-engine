@@ -1,0 +1,75 @@
+{
+  "n_seeds": 50,
+  "n_components_straightline": 4,
+  "method": "straight-segment feasibility connectivity (lower bound on connectivity)",
+  "phases": [
+    {
+      "size": 18,
+      "span": 0.4534946051430188,
+      "centroid": {
+        "g_4": 0.6128117027827013,
+        "g_6": 0.39044513451056506,
+        "g_8": 0.35059120155986956,
+        "g_R2": 0.3186779754951113,
+        "g_R3": 0.10158664131213624,
+        "g_R2_parity": 0.06082801348159915,
+        "g_R3_parity": -0.036667385133222145
+      },
+      "nearest_framework": "cdt",
+      "nearest_distance": 0.1454740371480326,
+      "contains_framework": false,
+      "parity_violating": true
+    },
+    {
+      "size": 14,
+      "span": 0.45583272886626724,
+      "centroid": {
+        "g_4": 0.5301498480068092,
+        "g_6": 0.3318590912029243,
+        "g_8": 0.4166430898566648,
+        "g_R2": 0.24452433380962033,
+        "g_R3": 0.0896160343238656,
+        "g_R2_parity": -0.042527228528082515,
+        "g_R3_parity": 0.030961203103170496
+      },
+      "nearest_framework": "string_tree_eft",
+      "nearest_distance": 0.11926856292562896,
+      "contains_framework": false,
+      "parity_violating": true
+    },
+    {
+      "size": 10,
+      "span": 0.4015524816592658,
+      "centroid": {
+        "g_4": 0.623241152314095,
+        "g_6": 0.4368203020210909,
+        "g_8": 0.39777756759657323,
+        "g_R2": 0.34148328619218044,
+        "g_R3": 0.10796523197858798,
+        "g_R2_parity": -0.0615001451557035,
+        "g_R3_parity": -0.038103641549056225
+      },
+      "nearest_framework": "cdt",
+      "nearest_distance": 0.17539088601977768,
+      "contains_framework": false,
+      "parity_violating": true
+    },
+    {
+      "size": 8,
+      "span": 0.3603962966955065,
+      "centroid": {
+        "g_4": 0.6104710836307358,
+        "g_6": 0.40925409827774006,
+        "g_8": 0.33351738079984744,
+        "g_R2": 0.3392326194900941,
+        "g_R3": 0.09379389002106747,
+        "g_R2_parity": 0.06917580411545539,
+        "g_R3_parity": 0.03363994295007011
+      },
+      "nearest_framework": "cdt",
+      "nearest_distance": 0.16524693344278432,
+      "contains_framework": false,
+      "parity_violating": true
+    }
+  ]
+}
