@@ -1,0 +1,30 @@
+{
+  "beta_em_asymptotic_deg": 0.34,
+  "z": [
+    0.05,
+    0.1,
+    0.5,
+    1.0,
+    2.0,
+    5.0
+  ],
+  "roll_fraction": [
+    0.2239229024943313,
+    0.40289256198347123,
+    0.9722222222222222,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "beta_em_deg": [
+    0.07613378684807265,
+    0.13698347107438022,
+    0.3305555555555556,
+    0.34,
+    0.34,
+    0.34
+  ],
+  "ratio_is_clean": false,
+  "reason": "EM=achromatic angle (carries alpha); GW=chromatic amplitude asymmetry; ratio is structural+frequency-dependent",
+  "real_test": "joint GW+EM parity detection from a z>~0.5 source tracking the same axion history"
+}
