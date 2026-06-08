@@ -1,0 +1,52 @@
+{
+  "1. prior (no data)": {
+    "pure_gr": 0.125,
+    "string_tree_eft": 0.125,
+    "asymptotic_safety": 0.125,
+    "lqg_induced": 0.125,
+    "cdt": 0.125,
+    "discovered_novel": 0.125,
+    "discovered_parity_violating": 0.125,
+    "discovered_high_g8": 0.125
+  },
+  "2. + GW birefringence null (LIGO O3: g_R2_parity = 0 +/- 0.05)": {
+    "pure_gr": 0.1618,
+    "string_tree_eft": 0.1618,
+    "asymptotic_safety": 0.1618,
+    "cdt": 0.1618,
+    "discovered_novel": 0.1481,
+    "discovered_high_g8": 0.1301,
+    "lqg_induced": 0.045,
+    "discovered_parity_violating": 0.0298
+  },
+  "3. + sub-mm gravity finds Yukawa lambda~90um (g_R2 = 0.20 +/- 0.03)": {
+    "string_tree_eft": 0.3441,
+    "cdt": 0.2755,
+    "discovered_high_g8": 0.2618,
+    "asymptotic_safety": 0.0858,
+    "discovered_novel": 0.0324,
+    "lqg_induced": 0.0004,
+    "pure_gr": 0.0,
+    "discovered_parity_violating": 0.0
+  },
+  "4. INSTEAD: GW birefringence DETECTED (g_R2_parity = 0.09 +/- 0.02)": {
+    "lqg_induced": 0.9778,
+    "discovered_high_g8": 0.0191,
+    "discovered_novel": 0.0029,
+    "pure_gr": 0.0,
+    "string_tree_eft": 0.0,
+    "asymptotic_safety": 0.0,
+    "cdt": 0.0,
+    "discovered_parity_violating": 0.0
+  },
+  "5. + matter scattering (g_8 = 0.05 +/- 0.03, the low-g8 novel branch)": {
+    "discovered_novel": 0.7836,
+    "pure_gr": 0.2164,
+    "asymptotic_safety": 0.0,
+    "cdt": 0.0,
+    "discovered_parity_violating": 0.0,
+    "string_tree_eft": 0.0,
+    "lqg_induced": 0.0,
+    "discovered_high_g8": 0.0
+  }
+}
