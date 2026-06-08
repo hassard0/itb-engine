@@ -1,0 +1,256 @@
+{
+  "pairs": [
+    {
+      "a": "string_tree_eft",
+      "b": "cdt",
+      "total_snr": 2.6008542403074877,
+      "dominant_obs": "submm_yukawa",
+      "per_obs": {
+        "matter_amplitude": 1.2592292285362514,
+        "graviton_amplitude": 1.5916029655664767,
+        "submm_yukawa": 1.6265252931711305,
+        "birefringence": 0.0
+      }
+    },
+    {
+      "a": "string_tree_eft",
+      "b": "discovered_high_g8",
+      "total_snr": 11.133005050185865,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 7.637969489019972,
+        "graviton_amplitude": 7.233579885506208,
+        "submm_yukawa": 0.8321932301238464,
+        "birefringence": 3.547957158704146
+      }
+    },
+    {
+      "a": "cdt",
+      "b": "discovered_high_g8",
+      "total_snr": 12.842458069991167,
+      "dominant_obs": "graviton_amplitude",
+      "per_obs": {
+        "matter_amplitude": 8.614588099566921,
+        "graviton_amplitude": 8.803329708695456,
+        "submm_yukawa": 0.7943470238386005,
+        "birefringence": 3.547957158704146
+      }
+    },
+    {
+      "a": "asymptotic_safety",
+      "b": "discovered_high_g8",
+      "total_snr": 15.503300127861223,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 13.951177055546255,
+        "graviton_amplitude": 0.8120646279699659,
+        "submm_yukawa": 5.69820363442213,
+        "birefringence": 3.547957158704146
+      }
+    },
+    {
+      "a": "cdt",
+      "b": "discovered_parity_violating",
+      "total_snr": 22.502051983666544,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 15.651708661702077,
+        "graviton_amplitude": 7.084294248547278,
+        "submm_yukawa": 9.92709093565842,
+        "birefringence": 10.612822433264396
+      }
+    },
+    {
+      "a": "string_tree_eft",
+      "b": "asymptotic_safety",
+      "total_snr": 23.107129278871327,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 21.318003025611954,
+        "graviton_amplitude": 7.469974899556223,
+        "submm_yukawa": 4.8663790964609595,
+        "birefringence": 0.0
+      }
+    },
+    {
+      "a": "string_tree_eft",
+      "b": "discovered_parity_violating",
+      "total_snr": 24.331364043141413,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 16.46137845688507,
+        "graviton_amplitude": 8.658465510701078,
+        "submm_yukawa": 11.551505118341716,
+        "birefringence": 10.612822433264396
+      }
+    },
+    {
+      "a": "asymptotic_safety",
+      "b": "cdt",
+      "total_snr": 24.731220414801804,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 22.078157039254894,
+        "graviton_amplitude": 9.057644561363622,
+        "submm_yukawa": 6.492096730295162,
+        "birefringence": 0.0
+      }
+    },
+    {
+      "a": "discovered_parity_violating",
+      "b": "discovered_high_g8",
+      "total_snr": 33.099268559336764,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 24.06598153985829,
+        "graviton_amplitude": 15.694363668527634,
+        "submm_yukawa": 10.72049722383712,
+        "birefringence": 12.455842002851512
+      }
+    },
+    {
+      "a": "asymptotic_safety",
+      "b": "discovered_novel",
+      "total_snr": 36.30443234389798,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 33.99331920322727,
+        "graviton_amplitude": 6.938602545902164,
+        "submm_yukawa": 1.6328968339015697,
+        "birefringence": 10.566716613972385
+      }
+    },
+    {
+      "a": "lqg_induced",
+      "b": "cdt",
+      "total_snr": 38.277105214027095,
+      "dominant_obs": "birefringence",
+      "per_obs": {
+        "matter_amplitude": 10.659001512805977,
+        "graviton_amplitude": 16.861519059681427,
+        "submm_yukawa": 5.292602886642809,
+        "birefringence": 32.23662513353407
+      }
+    },
+    {
+      "a": "string_tree_eft",
+      "b": "lqg_induced",
+      "total_snr": 39.47402208687202,
+      "dominant_obs": "birefringence",
+      "per_obs": {
+        "matter_amplitude": 11.441198582316456,
+        "graviton_amplitude": 18.445412031180005,
+        "submm_yukawa": 6.918393579065827,
+        "birefringence": 32.23662513353407
+      }
+    },
+    {
+      "a": "lqg_induced",
+      "b": "discovered_parity_violating",
+      "total_snr": 42.71281364737599,
+      "dominant_obs": "birefringence",
+      "per_obs": {
+        "matter_amplitude": 5.023862866440515,
+        "graviton_amplitude": 10.200610275860948,
+        "submm_yukawa": 4.636895682961665,
+        "birefringence": 40.909558785203245
+      }
+    },
+    {
+      "a": "asymptotic_safety",
+      "b": "discovered_parity_violating",
+      "total_snr": 45.415563337447,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 37.72980968757728,
+        "graviton_amplitude": 16.038972847411397,
+        "submm_yukawa": 16.405919791247886,
+        "birefringence": 10.612822433264396
+      }
+    },
+    {
+      "a": "lqg_induced",
+      "b": "discovered_high_g8",
+      "total_snr": 46.65056534074552,
+      "dominant_obs": "birefringence",
+      "per_obs": {
+        "matter_amplitude": 19.042235680591716,
+        "graviton_amplitude": 25.658396772986425,
+        "submm_yukawa": 6.086639625932125,
+        "birefringence": 33.4405143501113
+      }
+    },
+    {
+      "a": "discovered_novel",
+      "b": "discovered_high_g8",
+      "total_snr": 50.518758548714096,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 47.92756934433146,
+        "graviton_amplitude": 7.21033597067432,
+        "submm_yukawa": 7.329844284674328,
+        "birefringence": 12.222008836521109
+      }
+    },
+    {
+      "a": "asymptotic_safety",
+      "b": "lqg_induced",
+      "total_snr": 54.04382655246832,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 32.72946131545707,
+        "graviton_amplitude": 25.914646437873703,
+        "submm_yukawa": 11.779161703333449,
+        "birefringence": 32.23662513353407
+      }
+    },
+    {
+      "a": "string_tree_eft",
+      "b": "discovered_novel",
+      "total_snr": 58.463985787863955,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 55.28780600957594,
+        "graviton_amplitude": 14.401827428836938,
+        "submm_yukawa": 6.4983080537212,
+        "birefringence": 10.566716613972385
+      }
+    },
+    {
+      "a": "cdt",
+      "b": "discovered_novel",
+      "total_snr": 59.738834480305464,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 55.996024587933924,
+        "graviton_amplitude": 15.985240232476958,
+        "submm_yukawa": 8.123433394989581,
+        "birefringence": 10.566716613972385
+      }
+    },
+    {
+      "a": "lqg_induced",
+      "b": "discovered_novel",
+      "total_snr": 78.56016980563997,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 66.65355680196295,
+        "graviton_amplitude": 32.84657573157361,
+        "submm_yukawa": 13.407856213745914,
+        "birefringence": 21.68721973882314
+      }
+    },
+    {
+      "a": "discovered_novel",
+      "b": "discovered_parity_violating",
+      "total_snr": 79.80059007928968,
+      "dominant_obs": "matter_amplitude",
+      "per_obs": {
+        "matter_amplitude": 71.62472057619004,
+        "graviton_amplitude": 22.90369652021263,
+        "submm_yukawa": 18.03160461787926,
+        "birefringence": 19.70572251910597
+      }
+    }
+  ]
+}
