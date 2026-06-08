@@ -1,0 +1,43 @@
+{
+  "n": 500000,
+  "lqg_feasible_fraction": 0.015002,
+  "violating_constraint_prob": {
+    "scalar_wgc": 0.423848,
+    "dispersion_tower_g6_squared_bound": 0.3982,
+    "swampland_distance_conjecture": 0.391182,
+    "anomaly_cancellation": 0.381658,
+    "generalized_anomaly_inflow": 0.293884,
+    "complexity_cutoff": 0.292434,
+    "scalar_convexity_g6_vs_g4": 0.253962,
+    "matter_s3_positivity": 0.23831,
+    "bekenstein_tight": 0.23666,
+    "ligo_birefringence_bound": 0.208728,
+    "cft_flat_space_bound": 0.208422,
+    "repulsive_force_conjecture": 0.10764,
+    "bnossw_monogamy": 0.078272,
+    "left_handed_graviton_positivity": 0.076654,
+    "cubic_graviton_matter_bound": 0.014164,
+    "graviton_forward_positivity": 0.013724,
+    "parity_violating_positivity": 0.006634,
+    "graviton_mixed_positivity": 0.00372,
+    "spin_four_positivity": 0.00046,
+    "right_handed_graviton_positivity": 1.8e-05
+  },
+  "sole_violator_prob": {
+    "swampland_distance_conjecture": 0.021842,
+    "scalar_convexity_g6_vs_g4": 0.019316,
+    "generalized_anomaly_inflow": 0.010622,
+    "scalar_wgc": 0.006628,
+    "anomaly_cancellation": 0.005996,
+    "complexity_cutoff": 0.0043,
+    "dispersion_tower_g6_squared_bound": 0.003462,
+    "cft_flat_space_bound": 0.003296,
+    "bekenstein_tight": 0.002556,
+    "ligo_birefringence_bound": 0.001154,
+    "bnossw_monogamy": 0.000748,
+    "matter_s3_positivity": 0.000634,
+    "graviton_forward_positivity": 0.000178,
+    "cubic_graviton_matter_bound": 5.8e-05,
+    "repulsive_force_conjecture": 4.8e-05
+  }
+}

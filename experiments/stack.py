@@ -192,6 +192,7 @@ CANONICAL: dict[str, float] = {
     "cft_alpha": 0.5,          # CFT-to-flat-space mapping coefficient
     "graviton_fwd_c": 1.2,     # forward-dispersion leading/cubic ratio (v1.24)
     "matter_s3_cm": 1.0,       # matter s^3 forward-moment ratio (v1.25)
+    "anomaly_rho": 0.06,       # gravitational anomaly-inflow coefficient (v1.26)
 }
 
 # Factor-of-~2 O(1) ignorance windows. Stated assumptions, not published numbers.
@@ -204,6 +205,7 @@ PLAUSIBLE_RANGES: dict[str, tuple[float, float]] = {
     "cft_alpha": (0.25, 1.0),
     "graviton_fwd_c": (0.8, 1.6),
     "matter_s3_cm": (0.8, 1.4),
+    "anomaly_rho": (0.03, 0.12),
 }
 
 
@@ -240,7 +242,7 @@ def build_stack(prefactors: dict[str, float] | None = None,
         # --- Class C: gravitational universality / swampland ---
         EFTValidityBox(box=2.0), CausalityBound(gamma=1.0),
         AnomalyCancellation(c_anom=1.0, tolerance=0.2),
-        GeneralizedAnomalyInflow(rho=0.06),
+        GeneralizedAnomalyInflow(rho=p["anomaly_rho"]),
         tHooftAnomalyMatching(rho_match=0.5, slack=0.02),
         WeakGravityConjecture(alpha=1.0),
         ScalarWGC(beta=p["scalar_wgc_beta"]),

@@ -1,0 +1,105 @@
+{
+  "n": 400000,
+  "per_framework": {
+    "string_tree_eft": {
+      "feasible_fraction": 0.23503,
+      "top_excluders": [
+        [
+          "scalar_wgc",
+          0.32973
+        ],
+        [
+          "graviton_forward_positivity",
+          0.3275675
+        ],
+        [
+          "matter_s3_positivity",
+          0.249885
+        ],
+        [
+          "cft_flat_space_bound",
+          0.18638
+        ],
+        [
+          "complexity_cutoff",
+          0.09224
+        ]
+      ]
+    },
+    "asymptotic_safety": {
+      "feasible_fraction": 0.4433425,
+      "top_excluders": [
+        [
+          "dispersion_tower_g6_squared_bound",
+          0.3189475
+        ],
+        [
+          "matter_s3_positivity",
+          0.23985
+        ],
+        [
+          "scalar_wgc",
+          0.23052
+        ],
+        [
+          "swampland_distance_conjecture",
+          0.11689
+        ],
+        [
+          "cft_flat_space_bound",
+          0.03652
+        ]
+      ]
+    },
+    "lqg_induced": {
+      "feasible_fraction": 0.020895,
+      "top_excluders": [
+        [
+          "scalar_wgc",
+          0.42493
+        ],
+        [
+          "dispersion_tower_g6_squared_bound",
+          0.3986825
+        ],
+        [
+          "anomaly_cancellation",
+          0.3842375
+        ],
+        [
+          "generalized_anomaly_inflow",
+          0.3315775
+        ],
+        [
+          "complexity_cutoff",
+          0.2943025
+        ]
+      ]
+    },
+    "cdt": {
+      "feasible_fraction": 0.190455,
+      "top_excluders": [
+        [
+          "dispersion_tower_g6_squared_bound",
+          0.3885175
+        ],
+        [
+          "anomaly_cancellation",
+          0.319545
+        ],
+        [
+          "scalar_wgc",
+          0.2538375
+        ],
+        [
+          "matter_s3_positivity",
+          0.2076925
+        ],
+        [
+          "scalar_convexity_g6_vs_g4",
+          0.19904
+        ]
+      ]
+    }
+  }
+}
