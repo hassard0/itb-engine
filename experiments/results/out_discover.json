@@ -1,0 +1,51 @@
+{
+  "n_feasible": 191,
+  "n_total": 1000,
+  "most_novel": {
+    "kind": "novelty",
+    "x": [
+      0.34037982234741193,
+      0.11743841444410819,
+      0.04538235251133135,
+      0.1356718180455614,
+      0.01702056377179302,
+      0.02076621056834363,
+      0.017286787317251466
+    ],
+    "feasible": true,
+    "worst_margin": 0.0015799909828524833,
+    "novelty": 0.3309598112591052,
+    "parity": 0.038052997885595095,
+    "nearest_framework": "asymptotic_safety",
+    "nearest_distance": 0.3309598112591052,
+    "prefactor_robustness": 0.765,
+    "invented_experiment": {
+      "vs": "asymptotic_safety",
+      "observable": "g_8",
+      "gap": 0.25461764748866866
+    }
+  },
+  "max_parity": {
+    "kind": "parity",
+    "x": [
+      0.6918105169114088,
+      0.4836023246212662,
+      0.345306602683898,
+      0.3864270929823484,
+      0.12363855053309968,
+      0.09215156326669238,
+      -0.035691120357701056
+    ],
+    "feasible": true,
+    "worst_margin": 0.005000436859410474,
+    "novelty": 0.23874560602395173,
+    "parity": 0.12784268362439344,
+    "prefactor_robustness": 0.178,
+    "invented_experiment": {
+      "vs": "lqg_induced",
+      "observable": "g_R3",
+      "gap": 0.1763614494669003
+    }
+  },
+  "n_islands": 31
+}
