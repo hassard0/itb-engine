@@ -1,0 +1,58 @@
+{
+  "string_tree_eft": {
+    "cemz_margin": 0.10298221281347039,
+    "cemz_ok": true,
+    "efthedron_margin": 0.014000000000000012,
+    "efthedron_ok": true,
+    "in_scope": true
+  },
+  "asymptotic_safety": {
+    "cemz_margin": 0.09595917942265425,
+    "cemz_ok": true,
+    "efthedron_margin": 0.011999999999999997,
+    "efthedron_ok": true,
+    "in_scope": true
+  },
+  "lqg_induced": {
+    "cemz_margin": 0.03941125496954284,
+    "cemz_ok": true,
+    "efthedron_margin": -0.028500000000000025,
+    "efthedron_ok": false,
+    "in_scope": true
+  },
+  "cdt": {
+    "cemz_margin": 0.1282804340948174,
+    "cemz_ok": true,
+    "efthedron_margin": 0.010999999999999996,
+    "efthedron_ok": true,
+    "in_scope": true
+  },
+  "group_field_theory": {
+    "cemz_margin": 0.042391066873758154,
+    "cemz_ok": true,
+    "efthedron_margin": -0.020440000000000014,
+    "efthedron_ok": false,
+    "in_scope": true
+  },
+  "discovered_novel": {
+    "cemz_margin": 0.15502790471315986,
+    "cemz_ok": true,
+    "efthedron_margin": 0.0039321,
+    "efthedron_ok": true,
+    "in_scope": true
+  },
+  "discovered_parity_violating": {
+    "cemz_margin": 0.35442749659240536,
+    "cemz_ok": true,
+    "efthedron_margin": 0.12157000000000001,
+    "efthedron_ok": true,
+    "in_scope": true
+  },
+  "discovered_high_g8": {
+    "cemz_margin": 0.21074521271951765,
+    "cemz_ok": true,
+    "efthedron_margin": 0.1076832,
+    "efthedron_ok": true,
+    "in_scope": true
+  }
+}

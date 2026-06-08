@@ -21,7 +21,9 @@ from itb.constraints.anomaly_flow import GeneralizedAnomalyInflow, tHooftAnomaly
 from itb.constraints.base import Constraint, ConstraintClass, ConstraintResult
 from itb.constraints.bekenstein_tight import BekensteinTight
 from itb.constraints.causality import CausalityBound
+from itb.constraints.cemz_causality import CEMZCausality
 from itb.constraints.cft_flat_space import CFTFlatSpaceBound
+from itb.constraints.cross_sector_efthedron import CrossSectorEFThedron
 from itb.constraints.complexity_cutoff import ComplexityCutoff
 from itb.constraints.cubic_parity import ParityViolatingCubicBound
 from itb.constraints.dispersion_tower import DispersionTowerCauchySchwarz, ScalarPositivityG8
@@ -193,6 +195,8 @@ CANONICAL: dict[str, float] = {
     "graviton_fwd_c": 1.2,     # forward-dispersion leading/cubic ratio (v1.24)
     "matter_s3_cm": 1.0,       # matter s^3 forward-moment ratio (v1.25)
     "anomaly_rho": 0.06,       # gravitational anomaly-inflow coefficient (v1.26)
+    "cemz_kappa": 0.8,         # CEMZ graviton-causality prefactor (v1.61)
+    "efthedron_alpha": 1.1,    # cross-sector dim-8 EFThedron prefactor (v1.61, Dr. M.)
 }
 
 # Factor-of-~2 O(1) ignorance windows. Stated assumptions, not published numbers.
@@ -206,6 +210,8 @@ PLAUSIBLE_RANGES: dict[str, tuple[float, float]] = {
     "graviton_fwd_c": (0.8, 1.6),
     "matter_s3_cm": (0.8, 1.4),
     "anomaly_rho": (0.03, 0.12),
+    "cemz_kappa": (0.6, 1.2),
+    "efthedron_alpha": (0.8, 1.5),
 }
 
 
@@ -228,6 +234,8 @@ def build_stack(prefactors: dict[str, float] | None = None,
         CFTFlatSpaceBound(alpha=p["cft_alpha"]),
         GravitonForwardPositivity(c=p["graviton_fwd_c"]),  # v1.24
         MatterS3Positivity(c_m=p["matter_s3_cm"]),          # v1.25
+        CEMZCausality(kappa=p["cemz_kappa"]),               # v1.61 (causality)
+        CrossSectorEFThedron(alpha=p["efthedron_alpha"]),   # v1.61 (cross-sector, Dr. M.)
 
         # --- Class B: information-theoretic ---
         BekensteinTight(), HolographicSubadditivity(),
