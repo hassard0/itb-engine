@@ -29,6 +29,7 @@ from itb.constraints.distance_conjecture import DistanceConjecture
 from itb.constraints.eft_validity import EFTValidityBox
 from itb.constraints.generalized_second_law import GeneralizedSecondLaw
 from itb.constraints.graviton_eft import GravitonMixedPositivity
+from itb.constraints.graviton_forward_positivity import GravitonForwardPositivity
 from itb.constraints.graviton_self_coupling import CubicCurvaturePositivity, CubicGravitonMatterBound
 from itb.constraints.holographic_entropy import HolographicSubadditivity
 from itb.constraints.ligo_graviton_mass import LIGOGravitonMassBound
@@ -188,6 +189,7 @@ CANONICAL: dict[str, float] = {
     "complexity_cmax": 1.5,    # Susskind/Lloyd complexity cutoff scale
     "scalar_wgc_beta": 0.5,    # Palti scalar-WGC scalar-force coefficient
     "cft_alpha": 0.5,          # CFT-to-flat-space mapping coefficient
+    "graviton_fwd_c": 1.2,     # forward-dispersion leading/cubic ratio (v1.24)
 }
 
 # Factor-of-~2 O(1) ignorance windows. Stated assumptions, not published numbers.
@@ -198,6 +200,7 @@ PLAUSIBLE_RANGES: dict[str, tuple[float, float]] = {
     "complexity_cmax": (1.0, 2.5),
     "scalar_wgc_beta": (0.25, 1.0),
     "cft_alpha": (0.25, 1.0),
+    "graviton_fwd_c": (0.8, 1.6),
 }
 
 
@@ -218,6 +221,8 @@ def build_stack(prefactors: dict[str, float] | None = None,
         CubicGravitonMatterBound(kappa=p["cubic_kappa"]),
         SpinFourPositivity(),
         CFTFlatSpaceBound(alpha=p["cft_alpha"]),
+        GravitonForwardPositivity(c=p["graviton_fwd_c"]),  # v1.24
+
         # --- Class B: information-theoretic ---
         BekensteinTight(), HolographicSubadditivity(),
         TunableBNOSSWMonogamy(prefactor=p["bnossw_pref"], mean=bnossw_mean),

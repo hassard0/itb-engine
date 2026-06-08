@@ -1,0 +1,406 @@
+{
+  "marginal": {
+    "bnossw_pref": {
+      "range": [
+        0.5,
+        2.0
+      ],
+      "frameworks": {
+        "pure_gr": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 1.0,
+          "transitions": [],
+          "feasible_at_canonical": true
+        },
+        "string_tree_eft": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 0.7317073170731707,
+          "transitions": [
+            0.9125
+          ],
+          "feasible_at_canonical": true
+        },
+        "asymptotic_safety": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 0.7560975609756098,
+          "transitions": [
+            0.875
+          ],
+          "feasible_at_canonical": true
+        },
+        "lqg_induced": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 0.0,
+          "transitions": [],
+          "feasible_at_canonical": false
+        },
+        "cdt": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 0.7073170731707317,
+          "transitions": [
+            0.95
+          ],
+          "feasible_at_canonical": true
+        }
+      }
+    },
+    "rfc_gamma": {
+      "range": [
+        0.5,
+        2.0
+      ],
+      "frameworks": {
+        "pure_gr": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 1.0,
+          "transitions": [],
+          "feasible_at_canonical": true
+        },
+        "string_tree_eft": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 1.0,
+          "transitions": [],
+          "feasible_at_canonical": true
+        },
+        "asymptotic_safety": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 1.0,
+          "transitions": [],
+          "feasible_at_canonical": true
+        },
+        "lqg_induced": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 0.0,
+          "transitions": [],
+          "feasible_at_canonical": false
+        },
+        "cdt": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 1.0,
+          "transitions": [],
+          "feasible_at_canonical": true
+        }
+      }
+    },
+    "cubic_kappa": {
+      "range": [
+        0.5,
+        2.0
+      ],
+      "frameworks": {
+        "pure_gr": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 1.0,
+          "transitions": [],
+          "feasible_at_canonical": true
+        },
+        "string_tree_eft": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 0.926829268292683,
+          "transitions": [
+            0.6125
+          ],
+          "feasible_at_canonical": true
+        },
+        "asymptotic_safety": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 0.9024390243902439,
+          "transitions": [
+            0.65
+          ],
+          "feasible_at_canonical": true
+        },
+        "lqg_induced": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 0.0,
+          "transitions": [],
+          "feasible_at_canonical": false
+        },
+        "cdt": {
+          "canonical_value": 1.0,
+          "feasible_fraction": 1.0,
+          "transitions": [],
+          "feasible_at_canonical": true
+        }
+      }
+    },
+    "complexity_cmax": {
+      "range": [
+        1.0,
+        2.5
+      ],
+      "frameworks": {
+        "pure_gr": {
+          "canonical_value": 1.5,
+          "feasible_fraction": 1.0,
+          "transitions": [],
+          "feasible_at_canonical": true
+        },
+        "string_tree_eft": {
+          "canonical_value": 1.5,
+          "feasible_fraction": 0.9024390243902439,
+          "transitions": [
+            1.15
+          ],
+          "feasible_at_canonical": true
+        },
+        "asymptotic_safety": {
+          "canonical_value": 1.5,
+          "feasible_fraction": 1.0,
+          "transitions": [],
+          "feasible_at_canonical": true
+        },
+        "lqg_induced": {
+          "canonical_value": 1.5,
+          "feasible_fraction": 0.0,
+          "transitions": [],
+          "feasible_at_canonical": false
+        },
+        "cdt": {
+          "canonical_value": 1.5,
+          "feasible_fraction": 0.926829268292683,
+          "transitions": [
+            1.1125
+          ],
+          "feasible_at_canonical": true
+        }
+      }
+    },
+    "scalar_wgc_beta": {
+      "range": [
+        0.25,
+        1.0
+      ],
+      "frameworks": {
+        "pure_gr": {
+          "canonical_value": 0.5,
+          "feasible_fraction": 1.0,
+          "transitions": [],
+          "feasible_at_canonical": true
+        },
+        "string_tree_eft": {
+          "canonical_value": 0.5,
+          "feasible_fraction": 0.6585365853658537,
+          "transitions": [
+            0.75625
+          ],
+          "feasible_at_canonical": true
+        },
+        "asymptotic_safety": {
+          "canonical_value": 0.5,
+          "feasible_fraction": 0.7804878048780488,
+          "transitions": [
+            0.85
+          ],
+          "feasible_at_canonical": true
+        },
+        "lqg_induced": {
+          "canonical_value": 0.5,
+          "feasible_fraction": 0.0,
+          "transitions": [],
+          "feasible_at_canonical": false
+        },
+        "cdt": {
+          "canonical_value": 0.5,
+          "feasible_fraction": 0.7560975609756098,
+          "transitions": [
+            0.8312499999999999
+          ],
+          "feasible_at_canonical": true
+        }
+      }
+    },
+    "cft_alpha": {
+      "range": [
+        0.25,
+        1.0
+      ],
+      "frameworks": {
+        "pure_gr": {
+          "canonical_value": 0.5,
+          "feasible_fraction": 1.0,
+          "transitions": [],
+          "feasible_at_canonical": true
+        },
+        "string_tree_eft": {
+          "canonical_value": 0.5,
+          "feasible_fraction": 0.8048780487804879,
+          "transitions": [
+            0.4
+          ],
+          "feasible_at_canonical": true
+        },
+        "asymptotic_safety": {
+          "canonical_value": 0.5,
+          "feasible_fraction": 0.8536585365853658,
+          "transitions": [
+            0.3625
+          ],
+          "feasible_at_canonical": true
+        },
+        "lqg_induced": {
+          "canonical_value": 0.5,
+          "feasible_fraction": 0.0,
+          "transitions": [],
+          "feasible_at_canonical": false
+        },
+        "cdt": {
+          "canonical_value": 0.5,
+          "feasible_fraction": 0.8048780487804879,
+          "transitions": [
+            0.4
+          ],
+          "feasible_at_canonical": true
+        }
+      }
+    },
+    "graviton_fwd_c": {
+      "range": [
+        0.8,
+        1.6
+      ],
+      "frameworks": {
+        "pure_gr": {
+          "canonical_value": 1.2,
+          "feasible_fraction": 1.0,
+          "transitions": [],
+          "feasible_at_canonical": true
+        },
+        "string_tree_eft": {
+          "canonical_value": 1.2,
+          "feasible_fraction": 0.6585365853658537,
+          "transitions": [
+            1.34
+          ],
+          "feasible_at_canonical": true
+        },
+        "asymptotic_safety": {
+          "canonical_value": 1.2,
+          "feasible_fraction": 0.8780487804878049,
+          "transitions": [
+            1.52
+          ],
+          "feasible_at_canonical": true
+        },
+        "lqg_induced": {
+          "canonical_value": 1.2,
+          "feasible_fraction": 0.0,
+          "transitions": [],
+          "feasible_at_canonical": false
+        },
+        "cdt": {
+          "canonical_value": 1.2,
+          "feasible_fraction": 0.8292682926829268,
+          "transitions": [
+            1.48
+          ],
+          "feasible_at_canonical": true
+        }
+      }
+    }
+  },
+  "joint": {
+    "n": 300000,
+    "mean_form": "harmonic",
+    "per_framework": {
+      "pure_gr": {
+        "exclusion_fraction": 0.0,
+        "constraint_exclusion_prob": {}
+      },
+      "string_tree_eft": {
+        "exclusion_fraction": 0.7748266666666667,
+        "constraint_exclusion_prob": {
+          "scalar_wgc": 0.33415333333333336,
+          "graviton_forward_positivity": 0.33406,
+          "bnossw_monogamy": 0.2672733333333333,
+          "cft_flat_space_bound": 0.18461333333333332,
+          "complexity_cutoff": 0.08949333333333333,
+          "cubic_graviton_matter_bound": 0.06588
+        }
+      },
+      "asymptotic_safety": {
+        "exclusion_fraction": 0.5989733333333334,
+        "constraint_exclusion_prob": {
+          "bnossw_monogamy": 0.25032666666666664,
+          "scalar_wgc": 0.22239666666666666,
+          "cft_flat_space_bound": 0.14223333333333332,
+          "graviton_forward_positivity": 0.12545333333333333,
+          "cubic_graviton_matter_bound": 0.08223
+        }
+      },
+      "lqg_induced": {
+        "exclusion_fraction": 0.9780166666666666,
+        "constraint_exclusion_prob": {
+          "graviton_forward_positivity": 0.7502,
+          "bnossw_monogamy": 0.44547,
+          "scalar_wgc": 0.44524,
+          "cft_flat_space_bound": 0.42879666666666666,
+          "complexity_cutoff": 0.34925333333333336,
+          "cubic_graviton_matter_bound": 0.22045333333333333
+        }
+      },
+      "cdt": {
+        "exclusion_fraction": 0.6566,
+        "constraint_exclusion_prob": {
+          "bnossw_monogamy": 0.30069,
+          "scalar_wgc": 0.23344333333333334,
+          "cft_flat_space_bound": 0.18540666666666666,
+          "graviton_forward_positivity": 0.16704666666666668,
+          "complexity_cutoff": 0.055466666666666664
+        }
+      }
+    },
+    "fraction_all_nontrivial_excluded": 0.57033
+  },
+  "intersection": {
+    "n": 4000,
+    "mean_form": "harmonic",
+    "nonempty_fraction": 0.68,
+    "margin_mean": -0.002471832020244249,
+    "margin_p05": -0.041175725878276316,
+    "margin_p50": 0.006854505360354401,
+    "margin_p95": 0.009207500744234839
+  },
+  "canonical": {
+    "bnossw_pref": 1.0,
+    "rfc_gamma": 1.0,
+    "cubic_kappa": 1.0,
+    "complexity_cmax": 1.5,
+    "scalar_wgc_beta": 0.5,
+    "cft_alpha": 0.5,
+    "graviton_fwd_c": 1.2
+  },
+  "ranges": {
+    "bnossw_pref": [
+      0.5,
+      2.0
+    ],
+    "rfc_gamma": [
+      0.5,
+      2.0
+    ],
+    "cubic_kappa": [
+      0.5,
+      2.0
+    ],
+    "complexity_cmax": [
+      1.0,
+      2.5
+    ],
+    "scalar_wgc_beta": [
+      0.25,
+      1.0
+    ],
+    "cft_alpha": [
+      0.25,
+      1.0
+    ],
+    "graviton_fwd_c": [
+      0.8,
+      1.6
+    ]
+  },
+  "dropped": [],
+  "prior": "uniform",
+  "rfc_form": "convex_hull"
+}
