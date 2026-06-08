@@ -81,31 +81,55 @@ class ScalarWGC(Constraint):
 class RepulsiveForceConjecture(Constraint):
     """Heidenreich-Reece-Rudelius 2019 repulsive force conjecture.
 
-        g_4 * g_6 - g_R2 - γ * g_R2^2 >= 0
+    Two structural forms are available via `form`:
+
+    - ``"matter_product"`` (default, the original v1.x encoding):
+          g_4 * g_6 - g_R2 - γ * g_R2^2 >= 0
+
+    - ``"convex_hull"`` (physically-corrected; recommended):
+          g_4 - g_R2 - γ * g_R2^2 >= 0
+
+    The RFC/WGC convex-hull condition pits the matter charge-to-mass coupling
+    (a single matter coefficient, here g_4) against the gravitational strength
+    (graviton coefficient g_R2). The original ``matter_product`` form instead
+    multiplies *two* matter-sector coefficients (g_4·g_6) against g_R2. The
+    2026-06 prefactor-realism study (docs/results/2026-06-08-*) found that the
+    matter_product form excludes EVERY candidate framework for any γ>0 — a
+    100% "universal exclusion" that is an artifact of the spurious product
+    (the encoded frameworks all have g_4·g_6 ≈ g_R2 by construction). Re-cast
+    as ``convex_hull`` the conjecture excludes none of them, isolating the real
+    discriminating physics in the complexity-cutoff and cubic-curvature
+    constraints. The default is kept as ``matter_product`` for backward
+    compatibility; new analyses should pass ``form="convex_hull"``.
     """
 
     name = "repulsive_force_conjecture"
     citation = "Heidenreich-Reece-Rudelius 2019 (repulsive force conjecture)"
     constraint_class = ConstraintClass.C_UNIVERSALITY
 
-    def __init__(self, gamma: float = 1.0):
+    def __init__(self, gamma: float = 1.0, form: str = "matter_product"):
         self.gamma = float(gamma)
+        if form not in ("matter_product", "convex_hull"):
+            raise ValueError(f"unknown RFC form: {form}")
+        self.form = form
 
     def evaluate(self, theory: Theory) -> ConstraintResult:
         g4 = theory.coefficients.get("g_4", 0.0)
         g6 = theory.coefficients.get("g_6", 0.0)
         gR2 = theory.coefficients.get("g_R2", 0.0)
-        margin = g4 * g6 - gR2 - self.gamma * gR2 * gR2
+        if self.form == "convex_hull":
+            margin = g4 - gR2 - self.gamma * gR2 * gR2
+            bound = f"g_4 - g_R2 - {self.gamma}*g_R2^2 >= 0"
+        else:
+            margin = g4 * g6 - gR2 - self.gamma * gR2 * gR2
+            bound = f"g_4*g_6 - g_R2 - {self.gamma}*g_R2^2 >= 0"
         grad = self.gradient(theory)
         return ConstraintResult(
             constraint_name=self.name,
             satisfied=margin >= 0,
             margin=margin,
             signed_distance_margin=self._signed_distance(margin, grad),
-            details={
-                "bound": f"g_4*g_6 - g_R2 - {self.gamma}*g_R2^2 >= 0",
-                "margin": margin,
-            },
+            details={"bound": bound, "form": self.form, "margin": margin},
         )
 
     def gradient(self, theory: Theory) -> dict[str, float]:
@@ -115,7 +139,10 @@ class RepulsiveForceConjecture(Constraint):
         out = {k: 0.0 for k in theory.coefficients}
         for k in ("g_4", "g_6", "g_R2"):
             out.setdefault(k, 0.0)
-        out["g_4"] = g6
-        out["g_6"] = g4
+        if self.form == "convex_hull":
+            out["g_4"] = 1.0
+        else:
+            out["g_4"] = g6
+            out["g_6"] = g4
         out["g_R2"] = -1.0 - 2.0 * self.gamma * gR2
         return out

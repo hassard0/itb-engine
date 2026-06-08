@@ -1,0 +1,44 @@
+{
+  "n_constraints": 31,
+  "framework_status": {
+    "pure_gr": {
+      "feasible": true,
+      "binding": null,
+      "binding_class": null
+    },
+    "string_tree_eft": {
+      "feasible": false,
+      "binding": "repulsive_force_conjecture",
+      "binding_class": "gravitational_universality"
+    },
+    "asymptotic_safety": {
+      "feasible": false,
+      "binding": "repulsive_force_conjecture",
+      "binding_class": "gravitational_universality"
+    },
+    "lqg_induced": {
+      "feasible": false,
+      "binding": "repulsive_force_conjecture",
+      "binding_class": "gravitational_universality"
+    },
+    "cdt": {
+      "feasible": false,
+      "binding": "repulsive_force_conjecture",
+      "binding_class": "gravitational_universality"
+    }
+  },
+  "intersection": {
+    "feasible": true,
+    "worst_case_margin": 0.005904516191297205,
+    "coefficients": {
+      "g_4": 0.5359742390534251,
+      "g_6": 0.41648146232229655,
+      "g_8": 0.38511887132352135,
+      "g_R2": 0.18360696479006194,
+      "g_R3": 0.15308983938232082,
+      "g_R2_parity": 9.999632392922258e-07,
+      "g_R3_parity": 9.996540568590724e-07
+    },
+    "constraints_violated": []
+  }
+}

@@ -67,3 +67,33 @@ def test_repulsive_force_passes_for_pure_gr():
     c = RepulsiveForceConjecture()
     r = c.evaluate(PureGR().encode())
     assert r.satisfied is True
+
+
+def test_repulsive_force_convex_hull_form_passes_string():
+    """The physically-corrected convex_hull form g_4 - g_R2 - γ*g_R2^2 drops the
+    spurious g_6 product. String-EFT: 0.5 - 0.2 - 1*0.04 = 0.26 ✓ — passes,
+    unlike the matter_product form. (2026-06 realism finding F1.)"""
+    from itb.frameworks.string_tree_eft import StringTreeEFT
+    c = RepulsiveForceConjecture(gamma=1.0, form="convex_hull")
+    r = c.evaluate(StringTreeEFT().encode())
+    assert r.satisfied is True
+    assert r.margin == pytest.approx(0.26)
+    assert r.details["form"] == "convex_hull"
+
+
+def test_repulsive_force_convex_hull_passes_all_frameworks():
+    """Re-cast RFC excludes none of the candidate frameworks (the universal
+    exclusion under matter_product was an encoding artifact)."""
+    from itb.frameworks.asymptotic_safety import AsymptoticSafety
+    from itb.frameworks.cdt import CausalDynamicalTriangulation
+    from itb.frameworks.lqg_induced import LQGInduced
+    from itb.frameworks.string_tree_eft import StringTreeEFT
+    c = RepulsiveForceConjecture(gamma=1.0, form="convex_hull")
+    for fw in (StringTreeEFT(), AsymptoticSafety(), LQGInduced(),
+               CausalDynamicalTriangulation()):
+        assert c.evaluate(fw.encode()).satisfied is True
+
+
+def test_repulsive_force_rejects_unknown_form():
+    with pytest.raises(ValueError):
+        RepulsiveForceConjecture(form="bogus")
