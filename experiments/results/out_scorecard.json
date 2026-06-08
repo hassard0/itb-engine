@@ -65,6 +65,12 @@
       "experiment": "CMB-S4 C_l^bb",
       "status": "delta-beta/beta ~ 1e-5: negligible",
       "grade": "NULL-FEATURE (isotropic predicted)"
+    },
+    {
+      "prediction": "Chiral Hellings-Downs: SGWB circular polarization Pi_V ~ 3-9%",
+      "experiment": "SKA-era PTAs (anisotropic)",
+      "status": "NANOGrav resolved symmetric HD (2023)",
+      "grade": "ENGINE-UNIQUE (tensor-sector, new)"
     }
   ],
   "tally": {
@@ -72,7 +78,7 @@
     "MODEL-DEPENDENT": 2,
     "HYPOTHESIS": 1,
     "TENSION": 1,
-    "ENGINE-UNIQUE": 1,
+    "ENGINE-UNIQUE": 2,
     "NULL-FEATURE": 1
   }
 }

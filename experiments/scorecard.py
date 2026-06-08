@@ -57,6 +57,8 @@ def main():
          "LIGO O5 / next-gen GW", "needs ~0.01 sensitivity", "ENGINE-UNIQUE (clean discriminator)"),
         ("Birefringence anisotropy from the smooth axion",
          "CMB-S4 C_l^bb", "delta-beta/beta ~ 1e-5: negligible", "NULL-FEATURE (isotropic predicted)"),
+        ("Chiral Hellings-Downs: SGWB circular polarization Pi_V ~ 3-9%",
+         "SKA-era PTAs (anisotropic)", "NANOGrav resolved symmetric HD (2023)", "ENGINE-UNIQUE (tensor-sector, new)"),
     ]
 
     print("=" * 92)
