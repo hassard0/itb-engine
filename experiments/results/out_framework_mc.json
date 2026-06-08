@@ -1,0 +1,330 @@
+{
+  "framework_mc": {
+    "n_per_framework": 200000,
+    "rel": null,
+    "per_framework": {
+      "string_tree_eft": {
+        "exclusion_fraction": 0.236845,
+        "constraint_exclusion_prob": {
+          "graviton_forward_positivity": 0.11114,
+          "bnossw_monogamy": 0.07267,
+          "dispersion_tower_g6_squared_bound": 0.05601,
+          "anomaly_cancellation": 0.005245
+        }
+      },
+      "asymptotic_safety": {
+        "exclusion_fraction": 0.629515,
+        "constraint_exclusion_prob": {
+          "dispersion_tower_g6_squared_bound": 0.318425,
+          "bnossw_monogamy": 0.25485,
+          "swampland_distance_conjecture": 0.1165,
+          "matter_s3_positivity": 0.094455,
+          "scalar_convexity_g6_vs_g4": 0.005615,
+          "scalar_wgc": 0.001855
+        }
+      },
+      "lqg_induced": {
+        "exclusion_fraction": 0.99694,
+        "constraint_exclusion_prob": {
+          "bnossw_monogamy": 0.69403,
+          "generalized_anomaly_inflow": 0.430385,
+          "complexity_cutoff": 0.40946,
+          "dispersion_tower_g6_squared_bound": 0.39878,
+          "anomaly_cancellation": 0.383325,
+          "scalar_convexity_g6_vs_g4": 0.25293,
+          "bekenstein_tight": 0.2365,
+          "scalar_wgc": 0.224705,
+          "swampland_distance_conjecture": 0.210935,
+          "cft_flat_space_bound": 0.208755,
+          "ligo_birefringence_bound": 0.18854,
+          "matter_s3_positivity": 0.093865,
+          "left_handed_graviton_positivity": 0.085105,
+          "t_hooft_anomaly_matching": 0.061185,
+          "repulsive_force_conjecture": 0.030685,
+          "parity_violating_positivity": 0.00668,
+          "graviton_mixed_positivity": 0.00366,
+          "spin_four_positivity": 0.00044
+        }
+      },
+      "cdt": {
+        "exclusion_fraction": 0.871085,
+        "constraint_exclusion_prob": {
+          "bnossw_monogamy": 0.452815,
+          "dispersion_tower_g6_squared_bound": 0.38765,
+          "anomaly_cancellation": 0.31816,
+          "scalar_convexity_g6_vs_g4": 0.19836,
+          "swampland_distance_conjecture": 0.075225,
+          "matter_s3_positivity": 0.05942,
+          "bekenstein_tight": 0.047585,
+          "complexity_cutoff": 0.045435,
+          "scalar_wgc": 0.04241,
+          "cft_flat_space_bound": 0.018215
+        }
+      }
+    }
+  },
+  "lqg_gr3_scan": {
+    "g_R2": 0.3,
+    "scan": [
+      {
+        "g_R3": 0.03,
+        "ratio_gR2_over_gR3": 10.0,
+        "fwd_margin": 0.264,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.03833333333333333,
+        "ratio_gR2_over_gR3": 7.826086956521739,
+        "fwd_margin": 0.254,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.04666666666666667,
+        "ratio_gR2_over_gR3": 6.428571428571428,
+        "fwd_margin": 0.244,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.05500000000000001,
+        "ratio_gR2_over_gR3": 5.454545454545453,
+        "fwd_margin": 0.23399999999999999,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.06333333333333334,
+        "ratio_gR2_over_gR3": 4.7368421052631575,
+        "fwd_margin": 0.22399999999999998,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.07166666666666667,
+        "ratio_gR2_over_gR3": 4.186046511627906,
+        "fwd_margin": 0.21399999999999997,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.08000000000000002,
+        "ratio_gR2_over_gR3": 3.749999999999999,
+        "fwd_margin": 0.20399999999999996,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.08833333333333335,
+        "ratio_gR2_over_gR3": 3.396226415094339,
+        "fwd_margin": 0.19399999999999998,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.09666666666666668,
+        "ratio_gR2_over_gR3": 3.1034482758620685,
+        "fwd_margin": 0.184,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.10500000000000001,
+        "ratio_gR2_over_gR3": 2.8571428571428568,
+        "fwd_margin": 0.174,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.11333333333333334,
+        "ratio_gR2_over_gR3": 2.6470588235294117,
+        "fwd_margin": 0.16399999999999998,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.12166666666666669,
+        "ratio_gR2_over_gR3": 2.465753424657534,
+        "fwd_margin": 0.15399999999999997,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.13,
+        "ratio_gR2_over_gR3": 2.3076923076923075,
+        "fwd_margin": 0.144,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.13833333333333336,
+        "ratio_gR2_over_gR3": 2.16867469879518,
+        "fwd_margin": 0.13399999999999995,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.1466666666666667,
+        "ratio_gR2_over_gR3": 2.045454545454545,
+        "fwd_margin": 0.12399999999999997,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.15500000000000003,
+        "ratio_gR2_over_gR3": 1.9354838709677415,
+        "fwd_margin": 0.11399999999999996,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.16333333333333336,
+        "ratio_gR2_over_gR3": 1.8367346938775506,
+        "fwd_margin": 0.10399999999999995,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.1716666666666667,
+        "ratio_gR2_over_gR3": 1.7475728155339803,
+        "fwd_margin": 0.09399999999999997,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.18000000000000002,
+        "ratio_gR2_over_gR3": 1.6666666666666665,
+        "fwd_margin": 0.08399999999999996,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.18833333333333335,
+        "ratio_gR2_over_gR3": 1.5929203539823007,
+        "fwd_margin": 0.07399999999999998,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.19666666666666668,
+        "ratio_gR2_over_gR3": 1.525423728813559,
+        "fwd_margin": 0.06399999999999997,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.20500000000000004,
+        "ratio_gR2_over_gR3": 1.4634146341463412,
+        "fwd_margin": 0.05399999999999994,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.21333333333333337,
+        "ratio_gR2_over_gR3": 1.4062499999999998,
+        "fwd_margin": 0.04399999999999993,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.2216666666666667,
+        "ratio_gR2_over_gR3": 1.3533834586466162,
+        "fwd_margin": 0.033999999999999975,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.23000000000000004,
+        "ratio_gR2_over_gR3": 1.3043478260869563,
+        "fwd_margin": 0.023999999999999966,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.23833333333333337,
+        "ratio_gR2_over_gR3": 1.2587412587412585,
+        "fwd_margin": 0.013999999999999957,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.2466666666666667,
+        "ratio_gR2_over_gR3": 1.216216216216216,
+        "fwd_margin": 0.003999999999999948,
+        "fwd_satisfied": true,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.255,
+        "ratio_gR2_over_gR3": 1.1764705882352942,
+        "fwd_margin": -0.006000000000000005,
+        "fwd_satisfied": false,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.2633333333333334,
+        "ratio_gR2_over_gR3": 1.1392405063291136,
+        "fwd_margin": -0.016000000000000125,
+        "fwd_satisfied": false,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.2716666666666667,
+        "ratio_gR2_over_gR3": 1.104294478527607,
+        "fwd_margin": -0.02600000000000008,
+        "fwd_satisfied": false,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.28,
+        "ratio_gR2_over_gR3": 1.0714285714285714,
+        "fwd_margin": -0.03600000000000003,
+        "fwd_satisfied": false,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.28833333333333333,
+        "ratio_gR2_over_gR3": 1.0404624277456647,
+        "fwd_margin": -0.045999999999999985,
+        "fwd_satisfied": false,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.29666666666666675,
+        "ratio_gR2_over_gR3": 1.0112359550561796,
+        "fwd_margin": -0.056000000000000105,
+        "fwd_satisfied": false,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.30500000000000005,
+        "ratio_gR2_over_gR3": 0.9836065573770489,
+        "fwd_margin": -0.06600000000000006,
+        "fwd_satisfied": false,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.31333333333333335,
+        "ratio_gR2_over_gR3": 0.9574468085106382,
+        "fwd_margin": -0.07600000000000001,
+        "fwd_satisfied": false,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.32166666666666677,
+        "ratio_gR2_over_gR3": 0.9326424870466318,
+        "fwd_margin": -0.08600000000000013,
+        "fwd_satisfied": false,
+        "fullstack_feasible": false
+      },
+      {
+        "g_R3": 0.33,
+        "ratio_gR2_over_gR3": 0.9090909090909091,
+        "fwd_margin": -0.09600000000000003,
+        "fwd_satisfied": false,
+        "fullstack_feasible": false
+      }
+    ]
+  }
+}
