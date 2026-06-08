@@ -1,0 +1,115 @@
+{
+  "curve": [
+    {
+      "g_R3": 0.0,
+      "max_parity": 0.0,
+      "binding": null,
+      "g_R2_over_g_R3": null
+    },
+    {
+      "g_R3": 0.02,
+      "max_parity": 0.0,
+      "binding": null,
+      "g_R2_over_g_R3": null
+    },
+    {
+      "g_R3": 0.04,
+      "max_parity": 0.13398196375313318,
+      "binding": "ligo_birefringence_bound",
+      "g_R2_over_g_R3": 9.679114250977083
+    },
+    {
+      "g_R3": 0.06,
+      "max_parity": 0.11062688006276485,
+      "binding": "generalized_anomaly_inflow",
+      "g_R2_over_g_R3": 5.281666667053181
+    },
+    {
+      "g_R3": 0.08,
+      "max_parity": 0.1386632240547633,
+      "binding": "generalized_anomaly_inflow",
+      "g_R2_over_g_R3": 4.879022574546207
+    },
+    {
+      "g_R3": 0.1,
+      "max_parity": 0.1308973921806844,
+      "binding": "complexity_cutoff",
+      "g_R2_over_g_R3": 3.8597876310612267
+    },
+    {
+      "g_R3": 0.12,
+      "max_parity": 0.13764590132173365,
+      "binding": "dispersion_tower_g6_squared_bound",
+      "g_R2_over_g_R3": 3.2970331459123234
+    },
+    {
+      "g_R3": 0.14,
+      "max_parity": 0.11570166224838405,
+      "binding": "generalized_anomaly_inflow",
+      "g_R2_over_g_R3": 2.3654381915329026
+    },
+    {
+      "g_R3": 0.16,
+      "max_parity": 0.13676436402031128,
+      "binding": "bekenstein_tight",
+      "g_R2_over_g_R3": 2.468545799445659
+    },
+    {
+      "g_R3": 0.18,
+      "max_parity": 0.1309676549223373,
+      "binding": "generalized_anomaly_inflow",
+      "g_R2_over_g_R3": 1.986738871420348
+    },
+    {
+      "g_R3": 0.2,
+      "max_parity": 0.13100330881741945,
+      "binding": "generalized_anomaly_inflow",
+      "g_R2_over_g_R3": 1.7686034536634232
+    },
+    {
+      "g_R3": 0.22,
+      "max_parity": 0.10448616523999119,
+      "binding": "generalized_anomaly_inflow",
+      "g_R2_over_g_R3": 1.2960681018654674
+    },
+    {
+      "g_R3": 0.24,
+      "max_parity": 0.0,
+      "binding": null,
+      "g_R2_over_g_R3": null
+    },
+    {
+      "g_R3": 0.26,
+      "max_parity": 0.0,
+      "binding": null,
+      "g_R2_over_g_R3": null
+    },
+    {
+      "g_R3": 0.28,
+      "max_parity": 0.0,
+      "binding": null,
+      "g_R2_over_g_R3": null
+    },
+    {
+      "g_R3": 0.3,
+      "max_parity": 0.0,
+      "binding": null,
+      "g_R2_over_g_R3": null
+    }
+  ],
+  "ceiling": 0.1386632240547633,
+  "ceiling_g_R3": 0.08,
+  "ceiling_binding": "generalized_anomaly_inflow",
+  "binding_histogram": {
+    "generalized_anomaly_inflow": 36,
+    "dispersion_tower_g6_squared_bound": 6,
+    "scalar_convexity_g6_vs_g4": 5,
+    "complexity_cutoff": 3,
+    "swampland_distance_conjecture": 3,
+    "bekenstein_tight": 3,
+    "cft_flat_space_bound": 2,
+    "ligo_birefringence_bound": 1,
+    "t_hooft_anomaly_matching": 1,
+    "anomaly_cancellation": 1
+  }
+}
