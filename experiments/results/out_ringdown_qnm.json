@@ -1,0 +1,22 @@
+{
+  "l_CS_darkenergy_m": 8.220833333333334e-05,
+  "g_R2_parity": 0.092,
+  "sources": {
+    "LIGO stellar BH (M=60)": {
+      "M_solar": 60.0,
+      "r_g_m": 88596.0,
+      "df_over_f_darkenergy": 6.820162832432283e-38,
+      "detect_precision": 0.001,
+      "l_CS_needed_m": 28606.660221799935,
+      "l_CS_needed_over_rg": 0.322888846243622
+    },
+    "LISA massive BH (M=1e6)": {
+      "M_solar": 1000000.0,
+      "r_g_m": 1476600000.0,
+      "df_over_f_darkenergy": 8.838931030832238e-55,
+      "detect_precision": 0.0001,
+      "l_CS_needed_m": 268111786.97328368,
+      "l_CS_needed_over_rg": 0.18157374168582127
+    }
+  }
+}
