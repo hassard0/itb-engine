@@ -1,0 +1,39 @@
+{
+  "g_R2_parity": 0.092,
+  "probes": [
+    {
+      "label": "PTA chiral HD (SKA)",
+      "freq_Hz": 1e-08,
+      "sensitivity": 0.05,
+      "status": "future"
+    },
+    {
+      "label": "LISA GW birefringence",
+      "freq_Hz": 0.001,
+      "sensitivity": 0.03,
+      "status": "future"
+    },
+    {
+      "label": "LIGO O5 GW birefringence",
+      "freq_Hz": 100.0,
+      "sensitivity": 0.01,
+      "status": "near"
+    },
+    {
+      "label": "BH ringdown (NULL @ DE scale)",
+      "freq_Hz": 200.0,
+      "sensitivity": 1.0,
+      "status": "null"
+    }
+  ],
+  "other_channels": [
+    [
+      "CMB EB birefringence (LiteBIRD/CMB-S4) - EM sibling axion",
+      0.011
+    ],
+    [
+      "anomaly-inflow ceiling (sets max parity ~0.14)",
+      0.14
+    ]
+  ]
+}
