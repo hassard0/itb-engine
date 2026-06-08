@@ -1,0 +1,26 @@
+{
+  "sigma": 0.02,
+  "pairs": [
+    {
+      "a": "string_tree_eft",
+      "b": "asymptotic_safety",
+      "observable": "matter_forward_amplitude",
+      "signal": 0.30000000000000004,
+      "snr": 15.000000000000002
+    },
+    {
+      "a": "asymptotic_safety",
+      "b": "cdt",
+      "observable": "matter_forward_amplitude",
+      "signal": 0.30000000000000004,
+      "snr": 15.000000000000002
+    },
+    {
+      "a": "string_tree_eft",
+      "b": "cdt",
+      "observable": "graviton_forward_amplitude",
+      "signal": 0.020000000000000018,
+      "snr": 1.0000000000000009
+    }
+  ]
+}
