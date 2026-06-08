@@ -1,0 +1,78 @@
+{
+  "rows": [
+    {
+      "prediction": "A consistent QG theory exists (non-empty intersection)",
+      "experiment": "internal (engine)",
+      "status": "51-78% of prefactor space",
+      "grade": "ROBUST"
+    },
+    {
+      "prediction": "LQG-induced robustly disfavoured (~2% viable, redundant)",
+      "experiment": "internal (engine)",
+      "status": "viable 2% vs 19-44% others",
+      "grade": "ROBUST"
+    },
+    {
+      "prediction": "string vs CDT indistinguishable at toy precision",
+      "experiment": "matter scattering + sub-mm",
+      "status": "S/N 2.6 combined",
+      "grade": "ROBUST"
+    },
+    {
+      "prediction": "Sub-mm (R^2-Yukawa) gravity deviation at ~93 um",
+      "experiment": "torsion balance / Eot-Wash",
+      "status": "10-16% of Newton IF cutoff~meV",
+      "grade": "MODEL-DEPENDENT (cutoff)"
+    },
+    {
+      "prediction": "Full program resolves 20/21 framework pairs",
+      "experiment": "matter + sub-mm + birefringence",
+      "status": "needs ~1% force, partial-wave, O5",
+      "grade": "ROBUST (given experiments)"
+    },
+    {
+      "prediction": "Dark-energy-scale cutoff dissolves CC fine-tuning",
+      "experiment": "sub-mm gravity @70-130um",
+      "status": "Planckian alt needs g_R2~1e121",
+      "grade": "HYPOTHESIS (sharp, testable)"
+    },
+    {
+      "prediction": "Cosmic birefringence beta ~ 0.34 deg (EB ~1% of EE)",
+      "experiment": "CMB EB (Planck/LiteBIRD/CMB-S4)",
+      "status": "~3 sigma hint (Minami-Komatsu)",
+      "grade": "MODEL-DEPENDENT (axion link)"
+    },
+    {
+      "prediction": "Dark-energy w0 ~ -0.82",
+      "experiment": "DESI / Euclid / Roman",
+      "status": "DESI -0.83+/-0.06: MATCH",
+      "grade": "ROBUST (given axion)"
+    },
+    {
+      "prediction": "Dark-energy wa ~ -0.28 (thawing track)",
+      "experiment": "DESI / Euclid / Roman",
+      "status": "DESI -0.7: ~1.4 sigma TENSION",
+      "grade": "TENSION (robust to V shape)"
+    },
+    {
+      "prediction": "Correlated GW birefringence |g_R2_parity| ~ 0.09",
+      "experiment": "LIGO O5 / next-gen GW",
+      "status": "needs ~0.01 sensitivity",
+      "grade": "ENGINE-UNIQUE (clean discriminator)"
+    },
+    {
+      "prediction": "Birefringence anisotropy from the smooth axion",
+      "experiment": "CMB-S4 C_l^bb",
+      "status": "delta-beta/beta ~ 1e-5: negligible",
+      "grade": "NULL-FEATURE (isotropic predicted)"
+    }
+  ],
+  "tally": {
+    "ROBUST": 5,
+    "MODEL-DEPENDENT": 2,
+    "HYPOTHESIS": 1,
+    "TENSION": 1,
+    "ENGINE-UNIQUE": 1,
+    "NULL-FEATURE": 1
+  }
+}
