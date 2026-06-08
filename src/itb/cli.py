@@ -30,6 +30,20 @@ def cmd_check(args: argparse.Namespace) -> int:
     return 0 if report.feasible else 2
 
 
+def cmd_predict(args: argparse.Namespace) -> int:
+    from itb.predict import FRAMEWORKS, predict, render
+    if args.framework == "list" or args.framework not in FRAMEWORKS:
+        if args.framework != "list":
+            print(f"unknown framework '{args.framework}'.")
+        print("known frameworks: " + ", ".join(sorted(FRAMEWORKS)))
+        return 0 if args.framework == "list" else 2
+    if args.json:
+        print(json.dumps(predict(args.framework), indent=2))
+    else:
+        print(render(args.framework))
+    return 0
+
+
 def cmd_serve(args: argparse.Namespace) -> int:
     import uvicorn
     uvicorn.run(
@@ -76,6 +90,11 @@ def main(argv: list[str] | None = None) -> int:
     p_check.add_argument("--g4", type=float, required=True)
     p_check.add_argument("--g6", type=float, required=True)
     p_check.set_defaults(fn=cmd_check)
+
+    p_predict = sub.add_parser("predict", help="Emit a framework's full observable fingerprint")
+    p_predict.add_argument("framework", help="framework name (or 'list')")
+    p_predict.add_argument("--json", action="store_true", help="machine-readable JSON output")
+    p_predict.set_defaults(fn=cmd_predict)
 
     p_serve = sub.add_parser("serve", help="Run the localhost web server")
     p_serve.add_argument("--host", default="127.0.0.1")
