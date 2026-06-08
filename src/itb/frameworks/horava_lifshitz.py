@@ -28,6 +28,7 @@ from itb.theory import Theory
 
 class HoravaLifshitz(Framework):
     name = "horava_lifshitz"
+    lorentz_invariant = False   # anisotropic z=3 scaling breaks Lorentz invariance
     citation = "Hořava 2009 (anisotropic Lifshitz scaling z=3); toy representative values"
 
     def encode(self) -> Theory:

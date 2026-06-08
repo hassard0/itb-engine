@@ -28,6 +28,7 @@ from itb.theory import Theory
 
 class CausalSet(Framework):
     name = "causal_set"
+    local = False   # fundamental discreteness => non-local continuum EFT
     citation = "Bombelli-Lee-Meyer-Sorkin 1987; Benincasa-Dowker action; toy representative values"
 
     def encode(self) -> Theory:
