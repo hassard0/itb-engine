@@ -1,0 +1,43 @@
+{
+  "n_constraints": 35,
+  "frameworks": {
+    "string_tree_eft": {
+      "feasible_fraction": 0.18797,
+      "in_scope": true
+    },
+    "asymptotic_safety": {
+      "feasible_fraction": 0.44514,
+      "in_scope": true
+    },
+    "cdt": {
+      "feasible_fraction": 0.18868,
+      "in_scope": true
+    },
+    "lqg_induced": {
+      "feasible_fraction": 0.02009,
+      "in_scope": true
+    },
+    "group_field_theory": {
+      "feasible_fraction": 0.035855,
+      "in_scope": true
+    },
+    "discovered_novel": {
+      "feasible_fraction": 0.021155,
+      "in_scope": true
+    },
+    "discovered_parity_violating": {
+      "feasible_fraction": 0.004855,
+      "in_scope": true
+    },
+    "discovered_high_g8": {
+      "feasible_fraction": 0.031185,
+      "in_scope": true
+    }
+  },
+  "v126": {
+    "string_tree_eft": 23.5,
+    "asymptotic_safety": 44.3,
+    "cdt": 19.1,
+    "lqg_induced": 2.1
+  }
+}
