@@ -18,6 +18,7 @@ from itb.frameworks.cdt import CausalDynamicalTriangulation
 from itb.frameworks.discovered import (
     DiscoveredHighG8, DiscoveredNovel, DiscoveredParityViolating,
 )
+from itb.frameworks.emergent_gravity import EmergentGravity
 from itb.frameworks.group_field_theory import GroupFieldTheory
 from itb.frameworks.horava_lifshitz import HoravaLifshitz
 from itb.frameworks.lqg_induced import LQGInduced
@@ -31,7 +32,8 @@ E_LAMBDA_DE = 2.4e-3          # dark-energy gravitational cutoff (v1.44)
 FRAMEWORKS = {fw.name: fw for fw in [
     PureGR(), StringTreeEFT(), AsymptoticSafety(), LQGInduced(),
     CausalDynamicalTriangulation(), GroupFieldTheory(), HoravaLifshitz(),
-    CausalSet(), DiscoveredNovel(), DiscoveredParityViolating(), DiscoveredHighG8()]}
+    CausalSet(), EmergentGravity(), DiscoveredNovel(), DiscoveredParityViolating(),
+    DiscoveredHighG8()]}
 
 
 def predict(name: str) -> dict:

@@ -7,7 +7,7 @@ from itb.predict import FRAMEWORKS, predict, render
 
 
 def test_all_frameworks_predictable():
-    assert len(FRAMEWORKS) == 11
+    assert len(FRAMEWORKS) == 12
     for name in FRAMEWORKS:
         p = predict(name)
         assert p["framework"] == name

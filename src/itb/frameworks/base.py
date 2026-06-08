@@ -15,6 +15,11 @@ class Framework(ABC):
     # in-scope; frameworks that break an assumption override these.
     local: bool = True
     lorentz_invariant: bool = True
+    # `fundamental`: is gravity a fundamental dynamical field with a UV EFT /
+    # Wilson-coefficient expansion? Emergent/entropic gravity sets this False —
+    # its physics is an IR/thermodynamic phenomenon, so a UV positivity verdict is
+    # meaningless (v1.65).
+    fundamental: bool = True
 
     @abstractmethod
     def encode(self) -> Theory:

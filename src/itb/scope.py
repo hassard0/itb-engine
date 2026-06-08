@@ -27,6 +27,9 @@ def engine_validity(framework) -> ScopeVerdict:
         viol.append("Lorentz invariance (assumed by amplitude-positivity bounds)")
     if not getattr(framework, "local", True):
         viol.append("locality (assumed by the swampland/positivity program)")
+    if not getattr(framework, "fundamental", True):
+        viol.append("a fundamental UV graviton field (the bounds expand the graviton "
+                    "amplitude; emergent gravity has no such UV expansion)")
     if viol:
         note = ("OUT OF SCOPE: the engine's feasibility verdict is NOT meaningful for "
                 "this framework — it breaks " + " and ".join(viol) + ", which are "

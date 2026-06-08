@@ -26,6 +26,13 @@ def test_causal_set_out_of_scope_locality():
     assert any("locality" in s for s in v.violations)
 
 
+def test_emergent_gravity_out_of_scope_fundamental():
+    from itb.frameworks.emergent_gravity import EmergentGravity
+    v = engine_validity(EmergentGravity())
+    assert not v.in_scope
+    assert any("fundamental" in s for s in v.violations)
+
+
 def test_in_scope_note_is_clear():
     assert "in scope" in engine_validity(StringTreeEFT()).note
     assert "OUT OF SCOPE" in engine_validity(HoravaLifshitz()).note
