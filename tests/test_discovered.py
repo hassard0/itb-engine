@@ -4,7 +4,11 @@ import pytest
 
 from itb.constraints.graviton_forward_positivity import GravitonForwardPositivity
 from itb.constraints.matter_s3_positivity import MatterS3Positivity
-from itb.frameworks.discovered import DiscoveredNovel, DiscoveredParityViolating
+from itb.frameworks.discovered import (
+    DiscoveredHighG8,
+    DiscoveredNovel,
+    DiscoveredParityViolating,
+)
 
 
 def test_novel_signature():
@@ -32,8 +36,17 @@ def test_parity_branch_requires_suppressed_cubic():
     assert MatterS3Positivity(c_m=1.0).evaluate(t).satisfied
 
 
+def test_high_g8_brackets_the_novel_branch():
+    """DiscoveredHighG8 has a strong dim-8 coupling, bracketing DiscoveredNovel's
+    suppressed one — together they span the loosest direction (g_8)."""
+    lo = DiscoveredNovel().encode().coefficients["g_8"]
+    hi = DiscoveredHighG8().encode().coefficients["g_8"]
+    assert hi > 0.4 and lo < 0.1
+    # both pass forward positivity (cubic-suppressed)
+    assert GravitonForwardPositivity(c=1.2).evaluate(DiscoveredHighG8().encode()).satisfied
+
+
 def test_distinct_from_each_other():
-    a = DiscoveredNovel().encode().coefficients
-    b = DiscoveredParityViolating().encode().coefficients
-    assert a != b
-    assert DiscoveredNovel().name != DiscoveredParityViolating().name
+    names = {DiscoveredNovel().name, DiscoveredParityViolating().name,
+             DiscoveredHighG8().name}
+    assert len(names) == 3

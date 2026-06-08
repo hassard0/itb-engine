@@ -56,3 +56,25 @@ class DiscoveredParityViolating(Framework):
             },
             name=self.name, source=self.citation,
         )
+
+
+class DiscoveredHighG8(Framework):
+    """The second robust novel branch (v1.32 catalog #1): a STRONG dimension-8
+    matter coupling (g_8 ≈ 0.55, far above any catalogued framework's ~0.3-0.4),
+    cubic-suppressed and mildly parity-violating, feasible in ~63% of the
+    prefactor box. Together with DiscoveredNovel (g_8 ≈ 0.045) it brackets the
+    dimension-8 coupling from both ends — the loosest direction of the allowed
+    region (v1.33). Distinguishing observable: g_8 (matter forward amplitude)."""
+
+    name = "discovered_high_g8"
+    citation = "ITB generative search 2026-06-08 (v1.32 catalog); engine-discovered, not from literature"
+
+    def encode(self) -> Theory:
+        return Theory(
+            coefficients={
+                "g_4": 0.453, "g_6": 0.208, "g_8": 0.552,
+                "g_R2": 0.210, "g_R3": 0.036,
+                "g_R2_parity": 0.033, "g_R3_parity": -0.028,
+            },
+            name=self.name, source=self.citation,
+        )

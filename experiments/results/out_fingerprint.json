@@ -1,0 +1,186 @@
+{
+  "pairs": [
+    {
+      "a": "string_tree_eft",
+      "b": "cdt",
+      "obs_distance": 0.04058994087209296,
+      "best_sector": "graviton"
+    },
+    {
+      "a": "string_tree_eft",
+      "b": "discovered_high_g8",
+      "obs_distance": 0.21093647945786903,
+      "best_sector": "graviton"
+    },
+    {
+      "a": "cdt",
+      "b": "discovered_high_g8",
+      "obs_distance": 0.2468051718462966,
+      "best_sector": "graviton"
+    },
+    {
+      "a": "asymptotic_safety",
+      "b": "discovered_high_g8",
+      "obs_distance": 0.27990500548236025,
+      "best_sector": "matter"
+    },
+    {
+      "a": "lqg_induced",
+      "b": "discovered_parity_violating",
+      "obs_distance": 0.3516418124517049,
+      "best_sector": "parity"
+    },
+    {
+      "a": "cdt",
+      "b": "discovered_parity_violating",
+      "obs_distance": 0.3542013093091554,
+      "best_sector": "matter"
+    },
+    {
+      "a": "string_tree_eft",
+      "b": "discovered_parity_violating",
+      "obs_distance": 0.38180058431636793,
+      "best_sector": "matter"
+    },
+    {
+      "a": "lqg_induced",
+      "b": "cdt",
+      "obs_distance": 0.4389541179895685,
+      "best_sector": "graviton"
+    },
+    {
+      "a": "string_tree_eft",
+      "b": "asymptotic_safety",
+      "obs_distance": 0.4517777232223831,
+      "best_sector": "matter"
+    },
+    {
+      "a": "string_tree_eft",
+      "b": "lqg_induced",
+      "obs_distance": 0.47113093976091197,
+      "best_sector": "graviton"
+    },
+    {
+      "a": "asymptotic_safety",
+      "b": "cdt",
+      "obs_distance": 0.4772780922062107,
+      "best_sector": "matter"
+    },
+    {
+      "a": "discovered_parity_violating",
+      "b": "discovered_high_g8",
+      "obs_distance": 0.5833376241172173,
+      "best_sector": "matter"
+    },
+    {
+      "a": "lqg_induced",
+      "b": "discovered_high_g8",
+      "obs_distance": 0.661243582083093,
+      "best_sector": "graviton"
+    },
+    {
+      "a": "asymptotic_safety",
+      "b": "discovered_novel",
+      "obs_distance": 0.6962338440588767,
+      "best_sector": "matter"
+    },
+    {
+      "a": "pure_gr",
+      "b": "discovered_novel",
+      "obs_distance": 0.7996778014506843,
+      "best_sector": "matter"
+    },
+    {
+      "a": "asymptotic_safety",
+      "b": "discovered_parity_violating",
+      "obs_distance": 0.8244441518552486,
+      "best_sector": "matter"
+    },
+    {
+      "a": "asymptotic_safety",
+      "b": "lqg_induced",
+      "obs_distance": 0.8547662122475363,
+      "best_sector": "matter"
+    },
+    {
+      "a": "discovered_novel",
+      "b": "discovered_high_g8",
+      "obs_distance": 0.970362040130528,
+      "best_sector": "matter"
+    },
+    {
+      "a": "string_tree_eft",
+      "b": "discovered_novel",
+      "obs_distance": 1.1440835782288812,
+      "best_sector": "matter"
+    },
+    {
+      "a": "cdt",
+      "b": "discovered_novel",
+      "obs_distance": 1.1660611704764894,
+      "best_sector": "matter"
+    },
+    {
+      "a": "pure_gr",
+      "b": "asymptotic_safety",
+      "obs_distance": 1.485798435454823,
+      "best_sector": "matter"
+    },
+    {
+      "a": "lqg_induced",
+      "b": "discovered_novel",
+      "obs_distance": 1.491474262913377,
+      "best_sector": "matter"
+    },
+    {
+      "a": "discovered_novel",
+      "b": "discovered_parity_violating",
+      "obs_distance": 1.5106905611669519,
+      "best_sector": "matter"
+    },
+    {
+      "a": "pure_gr",
+      "b": "discovered_high_g8",
+      "obs_distance": 1.7564609841605023,
+      "best_sector": "matter"
+    },
+    {
+      "a": "pure_gr",
+      "b": "string_tree_eft",
+      "obs_distance": 1.9364354957498588,
+      "best_sector": "matter"
+    },
+    {
+      "a": "pure_gr",
+      "b": "cdt",
+      "obs_distance": 1.9597796671309766,
+      "best_sector": "matter"
+    },
+    {
+      "a": "pure_gr",
+      "b": "lqg_induced",
+      "obs_distance": 2.2827540269595414,
+      "best_sector": "matter"
+    },
+    {
+      "a": "pure_gr",
+      "b": "discovered_parity_violating",
+      "obs_distance": 2.3013776275875113,
+      "best_sector": "matter"
+    }
+  ],
+  "discovered_neighbours": {
+    "discovered_novel": {
+      "nearest_catalogued": "asymptotic_safety",
+      "distance": 0.6962338440588767
+    },
+    "discovered_parity_violating": {
+      "nearest_catalogued": "lqg_induced",
+      "distance": 0.3516418124517049
+    },
+    "discovered_high_g8": {
+      "nearest_catalogued": "string_tree_eft",
+      "distance": 0.21093647945786903
+    }
+  }
+}
