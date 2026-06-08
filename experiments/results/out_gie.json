@@ -1,0 +1,102 @@
+{
+  "gie": {
+    "m_kg": 1e-14,
+    "dx_m": 0.00025,
+    "L_m": 0.00045,
+    "tau_s": 2.0,
+    "entangling_phase_rad": 0.08677731619630866,
+    "witnessable": true
+  },
+  "yukawa": {
+    "Lambda^-1 = 50 um (current Eot-Wash reach)": {
+      "string_tree_eft": {
+        "g_R2": 0.2,
+        "lambda_Y_m": 2.2360679774997898e-05
+      },
+      "asymptotic_safety": {
+        "g_R2": 0.15,
+        "lambda_Y_m": 1.9364916731037086e-05
+      },
+      "lqg_induced": {
+        "g_R2": 0.3,
+        "lambda_Y_m": 2.7386127875258303e-05
+      },
+      "cdt": {
+        "g_R2": 0.22,
+        "lambda_Y_m": 2.345207879911715e-05
+      },
+      "discovered_novel": {
+        "g_R2": 0.136,
+        "lambda_Y_m": 1.8439088914585775e-05
+      },
+      "discovered_parity_violating": {
+        "g_R2": 0.395,
+        "lambda_Y_m": 3.1424512724941344e-05
+      },
+      "discovered_high_g8": {
+        "g_R2": 0.21,
+        "lambda_Y_m": 2.29128784747792e-05
+      }
+    },
+    "Lambda^-1 = 5 um (next-gen)": {
+      "string_tree_eft": {
+        "g_R2": 0.2,
+        "lambda_Y_m": 2.23606797749979e-06
+      },
+      "asymptotic_safety": {
+        "g_R2": 0.15,
+        "lambda_Y_m": 1.9364916731037088e-06
+      },
+      "lqg_induced": {
+        "g_R2": 0.3,
+        "lambda_Y_m": 2.7386127875258307e-06
+      },
+      "cdt": {
+        "g_R2": 0.22,
+        "lambda_Y_m": 2.3452078799117152e-06
+      },
+      "discovered_novel": {
+        "g_R2": 0.136,
+        "lambda_Y_m": 1.8439088914585775e-06
+      },
+      "discovered_parity_violating": {
+        "g_R2": 0.395,
+        "lambda_Y_m": 3.1424512724941343e-06
+      },
+      "discovered_high_g8": {
+        "g_R2": 0.21,
+        "lambda_Y_m": 2.29128784747792e-06
+      }
+    },
+    "Lambda^-1 = 1 nm": {
+      "string_tree_eft": {
+        "g_R2": 0.2,
+        "lambda_Y_m": 4.47213595499958e-10
+      },
+      "asymptotic_safety": {
+        "g_R2": 0.15,
+        "lambda_Y_m": 3.8729833462074175e-10
+      },
+      "lqg_induced": {
+        "g_R2": 0.3,
+        "lambda_Y_m": 5.477225575051661e-10
+      },
+      "cdt": {
+        "g_R2": 0.22,
+        "lambda_Y_m": 4.69041575982343e-10
+      },
+      "discovered_novel": {
+        "g_R2": 0.136,
+        "lambda_Y_m": 3.687817782917155e-10
+      },
+      "discovered_parity_violating": {
+        "g_R2": 0.395,
+        "lambda_Y_m": 6.284902544988268e-10
+      },
+      "discovered_high_g8": {
+        "g_R2": 0.21,
+        "lambda_Y_m": 4.5825756949558403e-10
+      }
+    }
+  }
+}
