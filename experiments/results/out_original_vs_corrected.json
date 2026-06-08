@@ -1,0 +1,68 @@
+{
+  "pure_gr": {
+    "original": 1.0,
+    "corrected": 1.0,
+    "shift": 0.0,
+    "in_scope": true
+  },
+  "string_tree_eft": {
+    "original": 0.0,
+    "corrected": 0.18333333333333332,
+    "shift": 0.18333333333333332,
+    "in_scope": true
+  },
+  "asymptotic_safety": {
+    "original": 0.0,
+    "corrected": 0.45866666666666667,
+    "shift": 0.45866666666666667,
+    "in_scope": true
+  },
+  "lqg_induced": {
+    "original": 0.0,
+    "corrected": 0.004,
+    "shift": 0.004,
+    "in_scope": true
+  },
+  "cdt": {
+    "original": 0.0,
+    "corrected": 0.3273333333333333,
+    "shift": 0.3273333333333333,
+    "in_scope": true
+  },
+  "group_field_theory": {
+    "original": 0.0,
+    "corrected": 0.007333333333333333,
+    "shift": 0.007333333333333333,
+    "in_scope": true
+  },
+  "horava_lifshitz": {
+    "original": 0.0,
+    "corrected": 0.0,
+    "shift": 0.0,
+    "in_scope": false
+  },
+  "causal_set": {
+    "original": 0.0,
+    "corrected": 0.4186666666666667,
+    "shift": 0.4186666666666667,
+    "in_scope": false
+  },
+  "discovered_novel": {
+    "original": 0.0,
+    "corrected": 0.766,
+    "shift": 0.766,
+    "in_scope": true
+  },
+  "discovered_parity_violating": {
+    "original": 0.0,
+    "corrected": 0.08933333333333333,
+    "shift": 0.08933333333333333,
+    "in_scope": true
+  },
+  "discovered_high_g8": {
+    "original": 0.0,
+    "corrected": 0.5806666666666667,
+    "shift": 0.5806666666666667,
+    "in_scope": true
+  }
+}
