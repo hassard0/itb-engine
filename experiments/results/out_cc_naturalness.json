@@ -1,0 +1,30 @@
+{
+  "M_Pl (1.2e28 eV)": {
+    "Lambda_eV": 1.22e+28,
+    "vacuum_tuning_factor": 6.677199556327161e+122,
+    "yukawa_range_m_at_natural_gR2": 1.7715682064880214e-35,
+    "g_R2_for_degravitation": 1.1025185185185186e+121,
+    "degravitation_within_EFT_box": false
+  },
+  "1 TeV": {
+    "Lambda_eV": 1000000000000.0,
+    "vacuum_tuning_factor": 3.014081790123457e+58,
+    "yukawa_range_m_at_natural_gR2": 2.1613132119153859e-19,
+    "g_R2_for_degravitation": 7.40740740740741e+88,
+    "degravitation_within_EFT_box": false
+  },
+  "1 eV": {
+    "Lambda_eV": 1.0,
+    "vacuum_tuning_factor": 30140817901.234573,
+    "yukawa_range_m_at_natural_gR2": 2.1613132119153857e-07,
+    "g_R2_for_degravitation": 7.407407407407409e+64,
+    "degravitation_within_EFT_box": false
+  },
+  "dark-energy scale (2.4 meV)": {
+    "Lambda_eV": 0.0024,
+    "vacuum_tuning_factor": 1.0,
+    "yukawa_range_m_at_natural_gR2": 9.005471716314108e-05,
+    "g_R2_for_degravitation": 4.266666666666667e+59,
+    "degravitation_within_EFT_box": false
+  }
+}
