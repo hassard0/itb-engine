@@ -32,6 +32,7 @@ from itb.constraints.distance_conjecture import DistanceConjecture
 from itb.constraints.eft_validity import EFTValidityBox
 from itb.constraints.generalized_second_law import GeneralizedSecondLaw
 from itb.constraints.graviton_eft import GravitonMixedPositivity
+from itb.constraints.gw_speed import GWSpeedBound
 from itb.constraints.graviton_forward_positivity import GravitonForwardPositivity
 from itb.constraints.graviton_self_coupling import CubicCurvaturePositivity, CubicGravitonMatterBound
 from itb.constraints.hofman_maldacena import HofmanMaldacenaWedge
@@ -226,7 +227,9 @@ def build_stack(prefactors: dict[str, float] | None = None,
                 submm_screened: bool = False,
                 include_birefringence: bool = False,
                 birefringence_mode: str = "hint",
-                birefringence_nsigma: float = 2.0) -> list[Constraint]:
+                birefringence_nsigma: float = 2.0,
+                include_gw_speed: bool = False,
+                gw_speed_low_cutoff: bool = True) -> list[Constraint]:
     """Assemble the canonical constraint stack, overriding the tunable knife-edge
     prefactors with `prefactors` (missing keys fall back to CANONICAL).
 
@@ -284,6 +287,9 @@ def build_stack(prefactors: dict[str, float] | None = None,
         # --- DATA: second experiment (v1.78, parity sector) ---
         stack.append(CosmicBirefringenceData(mode=birefringence_mode,
                                              n_sigma=birefringence_nsigma))
+    if include_gw_speed:
+        # --- DATA: third experiment (v1.84, tensor-propagation sector) ---
+        stack.append(GWSpeedBound(low_cutoff=gw_speed_low_cutoff))
     return stack
 
 
