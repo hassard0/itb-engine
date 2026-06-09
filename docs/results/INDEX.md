@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (101 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (102 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -141,3 +141,4 @@ Auto-generated front door to the full research program (101 notes). Regenerate w
 | v1.89 | [v1.89 — The phylogenetic tree of quantum gravities: are the frameworks](2026-06-08-v1.89-phylogeny.md) | All frameworks lie in the basin of the single UV fixed point and flow toward it |
 | v1.90 | [v1.90 — The Diósi–Penrose exclusion: is gravity classical?](2026-06-08-v1.90-diosi-penrose.md) | The engine assumes gravity is **quantum** (it bootstraps a graviton EFT). The |
 | v1.91 | [v1.91 — The strong-field probe: do neutron-star tides (GW170817) see t](2026-06-08-v1.91-neutron-star.md) | All four ingested experiments are weak-field. Neutron stars are the strongest |
+| v1.92 | [v1.92 — The convergence forecast: when does the data pin the quantum-g](2026-06-08-v1.92-convergence-forecast.md) | g_8 (the s⁴ matter moment) and g_R3 (cubic curvature), have no funded experiment. |
