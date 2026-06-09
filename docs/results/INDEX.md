@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (81 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (82 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -121,3 +121,4 @@ Auto-generated front door to the full research program (81 notes). Regenerate wi
 | v1.69 | [v1.69 — The allowed region, seen directly: a 2-D feasibility slice in ](2026-06-08-v1.69-feasibility-slice-gR2-gR3.md) | Every prior cycle reported feasibility as a *number* (survival fraction, a |
 | v1.70 | [v1.70 — The a-theorem in the toy basis: a constraint of new origin, no](2026-06-08-v1.70-a-theorem-basis-degeneracy.md) | I set out to add a *genuinely new* constraint of independent physical origin — |
 | v1.71 | [v1.71 — The basis extension that makes RG-monotonicity load-bearing: t](2026-06-08-v1.71-ac-wedge-basis-extension.md) | v1.70 ended with a precise diagnosis: the a-theorem (and every other anomaly / |
+| v1.72 | [v1.72 — One coupling, two observables: the a/c wedge and η/s are the s](2026-06-08-v1.72-one-coupling-two-observables.md) | GB literature (Dr. M. again could not converge the arithmetic; derived here and |
