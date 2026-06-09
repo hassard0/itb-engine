@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (97 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (98 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -137,3 +137,4 @@ Auto-generated front door to the full research program (97 notes). Regenerate wi
 | v1.85 | [v1.85 — The proper tensor probe: the LIGO dispersion test reaches the ](2026-06-08-v1.85-gw-dispersion.md) | v1.84 found GW170817's arrival-time **speed** test blind to the engine's |
 | v1.86 | [v1.86 — R² is the inflaton: the engine's g_R2 sector is the observatio](2026-06-08-v1.86-inflation.md) | Every prior cycle treated the R² coupling g_R2 as a *late-universe* object — a |
 | v1.87 | [v1.87 — The Gödel test: is the engine internally consistent, and what ](2026-06-08-v1.87-godel-test.md) | The first of a new "meta-experiment" track (auditing the engine itself rather than |
+| v1.88 | [v1.88 — The minimum decisive experiment set: what is the smallest expe](2026-06-08-v1.88-min-experiment-set.md) | The minimum decisive experiment program is 6 measurements: |
