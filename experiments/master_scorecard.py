@@ -76,6 +76,11 @@ def build_scorecard():
             f"Extremal BH entropy shift Delta S_ext = {o['bh_entropy_shift_delta_S_ext']} > 0 (WGC)",
          "version": "v1.82", "status": "STRUCTURAL",
          "next": "theoretical (WGC / black-hole thermodynamics)", "when": "--"},
+        {"key": "complexity", "prediction":
+            f"Holographic complexity dC/dt = {o['holographic_complexity_rate_lloyd_units']} "
+            f"> 1 (Lloyd bound super-saturated, Weyl^2-driven)",
+         "version": "v1.98", "status": "STRUCTURAL",
+         "next": "theoretical (Complexity=Action / Lloyd bound)", "when": "--"},
         {"key": "island", "prediction":
             "Consistent-QG EFT island ~0.6% by volume, ~3.4 effective dimensions",
          "version": "v1.73", "status": "STRUCTURAL",

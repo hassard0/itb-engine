@@ -84,6 +84,44 @@ class GravitationalBirefringence(Observable):
         return np.stack(cols, axis=1)
 
 
+class HolographicComplexityRate(Observable):
+    """Late-time holographic-complexity growth rate dC/dt in Lloyd-bound units (v1.98).
+
+    'Complexity = Action' (Brown-Roberts-Susskind-Swingle-Zhao 2016): the late-time
+    growth rate of holographic complexity is dC/dt = 2M/(pi hbar), the LLOYD BOUND,
+    saturated by AdS-Schwarzschild black holes. Higher-derivative / Gauss-Bonnet
+    corrections raise the rate and can VIOLATE the Lloyd bound (dC/dt > 2M/pi hbar for
+    lambda_GB > 0; Cai-Ruan-Wang-Yang-Peng 2016) -- analogous to Gauss-Bonnet making
+    eta/s violate the KSS bound.
+
+    Toy mapping (Dr. M.-confirmed sign/structure):
+        dC/dt  in Lloyd units = 1 + kappa * g_C ,
+    driven by the Weyl^2 coupling g_C. KEY: g_R2 (Euler) is TOPOLOGICAL in 4d (as in the
+    BH-entropy case, v1.82), so it does NOT drive complexity growth -- the Jacobian
+    w.r.t. g_R2 is zero. This makes complexity growth ORTHOGONAL to eta/s (which orders
+    by g_R2): the two holographic observables order frameworks by different couplings.
+    Values > 1 mean the dual super-saturates the Lloyd complexity bound.
+
+    Reference: Brown-Roberts-Susskind-Swingle-Zhao PRL 116 (2016) 191301; Cai-Ruan-
+    Wang-Yang-Peng JHEP 09 (2016) 161 (Gauss-Bonnet action growth / Lloyd violation).
+    """
+
+    name = "holographic_complexity_rate"
+
+    def __init__(self, kappa: float = 1.0):
+        self.kappa = float(kappa)
+
+    def predict(self, theory: Theory) -> np.ndarray:
+        gC = theory.coefficients.get("g_C", 0.0)
+        return np.array([1.0 + self.kappa * gC])           # Lloyd-bound units
+
+    def jacobian(self, theory: Theory, params: list[str]) -> np.ndarray:
+        # driven by g_C; g_R2 (Euler) topological -> zero
+        cols = [np.array([self.kappa]) if p == "g_C" else np.array([0.0])
+                for p in params]
+        return np.stack(cols, axis=1)
+
+
 class StarobinskyInflation(Observable):
     """R^2 inflation observables (n_s, r) -- the engine's g_R2 sector as the
     Starobinsky inflaton (v1.86).
