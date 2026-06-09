@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (92 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (93 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -132,3 +132,4 @@ Auto-generated front door to the full research program (92 notes). Regenerate wi
 | v1.80 | [v1.80 — Is the birefringence-vs-gravity tension robust? Stress-testing](2026-06-08-v1.80-tension-robustness.md) | v1.79's headline — anomaly inflow + unscreened sub-mm gravity cap cosmic |
 | v1.81 | [v1.81 — One parity coupling, three messengers: is the data-driven EFT ](2026-06-08-v1.81-multimessenger-parity.md) | The data-driven EFT (v1.79) carries a gravitational Chern–Simons / Pontryagin |
 | v1.82 | [v1.82 — Black-hole entropy and the WGC: the engine's coefficients fix ](2026-06-08-v1.82-bh-entropy-wgc.md) | After the data/parity arc, v1.82 opens a genuinely new connection: the engine's |
+| v1.83 | [v1.83 — The master predictions scorecard & falsifiable roadmap](2026-06-08-v1.83-master-scorecard.md) | After a long arc (v1.71–82) the program has accumulated many distinct results — |
