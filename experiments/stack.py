@@ -49,6 +49,7 @@ from itb.constraints.parity_violation import (
 from itb.constraints.quantum_focusing import QuantumFocusingConjecture
 from itb.constraints.scalar_convexity import ScalarConvexityG6vsG4
 from itb.constraints.scalar_positivity import ScalarPositivityG4, ScalarPositivityG6
+from itb.constraints.species_scale import SpeciesScaleBound
 from itb.constraints.spin_four_positivity import SpinFourPositivity
 from itb.constraints.cosmic_birefringence import CosmicBirefringenceData
 from itb.constraints.submm_gravity import SubmmGravityYukawaBound
@@ -282,6 +283,7 @@ def build_stack(prefactors: dict[str, float] | None = None,
         LIGOGravitonMassBound(bound=0.5),
         ComplexityCutoff(c_max=p["complexity_cmax"]),
         DistanceConjecture(R_max=20.0),
+        SpeciesScaleBound(nu=2.0, N_max=3.0),               # v1.96 (species scale / tower)
     ]
     if include_data:
         # --- DATA: first experiment-sourced constraint (v1.77, matter sector) ---
