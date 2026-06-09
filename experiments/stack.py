@@ -47,6 +47,7 @@ from itb.constraints.quantum_focusing import QuantumFocusingConjecture
 from itb.constraints.scalar_convexity import ScalarConvexityG6vsG4
 from itb.constraints.scalar_positivity import ScalarPositivityG4, ScalarPositivityG6
 from itb.constraints.spin_four_positivity import SpinFourPositivity
+from itb.constraints.cosmic_birefringence import CosmicBirefringenceData
 from itb.constraints.submm_gravity import SubmmGravityYukawaBound
 from itb.constraints.swampland import WeakGravityConjecture
 from itb.constraints.swampland_variants import ScalarWGC
@@ -221,14 +222,20 @@ def build_stack(prefactors: dict[str, float] | None = None,
                 bnossw_mean: str = "harmonic",
                 rfc_form: str = "matter_product",
                 include_data: bool = False,
-                submm_screened: bool = False) -> list[Constraint]:
+                submm_screened: bool = False,
+                include_birefringence: bool = False,
+                birefringence_mode: str = "hint",
+                birefringence_nsigma: float = 2.0) -> list[Constraint]:
     """Assemble the canonical constraint stack, overriding the tunable knife-edge
     prefactors with `prefactors` (missing keys fall back to CANONICAL).
 
-    All default constraints are THEORETICAL axioms. Setting `include_data=True`
-    appends the engine's first DATA-sourced constraint, the Eot-Wash sub-mm
-    gravity Yukawa bound (v1.77); `submm_screened=True` makes that bound vacuous
-    (chameleon/Vainshtein/dark-coupling scenarios)."""
+    All default constraints are THEORETICAL axioms. DATA-sourced constraints are
+    opt-in and default OFF (so the theoretical-only stack is unchanged):
+      - `include_data=True`: Eot-Wash sub-mm gravity Yukawa bound (v1.77, matter
+        sector); `submm_screened=True` makes it vacuous.
+      - `include_birefringence=True`: cosmic-birefringence band (v1.78, parity
+        sector; Minami-Komatsu beta=0.34+/-0.09 deg) -- PREFERS nonzero parity.
+        `birefringence_mode` in {hint, confirmed, ignore}, `birefringence_nsigma`."""
     p = dict(CANONICAL)
     if prefactors:
         p.update(prefactors)
@@ -269,8 +276,12 @@ def build_stack(prefactors: dict[str, float] | None = None,
         DistanceConjecture(R_max=20.0),
     ]
     if include_data:
-        # --- DATA: the first experiment-sourced constraint (v1.77) ---
+        # --- DATA: first experiment-sourced constraint (v1.77, matter sector) ---
         stack.append(SubmmGravityYukawaBound(screened=submm_screened))
+    if include_birefringence:
+        # --- DATA: second experiment (v1.78, parity sector) ---
+        stack.append(CosmicBirefringenceData(mode=birefringence_mode,
+                                             n_sigma=birefringence_nsigma))
     return stack
 
 
