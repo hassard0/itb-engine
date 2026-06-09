@@ -70,6 +70,8 @@ The program's credibility rests on its negative results:
 - **GW170817 is blind** (v1.84) — a cycle that corrected its own hypothesis.
 - Dr. M.'s arithmetic was wrong on several occasions (the free-field a/c table, the GB central charges); the engine caught and corrected each by deriving and sanity-checking against known limits.
 
+> **v2.10 capstone — the program in one page:** the question, the method, the 6 most robust findings, the one central contingency (birefringence), what to measure next, and the honest limitations, in a single page. → [v2.10 capstone](results/2026-06-09-v2.10-capstone.md)
+
 ## 8. The bottom line
 
 Given amplitude/causality/holographic consistency **plus two ingested experiments**, the engine points to a **parity-violating, screened-scalaron EFT**: it matches cosmic birefringence, requires screening to survive sub-mm gravity, and predicts GW/PTA parity signals just below current reach. The consistent island is thin (~0.6%) and ~3.4-dimensional; **6 measurements** would pin it; its single sharpest tension is the birefringence/sub-mm-gravity clash; and its sharpest near-future test is next-gen CMB birefringence (LiteBIRD/CMB-S4). All of this is stated with explicit, carried caveats — the engine is built to be honest about the difference between what it has shown and what it has merely sketched.
