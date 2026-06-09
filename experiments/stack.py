@@ -32,6 +32,7 @@ from itb.constraints.distance_conjecture import DistanceConjecture
 from itb.constraints.eft_validity import EFTValidityBox
 from itb.constraints.generalized_second_law import GeneralizedSecondLaw
 from itb.constraints.graviton_eft import GravitonMixedPositivity
+from itb.constraints.gw_dispersion import GWDispersionBound
 from itb.constraints.gw_speed import GWSpeedBound
 from itb.constraints.graviton_forward_positivity import GravitonForwardPositivity
 from itb.constraints.graviton_self_coupling import CubicCurvaturePositivity, CubicGravitonMatterBound
@@ -229,7 +230,9 @@ def build_stack(prefactors: dict[str, float] | None = None,
                 birefringence_mode: str = "hint",
                 birefringence_nsigma: float = 2.0,
                 include_gw_speed: bool = False,
-                gw_speed_low_cutoff: bool = True) -> list[Constraint]:
+                gw_speed_low_cutoff: bool = True,
+                include_gw_dispersion: bool = False,
+                gw_dispersion_low_cutoff: bool = True) -> list[Constraint]:
     """Assemble the canonical constraint stack, overriding the tunable knife-edge
     prefactors with `prefactors` (missing keys fall back to CANONICAL).
 
@@ -288,8 +291,11 @@ def build_stack(prefactors: dict[str, float] | None = None,
         stack.append(CosmicBirefringenceData(mode=birefringence_mode,
                                              n_sigma=birefringence_nsigma))
     if include_gw_speed:
-        # --- DATA: third experiment (v1.84, tensor-propagation sector) ---
+        # --- DATA: third experiment (v1.84, tensor-propagation sector, speed) ---
         stack.append(GWSpeedBound(low_cutoff=gw_speed_low_cutoff))
+    if include_gw_dispersion:
+        # --- DATA: fourth experiment (v1.85, tensor dispersion, the proper probe) ---
+        stack.append(GWDispersionBound(low_cutoff=gw_dispersion_low_cutoff))
     return stack
 
 

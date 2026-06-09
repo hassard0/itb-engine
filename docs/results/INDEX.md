@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (94 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (95 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -134,3 +134,4 @@ Auto-generated front door to the full research program (94 notes). Regenerate wi
 | v1.82 | [v1.82 — Black-hole entropy and the WGC: the engine's coefficients fix ](2026-06-08-v1.82-bh-entropy-wgc.md) | After the data/parity arc, v1.82 opens a genuinely new connection: the engine's |
 | v1.83 | [v1.83 — The master predictions scorecard & falsifiable roadmap](2026-06-08-v1.83-master-scorecard.md) | After a long arc (v1.71–82) the program has accumulated many distinct results — |
 | v1.84 | [v1.84 — The third experiment: GW170817 graviton speed, and the honest ](2026-06-08-v1.84-gw-speed.md) | Sub-mm gravity (v1.77) squeezed the *matter* sector; cosmic birefringence (v1.78) |
+| v1.85 | [v1.85 — The proper tensor probe: the LIGO dispersion test reaches the ](2026-06-08-v1.85-gw-dispersion.md) | v1.84 found GW170817's arrival-time **speed** test blind to the engine's |
