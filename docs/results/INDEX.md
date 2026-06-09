@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (104 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (105 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -144,3 +144,4 @@ Auto-generated front door to the full research program (104 notes). Regenerate w
 | v1.92 | [v1.92 — The convergence forecast: when does the data pin the quantum-g](2026-06-08-v1.92-convergence-forecast.md) | g_8 (the s⁴ matter moment) and g_R3 (cubic curvature), have no funded experiment. |
 | v1.93 | [v1.93 — Constraint Jenga: which consistency conditions are load-bearin](2026-06-08-v1.93-constraint-jenga.md) | The engine imposes 37 theoretical constraints. **How many actually do work?** We pull |
 | v1.94 | [v1.94 — The gravitational double-copy test: is the consistent graviton](2026-06-08-v1.94-double-copy.md) | The **double copy** (Bern–Carrasco–Johansson; KLT) builds gravity from gauge × gauge: |
+| v1.95 | [v1.95 — Genetic recombination: breeding the quantum-gravity frameworks](2026-06-08-v1.95-genetic-recombination.md) | Earlier discovery cycles found new consistent theories by *optimization*. v1.95 tries |
