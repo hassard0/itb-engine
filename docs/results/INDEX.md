@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (84 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (85 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -124,3 +124,4 @@ Auto-generated front door to the full research program (84 notes). Regenerate wi
 | v1.72 | [v1.72 — One coupling, two observables: the a/c wedge and η/s are the s](2026-06-08-v1.72-one-coupling-two-observables.md) | GB literature (Dr. M. again could not converge the arithmetic; derived here and |
 | v1.73 | [v1.73 — How constrained is a consistent quantum-gravity EFT? The dimen](2026-06-08-v1.73-island-census.md) | Every prior cycle excluded *parts* of theory-space. v1.73 asks the global, |
 | v1.74 | [v1.74 — The most robustly-consistent EFT: the island's center and its ](2026-06-08-v1.74-island-center.md) | The most robustly-consistent EFT is closest to string theory's tree-level EFT. |
+| v1.75 | [v1.75 — Error bars on the central prediction: does the most-robust EFT](2026-06-08-v1.75-central-prediction-error-bars.md) | The "string tree-EFT is nearest" claim is a plurality, not a robust majority. |
