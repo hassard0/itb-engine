@@ -1,0 +1,57 @@
+# ITB Engine — Findings
+
+*What the Information-Theoretic Bootstrap engine discovered, in one page.*
+Each finding links to its full dated note. For the chronological list of all 100 notes grouped by research arc, see [results/INDEX.md](results/INDEX.md). For the forward-looking status of every prediction, see the [master scorecard](results/2026-06-08-v1.83-master-scorecard.md).
+
+> **Read with the honest frame.** Most constraint prefactors and cross-sector mappings are O(1)/order-of-magnitude placeholders. The repo's *realism program* tells you which conclusions survive that uncertainty. Throughout, the **robust content is signs, orderings, structure, and which experiment constrains what** — not precise coordinates. Several findings below are deliberately *negative* or *self-correcting*; that's the point.
+
+---
+
+## 1. How constrained is a consistent quantum-gravity EFT?
+
+- **The consistent "island" is thin and low-dimensional.** Over a comparable-magnitude box, only **~0.6%** of EFTs satisfy the full theoretical stack, and the survivors span **~3.4 effective dimensions** (PCA) — one stiff *collective-scale* mode (matter+graviton couplings moving together, with g_8 decoupled) and several sloppy directions. This is the swampland's "thin landscape," quantified, and the Sethna *sloppy-model* signature of intersecting positivity/causality half-spaces. → [v1.73 island census](results/2026-06-08-v1.73-island-census.md)
+- **The most-robustly-consistent EFT (the island's Chebyshev center).** Deepest-interior point: `g_4≈0.52, g_6≈0.38, g_8≈0.44, g_R2≈0.21, g_R3≈0.08, g_C≈0.23`, balanced inside 6 positivity/swampland/complexity walls. Its central prediction — `a/c≈0.92`, `η/s≈0.81`, a **93 µm sub-mm Yukawa** — independently reproduces the dark-energy axion scale, and its nearest known theory is **string tree-EFT**. → [v1.74 island center](results/2026-06-08-v1.74-island-center.md)
+- **Error bars on that.** Under the realism prefactor uncertainty, the structural predictions survive (a/c in the conformal-collider wedge 100% of draws; η/s = 0.86±0.03; sub-mm 60–110 µm), while exact values and the single nearest framework are softer. → [v1.75](results/2026-06-08-v1.75-central-prediction-error-bars.md)
+
+## 2. One operator, many faces — the unifications
+
+- **Resolving Euler from Weyl² turns on real physics.** Splitting the curvature-squared sector into `g_R2` (Euler) and `g_C` (Weyl²) activated the **Hofman–Maldacena conformal-collider wedge** `1/3 ≤ a/c ≤ 31/18`, which became the *single dominant* constraint on theory space. → [v1.71](results/2026-06-08-v1.71-ac-wedge-basis-extension.md)
+- **η/s and a/c are the same Gauss–Bonnet coupling.** `1 − 4π(η/s) = (c−a)/c`; bulk causality on that coupling sits *strictly inside* the Hofman–Maldacena wedge, so for holographic theories causality implies the collider bound. The one framework that violates it (Hořava) is exactly the Lorentz-violating one the scope layer already rejects. → [v1.72](results/2026-06-08-v1.72-one-coupling-two-observables.md)
+- **Black-hole entropy fixes a sign.** ΔS_ext > 0 (extremal BH entropy shift) ⟺ the Weak Gravity Conjecture, for every consistent framework — and in 4d the Euler term is topological, so it's driven by Weyl² (`g_C`) and matter, *not* `g_R2`: a direct payoff of the basis split. → [v1.82](results/2026-06-08-v1.82-bh-entropy-wgc.md)
+- **R² is the inflaton.** The same `g_R2`, at a high cutoff, is the **Starobinsky inflaton** (n_s ≈ 0.964, r ≈ 0.004) — dead-center in the Planck+BICEP sweet spot, with m²φ² excluded. One operator spans inflation (high cutoff) and the dark-energy scalaron (meV cutoff). → [v1.86](results/2026-06-08-v1.86-inflation.md)
+
+## 3. Confronting real data
+
+- **Sub-mm gravity excludes the naive scalaron.** The dark-energy-scale f(R) scalaron (α=1/3, λ≈80 µm) is ruled out by Eöt-Wash torsion balances by ~7× — reproducing the known tension that unscreened dark-energy-scale fifth forces are excluded. → [v1.76](results/2026-06-08-v1.76-submm-confrontation.md)
+- **The engine ingests data and self-corrects.** Adding the Eöt-Wash bound as the engine's *first data constraint* collapses the island to ~2% of its theoretical volume and pulls the center to a heavier, allowed scalaron (λ<50 µm). → [v1.77](results/2026-06-08-v1.77-ingest-data.md)
+- **Cosmic birefringence → a parity-violating universe.** The Minami–Komatsu β = 0.34°±0.09° measurement, ingested, makes the engine *prefer a nonzero, positive-handed* parity coupling (excludes parity-even at 3.78σ). The "respectable" frameworks predict zero; the engine's own parity-violating branch has the *wrong sign*. → [v1.78](results/2026-06-08-v1.78-cosmic-birefringence.md)
+
+## 4. The data-driven EFT and the central tension
+
+- **The EFT the data points to is a tension.** Anomaly inflow + unscreened sub-mm gravity *cap* cosmic birefringence at β_max ≈ 0.09° — **~2.8σ below** the measured 0.34°. Screening lifts it to 0.32° (consistent). So: a real birefringence signal **prefers a screened scalaron**. The screened, β-matching EFT is registered as `discovered_data_driven` (a/c=0.93, β=0.32°, λ=115 µm). → [v1.79](results/2026-06-08-v1.79-data-driven-eft.md)
+- **That tension is robust.** Across 99% of the (ρ_inflow, κ_β) toy-mapping box it exceeds 1σ (73% exceeds 2σ); the mechanism is the **Green–Schwarz** bound of the parity coupling by the matter–curvature sector. → [v1.80](results/2026-06-08-v1.80-tension-robustness.md)
+- **One parity coupling, three messengers.** `g_R2_parity = 0.094` predicts CMB birefringence (detected), LIGO GW birefringence and PTA chirality (both below current reach). Multi-messenger *consistent*; next tests are LiteBIRD/CMB-S4, then ET and SKA. Honest caveat: CMB probes the photon coupling, GW/PTA the graviton coupling — the cross-check tests the single-axion assumption. → [v1.81](results/2026-06-08-v1.81-multimessenger-parity.md)
+
+## 5. Which observable, which experiment
+
+- **GW170817's speed test is blind** to higher-derivative gravity (frequency-suppressed (k/M)² dispersion ⇒ δc_GW ~ 10⁻²⁰ ≪ bound, even at the dark-energy cutoff) — unlike the O(1) Horndeski shift it killed. The three experiments do *not* triangulate the same way: only the long-range sub-mm probe squeezes the cutoff. → [v1.84](results/2026-06-08-v1.84-gw-speed.md)
+- **…but the GW dispersion test does reach it.** LIGO's intra-messenger phase test has a ~10²⁰ cumulative-phase lever arm, reaching the meV cutoff (M_min ≈ 1.8 meV now) where the speed test was stuck at µeV. The dark-energy cutoff sits at the LVK frontier. *Which observable* matters as much as which sector. → [v1.85](results/2026-06-08-v1.85-gw-dispersion.md)
+- **Is gravity classical?** The parameter-free Diósi–Penrose gravitational-collapse model is **excluded by ~14 orders of magnitude** by the 2021 underground X-ray experiment — weakly favoring gravity being quantum, the program's premise. → [v1.90](results/2026-06-08-v1.90-diosi-penrose.md)
+
+## 6. Auditing the engine itself (the meta-experiments)
+
+- **The Gödel test:** the ~37 theoretical axioms are **internally consistent** (no contradiction among the principles). Every minimal inconsistent core contains a *data* constraint — the smallest being `{anomaly-inflow + sub-mm + cosmic-birefringence}` (the v1.79 tension, recovered systematically). The engine's tensions are empirical, not logical. → [v1.87](results/2026-06-08-v1.87-godel-test.md)
+- **The minimum decisive experiment set:** a D-optimal Fisher design shows **6 measurements** pin all 8 coefficients. The headline inflation detection contributes *nothing* (zero Jacobian); sub-mm is redundant for pinning; **g_8 and g_R3 are blind spots** with no current observable. → [v1.88](results/2026-06-08-v1.88-min-experiment-set.md)
+- **The phylogenetic tree:** as RG-running couplings under a toy asymptotic-safety flow, the frameworks form a **rooted tree** — with a connected clade of discrete-spacetime approaches and **LQG → Group Field Theory** in the UV (GFT's known role). → [v1.89](results/2026-06-08-v1.89-phylogeny.md)
+
+## 7. The honesty trail (negative & self-correcting results)
+
+The program's credibility rests on its negative results:
+- The **a-theorem** is a constraint of independent *origin* but carries *no independent information* in this basis (the basis collapses Euler and Weyl²) — proven empirically, then *fixed* by the v1.71 basis split. → [v1.70](results/2026-06-08-v1.70-a-theorem-basis-degeneracy.md)
+- The **Repulsive-Force and BNOSSW-monogamy exclusions were artifacts** of a miscast constraint form; correcting them was load-bearing for the whole realism program (earlier 2026-06 arc).
+- **GW170817 is blind** (v1.84) — a cycle that corrected its own hypothesis.
+- Dr. M.'s arithmetic was wrong on several occasions (the free-field a/c table, the GB central charges); the engine caught and corrected each by deriving and sanity-checking against known limits.
+
+## 8. The bottom line
+
+Given amplitude/causality/holographic consistency **plus two ingested experiments**, the engine points to a **parity-violating, screened-scalaron EFT**: it matches cosmic birefringence, requires screening to survive sub-mm gravity, and predicts GW/PTA parity signals just below current reach. The consistent island is thin (~0.6%) and ~3.4-dimensional; **6 measurements** would pin it; its single sharpest tension is the birefringence/sub-mm-gravity clash; and its sharpest near-future test is next-gen CMB birefringence (LiteBIRD/CMB-S4). All of this is stated with explicit, carried caveats — the engine is built to be honest about the difference between what it has shown and what it has merely sketched.
