@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (78 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (79 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -118,3 +118,4 @@ Auto-generated front door to the full research program (78 notes). Regenerate wi
 | v1.65 | [v1.65 — Emergent gravity, and a third dimension of engine scope (funda](2026-06-08-v1.65-emergent-gravity.md) | A 12th candidate framework — **Verlinde entropic / emergent gravity** — chosen |
 | v1.66 | [v1.66 — Survival on the full 35-constraint stack: the new bounds shrin](2026-06-08-v1.66-survival-full-stack.md) | Joint coefficient × prefactor survival, now on the full **35-constraint** stack |
 | v1.67 | [v1.67 — A holographic observable: η/s, an orthogonal discriminator (ev](2026-06-08-v1.67-holographic-eta-over-s.md) | A new holographic observable in `gravitational_observables.py`, |
+| v1.69 | [v1.69 — The allowed region, seen directly: a 2-D feasibility slice in ](2026-06-08-v1.69-feasibility-slice-gR2-gR3.md) | Every prior cycle reported feasibility as a *number* (survival fraction, a |
