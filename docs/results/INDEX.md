@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (106 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (107 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -146,3 +146,4 @@ Auto-generated front door to the full research program (106 notes). Regenerate w
 | v1.94 | [v1.94 — The gravitational double-copy test: is the consistent graviton](2026-06-08-v1.94-double-copy.md) | The **double copy** (Bern–Carrasco–Johansson; KLT) builds gravity from gauge × gauge: |
 | v1.95 | [v1.95 — Genetic recombination: breeding the quantum-gravity frameworks](2026-06-08-v1.95-genetic-recombination.md) | Earlier discovery cycles found new consistent theories by *optimization*. v1.95 tries |
 | v1.96 | [v1.96 — The species scale: tying the EFT cutoff to a tower of states (](2026-06-08-v1.96-species-scale.md) | Dvali's **species scale**: with N light species below the cutoff, gravity becomes |
+| v1.97 | [v1.97 — The adversarial self-audit: which constraints are sole gatekee](2026-06-08-v1.97-adversarial-audit.md) | The Gödel test (v1.87) and constraint Jenga (v1.93) audited the engine's logic and |
