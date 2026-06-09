@@ -18,6 +18,7 @@ from itb.frameworks.cdt import CausalDynamicalTriangulation
 from itb.frameworks.discovered import (
     DiscoveredHighG8, DiscoveredNovel, DiscoveredParityViolating,
 )
+from itb.frameworks.data_driven import DiscoveredDataDriven
 from itb.frameworks.emergent_gravity import EmergentGravity
 from itb.frameworks.group_field_theory import GroupFieldTheory
 from itb.frameworks.horava_lifshitz import HoravaLifshitz
@@ -33,7 +34,7 @@ FRAMEWORKS = {fw.name: fw for fw in [
     PureGR(), StringTreeEFT(), AsymptoticSafety(), LQGInduced(),
     CausalDynamicalTriangulation(), GroupFieldTheory(), HoravaLifshitz(),
     CausalSet(), EmergentGravity(), DiscoveredNovel(), DiscoveredParityViolating(),
-    DiscoveredHighG8()]}
+    DiscoveredHighG8(), DiscoveredDataDriven()]}
 
 
 def predict(name: str) -> dict:

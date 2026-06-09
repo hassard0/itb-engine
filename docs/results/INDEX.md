@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (88 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (89 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -128,3 +128,4 @@ Auto-generated front door to the full research program (88 notes). Regenerate wi
 | v1.76 | [v1.76 — Confronting the central prediction with real sub-mm gravity da](2026-06-08-v1.76-submm-confrontation.md) | The program has spent six cycles building toward a falsifiable central prediction. |
 | v1.77 | [v1.77 — The engine ingests real data: the sub-mm bound as the first ex](2026-06-08-v1.77-ingest-data.md) | Every one of the engine's ~36 constraints has been a **theoretical axiom** — |
 | v1.78 | [v1.78 — The second experiment: cosmic birefringence, and the engine's ](2026-06-08-v1.78-cosmic-birefringence.md) | v1.77 ingested an *exclusion* (Eöt-Wash sub-mm gravity) in the matter sector. v1.78 |
+| v1.79 | [v1.79 — The EFT the data points to: a tension, and the engine's predic](2026-06-08-v1.79-data-driven-eft.md) | The plan was to construct the single best EFT consistent with **theory + sub-mm |
