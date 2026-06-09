@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (99 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (100 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -139,3 +139,4 @@ Auto-generated front door to the full research program (99 notes). Regenerate wi
 | v1.87 | [v1.87 — The Gödel test: is the engine internally consistent, and what ](2026-06-08-v1.87-godel-test.md) | The first of a new "meta-experiment" track (auditing the engine itself rather than |
 | v1.88 | [v1.88 — The minimum decisive experiment set: what is the smallest expe](2026-06-08-v1.88-min-experiment-set.md) | The minimum decisive experiment program is 6 measurements: |
 | v1.89 | [v1.89 — The phylogenetic tree of quantum gravities: are the frameworks](2026-06-08-v1.89-phylogeny.md) | All frameworks lie in the basin of the single UV fixed point and flow toward it |
+| v1.90 | [v1.90 — The Diósi–Penrose exclusion: is gravity classical?](2026-06-08-v1.90-diosi-penrose.md) | The engine assumes gravity is **quantum** (it bootstraps a graviton EFT). The |
