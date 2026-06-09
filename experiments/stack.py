@@ -33,6 +33,7 @@ from itb.constraints.generalized_second_law import GeneralizedSecondLaw
 from itb.constraints.graviton_eft import GravitonMixedPositivity
 from itb.constraints.graviton_forward_positivity import GravitonForwardPositivity
 from itb.constraints.graviton_self_coupling import CubicCurvaturePositivity, CubicGravitonMatterBound
+from itb.constraints.hofman_maldacena import HofmanMaldacenaWedge
 from itb.constraints.holographic_entropy import HolographicSubadditivity
 from itb.constraints.matter_s3_positivity import MatterS3Positivity
 from itb.constraints.ligo_graviton_mass import LIGOGravitonMassBound
@@ -236,6 +237,7 @@ def build_stack(prefactors: dict[str, float] | None = None,
         MatterS3Positivity(c_m=p["matter_s3_cm"]),          # v1.25
         CEMZCausality(kappa=p["cemz_kappa"]),               # v1.61 (causality)
         CrossSectorEFThedron(alpha=p["efthedron_alpha"]),   # v1.61 (cross-sector, Dr. M.)
+        HofmanMaldacenaWedge(),                             # v1.71 (a/c collider wedge)
 
         # --- Class B: information-theoretic ---
         BekensteinTight(), HolographicSubadditivity(),
