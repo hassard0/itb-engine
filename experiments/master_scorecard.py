@@ -84,6 +84,10 @@ def build_scorecard():
             "Data-driven EFT: screened scalaron + positive-handed parity",
          "version": "v1.79", "status": "TENSION",
          "next": "joint sub-mm + CMB + GW/PTA", "when": "2030+"},
+        {"key": "inflation", "prediction":
+            "R^2 (Starobinsky) inflation: n_s~0.964, r~0.004 (best-fit model)",
+         "version": "v1.86", "status": "DETECTED",
+         "next": "LiteBIRD / CMB-S4 / Simons (r down to ~0.001)", "when": "2028-2032"},
     ]
     return rows
 

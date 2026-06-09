@@ -84,6 +84,53 @@ class GravitationalBirefringence(Observable):
         return np.stack(cols, axis=1)
 
 
+class StarobinskyInflation(Observable):
+    """R^2 inflation observables (n_s, r) -- the engine's g_R2 sector as the
+    Starobinsky inflaton (v1.86).
+
+    The SAME R^2 operator the engine uses as a dark-energy-scale scalaron (low
+    cutoff -> sub-mm fifth force) is, at a HIGH cutoff (scalaron mass M ~ 3e13 GeV,
+    fixed by the Planck scalar amplitude A_s ~ 2.1e-9), the Starobinsky inflaton --
+    the observationally-favored single-field model. To leading order in the e-fold
+    number N (Dr. M.-confirmed; Starobinsky 1980):
+
+        n_s = 1 - 2/N ,    r = 12/N^2 .
+
+    For N = 50-60: n_s ~ 0.960-0.967, r ~ 0.0033-0.0048 -- dead-center in the
+    Planck 2018 + BICEP/Keck 2021 allowed region (n_s = 0.9649 +/- 0.0042,
+    r < 0.036).
+
+    HONEST (Dr. M.): n_s and r are set by N (the plateau geometry), NOT by the
+    dimensionless R^2 coefficient (which only fixes the amplitude / energy scale).
+    So g_R2 does not by itself fix (n_s, r); the robust statement is that a POSITIVE
+    R^2 term (g_R2 > 0, which every consistent framework has) gives the plateau
+    potential and hence the Planck sweet spot. This observable returns (n_s, r) for
+    a chosen N, plus a viability flag (g_R2 > 0).
+    """
+
+    name = "starobinsky_inflation"
+
+    def __init__(self, N_efolds: float = 55.0):
+        self.N = float(N_efolds)
+
+    def n_s(self) -> float:
+        return 1.0 - 2.0 / self.N
+
+    def r(self) -> float:
+        return 12.0 / self.N ** 2
+
+    def viable(self, theory: Theory) -> bool:
+        return theory.coefficients.get("g_R2", 0.0) > 0.0
+
+    def predict(self, theory: Theory) -> np.ndarray:
+        # (n_s, r); independent of g_R2 (set by N) -- the honest point
+        return np.array([self.n_s(), self.r()])
+
+    def jacobian(self, theory: Theory, params: list[str]) -> np.ndarray:
+        # n_s, r depend on N (plateau geometry), NOT on any Wilson coefficient
+        return np.zeros((2, len(params)))
+
+
 class BlackHoleEntropyShift(Observable):
     """Leading higher-derivative correction to the (near-)extremal black-hole
     entropy at fixed mass M and charge Q, Delta S_ext, in units of the leading Wald
