@@ -20,6 +20,7 @@ from itb.constraints.anomaly import AnomalyCancellation
 from itb.constraints.anomaly_flow import GeneralizedAnomalyInflow, tHooftAnomalyMatching
 from itb.constraints.base import Constraint, ConstraintClass, ConstraintResult
 from itb.constraints.bekenstein_tight import BekensteinTight
+from itb.constraints.bh_entropy_positivity import WaldEntropyPositivity
 from itb.constraints.causality import CausalityBound
 from itb.constraints.cemz_causality import CEMZCausality
 from itb.constraints.cft_flat_space import CFTFlatSpaceBound
@@ -269,6 +270,7 @@ def build_stack(prefactors: dict[str, float] | None = None,
         GeneralizedAnomalyInflow(rho=p["anomaly_rho"]),
         tHooftAnomalyMatching(rho_match=0.5, slack=0.02),
         WeakGravityConjecture(alpha=1.0),
+        WaldEntropyPositivity(),                            # v1.82 (CLR/WGC, BH entropy)
         ScalarWGC(beta=p["scalar_wgc_beta"]),
         TunableRFC(gamma=p["rfc_gamma"], form=rfc_form),
         LIGOGravitonMassBound(bound=0.5),

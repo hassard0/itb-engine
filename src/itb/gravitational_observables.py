@@ -84,6 +84,53 @@ class GravitationalBirefringence(Observable):
         return np.stack(cols, axis=1)
 
 
+class BlackHoleEntropyShift(Observable):
+    """Leading higher-derivative correction to the (near-)extremal black-hole
+    entropy at fixed mass M and charge Q, Delta S_ext, in units of the leading Wald
+    correction (v1.82).
+
+    Cheung-Liu-Remmen (2018) / Reall-Santos (2018): the sign of Delta S_ext is fixed
+    by the same positivity structure as the Weak Gravity Conjecture, and
+
+        Delta S_ext > 0  <=>  WGC  (the extremality bound shifts so q_ext/m_ext > 1,
+                                    i.e. extremal black holes can decay).
+
+    KEY (Dr. M.-confirmed): in 4d the Gauss-Bonnet / Euler invariant is TOPOLOGICAL,
+    so it does NOT shift the Wald entropy. Thus g_R2 (the Euler coupling) drops out;
+    the shift is driven by the Weyl^2 coupling g_C and the matter sector g_4:
+
+        Delta S_ext = A * g_C + B * g_4 ,   A, B > 0 (positive geometric factors).
+
+    Toy normalization A=1 (Weyl^2, dominant for the gravitational sector), B=0.5
+    (matter). The robust content is the SIGN (positive for any positivity-satisfying,
+    hence WGC-consistent, theory) and the ORDERING by g_C; the precise factors are
+    UV-dependent (Dr. M.). g_C defaults to g_R2 (the holographic a=c portrait) when a
+    framework carries no explicit Weyl^2 coupling.
+    """
+
+    name = "bh_entropy_shift"
+
+    def __init__(self, A: float = 1.0, B: float = 0.5):
+        self.A = float(A)
+        self.B = float(B)
+
+    def predict(self, theory: Theory) -> np.ndarray:
+        gC = theory.coefficients.get("g_C", theory.coefficients.get("g_R2", 0.0))
+        g4 = theory.coefficients.get("g_4", 0.0)
+        return np.array([self.A * gC + self.B * g4])
+
+    def jacobian(self, theory: Theory, params: list[str]) -> np.ndarray:
+        cols = []
+        for p in params:
+            if p == "g_C":
+                cols.append(np.array([self.A]))
+            elif p == "g_4":
+                cols.append(np.array([self.B]))
+            else:                       # g_R2 (Euler) is topological in 4d -> 0
+                cols.append(np.array([0.0]))
+        return np.stack(cols, axis=1)
+
+
 class HolographicEtaOverS(Observable):
     """Shear viscosity / entropy density of a putative AdS/CFT dual, in KSS units.
 
