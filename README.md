@@ -6,7 +6,7 @@
 >
 > Honest by construction: most constraint prefactors are O(1) placeholders ("the right streets, the wrong house numbers"). A dedicated **realism program** stress-tests every headline claim against that toy-prefactor uncertainty, so the repo distinguishes *robust conclusions* from *artifacts*. Read every claim below with that in mind — and see [Honest limitations](#honest-limitations).
 
-📍 **Start here:** [**v2.0 research report**](docs/results/2026-06-09-v2.0-RESEARCH-REPORT.md) (publication-style overview of the whole program) · [**FINDINGS.md**](docs/FINDINGS.md) (what the engine discovered, in one page) · [**Predictions scorecard**](docs/results/2026-06-08-v1.83-master-scorecard.md) · [**Results index**](docs/results/INDEX.md) (all notes by arc)
+📍 **Start here:** [**v2.0 research report**](docs/results/2026-06-09-v2.0-RESEARCH-REPORT.md) (publication-style overview of the whole program) · [**FINDINGS.md**](docs/FINDINGS.md) (what the engine discovered, in one page) · [**TAXONOMY.md**](docs/results/TAXONOMY.md) (all notes grouped by theme) · [**Predictions scorecard**](docs/results/2026-06-08-v1.83-master-scorecard.md) · [**Results index**](docs/results/INDEX.md) (chronological)
 
 ---
 
