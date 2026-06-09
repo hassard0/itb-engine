@@ -1,7 +1,7 @@
 # ITB Engine — Findings
 
 *What the Information-Theoretic Bootstrap engine discovered, in one page.*
-Each finding links to its full dated note. For the chronological list of all 100 notes grouped by research arc, see [results/INDEX.md](results/INDEX.md). For the forward-looking status of every prediction, see the [master scorecard](results/2026-06-08-v1.83-master-scorecard.md).
+Each finding links to its full dated note. For the chronological list of all notes grouped by research arc, see [results/INDEX.md](results/INDEX.md). For the forward-looking status of every prediction, see the [master scorecard](results/2026-06-08-v1.83-master-scorecard.md). For a publication-style overview of the whole program, see the [**v2.0 research report**](results/2026-06-09-v2.0-RESEARCH-REPORT.md).
 
 > **Read with the honest frame.** Most constraint prefactors and cross-sector mappings are O(1)/order-of-magnitude placeholders. The repo's *realism program* tells you which conclusions survive that uncertainty. Throughout, the **robust content is signs, orderings, structure, and which experiment constrains what** — not precise coordinates. Several findings below are deliberately *negative* or *self-correcting*; that's the point.
 

@@ -2,11 +2,11 @@
 
 **A research platform that constrains the space of possible quantum-gravity theories by imposing every consistency condition we can encode — amplitude positivity, causality, holographic-information bounds, the swampland, anomaly flow, black-hole thermodynamics — then confronts the survivors with *real experimental data* and asks what's left.**
 
-> **Status:** v1.90 · **498 tests** · **40 constraints** · **14 framework encoders** · **8 Wilson coefficients** · **4 ingested experiments** · **100 dated result notes**
+> **Status:** v2.0 · **527 tests** · **38 theoretical constraints (+4 ingested-data)** · **14 framework encoders** · **8 Wilson coefficients** · **9 observables** · **109 dated result notes**
 >
 > Honest by construction: most constraint prefactors are O(1) placeholders ("the right streets, the wrong house numbers"). A dedicated **realism program** stress-tests every headline claim against that toy-prefactor uncertainty, so the repo distinguishes *robust conclusions* from *artifacts*. Read every claim below with that in mind — and see [Honest limitations](#honest-limitations).
 
-📍 **Start here:** [**FINDINGS.md**](docs/FINDINGS.md) (what the engine discovered, in one page) · [**Predictions scorecard**](docs/results/2026-06-08-v1.83-master-scorecard.md) · [**Results index**](docs/results/INDEX.md) (all 100 notes by arc)
+📍 **Start here:** [**v2.0 research report**](docs/results/2026-06-09-v2.0-RESEARCH-REPORT.md) (publication-style overview of the whole program) · [**FINDINGS.md**](docs/FINDINGS.md) (what the engine discovered, in one page) · [**Predictions scorecard**](docs/results/2026-06-08-v1.83-master-scorecard.md) · [**Results index**](docs/results/INDEX.md) (all notes by arc)
 
 ---
 

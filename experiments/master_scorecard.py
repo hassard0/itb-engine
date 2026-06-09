@@ -93,6 +93,17 @@ def build_scorecard():
             "R^2 (Starobinsky) inflation: n_s~0.964, r~0.004 (best-fit model)",
          "version": "v1.86", "status": "DETECTED",
          "next": "LiteBIRD / CMB-S4 / Simons (r down to ~0.001)", "when": "2028-2032"},
+        {"key": "ns_tides", "prediction":
+            "Neutron-star tides (GW170817) BLIND to the dark-energy curvature sector "
+            "(strong gravity != high curvature-energy)",
+         "version": "v1.91", "status": "STRUCTURAL",
+         "next": "no reach (delta-Lambda/Lambda ~ 1e-17 at the meV cutoff)", "when": "--"},
+        {"key": "diosi_penrose", "prediction":
+            "Parameter-free Diosi-Penrose (classical-gravity collapse) EXCLUDED ~14 "
+            "orders -> weakly favors gravity being quantum",
+         "version": "v1.90", "status": "EXCLUDED",
+         "next": "underground spontaneous-radiation experiments (done: Donadi 2021)",
+         "when": "now"},
     ]
     return rows
 
