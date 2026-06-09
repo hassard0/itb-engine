@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (86 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (87 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -126,3 +126,4 @@ Auto-generated front door to the full research program (86 notes). Regenerate wi
 | v1.74 | [v1.74 — The most robustly-consistent EFT: the island's center and its ](2026-06-08-v1.74-island-center.md) | The most robustly-consistent EFT is closest to string theory's tree-level EFT. |
 | v1.75 | [v1.75 — Error bars on the central prediction: does the most-robust EFT](2026-06-08-v1.75-central-prediction-error-bars.md) | The "string tree-EFT is nearest" claim is a plurality, not a robust majority. |
 | v1.76 | [v1.76 — Confronting the central prediction with real sub-mm gravity da](2026-06-08-v1.76-submm-confrontation.md) | The program has spent six cycles building toward a falsifiable central prediction. |
+| v1.77 | [v1.77 — The engine ingests real data: the sub-mm bound as the first ex](2026-06-08-v1.77-ingest-data.md) | Every one of the engine's ~36 constraints has been a **theoretical axiom** — |

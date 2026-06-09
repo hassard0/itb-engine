@@ -47,6 +47,7 @@ from itb.constraints.quantum_focusing import QuantumFocusingConjecture
 from itb.constraints.scalar_convexity import ScalarConvexityG6vsG4
 from itb.constraints.scalar_positivity import ScalarPositivityG4, ScalarPositivityG6
 from itb.constraints.spin_four_positivity import SpinFourPositivity
+from itb.constraints.submm_gravity import SubmmGravityYukawaBound
 from itb.constraints.swampland import WeakGravityConjecture
 from itb.constraints.swampland_variants import ScalarWGC
 from itb.frameworks.asymptotic_safety import AsymptoticSafety
@@ -218,14 +219,20 @@ PLAUSIBLE_RANGES: dict[str, tuple[float, float]] = {
 
 def build_stack(prefactors: dict[str, float] | None = None,
                 bnossw_mean: str = "harmonic",
-                rfc_form: str = "matter_product") -> list[Constraint]:
-    """Assemble the canonical 31-constraint stack, overriding the six tunable
-    knife-edge prefactors with `prefactors` (missing keys fall back to
-    CANONICAL)."""
+                rfc_form: str = "matter_product",
+                include_data: bool = False,
+                submm_screened: bool = False) -> list[Constraint]:
+    """Assemble the canonical constraint stack, overriding the tunable knife-edge
+    prefactors with `prefactors` (missing keys fall back to CANONICAL).
+
+    All default constraints are THEORETICAL axioms. Setting `include_data=True`
+    appends the engine's first DATA-sourced constraint, the Eot-Wash sub-mm
+    gravity Yukawa bound (v1.77); `submm_screened=True` makes that bound vacuous
+    (chameleon/Vainshtein/dark-coupling scenarios)."""
     p = dict(CANONICAL)
     if prefactors:
         p.update(prefactors)
-    return [
+    stack = [
         # --- Class A: amplitude bootstrap ---
         ScalarPositivityG4(), ScalarPositivityG6(), ScalarPositivityG8(),
         ScalarConvexityG6vsG4(), DispersionTowerCauchySchwarz(),
@@ -261,6 +268,10 @@ def build_stack(prefactors: dict[str, float] | None = None,
         ComplexityCutoff(c_max=p["complexity_cmax"]),
         DistanceConjecture(R_max=20.0),
     ]
+    if include_data:
+        # --- DATA: the first experiment-sourced constraint (v1.77) ---
+        stack.append(SubmmGravityYukawaBound(screened=submm_screened))
+    return stack
 
 
 def frameworks() -> list:
