@@ -1,0 +1,123 @@
+{
+  "basis": [
+    "v2.62_gw_parity_native_packet_registry",
+    "Jenks_parameterized_parity_formalism",
+    "native_packets_nonpromoting"
+  ],
+  "target_intermediate_basis": "ppv_amplitude_birefringence_branch",
+  "spec_count": 2,
+  "implementation_ready_specs": [],
+  "implementation_ready_count": 0,
+  "engine_projection_allowed_now": false,
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "engine_projection_out_of_scope": 2,
+    "missing_distance_normalization": 1,
+    "missing_distance_redshift_normalization": 1,
+    "missing_explicit_native_to_ppv_formula": 2,
+    "missing_helicity_sign_convention": 1,
+    "missing_joint_posterior_parser": 1,
+    "missing_posterior_parser": 1
+  },
+  "rows": [
+    {
+      "label": "ng_kappa_to_ppv_amplitude_branch",
+      "native_packet": "ng_gwtc3_kappa_at_100hz",
+      "source_urls": {
+        "measurement": "https://arxiv.org/abs/2305.05844",
+        "formalism": "https://arxiv.org/abs/2305.10478",
+        "repository": "https://github.com/thomasckng/Constraining-Birefringence-with-GWTC-3"
+      },
+      "native_axes": [
+        "kappa_Gpc_inv",
+        "f_ref_hz=100",
+        "comoving_distance_Gpc"
+      ],
+      "target_basis": "ppv_amplitude_birefringence_branch",
+      "target_axes": [
+        "ppv_amplitude_distance_slope",
+        "ppv_frequency_power_n1",
+        "helicity_sign"
+      ],
+      "source_support": [
+        "Ng reports amplitude birefringence at 100 Hz in Gpc^-1.",
+        "Jenks supplies parameterized amplitude/velocity parity propagation language."
+      ],
+      "required_formula_components": [
+        "native exponent convention for h_L/h_R",
+        "Jenks PPV amplitude-branch axis and sign convention",
+        "distance normalization and cosmology convention",
+        "frequency reference conversion at 100 Hz",
+        "posterior sample parser for kappa"
+      ],
+      "implementation_ready": false,
+      "engine_projection_allowed": false,
+      "blockers": [
+        "missing_explicit_native_to_ppv_formula",
+        "missing_helicity_sign_convention",
+        "missing_distance_normalization",
+        "missing_posterior_parser",
+        "engine_projection_out_of_scope"
+      ],
+      "required_validation_tests": [
+        "zero_kappa_maps_to_zero_ppv_amplitude",
+        "positive_negative_kappa_preserve_helicity_sign",
+        "100hz_reference_frequency_roundtrip",
+        "posterior_mass_normalizes_to_one"
+      ],
+      "status": "ppv_adapter_spec_defined_formula_missing"
+    },
+    {
+      "label": "callister_kappaD_kappaz_to_ppv_amplitude_branch",
+      "native_packet": "callister_sgwb_kappaD_kappaz",
+      "source_urls": {
+        "measurement": "https://arxiv.org/abs/2312.12532",
+        "formalism": "https://arxiv.org/abs/2305.10478",
+        "repository": "https://github.com/tcallister/stochastic-birefringence"
+      },
+      "native_axes": [
+        "kappa_D",
+        "kappa_z",
+        "f_ref_hz=100",
+        "comoving_distance_Gpc",
+        "redshift"
+      ],
+      "target_basis": "ppv_amplitude_birefringence_branch",
+      "target_axes": [
+        "ppv_amplitude_distance_slope",
+        "ppv_amplitude_redshift_slope",
+        "ppv_frequency_power_n1",
+        "helicity_sign"
+      ],
+      "source_support": [
+        "Callister uses kappa_D/kappa_z for SGWB amplitude birefringence.",
+        "The paper connects the stochastic-birefringence parameters to the PPV literature."
+      ],
+      "required_formula_components": [
+        "kappa_D distance term",
+        "kappa_z redshift term",
+        "joint posterior-grid loader",
+        "normalization between SGWB exponent and PPV amplitude branch",
+        "cosmology convention used for distance/redshift conversion"
+      ],
+      "implementation_ready": false,
+      "engine_projection_allowed": false,
+      "blockers": [
+        "missing_explicit_native_to_ppv_formula",
+        "missing_joint_posterior_parser",
+        "missing_distance_redshift_normalization",
+        "engine_projection_out_of_scope"
+      ],
+      "required_validation_tests": [
+        "zero_kappaD_kappaz_maps_to_zero_ppv_amplitude",
+        "posterior_grid_integrates_to_one",
+        "distance_and_redshift_terms_remain_separable",
+        "100hz_reference_frequency_roundtrip"
+      ],
+      "status": "ppv_adapter_spec_defined_formula_missing"
+    }
+  ],
+  "route_status": "ppv_adapter_spec_defined_formula_missing",
+  "best_next_artifact": "A non-promoting PPV adapter implementation for one native packet, starting with explicit formula and posterior parser tests.",
+  "interpretation": "The shared PPV amplitude branch is the right intermediate target, but neither native packet can be numerically transformed until the formula, sign, normalization, and parser obligations are implemented."
+}
