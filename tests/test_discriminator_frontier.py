@@ -32,6 +32,10 @@ def test_discriminator_frontier_marks_reference_feasible_missing_tower_evidence(
     assert row["native_tower_evidence_present"] is False
     assert row["frontier_status"] == "missing_native_tower_spectrum"
     assert row["tower_evidence_validation"]["blockers"] == ["missing_native_tower_evidence"]
+    assert row["tower_generic_claim_guard"]["blockers"] == [
+        "missing_native_tower_evidence"
+    ]
+    assert row["tower_generic_claim_guard"]["ready_for_generic_framework_claim"] is False
     assert "sourced TowerEvidence" in result["interpretation"]
 
 

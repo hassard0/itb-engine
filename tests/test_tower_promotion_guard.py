@@ -2,9 +2,10 @@
 
 from itb.tower import (
     TowerEvidence,
-    kk_radius_tower_spectrum,
     classify_tower_source_scope,
+    evaluate_generic_framework_claim_guard,
     evaluate_tower_promotion_guard,
+    kk_radius_tower_spectrum,
     tower_positive_control_matches,
 )
 
@@ -81,6 +82,68 @@ def test_source_scope_classifier_requires_framework_owned_endpoint_and_displacem
     assert result["range_scope"] == "unspecified"
     assert result["compactification_scope"] == "unspecified"
     assert result["scope_blockers"] == [
+        "missing_asymptotic_range_scope",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+    ]
+
+
+def test_generic_framework_claim_guard_blocks_promotion_ready_scope_gap():
+    result = evaluate_generic_framework_claim_guard(
+        _evidence(),
+        tower_claimable_by_math=True,
+    )
+
+    assert result["promotion_guard"]["ready_for_promotion"] is True
+    assert result["ready_for_generic_framework_claim"] is False
+    assert result["ready_for_generic_framework_claim"] == (
+        result["evidence_ready"]
+        and result["tower_claimable_by_math"]
+        and not result["positive_control_matches"]
+        and result["source_scope"]["generic_framework_claim_ready"]
+    )
+    assert result["blockers"] == [
+        "missing_asymptotic_range_scope",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+    ]
+
+
+def test_generic_framework_claim_guard_allows_owned_asymptotic_fixture():
+    evidence = _evidence({
+        "range_scope": "asymptotic",
+        "native_framework_endpoint": "unit-test endpoint",
+        "native_framework_displacement": "unit-test displacement",
+    })
+    result = evaluate_generic_framework_claim_guard(
+        evidence,
+        tower_claimable_by_math=True,
+    )
+
+    assert result["ready_for_generic_framework_claim"] is True
+    assert result["ready_for_generic_framework_claim"] == (
+        result["evidence_ready"]
+        and result["tower_claimable_by_math"]
+        and not result["positive_control_matches"]
+        and result["source_scope"]["generic_framework_claim_ready"]
+    )
+    assert result["blockers"] == []
+    assert result["source_scope"]["range_scope"] == "asymptotic"
+
+
+def test_generic_framework_claim_guard_rejects_false_ownership_markers():
+    evidence = _evidence({
+        "range_scope": "asymptotic",
+        "native_framework_endpoint": False,
+        "native_framework_displacement": "",
+    })
+    result = evaluate_generic_framework_claim_guard(
+        evidence,
+        tower_claimable_by_math=True,
+    )
+
+    assert result["ready_for_generic_framework_claim"] is False
+    assert result["blockers"] == [
         "missing_framework_owned_displacement",
         "missing_framework_owned_endpoint",
     ]

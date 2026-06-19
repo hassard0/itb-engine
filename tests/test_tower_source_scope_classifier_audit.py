@@ -53,6 +53,7 @@ def test_source_scope_classifier_guard_ready_is_not_generic_claim_ready():
     assert row["promotion_guard_ready"] is True
     assert row["generic_framework_claim_ready"] is False
     assert row["source_scope"]["scope_blockers"] == [
+        "missing_asymptotic_range_scope",
         "missing_framework_owned_displacement",
         "missing_framework_owned_endpoint",
     ]

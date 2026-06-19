@@ -190,6 +190,26 @@ def _tokens_match(tokens: list[str], markers: tuple[str, ...]) -> bool:
     return any(marker in token for marker in markers for token in tokens)
 
 
+def _truthy_marker_present(value: Any, markers: tuple[str, ...]) -> bool:
+    if isinstance(value, dict):
+        for key, item in value.items():
+            key_text = str(key).lower()
+            if any(marker in key_text for marker in markers) and item not in (
+                False,
+                None,
+                "",
+                [],
+                {},
+                (),
+            ):
+                return True
+            if _truthy_marker_present(item, markers):
+                return True
+    if isinstance(value, (list, tuple, set)):
+        return any(_truthy_marker_present(item, markers) for item in value)
+    return False
+
+
 def classify_tower_source_scope(evidence: TowerEvidence | dict[str, Any]) -> dict[str, Any]:
     """Classify source scope for claim-readiness promotion.
 
@@ -203,8 +223,14 @@ def classify_tower_source_scope(evidence: TowerEvidence | dict[str, Any]) -> dic
     finite_range = _tokens_match(tokens, FINITE_RANGE_MARKERS)
     asymptotic = _tokens_match(tokens, ASYMPTOTIC_RANGE_MARKERS)
     single_compactification = _tokens_match(tokens, SINGLE_COMPACTIFICATION_MARKERS)
-    endpoint_owned = _tokens_match(tokens, NATIVE_OWNERSHIP_MARKERS["endpoint"])
-    displacement_owned = _tokens_match(tokens, NATIVE_OWNERSHIP_MARKERS["displacement"])
+    endpoint_owned = _truthy_marker_present(
+        row,
+        NATIVE_OWNERSHIP_MARKERS["endpoint"],
+    )
+    displacement_owned = _truthy_marker_present(
+        row,
+        NATIVE_OWNERSHIP_MARKERS["displacement"],
+    )
 
     if finite_range and not asymptotic:
         range_scope = "finite_range"
@@ -232,6 +258,8 @@ def classify_tower_source_scope(evidence: TowerEvidence | dict[str, Any]) -> dic
         scope_blockers.append("known_qg_positive_control_family")
     if range_scope == "finite_range":
         scope_blockers.append("finite_range_not_asymptotic")
+    elif range_scope != "asymptotic":
+        scope_blockers.append("missing_asymptotic_range_scope")
     if single_compactification:
         scope_blockers.append("single_compactification_not_generic_framework")
     if not endpoint_owned:
@@ -257,7 +285,7 @@ def evaluate_tower_promotion_guard(
     *,
     tower_claimable_by_math: bool,
 ) -> dict[str, Any]:
-    """Gate a tower row before promoting math exclusion to a framework claim."""
+    """Gate a tower row against narrow known-positive-control promotion."""
     validation = validate_tower_evidence(evidence)
     source_scope = classify_tower_source_scope(evidence)
     positive_control_matches = source_scope["positive_control_matches"]
@@ -276,6 +304,39 @@ def evaluate_tower_promotion_guard(
         "source_scope": source_scope,
         "positive_control_matches": positive_control_matches,
         "blockers": sorted(set(blockers)),
+    }
+
+
+def evaluate_generic_framework_claim_guard(
+    evidence: TowerEvidence | dict[str, Any],
+    *,
+    tower_claimable_by_math: bool,
+) -> dict[str, Any]:
+    """Gate a tower row before a generic framework exclusion claim.
+
+    This is stricter than the positive-control promotion guard. A row can pass
+    promotion while still failing here because the endpoint or displacement is
+    not owned by the framework under test.
+    """
+    promotion_guard = evaluate_tower_promotion_guard(
+        evidence,
+        tower_claimable_by_math=tower_claimable_by_math,
+    )
+    source_scope = promotion_guard["source_scope"]
+    blockers = set(promotion_guard["blockers"])
+    blockers.update(source_scope["scope_blockers"])
+
+    return {
+        "ready_for_generic_framework_claim": (
+            promotion_guard["ready_for_promotion"]
+            and source_scope["generic_framework_claim_ready"]
+        ),
+        "tower_claimable_by_math": bool(tower_claimable_by_math),
+        "evidence_ready": promotion_guard["evidence_ready"],
+        "source_scope": source_scope,
+        "promotion_guard": promotion_guard,
+        "positive_control_matches": promotion_guard["positive_control_matches"],
+        "blockers": sorted(blockers),
     }
 
 

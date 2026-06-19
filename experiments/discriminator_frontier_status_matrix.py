@@ -1,8 +1,7 @@
-"""Discriminator frontier status matrix (v2.42).
+"""Discriminator frontier status matrix.
 
-v2.41 added the positive-control promotion guard. This audit locks the pure
-frontier status classifier so the guard-blocked path is explicit and separate
-from claim-ready synthetic fixtures.
+This audit locks the pure frontier status classifier so the guard-blocked paths
+are explicit and separate from claim-ready synthetic fixtures.
 """
 
 from __future__ import annotations
@@ -26,6 +25,7 @@ SCENARIOS = (
         "evidence_ready_for_framework_claim": True,
         "tower_claimable_by_math": True,
         "promotion_ready": True,
+        "generic_claim_ready": True,
     },
     {
         "label": "scope_limited_fixture",
@@ -35,6 +35,7 @@ SCENARIOS = (
         "evidence_ready_for_framework_claim": True,
         "tower_claimable_by_math": True,
         "promotion_ready": True,
+        "generic_claim_ready": True,
     },
     {
         "label": "missing_spectrum_fixture",
@@ -44,6 +45,7 @@ SCENARIOS = (
         "evidence_ready_for_framework_claim": False,
         "tower_claimable_by_math": False,
         "promotion_ready": False,
+        "generic_claim_ready": False,
     },
     {
         "label": "missing_evidence_fixture",
@@ -53,6 +55,7 @@ SCENARIOS = (
         "evidence_ready_for_framework_claim": False,
         "tower_claimable_by_math": True,
         "promotion_ready": False,
+        "generic_claim_ready": False,
     },
     {
         "label": "non_excluding_evidence_fixture",
@@ -62,6 +65,7 @@ SCENARIOS = (
         "evidence_ready_for_framework_claim": True,
         "tower_claimable_by_math": False,
         "promotion_ready": False,
+        "generic_claim_ready": False,
     },
     {
         "label": "promotion_guard_blocked_fixture",
@@ -71,6 +75,17 @@ SCENARIOS = (
         "evidence_ready_for_framework_claim": True,
         "tower_claimable_by_math": True,
         "promotion_ready": False,
+        "generic_claim_ready": False,
+    },
+    {
+        "label": "generic_claim_guard_blocked_fixture",
+        "reference_feasible": True,
+        "engine_in_scope": True,
+        "native_tower_spectrum_present": True,
+        "evidence_ready_for_framework_claim": True,
+        "tower_claimable_by_math": True,
+        "promotion_ready": True,
+        "generic_claim_ready": False,
     },
     {
         "label": "claim_ready_fixture",
@@ -80,6 +95,7 @@ SCENARIOS = (
         "evidence_ready_for_framework_claim": True,
         "tower_claimable_by_math": True,
         "promotion_ready": True,
+        "generic_claim_ready": True,
     },
 )
 
@@ -96,6 +112,7 @@ def diagnose_discriminator_frontier_status_matrix() -> dict:
             ),
             tower_claimable_by_math=scenario["tower_claimable_by_math"],
             promotion_ready=scenario["promotion_ready"],
+            generic_claim_ready=scenario["generic_claim_ready"],
         )
         rows.append({**scenario, **status, "claimable_now": False})
 
@@ -104,7 +121,12 @@ def diagnose_discriminator_frontier_status_matrix() -> dict:
         for status in sorted({row["frontier_status"] for row in rows})
     }
     return {
-        "basis": ["frontier_status_classifier", "promotion_guard", "branch_matrix"],
+        "basis": [
+            "frontier_status_classifier",
+            "promotion_guard",
+            "generic_framework_claim_guard",
+            "branch_matrix",
+        ],
         "scenario_count": len(rows),
         "status_counts": status_counts,
         "tower_discriminator_claim_ready_fixtures": [
@@ -114,6 +136,10 @@ def diagnose_discriminator_frontier_status_matrix() -> dict:
         "promotion_guard_blocked_fixtures": [
             row["label"] for row in rows
             if row["frontier_status"] == "tower_promotion_guard_blocked"
+        ],
+        "generic_claim_guard_blocked_fixtures": [
+            row["label"] for row in rows
+            if row["frontier_status"] == "tower_generic_claim_guard_blocked"
         ],
         "claimable_framework_exclusions_now": [],
         "scenarios": rows,
@@ -125,9 +151,9 @@ def diagnose_discriminator_frontier_status_matrix() -> dict:
             "primary_sources": [],
         },
         "interpretation": (
-            "The frontier has a distinct promotion-guard-blocked state between "
-            "math exclusion and claim readiness. A row must clear that state "
-            "before adversarial-review eligibility."
+            "The frontier has distinct promotion-guard and generic-claim-guard "
+            "blocked states between math exclusion and claim readiness. A row "
+            "must clear both before adversarial-review eligibility."
         ),
     }
 
@@ -136,7 +162,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--out",
-        default="experiments/results/v2.42/discriminator_frontier_status_matrix.json",
+        default="experiments/results/v2.45/discriminator_frontier_status_matrix.json",
     )
     args = parser.parse_args()
 

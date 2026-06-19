@@ -1,0 +1,173 @@
+{
+  "basis": [
+    "TowerEvidence",
+    "promotion_guard",
+    "source_scope_classifier",
+    "generic_framework_claim_guard"
+  ],
+  "candidate_count": 9,
+  "promotion_guard_ready_candidates": [
+    "non_positive_control_excluding_fixture"
+  ],
+  "generic_claim_guard_ready_candidates": [],
+  "generic_guard_blocked_after_promotion": [
+    "non_positive_control_excluding_fixture"
+  ],
+  "frontier_status_counts": {
+    "tower_evidence_present_but_not_excluding": 1,
+    "tower_generic_claim_guard_blocked": 1,
+    "tower_promotion_guard_blocked": 7
+  },
+  "top_generic_claim_blockers": {
+    "finite_range_not_asymptotic": 1,
+    "known_qg_positive_control_family": 7,
+    "missing_asymptotic_range_scope": 1,
+    "missing_framework_owned_displacement": 9,
+    "missing_framework_owned_endpoint": 9,
+    "single_compactification_not_generic_framework": 1,
+    "tower_math_not_excluding": 1
+  },
+  "claimable_framework_exclusions_now": [],
+  "candidates": [
+    {
+      "label": "blumenhagen_large_volume_delta1_benchmark",
+      "promotion_guard_ready": false,
+      "generic_claim_guard_ready": false,
+      "generic_claim_guard_blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint"
+      ],
+      "frontier_status": "tower_promotion_guard_blocked",
+      "claimable_now": false
+    },
+    {
+      "label": "d4_p1_kk_vector",
+      "promotion_guard_ready": false,
+      "generic_claim_guard_ready": false,
+      "generic_claim_guard_blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint"
+      ],
+      "frontier_status": "tower_promotion_guard_blocked",
+      "claimable_now": false
+    },
+    {
+      "label": "d4_p2_kk_vector",
+      "promotion_guard_ready": false,
+      "generic_claim_guard_ready": false,
+      "generic_claim_guard_blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint"
+      ],
+      "frontier_status": "tower_promotion_guard_blocked",
+      "claimable_now": false
+    },
+    {
+      "label": "d4_p3_kk_vector",
+      "promotion_guard_ready": false,
+      "generic_claim_guard_ready": false,
+      "generic_claim_guard_blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint"
+      ],
+      "frontier_status": "tower_promotion_guard_blocked",
+      "claimable_now": false
+    },
+    {
+      "label": "d4_p4_kk_vector",
+      "promotion_guard_ready": false,
+      "generic_claim_guard_ready": false,
+      "generic_claim_guard_blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint"
+      ],
+      "frontier_status": "tower_promotion_guard_blocked",
+      "claimable_now": false
+    },
+    {
+      "label": "d4_p5_kk_vector",
+      "promotion_guard_ready": false,
+      "generic_claim_guard_ready": false,
+      "generic_claim_guard_blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint"
+      ],
+      "frontier_status": "tower_promotion_guard_blocked",
+      "claimable_now": false
+    },
+    {
+      "label": "d4_p6_kk_vector",
+      "promotion_guard_ready": false,
+      "generic_claim_guard_ready": false,
+      "generic_claim_guard_blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint"
+      ],
+      "frontier_status": "tower_promotion_guard_blocked",
+      "claimable_now": false
+    },
+    {
+      "label": "non_positive_control_excluding_fixture",
+      "promotion_guard_ready": true,
+      "generic_claim_guard_ready": false,
+      "generic_claim_guard_blockers": [
+        "missing_asymptotic_range_scope",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint"
+      ],
+      "frontier_status": "tower_generic_claim_guard_blocked",
+      "claimable_now": false
+    },
+    {
+      "label": "ashmore_ruehle_quintic_kk",
+      "promotion_guard_ready": false,
+      "generic_claim_guard_ready": false,
+      "generic_claim_guard_blockers": [
+        "finite_range_not_asymptotic",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+        "single_compactification_not_generic_framework",
+        "tower_math_not_excluding"
+      ],
+      "frontier_status": "tower_evidence_present_but_not_excluding",
+      "claimable_now": false
+    }
+  ],
+  "synthetic_owned_scope_fixture": {
+    "label": "synthetic_owned_asymptotic_kk_fixture",
+    "generic_claim_guard_ready": true,
+    "generic_claim_guard_blockers": [],
+    "frontier_status": "tower_discriminator_claim_ready",
+    "claimable_now": false,
+    "synthetic_fixture": true
+  },
+  "literature_guardrail": {
+    "claim": "This is a guard-policy audit. The synthetic owned-scope fixture proves the pass branch but is not evidence for a framework-level quantum-gravity exclusion.",
+    "primary_sources": [
+      {
+        "title": "Corvilain, Grimm, and Valenzuela, The Swampland Distance Conjecture for Kahler moduli",
+        "url": "https://arxiv.org/abs/1812.07548"
+      },
+      {
+        "title": "Ashmore and Ruehle, Moduli-dependent KK towers and the swampland distance conjecture on the quintic Calabi-Yau manifold",
+        "url": "https://arxiv.org/abs/2103.07472"
+      },
+      {
+        "title": "Blumenhagen, Klaewer, Schlechter, and Wolf, The Refined Swampland Distance Conjecture in Calabi-Yau Moduli Spaces",
+        "url": "https://arxiv.org/abs/1803.04989"
+      },
+      {
+        "title": "Aoufia, Castellano, and Ibanez, Laplacians in Various Dimensions and the Swampland",
+        "url": "https://arxiv.org/abs/2506.03253"
+      }
+    ]
+  },
+  "interpretation": "Promotion readiness is no longer sufficient for generic framework claim readiness. Current candidates still have no claimable framework exclusion; the next frontier-moving artifact must supply non-synthetic framework-owned endpoint and displacement metadata."
+}

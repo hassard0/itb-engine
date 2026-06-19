@@ -1,0 +1,140 @@
+{
+  "basis": [
+    "frontier_status_classifier",
+    "promotion_guard",
+    "generic_framework_claim_guard",
+    "branch_matrix"
+  ],
+  "scenario_count": 8,
+  "status_counts": {
+    "missing_native_tower_spectrum": 1,
+    "missing_or_rejected_tower_evidence": 1,
+    "reference_excluded_before_tower": 1,
+    "scope_limited_reference_survivor": 1,
+    "tower_discriminator_claim_ready": 1,
+    "tower_evidence_present_but_not_excluding": 1,
+    "tower_generic_claim_guard_blocked": 1,
+    "tower_promotion_guard_blocked": 1
+  },
+  "tower_discriminator_claim_ready_fixtures": [
+    "claim_ready_fixture"
+  ],
+  "promotion_guard_blocked_fixtures": [
+    "promotion_guard_blocked_fixture"
+  ],
+  "generic_claim_guard_blocked_fixtures": [
+    "generic_claim_guard_blocked_fixture"
+  ],
+  "claimable_framework_exclusions_now": [],
+  "scenarios": [
+    {
+      "label": "reference_excluded_fixture",
+      "reference_feasible": false,
+      "engine_in_scope": true,
+      "native_tower_spectrum_present": true,
+      "evidence_ready_for_framework_claim": true,
+      "tower_claimable_by_math": true,
+      "promotion_ready": true,
+      "generic_claim_ready": true,
+      "frontier_status": "reference_excluded_before_tower",
+      "next_required_artifact": "Adversarial review of the reference-stack exclusion.",
+      "claimable_now": false
+    },
+    {
+      "label": "scope_limited_fixture",
+      "reference_feasible": true,
+      "engine_in_scope": false,
+      "native_tower_spectrum_present": true,
+      "evidence_ready_for_framework_claim": true,
+      "tower_claimable_by_math": true,
+      "promotion_ready": true,
+      "generic_claim_ready": true,
+      "frontier_status": "scope_limited_reference_survivor",
+      "next_required_artifact": "Resolve engine scope assumptions before treating verdict as physical.",
+      "claimable_now": false
+    },
+    {
+      "label": "missing_spectrum_fixture",
+      "reference_feasible": true,
+      "engine_in_scope": true,
+      "native_tower_spectrum_present": false,
+      "evidence_ready_for_framework_claim": false,
+      "tower_claimable_by_math": false,
+      "promotion_ready": false,
+      "generic_claim_ready": false,
+      "frontier_status": "missing_native_tower_spectrum",
+      "next_required_artifact": "Implement a sourced TowerSpectrum or TowerEvidence adapter.",
+      "claimable_now": false
+    },
+    {
+      "label": "missing_evidence_fixture",
+      "reference_feasible": true,
+      "engine_in_scope": true,
+      "native_tower_spectrum_present": true,
+      "evidence_ready_for_framework_claim": false,
+      "tower_claimable_by_math": true,
+      "promotion_ready": false,
+      "generic_claim_ready": false,
+      "frontier_status": "missing_or_rejected_tower_evidence",
+      "next_required_artifact": "Supply TowerEvidence with source, derivation, normalization, and uncertainty.",
+      "claimable_now": false
+    },
+    {
+      "label": "non_excluding_evidence_fixture",
+      "reference_feasible": true,
+      "engine_in_scope": true,
+      "native_tower_spectrum_present": true,
+      "evidence_ready_for_framework_claim": true,
+      "tower_claimable_by_math": false,
+      "promotion_ready": false,
+      "generic_claim_ready": false,
+      "frontier_status": "tower_evidence_present_but_not_excluding",
+      "next_required_artifact": "Improve tower precision or accept non-excluding tower evidence.",
+      "claimable_now": false
+    },
+    {
+      "label": "promotion_guard_blocked_fixture",
+      "reference_feasible": true,
+      "engine_in_scope": true,
+      "native_tower_spectrum_present": true,
+      "evidence_ready_for_framework_claim": true,
+      "tower_claimable_by_math": true,
+      "promotion_ready": false,
+      "generic_claim_ready": false,
+      "frontier_status": "tower_promotion_guard_blocked",
+      "next_required_artifact": "Resolve tower promotion guard blockers before adversarial-review claim.",
+      "claimable_now": false
+    },
+    {
+      "label": "generic_claim_guard_blocked_fixture",
+      "reference_feasible": true,
+      "engine_in_scope": true,
+      "native_tower_spectrum_present": true,
+      "evidence_ready_for_framework_claim": true,
+      "tower_claimable_by_math": true,
+      "promotion_ready": true,
+      "generic_claim_ready": false,
+      "frontier_status": "tower_generic_claim_guard_blocked",
+      "next_required_artifact": "Supply framework-owned endpoint and displacement scope before adversarial-review claim.",
+      "claimable_now": false
+    },
+    {
+      "label": "claim_ready_fixture",
+      "reference_feasible": true,
+      "engine_in_scope": true,
+      "native_tower_spectrum_present": true,
+      "evidence_ready_for_framework_claim": true,
+      "tower_claimable_by_math": true,
+      "promotion_ready": true,
+      "generic_claim_ready": true,
+      "frontier_status": "tower_discriminator_claim_ready",
+      "next_required_artifact": "Run adversarial review before solution claim.",
+      "claimable_now": false
+    }
+  ],
+  "literature_guardrail": {
+    "claim": "This is a synthetic branch matrix. It proves classifier behavior, not a framework-level quantum-gravity claim.",
+    "primary_sources": []
+  },
+  "interpretation": "The frontier has distinct promotion-guard and generic-claim-guard blocked states between math exclusion and claim readiness. A row must clear both before adversarial-review eligibility."
+}

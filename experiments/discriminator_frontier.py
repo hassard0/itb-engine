@@ -20,7 +20,11 @@ from experiments.tower_framework_scenarios import _framework_reference_verdicts
 from experiments.tower_spectrum_readiness import diagnose_tower_spectrum_readiness
 from itb.predict import FRAMEWORKS
 from itb.scope import engine_validity
-from itb.tower import evaluate_tower_promotion_guard, validate_tower_evidence
+from itb.tower import (
+    evaluate_generic_framework_claim_guard,
+    evaluate_tower_promotion_guard,
+    validate_tower_evidence,
+)
 
 
 def _to_dict(value: Any) -> dict | None:
@@ -54,6 +58,7 @@ def classify_discriminator_frontier_status(
     evidence_ready_for_framework_claim: bool,
     tower_claimable_by_math: bool,
     promotion_ready: bool,
+    generic_claim_ready: bool,
 ) -> dict[str, str]:
     if not reference_feasible:
         return {
@@ -93,6 +98,14 @@ def classify_discriminator_frontier_status(
             "frontier_status": "tower_promotion_guard_blocked",
             "next_required_artifact": (
                 "Resolve tower promotion guard blockers before adversarial-review claim."
+            ),
+        }
+    if not generic_claim_ready:
+        return {
+            "frontier_status": "tower_generic_claim_guard_blocked",
+            "next_required_artifact": (
+                "Supply framework-owned endpoint and displacement scope before "
+                "adversarial-review claim."
             ),
         }
     return {
@@ -136,6 +149,22 @@ def _framework_row(
             "blockers": ["missing_native_tower_evidence"],
         }
     )
+    generic_claim_guard = (
+        evaluate_generic_framework_claim_guard(
+            evidence,
+            tower_claimable_by_math=tower_row["claimable_exclusion"],
+        )
+        if evidence is not None
+        else {
+            "ready_for_generic_framework_claim": False,
+            "tower_claimable_by_math": tower_row["claimable_exclusion"],
+            "evidence_ready": False,
+            "source_scope": None,
+            "promotion_guard": promotion_guard,
+            "positive_control_matches": [],
+            "blockers": ["missing_native_tower_evidence"],
+        }
+    )
     ref_ok = bool(reference[name]["reference_feasible"])
     status = classify_discriminator_frontier_status(
         reference_feasible=ref_ok,
@@ -146,6 +175,7 @@ def _framework_row(
         ),
         tower_claimable_by_math=tower_row["claimable_exclusion"],
         promotion_ready=promotion_guard["ready_for_promotion"],
+        generic_claim_ready=generic_claim_guard["ready_for_generic_framework_claim"],
     )
 
     return {
@@ -161,6 +191,7 @@ def _framework_row(
         "native_tower_evidence_present": evidence is not None,
         "tower_evidence_validation": evidence_validation,
         "tower_promotion_guard": promotion_guard,
+        "tower_generic_claim_guard": generic_claim_guard,
         "tower_readiness_verdict": tower_row["framework_tower_verdict"],
         "tower_claimable_by_math": tower_row["claimable_exclusion"],
         **status,
@@ -187,7 +218,13 @@ def diagnose_discriminator_frontier() -> dict:
         name for name, row in rows.items() if row["reference_feasible"]
     ]
     return {
-        "basis": ["framework", "reference_stack", "TowerSpectrum", "TowerEvidence"],
+        "basis": [
+            "framework",
+            "reference_stack",
+            "TowerSpectrum",
+            "TowerEvidence",
+            "generic_framework_claim_guard",
+        ],
         "registered_framework_count": len(rows),
         "reference_feasible_frameworks": reference_feasible,
         "reference_excluded_frameworks": [
