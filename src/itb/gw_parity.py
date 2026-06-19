@@ -1337,6 +1337,107 @@ def load_ng_restricted_global_kappa_likelihood_from_feather(
     )
 
 
+def build_ng_ppv_beta10_candidate_packet(
+    restricted_likelihood: dict[str, Any],
+) -> dict[str, Any]:
+    """Wrap a reproduced Ng kappa likelihood as a non-promoting PPV candidate."""
+    projection_blockers = list(GW_PARITY_PROJECTION_BLOCKERS)
+    required_fields = (
+        "schema",
+        "ready",
+        "restricted_kappa_5",
+        "restricted_kappa_median",
+        "restricted_kappa_95",
+        "restricted_kappa_plus_90",
+        "restricted_kappa_minus_90",
+    )
+    missing_fields = [
+        field
+        for field in required_fields
+        if field not in restricted_likelihood
+    ]
+    blockers = []
+    if missing_fields:
+        blockers.append("missing_restricted_likelihood_fields")
+    if restricted_likelihood.get("schema") != "ng_restricted_global_kappa_likelihood_v1":
+        blockers.append("restricted_likelihood_schema_mismatch")
+    if restricted_likelihood.get("ready") is not True:
+        blockers.append("restricted_likelihood_not_ready")
+
+    if blockers:
+        parser_blockers = sorted(set(blockers))
+        return {
+            "schema": "ng_ppv_beta10_candidate_packet_v1",
+            "candidate_ready": False,
+            "parser_ready": False,
+            "parser_blockers": parser_blockers,
+            "missing_fields": missing_fields,
+            "projection_blockers": projection_blockers,
+            "blockers": sorted(set(parser_blockers + projection_blockers)),
+            "engine_projection_ready": False,
+            "claimable_discriminator_now": False,
+        }
+
+    source_to_ppv_blockers = [
+        "engine_canonical_helicity_sign_missing",
+        "source_declared_beta10_not_engine_axis",
+        "dimensionless_ppv_beta10_normalization_missing",
+        *projection_blockers,
+    ]
+    return {
+        "schema": "ng_ppv_beta10_candidate_packet_v1",
+        "candidate_ready": True,
+        "parser_ready": True,
+        "parser_blockers": [],
+        "source_parameter": "ng_kappa_Gpc_inv_at_100Hz",
+        "target_ppv_parameter": "beta_1_0_amplitude_branch",
+        "source_declared_mapping_ready": True,
+        "source_native_likelihood_ready": True,
+        "ppv_beta10_candidate_likelihood_ready": True,
+        "canonical_engine_beta10_ready": False,
+        "frequency_reference_hz": 100.0,
+        "distance_factor": "D_C_Gpc",
+        "candidate_formula": (
+            "delta_phi_A = kappa_Gpc_inv * D_C_Gpc * (f_hz / 100)"
+        ),
+        "candidate_coefficient_units": "Gpc^-1",
+        "candidate_coefficient_basis": (
+            "source_native_attenuation_coefficient_not_dimensionless_engine_beta"
+        ),
+        "source_native_constraint": {
+            "kappa_Gpc_inv_5": restricted_likelihood["restricted_kappa_5"],
+            "kappa_Gpc_inv_median": (
+                restricted_likelihood["restricted_kappa_median"]
+            ),
+            "kappa_Gpc_inv_95": restricted_likelihood["restricted_kappa_95"],
+            "kappa_Gpc_inv_plus_90": (
+                restricted_likelihood["restricted_kappa_plus_90"]
+            ),
+            "kappa_Gpc_inv_minus_90": (
+                restricted_likelihood["restricted_kappa_minus_90"]
+            ),
+        },
+        "sign_conventions": {
+            "ng": "positive_kappa_enhances_left_handed_polarization",
+            "jenks_ppv": "lambda_R_plus_1_lambda_L_minus_1",
+            "candidate_sign_status": "source_declared_noncanonical",
+            "engine_canonical_sign": None,
+        },
+        "readiness": {
+            "source_declared_ppv_mapping_ready": True,
+            "source_native_likelihood_ready": True,
+            "helicity_harmonization_ready": False,
+            "dimensionless_ppv_normalization_ready": False,
+            "engine_projection_ready": False,
+            "claim_ready": False,
+        },
+        "projection_blockers": projection_blockers,
+        "blockers": sorted(set(source_to_ppv_blockers)),
+        "engine_projection_ready": False,
+        "claimable_discriminator_now": False,
+    }
+
+
 def validate_gw_parity_native_packet(
     packet: GWParityNativePacket | dict[str, Any],
 ) -> dict[str, Any]:
