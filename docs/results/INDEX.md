@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (172 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (173 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -221,3 +221,4 @@ Auto-generated front door to the full research program (172 notes). Regenerate w
 | v2.59 | [v2.59 - Parity route split: CMB beta retired as a direct gravity-parity discriminator](2026-06-19-v2.59-parity-route-split-frontier.md) | v2.59 splits the overloaded birefringence route and moves engine gravitational parity priority to GW birefringence, with CMB beta retained only as an EM/axion channel. |
 | v2.60 | [v2.60 - GW parity measurement packet search: constraints exist, no engine packet yet](2026-06-19-v2.60-gw-parity-measurement-packet-search.md) | v2.60 screens existing GW parity and birefringence sources; constraints exist, but no source-backed engine-normalized likelihood is claim-ready. |
 | v2.61 | [v2.61 - GW parity adapter readiness: public likelihood material is not an engine map](2026-06-19-v2.61-gw-parity-adapter-readiness.md) | v2.61 separates source-side public likelihood material from engine-axis promotion; two public seeds exist, but no adapter is claim-ready. |
+| v2.62 | [v2.62 - GW parity native packet registry: source-ready, non-promoting](2026-06-19-v2.62-gw-parity-native-packet-registry.md) | v2.62 adds a native GW parity packet schema and registers Ng/Callister as source-ready packets with engine projection still blocked. |
