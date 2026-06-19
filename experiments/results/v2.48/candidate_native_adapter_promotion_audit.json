@@ -1,0 +1,348 @@
+{
+  "basis": [
+    "non_synthetic_tower_candidates",
+    "native_adapter_contract",
+    "generic_framework_claim_guard"
+  ],
+  "candidate_count": 8,
+  "tower_math_excluding_candidates": [
+    "blumenhagen_large_volume_delta1_benchmark",
+    "d4_p1_kk_vector",
+    "d4_p2_kk_vector",
+    "d4_p3_kk_vector",
+    "d4_p4_kk_vector",
+    "d4_p5_kk_vector",
+    "d4_p6_kk_vector"
+  ],
+  "generic_claim_guard_ready_candidates": [],
+  "promotable_native_adapter_candidates": [],
+  "positive_control_candidates": [
+    "blumenhagen_large_volume_delta1_benchmark",
+    "d4_p1_kk_vector",
+    "d4_p2_kk_vector",
+    "d4_p3_kk_vector",
+    "d4_p4_kk_vector",
+    "d4_p5_kk_vector",
+    "d4_p6_kk_vector"
+  ],
+  "finite_range_candidates": [
+    "ashmore_ruehle_quintic_kk"
+  ],
+  "promotion_blocker_counts": {
+    "finite_range_not_asymptotic": 1,
+    "known_qg_positive_control_family": 7,
+    "missing_framework_owned_displacement": 8,
+    "missing_framework_owned_endpoint": 8,
+    "not_exposed_by_registered_framework_adapter": 8,
+    "single_compactification_not_generic_framework": 1,
+    "tower_math_not_excluding": 1
+  },
+  "claimable_framework_exclusions_now": [],
+  "candidates": [
+    {
+      "label": "blumenhagen_large_volume_delta1_benchmark",
+      "framework": "string_tree_eft",
+      "source_type": "primary_literature",
+      "source_url": "https://arxiv.org/abs/1803.04989",
+      "tower_claimable_by_math": true,
+      "evidence_ready": true,
+      "native_adapter_present": false,
+      "source_scope": {
+        "compactification_scope": "decompactification_or_large_volume_benchmark",
+        "tower_scope": "kk_or_decompactification_tower",
+        "range_scope": "asymptotic",
+        "endpoint_owned_by_framework": false,
+        "displacement_owned_by_framework": false,
+        "positive_control_matches": [
+          "large_volume_calabi_yau_sdc",
+          "large_volume_calabi_yau_sdc_lambda_table3",
+          "one_planck_large_volume_displacement"
+        ],
+        "generic_framework_claim_ready": false,
+        "scope_blockers": [
+          "known_qg_positive_control_family",
+          "missing_framework_owned_displacement",
+          "missing_framework_owned_endpoint"
+        ]
+      },
+      "generic_claim_guard_ready": false,
+      "promotable_to_native_adapter_now": false,
+      "promotion_blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+        "not_exposed_by_registered_framework_adapter"
+      ],
+      "claimable_now": false
+    },
+    {
+      "label": "d4_p1_kk_vector",
+      "framework": "string_tree_eft",
+      "source_type": "primary_literature",
+      "source_url": "https://arxiv.org/abs/2506.03253",
+      "tower_claimable_by_math": true,
+      "evidence_ready": true,
+      "native_adapter_present": false,
+      "source_scope": {
+        "compactification_scope": "decompactification_or_large_volume_benchmark",
+        "tower_scope": "kk_or_decompactification_tower",
+        "range_scope": "asymptotic",
+        "endpoint_owned_by_framework": false,
+        "displacement_owned_by_framework": false,
+        "positive_control_matches": [
+          "analytic_kk_decompactification_vector",
+          "kk_decompactification",
+          "known_qg_positive_control"
+        ],
+        "generic_framework_claim_ready": false,
+        "scope_blockers": [
+          "known_qg_positive_control_family",
+          "missing_framework_owned_displacement",
+          "missing_framework_owned_endpoint"
+        ]
+      },
+      "generic_claim_guard_ready": false,
+      "promotable_to_native_adapter_now": false,
+      "promotion_blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+        "not_exposed_by_registered_framework_adapter"
+      ],
+      "claimable_now": false
+    },
+    {
+      "label": "d4_p2_kk_vector",
+      "framework": "string_tree_eft",
+      "source_type": "primary_literature",
+      "source_url": "https://arxiv.org/abs/2506.03253",
+      "tower_claimable_by_math": true,
+      "evidence_ready": true,
+      "native_adapter_present": false,
+      "source_scope": {
+        "compactification_scope": "decompactification_or_large_volume_benchmark",
+        "tower_scope": "kk_or_decompactification_tower",
+        "range_scope": "asymptotic",
+        "endpoint_owned_by_framework": false,
+        "displacement_owned_by_framework": false,
+        "positive_control_matches": [
+          "analytic_kk_decompactification_vector",
+          "kk_decompactification",
+          "known_qg_positive_control"
+        ],
+        "generic_framework_claim_ready": false,
+        "scope_blockers": [
+          "known_qg_positive_control_family",
+          "missing_framework_owned_displacement",
+          "missing_framework_owned_endpoint"
+        ]
+      },
+      "generic_claim_guard_ready": false,
+      "promotable_to_native_adapter_now": false,
+      "promotion_blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+        "not_exposed_by_registered_framework_adapter"
+      ],
+      "claimable_now": false
+    },
+    {
+      "label": "d4_p3_kk_vector",
+      "framework": "string_tree_eft",
+      "source_type": "primary_literature",
+      "source_url": "https://arxiv.org/abs/2506.03253",
+      "tower_claimable_by_math": true,
+      "evidence_ready": true,
+      "native_adapter_present": false,
+      "source_scope": {
+        "compactification_scope": "decompactification_or_large_volume_benchmark",
+        "tower_scope": "kk_or_decompactification_tower",
+        "range_scope": "asymptotic",
+        "endpoint_owned_by_framework": false,
+        "displacement_owned_by_framework": false,
+        "positive_control_matches": [
+          "analytic_kk_decompactification_vector",
+          "kk_decompactification",
+          "known_qg_positive_control"
+        ],
+        "generic_framework_claim_ready": false,
+        "scope_blockers": [
+          "known_qg_positive_control_family",
+          "missing_framework_owned_displacement",
+          "missing_framework_owned_endpoint"
+        ]
+      },
+      "generic_claim_guard_ready": false,
+      "promotable_to_native_adapter_now": false,
+      "promotion_blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+        "not_exposed_by_registered_framework_adapter"
+      ],
+      "claimable_now": false
+    },
+    {
+      "label": "d4_p4_kk_vector",
+      "framework": "string_tree_eft",
+      "source_type": "primary_literature",
+      "source_url": "https://arxiv.org/abs/2506.03253",
+      "tower_claimable_by_math": true,
+      "evidence_ready": true,
+      "native_adapter_present": false,
+      "source_scope": {
+        "compactification_scope": "decompactification_or_large_volume_benchmark",
+        "tower_scope": "kk_or_decompactification_tower",
+        "range_scope": "asymptotic",
+        "endpoint_owned_by_framework": false,
+        "displacement_owned_by_framework": false,
+        "positive_control_matches": [
+          "analytic_kk_decompactification_vector",
+          "kk_decompactification",
+          "known_qg_positive_control"
+        ],
+        "generic_framework_claim_ready": false,
+        "scope_blockers": [
+          "known_qg_positive_control_family",
+          "missing_framework_owned_displacement",
+          "missing_framework_owned_endpoint"
+        ]
+      },
+      "generic_claim_guard_ready": false,
+      "promotable_to_native_adapter_now": false,
+      "promotion_blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+        "not_exposed_by_registered_framework_adapter"
+      ],
+      "claimable_now": false
+    },
+    {
+      "label": "d4_p5_kk_vector",
+      "framework": "string_tree_eft",
+      "source_type": "primary_literature",
+      "source_url": "https://arxiv.org/abs/2506.03253",
+      "tower_claimable_by_math": true,
+      "evidence_ready": true,
+      "native_adapter_present": false,
+      "source_scope": {
+        "compactification_scope": "decompactification_or_large_volume_benchmark",
+        "tower_scope": "kk_or_decompactification_tower",
+        "range_scope": "asymptotic",
+        "endpoint_owned_by_framework": false,
+        "displacement_owned_by_framework": false,
+        "positive_control_matches": [
+          "analytic_kk_decompactification_vector",
+          "kk_decompactification",
+          "known_qg_positive_control"
+        ],
+        "generic_framework_claim_ready": false,
+        "scope_blockers": [
+          "known_qg_positive_control_family",
+          "missing_framework_owned_displacement",
+          "missing_framework_owned_endpoint"
+        ]
+      },
+      "generic_claim_guard_ready": false,
+      "promotable_to_native_adapter_now": false,
+      "promotion_blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+        "not_exposed_by_registered_framework_adapter"
+      ],
+      "claimable_now": false
+    },
+    {
+      "label": "d4_p6_kk_vector",
+      "framework": "string_tree_eft",
+      "source_type": "primary_literature",
+      "source_url": "https://arxiv.org/abs/2506.03253",
+      "tower_claimable_by_math": true,
+      "evidence_ready": true,
+      "native_adapter_present": false,
+      "source_scope": {
+        "compactification_scope": "decompactification_or_large_volume_benchmark",
+        "tower_scope": "kk_or_decompactification_tower",
+        "range_scope": "asymptotic",
+        "endpoint_owned_by_framework": false,
+        "displacement_owned_by_framework": false,
+        "positive_control_matches": [
+          "analytic_kk_decompactification_vector",
+          "kk_decompactification",
+          "known_qg_positive_control"
+        ],
+        "generic_framework_claim_ready": false,
+        "scope_blockers": [
+          "known_qg_positive_control_family",
+          "missing_framework_owned_displacement",
+          "missing_framework_owned_endpoint"
+        ]
+      },
+      "generic_claim_guard_ready": false,
+      "promotable_to_native_adapter_now": false,
+      "promotion_blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+        "not_exposed_by_registered_framework_adapter"
+      ],
+      "claimable_now": false
+    },
+    {
+      "label": "ashmore_ruehle_quintic_kk",
+      "framework": "string_tree_eft",
+      "source_type": "primary_literature",
+      "source_url": "https://arxiv.org/abs/2103.07472",
+      "tower_claimable_by_math": false,
+      "evidence_ready": true,
+      "native_adapter_present": false,
+      "source_scope": {
+        "compactification_scope": "single_compactification",
+        "tower_scope": "scalar_laplacian_subtower",
+        "range_scope": "finite_range",
+        "endpoint_owned_by_framework": false,
+        "displacement_owned_by_framework": false,
+        "positive_control_matches": [],
+        "generic_framework_claim_ready": false,
+        "scope_blockers": [
+          "finite_range_not_asymptotic",
+          "missing_framework_owned_displacement",
+          "missing_framework_owned_endpoint",
+          "single_compactification_not_generic_framework"
+        ]
+      },
+      "generic_claim_guard_ready": false,
+      "promotable_to_native_adapter_now": false,
+      "promotion_blockers": [
+        "finite_range_not_asymptotic",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+        "not_exposed_by_registered_framework_adapter",
+        "single_compactification_not_generic_framework",
+        "tower_math_not_excluding"
+      ],
+      "claimable_now": false
+    }
+  ],
+  "literature_guardrail": {
+    "claim": "This is a promotion-readiness audit over existing non-synthetic candidate rows. It does not convert external compactification or decompactification evidence into native framework evidence.",
+    "primary_sources": [
+      {
+        "title": "Ashmore and Ruehle, Moduli-dependent KK towers and the swampland distance conjecture on the quintic Calabi-Yau manifold",
+        "url": "https://arxiv.org/abs/2103.07472"
+      },
+      {
+        "title": "Blumenhagen, Klaewer, Schlechter, and Wolf, The Refined Swampland Distance Conjecture in Calabi-Yau Moduli Spaces",
+        "url": "https://arxiv.org/abs/1803.04989"
+      },
+      {
+        "title": "Aoufia, Castellano, and Ibanez, Laplacians in Various Dimensions and the Swampland",
+        "url": "https://arxiv.org/abs/2506.03253"
+      }
+    ]
+  },
+  "interpretation": "Current non-synthetic tower candidates include math-excluding rows, but none can be promoted into a live native adapter today. The common blocker is missing registered-framework adapter ownership, with positive-control and finite-range blockers separating the source families."
+}
