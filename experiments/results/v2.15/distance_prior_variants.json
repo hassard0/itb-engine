@@ -1,0 +1,153 @@
+{
+  "input": "experiments/results/v213/phases_8d_1200.json",
+  "basis": [
+    "g_4",
+    "g_6",
+    "g_8",
+    "g_R2",
+    "g_R3",
+    "g_C",
+    "g_R2_parity",
+    "g_R3_parity"
+  ],
+  "samples_per_segment": 101,
+  "variants": {
+    "default": {
+      "all_lobes_reach_parity_zero": false,
+      "parity_zero_plane_connected": true,
+      "all_connected_by_parity_zero_detour": false,
+      "lobe_to_zero_first_failure_blockers": {
+        "swampland_distance_conjecture": 4
+      },
+      "direct_pair_failures": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "first_failure": {
+            "t": 0.19,
+            "constraint": "swampland_distance_conjecture",
+            "margin": -0.7406305687313726
+          }
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "first_failure": {
+            "t": 0.08,
+            "constraint": "swampland_distance_conjecture",
+            "margin": -0.20628266837229603
+          }
+        },
+        {
+          "pair": [
+            0,
+            3
+          ],
+          "first_failure": {
+            "t": 0.08,
+            "constraint": "swampland_distance_conjecture",
+            "margin": -0.37484942995520143
+          }
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "first_failure": {
+            "t": 0.09,
+            "constraint": "swampland_distance_conjecture",
+            "margin": -0.3554708268467728
+          }
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "first_failure": {
+            "t": 0.08,
+            "constraint": "swampland_distance_conjecture",
+            "margin": -0.04118576902076754
+          }
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "first_failure": {
+            "t": 0.2,
+            "constraint": "t_hooft_anomaly_matching",
+            "margin": -0.0003134018213956716
+          }
+        }
+      ]
+    },
+    "no_distance_prior": {
+      "all_lobes_reach_parity_zero": true,
+      "parity_zero_plane_connected": true,
+      "all_connected_by_parity_zero_detour": true,
+      "lobe_to_zero_first_failure_blockers": {},
+      "direct_pair_failures": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "first_failure": {
+            "t": 0.19,
+            "constraint": "t_hooft_anomaly_matching",
+            "margin": -0.0004419608757207441
+          }
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "first_failure": {
+            "t": 0.2,
+            "constraint": "t_hooft_anomaly_matching",
+            "margin": -0.0003134018213956716
+          }
+        }
+      ]
+    },
+    "parity_optional_distance_prior": {
+      "all_lobes_reach_parity_zero": true,
+      "parity_zero_plane_connected": true,
+      "all_connected_by_parity_zero_detour": true,
+      "lobe_to_zero_first_failure_blockers": {},
+      "direct_pair_failures": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "first_failure": {
+            "t": 0.19,
+            "constraint": "t_hooft_anomaly_matching",
+            "margin": -0.0004419608757207441
+          }
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "first_failure": {
+            "t": 0.2,
+            "constraint": "t_hooft_anomaly_matching",
+            "margin": -0.0003134018213956716
+          }
+        }
+      ]
+    }
+  },
+  "interpretation": "If the default stack splits the lobes but no-distance and parity-optional variants connect them through the parity-zero plane, then the four-lobe topology is controlled by the distance-prior encoding rather than by a robust physical phase boundary."
+}
