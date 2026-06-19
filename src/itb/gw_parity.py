@@ -1114,6 +1114,229 @@ def load_ng_event_level_feather(path: str) -> dict[str, Any]:
     return parse_ng_event_level_feather_table(table, source_file=path)
 
 
+def restricted_global_kappa_likelihood_from_event_samples(
+    events: list[str] | np.ndarray,
+    kappa_samples: list[float] | np.ndarray,
+    *,
+    grid_min: float = -0.1,
+    grid_max: float = 0.1,
+    grid_size: int = 1000,
+    source_file: str | None = None,
+) -> dict[str, Any]:
+    """Reproduce Ng et al. restricted global-kappa KDE product."""
+    event_values = np.asarray(events, dtype=str)
+    kappa_values = np.asarray(kappa_samples, dtype=float)
+    blockers = []
+    projection_blockers = list(GW_PARITY_PROJECTION_BLOCKERS)
+
+    if event_values.ndim != 1 or kappa_values.ndim != 1:
+        blockers.append("samples_not_one_dimensional")
+    elif event_values.shape != kappa_values.shape:
+        blockers.append("event_kappa_shape_mismatch")
+    if kappa_values.size < 2:
+        blockers.append("sample_count_too_small")
+    if np.any(event_values == ""):
+        blockers.append("event_empty")
+    if np.any(~np.isfinite(kappa_values)):
+        blockers.append("kappa_not_finite")
+    if grid_size < 10:
+        blockers.append("grid_size_too_small")
+    if not np.isfinite(grid_min) or not np.isfinite(grid_max):
+        blockers.append("grid_bounds_not_finite")
+    elif grid_min >= grid_max:
+        blockers.append("grid_bounds_not_increasing")
+
+    event_names = np.array([], dtype=str)
+    event_counts = np.array([], dtype=int)
+    if not blockers:
+        event_names, event_counts = np.unique(event_values, return_counts=True)
+        if event_names.size < 2:
+            blockers.append("event_count_too_small")
+        if np.any(event_counts < 2):
+            blockers.append("event_sample_count_too_small")
+
+    if blockers:
+        parser_blockers = sorted(set(blockers))
+        return {
+            "schema": "ng_restricted_global_kappa_likelihood_v1",
+            "source_file": source_file,
+            "ready": False,
+            "parser_ready": False,
+            "parser_blockers": parser_blockers,
+            "projection_blockers": projection_blockers,
+            "blockers": sorted(set(parser_blockers + projection_blockers)),
+            "engine_projection_ready": False,
+            "claimable_discriminator_now": False,
+        }
+
+    try:
+        from scipy.stats import gaussian_kde
+    except ImportError:
+        parser_blockers = ["scipy_not_installed"]
+        return {
+            "schema": "ng_restricted_global_kappa_likelihood_v1",
+            "source_file": source_file,
+            "ready": False,
+            "parser_ready": False,
+            "parser_blockers": parser_blockers,
+            "projection_blockers": projection_blockers,
+            "blockers": sorted(set(parser_blockers + projection_blockers)),
+            "engine_projection_ready": False,
+            "claimable_discriminator_now": False,
+        }
+
+    grid = np.linspace(float(grid_min), float(grid_max), int(grid_size))
+    log_likelihood = np.zeros_like(grid)
+    kde_blockers = []
+    for event in event_names:
+        samples = kappa_values[event_values == event]
+        try:
+            density = gaussian_kde(samples)(grid)
+        except (ValueError, np.linalg.LinAlgError):
+            kde_blockers.append(f"{event}_kde_failed")
+            continue
+        if np.any(~np.isfinite(density)) or np.any(density <= 0.0):
+            kde_blockers.append(f"{event}_kde_density_invalid")
+            continue
+        log_likelihood += np.log(density)
+
+    if kde_blockers:
+        parser_blockers = sorted(set(kde_blockers))
+        return {
+            "schema": "ng_restricted_global_kappa_likelihood_v1",
+            "source_file": source_file,
+            "ready": False,
+            "parser_ready": False,
+            "parser_blockers": parser_blockers,
+            "projection_blockers": projection_blockers,
+            "blockers": sorted(set(parser_blockers + projection_blockers)),
+            "engine_projection_ready": False,
+            "claimable_discriminator_now": False,
+        }
+
+    log_likelihood = log_likelihood - float(np.max(log_likelihood))
+    likelihood = np.exp(log_likelihood)
+    density_norm = float(np.trapezoid(likelihood, x=grid))
+    if density_norm <= 0.0 or not np.isfinite(density_norm):
+        parser_blockers = ["restricted_likelihood_norm_invalid"]
+        return {
+            "schema": "ng_restricted_global_kappa_likelihood_v1",
+            "source_file": source_file,
+            "ready": False,
+            "parser_ready": False,
+            "parser_blockers": parser_blockers,
+            "projection_blockers": projection_blockers,
+            "blockers": sorted(set(parser_blockers + projection_blockers)),
+            "engine_projection_ready": False,
+            "claimable_discriminator_now": False,
+        }
+    likelihood = likelihood / density_norm
+
+    restricted_cdf = np.array(
+        [
+            np.trapezoid(likelihood[0:index], x=grid[0:index])
+            for index in range(len(grid))
+        ]
+    )
+    kappa_5 = float(np.interp(0.05, restricted_cdf, grid))
+    kappa_50 = float(np.interp(0.50, restricted_cdf, grid))
+    kappa_95 = float(np.interp(0.95, restricted_cdf, grid))
+    zero_density = float(np.interp(0.0, grid, likelihood))
+    credible_level_at_zero = float(np.mean(likelihood > zero_density))
+
+    midpoint = len(grid) // 2
+    absolute_grid = grid[midpoint:]
+    absolute_likelihood = likelihood[midpoint:].copy()
+    if len(grid) % 2 == 0:
+        absolute_likelihood = absolute_likelihood + likelihood[:midpoint][::-1]
+    else:
+        absolute_likelihood[1:] = (
+            absolute_likelihood[1:] + likelihood[:midpoint][::-1]
+        )
+    absolute_cdf = np.array(
+        [
+            np.trapezoid(absolute_likelihood[0:index], x=absolute_grid[0:index])
+            for index in range(len(absolute_grid))
+        ]
+    )
+    absolute_kappa_68 = float(np.interp(0.68, absolute_cdf, absolute_grid))
+    absolute_kappa_90 = float(np.interp(0.90, absolute_cdf, absolute_grid))
+
+    return {
+        "schema": "ng_restricted_global_kappa_likelihood_v1",
+        "source_file": source_file,
+        "ready": True,
+        "parser_ready": True,
+        "parser_blockers": [],
+        "projection_blockers": projection_blockers,
+        "blockers": projection_blockers,
+        "engine_projection_ready": False,
+        "claimable_discriminator_now": False,
+        "sample_count": int(kappa_values.size),
+        "event_count": int(event_names.size),
+        "event_sample_count_min": int(np.min(event_counts)),
+        "event_sample_count_max": int(np.max(event_counts)),
+        "event_counts_preview": [
+            {"event": str(event), "sample_count": int(count)}
+            for event, count in zip(event_names[:5], event_counts[:5], strict=True)
+        ],
+        "grid_min": float(grid[0]),
+        "grid_max": float(grid[-1]),
+        "grid_size": int(grid.size),
+        "density_norm": float(np.trapezoid(likelihood, x=grid)),
+        "maximum_likelihood_kappa": float(grid[int(np.argmax(likelihood))]),
+        "restricted_kappa_5": kappa_5,
+        "restricted_kappa_median": kappa_50,
+        "restricted_kappa_95": kappa_95,
+        "restricted_kappa_plus_90": float(kappa_95 - kappa_50),
+        "restricted_kappa_minus_90": float(kappa_50 - kappa_5),
+        "credible_level_at_zero": credible_level_at_zero,
+        "absolute_kappa_68": absolute_kappa_68,
+        "absolute_kappa_90": absolute_kappa_90,
+        "source_algorithm": (
+            "Gaussian KDE per event, sum log densities on a uniform kappa grid, "
+            "normalize by trapezoidal integration, then interpolate source-style "
+            "CDF quantiles."
+        ),
+    }
+
+
+def load_ng_restricted_global_kappa_likelihood_from_feather(
+    path: str,
+    *,
+    grid_min: float = -0.1,
+    grid_max: float = 0.1,
+    grid_size: int = 1000,
+) -> dict[str, Any]:
+    """Load Ng event-level samples and reproduce the restricted kappa likelihood."""
+    try:
+        import pyarrow.feather as feather
+    except ImportError:
+        parser_blockers = ["pyarrow_not_installed"]
+        projection_blockers = list(GW_PARITY_PROJECTION_BLOCKERS)
+        return {
+            "schema": "ng_restricted_global_kappa_likelihood_v1",
+            "source_file": path,
+            "ready": False,
+            "parser_ready": False,
+            "parser_blockers": parser_blockers,
+            "projection_blockers": projection_blockers,
+            "blockers": sorted(set(parser_blockers + projection_blockers)),
+            "engine_projection_ready": False,
+            "claimable_discriminator_now": False,
+        }
+
+    table = feather.read_table(path, columns=["event", "kappa"], memory_map=True)
+    return restricted_global_kappa_likelihood_from_event_samples(
+        table["event"].to_pylist(),
+        table["kappa"].to_numpy(zero_copy_only=False),
+        grid_min=grid_min,
+        grid_max=grid_max,
+        grid_size=grid_size,
+        source_file=path,
+    )
+
+
 def validate_gw_parity_native_packet(
     packet: GWParityNativePacket | dict[str, Any],
 ) -> dict[str, Any]:

@@ -1,0 +1,74 @@
+{
+  "version": "v2.73",
+  "basis": [
+    "v2.72_gw_parity_ng_event_level_feather_parser",
+    "Ng_Zenodo_10.5281_zenodo.7935107",
+    "Ng_repository_kappa_constraint_restricted_script"
+  ],
+  "zenodo_record_url": "https://zenodo.org/records/7935107",
+  "zenodo_api_url": "https://zenodo.org/api/records/7935107",
+  "zenodo_concept_doi": "10.5281/zenodo.7338923",
+  "zenodo_version_doi": "10.5281/zenodo.7935107",
+  "ng_repository_url": "https://github.com/thomasckng/constraining-birefringence-with-gwtc-3",
+  "ng_repository_commit": "447fc5eaee71995cfc046c99dc41754716249d47",
+  "ng_restricted_script_path": "src/scripts/kappa_constraint_restricted.py",
+  "source_file": "samples_posterior_birefringence.feather",
+  "source_file_size_expected": 636846658,
+  "source_file_size_observed": 636846658,
+  "source_file_size_verified": true,
+  "source_file_md5_expected": "b60baf8bac203cb462943cc8e93f9a01",
+  "source_file_md5_observed": "b60baf8bac203cb462943cc8e93f9a01",
+  "source_file_md5_verified": true,
+  "restricted_global_kappa_likelihood_ready": true,
+  "likelihood": {
+    "schema": "ng_restricted_global_kappa_likelihood_v1",
+    "sample_count": 710000,
+    "event_count": 71,
+    "event_sample_count_min": 10000,
+    "event_sample_count_max": 10000,
+    "grid_min": -0.1,
+    "grid_max": 0.1,
+    "grid_size": 1000,
+    "density_norm": 1.0,
+    "maximum_likelihood_kappa": -0.02132132132132132,
+    "restricted_kappa_5": -0.0480252899738663,
+    "restricted_kappa_median": -0.018897563967809065,
+    "restricted_kappa_95": 0.018788505560903855,
+    "restricted_kappa_plus_90": 0.03768606952871292,
+    "restricted_kappa_minus_90": 0.029127726006057234,
+    "credible_level_at_zero": 0.209,
+    "absolute_kappa_68": 0.029724742289481187,
+    "absolute_kappa_90": 0.043466751032365074,
+    "parser_blockers": [],
+    "projection_blockers": [
+      "helicity_convention_not_harmonized_across_sources",
+      "ppv_beta1_normalization_not_finalized",
+      "engine_projection_out_of_scope"
+    ]
+  },
+  "published_constraint_rounding_check": {
+    "expected": {
+      "median": -0.019,
+      "plus_90": 0.038,
+      "minus_90": 0.029
+    },
+    "observed": {
+      "median": -0.019,
+      "plus_90": 0.038,
+      "minus_90": 0.029
+    },
+    "matches_published_rounding": true
+  },
+  "ppv_beta1_projection_ready": false,
+  "engine_projection_ready": false,
+  "claimable_discriminator_now": false,
+  "artifact_blockers": [
+    "ppv_beta1_sign_frequency_guard_not_applied",
+    "helicity_convention_not_harmonized_across_sources",
+    "ppv_beta1_normalization_not_finalized",
+    "engine_projection_out_of_scope"
+  ],
+  "route_status": "ng_restricted_global_kappa_likelihood_reproduced_projection_blocked",
+  "best_next_artifact": "Wrap the reproduced source-native kappa likelihood in a PPV beta_1_0 candidate packet with explicit sign, frequency, and dimensional guards.",
+  "interpretation": "The Ng restricted global kappa likelihood is now reproduced from the public event-level samples and matches the published rounded median and 90 percent interval. It remains a source-native GW attenuation constraint, not an engine-axis quantum-gravity discriminator."
+}
