@@ -1,0 +1,165 @@
+{
+  "basis": [
+    "v2.63_gw_parity_ppv_adapter_spec",
+    "Ng_2305.05844_eq_waveform_modification",
+    "Callister_2312.12532_eq_birefringent_v",
+    "Callister_public_code_energy_density_2v_convention",
+    "Jenks_2305.10478_parameterized_amplitude_branch"
+  ],
+  "implemented_layer": "source_native_amplitude_log_gain",
+  "formula_ready_routes": [
+    "ng_kappa_amplitude_log_gain",
+    "callister_sgwb_amplitude_log_gain",
+    "callister_sgwb_energy_hyperbolic_argument",
+    "normalize_discrete_posterior"
+  ],
+  "ppv_beta1_projection_ready": false,
+  "engine_projection_ready": false,
+  "claimable_discriminator_now": false,
+  "posterior_normalizer_ready": true,
+  "posterior_normalizer_norm": 1.0,
+  "blocker_counts": {
+    "engine_projection_out_of_scope": 5,
+    "helicity_convention_not_harmonized_across_sources": 5,
+    "posterior_release_parser_not_implemented": 5,
+    "ppv_beta1_normalization_not_finalized": 5
+  },
+  "rows": [
+    {
+      "label": "ng_zero_control",
+      "log_gain": {
+        "source": "ng_gwtc3_kappa_at_100hz",
+        "value": 0.0,
+        "frequency_hz": 100.0,
+        "f_ref_hz": 100.0,
+        "distance_gpc": 1.0,
+        "redshift": null,
+        "native_parameters": {
+          "kappa_Gpc_inv": 0.0
+        },
+        "helicity_convention": "positive_kappa_enhances_left_in_ng_convention",
+        "target_basis": "ppv_amplitude_log_gain",
+        "engine_projection_allowed": false
+      },
+      "formula_ready": true,
+      "ppv_beta1_projection_ready": false,
+      "engine_projection_ready": false,
+      "blockers": [
+        "helicity_convention_not_harmonized_across_sources",
+        "posterior_release_parser_not_implemented",
+        "ppv_beta1_normalization_not_finalized",
+        "engine_projection_out_of_scope"
+      ]
+    },
+    {
+      "label": "ng_source_native_example",
+      "log_gain": {
+        "source": "ng_gwtc3_kappa_at_100hz",
+        "value": -0.076,
+        "frequency_hz": 200.0,
+        "f_ref_hz": 100.0,
+        "distance_gpc": 2.0,
+        "redshift": null,
+        "native_parameters": {
+          "kappa_Gpc_inv": -0.019
+        },
+        "helicity_convention": "positive_kappa_enhances_left_in_ng_convention",
+        "target_basis": "ppv_amplitude_log_gain",
+        "engine_projection_allowed": false
+      },
+      "formula_ready": true,
+      "ppv_beta1_projection_ready": false,
+      "engine_projection_ready": false,
+      "blockers": [
+        "helicity_convention_not_harmonized_across_sources",
+        "posterior_release_parser_not_implemented",
+        "ppv_beta1_normalization_not_finalized",
+        "engine_projection_out_of_scope"
+      ]
+    },
+    {
+      "label": "callister_distance_term_example",
+      "log_gain": {
+        "source": "callister_sgwb_kappaD_kappaz",
+        "value": 0.6283185307179586,
+        "frequency_hz": 100.0,
+        "f_ref_hz": 100.0,
+        "distance_gpc": 2.0,
+        "redshift": 0.3,
+        "native_parameters": {
+          "kappa_D": 0.1,
+          "kappa_z": 0.0
+        },
+        "helicity_convention": "positive_vp_right_enhanced_in_callister_convention",
+        "target_basis": "ppv_amplitude_log_gain",
+        "engine_projection_allowed": false
+      },
+      "formula_ready": true,
+      "ppv_beta1_projection_ready": false,
+      "engine_projection_ready": false,
+      "blockers": [
+        "helicity_convention_not_harmonized_across_sources",
+        "posterior_release_parser_not_implemented",
+        "ppv_beta1_normalization_not_finalized",
+        "engine_projection_out_of_scope"
+      ]
+    },
+    {
+      "label": "callister_redshift_term_example",
+      "log_gain": {
+        "source": "callister_sgwb_kappaD_kappaz",
+        "value": 0.09424777960769379,
+        "frequency_hz": 100.0,
+        "f_ref_hz": 100.0,
+        "distance_gpc": 2.0,
+        "redshift": 0.3,
+        "native_parameters": {
+          "kappa_D": 0.0,
+          "kappa_z": 0.1
+        },
+        "helicity_convention": "positive_vp_right_enhanced_in_callister_convention",
+        "target_basis": "ppv_amplitude_log_gain",
+        "engine_projection_allowed": false
+      },
+      "formula_ready": true,
+      "ppv_beta1_projection_ready": false,
+      "engine_projection_ready": false,
+      "blockers": [
+        "helicity_convention_not_harmonized_across_sources",
+        "posterior_release_parser_not_implemented",
+        "ppv_beta1_normalization_not_finalized",
+        "engine_projection_out_of_scope"
+      ]
+    },
+    {
+      "label": "callister_energy_density_argument_example",
+      "log_gain": {
+        "source": "callister_sgwb_kappaD_kappaz_energy_density",
+        "value": 1.2566370614359172,
+        "frequency_hz": 100.0,
+        "f_ref_hz": 100.0,
+        "distance_gpc": 2.0,
+        "redshift": 0.3,
+        "native_parameters": {
+          "kappa_D": 0.1,
+          "kappa_z": 0.0
+        },
+        "helicity_convention": "positive_argument_gives_positive_stokes_v_in_callister_code",
+        "target_basis": "sgwb_energy_density_hyperbolic_argument",
+        "engine_projection_allowed": false
+      },
+      "formula_ready": true,
+      "ppv_beta1_projection_ready": false,
+      "engine_projection_ready": false,
+      "blockers": [
+        "helicity_convention_not_harmonized_across_sources",
+        "posterior_release_parser_not_implemented",
+        "ppv_beta1_normalization_not_finalized",
+        "engine_projection_out_of_scope"
+      ]
+    }
+  ],
+  "route_status": "native_amplitude_formula_ready_projection_blocked",
+  "best_next_artifact": "A release-specific posterior parser for the Ng or Callister public data, feeding the source-native log-gain layer without engine projection.",
+  "interpretation": "The source-native amplitude formulas are implemented and tested. This moves the route from formula-specification to non-promoting formula code. The Callister SGWB energy-density route exposes the public-code hyperbolic argument A=2v_p separately from the waveform log-gain v_p, but this does not harmonize helicity conventions, finalize PPV beta normalization, ingest release files, or project to engine axes."
+}

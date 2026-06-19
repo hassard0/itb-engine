@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (174 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (175 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -223,3 +223,4 @@ Auto-generated front door to the full research program (174 notes). Regenerate w
 | v2.61 | [v2.61 - GW parity adapter readiness: public likelihood material is not an engine map](2026-06-19-v2.61-gw-parity-adapter-readiness.md) | v2.61 separates source-side public likelihood material from engine-axis promotion; two public seeds exist, but no adapter is claim-ready. |
 | v2.62 | [v2.62 - GW parity native packet registry: source-ready, non-promoting](2026-06-19-v2.62-gw-parity-native-packet-registry.md) | v2.62 adds a native GW parity packet schema and registers Ng/Callister as source-ready packets with engine projection still blocked. |
 | v2.63 | [v2.63 - GW parity PPV adapter spec: intermediate basis chosen, formula missing](2026-06-19-v2.63-gw-parity-ppv-adapter-spec.md) | v2.63 chooses the PPV amplitude branch as the shared intermediate basis while blocking implementation on explicit formula and parser work. |
+| v2.64 | [v2.64 - GW parity formula implementation: source-native log gain only](2026-06-19-v2.64-gw-parity-ppv-formula-implementation.md) | v2.64 implements tested Ng/Callister source-native amplitude log-gain formulas while keeping PPV beta and engine projection blocked. |
