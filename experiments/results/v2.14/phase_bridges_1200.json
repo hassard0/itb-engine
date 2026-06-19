@@ -1,0 +1,235 @@
+{
+  "input": "experiments\\results\\v2.13\\phases_8d_1200.json",
+  "basis": [
+    "g_4",
+    "g_6",
+    "g_8",
+    "g_R2",
+    "g_R3",
+    "g_C",
+    "g_R2_parity",
+    "g_R3_parity"
+  ],
+  "samples_per_segment": 101,
+  "distance_constraint": {
+    "R_max": 20.0,
+    "min_threshold": 1e-06
+  },
+  "component_bridge_diagnostics": [
+    {
+      "component": 0,
+      "centroid_feasible": true,
+      "parity_zero_projection_feasible": true,
+      "straight_to_parity_zero": {
+        "feasible": false,
+        "first_failure": {
+          "t": 0.16,
+          "constraint": "swampland_distance_conjecture",
+          "margin": -0.15369916648675996,
+          "satisfied": false
+        },
+        "worst": {
+          "t": 0.99,
+          "constraint": "swampland_distance_conjecture",
+          "margin": -1672.9107299848865,
+          "satisfied": false
+        }
+      },
+      "centroid": {
+        "g_4": 0.5414001231896448,
+        "g_6": 0.3539835715575154,
+        "g_8": 0.32896882240688186,
+        "g_R2": 0.2631446755183419,
+        "g_R3": 0.11081001830974993,
+        "g_C": 0.31566329901524554,
+        "g_R2_parity": 0.044795540581182854,
+        "g_R3_parity": 0.03198042954069278
+      },
+      "parity_zero_projection": {
+        "g_4": 0.5414001231896448,
+        "g_6": 0.3539835715575154,
+        "g_8": 0.32896882240688186,
+        "g_R2": 0.2631446755183419,
+        "g_R3": 0.11081001830974993,
+        "g_C": 0.31566329901524554,
+        "g_R2_parity": 0.0,
+        "g_R3_parity": 0.0
+      }
+    },
+    {
+      "component": 1,
+      "centroid_feasible": true,
+      "parity_zero_projection_feasible": true,
+      "straight_to_parity_zero": {
+        "feasible": false,
+        "first_failure": {
+          "t": 0.17,
+          "constraint": "swampland_distance_conjecture",
+          "margin": -0.20882685650588328,
+          "satisfied": false
+        },
+        "worst": {
+          "t": 0.99,
+          "constraint": "swampland_distance_conjecture",
+          "margin": -1657.3326290899874,
+          "satisfied": false
+        }
+      },
+      "centroid": {
+        "g_4": 0.5604091329517973,
+        "g_6": 0.3534036621467376,
+        "g_8": 0.34760335083990035,
+        "g_R2": 0.26724497610842024,
+        "g_R3": 0.10711264963642708,
+        "g_C": 0.3995856258046473,
+        "g_R2_parity": -0.05266785239870379,
+        "g_R3_parity": 0.03341073340091398
+      },
+      "parity_zero_projection": {
+        "g_4": 0.5604091329517973,
+        "g_6": 0.3534036621467376,
+        "g_8": 0.34760335083990035,
+        "g_R2": 0.26724497610842024,
+        "g_R3": 0.10711264963642708,
+        "g_C": 0.3995856258046473,
+        "g_R2_parity": 0.0,
+        "g_R3_parity": 0.0
+      }
+    },
+    {
+      "component": 2,
+      "centroid_feasible": true,
+      "parity_zero_projection_feasible": true,
+      "straight_to_parity_zero": {
+        "feasible": false,
+        "first_failure": {
+          "t": 0.16,
+          "constraint": "swampland_distance_conjecture",
+          "margin": -0.02844216874136052,
+          "satisfied": false
+        },
+        "worst": {
+          "t": 0.99,
+          "constraint": "swampland_distance_conjecture",
+          "margin": -1662.3891421742564,
+          "satisfied": false
+        }
+      },
+      "centroid": {
+        "g_4": 0.5475862293602286,
+        "g_6": 0.33644967769942524,
+        "g_8": 0.3516813097104206,
+        "g_R2": 0.25462642132344593,
+        "g_R3": 0.10119715514740382,
+        "g_C": 0.3358105160534083,
+        "g_R2_parity": 0.04900819112370505,
+        "g_R3_parity": -0.0325481314419649
+      },
+      "parity_zero_projection": {
+        "g_4": 0.5475862293602286,
+        "g_6": 0.33644967769942524,
+        "g_8": 0.3516813097104206,
+        "g_R2": 0.25462642132344593,
+        "g_R3": 0.10119715514740382,
+        "g_C": 0.3358105160534083,
+        "g_R2_parity": 0.0,
+        "g_R3_parity": 0.0
+      }
+    },
+    {
+      "component": 3,
+      "centroid_feasible": true,
+      "parity_zero_projection_feasible": true,
+      "straight_to_parity_zero": {
+        "feasible": false,
+        "first_failure": {
+          "t": 0.21,
+          "constraint": "swampland_distance_conjecture",
+          "margin": -0.07577335350744718,
+          "satisfied": false
+        },
+        "worst": {
+          "t": 0.99,
+          "constraint": "swampland_distance_conjecture",
+          "margin": -1565.9860949270812,
+          "satisfied": false
+        }
+      },
+      "centroid": {
+        "g_4": 0.5546761428174535,
+        "g_6": 0.3559366998948461,
+        "g_8": 0.36966461140885765,
+        "g_R2": 0.2780289186450137,
+        "g_R3": 0.09616442998990174,
+        "g_C": 0.33578974725192584,
+        "g_R2_parity": -0.05300919487439767,
+        "g_R3_parity": -0.034973581709930014
+      },
+      "parity_zero_projection": {
+        "g_4": 0.5546761428174535,
+        "g_6": 0.3559366998948461,
+        "g_8": 0.36966461140885765,
+        "g_R2": 0.2780289186450137,
+        "g_R3": 0.09616442998990174,
+        "g_C": 0.33578974725192584,
+        "g_R2_parity": 0.0,
+        "g_R3_parity": 0.0
+      }
+    }
+  ],
+  "pair_diagnostics": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "direct_straight_segment_feasible": false,
+      "parity_zero_segment_feasible": true
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "direct_straight_segment_feasible": false,
+      "parity_zero_segment_feasible": true
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "direct_straight_segment_feasible": false,
+      "parity_zero_segment_feasible": true
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "direct_straight_segment_feasible": false,
+      "parity_zero_segment_feasible": true
+    },
+    {
+      "pair": [
+        1,
+        3
+      ],
+      "direct_straight_segment_feasible": false,
+      "parity_zero_segment_feasible": true
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "direct_straight_segment_feasible": false,
+      "parity_zero_segment_feasible": true
+    }
+  ],
+  "parity_zero_projections_mutually_connected": true,
+  "first_failure_blockers": {
+    "swampland_distance_conjecture": 4
+  },
+  "conclusion": "The four straight-line parity lobes are caused by the hard nonzero-threshold aspect-ratio encoding of the swampland distance prior: parity-zero endpoints are feasible, but arbitrarily small nonzero parity coefficients violate the ratio bound before reaching zero. Treat lobe separation as an encoding artifact unless the distance-prior functional form is replaced by a continuous moduli-space model."
+}
