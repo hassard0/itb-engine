@@ -1,0 +1,220 @@
+{
+  "basis": [
+    "v2.50_weyl_g8_frontier",
+    "implemented_observable_jacobians",
+    "primary_sourceability_classification"
+  ],
+  "candidate_count": 6,
+  "axis_summary": {
+    "g_C": {
+      "candidate_routes": 3,
+      "source_backed_theory_routes": 3,
+      "external_numeric_measurement_routes": 0,
+      "claim_ready_routes": 0,
+      "implemented_routes_touching_axis": [
+        "conformal_collider_a_over_c_wedge",
+        "holographic_complexity_rate",
+        "black_hole_entropy_shift"
+      ]
+    },
+    "g_8": {
+      "candidate_routes": 3,
+      "source_backed_theory_routes": 3,
+      "external_numeric_measurement_routes": 0,
+      "claim_ready_routes": 0,
+      "implemented_routes_touching_axis": [
+        "high_scattering_moment_design_probe",
+        "spin_four_positivity_constraint"
+      ]
+    }
+  },
+  "rows": [
+    {
+      "axis": "g_C",
+      "route": "conformal_collider_a_over_c_wedge",
+      "implementation": "src/itb/constraints/hofman_maldacena.py",
+      "implemented_target_coefficients": [
+        "g_R2",
+        "g_C"
+      ],
+      "primary_sources": [
+        {
+          "title": "Hofman and Maldacena, Conformal collider physics",
+          "url": "https://arxiv.org/abs/0803.1467"
+        },
+        {
+          "title": "Hofman et al., A Proof of the Conformal Collider Bounds",
+          "url": "https://arxiv.org/abs/1603.03771"
+        }
+      ],
+      "source_backed_theory": true,
+      "source_backed_axis_mapping": true,
+      "external_numeric_measurement": false,
+      "measurement_program_status": "structural_cft_consistency_bound",
+      "status": "source_backed_structural_bound",
+      "claim_ready": false,
+      "blockers": [
+        "already_in_stack_as_consistency_bound",
+        "not_an_external_framework_measurement",
+        "many_framework_g_C_values_are_portrait_derived"
+      ]
+    },
+    {
+      "axis": "g_C",
+      "route": "holographic_complexity_rate",
+      "implementation": "src/itb/gravitational_observables.py:HolographicComplexityRate",
+      "implemented_target_coefficients": [
+        "g_C"
+      ],
+      "primary_sources": [
+        {
+          "title": "Brown et al., Complexity Equals Action",
+          "url": "https://arxiv.org/abs/1509.07876"
+        },
+        {
+          "title": "Cai et al., Action Growth for AdS Black Holes",
+          "url": "https://arxiv.org/abs/1606.08307"
+        }
+      ],
+      "source_backed_theory": true,
+      "source_backed_axis_mapping": false,
+      "external_numeric_measurement": false,
+      "measurement_program_status": "holographic_proxy_toy_normalization",
+      "status": "source_backed_proxy_not_measurement_ready",
+      "claim_ready": false,
+      "blockers": [
+        "toy_kappa_normalization",
+        "requires_holographic_dual_identification",
+        "no_external_measurement_of_framework_g_C"
+      ]
+    },
+    {
+      "axis": "g_C",
+      "route": "black_hole_entropy_shift",
+      "implementation": "src/itb/gravitational_observables.py:BlackHoleEntropyShift",
+      "implemented_target_coefficients": [
+        "g_4",
+        "g_C"
+      ],
+      "primary_sources": [
+        {
+          "title": "Cheung, Liu, and Remmen, Proof of the WGC from Black Hole Entropy",
+          "url": "https://arxiv.org/abs/1801.08546"
+        }
+      ],
+      "source_backed_theory": true,
+      "source_backed_axis_mapping": false,
+      "external_numeric_measurement": false,
+      "measurement_program_status": "thermodynamic_sign_proxy",
+      "status": "source_backed_proxy_not_measurement_ready",
+      "claim_ready": false,
+      "blockers": [
+        "sign_structure_sourced_but_coefficients_are_model_dependent",
+        "mixes_g_C_with_g_4_in_engine_observable",
+        "no_observed_extremal_black_hole_entropy_shift"
+      ]
+    },
+    {
+      "axis": "g_8",
+      "route": "core_scalar_forward_amplitude",
+      "implementation": "src/itb/observables.py:ScalarForwardAmplitude",
+      "implemented_target_coefficients": [
+        "g_4",
+        "g_6"
+      ],
+      "primary_sources": [
+        {
+          "title": "Caron-Huot et al., Sharp Boundaries for the Swampland",
+          "url": "https://arxiv.org/abs/2102.08951"
+        }
+      ],
+      "source_backed_theory": true,
+      "source_backed_axis_mapping": false,
+      "external_numeric_measurement": false,
+      "measurement_program_status": "implemented_but_blind_to_g_8",
+      "status": "implemented_core_observable_does_not_touch_axis",
+      "claim_ready": false,
+      "blockers": [
+        "current_core_forward_amplitude_touches_only_g_4_and_g_6",
+        "cannot_promote_g_8_cut_from_this_observable"
+      ]
+    },
+    {
+      "axis": "g_8",
+      "route": "high_scattering_moment_design_probe",
+      "implementation": "experiments/min_experiment_set.py:HighScatteringMoment",
+      "implemented_target_coefficients": [
+        "g_6",
+        "g_8"
+      ],
+      "primary_sources": [
+        {
+          "title": "Caron-Huot et al., Detectors in weakly-coupled field theories",
+          "url": "https://arxiv.org/abs/2209.00008"
+        },
+        {
+          "title": "Bresciani, Levati, and Paradisi, Amplitudes and partial wave unitarity bounds",
+          "url": "https://arxiv.org/abs/2504.12855"
+        }
+      ],
+      "source_backed_theory": true,
+      "source_backed_axis_mapping": false,
+      "external_numeric_measurement": false,
+      "measurement_program_status": "internal_design_probe_no_program",
+      "status": "source_motivated_design_probe_not_measurement_ready",
+      "claim_ready": false,
+      "blockers": [
+        "engine_mapping_to_exact_g_8_is_toy",
+        "no_funded_or_sourced_measurement_program",
+        "requires_partial_wave_or_detector_observable_specification"
+      ]
+    },
+    {
+      "axis": "g_8",
+      "route": "spin_four_positivity_constraint",
+      "implementation": "src/itb/constraints/spin_four_positivity.py",
+      "implemented_target_coefficients": [
+        "g_4",
+        "g_8",
+        "g_R2",
+        "g_R3"
+      ],
+      "primary_sources": [
+        {
+          "title": "Caron-Huot et al., Sharp Boundaries for the Swampland",
+          "url": "https://arxiv.org/abs/2102.08951"
+        },
+        {
+          "title": "Bresciani, Levati, and Paradisi, Amplitudes and partial wave unitarity bounds",
+          "url": "https://arxiv.org/abs/2504.12855"
+        }
+      ],
+      "source_backed_theory": true,
+      "source_backed_axis_mapping": true,
+      "external_numeric_measurement": false,
+      "measurement_program_status": "source_backed_consistency_bound",
+      "status": "source_backed_structural_bound",
+      "claim_ready": false,
+      "blockers": [
+        "constraint_not_external_measurement",
+        "axis_mixed_with_g_4_g_R2_g_R3",
+        "already_part_of_consistency_reasoning_not_new_data"
+      ]
+    }
+  ],
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "claim_blockers": [
+    "no_external_numeric_measurement_for_g_C_or_g_8",
+    "g_C_routes_are_structural_or_holographic_proxies",
+    "g_8_high_moment_route_is_still_an_internal_design_probe",
+    "no_framework_level_source_backed_cut_to_apply_to_v2_50_frontier"
+  ],
+  "route_status": "sourceability_blocked",
+  "best_next_steps": [
+    "turn_high_scattering_moment_into_a_sourced_partial_wave_or_detector_observable",
+    "separate_native_g_C_framework_values_from_portrait_derived_values",
+    "define_promotion_gate_requiring_external_measurement_before_framework_exclusion"
+  ],
+  "interpretation": "The g_C/g_8 frontier has source-backed theory structure, but no route currently supplies an external numerical measurement that can be applied as a framework-level discriminator. g_C is source-rich but mostly structural or holographic-proxy based; g_8 has the clearest measurement concept but remains an internal design probe."
+}

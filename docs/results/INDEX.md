@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (157 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (158 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -210,3 +210,4 @@ Auto-generated front door to the full research program (157 notes). Regenerate w
 | v2.48 | [v2.48 - Candidate native-adapter promotion audit: existing evidence cannot be promoted](2026-06-19-v2.48-candidate-native-adapter-promotion-audit.md) | v2.47 proved future native adapters have a live gate. v2.48 asks whether any current non-synthetic tower candidate can honestly be promoted into that adapter today. |
 | v2.49 | [v2.49 - Birefringence evidence freshness: alive, but not claimable](2026-06-19-v2.49-birefringence-evidence-freshness.md) | After the native tower route blocked on missing owned spectra, v2.49 checks whether newer birefringence measurements keep the one-observable non-tower route alive. |
 | v2.50 | [v2.50 - Weyl/g8 discriminator frontier: geometry confirmed, not yet a claim](2026-06-19-v2.50-weyl-g8-discriminator-frontier.md) | v2.50 moves beyond the one-observable birefringence route by sweeping `g_C`, `g_8`, PC1, and PC2, confirming a robust frontier while keeping it non-claimable. |
+| v2.51 | [v2.51 - Weyl/g8 observable sourceability: source-rich, measurement-blocked](2026-06-19-v2.51-weyl-g8-observable-sourceability.md) | v2.51 audits whether the robust `g_C/g_8` frontier has source-backed measurement routes; it finds theory support but zero claim-ready external numerical cuts. |
