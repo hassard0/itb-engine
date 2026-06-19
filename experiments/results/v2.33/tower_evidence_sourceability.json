@@ -1,0 +1,367 @@
+{
+  "basis": [
+    "framework_encoder",
+    "Theory",
+    "TowerEvidence"
+  ],
+  "registered_framework_count": 13,
+  "in_scope_reference_feasible_frameworks": [
+    "pure_gr",
+    "string_tree_eft",
+    "asymptotic_safety",
+    "cdt",
+    "discovered_novel",
+    "discovered_parity_violating",
+    "discovered_high_g8",
+    "discovered_data_driven"
+  ],
+  "sourceable_from_current_encoder": [],
+  "sourceability_status_counts": {
+    "not_sourceable_from_current_encoder": 8,
+    "not_target_reference_excluded": 3,
+    "not_target_scope_limited": 2
+  },
+  "claimable_framework_exclusions_now": [],
+  "frameworks": {
+    "pure_gr": {
+      "framework": "pure_gr",
+      "reference_feasible": true,
+      "engine_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "encoded_tower_inputs": {
+        "coefficient_hits": [],
+        "metadata_hits": [],
+        "framework_attribute_hits": [],
+        "has_any_tower_input": false,
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": []
+      },
+      "sourceable_from_current_encoder": false,
+      "sourceability_status": "not_sourceable_from_current_encoder",
+      "required_next_data": "A UV-completion or null-baseline decision with sourced tower evidence; pure GR Wilson coefficients alone are not quantum-gravity tower data."
+    },
+    "string_tree_eft": {
+      "framework": "string_tree_eft",
+      "reference_feasible": true,
+      "engine_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "encoded_tower_inputs": {
+        "coefficient_hits": [],
+        "metadata_hits": [],
+        "framework_attribute_hits": [],
+        "has_any_tower_input": false,
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": []
+      },
+      "sourceable_from_current_encoder": false,
+      "sourceability_status": "not_sourceable_from_current_encoder",
+      "required_next_data": "A compactification-specific R/R0 or Delta_moduli with uncertainty, normalization, and primary source."
+    },
+    "asymptotic_safety": {
+      "framework": "asymptotic_safety",
+      "reference_feasible": true,
+      "engine_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "encoded_tower_inputs": {
+        "coefficient_hits": [],
+        "metadata_hits": [],
+        "framework_attribute_hits": [],
+        "has_any_tower_input": false,
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": []
+      },
+      "sourceable_from_current_encoder": false,
+      "sourceability_status": "not_sourceable_from_current_encoder",
+      "required_next_data": "A sourced RG-to-tower map or scale spectrum with phi_tower normalization and uncertainty."
+    },
+    "lqg_induced": {
+      "framework": "lqg_induced",
+      "reference_feasible": false,
+      "engine_in_scope": true,
+      "frontier_status": "reference_excluded_before_tower",
+      "encoded_tower_inputs": {
+        "coefficient_hits": [],
+        "metadata_hits": [],
+        "framework_attribute_hits": [],
+        "has_any_tower_input": false,
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": []
+      },
+      "sourceable_from_current_encoder": false,
+      "sourceability_status": "not_target_reference_excluded",
+      "required_next_data": "A sourced TowerEvidence row with normalization and uncertainty."
+    },
+    "cdt": {
+      "framework": "cdt",
+      "reference_feasible": true,
+      "engine_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "encoded_tower_inputs": {
+        "coefficient_hits": [],
+        "metadata_hits": [],
+        "framework_attribute_hits": [],
+        "has_any_tower_input": false,
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": []
+      },
+      "sourceable_from_current_encoder": false,
+      "sourceability_status": "not_sourceable_from_current_encoder",
+      "required_next_data": "A sourced continuum-limit geometric spectrum mapped to a tower mass, radius ratio, or moduli distance with uncertainty."
+    },
+    "group_field_theory": {
+      "framework": "group_field_theory",
+      "reference_feasible": false,
+      "engine_in_scope": true,
+      "frontier_status": "reference_excluded_before_tower",
+      "encoded_tower_inputs": {
+        "coefficient_hits": [],
+        "metadata_hits": [],
+        "framework_attribute_hits": [],
+        "has_any_tower_input": false,
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": []
+      },
+      "sourceable_from_current_encoder": false,
+      "sourceability_status": "not_target_reference_excluded",
+      "required_next_data": "A sourced TowerEvidence row with normalization and uncertainty."
+    },
+    "horava_lifshitz": {
+      "framework": "horava_lifshitz",
+      "reference_feasible": false,
+      "engine_in_scope": false,
+      "frontier_status": "reference_excluded_before_tower",
+      "encoded_tower_inputs": {
+        "coefficient_hits": [],
+        "metadata_hits": [],
+        "framework_attribute_hits": [],
+        "has_any_tower_input": false,
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": []
+      },
+      "sourceable_from_current_encoder": false,
+      "sourceability_status": "not_target_reference_excluded",
+      "required_next_data": "A sourced TowerEvidence row with normalization and uncertainty."
+    },
+    "causal_set": {
+      "framework": "causal_set",
+      "reference_feasible": true,
+      "engine_in_scope": false,
+      "frontier_status": "scope_limited_reference_survivor",
+      "encoded_tower_inputs": {
+        "coefficient_hits": [],
+        "metadata_hits": [],
+        "framework_attribute_hits": [],
+        "has_any_tower_input": false,
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": []
+      },
+      "sourceable_from_current_encoder": false,
+      "sourceability_status": "not_target_scope_limited",
+      "required_next_data": "A sourced TowerEvidence row with normalization and uncertainty."
+    },
+    "emergent_gravity": {
+      "framework": "emergent_gravity",
+      "reference_feasible": true,
+      "engine_in_scope": false,
+      "frontier_status": "scope_limited_reference_survivor",
+      "encoded_tower_inputs": {
+        "coefficient_hits": [],
+        "metadata_hits": [],
+        "framework_attribute_hits": [],
+        "has_any_tower_input": false,
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": []
+      },
+      "sourceable_from_current_encoder": false,
+      "sourceability_status": "not_target_scope_limited",
+      "required_next_data": "A sourced TowerEvidence row with normalization and uncertainty."
+    },
+    "discovered_novel": {
+      "framework": "discovered_novel",
+      "reference_feasible": true,
+      "engine_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "encoded_tower_inputs": {
+        "coefficient_hits": [],
+        "metadata_hits": [],
+        "framework_attribute_hits": [],
+        "has_any_tower_input": false,
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": []
+      },
+      "sourceable_from_current_encoder": false,
+      "sourceability_status": "not_sourceable_from_current_encoder",
+      "required_next_data": "External evidence or a reproducible computed-spectrum artifact; engine-generated Wilson coefficients alone are not an allowed source."
+    },
+    "discovered_parity_violating": {
+      "framework": "discovered_parity_violating",
+      "reference_feasible": true,
+      "engine_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "encoded_tower_inputs": {
+        "coefficient_hits": [],
+        "metadata_hits": [],
+        "framework_attribute_hits": [],
+        "has_any_tower_input": false,
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": []
+      },
+      "sourceable_from_current_encoder": false,
+      "sourceability_status": "not_sourceable_from_current_encoder",
+      "required_next_data": "External evidence or a reproducible computed-spectrum artifact; engine-generated Wilson coefficients alone are not an allowed source."
+    },
+    "discovered_high_g8": {
+      "framework": "discovered_high_g8",
+      "reference_feasible": true,
+      "engine_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "encoded_tower_inputs": {
+        "coefficient_hits": [],
+        "metadata_hits": [],
+        "framework_attribute_hits": [],
+        "has_any_tower_input": false,
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": []
+      },
+      "sourceable_from_current_encoder": false,
+      "sourceability_status": "not_sourceable_from_current_encoder",
+      "required_next_data": "External evidence or a reproducible computed-spectrum artifact; engine-generated Wilson coefficients alone are not an allowed source."
+    },
+    "discovered_data_driven": {
+      "framework": "discovered_data_driven",
+      "reference_feasible": true,
+      "engine_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "encoded_tower_inputs": {
+        "coefficient_hits": [],
+        "metadata_hits": [],
+        "framework_attribute_hits": [],
+        "has_any_tower_input": false,
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_C",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": []
+      },
+      "sourceable_from_current_encoder": false,
+      "sourceability_status": "not_sourceable_from_current_encoder",
+      "required_next_data": "External evidence or a reproducible computed-spectrum artifact; engine-generated Wilson coefficients alone are not an allowed source."
+    }
+  },
+  "literature_guardrail": {
+    "claim": "This is an encoder sourceability audit, not a literature exhaustion proof. It only says whether the current repository already encodes the tower inputs needed for TowerEvidence.",
+    "primary_sources": [
+      {
+        "title": "Ooguri and Vafa, On the Geometry of the String Landscape and the Swampland",
+        "url": "https://arxiv.org/abs/hep-th/0605264"
+      },
+      {
+        "title": "Corvilain, Grimm, and Valenzuela, The Swampland Distance Conjecture for Kahler moduli",
+        "url": "https://arxiv.org/abs/1812.07548"
+      }
+    ]
+  },
+  "interpretation": "No in-scope reference-feasible framework currently encodes phi_tower, tower_mass_gap, R/R0, Delta_moduli, or lambda_sdc. A non-synthetic TowerEvidence row therefore requires new sourced data, not a local reinterpretation of existing Wilson coefficients."
+}
