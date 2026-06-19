@@ -1,0 +1,135 @@
+{
+  "version": "v2.77",
+  "basis": [
+    "v2.76_gw_parity_route_decision",
+    "v2.53_unified_discriminator_route_frontier",
+    "v2.54_g8_high_moment_measurement_specification",
+    "v2.55_g8_existing_measurement_packet_search",
+    "v2.50_v2.51_weyl_g8_frontier",
+    "v2.46_to_v2.48_tower_frontier"
+  ],
+  "frontier_scope": "post_gw_direct_promotion_retirement",
+  "route_count": 5,
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "priority_order": [
+    "g8_high_moment_measurement",
+    "weyl_g8_joint_frontier",
+    "native_tower_evidence",
+    "gw_parity_source_native_archive",
+    "cmb_beta_em_axion"
+  ],
+  "top_priority_route": "g8_high_moment_measurement",
+  "blocker_counts": {
+    "asymptotic_regime_ownership_missing": 1,
+    "direct_ng_ppv_engine_promotion_retired": 1,
+    "em_gravity_bridge_missing": 1,
+    "engine_axis_target_missing": 1,
+    "g8_external_measurement_missing": 1,
+    "g_C_external_measurement_missing": 1,
+    "joint_likelihood_missing": 1,
+    "missing_covariance_or_likelihood": 1,
+    "missing_engine_normalized_g8_likelihood": 1,
+    "native_framework_tower_spectrum_missing": 1,
+    "no_framework_excluding_measurement_packet": 1,
+    "not_engine_gravity_parity_axis": 1,
+    "positive_controls_guarded_not_claim_ready": 1,
+    "source_backed_operator_normalization_missing": 1,
+    "systematics_not_closed_for_framework_claim": 1
+  },
+  "rows": [
+    {
+      "route": "g8_high_moment_measurement",
+      "family": "matter_forward_amplitude",
+      "status": "measurement_contract_defined_external_packet_missing",
+      "claim_ready": false,
+      "priority_rank": 1,
+      "reason": "The g8 route has a cleaner engine-axis contract than GW parity: the missing object is an external high-moment measurement packet.",
+      "next_artifact": "Search for a public, engine-normalized high-moment or energy-correlator likelihood that can constrain g_8.",
+      "blockers": [
+        "missing_covariance_or_likelihood",
+        "missing_engine_normalized_g8_likelihood",
+        "no_framework_excluding_measurement_packet"
+      ],
+      "basis": [
+        "v2.54_g8_high_moment_measurement_specification",
+        "v2.55_g8_existing_measurement_packet_search"
+      ]
+    },
+    {
+      "route": "weyl_g8_joint_frontier",
+      "family": "non_tower_geometry_matter",
+      "status": "theory_frontier_confirmed_measurement_blocked",
+      "claim_ready": false,
+      "priority_rank": 2,
+      "reason": "The Weyl/g8 frontier is geometrically robust, but still lacks external numerical cuts in engine normalization.",
+      "next_artifact": "Find or define external measurement packets for g_C and g_8, then test whether their joint likelihood excludes frameworks.",
+      "blockers": [
+        "g8_external_measurement_missing",
+        "g_C_external_measurement_missing",
+        "joint_likelihood_missing"
+      ],
+      "basis": [
+        "v2.50_weyl_g8_discriminator_frontier",
+        "v2.51_weyl_g8_observable_sourceability"
+      ]
+    },
+    {
+      "route": "native_tower_evidence",
+      "family": "swampland_tower",
+      "status": "adapter_contract_ready_native_spectra_missing",
+      "claim_ready": false,
+      "priority_rank": 3,
+      "reason": "Tower gates are implemented and guarded, but no live framework owns source-native tower spectra in the required schema.",
+      "next_artifact": "Extract or source native tower spectra for a named framework, then pass them through the acceptance harness.",
+      "blockers": [
+        "asymptotic_regime_ownership_missing",
+        "native_framework_tower_spectrum_missing",
+        "positive_controls_guarded_not_claim_ready"
+      ],
+      "basis": [
+        "v2.46_native_tower_ownership_frontier",
+        "v2.47_native_adapter_acceptance_harness",
+        "v2.48_candidate_native_adapter_promotion_audit"
+      ]
+    },
+    {
+      "route": "gw_parity_source_native_archive",
+      "family": "gravitational_wave_parity",
+      "status": "retained_nonpromoting_direct_engine_route_retired",
+      "claim_ready": false,
+      "priority_rank": 4,
+      "reason": "The GW parity work produced high-quality source-native likelihood material, but no current engine-normalized framework discriminator. The direct Ng PPV beta_1_0 promotion route is therefore retired for the current engine rather than left as an ambiguous blocker.",
+      "next_artifact": "Pivot out of direct Ng promotion and search for an independent operator-normalization source, or move to a different discriminator frontier with a cleaner engine-axis measurement contract.",
+      "blockers": [
+        "direct_ng_ppv_engine_promotion_retired",
+        "engine_axis_target_missing",
+        "source_backed_operator_normalization_missing"
+      ],
+      "basis": [
+        "v2.71_to_v2.76_gw_parity_ng_source_native_chain"
+      ]
+    },
+    {
+      "route": "cmb_beta_em_axion",
+      "family": "electromagnetic_axion",
+      "status": "retired_as_direct_gravity_discriminator",
+      "claim_ready": false,
+      "priority_rank": 5,
+      "reason": "CMB beta remains an EM/axion hint, not a direct gravitational parity engine route.",
+      "next_artifact": "Only revisit for a separate EM/axion framework catalogue or a source-backed multimessenger common-field model.",
+      "blockers": [
+        "em_gravity_bridge_missing",
+        "not_engine_gravity_parity_axis",
+        "systematics_not_closed_for_framework_claim"
+      ],
+      "basis": [
+        "v2.58_birefringence_adapter_literature_sourceability",
+        "v2.59_parity_route_split_frontier"
+      ]
+    }
+  ],
+  "route_status": "post_gw_frontier_no_claim_ready_route_g8_next",
+  "best_next_artifact": "Search for a public, engine-normalized high-moment or energy-correlator likelihood that can constrain g_8.",
+  "interpretation": "Retiring direct GW parity promotion leaves no solved discriminator. The next highest-value path is g8 high-moment measurement search because it asks for an external packet in an already-defined engine axis rather than a new parity operator-normalization bridge."
+}
