@@ -1,0 +1,72 @@
+{
+  "basis": [
+    "synthetic_native_adapter",
+    "discriminator_frontier",
+    "generic_framework_claim_guard"
+  ],
+  "cases": [
+    {
+      "label": "owned_scope_acceptance_fixture",
+      "owned_scope": true,
+      "frontier_status": "tower_discriminator_claim_ready",
+      "tower_claimable_by_math": true,
+      "promotion_guard_ready": true,
+      "generic_claim_guard_ready": true,
+      "generic_claim_guard_blockers": [],
+      "source_scope": {
+        "compactification_scope": "unspecified",
+        "tower_scope": "kk_or_decompactification_tower",
+        "range_scope": "asymptotic",
+        "endpoint_owned_by_framework": true,
+        "displacement_owned_by_framework": true,
+        "positive_control_matches": [],
+        "generic_framework_claim_ready": true,
+        "scope_blockers": []
+      },
+      "tower_discriminator_claim_ready": [
+        "string_tree_eft"
+      ],
+      "claimable_now": false
+    },
+    {
+      "label": "missing_ownership_fixture",
+      "owned_scope": false,
+      "frontier_status": "tower_generic_claim_guard_blocked",
+      "tower_claimable_by_math": true,
+      "promotion_guard_ready": true,
+      "generic_claim_guard_ready": false,
+      "generic_claim_guard_blockers": [
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint"
+      ],
+      "source_scope": {
+        "compactification_scope": "unspecified",
+        "tower_scope": "kk_or_decompactification_tower",
+        "range_scope": "asymptotic",
+        "endpoint_owned_by_framework": false,
+        "displacement_owned_by_framework": false,
+        "positive_control_matches": [],
+        "generic_framework_claim_ready": false,
+        "scope_blockers": [
+          "missing_framework_owned_displacement",
+          "missing_framework_owned_endpoint"
+        ]
+      },
+      "tower_discriminator_claim_ready": [],
+      "claimable_now": false
+    }
+  ],
+  "claim_ready_synthetic_fixtures": [
+    "owned_scope_acceptance_fixture"
+  ],
+  "generic_claim_blocked_synthetic_fixtures": [
+    "missing_ownership_fixture"
+  ],
+  "claimable_framework_exclusions_now": [],
+  "registry_restored_after_harness": true,
+  "literature_guardrail": {
+    "claim": "This is a synthetic acceptance harness. It proves wiring for a future native adapter but does not provide a framework-level quantum-gravity exclusion.",
+    "primary_sources": []
+  },
+  "interpretation": "A future native adapter will only reach discriminator claim readiness when it is mathematically excluding and carries owned endpoint and displacement metadata. Missing ownership remains blocked even when the spectrum is excluding and promotion-ready."
+}
