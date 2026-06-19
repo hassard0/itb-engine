@@ -1,0 +1,1100 @@
+{
+  "audit_configuration": {
+    "coefficient_order": [
+      "g_4",
+      "g_6",
+      "g_8",
+      "g_R2",
+      "g_R3",
+      "g_C",
+      "g_R2_parity",
+      "g_R3_parity"
+    ],
+    "sampling_box": {
+      "g_4": [
+        0.05,
+        0.6
+      ],
+      "g_6": [
+        0.05,
+        0.6
+      ],
+      "g_8": [
+        0.05,
+        0.7
+      ],
+      "g_R2": [
+        0.02,
+        0.45
+      ],
+      "g_R3": [
+        0.0,
+        0.4
+      ],
+      "g_C": [
+        0.02,
+        0.6
+      ],
+      "g_R2_parity": [
+        0.0,
+        0.0
+      ],
+      "g_R3_parity": [
+        0.0,
+        0.0
+      ]
+    },
+    "parity_slice": "g_R2_parity = g_R3_parity = 0",
+    "stack_config": {
+      "bnossw_mean": "geometric",
+      "rfc_form": "convex_hull"
+    },
+    "framework_feasibility_basis": "full_stack",
+    "pca_basis": "raw covariance over sampled parity-even survivor vectors",
+    "pca_orientation": "principal component signs are flipped so the largest absolute loading is positive",
+    "cut_semantics": "upper cuts remove points with projection > threshold"
+  },
+  "basis": [
+    "parity_even_full_basis_island",
+    "weyl_squared_g_C",
+    "matter_high_moment_g_8",
+    "internal_pca_geometry"
+  ],
+  "sample_count": 120000,
+  "island_survivors": 680,
+  "island_survival_fraction": 0.005666666666666667,
+  "pca": {
+    "effective_dimension_raw_pca": 3.1965289894484856,
+    "variance_fraction": [
+      0.4460271418812764,
+      0.27252964639462407,
+      0.19176893995119967,
+      0.037310597599563164
+    ],
+    "top2_loadings": {
+      "PC1": {
+        "g_4": 0.378,
+        "g_6": 0.333,
+        "g_8": 0.064,
+        "g_R2": 0.282,
+        "g_R3": 0.115,
+        "g_C": 0.806
+      },
+      "PC2": {
+        "g_4": 0.191,
+        "g_6": 0.295,
+        "g_8": 0.888,
+        "g_C": -0.294
+      }
+    }
+  },
+  "frameworks": [
+    {
+      "framework": "asymptotic_safety",
+      "framework_feasibility_basis": "full_stack",
+      "feasible_under_current_stack": true,
+      "preexisting_full_stack_excluded": false,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "g_C_source": "portrait_derived_from_g_R2",
+      "coefficients": {
+        "g_4": 0.4,
+        "g_6": 0.3,
+        "g_8": 0.3,
+        "g_R2": 0.15,
+        "g_R3": 0.1,
+        "g_C": 0.1747,
+        "g_R2_parity": 0.0,
+        "g_R3_parity": 0.0
+      }
+    },
+    {
+      "framework": "causal_set",
+      "framework_feasibility_basis": "full_stack",
+      "feasible_under_current_stack": true,
+      "preexisting_full_stack_excluded": false,
+      "engine_scope": {
+        "in_scope": false,
+        "violations": [
+          "locality (assumed by the swampland/positivity program)"
+        ],
+        "note": "OUT OF SCOPE: the engine's feasibility verdict is NOT meaningful for this framework \u2014 it breaks locality (assumed by the swampland/positivity program), which are assumptions used to derive the constraints. Treat any verdict as an artifact of applying inapplicable bounds."
+      },
+      "g_C_source": "portrait_derived_from_g_R2",
+      "coefficients": {
+        "g_4": 0.45,
+        "g_6": 0.35,
+        "g_8": 0.3,
+        "g_R2": 0.2,
+        "g_R3": 0.08,
+        "g_C": 0.2478,
+        "g_R2_parity": 0.0,
+        "g_R3_parity": 0.0
+      }
+    },
+    {
+      "framework": "cdt",
+      "framework_feasibility_basis": "full_stack",
+      "feasible_under_current_stack": true,
+      "preexisting_full_stack_excluded": false,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "g_C_source": "portrait_derived_from_g_R2",
+      "coefficients": {
+        "g_4": 0.55,
+        "g_6": 0.4,
+        "g_8": 0.35,
+        "g_R2": 0.22,
+        "g_R3": 0.15,
+        "g_C": 0.28,
+        "g_R2_parity": 0.0,
+        "g_R3_parity": 0.0
+      }
+    },
+    {
+      "framework": "discovered_data_driven",
+      "framework_feasibility_basis": "full_stack",
+      "feasible_under_current_stack": true,
+      "preexisting_full_stack_excluded": false,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "g_C_source": "native",
+      "coefficients": {
+        "g_4": 0.5668,
+        "g_6": 0.4504,
+        "g_8": 0.404,
+        "g_R2": 0.3258,
+        "g_R3": 0.1437,
+        "g_C": 0.3495,
+        "g_R2_parity": 0.0937,
+        "g_R3_parity": 0.0311
+      }
+    },
+    {
+      "framework": "discovered_high_g8",
+      "framework_feasibility_basis": "full_stack",
+      "feasible_under_current_stack": true,
+      "preexisting_full_stack_excluded": false,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "g_C_source": "portrait_derived_from_g_R2",
+      "coefficients": {
+        "g_4": 0.453,
+        "g_6": 0.208,
+        "g_8": 0.552,
+        "g_R2": 0.21,
+        "g_R3": 0.036,
+        "g_C": 0.2637,
+        "g_R2_parity": 0.033,
+        "g_R3_parity": -0.028
+      }
+    },
+    {
+      "framework": "discovered_novel",
+      "framework_feasibility_basis": "full_stack",
+      "feasible_under_current_stack": true,
+      "preexisting_full_stack_excluded": false,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "g_C_source": "portrait_derived_from_g_R2",
+      "coefficients": {
+        "g_4": 0.34,
+        "g_6": 0.117,
+        "g_8": 0.045,
+        "g_R2": 0.136,
+        "g_R3": 0.017,
+        "g_C": 0.1558,
+        "g_R2_parity": 0.021,
+        "g_R3_parity": 0.017
+      }
+    },
+    {
+      "framework": "discovered_parity_violating",
+      "framework_feasibility_basis": "full_stack",
+      "feasible_under_current_stack": false,
+      "preexisting_full_stack_excluded": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "g_C_source": "portrait_derived_from_g_R2",
+      "coefficients": {
+        "g_4": 0.647,
+        "g_6": 0.49,
+        "g_8": 0.376,
+        "g_R2": 0.395,
+        "g_R3": 0.05,
+        "g_C": 0.6819,
+        "g_R2_parity": -0.092,
+        "g_R3_parity": 0.044
+      }
+    },
+    {
+      "framework": "emergent_gravity",
+      "framework_feasibility_basis": "full_stack",
+      "feasible_under_current_stack": true,
+      "preexisting_full_stack_excluded": false,
+      "engine_scope": {
+        "in_scope": false,
+        "violations": [
+          "locality (assumed by the swampland/positivity program)",
+          "a fundamental UV graviton field (the bounds expand the graviton amplitude; emergent gravity has no such UV expansion)"
+        ],
+        "note": "OUT OF SCOPE: the engine's feasibility verdict is NOT meaningful for this framework \u2014 it breaks locality (assumed by the swampland/positivity program) and a fundamental UV graviton field (the bounds expand the graviton amplitude; emergent gravity has no such UV expansion), which are assumptions used to derive the constraints. Treat any verdict as an artifact of applying inapplicable bounds."
+      },
+      "g_C_source": "portrait_derived_from_g_R2",
+      "coefficients": {
+        "g_4": 0.3,
+        "g_6": 0.2,
+        "g_8": 0.15,
+        "g_R2": 0.1,
+        "g_R3": 0.05,
+        "g_C": 0.1101,
+        "g_R2_parity": 0.0,
+        "g_R3_parity": 0.0
+      }
+    },
+    {
+      "framework": "group_field_theory",
+      "framework_feasibility_basis": "full_stack",
+      "feasible_under_current_stack": false,
+      "preexisting_full_stack_excluded": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "g_C_source": "portrait_derived_from_g_R2",
+      "coefficients": {
+        "g_4": 0.58,
+        "g_6": 0.43,
+        "g_8": 0.4,
+        "g_R2": 0.28,
+        "g_R3": 0.28,
+        "g_C": 0.3894,
+        "g_R2_parity": 0.07,
+        "g_R3_parity": 0.04
+      }
+    },
+    {
+      "framework": "horava_lifshitz",
+      "framework_feasibility_basis": "full_stack",
+      "feasible_under_current_stack": false,
+      "preexisting_full_stack_excluded": true,
+      "engine_scope": {
+        "in_scope": false,
+        "violations": [
+          "Lorentz invariance (assumed by amplitude-positivity bounds)"
+        ],
+        "note": "OUT OF SCOPE: the engine's feasibility verdict is NOT meaningful for this framework \u2014 it breaks Lorentz invariance (assumed by amplitude-positivity bounds), which are assumptions used to derive the constraints. Treat any verdict as an artifact of applying inapplicable bounds."
+      },
+      "g_C_source": "portrait_derived_from_g_R2",
+      "coefficients": {
+        "g_4": 0.5,
+        "g_6": 0.45,
+        "g_8": 0.45,
+        "g_R2": 0.45,
+        "g_R3": 0.4,
+        "g_C": 0.8889,
+        "g_R2_parity": 0.1,
+        "g_R3_parity": 0.06
+      }
+    },
+    {
+      "framework": "lqg_induced",
+      "framework_feasibility_basis": "full_stack",
+      "feasible_under_current_stack": false,
+      "preexisting_full_stack_excluded": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "g_C_source": "portrait_derived_from_g_R2",
+      "coefficients": {
+        "g_4": 0.6,
+        "g_6": 0.45,
+        "g_8": 0.4,
+        "g_R2": 0.3,
+        "g_R3": 0.3,
+        "g_C": 0.4311,
+        "g_R2_parity": 0.08,
+        "g_R3_parity": 0.04
+      }
+    },
+    {
+      "framework": "pure_gr",
+      "framework_feasibility_basis": "full_stack",
+      "feasible_under_current_stack": true,
+      "preexisting_full_stack_excluded": false,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "g_C_source": "portrait_derived_from_g_R2",
+      "coefficients": {
+        "g_4": 0.0,
+        "g_6": 0.0,
+        "g_8": 0.0,
+        "g_R2": 0.0,
+        "g_R3": 0.0,
+        "g_C": 0.0,
+        "g_R2_parity": 0.0,
+        "g_R3_parity": 0.0
+      }
+    },
+    {
+      "framework": "string_tree_eft",
+      "framework_feasibility_basis": "full_stack",
+      "feasible_under_current_stack": true,
+      "preexisting_full_stack_excluded": false,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "g_C_source": "portrait_derived_from_g_R2",
+      "coefficients": {
+        "g_4": 0.5,
+        "g_6": 0.4,
+        "g_8": 0.4,
+        "g_R2": 0.2,
+        "g_R3": 0.15,
+        "g_C": 0.2478,
+        "g_R2_parity": 0.0,
+        "g_R3_parity": 0.0
+      }
+    }
+  ],
+  "directions_ranked_by_extent": [
+    {
+      "direction": "PCA:PC1",
+      "dominant_coefficient": "g_C",
+      "loadings": {
+        "g_4": 0.378,
+        "g_6": 0.333,
+        "g_8": 0.064,
+        "g_R2": 0.282,
+        "g_R3": 0.115,
+        "g_C": 0.806
+      },
+      "island_extent_std": 0.14834058021358842,
+      "extent_bootstrap_95ci": [
+        0.142415816401006,
+        0.15489680785050078
+      ],
+      "projection_range": [
+        0.21668150725452318,
+        0.9026367464760015
+      ],
+      "favored_projection": 0.7801718464991251,
+      "candidate_cuts_ranked": [
+        {
+          "cut": "q25",
+          "upper_threshold": 0.46931362432829926,
+          "island_removed_fraction": 0.75,
+          "island_retained_fraction": 0.25,
+          "frameworks_excluded": [
+            "causal_set",
+            "cdt",
+            "discovered_data_driven",
+            "discovered_high_g8",
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced",
+            "string_tree_eft"
+          ],
+          "feasible_frameworks_excluded": [
+            "causal_set",
+            "cdt",
+            "discovered_data_driven",
+            "discovered_high_g8",
+            "string_tree_eft"
+          ],
+          "preexisting_excluded_frameworks": [
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ]
+        },
+        {
+          "cut": "q50",
+          "upper_threshold": 0.5692795589677361,
+          "island_removed_fraction": 0.5,
+          "island_retained_fraction": 0.5,
+          "frameworks_excluded": [
+            "causal_set",
+            "cdt",
+            "discovered_data_driven",
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced",
+            "string_tree_eft"
+          ],
+          "feasible_frameworks_excluded": [
+            "causal_set",
+            "cdt",
+            "discovered_data_driven",
+            "string_tree_eft"
+          ],
+          "preexisting_excluded_frameworks": [
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ]
+        },
+        {
+          "cut": "q75",
+          "upper_threshold": 0.6838553146041195,
+          "island_removed_fraction": 0.25,
+          "island_retained_fraction": 0.75,
+          "frameworks_excluded": [
+            "discovered_data_driven",
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ],
+          "feasible_frameworks_excluded": [
+            "discovered_data_driven"
+          ],
+          "preexisting_excluded_frameworks": [
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ]
+        },
+        {
+          "cut": "tangent_discovered_data_driven",
+          "upper_threshold": 0.7801718464991251,
+          "island_removed_fraction": 0.10147058823529412,
+          "island_retained_fraction": 0.8985294117647059,
+          "frameworks_excluded": [
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ],
+          "feasible_frameworks_excluded": [],
+          "preexisting_excluded_frameworks": [
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ]
+        }
+      ],
+      "best_internal_cut": {
+        "cut": "q25",
+        "upper_threshold": 0.46931362432829926,
+        "island_removed_fraction": 0.75,
+        "island_retained_fraction": 0.25,
+        "frameworks_excluded": [
+          "causal_set",
+          "cdt",
+          "discovered_data_driven",
+          "discovered_high_g8",
+          "discovered_parity_violating",
+          "group_field_theory",
+          "horava_lifshitz",
+          "lqg_induced",
+          "string_tree_eft"
+        ],
+        "feasible_frameworks_excluded": [
+          "causal_set",
+          "cdt",
+          "discovered_data_driven",
+          "discovered_high_g8",
+          "string_tree_eft"
+        ],
+        "preexisting_excluded_frameworks": [
+          "discovered_parity_violating",
+          "group_field_theory",
+          "horava_lifshitz",
+          "lqg_induced"
+        ]
+      },
+      "favored_safe_cut": {
+        "cut": "tangent_discovered_data_driven",
+        "upper_threshold": 0.7801718464991251,
+        "island_removed_fraction": 0.10147058823529412,
+        "island_retained_fraction": 0.8985294117647059,
+        "frameworks_excluded": [
+          "discovered_parity_violating",
+          "group_field_theory",
+          "horava_lifshitz",
+          "lqg_induced"
+        ],
+        "feasible_frameworks_excluded": [],
+        "preexisting_excluded_frameworks": [
+          "discovered_parity_violating",
+          "group_field_theory",
+          "horava_lifshitz",
+          "lqg_induced"
+        ]
+      }
+    },
+    {
+      "direction": "single:g_C",
+      "dominant_coefficient": "g_C",
+      "loadings": {
+        "g_C": 1.0
+      },
+      "island_extent_std": 0.13336304839233748,
+      "extent_bootstrap_95ci": [
+        0.12767393638069865,
+        0.137844718231207
+      ],
+      "projection_range": [
+        0.025543871045388945,
+        0.5929495242676073
+      ],
+      "favored_projection": 0.3495,
+      "candidate_cuts_ranked": [
+        {
+          "cut": "q25",
+          "upper_threshold": 0.1732798387350471,
+          "island_removed_fraction": 0.75,
+          "island_retained_fraction": 0.25,
+          "frameworks_excluded": [
+            "asymptotic_safety",
+            "causal_set",
+            "cdt",
+            "discovered_data_driven",
+            "discovered_high_g8",
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced",
+            "string_tree_eft"
+          ],
+          "feasible_frameworks_excluded": [
+            "asymptotic_safety",
+            "causal_set",
+            "cdt",
+            "discovered_data_driven",
+            "discovered_high_g8",
+            "string_tree_eft"
+          ],
+          "preexisting_excluded_frameworks": [
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ]
+        },
+        {
+          "cut": "q50",
+          "upper_threshold": 0.27475644682827166,
+          "island_removed_fraction": 0.5,
+          "island_retained_fraction": 0.5,
+          "frameworks_excluded": [
+            "cdt",
+            "discovered_data_driven",
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ],
+          "feasible_frameworks_excluded": [
+            "cdt",
+            "discovered_data_driven"
+          ],
+          "preexisting_excluded_frameworks": [
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ]
+        },
+        {
+          "cut": "tangent_discovered_data_driven",
+          "upper_threshold": 0.3495,
+          "island_removed_fraction": 0.3058823529411765,
+          "island_retained_fraction": 0.6941176470588235,
+          "frameworks_excluded": [
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ],
+          "feasible_frameworks_excluded": [],
+          "preexisting_excluded_frameworks": [
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ]
+        },
+        {
+          "cut": "q75",
+          "upper_threshold": 0.3789509982687855,
+          "island_removed_fraction": 0.25,
+          "island_retained_fraction": 0.75,
+          "frameworks_excluded": [
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ],
+          "feasible_frameworks_excluded": [],
+          "preexisting_excluded_frameworks": [
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ]
+        }
+      ],
+      "best_internal_cut": {
+        "cut": "q25",
+        "upper_threshold": 0.1732798387350471,
+        "island_removed_fraction": 0.75,
+        "island_retained_fraction": 0.25,
+        "frameworks_excluded": [
+          "asymptotic_safety",
+          "causal_set",
+          "cdt",
+          "discovered_data_driven",
+          "discovered_high_g8",
+          "discovered_parity_violating",
+          "group_field_theory",
+          "horava_lifshitz",
+          "lqg_induced",
+          "string_tree_eft"
+        ],
+        "feasible_frameworks_excluded": [
+          "asymptotic_safety",
+          "causal_set",
+          "cdt",
+          "discovered_data_driven",
+          "discovered_high_g8",
+          "string_tree_eft"
+        ],
+        "preexisting_excluded_frameworks": [
+          "discovered_parity_violating",
+          "group_field_theory",
+          "horava_lifshitz",
+          "lqg_induced"
+        ]
+      },
+      "favored_safe_cut": {
+        "cut": "tangent_discovered_data_driven",
+        "upper_threshold": 0.3495,
+        "island_removed_fraction": 0.3058823529411765,
+        "island_retained_fraction": 0.6941176470588235,
+        "frameworks_excluded": [
+          "discovered_parity_violating",
+          "group_field_theory",
+          "horava_lifshitz",
+          "lqg_induced"
+        ],
+        "feasible_frameworks_excluded": [],
+        "preexisting_excluded_frameworks": [
+          "discovered_parity_violating",
+          "group_field_theory",
+          "horava_lifshitz",
+          "lqg_induced"
+        ]
+      }
+    },
+    {
+      "direction": "PCA:PC2",
+      "dominant_coefficient": "g_8",
+      "loadings": {
+        "g_4": 0.191,
+        "g_6": 0.295,
+        "g_8": 0.888,
+        "g_C": -0.294
+      },
+      "island_extent_std": 0.11595412579710308,
+      "extent_bootstrap_95ci": [
+        0.1097551744760084,
+        0.12037073818825639
+      ],
+      "projection_range": [
+        0.12075432371834258,
+        0.6949794684794033
+      ],
+      "favored_projection": 0.5082691740235807,
+      "candidate_cuts_ranked": [
+        {
+          "cut": "q25",
+          "upper_threshold": 0.3595177448595306,
+          "island_removed_fraction": 0.75,
+          "island_retained_fraction": 0.25,
+          "frameworks_excluded": [
+            "asymptotic_safety",
+            "causal_set",
+            "cdt",
+            "discovered_data_driven",
+            "discovered_high_g8",
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced",
+            "string_tree_eft"
+          ],
+          "feasible_frameworks_excluded": [
+            "asymptotic_safety",
+            "causal_set",
+            "cdt",
+            "discovered_data_driven",
+            "discovered_high_g8",
+            "string_tree_eft"
+          ],
+          "preexisting_excluded_frameworks": [
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ]
+        },
+        {
+          "cut": "q50",
+          "upper_threshold": 0.439714093857842,
+          "island_removed_fraction": 0.5,
+          "island_retained_fraction": 0.5,
+          "frameworks_excluded": [
+            "cdt",
+            "discovered_data_driven",
+            "discovered_high_g8",
+            "group_field_theory",
+            "lqg_induced",
+            "string_tree_eft"
+          ],
+          "feasible_frameworks_excluded": [
+            "cdt",
+            "discovered_data_driven",
+            "discovered_high_g8",
+            "string_tree_eft"
+          ],
+          "preexisting_excluded_frameworks": [
+            "group_field_theory",
+            "lqg_induced"
+          ]
+        },
+        {
+          "cut": "tangent_discovered_data_driven",
+          "upper_threshold": 0.5082691740235807,
+          "island_removed_fraction": 0.2897058823529412,
+          "island_retained_fraction": 0.7102941176470587,
+          "frameworks_excluded": [
+            "discovered_high_g8"
+          ],
+          "feasible_frameworks_excluded": [
+            "discovered_high_g8"
+          ],
+          "preexisting_excluded_frameworks": []
+        },
+        {
+          "cut": "q75",
+          "upper_threshold": 0.5232315013234616,
+          "island_removed_fraction": 0.25,
+          "island_retained_fraction": 0.75,
+          "frameworks_excluded": [
+            "discovered_high_g8"
+          ],
+          "feasible_frameworks_excluded": [
+            "discovered_high_g8"
+          ],
+          "preexisting_excluded_frameworks": []
+        }
+      ],
+      "best_internal_cut": {
+        "cut": "q25",
+        "upper_threshold": 0.3595177448595306,
+        "island_removed_fraction": 0.75,
+        "island_retained_fraction": 0.25,
+        "frameworks_excluded": [
+          "asymptotic_safety",
+          "causal_set",
+          "cdt",
+          "discovered_data_driven",
+          "discovered_high_g8",
+          "discovered_parity_violating",
+          "group_field_theory",
+          "horava_lifshitz",
+          "lqg_induced",
+          "string_tree_eft"
+        ],
+        "feasible_frameworks_excluded": [
+          "asymptotic_safety",
+          "causal_set",
+          "cdt",
+          "discovered_data_driven",
+          "discovered_high_g8",
+          "string_tree_eft"
+        ],
+        "preexisting_excluded_frameworks": [
+          "discovered_parity_violating",
+          "group_field_theory",
+          "horava_lifshitz",
+          "lqg_induced"
+        ]
+      },
+      "favored_safe_cut": {
+        "cut": "tangent_discovered_data_driven",
+        "upper_threshold": 0.5082691740235807,
+        "island_removed_fraction": 0.2897058823529412,
+        "island_retained_fraction": 0.7102941176470587,
+        "frameworks_excluded": [
+          "discovered_high_g8"
+        ],
+        "feasible_frameworks_excluded": [
+          "discovered_high_g8"
+        ],
+        "preexisting_excluded_frameworks": []
+      }
+    },
+    {
+      "direction": "single:g_8",
+      "dominant_coefficient": "g_8",
+      "loadings": {
+        "g_8": 1.0
+      },
+      "island_extent_std": 0.11200100423446423,
+      "extent_bootstrap_95ci": [
+        0.10803803624038825,
+        0.11702667107976725
+      ],
+      "projection_range": [
+        0.07372634445987286,
+        0.6730057936220709
+      ],
+      "favored_projection": 0.404,
+      "candidate_cuts_ranked": [
+        {
+          "cut": "q25",
+          "upper_threshold": 0.3102660346590858,
+          "island_removed_fraction": 0.75,
+          "island_retained_fraction": 0.25,
+          "frameworks_excluded": [
+            "cdt",
+            "discovered_data_driven",
+            "discovered_high_g8",
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced",
+            "string_tree_eft"
+          ],
+          "feasible_frameworks_excluded": [
+            "cdt",
+            "discovered_data_driven",
+            "discovered_high_g8",
+            "string_tree_eft"
+          ],
+          "preexisting_excluded_frameworks": [
+            "discovered_parity_violating",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ]
+        },
+        {
+          "cut": "q50",
+          "upper_threshold": 0.3868413145248434,
+          "island_removed_fraction": 0.5,
+          "island_retained_fraction": 0.5,
+          "frameworks_excluded": [
+            "discovered_data_driven",
+            "discovered_high_g8",
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced",
+            "string_tree_eft"
+          ],
+          "feasible_frameworks_excluded": [
+            "discovered_data_driven",
+            "discovered_high_g8",
+            "string_tree_eft"
+          ],
+          "preexisting_excluded_frameworks": [
+            "group_field_theory",
+            "horava_lifshitz",
+            "lqg_induced"
+          ]
+        },
+        {
+          "cut": "tangent_discovered_data_driven",
+          "upper_threshold": 0.404,
+          "island_removed_fraction": 0.4602941176470588,
+          "island_retained_fraction": 0.5397058823529413,
+          "frameworks_excluded": [
+            "discovered_high_g8",
+            "horava_lifshitz"
+          ],
+          "feasible_frameworks_excluded": [
+            "discovered_high_g8"
+          ],
+          "preexisting_excluded_frameworks": [
+            "horava_lifshitz"
+          ]
+        },
+        {
+          "cut": "q75",
+          "upper_threshold": 0.4699775955102453,
+          "island_removed_fraction": 0.25,
+          "island_retained_fraction": 0.75,
+          "frameworks_excluded": [
+            "discovered_high_g8"
+          ],
+          "feasible_frameworks_excluded": [
+            "discovered_high_g8"
+          ],
+          "preexisting_excluded_frameworks": []
+        }
+      ],
+      "best_internal_cut": {
+        "cut": "q25",
+        "upper_threshold": 0.3102660346590858,
+        "island_removed_fraction": 0.75,
+        "island_retained_fraction": 0.25,
+        "frameworks_excluded": [
+          "cdt",
+          "discovered_data_driven",
+          "discovered_high_g8",
+          "discovered_parity_violating",
+          "group_field_theory",
+          "horava_lifshitz",
+          "lqg_induced",
+          "string_tree_eft"
+        ],
+        "feasible_frameworks_excluded": [
+          "cdt",
+          "discovered_data_driven",
+          "discovered_high_g8",
+          "string_tree_eft"
+        ],
+        "preexisting_excluded_frameworks": [
+          "discovered_parity_violating",
+          "group_field_theory",
+          "horava_lifshitz",
+          "lqg_induced"
+        ]
+      },
+      "favored_safe_cut": {
+        "cut": "tangent_discovered_data_driven",
+        "upper_threshold": 0.404,
+        "island_removed_fraction": 0.4602941176470588,
+        "island_retained_fraction": 0.5397058823529413,
+        "frameworks_excluded": [
+          "discovered_high_g8",
+          "horava_lifshitz"
+        ],
+        "feasible_frameworks_excluded": [
+          "discovered_high_g8"
+        ],
+        "preexisting_excluded_frameworks": [
+          "horava_lifshitz"
+        ]
+      }
+    }
+  ],
+  "top_single_directions": [
+    "single:g_C",
+    "single:g_8"
+  ],
+  "geometry_status": "weyl_g8_frontier_confirmed",
+  "robustness": {
+    "basis": "seed_jackknife_over_parity_even_sampling",
+    "minimum_pass_fraction": 0.8,
+    "pass_fraction": 1.0,
+    "passes_minimum_robustness": true,
+    "rows": [
+      {
+        "seed": 25050,
+        "sample_count": 20000,
+        "island_survivors": 94,
+        "top_single_directions": [
+          "single:g_C",
+          "single:g_8"
+        ],
+        "pc1_dominant": "g_C",
+        "pc2_dominant": "g_8",
+        "stable_weyl_g8_frontier": true
+      },
+      {
+        "seed": 25051,
+        "sample_count": 20000,
+        "island_survivors": 117,
+        "top_single_directions": [
+          "single:g_C",
+          "single:g_8"
+        ],
+        "pc1_dominant": "g_C",
+        "pc2_dominant": "g_8",
+        "stable_weyl_g8_frontier": true
+      },
+      {
+        "seed": 25052,
+        "sample_count": 20000,
+        "island_survivors": 142,
+        "top_single_directions": [
+          "single:g_C",
+          "single:g_8"
+        ],
+        "pc1_dominant": "g_C",
+        "pc2_dominant": "g_8",
+        "stable_weyl_g8_frontier": true
+      },
+      {
+        "seed": 25053,
+        "sample_count": 20000,
+        "island_survivors": 110,
+        "top_single_directions": [
+          "single:g_C",
+          "single:g_8"
+        ],
+        "pc1_dominant": "g_C",
+        "pc2_dominant": "g_8",
+        "stable_weyl_g8_frontier": true
+      },
+      {
+        "seed": 25054,
+        "sample_count": 20000,
+        "island_survivors": 127,
+        "top_single_directions": [
+          "single:g_C",
+          "single:g_8"
+        ],
+        "pc1_dominant": "g_C",
+        "pc2_dominant": "g_8",
+        "stable_weyl_g8_frontier": true
+      }
+    ]
+  },
+  "claimable_discriminator_now": false,
+  "claim_blockers": [
+    "g_C_observables_are_structural_or_toy_mapped",
+    "g_8_has_no_source_backed_measurement_program",
+    "framework_exclusions_depend_on_internal_cut_choice",
+    "pca_axes_are_internal_island_geometry_not_external_measurements"
+  ],
+  "route_status": "frontier_alive_but_not_claimable",
+  "interpretation": "The parity-even island still points at g_C/Weyl^2 and g_8 as the widest non-tower directions. Internal cuts along those axes can separate named frameworks and shrink the island, but this is not a framework-level quantum-gravity discriminator until g_C and g_8 are tied to source-backed, externally measured observables.",
+  "honest": "The cut sweep uses internal island geometry and toy observable mappings. It is an experiment-design frontier, not a discovery or exclusion claim."
+}
