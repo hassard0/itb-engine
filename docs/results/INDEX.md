@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (155 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (156 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -208,3 +208,4 @@ Auto-generated front door to the full research program (155 notes). Regenerate w
 | v2.46 | [v2.46 - Native tower ownership frontier: the live blocker is adapter absence](2026-06-19-v2.46-native-tower-ownership-frontier.md) | v2.45 made promotion-ready evidence insufficient for a framework claim. v2.46 asks whether any live framework already supplies native owned tower evidence. |
 | v2.47 | [v2.47 - Native adapter acceptance harness: future adapters have a live gate](2026-06-19-v2.47-native-adapter-acceptance-harness.md) | v2.46 showed no live framework exposes native tower evidence. v2.47 proves a future native adapter will route through the real discriminator frontier. |
 | v2.48 | [v2.48 - Candidate native-adapter promotion audit: existing evidence cannot be promoted](2026-06-19-v2.48-candidate-native-adapter-promotion-audit.md) | v2.47 proved future native adapters have a live gate. v2.48 asks whether any current non-synthetic tower candidate can honestly be promoted into that adapter today. |
+| v2.49 | [v2.49 - Birefringence evidence freshness: alive, but not claimable](2026-06-19-v2.49-birefringence-evidence-freshness.md) | After the native tower route blocked on missing owned spectra, v2.49 checks whether newer birefringence measurements keep the one-observable non-tower route alive. |

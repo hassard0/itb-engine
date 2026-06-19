@@ -1,0 +1,148 @@
+{
+  "basis": [
+    "cosmic_birefringence_primary_sources",
+    "engine_data_driven_eft_route",
+    "systematics_guardrail"
+  ],
+  "engine_baseline": {
+    "beta_deg": 0.34,
+    "sigma_deg": 0.09,
+    "zero_exclusion_sigma": 3.777777777777778
+  },
+  "dataset_count": 5,
+  "positive_sign_dataset_count": 5,
+  "systematic_dominated_datasets": [
+    "planck_pr4_map_space_sevem",
+    "planck_pr4_map_space_commander"
+  ],
+  "datasets": [
+    {
+      "label": "engine_baseline_wmap_planck",
+      "beta_deg": 0.342,
+      "sigma_deg": 0.094,
+      "systematic_sigma_deg": null,
+      "year": 2022,
+      "instrument_family": "WMAP+Planck",
+      "status": "published_hint",
+      "source": {
+        "title": "Eskilt and Komatsu, Improved Constraints on Cosmic Birefringence from the WMAP and Planck CMB Polarization Data",
+        "url": "https://arxiv.org/abs/2205.13962"
+      },
+      "total_sigma_deg": 0.094,
+      "sign": "positive",
+      "zero_exclusion_sigma": 3.638297872340426,
+      "consistent_with_zero_at_2sigma": false
+    },
+    {
+      "label": "act_dr6",
+      "beta_deg": 0.215,
+      "sigma_deg": 0.074,
+      "systematic_sigma_deg": null,
+      "year": 2026,
+      "instrument_family": "ACT",
+      "status": "published_hint_systematics_unresolved",
+      "source": {
+        "title": "Diego-Palazuelos and Komatsu, Cosmic Birefringence from the Atacama Cosmology Telescope Data Release 6",
+        "url": "https://arxiv.org/abs/2509.13654"
+      },
+      "total_sigma_deg": 0.074,
+      "sign": "positive",
+      "zero_exclusion_sigma": 2.9054054054054057,
+      "consistent_with_zero_at_2sigma": false
+    },
+    {
+      "label": "planck_pr4_map_space_sevem",
+      "beta_deg": 0.46,
+      "sigma_deg": 0.04,
+      "systematic_sigma_deg": 0.28,
+      "year": 2025,
+      "instrument_family": "Planck",
+      "status": "systematic_dominated_consistent_with_zero",
+      "source": {
+        "title": "Sullivan et al., Planck PR4 (NPIPE) map-space cosmic birefringence",
+        "url": "https://arxiv.org/abs/2502.07654"
+      },
+      "total_sigma_deg": 0.28284271247461906,
+      "sign": "positive",
+      "zero_exclusion_sigma": 1.626345596729059,
+      "consistent_with_zero_at_2sigma": true
+    },
+    {
+      "label": "planck_pr4_map_space_commander",
+      "beta_deg": 0.48,
+      "sigma_deg": 0.04,
+      "systematic_sigma_deg": 0.28,
+      "year": 2025,
+      "instrument_family": "Planck",
+      "status": "systematic_dominated_consistent_with_zero",
+      "source": {
+        "title": "Sullivan et al., Planck PR4 (NPIPE) map-space cosmic birefringence",
+        "url": "https://arxiv.org/abs/2502.07654"
+      },
+      "total_sigma_deg": 0.28284271247461906,
+      "sign": "positive",
+      "zero_exclusion_sigma": 1.6970562748477136,
+      "consistent_with_zero_at_2sigma": true
+    },
+    {
+      "label": "hybrid_ilc_planck_pr4",
+      "beta_deg": 0.32,
+      "sigma_deg": 0.12,
+      "systematic_sigma_deg": null,
+      "year": 2025,
+      "instrument_family": "Planck",
+      "status": "methodological_cross_check",
+      "source": {
+        "title": "Remazeilles, Field-level constraints on cosmic birefringence from hybrid ILC maps",
+        "url": "https://arxiv.org/abs/2507.22109"
+      },
+      "total_sigma_deg": 0.12,
+      "sign": "positive",
+      "zero_exclusion_sigma": 2.666666666666667,
+      "consistent_with_zero_at_2sigma": false
+    }
+  ],
+  "independent_instrument_pair_fixed_effect": {
+    "labels": [
+      "engine_baseline_wmap_planck",
+      "act_dr6"
+    ],
+    "beta_deg": 0.26359223029625495,
+    "sigma_deg": 0.0581446029951385,
+    "zero_exclusion_sigma": 4.5333911785122005
+  },
+  "claimable_discriminator_now": false,
+  "claim_blockers": [
+    "no_5sigma_single_dataset_detection",
+    "instrument_angle_miscalibration_degeneracy",
+    "foreground_systematics_not_closed",
+    "data_driven_eft_still_one_observable_dominated"
+  ],
+  "route_status": "alive_but_not_claimable",
+  "literature_guardrail": {
+    "claim": "Newer analyses keep the birefringence sign positive but do not turn the data-driven EFT into a solved quantum-gravity discriminator. Systematics and one-observable dependence remain the controlling blockers.",
+    "primary_sources": [
+      {
+        "title": "Eskilt and Komatsu, Improved Constraints on Cosmic Birefringence from the WMAP and Planck CMB Polarization Data",
+        "url": "https://arxiv.org/abs/2205.13962"
+      },
+      {
+        "title": "Diego-Palazuelos and Komatsu, Cosmic Birefringence from the Atacama Cosmology Telescope Data Release 6",
+        "url": "https://arxiv.org/abs/2509.13654"
+      },
+      {
+        "title": "Sullivan et al., Planck PR4 (NPIPE) map-space cosmic birefringence",
+        "url": "https://arxiv.org/abs/2502.07654"
+      },
+      {
+        "title": "Sullivan et al., Planck PR4 (NPIPE) map-space cosmic birefringence",
+        "url": "https://arxiv.org/abs/2502.07654"
+      },
+      {
+        "title": "Remazeilles, Field-level constraints on cosmic birefringence from hybrid ILC maps",
+        "url": "https://arxiv.org/abs/2507.22109"
+      }
+    ]
+  },
+  "interpretation": "The non-tower route remains more empirically alive than the current native tower route: ACT DR6 and Planck cross-checks preserve a positive beta sign. It is still not a solution claim because no single dataset has a systematic-safe 5 sigma detection, and the engine's favored data-driven EFT remains dominated by this one-observable route."
+}
