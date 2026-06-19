@@ -1,0 +1,74 @@
+{
+  "map": "beta = 3.4 * g_R2_parity",
+  "contest": "data-driven EFT (matches beta) vs the consistent PARITY-EVEN survivor (string tree-EFT, beta=0); parity-even wins at a tie by parsimony",
+  "scenarios": [
+    {
+      "scenario": "A canonical (MK hint)",
+      "beta": 0.34,
+      "sigma": 0.09,
+      "data_driven_posterior": 0.9992,
+      "best_parity_even": "string_tree_eft",
+      "best_parity_even_posterior": 0.0008,
+      "winner": "discovered_data_driven",
+      "decisively_favored_BF>10": true,
+      "g_R2_parity_favored": 0.1
+    },
+    {
+      "scenario": "B null / parity-even",
+      "beta": 0.0,
+      "sigma": 0.09,
+      "data_driven_posterior": 0.5,
+      "best_parity_even": "string_tree_eft",
+      "best_parity_even_posterior": 0.5,
+      "winner": "string_tree_eft",
+      "decisively_favored_BF>10": false,
+      "g_R2_parity_favored": 0.0
+    },
+    {
+      "scenario": "C tightened (LiteBIRD)",
+      "beta": 0.34,
+      "sigma": 0.03,
+      "data_driven_posterior": 1.0,
+      "best_parity_even": "string_tree_eft",
+      "best_parity_even_posterior": 0.0,
+      "winner": "discovered_data_driven",
+      "decisively_favored_BF>10": true,
+      "g_R2_parity_favored": 0.1
+    },
+    {
+      "scenario": "D half-value",
+      "beta": 0.17,
+      "sigma": 0.09,
+      "data_driven_posterior": 0.8562,
+      "best_parity_even": "string_tree_eft",
+      "best_parity_even_posterior": 0.1438,
+      "winner": "discovered_data_driven",
+      "decisively_favored_BF>10": false,
+      "g_R2_parity_favored": 0.05
+    },
+    {
+      "scenario": "E higher",
+      "beta": 0.45,
+      "sigma": 0.09,
+      "data_driven_posterior": 1.0,
+      "best_parity_even": "string_tree_eft",
+      "best_parity_even_posterior": 0.0,
+      "winner": "discovered_data_driven",
+      "decisively_favored_BF>10": true,
+      "g_R2_parity_favored": 0.1324
+    }
+  ],
+  "decisive_pivot_beta_hint_sigma": 0.193,
+  "decisive_pivot_beta_LiteBIRD_sigma": 0.065,
+  "null_scenario_winner": "string_tree_eft",
+  "null_scenario_data_driven_posterior": 0.5,
+  "canonical_decisively_favored": true,
+  "interpretation": "The engine's favored quantum gravity PIVOTS on the birefringence interpretation. Under the NULL (beta=0) scenario the data-driven EFT ties the parity-even survivor (posterior 0.5) -- so by PARSIMONY the parity-even framework wins (the data-driven EFT adds an unneeded parity coupling): it was a creature of the hint. The data-driven EFT becomes DECISIVELY favored (Bayes factor > 10) only for beta above ~0.19 at the current hint precision (sigma=0.09), tightening to ~0.06 at LiteBIRD precision (sigma=0.03). The canonical beta=0.34 is well above both -> decisively favored today; a tightened null would collapse it. This makes v2.04's 'one-observable theory' concrete: the conclusion is CONTINGENT on the ~3.6sigma birefringence reading.",
+  "honest": "toy Gaussian likelihoods + the beta=3.4*g_R2_parity map; the data-driven EFT tracks the assumed beta by construction, so this measures CONTINGENCY, not confirmation. Robust content is the pivot structure.",
+  "relates_to": [
+    "v2.01 Bayesian comparison",
+    "v2.04 minimal falsifier",
+    "v1.78/79"
+  ],
+  "png": "/tmp/alt_birefringence.png"
+}

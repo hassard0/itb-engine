@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (122 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (123 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -104,7 +104,7 @@ Auto-generated front door to the full research program (122 notes). Regenerate w
 | v1.56 | [v1.56 — Multimessenger parity: the GW+EM birefringence test (and why t](2026-06-08-v1.56-multimessenger.md) | If one dark-energy axion (v1.46) sources both gravitational parity (g_R2_parity, |
 | v1.57 | [v1.57 — Capstone: the multi-probe parity web, and the close of the cre](2026-06-08-v1.57-parity-web-capstone.md) | The engine's signature prediction — a parity-violating gravity with |
 
-## Arc VII - Framework / scope / constraint expansion (v1.58+): new theories, 3-D scope, new bounds
+## Arc VII - Framework / scope / constraint expansion (v1.58-99): new theories, 3-D scope, new bounds
 
 | ver | note | one line |
 |---|---|---|
@@ -149,3 +149,26 @@ Auto-generated front door to the full research program (122 notes). Regenerate w
 | v1.97 | [v1.97 — The adversarial self-audit: which constraints are sole gatekee](2026-06-08-v1.97-adversarial-audit.md) | The Gödel test (v1.87) and constraint Jenga (v1.93) audited the engine's logic and |
 | v1.98 | [v1.98 — Holographic complexity growth: do higher-derivative gravities ](2026-06-08-v1.98-complexity-rate.md) | 'Complexity = Action' (Brown–Roberts–Susskind–Swingle–Zhao 2016): the late-time growth |
 | v1.99 | [v1.99 — The a-theorem along the RG phylogeny: does the central charge ](2026-06-09-v1.99-a-theorem-flow.md) | v1.89 treated the Wilson coefficients as running couplings flowing to a UV fixed point. |
+
+## Arc VIII - Synthesis and self-audit (v2.00-10): Bayesian comparison, falsifiers, robustness
+
+| ver | note | one line |
+|---|---|---|
+| v2.0 | [The ITB Engine v2.0 — A Research Report](2026-06-09-v2.0-RESEARCH-REPORT.md) | An information-theoretic bootstrap for quantum gravity: constraining the higher-derivative EFT, confronting it with data, and auditing the engine itself. |
+| v2.01 | [v2.01 — Bayesian model comparison: which quantum-gravity framework doe](2026-06-09-v2.01-bayesian-model-comparison.md) | The whole catalogue of 14 frameworks, one posterior. Given the ingested data, **which |
+| v2.02 | [v2.02 — Inverse constraint design: which new bound would most shrink t](2026-06-09-v2.02-inverse-constraint-design.md) | v1.93 *removed* each constraint to rank irreplaceability. v2.02 *adds* hypothetical ones: |
+| v2.03 | [v2.03 — The holographic (a,c) RG portrait: the conformal-collider plan](2026-06-09-v2.03-ac-portrait.md) | The Euler/Weyl² basis split (v1.71) turned out to be the spine of the engine. v2.03 draws |
+| v2.04 | [v2.04 — The minimal falsifier: the single cheapest measurement that wo](2026-06-09-v2.04-minimal-falsifier.md) | The data-driven EFT (v1.79) makes a 9-observable fingerprint. v2.04 asks the |
+| v2.05 | [v2.05 — The observable redundancy map: how many independent things can](2026-06-09-v2.05-observable-redundancy.md) | The engine has 9 observables but only 8 coefficients on a ~3.4-dimensional island |
+| v2.06 | [v2.06 — The information-geometry curvature map: the island as a Rieman](2026-06-09-v2.06-info-geometry.md) | Treat the space of EFTs as a manifold with the **Fisher information metric** |
+| v2.07 | [v2.07 — The robustness jackknife: which of the program's headline find](2026-06-09-v2.07-robustness-jackknife.md) | v1.80 stress-tested *one* finding (the birefringence tension) against the toy-prefactor |
+| v2.08 | [v2.08 — The alternative-birefringence EFTs: how the favored quantum gr](2026-06-09-v2.08-alt-birefringence.md) | v2.04 found the data-driven EFT is a *one-observable theory* — its whole case rests on |
+| v2.09 | [v2.09 — The thematic taxonomy: a navigable map of the program](2026-06-09-v2.09-taxonomy.md) | empirical swampland** opens up at v1.69–v1.85 (data ingestion); and **meta-experiments |
+| v2.10 | [v2.10 — Capstone: the ITB program in one page](2026-06-09-v2.10-capstone.md) | Take the space of higher-derivative quantum-gravity EFTs. Impose **every consistency |
+
+## Arc IX - Agent-swarm research loop (v2.11+): adversarial cycles and live compute
+
+| ver | note | one line |
+|---|---|---|
+| v2.11 | [v2.11 Agent Swarm Research Program (2026-06-19)](2026-06-19-v2.11-agent-swarm-research-program.md) | Use a coordinated adversarial swarm to push the ITB engine toward a quantum-gravity discriminator: a compact set of consistency constraints plus measurements th |
+| v2.12 | [v2.12 - Agent-swarm cycle 1: boundary audit and parity contingency](2026-06-19-v2.12-agent-swarm-cycle-1.md) | Run the engine as a research team and ask what survives adversarial review: |

@@ -1,0 +1,230 @@
+{
+  "samples": 300000,
+  "survivors": 1786,
+  "volume_fraction": 0.00595,
+  "volume_fraction_stderr": 0.00014,
+  "box": {
+    "g_4": [
+      0.05,
+      0.6
+    ],
+    "g_6": [
+      0.05,
+      0.6
+    ],
+    "g_8": [
+      0.05,
+      0.7
+    ],
+    "g_R2": [
+      0.02,
+      0.45
+    ],
+    "g_R3": [
+      0.0,
+      0.4
+    ],
+    "g_R2_parity": [
+      0.0,
+      0.0
+    ],
+    "g_R3_parity": [
+      0.0,
+      0.0
+    ],
+    "g_C": [
+      0.02,
+      0.6
+    ]
+  },
+  "pca": {
+    "n_varying_dims": 6,
+    "varying_coords": [
+      "g_4",
+      "g_6",
+      "g_8",
+      "g_R2",
+      "g_R3",
+      "g_C"
+    ],
+    "eigenvalues": [
+      2.8207,
+      1.1103,
+      0.7693,
+      0.6927,
+      0.3637,
+      0.2467
+    ],
+    "cumulative_variance": [
+      0.4698,
+      0.6548,
+      0.7829,
+      0.8983,
+      0.9589,
+      1.0
+    ],
+    "dims_for_90pct": 5,
+    "dims_for_99pct": 6,
+    "participation_ratio": 3.448,
+    "top_PC1_loadings": {
+      "g_4": -0.509,
+      "g_6": -0.483,
+      "g_8": -0.016,
+      "g_R2": -0.505,
+      "g_R3": -0.378,
+      "g_C": -0.331
+    },
+    "mean": {
+      "g_4": 0.4376,
+      "g_6": 0.2919,
+      "g_8": 0.3861,
+      "g_R2": 0.1772,
+      "g_R3": 0.077,
+      "g_C": 0.281
+    },
+    "std": {
+      "g_4": 0.0902,
+      "g_6": 0.0794,
+      "g_8": 0.113,
+      "g_R2": 0.0584,
+      "g_R3": 0.0376,
+      "g_C": 0.1305
+    }
+  },
+  "island_walls_nearest_margin_count": [
+    [
+      "generalized_anomaly_inflow",
+      1417
+    ],
+    [
+      "bekenstein_tight",
+      125
+    ],
+    [
+      "dispersion_tower_g6_squared_bound",
+      53
+    ],
+    [
+      "scalar_convexity_g6_vs_g4",
+      50
+    ],
+    [
+      "cross_sector_efthedron",
+      45
+    ],
+    [
+      "graviton_forward_positivity",
+      29
+    ],
+    [
+      "cft_flat_space_bound",
+      19
+    ],
+    [
+      "anomaly_cancellation",
+      11
+    ]
+  ],
+  "primary_excluders_of_failures": [
+    [
+      "hofman_maldacena_wedge",
+      66737
+    ],
+    [
+      "cft_flat_space_bound",
+      48320
+    ],
+    [
+      "complexity_cutoff",
+      39820
+    ],
+    [
+      "graviton_forward_positivity",
+      31067
+    ],
+    [
+      "scalar_wgc",
+      26145
+    ],
+    [
+      "swampland_distance_conjecture",
+      23755
+    ],
+    [
+      "matter_s3_positivity",
+      19335
+    ],
+    [
+      "dispersion_tower_g6_squared_bound",
+      11580
+    ]
+  ],
+  "frameworks_by_distance_to_centroid": [
+    {
+      "framework": "causal_set",
+      "z_dist_to_centroid": 1.17,
+      "feasible": true
+    },
+    {
+      "framework": "asymptotic_safety",
+      "z_dist_to_centroid": 1.42,
+      "feasible": true
+    },
+    {
+      "framework": "discovered_high_g8",
+      "z_dist_to_centroid": 2.2,
+      "feasible": true
+    },
+    {
+      "framework": "string_tree_eft",
+      "z_dist_to_centroid": 2.52,
+      "feasible": true
+    },
+    {
+      "framework": "cdt",
+      "z_dist_to_centroid": 2.79,
+      "feasible": true
+    },
+    {
+      "framework": "emergent_gravity",
+      "z_dist_to_centroid": 3.47,
+      "feasible": true
+    },
+    {
+      "framework": "discovered_data_driven",
+      "z_dist_to_centroid": 4.27,
+      "feasible": false
+    },
+    {
+      "framework": "discovered_novel",
+      "z_dist_to_centroid": 4.37,
+      "feasible": true
+    },
+    {
+      "framework": "discovered_parity_violating",
+      "z_dist_to_centroid": 5.96,
+      "feasible": false
+    },
+    {
+      "framework": "group_field_theory",
+      "z_dist_to_centroid": 6.2,
+      "feasible": false
+    },
+    {
+      "framework": "lqg_induced",
+      "z_dist_to_centroid": 6.93,
+      "feasible": false
+    },
+    {
+      "framework": "pure_gr",
+      "z_dist_to_centroid": 8.17,
+      "feasible": true
+    },
+    {
+      "framework": "horava_lifshitz",
+      "z_dist_to_centroid": 11.04,
+      "feasible": false
+    }
+  ],
+  "png": "/tmp/island_census.png"
+}

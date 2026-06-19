@@ -1,0 +1,123 @@
+{
+  "island_points": 388,
+  "effective_dimension_PCA": 3.35,
+  "fattest_direction_overall": "PCA:PC1",
+  "fattest_single_coefficients": [
+    "g_C",
+    "g_8",
+    "g_4"
+  ],
+  "matches_v1_88_blind_spots": true,
+  "pca_top3_loadings": {
+    "PC1": {
+      "g_4": -0.25,
+      "g_6": -0.17,
+      "g_8": 0.02,
+      "g_R2": -0.21,
+      "g_R3": -0.09,
+      "g_C": -0.93,
+      "g_R2_parity": -0.04,
+      "g_R3_parity": -0.01
+    },
+    "PC2": {
+      "g_4": -0.44,
+      "g_6": -0.47,
+      "g_8": -0.67,
+      "g_R2": -0.24,
+      "g_R3": -0.09,
+      "g_C": 0.26,
+      "g_R2_parity": -0.05,
+      "g_R3_parity": -0.01
+    },
+    "PC3": {
+      "g_4": -0.49,
+      "g_6": -0.26,
+      "g_8": 0.73,
+      "g_R2": -0.27,
+      "g_R3": -0.1,
+      "g_C": 0.27,
+      "g_R2_parity": -0.05,
+      "g_R3_parity": 0.02
+    }
+  },
+  "ranking_by_extent": [
+    {
+      "direction": "PCA:PC1",
+      "island_extent_std": 0.1345,
+      "shrinkage_keep_favored": 0.745
+    },
+    {
+      "direction": "single:g_C",
+      "island_extent_std": 0.1293,
+      "shrinkage_keep_favored": 0.384
+    },
+    {
+      "direction": "total_magnitude",
+      "island_extent_std": 0.1143,
+      "shrinkage_keep_favored": 0.015
+    },
+    {
+      "direction": "PCA:PC2",
+      "island_extent_std": 0.1042,
+      "shrinkage_keep_favored": 0.946
+    },
+    {
+      "direction": "single:g_8",
+      "island_extent_std": 0.0921,
+      "shrinkage_keep_favored": 0.348
+    },
+    {
+      "direction": "a_minus_c (g_R2-g_C)",
+      "island_extent_std": 0.087,
+      "shrinkage_keep_favored": 0.332
+    },
+    {
+      "direction": "matter_minus_graviton",
+      "island_extent_std": 0.0825,
+      "shrinkage_keep_favored": 0.425
+    },
+    {
+      "direction": "PCA:PC3",
+      "island_extent_std": 0.0823,
+      "shrinkage_keep_favored": 0.784
+    },
+    {
+      "direction": "single:g_4",
+      "island_extent_std": 0.0738,
+      "shrinkage_keep_favored": 0.131
+    },
+    {
+      "direction": "single:g_6",
+      "island_extent_std": 0.0659,
+      "shrinkage_keep_favored": 0.008
+    },
+    {
+      "direction": "single:g_R2",
+      "island_extent_std": 0.0535,
+      "shrinkage_keep_favored": 0.015
+    },
+    {
+      "direction": "single:g_R3",
+      "island_extent_std": 0.0415,
+      "shrinkage_keep_favored": 0.124
+    },
+    {
+      "direction": "single:g_R3_parity",
+      "island_extent_std": 0.0314,
+      "shrinkage_keep_favored": 0.265
+    },
+    {
+      "direction": "parity_total",
+      "island_extent_std": 0.0243,
+      "shrinkage_keep_favored": 0.0
+    },
+    {
+      "direction": "single:g_R2_parity",
+      "island_extent_std": 0.0145,
+      "shrinkage_keep_favored": 0.0
+    }
+  ],
+  "interpretation": "The fattest (most under-constrained) island directions are where a NEW bound would be most informative. They align with the sloppy PCA modes and the v1.88 blind spots (g_8, g_R3) -- confirming that the coefficients with no current experiment are exactly the directions along which the consistent island is widest. A new bound there shrinks the island most while keeping the data-driven EFT (the threshold is set tangent at it).",
+  "honest": "toy candidate family + tangent-at-favored threshold; robust content is the RANKING of fattest directions and the blind-spot/sloppy-mode alignment.",
+  "png": "/tmp/inverse_constraint_design.png"
+}

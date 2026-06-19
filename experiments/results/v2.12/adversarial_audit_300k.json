@@ -1,0 +1,118 @@
+{
+  "samples": 300000,
+  "island_V0": 77,
+  "failure_multiplicity_histogram": {
+    "0": 77,
+    "1": 946,
+    "2": 3399,
+    "3": 6575,
+    "4": 10671,
+    "5": 14255,
+    "6": 18072,
+    "7": 22100,
+    "8": 24439,
+    "9": 24938,
+    "10": 24409,
+    "11": 22845,
+    "12": 20934,
+    "13": 17816,
+    "14": 15292,
+    "15": 13544
+  },
+  "near_miss_fail_exactly_one": 946,
+  "identity_check": "V_without_c = V0 + gatekeeper(c): sole-gatekeeper volume IS the v1.93 irreplaceability (growth% = 100*gatekeeper/V0).",
+  "top_sole_gatekeepers": [
+    {
+      "constraint": "swampland_distance_conjecture",
+      "class": "C",
+      "gatekeeper_volume": 458,
+      "irreplaceability_growth_pct": 594.8
+    },
+    {
+      "constraint": "generalized_anomaly_inflow",
+      "class": "C",
+      "gatekeeper_volume": 233,
+      "irreplaceability_growth_pct": 302.6
+    },
+    {
+      "constraint": "t_hooft_anomaly_matching",
+      "class": "C",
+      "gatekeeper_volume": 52,
+      "irreplaceability_growth_pct": 67.5
+    },
+    {
+      "constraint": "complexity_cutoff",
+      "class": "C",
+      "gatekeeper_volume": 50,
+      "irreplaceability_growth_pct": 64.9
+    },
+    {
+      "constraint": "dispersion_tower_g6_squared_bound",
+      "class": "A",
+      "gatekeeper_volume": 49,
+      "irreplaceability_growth_pct": 63.6
+    },
+    {
+      "constraint": "scalar_convexity_g6_vs_g4",
+      "class": "A",
+      "gatekeeper_volume": 42,
+      "irreplaceability_growth_pct": 54.5
+    },
+    {
+      "constraint": "bekenstein_tight",
+      "class": "B",
+      "gatekeeper_volume": 20,
+      "irreplaceability_growth_pct": 26.0
+    },
+    {
+      "constraint": "hofman_maldacena_wedge",
+      "class": "A",
+      "gatekeeper_volume": 18,
+      "irreplaceability_growth_pct": 23.4
+    }
+  ],
+  "constraints_that_never_act_alone": [
+    "scalar_positivity_g4",
+    "scalar_positivity_g6",
+    "scalar_positivity_g8",
+    "graviton_mixed_positivity",
+    "cubic_curvature_positivity",
+    "cubic_graviton_matter_bound",
+    "spin_four_positivity",
+    "cemz_causality",
+    "holographic_subadditivity",
+    "bnossw_monogamy",
+    "quantum_focusing_conjecture",
+    "generalized_second_law",
+    "parity_violating_positivity",
+    "left_handed_graviton_positivity",
+    "right_handed_graviton_positivity",
+    "parity_violating_cubic_bound",
+    "ligo_birefringence_bound",
+    "eft_validity_box",
+    "causality_bound",
+    "weak_gravity_conjecture",
+    "wald_entropy_positivity",
+    "repulsive_force_conjecture",
+    "ligo_graviton_mass_bound",
+    "species_scale_bound"
+  ],
+  "n_never_sole": 24,
+  "hardest_near_miss": {
+    "min_margin_on_others": 0.0308,
+    "killed_by": "t_hooft_anomaly_matching",
+    "coefficients": {
+      "g_4": 0.5482,
+      "g_6": 0.3743,
+      "g_8": 0.3883,
+      "g_R2": 0.2768,
+      "g_R3": 0.0532,
+      "g_C": 0.4742,
+      "g_R2_parity": 0.0285,
+      "g_R3_parity": -0.0391
+    }
+  },
+  "interpretation": "Most excluded points fail MANY constraints (deep outside); a thin near-miss shell fails exactly one. The sole-gatekeeper ranking equals the v1.93 irreplaceability (an identity). Constraints that NEVER act alone are redundant at the boundary. The hardest near-miss is the theory that most nearly fools the stack -- consistent with everything except a single condition.",
+  "honest": "near-miss is sampling-resolution-dependent; robust content is the ranking, the multiplicity distribution, and the hardest-near-miss point.",
+  "png": "/tmp/adversarial_audit.png"
+}

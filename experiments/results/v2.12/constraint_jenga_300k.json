@@ -1,0 +1,299 @@
+{
+  "samples": 300000,
+  "island_V0": 77,
+  "island_fraction": 0.00026,
+  "most_load_bearing": [
+    [
+      "swampland_distance_conjecture",
+      627.3
+    ],
+    [
+      "generalized_anomaly_inflow",
+      290.9
+    ],
+    [
+      "complexity_cutoff",
+      64.9
+    ],
+    [
+      "t_hooft_anomaly_matching",
+      61.0
+    ],
+    [
+      "scalar_convexity_g6_vs_g4",
+      46.8
+    ],
+    [
+      "dispersion_tower_g6_squared_bound",
+      42.9
+    ],
+    [
+      "hofman_maldacena_wedge",
+      35.1
+    ],
+    [
+      "bekenstein_tight",
+      28.6
+    ]
+  ],
+  "redundant_in_this_basis": [
+    "scalar_positivity_g4",
+    "scalar_positivity_g6",
+    "scalar_positivity_g8",
+    "graviton_mixed_positivity",
+    "cubic_curvature_positivity",
+    "cubic_graviton_matter_bound",
+    "spin_four_positivity",
+    "cemz_causality",
+    "holographic_subadditivity",
+    "bnossw_monogamy",
+    "quantum_focusing_conjecture",
+    "generalized_second_law",
+    "parity_violating_positivity",
+    "left_handed_graviton_positivity",
+    "right_handed_graviton_positivity",
+    "parity_violating_cubic_bound",
+    "ligo_birefringence_bound",
+    "eft_validity_box",
+    "causality_bound",
+    "weak_gravity_conjecture",
+    "wald_entropy_positivity",
+    "repulsive_force_conjecture",
+    "ligo_graviton_mass_bound"
+  ],
+  "n_redundant": 23,
+  "most_decisive_for_frameworks": [],
+  "interpretation": "The load-bearing constraints (largest island growth on removal) do the real exclusion work; the redundant ones are implied by the others in this toy basis. The single constraint that flips the most framework verdicts is the one whose correctness most matters for 'which quantum gravity survives'.",
+  "honest": "redundancy is basis/encoding-dependent (a redundant constraint here may bite in a fuller basis, cf the a-theorem v1.70); robust content is the ranking.",
+  "all_constraints": [
+    {
+      "constraint": "swampland_distance_conjecture",
+      "class": "C",
+      "island_growth_pct": 627.3,
+      "redundant": false
+    },
+    {
+      "constraint": "generalized_anomaly_inflow",
+      "class": "C",
+      "island_growth_pct": 290.9,
+      "redundant": false
+    },
+    {
+      "constraint": "complexity_cutoff",
+      "class": "C",
+      "island_growth_pct": 64.9,
+      "redundant": false
+    },
+    {
+      "constraint": "t_hooft_anomaly_matching",
+      "class": "C",
+      "island_growth_pct": 61.0,
+      "redundant": false
+    },
+    {
+      "constraint": "scalar_convexity_g6_vs_g4",
+      "class": "A",
+      "island_growth_pct": 46.8,
+      "redundant": false
+    },
+    {
+      "constraint": "dispersion_tower_g6_squared_bound",
+      "class": "A",
+      "island_growth_pct": 42.9,
+      "redundant": false
+    },
+    {
+      "constraint": "hofman_maldacena_wedge",
+      "class": "A",
+      "island_growth_pct": 35.1,
+      "redundant": false
+    },
+    {
+      "constraint": "bekenstein_tight",
+      "class": "B",
+      "island_growth_pct": 28.6,
+      "redundant": false
+    },
+    {
+      "constraint": "cft_flat_space_bound",
+      "class": "A",
+      "island_growth_pct": 19.5,
+      "redundant": false
+    },
+    {
+      "constraint": "graviton_forward_positivity",
+      "class": "A",
+      "island_growth_pct": 7.8,
+      "redundant": false
+    },
+    {
+      "constraint": "scalar_wgc",
+      "class": "C",
+      "island_growth_pct": 7.8,
+      "redundant": false
+    },
+    {
+      "constraint": "matter_s3_positivity",
+      "class": "A",
+      "island_growth_pct": 3.9,
+      "redundant": false
+    },
+    {
+      "constraint": "anomaly_cancellation",
+      "class": "C",
+      "island_growth_pct": 2.6,
+      "redundant": false
+    },
+    {
+      "constraint": "cross_sector_efthedron",
+      "class": "A",
+      "island_growth_pct": 1.3,
+      "redundant": false
+    },
+    {
+      "constraint": "species_scale_bound",
+      "class": "C",
+      "island_growth_pct": 1.3,
+      "redundant": false
+    },
+    {
+      "constraint": "scalar_positivity_g4",
+      "class": "A",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "scalar_positivity_g6",
+      "class": "A",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "scalar_positivity_g8",
+      "class": "A",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "graviton_mixed_positivity",
+      "class": "A",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "cubic_curvature_positivity",
+      "class": "A",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "cubic_graviton_matter_bound",
+      "class": "A",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "spin_four_positivity",
+      "class": "A",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "cemz_causality",
+      "class": "A",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "holographic_subadditivity",
+      "class": "B",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "bnossw_monogamy",
+      "class": "B",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "quantum_focusing_conjecture",
+      "class": "B",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "generalized_second_law",
+      "class": "B",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "parity_violating_positivity",
+      "class": "A",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "left_handed_graviton_positivity",
+      "class": "A",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "right_handed_graviton_positivity",
+      "class": "A",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "parity_violating_cubic_bound",
+      "class": "A",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "ligo_birefringence_bound",
+      "class": "B",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "eft_validity_box",
+      "class": "C",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "causality_bound",
+      "class": "A",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "weak_gravity_conjecture",
+      "class": "C",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "wald_entropy_positivity",
+      "class": "C",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "repulsive_force_conjecture",
+      "class": "C",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    },
+    {
+      "constraint": "ligo_graviton_mass_bound",
+      "class": "B",
+      "island_growth_pct": 0.0,
+      "redundant": true
+    }
+  ],
+  "png": "/tmp/constraint_jenga.png"
+}

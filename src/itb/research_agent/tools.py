@@ -89,7 +89,8 @@ def compute_intersection() -> dict:
     constraints = build_stack(bnossw_mean="geometric", rfc_form="convex_hull")
     initial = {
         "g_4": 0.5, "g_6": 0.4, "g_8": 0.4, "g_R2": 0.2,
-        "g_R3": 0.15, "g_R2_parity": 0.0, "g_R3_parity": 0.0,
+        "g_R3": 0.15, "g_C": 0.25,
+        "g_R2_parity": 0.0, "g_R3_parity": 0.0,
     }
     res = search_intersection(constraints, initial)
     return {
@@ -257,7 +258,7 @@ TOOL_SCHEMAS = [
         "name": "compute_intersection",
         "description": (
             "Run the engine's scipy-Nelder-Mead intersection search over all "
-            "currently-registered constraints in 7-coefficient space. Returns "
+            "currently-registered constraints in 8-coefficient space. Returns "
             "the feasible point (or closest infeasible) with worst-case margin "
             "and binding/violated constraints."
         ),

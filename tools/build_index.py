@@ -22,7 +22,9 @@ ARCS = [
     (1.39, 1.44, "Arc IV - The decisive experiment (v1.39-44): GIE, sub-mm gravity, the CC link"),
     (1.45, 1.51, "Arc V - Dark-energy axion + synthesis (v1.45-51): CMB EB, DESI, the scorecard"),
     (1.52, 1.57, "Arc VI - The multi-probe parity web (v1.52-57): inference, chiral HD, ringdown, forecast"),
-    (1.58, 1.99, "Arc VII - Framework / scope / constraint expansion (v1.58+): new theories, 3-D scope, new bounds"),
+    (1.58, 1.99, "Arc VII - Framework / scope / constraint expansion (v1.58-99): new theories, 3-D scope, new bounds"),
+    (2.00, 2.10, "Arc VIII - Synthesis and self-audit (v2.00-10): Bayesian comparison, falsifiers, robustness"),
+    (2.11, 9.99, "Arc IX - Agent-swarm research loop (v2.11+): adversarial cycles and live compute"),
 ]
 
 
@@ -41,13 +43,15 @@ def parse(path):
     for line in txt.splitlines():
         s = line.strip()
         if s.startswith("**") and s.endswith("**") and len(s) < 200 and "Date:" not in s:
-            summ = s.strip("*").strip(); break
+            summ = s.strip("*").strip()
+            break
     if not summ:
         # first non-heading, non-meta, non-divider, non-bold paragraph
         for line in txt.splitlines():
             s = line.strip()
             if s and not s.startswith(("#", "-", "|", ">", "**", "```", "*", "<")) and "Date:" not in s and "Compute:" not in s:
-                summ = s; break
+                summ = s
+                break
     summ = re.sub(r"\s+", " ", summ)[:160]
     return {"date": date, "ver": ver, "ver_str": ver_str, "title": title,
             "summary": summ, "file": base}
@@ -61,7 +65,9 @@ def main():
     out = ["# ITB Engine - Research Results Index", "",
            "Auto-generated front door to the full research program "
            f"({len(notes)} notes). Regenerate with `python tools/build_index.py`.", ""]
-    is_old = lambda n: n["date"] < "2026-06"     # original engine (2026-05-xx)
+    def is_old(n):
+        return n["date"] < "2026-06"
+
     for lo, hi, label in ARCS:
         if lo < 1.0:   # Foundations: all pre-June notes, regardless of version float
             arc_notes = [n for n in notes if is_old(n)]
