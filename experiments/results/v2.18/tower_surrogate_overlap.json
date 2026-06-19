@@ -1,0 +1,182 @@
+{
+  "input": "experiments/results/v2.13/phases_8d_1200.json",
+  "basis": [
+    "g_4",
+    "g_6",
+    "g_8",
+    "g_R2",
+    "g_R3",
+    "g_C",
+    "g_R2_parity",
+    "g_R3_parity"
+  ],
+  "samples": 20000,
+  "seed": 2718,
+  "N_max": 3.0,
+  "sampling": "targeted mixture of v2.13 centroids, parity-zero bridges, lobe-lobe segments with local jitter, and broad stress points in the v2.13 box",
+  "legacy_overlap_constraints": [
+    "swampland_distance_conjecture",
+    "species_scale_bound",
+    "complexity_cutoff"
+  ],
+  "modes": {
+    "curvature_l1": {
+      "mode": "curvature_l1",
+      "N_max": 3.0,
+      "reference_feasible": 12370,
+      "candidate_feasible": 12370,
+      "surrogate_gate_count": 0,
+      "irreplaceability_growth_pct": 0.0,
+      "all_surrogate_failures": 3079,
+      "overlap_all_surrogate_failures": {
+        "complexity_cutoff": {
+          "count": 2867,
+          "fraction_of_surrogate_failures": 0.9311464761286132
+        },
+        "swampland_distance_conjecture": {
+          "count": 1175,
+          "fraction_of_surrogate_failures": 0.38161740824943163
+        },
+        "species_scale_bound": {
+          "count": 3079,
+          "fraction_of_surrogate_failures": 1.0
+        }
+      },
+      "overlap_reference_gate": {
+        "complexity_cutoff": {
+          "count": 0,
+          "fraction_of_reference_gate": null
+        },
+        "swampland_distance_conjecture": {
+          "count": 0,
+          "fraction_of_reference_gate": null
+        },
+        "species_scale_bound": {
+          "count": 0,
+          "fraction_of_reference_gate": null
+        }
+      },
+      "reference_gate_passes_old_distance_and_species": 0,
+      "interpretation": "reference_gate_count is the number of sampled points admitted by the corrected stack with old hard distance/species removed but rejected by this tower surrogate. irreplaceability_growth_pct is the sampled island growth when the surrogate is removed."
+    },
+    "curvature_l2": {
+      "mode": "curvature_l2",
+      "N_max": 3.0,
+      "reference_feasible": 12370,
+      "candidate_feasible": 12370,
+      "surrogate_gate_count": 0,
+      "irreplaceability_growth_pct": 0.0,
+      "all_surrogate_failures": 327,
+      "overlap_all_surrogate_failures": {
+        "complexity_cutoff": {
+          "count": 325,
+          "fraction_of_surrogate_failures": 0.9938837920489296
+        },
+        "swampland_distance_conjecture": {
+          "count": 120,
+          "fraction_of_surrogate_failures": 0.3669724770642202
+        },
+        "species_scale_bound": {
+          "count": 327,
+          "fraction_of_surrogate_failures": 1.0
+        }
+      },
+      "overlap_reference_gate": {
+        "complexity_cutoff": {
+          "count": 0,
+          "fraction_of_reference_gate": null
+        },
+        "swampland_distance_conjecture": {
+          "count": 0,
+          "fraction_of_reference_gate": null
+        },
+        "species_scale_bound": {
+          "count": 0,
+          "fraction_of_reference_gate": null
+        }
+      },
+      "reference_gate_passes_old_distance_and_species": 0,
+      "interpretation": "reference_gate_count is the number of sampled points admitted by the corrected stack with old hard distance/species removed but rejected by this tower surrogate. irreplaceability_growth_pct is the sampled island growth when the surrogate is removed."
+    },
+    "curvature_plus_parity_l2": {
+      "mode": "curvature_plus_parity_l2",
+      "N_max": 3.0,
+      "reference_feasible": 12370,
+      "candidate_feasible": 12370,
+      "surrogate_gate_count": 0,
+      "irreplaceability_growth_pct": 0.0,
+      "all_surrogate_failures": 489,
+      "overlap_all_surrogate_failures": {
+        "complexity_cutoff": {
+          "count": 484,
+          "fraction_of_surrogate_failures": 0.9897750511247444
+        },
+        "swampland_distance_conjecture": {
+          "count": 164,
+          "fraction_of_surrogate_failures": 0.33537832310838445
+        },
+        "species_scale_bound": {
+          "count": 489,
+          "fraction_of_surrogate_failures": 1.0
+        }
+      },
+      "overlap_reference_gate": {
+        "complexity_cutoff": {
+          "count": 0,
+          "fraction_of_reference_gate": null
+        },
+        "swampland_distance_conjecture": {
+          "count": 0,
+          "fraction_of_reference_gate": null
+        },
+        "species_scale_bound": {
+          "count": 0,
+          "fraction_of_reference_gate": null
+        }
+      },
+      "reference_gate_passes_old_distance_and_species": 0,
+      "interpretation": "reference_gate_count is the number of sampled points admitted by the corrected stack with old hard distance/species removed but rejected by this tower surrogate. irreplaceability_growth_pct is the sampled island growth when the surrogate is removed."
+    },
+    "curvature_l2_plus_parity_norm": {
+      "mode": "curvature_l2_plus_parity_norm",
+      "N_max": 3.0,
+      "reference_feasible": 12370,
+      "candidate_feasible": 12370,
+      "surrogate_gate_count": 0,
+      "irreplaceability_growth_pct": 0.0,
+      "all_surrogate_failures": 2089,
+      "overlap_all_surrogate_failures": {
+        "complexity_cutoff": {
+          "count": 1984,
+          "fraction_of_surrogate_failures": 0.9497367161321206
+        },
+        "swampland_distance_conjecture": {
+          "count": 705,
+          "fraction_of_surrogate_failures": 0.33748204882719
+        },
+        "species_scale_bound": {
+          "count": 2025,
+          "fraction_of_surrogate_failures": 0.9693633317376735
+        }
+      },
+      "overlap_reference_gate": {
+        "complexity_cutoff": {
+          "count": 0,
+          "fraction_of_reference_gate": null
+        },
+        "swampland_distance_conjecture": {
+          "count": 0,
+          "fraction_of_reference_gate": null
+        },
+        "species_scale_bound": {
+          "count": 0,
+          "fraction_of_reference_gate": null
+        }
+      },
+      "reference_gate_passes_old_distance_and_species": 0,
+      "interpretation": "reference_gate_count is the number of sampled points admitted by the corrected stack with old hard distance/species removed but rejected by this tower surrogate. irreplaceability_growth_pct is the sampled island growth when the surrogate is removed."
+    }
+  },
+  "interpretation": "A low surrogate_gate_count means the tower surrogate is mostly redundant with the corrected stack on this targeted sample. A high overlap with old distance/species means it is reproducing the old aggregate-curvature sector rather than adding a new independent wall.",
+  "guardrail": "This is a targeted overlap audit, not a global Monte Carlo volume theorem and not a validation of any surrogate as the physical SDC."
+}
