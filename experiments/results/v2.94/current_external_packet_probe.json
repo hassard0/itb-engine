@@ -1,0 +1,230 @@
+{
+  "version": "v2.94",
+  "basis": [
+    "v2.93_external_evidence_intake_gate",
+    "current_public_source_recheck_2026_06_19"
+  ],
+  "probe_scope": "current_public_sources_against_intake_gate",
+  "candidate_count": 4,
+  "schema_ready_candidates": [],
+  "claim_ready_candidates": [],
+  "claimable_discriminator_now": false,
+  "source_urls_checked": [
+    "https://www.hepdata.net/record/150737",
+    "https://arxiv.org/abs/2504.12855",
+    "https://arxiv.org/abs/2606.19432",
+    "https://link.aps.org/doi/10.1103/61j9-cjkk"
+  ],
+  "blocker_counts": {
+    "claim_gate_not_satisfied:component_systematics_budget_closed": 4,
+    "claim_gate_not_satisfied:engine_axis_mapping_source_backed": 4,
+    "claim_gate_not_satisfied:framework_exclusion_math_present": 4,
+    "claim_gate_not_satisfied:public_likelihood_or_covariance_present": 4,
+    "claim_gate_not_satisfied:registered_framework_domain_bounded": 4,
+    "engine_axis_target_missing": 1,
+    "g8_not_isolated_from_lower_matter_moments": 1,
+    "jacobian_to_engine_g8_missing": 2,
+    "missing_framework_exclusion_math": 4,
+    "missing_public_likelihood_or_covariance": 4,
+    "missing_required_fields": 4,
+    "observable_basis_not_adapter_supported": 1,
+    "operator_identity_missing": 2,
+    "source_backed_operator_normalization_missing": 1,
+    "source_native_packet_not_engine_axis": 1,
+    "wilson_coefficient_normalization_not_engine_g8": 1
+  },
+  "rows": [
+    {
+      "label": "cms_hepdata_energy_correlator_2024",
+      "route": "future_public_g8_measurement_ingestion",
+      "source_url": "https://www.hepdata.net/record/150737",
+      "citation": "CMS Collaboration, Measurement of energy correlators inside jets and determination of alpha_S(m_Z), Phys. Rev. Lett. 133, 071903",
+      "source_assessment": "Public QCD jet E2C/E3C data and correlations are useful acquisition material, but they are not an engine-normalized low-energy QG g_8 packet.",
+      "schema_ready": false,
+      "claim_ready": false,
+      "missing_fields": [
+        "analysis_code_or_likelihood_sampler",
+        "axis",
+        "central_value_or_bound",
+        "covariance_or_likelihood",
+        "cutoff_or_energy_domain",
+        "discriminator_math",
+        "framework_applicability_domain",
+        "jacobian_or_projection_to_g_8",
+        "low_energy_eft_validity_statement",
+        "measurement_kind",
+        "mixing_with_g_4_g_6",
+        "observable_basis",
+        "statistical_uncertainty",
+        "systematic_uncertainty",
+        "systematics_budget",
+        "systematics_components",
+        "wilson_coefficient_normalization"
+      ],
+      "active_rejection_tests": [
+        "g8_not_isolated_from_lower_matter_moments",
+        "missing_framework_exclusion_math",
+        "missing_public_likelihood_or_covariance",
+        "observable_basis_not_adapter_supported",
+        "wilson_coefficient_normalization_not_engine_g8"
+      ],
+      "failed_claim_gates": [
+        "public_likelihood_or_covariance_present",
+        "component_systematics_budget_closed",
+        "engine_axis_mapping_source_backed",
+        "registered_framework_domain_bounded",
+        "framework_exclusion_math_present"
+      ],
+      "blockers": [
+        "claim_gate_not_satisfied:component_systematics_budget_closed",
+        "claim_gate_not_satisfied:engine_axis_mapping_source_backed",
+        "claim_gate_not_satisfied:framework_exclusion_math_present",
+        "claim_gate_not_satisfied:public_likelihood_or_covariance_present",
+        "claim_gate_not_satisfied:registered_framework_domain_bounded",
+        "g8_not_isolated_from_lower_matter_moments",
+        "missing_framework_exclusion_math",
+        "missing_public_likelihood_or_covariance",
+        "missing_required_fields",
+        "observable_basis_not_adapter_supported",
+        "wilson_coefficient_normalization_not_engine_g8"
+      ]
+    },
+    {
+      "label": "bresciani_partial_wave_unitarity_bounds_2025",
+      "route": "future_source_backed_g8_operator_identity_search",
+      "source_url": "https://arxiv.org/abs/2504.12855",
+      "citation": "Bresciani, Levati, and Paradisi, Amplitudes and partial wave unitarity bounds",
+      "source_assessment": "A useful partial-wave formalism for higher-spin/EFT bounds, but not an external numerical g_8 measurement or source-backed operator identity packet.",
+      "schema_ready": false,
+      "claim_ready": false,
+      "missing_fields": [
+        "covariance_or_likelihood",
+        "low_energy_eft_domain",
+        "lower_moment_mixing_control",
+        "normalization_convention",
+        "operator_identity_statement",
+        "source_jacobian_to_engine_g8",
+        "uncertainty_propagation"
+      ],
+      "active_rejection_tests": [
+        "jacobian_to_engine_g8_missing",
+        "missing_framework_exclusion_math",
+        "missing_public_likelihood_or_covariance",
+        "operator_identity_missing"
+      ],
+      "failed_claim_gates": [
+        "public_likelihood_or_covariance_present",
+        "component_systematics_budget_closed",
+        "engine_axis_mapping_source_backed",
+        "registered_framework_domain_bounded",
+        "framework_exclusion_math_present"
+      ],
+      "blockers": [
+        "claim_gate_not_satisfied:component_systematics_budget_closed",
+        "claim_gate_not_satisfied:engine_axis_mapping_source_backed",
+        "claim_gate_not_satisfied:framework_exclusion_math_present",
+        "claim_gate_not_satisfied:public_likelihood_or_covariance_present",
+        "claim_gate_not_satisfied:registered_framework_domain_bounded",
+        "jacobian_to_engine_g8_missing",
+        "missing_framework_exclusion_math",
+        "missing_public_likelihood_or_covariance",
+        "missing_required_fields",
+        "operator_identity_missing"
+      ]
+    },
+    {
+      "label": "plestid_quilez_long_range_partial_wave_2026",
+      "route": "future_source_backed_g8_operator_identity_search",
+      "source_url": "https://arxiv.org/abs/2606.19432",
+      "citation": "Plestid and Quilez Lasanta, Partial-wave unitarity and long-range interactions",
+      "source_assessment": "A current theory source that may improve future partial-wave normalization work for long-range forces, but it does not supply a g_8 packet, covariance, or framework exclusion.",
+      "schema_ready": false,
+      "claim_ready": false,
+      "missing_fields": [
+        "covariance_or_likelihood",
+        "low_energy_eft_domain",
+        "lower_moment_mixing_control",
+        "normalization_convention",
+        "operator_identity_statement",
+        "source_jacobian_to_engine_g8",
+        "uncertainty_propagation"
+      ],
+      "active_rejection_tests": [
+        "jacobian_to_engine_g8_missing",
+        "missing_framework_exclusion_math",
+        "missing_public_likelihood_or_covariance",
+        "operator_identity_missing"
+      ],
+      "failed_claim_gates": [
+        "public_likelihood_or_covariance_present",
+        "component_systematics_budget_closed",
+        "engine_axis_mapping_source_backed",
+        "registered_framework_domain_bounded",
+        "framework_exclusion_math_present"
+      ],
+      "blockers": [
+        "claim_gate_not_satisfied:component_systematics_budget_closed",
+        "claim_gate_not_satisfied:engine_axis_mapping_source_backed",
+        "claim_gate_not_satisfied:framework_exclusion_math_present",
+        "claim_gate_not_satisfied:public_likelihood_or_covariance_present",
+        "claim_gate_not_satisfied:registered_framework_domain_bounded",
+        "jacobian_to_engine_g8_missing",
+        "missing_framework_exclusion_math",
+        "missing_public_likelihood_or_covariance",
+        "missing_required_fields",
+        "operator_identity_missing"
+      ]
+    },
+    {
+      "label": "quest_length_fluctuation_limits_2025",
+      "route": "gw_parity_operator_normalization_search",
+      "source_url": "https://link.aps.org/doi/10.1103/61j9-cjkk",
+      "citation": "QUEST Collaboration, Broadband limits on stochastic length fluctuations from a pair of table-top interferometers",
+      "source_assessment": "A real interferometric limit on stochastic length fluctuations, but it is not a PPV-to-engine gravitational parity operator bridge or registered-framework exclusion packet.",
+      "schema_ready": false,
+      "claim_ready": false,
+      "missing_fields": [
+        "covariance_or_samples",
+        "engine_axis_target",
+        "framework_exclusion_projection",
+        "frequency_reference",
+        "helicity_basis_harmonization",
+        "ppv_parameter_definition",
+        "sign_convention",
+        "source_backed_operator_normalization",
+        "source_native_likelihood",
+        "unit_conversion"
+      ],
+      "active_rejection_tests": [
+        "engine_axis_target_missing",
+        "missing_framework_exclusion_math",
+        "missing_public_likelihood_or_covariance",
+        "source_backed_operator_normalization_missing",
+        "source_native_packet_not_engine_axis"
+      ],
+      "failed_claim_gates": [
+        "public_likelihood_or_covariance_present",
+        "component_systematics_budget_closed",
+        "engine_axis_mapping_source_backed",
+        "registered_framework_domain_bounded",
+        "framework_exclusion_math_present"
+      ],
+      "blockers": [
+        "claim_gate_not_satisfied:component_systematics_budget_closed",
+        "claim_gate_not_satisfied:engine_axis_mapping_source_backed",
+        "claim_gate_not_satisfied:framework_exclusion_math_present",
+        "claim_gate_not_satisfied:public_likelihood_or_covariance_present",
+        "claim_gate_not_satisfied:registered_framework_domain_bounded",
+        "engine_axis_target_missing",
+        "missing_framework_exclusion_math",
+        "missing_public_likelihood_or_covariance",
+        "missing_required_fields",
+        "source_backed_operator_normalization_missing",
+        "source_native_packet_not_engine_axis"
+      ]
+    }
+  ],
+  "route_status": "current_source_probe_no_external_packet_satisfies_gate",
+  "best_next_artifact": "No current public source in this probe satisfies the v2.93 intake gate; obtain a real engine-normalized external packet before attempting promotion.",
+  "interpretation": "The recheck found useful source material and one current partial-wave formalism update, but no source provides a complete engine-normalized packet with public likelihood, closed systematics, and framework-exclusion math."
+}
