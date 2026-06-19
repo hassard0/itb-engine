@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (145 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (146 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -194,3 +194,4 @@ Auto-generated front door to the full research program (145 notes). Regenerate w
 | v2.32 | [v2.32 - Discriminator frontier: what is actually blocking a claim](2026-06-19-v2.32-discriminator-frontier.md) | v2.31 added a provenance gate for tower claims. v2.32 asks: |
 | v2.33 | [v2.33 - Tower evidence sourceability: current encoders cannot supply t](2026-06-19-v2.33-tower-evidence-sourceability.md) | v2.32 identified the next required artifact: |
 | v2.34 | [v2.34 - Quintic KK tower evidence candidate: first sourced row, still ](2026-06-19-v2.34-quintic-tower-evidence-candidate.md) | v2.33 proved that current framework encoders do not already contain tower evidence. |
+| v2.35 | [v2.35 - Quintic SDC bound audit: finite-range evidence is not an asymp](2026-06-19-v2.35-quintic-sdc-bound-audit.md) | v2.34 added the first non-synthetic, primary-source tower candidate. v2.35 asks: |

@@ -1,0 +1,74 @@
+{
+  "basis": [
+    "quintic_kk_slope",
+    "sdc_bound_context",
+    "scope_gate"
+  ],
+  "candidate": {
+    "label": "ashmore_ruehle_quintic_kk",
+    "framework": "string_tree_eft",
+    "mass_exponent_alpha": {
+      "mean": 0.453,
+      "one_sigma": 0.008673469387755102,
+      "ci95_half_width": 0.017,
+      "ci95_lower": 0.436,
+      "ci95_upper": 0.47000000000000003
+    }
+  },
+  "bounds": [
+    {
+      "label": "ashmore_ruehle_finite_range_sqrt6_reference",
+      "bound_value": 0.4082482904638631,
+      "source": {
+        "title": "Ashmore and Ruehle, Moduli-dependent KK towers and the swampland distance conjecture on the quintic Calabi-Yau manifold",
+        "url": "https://arxiv.org/abs/2103.07472"
+      },
+      "comparison_status": "candidate_95ci_above_bound",
+      "adjudication": "legitimate_finite_range_context",
+      "scope_note": "The source itself compares the fitted finite-range mass exponent to an alpha=1/sqrt(6) reference."
+    },
+    {
+      "label": "etheredge_d4_asymptotic_lightest_tower_bound",
+      "bound_value": 0.7071067811865475,
+      "source": {
+        "title": "Etheredge et al., Sharpening the Distance Conjecture in Diverse Dimensions",
+        "url": "https://arxiv.org/abs/2206.04063"
+      },
+      "comparison_status": "candidate_95ci_below_bound",
+      "adjudication": "not_adjudicable_scope_mismatch",
+      "scope_note": "The bound is an asymptotic lightest-tower claim in d dimensions; the candidate is a finite-range scalar Laplacian subtower on one quintic compactification."
+    },
+    {
+      "label": "etheredge_d10_asymptotic_reference",
+      "bound_value": 0.35355339059327373,
+      "source": {
+        "title": "Etheredge et al., Sharpening the Distance Conjecture in Diverse Dimensions",
+        "url": "https://arxiv.org/abs/2206.04063"
+      },
+      "comparison_status": "candidate_95ci_above_bound",
+      "adjudication": "context_only_not_framework_test",
+      "scope_note": "The d=10 value is useful as a dimension check, not as the four-dimensional tower discriminator used by the engine."
+    }
+  ],
+  "bound_status_counts": {
+    "context_only_not_framework_test": 1,
+    "legitimate_finite_range_context": 1,
+    "not_adjudicable_scope_mismatch": 1
+  },
+  "decisive_sdc_tests_now": [],
+  "claimable_framework_exclusions_now": [],
+  "literature_guardrail": {
+    "claim": "The quintic source gives a real finite-range slope, but it is not an adjudication of asymptotic SDC bounds or a framework exclusion.",
+    "primary_sources": [
+      {
+        "title": "Ashmore and Ruehle, Moduli-dependent KK towers and the swampland distance conjecture on the quintic Calabi-Yau manifold",
+        "url": "https://arxiv.org/abs/2103.07472"
+      },
+      {
+        "title": "Etheredge et al., Sharpening the Distance Conjecture in Diverse Dimensions",
+        "url": "https://arxiv.org/abs/2206.04063"
+      }
+    ]
+  },
+  "interpretation": "The sourced quintic slope is above the 1/sqrt(6) reference used in the source, below the d=4 sharpened asymptotic bound, and not a valid test of that d=4 bound because the scopes differ."
+}
