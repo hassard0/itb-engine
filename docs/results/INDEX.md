@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (163 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (164 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -216,3 +216,4 @@ Auto-generated front door to the full research program (163 notes). Regenerate w
 | v2.54 | [v2.54 - g8 high-moment measurement specification: the route is defined, not satisfied](2026-06-19-v2.54-g8-high-moment-measurement-specification.md) | v2.54 turns the `g_8` high-moment route into an explicit external-measurement contract, rejecting forward-energy artifacts and keeping the route non-claimable. |
 | v2.55 | [v2.55 - g8 existing measurement packet search: public data exists, but not for engine g8](2026-06-19-v2.55-g8-existing-measurement-packet-search.md) | v2.55 screens existing energy-correlator and detector/partial-wave sources, finding real external data but no source-backed engine-normalized `g_8` packet. |
 | v2.56 | [v2.56 - Birefringence parity adapter requirements: beta is alive, the engine map is not](2026-06-19-v2.56-birefringence-parity-adapter-requirements.md) | v2.56 keeps the cosmic-birefringence route alive while requiring a source-backed beta-to-parity adapter before any framework claim. |
+| v2.57 | [v2.57 - Birefringence prediction non-circularity: no source-backed beta prediction yet](2026-06-19-v2.57-birefringence-prediction-noncircularity-audit.md) | v2.57 audits framework beta predictions and finds no non-circular, source-backed, stack-compatible framework claim from the birefringence route. |

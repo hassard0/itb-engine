@@ -1,0 +1,287 @@
+{
+  "basis": [
+    "v2.56_birefringence_parity_adapter_requirements",
+    "registered_framework_coefficients",
+    "current_theory_stack_point_evaluation"
+  ],
+  "framework_count": 13,
+  "catalogued_framework_count": 9,
+  "engine_discovered_framework_count": 3,
+  "data_driven_framework_count": 1,
+  "toy_beta_map": {
+    "formula": "beta_pred_deg = KAPPA_BETA * g_R2_parity",
+    "kappa_beta": 3.4,
+    "status": "toy_order_of_magnitude_not_source_backed",
+    "beta_meas_deg": 0.34,
+    "beta_sigma_deg": 0.09
+  },
+  "independent_toy_map_matches_2sigma": [
+    "group_field_theory",
+    "horava_lifshitz",
+    "lqg_induced"
+  ],
+  "data_driven_toy_map_matches_2sigma": [
+    "discovered_data_driven"
+  ],
+  "claim_ready_frameworks": [],
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "beta_prediction_not_within_hint_band": 9,
+    "framework_fails_current_stack": 3,
+    "missing_source_backed_beta_adapter": 13,
+    "not_claim_ready": 13,
+    "prediction_reuses_beta_input": 1
+  },
+  "rows": [
+    {
+      "framework": "asymptotic_safety",
+      "provenance": "catalogued_framework_representative",
+      "g_R2_parity": 0.0,
+      "g_R3_parity": 0.0,
+      "beta_pred_deg_toy_map": 0.0,
+      "beta_residual_sigma_toy_map": -3.777777777777778,
+      "matches_beta_hint_2sigma_under_toy_map": false,
+      "independent_of_beta_input": true,
+      "uses_beta_input": false,
+      "source_backed_beta_adapter": false,
+      "passes_current_stack": true,
+      "claim_ready": false,
+      "blockers": [
+        "beta_prediction_not_within_hint_band",
+        "missing_source_backed_beta_adapter",
+        "not_claim_ready"
+      ]
+    },
+    {
+      "framework": "causal_set",
+      "provenance": "catalogued_framework_representative",
+      "g_R2_parity": 0.0,
+      "g_R3_parity": 0.0,
+      "beta_pred_deg_toy_map": 0.0,
+      "beta_residual_sigma_toy_map": -3.777777777777778,
+      "matches_beta_hint_2sigma_under_toy_map": false,
+      "independent_of_beta_input": true,
+      "uses_beta_input": false,
+      "source_backed_beta_adapter": false,
+      "passes_current_stack": true,
+      "claim_ready": false,
+      "blockers": [
+        "beta_prediction_not_within_hint_band",
+        "missing_source_backed_beta_adapter",
+        "not_claim_ready"
+      ]
+    },
+    {
+      "framework": "cdt",
+      "provenance": "catalogued_framework_representative",
+      "g_R2_parity": 0.0,
+      "g_R3_parity": 0.0,
+      "beta_pred_deg_toy_map": 0.0,
+      "beta_residual_sigma_toy_map": -3.777777777777778,
+      "matches_beta_hint_2sigma_under_toy_map": false,
+      "independent_of_beta_input": true,
+      "uses_beta_input": false,
+      "source_backed_beta_adapter": false,
+      "passes_current_stack": true,
+      "claim_ready": false,
+      "blockers": [
+        "beta_prediction_not_within_hint_band",
+        "missing_source_backed_beta_adapter",
+        "not_claim_ready"
+      ]
+    },
+    {
+      "framework": "discovered_data_driven",
+      "provenance": "data_driven_from_birefringence_input",
+      "g_R2_parity": 0.0937,
+      "g_R3_parity": 0.0311,
+      "beta_pred_deg_toy_map": 0.31858000000000003,
+      "beta_residual_sigma_toy_map": -0.23799999999999996,
+      "matches_beta_hint_2sigma_under_toy_map": true,
+      "independent_of_beta_input": false,
+      "uses_beta_input": true,
+      "source_backed_beta_adapter": false,
+      "passes_current_stack": true,
+      "claim_ready": false,
+      "blockers": [
+        "missing_source_backed_beta_adapter",
+        "not_claim_ready",
+        "prediction_reuses_beta_input"
+      ]
+    },
+    {
+      "framework": "discovered_high_g8",
+      "provenance": "engine_discovered_internal_search",
+      "g_R2_parity": 0.033,
+      "g_R3_parity": -0.028,
+      "beta_pred_deg_toy_map": 0.11220000000000001,
+      "beta_residual_sigma_toy_map": -2.531111111111111,
+      "matches_beta_hint_2sigma_under_toy_map": false,
+      "independent_of_beta_input": true,
+      "uses_beta_input": false,
+      "source_backed_beta_adapter": false,
+      "passes_current_stack": true,
+      "claim_ready": false,
+      "blockers": [
+        "beta_prediction_not_within_hint_band",
+        "missing_source_backed_beta_adapter",
+        "not_claim_ready"
+      ]
+    },
+    {
+      "framework": "discovered_novel",
+      "provenance": "engine_discovered_internal_search",
+      "g_R2_parity": 0.021,
+      "g_R3_parity": 0.017,
+      "beta_pred_deg_toy_map": 0.0714,
+      "beta_residual_sigma_toy_map": -2.9844444444444447,
+      "matches_beta_hint_2sigma_under_toy_map": false,
+      "independent_of_beta_input": true,
+      "uses_beta_input": false,
+      "source_backed_beta_adapter": false,
+      "passes_current_stack": true,
+      "claim_ready": false,
+      "blockers": [
+        "beta_prediction_not_within_hint_band",
+        "missing_source_backed_beta_adapter",
+        "not_claim_ready"
+      ]
+    },
+    {
+      "framework": "discovered_parity_violating",
+      "provenance": "engine_discovered_internal_search",
+      "g_R2_parity": -0.092,
+      "g_R3_parity": 0.044,
+      "beta_pred_deg_toy_map": -0.31279999999999997,
+      "beta_residual_sigma_toy_map": -7.253333333333334,
+      "matches_beta_hint_2sigma_under_toy_map": false,
+      "independent_of_beta_input": true,
+      "uses_beta_input": false,
+      "source_backed_beta_adapter": false,
+      "passes_current_stack": true,
+      "claim_ready": false,
+      "blockers": [
+        "beta_prediction_not_within_hint_band",
+        "missing_source_backed_beta_adapter",
+        "not_claim_ready"
+      ]
+    },
+    {
+      "framework": "emergent_gravity",
+      "provenance": "catalogued_framework_representative",
+      "g_R2_parity": 0.0,
+      "g_R3_parity": 0.0,
+      "beta_pred_deg_toy_map": 0.0,
+      "beta_residual_sigma_toy_map": -3.777777777777778,
+      "matches_beta_hint_2sigma_under_toy_map": false,
+      "independent_of_beta_input": true,
+      "uses_beta_input": false,
+      "source_backed_beta_adapter": false,
+      "passes_current_stack": true,
+      "claim_ready": false,
+      "blockers": [
+        "beta_prediction_not_within_hint_band",
+        "missing_source_backed_beta_adapter",
+        "not_claim_ready"
+      ]
+    },
+    {
+      "framework": "group_field_theory",
+      "provenance": "catalogued_framework_representative",
+      "g_R2_parity": 0.07,
+      "g_R3_parity": 0.04,
+      "beta_pred_deg_toy_map": 0.23800000000000002,
+      "beta_residual_sigma_toy_map": -1.1333333333333335,
+      "matches_beta_hint_2sigma_under_toy_map": true,
+      "independent_of_beta_input": true,
+      "uses_beta_input": false,
+      "source_backed_beta_adapter": false,
+      "passes_current_stack": false,
+      "claim_ready": false,
+      "blockers": [
+        "framework_fails_current_stack",
+        "missing_source_backed_beta_adapter",
+        "not_claim_ready"
+      ]
+    },
+    {
+      "framework": "horava_lifshitz",
+      "provenance": "catalogued_framework_representative",
+      "g_R2_parity": 0.1,
+      "g_R3_parity": 0.06,
+      "beta_pred_deg_toy_map": 0.34,
+      "beta_residual_sigma_toy_map": 0.0,
+      "matches_beta_hint_2sigma_under_toy_map": true,
+      "independent_of_beta_input": true,
+      "uses_beta_input": false,
+      "source_backed_beta_adapter": false,
+      "passes_current_stack": false,
+      "claim_ready": false,
+      "blockers": [
+        "framework_fails_current_stack",
+        "missing_source_backed_beta_adapter",
+        "not_claim_ready"
+      ]
+    },
+    {
+      "framework": "lqg_induced",
+      "provenance": "catalogued_framework_representative",
+      "g_R2_parity": 0.08,
+      "g_R3_parity": 0.04,
+      "beta_pred_deg_toy_map": 0.272,
+      "beta_residual_sigma_toy_map": -0.7555555555555556,
+      "matches_beta_hint_2sigma_under_toy_map": true,
+      "independent_of_beta_input": true,
+      "uses_beta_input": false,
+      "source_backed_beta_adapter": false,
+      "passes_current_stack": false,
+      "claim_ready": false,
+      "blockers": [
+        "framework_fails_current_stack",
+        "missing_source_backed_beta_adapter",
+        "not_claim_ready"
+      ]
+    },
+    {
+      "framework": "pure_gr",
+      "provenance": "catalogued_framework_representative",
+      "g_R2_parity": 0.0,
+      "g_R3_parity": 0.0,
+      "beta_pred_deg_toy_map": 0.0,
+      "beta_residual_sigma_toy_map": -3.777777777777778,
+      "matches_beta_hint_2sigma_under_toy_map": false,
+      "independent_of_beta_input": true,
+      "uses_beta_input": false,
+      "source_backed_beta_adapter": false,
+      "passes_current_stack": true,
+      "claim_ready": false,
+      "blockers": [
+        "beta_prediction_not_within_hint_band",
+        "missing_source_backed_beta_adapter",
+        "not_claim_ready"
+      ]
+    },
+    {
+      "framework": "string_tree_eft",
+      "provenance": "catalogued_framework_representative",
+      "g_R2_parity": 0.0,
+      "g_R3_parity": 0.0,
+      "beta_pred_deg_toy_map": 0.0,
+      "beta_residual_sigma_toy_map": -3.777777777777778,
+      "matches_beta_hint_2sigma_under_toy_map": false,
+      "independent_of_beta_input": true,
+      "uses_beta_input": false,
+      "source_backed_beta_adapter": false,
+      "passes_current_stack": true,
+      "claim_ready": false,
+      "blockers": [
+        "beta_prediction_not_within_hint_band",
+        "missing_source_backed_beta_adapter",
+        "not_claim_ready"
+      ]
+    }
+  ],
+  "route_status": "no_non_circular_source_backed_beta_prediction",
+  "best_next_artifact": "For any beta-matching framework, provide a source-backed beta adapter and independent framework parity prediction not fitted to the beta input.",
+  "interpretation": "Several registered rows can match the beta hint under the engine's toy map, but none has a source-backed beta adapter. The data-driven row matches because it uses the beta input, so it cannot validate the same measurement. No framework currently supplies a non-circular, claim-ready beta prediction."
+}
