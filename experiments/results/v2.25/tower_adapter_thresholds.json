@@ -1,0 +1,956 @@
+{
+  "basis": [
+    "TowerSpectrum",
+    "phi_tower",
+    "tower_mass",
+    "Lambda_species"
+  ],
+  "model": {
+    "lambda_eft": 0.65,
+    "m0": 1.0,
+    "lambda_tower": 1.0,
+    "density": 1.0,
+    "exponent_p": 1.0,
+    "fixed_point_iters": 96
+  },
+  "critical_phi_tower": 0.7433019116911739,
+  "critical_tower_mass": 0.47554112554112576,
+  "critical_species_cutoff": 0.6499999999999999,
+  "sigma_values": [
+    0.0,
+    0.01,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "reference_feasible_frameworks": [
+    "pure_gr",
+    "string_tree_eft",
+    "asymptotic_safety",
+    "cdt",
+    "causal_set",
+    "emergent_gravity",
+    "discovered_novel",
+    "discovered_parity_violating",
+    "discovered_high_g8",
+    "discovered_data_driven"
+  ],
+  "reference_excluded_before_tower_adapter": [
+    "lqg_induced",
+    "group_field_theory",
+    "horava_lifshitz"
+  ],
+  "frameworks_missing_native_tower_adapter": [
+    "pure_gr",
+    "string_tree_eft",
+    "asymptotic_safety",
+    "cdt",
+    "causal_set",
+    "emergent_gravity",
+    "discovered_novel",
+    "discovered_parity_violating",
+    "discovered_high_g8",
+    "discovered_data_driven"
+  ],
+  "claimable_framework_exclusions_now": [],
+  "frameworks": {
+    "pure_gr": {
+      "reference_feasible": true,
+      "reference_binding": null,
+      "native_tower_spectrum_present": false,
+      "current_claim_status": "blocked_missing_tower_spectrum",
+      "sigma_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.47554112554112576,
+          "claimable_allowance_requires_phi_mean_lte": 0.7433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.47554112554112576,
+          "overlap_zone": [
+            0.7433019116911739,
+            0.7433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7633019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.46612478035821264,
+          "claimable_allowance_requires_phi_mean_lte": 0.7233019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.48514769351488823,
+          "overlap_zone": [
+            0.7233019116911739,
+            0.7633019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.43028740420454636,
+          "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5255542222970128,
+          "overlap_zone": [
+            0.6433019116911739,
+            0.8433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_phi_mean_gt": 0.9433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.389340143833837,
+          "claimable_allowance_requires_phi_mean_lte": 0.5433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5808272423545225,
+          "overlap_zone": [
+            0.5433019116911739,
+            0.9433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_phi_mean_gt": 1.1433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.31876474916456715,
+          "claimable_allowance_requires_phi_mean_lte": 0.34330191169117386,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.7094239958263793,
+          "overlap_zone": [
+            0.34330191169117386,
+            1.1433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        }
+      ]
+    },
+    "string_tree_eft": {
+      "reference_feasible": true,
+      "reference_binding": null,
+      "native_tower_spectrum_present": false,
+      "current_claim_status": "blocked_missing_tower_spectrum",
+      "sigma_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.47554112554112576,
+          "claimable_allowance_requires_phi_mean_lte": 0.7433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.47554112554112576,
+          "overlap_zone": [
+            0.7433019116911739,
+            0.7433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7633019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.46612478035821264,
+          "claimable_allowance_requires_phi_mean_lte": 0.7233019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.48514769351488823,
+          "overlap_zone": [
+            0.7233019116911739,
+            0.7633019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.43028740420454636,
+          "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5255542222970128,
+          "overlap_zone": [
+            0.6433019116911739,
+            0.8433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_phi_mean_gt": 0.9433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.389340143833837,
+          "claimable_allowance_requires_phi_mean_lte": 0.5433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5808272423545225,
+          "overlap_zone": [
+            0.5433019116911739,
+            0.9433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_phi_mean_gt": 1.1433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.31876474916456715,
+          "claimable_allowance_requires_phi_mean_lte": 0.34330191169117386,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.7094239958263793,
+          "overlap_zone": [
+            0.34330191169117386,
+            1.1433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        }
+      ]
+    },
+    "asymptotic_safety": {
+      "reference_feasible": true,
+      "reference_binding": null,
+      "native_tower_spectrum_present": false,
+      "current_claim_status": "blocked_missing_tower_spectrum",
+      "sigma_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.47554112554112576,
+          "claimable_allowance_requires_phi_mean_lte": 0.7433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.47554112554112576,
+          "overlap_zone": [
+            0.7433019116911739,
+            0.7433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7633019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.46612478035821264,
+          "claimable_allowance_requires_phi_mean_lte": 0.7233019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.48514769351488823,
+          "overlap_zone": [
+            0.7233019116911739,
+            0.7633019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.43028740420454636,
+          "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5255542222970128,
+          "overlap_zone": [
+            0.6433019116911739,
+            0.8433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_phi_mean_gt": 0.9433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.389340143833837,
+          "claimable_allowance_requires_phi_mean_lte": 0.5433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5808272423545225,
+          "overlap_zone": [
+            0.5433019116911739,
+            0.9433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_phi_mean_gt": 1.1433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.31876474916456715,
+          "claimable_allowance_requires_phi_mean_lte": 0.34330191169117386,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.7094239958263793,
+          "overlap_zone": [
+            0.34330191169117386,
+            1.1433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        }
+      ]
+    },
+    "lqg_induced": {
+      "reference_feasible": false,
+      "reference_binding": "cft_flat_space_bound",
+      "native_tower_spectrum_present": false,
+      "current_claim_status": "reference_excluded_before_tower_adapter",
+      "sigma_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.47554112554112576,
+          "claimable_allowance_requires_phi_mean_lte": 0.7433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.47554112554112576,
+          "overlap_zone": [
+            0.7433019116911739,
+            0.7433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7633019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.46612478035821264,
+          "claimable_allowance_requires_phi_mean_lte": 0.7233019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.48514769351488823,
+          "overlap_zone": [
+            0.7233019116911739,
+            0.7633019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.43028740420454636,
+          "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5255542222970128,
+          "overlap_zone": [
+            0.6433019116911739,
+            0.8433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_phi_mean_gt": 0.9433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.389340143833837,
+          "claimable_allowance_requires_phi_mean_lte": 0.5433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5808272423545225,
+          "overlap_zone": [
+            0.5433019116911739,
+            0.9433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_phi_mean_gt": 1.1433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.31876474916456715,
+          "claimable_allowance_requires_phi_mean_lte": 0.34330191169117386,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.7094239958263793,
+          "overlap_zone": [
+            0.34330191169117386,
+            1.1433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        }
+      ]
+    },
+    "cdt": {
+      "reference_feasible": true,
+      "reference_binding": null,
+      "native_tower_spectrum_present": false,
+      "current_claim_status": "blocked_missing_tower_spectrum",
+      "sigma_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.47554112554112576,
+          "claimable_allowance_requires_phi_mean_lte": 0.7433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.47554112554112576,
+          "overlap_zone": [
+            0.7433019116911739,
+            0.7433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7633019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.46612478035821264,
+          "claimable_allowance_requires_phi_mean_lte": 0.7233019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.48514769351488823,
+          "overlap_zone": [
+            0.7233019116911739,
+            0.7633019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.43028740420454636,
+          "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5255542222970128,
+          "overlap_zone": [
+            0.6433019116911739,
+            0.8433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_phi_mean_gt": 0.9433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.389340143833837,
+          "claimable_allowance_requires_phi_mean_lte": 0.5433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5808272423545225,
+          "overlap_zone": [
+            0.5433019116911739,
+            0.9433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_phi_mean_gt": 1.1433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.31876474916456715,
+          "claimable_allowance_requires_phi_mean_lte": 0.34330191169117386,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.7094239958263793,
+          "overlap_zone": [
+            0.34330191169117386,
+            1.1433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        }
+      ]
+    },
+    "group_field_theory": {
+      "reference_feasible": false,
+      "reference_binding": "graviton_forward_positivity",
+      "native_tower_spectrum_present": false,
+      "current_claim_status": "reference_excluded_before_tower_adapter",
+      "sigma_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.47554112554112576,
+          "claimable_allowance_requires_phi_mean_lte": 0.7433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.47554112554112576,
+          "overlap_zone": [
+            0.7433019116911739,
+            0.7433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7633019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.46612478035821264,
+          "claimable_allowance_requires_phi_mean_lte": 0.7233019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.48514769351488823,
+          "overlap_zone": [
+            0.7233019116911739,
+            0.7633019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.43028740420454636,
+          "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5255542222970128,
+          "overlap_zone": [
+            0.6433019116911739,
+            0.8433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_phi_mean_gt": 0.9433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.389340143833837,
+          "claimable_allowance_requires_phi_mean_lte": 0.5433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5808272423545225,
+          "overlap_zone": [
+            0.5433019116911739,
+            0.9433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_phi_mean_gt": 1.1433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.31876474916456715,
+          "claimable_allowance_requires_phi_mean_lte": 0.34330191169117386,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.7094239958263793,
+          "overlap_zone": [
+            0.34330191169117386,
+            1.1433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        }
+      ]
+    },
+    "horava_lifshitz": {
+      "reference_feasible": false,
+      "reference_binding": "cft_flat_space_bound",
+      "native_tower_spectrum_present": false,
+      "current_claim_status": "reference_excluded_before_tower_adapter",
+      "sigma_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.47554112554112576,
+          "claimable_allowance_requires_phi_mean_lte": 0.7433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.47554112554112576,
+          "overlap_zone": [
+            0.7433019116911739,
+            0.7433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7633019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.46612478035821264,
+          "claimable_allowance_requires_phi_mean_lte": 0.7233019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.48514769351488823,
+          "overlap_zone": [
+            0.7233019116911739,
+            0.7633019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.43028740420454636,
+          "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5255542222970128,
+          "overlap_zone": [
+            0.6433019116911739,
+            0.8433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_phi_mean_gt": 0.9433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.389340143833837,
+          "claimable_allowance_requires_phi_mean_lte": 0.5433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5808272423545225,
+          "overlap_zone": [
+            0.5433019116911739,
+            0.9433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_phi_mean_gt": 1.1433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.31876474916456715,
+          "claimable_allowance_requires_phi_mean_lte": 0.34330191169117386,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.7094239958263793,
+          "overlap_zone": [
+            0.34330191169117386,
+            1.1433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        }
+      ]
+    },
+    "causal_set": {
+      "reference_feasible": true,
+      "reference_binding": null,
+      "native_tower_spectrum_present": false,
+      "current_claim_status": "blocked_missing_tower_spectrum",
+      "sigma_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.47554112554112576,
+          "claimable_allowance_requires_phi_mean_lte": 0.7433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.47554112554112576,
+          "overlap_zone": [
+            0.7433019116911739,
+            0.7433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7633019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.46612478035821264,
+          "claimable_allowance_requires_phi_mean_lte": 0.7233019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.48514769351488823,
+          "overlap_zone": [
+            0.7233019116911739,
+            0.7633019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.43028740420454636,
+          "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5255542222970128,
+          "overlap_zone": [
+            0.6433019116911739,
+            0.8433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_phi_mean_gt": 0.9433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.389340143833837,
+          "claimable_allowance_requires_phi_mean_lte": 0.5433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5808272423545225,
+          "overlap_zone": [
+            0.5433019116911739,
+            0.9433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_phi_mean_gt": 1.1433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.31876474916456715,
+          "claimable_allowance_requires_phi_mean_lte": 0.34330191169117386,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.7094239958263793,
+          "overlap_zone": [
+            0.34330191169117386,
+            1.1433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        }
+      ]
+    },
+    "emergent_gravity": {
+      "reference_feasible": true,
+      "reference_binding": null,
+      "native_tower_spectrum_present": false,
+      "current_claim_status": "blocked_missing_tower_spectrum",
+      "sigma_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.47554112554112576,
+          "claimable_allowance_requires_phi_mean_lte": 0.7433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.47554112554112576,
+          "overlap_zone": [
+            0.7433019116911739,
+            0.7433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7633019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.46612478035821264,
+          "claimable_allowance_requires_phi_mean_lte": 0.7233019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.48514769351488823,
+          "overlap_zone": [
+            0.7233019116911739,
+            0.7633019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.43028740420454636,
+          "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5255542222970128,
+          "overlap_zone": [
+            0.6433019116911739,
+            0.8433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_phi_mean_gt": 0.9433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.389340143833837,
+          "claimable_allowance_requires_phi_mean_lte": 0.5433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5808272423545225,
+          "overlap_zone": [
+            0.5433019116911739,
+            0.9433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_phi_mean_gt": 1.1433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.31876474916456715,
+          "claimable_allowance_requires_phi_mean_lte": 0.34330191169117386,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.7094239958263793,
+          "overlap_zone": [
+            0.34330191169117386,
+            1.1433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        }
+      ]
+    },
+    "discovered_novel": {
+      "reference_feasible": true,
+      "reference_binding": null,
+      "native_tower_spectrum_present": false,
+      "current_claim_status": "blocked_missing_tower_spectrum",
+      "sigma_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.47554112554112576,
+          "claimable_allowance_requires_phi_mean_lte": 0.7433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.47554112554112576,
+          "overlap_zone": [
+            0.7433019116911739,
+            0.7433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7633019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.46612478035821264,
+          "claimable_allowance_requires_phi_mean_lte": 0.7233019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.48514769351488823,
+          "overlap_zone": [
+            0.7233019116911739,
+            0.7633019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.43028740420454636,
+          "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5255542222970128,
+          "overlap_zone": [
+            0.6433019116911739,
+            0.8433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_phi_mean_gt": 0.9433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.389340143833837,
+          "claimable_allowance_requires_phi_mean_lte": 0.5433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5808272423545225,
+          "overlap_zone": [
+            0.5433019116911739,
+            0.9433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_phi_mean_gt": 1.1433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.31876474916456715,
+          "claimable_allowance_requires_phi_mean_lte": 0.34330191169117386,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.7094239958263793,
+          "overlap_zone": [
+            0.34330191169117386,
+            1.1433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        }
+      ]
+    },
+    "discovered_parity_violating": {
+      "reference_feasible": true,
+      "reference_binding": null,
+      "native_tower_spectrum_present": false,
+      "current_claim_status": "blocked_missing_tower_spectrum",
+      "sigma_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.47554112554112576,
+          "claimable_allowance_requires_phi_mean_lte": 0.7433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.47554112554112576,
+          "overlap_zone": [
+            0.7433019116911739,
+            0.7433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7633019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.46612478035821264,
+          "claimable_allowance_requires_phi_mean_lte": 0.7233019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.48514769351488823,
+          "overlap_zone": [
+            0.7233019116911739,
+            0.7633019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.43028740420454636,
+          "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5255542222970128,
+          "overlap_zone": [
+            0.6433019116911739,
+            0.8433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_phi_mean_gt": 0.9433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.389340143833837,
+          "claimable_allowance_requires_phi_mean_lte": 0.5433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5808272423545225,
+          "overlap_zone": [
+            0.5433019116911739,
+            0.9433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_phi_mean_gt": 1.1433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.31876474916456715,
+          "claimable_allowance_requires_phi_mean_lte": 0.34330191169117386,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.7094239958263793,
+          "overlap_zone": [
+            0.34330191169117386,
+            1.1433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        }
+      ]
+    },
+    "discovered_high_g8": {
+      "reference_feasible": true,
+      "reference_binding": null,
+      "native_tower_spectrum_present": false,
+      "current_claim_status": "blocked_missing_tower_spectrum",
+      "sigma_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.47554112554112576,
+          "claimable_allowance_requires_phi_mean_lte": 0.7433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.47554112554112576,
+          "overlap_zone": [
+            0.7433019116911739,
+            0.7433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7633019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.46612478035821264,
+          "claimable_allowance_requires_phi_mean_lte": 0.7233019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.48514769351488823,
+          "overlap_zone": [
+            0.7233019116911739,
+            0.7633019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.43028740420454636,
+          "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5255542222970128,
+          "overlap_zone": [
+            0.6433019116911739,
+            0.8433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_phi_mean_gt": 0.9433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.389340143833837,
+          "claimable_allowance_requires_phi_mean_lte": 0.5433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5808272423545225,
+          "overlap_zone": [
+            0.5433019116911739,
+            0.9433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_phi_mean_gt": 1.1433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.31876474916456715,
+          "claimable_allowance_requires_phi_mean_lte": 0.34330191169117386,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.7094239958263793,
+          "overlap_zone": [
+            0.34330191169117386,
+            1.1433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        }
+      ]
+    },
+    "discovered_data_driven": {
+      "reference_feasible": true,
+      "reference_binding": null,
+      "native_tower_spectrum_present": false,
+      "current_claim_status": "blocked_missing_tower_spectrum",
+      "sigma_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.47554112554112576,
+          "claimable_allowance_requires_phi_mean_lte": 0.7433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.47554112554112576,
+          "overlap_zone": [
+            0.7433019116911739,
+            0.7433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_phi_mean_gt": 0.7633019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.46612478035821264,
+          "claimable_allowance_requires_phi_mean_lte": 0.7233019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.48514769351488823,
+          "overlap_zone": [
+            0.7233019116911739,
+            0.7633019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.43028740420454636,
+          "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5255542222970128,
+          "overlap_zone": [
+            0.6433019116911739,
+            0.8433019116911739
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_phi_mean_gt": 0.9433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.389340143833837,
+          "claimable_allowance_requires_phi_mean_lte": 0.5433019116911739,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.5808272423545225,
+          "overlap_zone": [
+            0.5433019116911739,
+            0.9433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_phi_mean_gt": 1.1433019116911738,
+          "claimable_exclusion_requires_mass_gap_mean_lt": 0.31876474916456715,
+          "claimable_allowance_requires_phi_mean_lte": 0.34330191169117386,
+          "claimable_allowance_requires_mass_gap_mean_gte": 0.7094239958263793,
+          "overlap_zone": [
+            0.34330191169117386,
+            1.1433019116911738
+          ],
+          "verdict_rule": "For a two-sigma interval, tower exclusion is claimable only if phi_mean - 2*sigma is above critical_phi. Tower allowance is claimable only if phi_mean + 2*sigma is at or below critical_phi."
+        }
+      ]
+    }
+  },
+  "literature_guardrail": {
+    "claim": "These are future adapter thresholds, not framework predictions. They quantify what a sourced TowerSpectrum must show before the tower gate can support a framework-level verdict.",
+    "primary_sources": [
+      {
+        "title": "Dvali and Redi, Black Hole Bound on the Number of Species and Quantum Gravity at LHC",
+        "url": "https://arxiv.org/abs/0710.4344"
+      },
+      {
+        "title": "van de Heisteeg, Vafa, and Wiesner, Bounds on Species Scale and the Distance Conjecture",
+        "url": "https://arxiv.org/abs/2303.13580"
+      }
+    ]
+  },
+  "interpretation": "A future framework adapter can create a tower verdict only by placing its two-sigma phi_tower interval entirely on one side of the critical threshold. The current engine has no such native spectra, so there are no framework-level tower exclusions now."
+}
