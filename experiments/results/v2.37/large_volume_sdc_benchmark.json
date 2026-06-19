@@ -1,0 +1,132 @@
+{
+  "basis": [
+    "primary_literature",
+    "large_volume_sdc",
+    "benchmark_gate"
+  ],
+  "candidate": {
+    "label": "blumenhagen_large_volume_delta1_benchmark",
+    "framework": "string_tree_eft",
+    "evidence": {
+      "framework": "string_tree_eft",
+      "spectrum": {
+        "tower_family": "large_volume_calabi_yau_sdc_lambda_table3",
+        "phi_tower_mean": 1.0722604261754038,
+        "phi_tower_sigma": 0.045623759875811055,
+        "normalization": "phi_tower = lambda_sdc * Delta_moduli with Delta_moduli fixed to a one-Planck-unit benchmark",
+        "source": "Blumenhagen, Klaewer, Schlechter, and Wolf, The Refined Swampland Distance Conjecture in Calabi-Yau Moduli Spaces, Table 3",
+        "tower_mass_gap": 0.34223404763319903,
+        "metadata": {
+          "source": {
+            "title": "Blumenhagen, Klaewer, Schlechter, and Wolf, The Refined Swampland Distance Conjecture in Calabi-Yau Moduli Spaces",
+            "url": "https://arxiv.org/abs/1803.04989",
+            "table": "Table 3",
+            "equations": [
+              "Eq. (4.19)",
+              "Eq. (4.20)",
+              "Eq. (4.21)"
+            ]
+          },
+          "delta_moduli_mean": 1.0,
+          "lambda_summary": {
+            "lambda_inverse_values": [
+              0.9605,
+              0.9865,
+              0.978,
+              0.9567,
+              0.9611,
+              0.9275,
+              0.9253,
+              0.8969,
+              0.8845,
+              0.8657
+            ],
+            "lambda_sdc_values": [
+              1.041124414367517,
+              1.0136847440446022,
+              1.0224948875255624,
+              1.0452597470471412,
+              1.0404744563520967,
+              1.0781671159029649,
+              1.0807305738679347,
+              1.114951499609767,
+              1.1305822498586773,
+              1.1551345731777751
+            ],
+            "lambda_sdc_min": 1.0136847440446022,
+            "lambda_sdc_max": 1.1551345731777751,
+            "lambda_sdc_mean": 1.0722604261754038,
+            "lambda_sdc_angular_sigma": 0.045623759875811055,
+            "angular_variation_note": "This is variation across geodesic angles in the source table, not a statistical measurement uncertainty.",
+            "conservative_interpretation": "Use the source fit lambda as the SDC mass exponent. Do not use the additional rough factor of two from M_KK ~ exp(-2 lambda Theta)."
+          },
+          "benchmark_kind": "one_planck_large_volume_displacement",
+          "scope_note": "The source supplies an asymptotic large-volume slope. This audit supplies Delta_moduli=1 as a benchmark; the source does not claim that generic string_tree_eft must occupy this point."
+        }
+      },
+      "adapter_kind": "sdc_large_volume_lambda_benchmark",
+      "source_url": "https://arxiv.org/abs/1803.04989",
+      "source_type": "primary_literature",
+      "derivation_kind": "asymptotic_large_volume_table_fit",
+      "uncertainty_kind": "geodesic_angle_variation_not_statistical_uncertainty",
+      "normalization_reference": "Theta(t) ~= lambda^-1 log(t) + alpha0 + alpha1/t^3; benchmark sets Delta_moduli=1 in Planck units",
+      "metadata": {
+        "candidate_label": "blumenhagen_large_volume_delta1_benchmark",
+        "source": {
+          "title": "Blumenhagen, Klaewer, Schlechter, and Wolf, The Refined Swampland Distance Conjecture in Calabi-Yau Moduli Spaces",
+          "url": "https://arxiv.org/abs/1803.04989",
+          "table": "Table 3",
+          "equations": [
+            "Eq. (4.19)",
+            "Eq. (4.20)",
+            "Eq. (4.21)"
+          ]
+        }
+      }
+    },
+    "evidence_validation": {
+      "ready_for_framework_claim": true,
+      "missing_fields": [],
+      "source_url_valid": true,
+      "source_type_valid": true,
+      "blockers": []
+    },
+    "framework_tower_verdict": "tower_excluded_by_predictive_spectrum",
+    "tower_claimable_by_math": true,
+    "two_sigma_phi_interval": [
+      0.9810129064237817,
+      1.1635079459270259
+    ],
+    "critical_phi_tower": 0.7433019116911739,
+    "conservative_delta_moduli_required_for_exclusion": 0.7576882086096424,
+    "claimable_now": false,
+    "scope_blockers": [
+      "delta_moduli_equals_one_is_benchmark_not_framework_prediction",
+      "geodesic_angle_variation_is_not_statistical_uncertainty",
+      "not_native_string_tree_eft_tower_evidence",
+      "generic_string_tree_eft_does_not_select_large_volume_endpoint"
+    ]
+  },
+  "benchmark_status": {
+    "schema_ready": true,
+    "math_excluding_if_delta1_assumed": true,
+    "framework_claim_ready": false
+  },
+  "claimable_framework_exclusions_now": [],
+  "literature_guardrail": {
+    "claim": "The large-volume source gives an asymptotic numeric SDC slope. The one-Planck displacement is this audit's benchmark, so the math exclusion is not yet a framework-level exclusion.",
+    "primary_sources": [
+      {
+        "title": "Blumenhagen, Klaewer, Schlechter, and Wolf, The Refined Swampland Distance Conjecture in Calabi-Yau Moduli Spaces",
+        "url": "https://arxiv.org/abs/1803.04989",
+        "table": "Table 3",
+        "equations": [
+          "Eq. (4.19)",
+          "Eq. (4.20)",
+          "Eq. (4.21)"
+        ]
+      }
+    ]
+  },
+  "interpretation": "The blocker has moved: sourceability is no longer the limiting issue for this benchmark. The missing ingredient is framework ownership of Delta_moduli, uncertainty semantics, and endpoint selection."
+}

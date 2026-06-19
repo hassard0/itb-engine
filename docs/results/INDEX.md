@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (147 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (148 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -196,3 +196,4 @@ Auto-generated front door to the full research program (147 notes). Regenerate w
 | v2.34 | [v2.34 - Quintic KK tower evidence candidate: first sourced row, still ](2026-06-19-v2.34-quintic-tower-evidence-candidate.md) | v2.33 proved that current framework encoders do not already contain tower evidence. |
 | v2.35 | [v2.35 - Quintic SDC bound audit: finite-range evidence is not an asymp](2026-06-19-v2.35-quintic-sdc-bound-audit.md) | v2.34 added the first non-synthetic, primary-source tower candidate. v2.35 asks: |
 | v2.36 | [v2.36 - Quintic promotion forecast: ownership would improve, exclusion](2026-06-19-v2.36-quintic-promotion-forecast.md) | v2.34 produced a schema-ready sourced tower candidate. v2.35 showed it is not an |
+| v2.37 | [v2.37 - Large-volume SDC benchmark: math exclusion, still not a framew](2026-06-19-v2.37-large-volume-sdc-benchmark.md) | v2.36 ended with two possible next moves: asymptotic lightest-tower extraction or a |
