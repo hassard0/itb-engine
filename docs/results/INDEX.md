@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (166 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (171 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -219,3 +219,4 @@ Auto-generated front door to the full research program (166 notes). Regenerate w
 | v2.57 | [v2.57 - Birefringence prediction non-circularity: no source-backed beta prediction yet](2026-06-19-v2.57-birefringence-prediction-noncircularity-audit.md) | v2.57 audits framework beta predictions and finds no non-circular, source-backed, stack-compatible framework claim from the birefringence route. |
 | v2.58 | [v2.58 - Birefringence adapter sourceability: CMB beta is not a direct gravity-parity map](2026-06-19-v2.58-birefringence-adapter-literature-sourceability.md) | v2.58 separates CMB electromagnetic/axion birefringence from gravitational parity, blocking a direct beta-to-`g_R2_parity` claim without a multimessenger adapter. |
 | v2.59 | [v2.59 - Parity route split: CMB beta retired as a direct gravity-parity discriminator](2026-06-19-v2.59-parity-route-split-frontier.md) | v2.59 splits the overloaded birefringence route and moves engine gravitational parity priority to GW birefringence, with CMB beta retained only as an EM/axion channel. |
+| v2.60 | [v2.60 - GW parity measurement packet search: constraints exist, no engine packet yet](2026-06-19-v2.60-gw-parity-measurement-packet-search.md) | v2.60 screens existing GW parity and birefringence sources; constraints exist, but no source-backed engine-normalized likelihood is claim-ready. |

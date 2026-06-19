@@ -1,0 +1,362 @@
+{
+  "basis": [
+    "v2.59_parity_route_split",
+    "web_primary_source_search_2026_06_19",
+    "nontower_promotion_guard"
+  ],
+  "axis": "g_R2_parity/g_R3_parity",
+  "candidate_count": 5,
+  "external_bound_or_measurement_candidate_count": 3,
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "contract_failure_counts": {
+    "frequency_normalization_not_engine_usable": 5,
+    "missing_engine_axis_projection": 5,
+    "missing_external_numeric_gw_bound": 5,
+    "missing_public_gw_likelihood": 5,
+    "no_framework_excluding_math": 5
+  },
+  "rows": [
+    {
+      "label": "gwtc3_amplitude_birefringence",
+      "source": {
+        "title": "Ng et al., Constraining gravitational wave amplitude birefringence with GWTC-3",
+        "url": "https://arxiv.org/abs/2305.05844"
+      },
+      "evidence": {
+        "axis": "g_R2_parity/g_R3_parity",
+        "route": "gwtc3_amplitude_birefringence",
+        "source_url": "https://arxiv.org/abs/2305.05844",
+        "source_type": "primary_literature",
+        "measurement_kind": "external_upper_bound",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "external_parameterization",
+        "systematics_status": "bounded",
+        "metadata": {
+          "source_backed_theory": true,
+          "external_bound_or_measurement": true,
+          "maps_to_engine_axes": false,
+          "public_likelihood": false,
+          "frequency_normalization": "paper_parameterization",
+          "framework_excluding_math": false
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": true,
+          "axis_mapping_valid": false,
+          "systematics_closed": true,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "missing_external_numeric_measurement"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "missing_external_numeric_measurement"
+        ]
+      },
+      "contract_failures": [
+        "missing_external_numeric_gw_bound",
+        "missing_engine_axis_projection",
+        "missing_public_gw_likelihood",
+        "frequency_normalization_not_engine_usable",
+        "no_framework_excluding_math"
+      ],
+      "ready_for_engine_gw_parity_claim": false,
+      "frontier_status": "gw_parity_packet_not_engine_claim_ready",
+      "status": "external_bound_parameterized_not_engine_mapped",
+      "notes": [
+        "Uses GWTC-3 to search for amplitude birefringence.",
+        "The published parameterization is not yet projected to engine parity axes."
+      ]
+    },
+    {
+      "label": "parameterized_parity_violation_formalism",
+      "source": {
+        "title": "Parameterized Parity Violation in Gravitational Wave Propagation",
+        "url": "https://arxiv.org/abs/2305.10478"
+      },
+      "evidence": {
+        "axis": "g_R2_parity/g_R3_parity",
+        "route": "parameterized_parity_violation_formalism",
+        "source_url": "https://arxiv.org/abs/2305.10478",
+        "source_type": "primary_literature",
+        "measurement_kind": "theory_formalism",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "external_parameterization",
+        "systematics_status": "open",
+        "metadata": {
+          "source_backed_theory": true,
+          "external_bound_or_measurement": false,
+          "maps_to_engine_axes": false,
+          "public_likelihood": false,
+          "frequency_normalization": "formal_parameterization",
+          "framework_excluding_math": false
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": false,
+          "axis_mapping_valid": false,
+          "systematics_closed": false,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "measurement_kind_not_external_numeric",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "systematics_not_closed"
+        ]
+      },
+      "contract_failures": [
+        "missing_external_numeric_gw_bound",
+        "missing_engine_axis_projection",
+        "missing_public_gw_likelihood",
+        "frequency_normalization_not_engine_usable",
+        "no_framework_excluding_math"
+      ],
+      "ready_for_engine_gw_parity_claim": false,
+      "frontier_status": "gw_parity_packet_not_engine_claim_ready",
+      "status": "source_backed_formalism_not_measurement_packet",
+      "notes": [
+        "Useful source-backed language for amplitude and velocity birefringence.",
+        "It is not itself an external likelihood or bound."
+      ]
+    },
+    {
+      "label": "sgwb_nonobservation_parity_bound",
+      "source": {
+        "title": "A New Probe of Gravitational Parity Violation Through (Non-)Observation of the Stochastic Gravitational-Wave Background",
+        "url": "https://arxiv.org/abs/2312.12532"
+      },
+      "evidence": {
+        "axis": "g_R2_parity/g_R3_parity",
+        "route": "sgwb_nonobservation_parity_bound",
+        "source_url": "https://arxiv.org/abs/2312.12532",
+        "source_type": "primary_literature",
+        "measurement_kind": "external_upper_bound",
+        "numerical_value": 0.1,
+        "uncertainty": null,
+        "axis_mapping_kind": "external_parameterization",
+        "systematics_status": "bounded",
+        "metadata": {
+          "source_backed_theory": true,
+          "external_bound_or_measurement": true,
+          "maps_to_engine_axes": false,
+          "public_likelihood": false,
+          "frequency_normalization": "kappa_D_kappa_z_not_engine_axes",
+          "framework_excluding_math": false
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": true,
+          "axis_mapping_valid": false,
+          "systematics_closed": true,
+          "numerical_value_present": true,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "missing_external_numeric_measurement"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "missing_external_numeric_measurement"
+        ]
+      },
+      "contract_failures": [
+        "missing_external_numeric_gw_bound",
+        "missing_engine_axis_projection",
+        "missing_public_gw_likelihood",
+        "frequency_normalization_not_engine_usable",
+        "no_framework_excluding_math"
+      ],
+      "ready_for_engine_gw_parity_claim": false,
+      "frontier_status": "gw_parity_packet_not_engine_claim_ready",
+      "status": "external_sgwb_bound_not_engine_mapped",
+      "notes": [
+        "Reports an order-0.1 joint constraint on generic SGWB birefringence parameters.",
+        "The parameters are not g_R2_parity/g_R3_parity in engine normalization."
+      ]
+    },
+    {
+      "label": "gwtc3_modified_propagation_constraints",
+      "source": {
+        "title": "Constraints on parity and Lorentz violations in gravity from GWTC-3 through a parametrization of modified gravitational wave propagations",
+        "url": "https://arxiv.org/abs/2304.09025"
+      },
+      "evidence": {
+        "axis": "g_R2_parity/g_R3_parity",
+        "route": "gwtc3_modified_propagation_constraints",
+        "source_url": "https://arxiv.org/abs/2304.09025",
+        "source_type": "primary_literature",
+        "measurement_kind": "external_upper_bound",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "external_parameterization",
+        "systematics_status": "bounded",
+        "metadata": {
+          "source_backed_theory": true,
+          "external_bound_or_measurement": true,
+          "maps_to_engine_axes": false,
+          "public_likelihood": false,
+          "frequency_normalization": "modified_propagation_parameterization",
+          "framework_excluding_math": false
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": true,
+          "axis_mapping_valid": false,
+          "systematics_closed": true,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "missing_external_numeric_measurement"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "missing_external_numeric_measurement"
+        ]
+      },
+      "contract_failures": [
+        "missing_external_numeric_gw_bound",
+        "missing_engine_axis_projection",
+        "missing_public_gw_likelihood",
+        "frequency_normalization_not_engine_usable",
+        "no_framework_excluding_math"
+      ],
+      "ready_for_engine_gw_parity_claim": false,
+      "frontier_status": "gw_parity_packet_not_engine_claim_ready",
+      "status": "external_constraints_not_engine_mapped",
+      "notes": [
+        "Uses open GWTC-3 events to constrain parity/Lorentz-violating propagation.",
+        "The constraints are not yet an engine parity likelihood."
+      ]
+    },
+    {
+      "label": "coincident_gw_grb_parity_test",
+      "source": {
+        "title": "Testing gravitational parity violation with coincident gravitational waves and short gamma-ray bursts",
+        "url": "https://arxiv.org/abs/1005.3310"
+      },
+      "evidence": {
+        "axis": "g_R2_parity/g_R3_parity",
+        "route": "coincident_gw_grb_parity_test",
+        "source_url": "https://arxiv.org/abs/1005.3310",
+        "source_type": "primary_literature",
+        "measurement_kind": "design_probe",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "external_parameterization",
+        "systematics_status": "open",
+        "metadata": {
+          "source_backed_theory": true,
+          "external_bound_or_measurement": false,
+          "maps_to_engine_axes": false,
+          "public_likelihood": false,
+          "frequency_normalization": "proposal",
+          "framework_excluding_math": false
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": false,
+          "axis_mapping_valid": false,
+          "systematics_closed": false,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "measurement_kind_not_external_numeric",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "systematics_not_closed"
+        ]
+      },
+      "contract_failures": [
+        "missing_external_numeric_gw_bound",
+        "missing_engine_axis_projection",
+        "missing_public_gw_likelihood",
+        "frequency_normalization_not_engine_usable",
+        "no_framework_excluding_math"
+      ],
+      "ready_for_engine_gw_parity_claim": false,
+      "frontier_status": "gw_parity_packet_not_engine_claim_ready",
+      "status": "source_backed_test_concept_not_current_measurement",
+      "notes": [
+        "Defines a multimessenger GW/GRB parity test concept.",
+        "It requires suitable events and a current likelihood before promotion."
+      ]
+    }
+  ],
+  "route_status": "gw_parity_external_bounds_not_engine_claim_ready",
+  "best_next_artifact": "An adapter from a published GW parity/birefringence likelihood to g_R2_parity/g_R3_parity, including frequency normalization and framework exclusion math.",
+  "interpretation": "Existing GW parity analyses provide real source-backed constraints and useful parameterizations, but none is currently an engine-ready measurement packet for g_R2_parity/g_R3_parity."
+}
