@@ -1,0 +1,132 @@
+{
+  "version": "v2.81",
+  "basis": [
+    "v2.79_g8_adapter_acceptance_harness",
+    "v2.80_g8_public_data_product_acquisition_audit",
+    "v2.54_g8_high_moment_measurement_specification"
+  ],
+  "decision_scope": "g8_public_data_products_to_engine_routes",
+  "route_count": 6,
+  "retired_routes": [
+    "cms_energy_correlator_direct_g8_promotion",
+    "heavy_ion_eec_direct_g8_promotion",
+    "open_data_reanalysis_without_source_adapter"
+  ],
+  "retained_nonpromoting_routes": [
+    "source_backed_energy_correlator_to_g8_adapter_derivation",
+    "new_spin4_or_detector_g8_measurement",
+    "g8_theory_bridge_archive"
+  ],
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "component_level_systematics_budget_missing": 2,
+    "external_numeric_g8_measurement_missing": 1,
+    "heavy_ion_medium_observable_not_low_energy_qg_eft": 1,
+    "internal_reanalysis_not_source_backed": 1,
+    "low_energy_qg_eft_domain_missing": 1,
+    "noncircular_framework_exclusion_missing": 1,
+    "observable_basis_not_qg_g8": 2,
+    "public_g8_covariance_missing": 1,
+    "public_g8_likelihood_or_covariance_missing": 5,
+    "qcd_alpha_s_measurement_not_quantum_gravity_g8": 1,
+    "qg_eft_applicability_domain_missing": 2,
+    "registered_framework_exclusion_math_missing": 5,
+    "source_backed_engine_g8_normalization_missing": 3,
+    "source_backed_jacobian_to_engine_g8_missing": 1,
+    "theory_formalism_not_external_measurement": 1
+  },
+  "rows": [
+    {
+      "route": "cms_energy_correlator_direct_g8_promotion",
+      "status": "retired_for_current_engine",
+      "retained": false,
+      "claim_ready": false,
+      "reason": "v2.80 identified a real CMS HEPData energy-correlator collection, but the measured product targets QCD jet structure and alpha_s rather than the engine g_8 coefficient.",
+      "next_action": "Do not promote CMS SMP-22-015 tables directly into g_8. Use them only as data seeds for a separately sourced adapter.",
+      "blockers": [
+        "observable_basis_not_qg_g8",
+        "public_g8_likelihood_or_covariance_missing",
+        "qcd_alpha_s_measurement_not_quantum_gravity_g8",
+        "qg_eft_applicability_domain_missing",
+        "registered_framework_exclusion_math_missing",
+        "source_backed_engine_g8_normalization_missing"
+      ]
+    },
+    {
+      "route": "heavy_ion_eec_direct_g8_promotion",
+      "status": "retired_for_current_engine",
+      "retained": false,
+      "claim_ready": false,
+      "reason": "v2.80 found a public CMS heavy-ion EEC measurement, but its target is QCD medium response rather than a low-energy quantum gravity EFT coefficient.",
+      "next_action": "Do not use the heavy-ion EEC result as a framework discriminator unless a source-backed low-energy QG EFT map is published.",
+      "blockers": [
+        "heavy_ion_medium_observable_not_low_energy_qg_eft",
+        "observable_basis_not_qg_g8",
+        "public_g8_likelihood_or_covariance_missing",
+        "qg_eft_applicability_domain_missing",
+        "registered_framework_exclusion_math_missing",
+        "source_backed_engine_g8_normalization_missing"
+      ]
+    },
+    {
+      "route": "open_data_reanalysis_without_source_adapter",
+      "status": "retired_as_direct_promotion",
+      "retained": false,
+      "claim_ready": false,
+      "reason": "Open data can support method development, but a private or engine-internal reanalysis would not create a source-backed operator map or public g_8 likelihood by itself.",
+      "next_action": "Only revisit CMS open data through the retained source-backed adapter-derivation route.",
+      "blockers": [
+        "internal_reanalysis_not_source_backed",
+        "public_g8_likelihood_or_covariance_missing",
+        "registered_framework_exclusion_math_missing",
+        "source_backed_engine_g8_normalization_missing"
+      ]
+    },
+    {
+      "route": "source_backed_energy_correlator_to_g8_adapter_derivation",
+      "status": "retained_required_before_any_data_based_g8_claim",
+      "retained": true,
+      "claim_ready": false,
+      "reason": "A data-based g_8 claim remains possible only if a published derivation maps an energy-correlator or detector observable into the engine Wilson basis with covariance.",
+      "next_action": "Search for or derive a citable adapter with a Jacobian to g_8, component-level systematics, public covariance, and QG EFT domain.",
+      "blockers": [
+        "component_level_systematics_budget_missing",
+        "low_energy_qg_eft_domain_missing",
+        "noncircular_framework_exclusion_missing",
+        "public_g8_covariance_missing",
+        "source_backed_jacobian_to_engine_g8_missing"
+      ]
+    },
+    {
+      "route": "new_spin4_or_detector_g8_measurement",
+      "status": "retained_as_cleanest_measurement_route",
+      "retained": true,
+      "claim_ready": false,
+      "reason": "v2.79 proves a correctly shaped spin-4 or detector-moment packet can pass the gate; v2.80 shows no current packet exists.",
+      "next_action": "Specify or find a measurement published directly in the spin-4/detector low-energy QG EFT basis.",
+      "blockers": [
+        "component_level_systematics_budget_missing",
+        "external_numeric_g8_measurement_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "registered_framework_exclusion_math_missing"
+      ]
+    },
+    {
+      "route": "g8_theory_bridge_archive",
+      "status": "retained_as_nonpromoting_design_material",
+      "retained": true,
+      "claim_ready": false,
+      "reason": "Gravity energy-correlator, spinning-correlator, and long-range partial-wave papers improve adapter language but do not provide external numerical evidence.",
+      "next_action": "Keep these sources as design constraints for adapters; do not treat them as measurements.",
+      "blockers": [
+        "public_g8_likelihood_or_covariance_missing",
+        "registered_framework_exclusion_math_missing",
+        "theory_formalism_not_external_measurement"
+      ]
+    }
+  ],
+  "route_status": "direct_public_data_g8_promotion_retired_no_claim_ready_route",
+  "best_next_artifact": "Pivot out of direct public-data promotion. Either produce a source-backed energy-correlator-to-g_8 adapter with covariance, or move to a different frontier while the clean spin-4/detector measurement route remains open.",
+  "interpretation": "The current g_8 work produced an executable adapter gate and a public-data acquisition map. It did not produce an engine-normalized quantum-gravity discriminator. Direct promotion of current QCD energy-correlator products is therefore retired for the current engine rather than left as an ambiguous maybe."
+}
