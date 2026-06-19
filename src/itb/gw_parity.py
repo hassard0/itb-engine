@@ -337,6 +337,127 @@ def normalize_callister_joint_posterior(
     }
 
 
+def histogram_posterior_from_samples(
+    samples: list[float] | np.ndarray,
+    *,
+    bins: int = 80,
+    value_range: tuple[float, float] | None = None,
+) -> dict[str, Any]:
+    """Convert one-dimensional posterior samples to a normalized histogram."""
+    values = np.asarray(samples, dtype=float)
+    blockers = []
+    if values.ndim != 1:
+        blockers.append("samples_not_one_dimensional")
+    if values.size < 2:
+        blockers.append("sample_count_too_small")
+    if bins < 2:
+        blockers.append("histogram_bins_too_small")
+    if np.any(~np.isfinite(values)):
+        blockers.append("samples_not_finite")
+    if value_range is not None and value_range[0] >= value_range[1]:
+        blockers.append("histogram_range_not_increasing")
+
+    if blockers:
+        return {
+            "ready": False,
+            "sample_count": int(values.size),
+            "bins": int(bins),
+            "coordinates": [],
+            "density": [],
+            "density_norm": 0.0,
+            "peak_coordinate": None,
+            "blockers": sorted(set(blockers)),
+        }
+
+    density, edges = np.histogram(
+        values,
+        bins=int(bins),
+        range=value_range,
+        density=True,
+    )
+    widths = np.diff(edges)
+    centers = edges[:-1] + 0.5 * widths
+    norm = float(np.sum(density * widths))
+    peak_index = int(np.argmax(density))
+    return {
+        "ready": True,
+        "sample_count": int(values.size),
+        "bins": int(bins),
+        "coordinates": centers.tolist(),
+        "density": density.tolist(),
+        "density_norm": norm,
+        "peak_coordinate": float(centers[peak_index]),
+        "blockers": [],
+    }
+
+
+def joint_histogram_posterior_from_samples(
+    x_samples: list[float] | np.ndarray,
+    y_samples: list[float] | np.ndarray,
+    *,
+    bins: tuple[int, int] = (80, 80),
+    value_range: tuple[tuple[float, float], tuple[float, float]] | None = None,
+) -> dict[str, Any]:
+    """Convert two-dimensional posterior samples to a normalized histogram."""
+    x_values = np.asarray(x_samples, dtype=float)
+    y_values = np.asarray(y_samples, dtype=float)
+    blockers = []
+    if x_values.ndim != 1 or y_values.ndim != 1:
+        blockers.append("samples_not_one_dimensional")
+    if x_values.shape != y_values.shape:
+        blockers.append("sample_shape_mismatch")
+    if x_values.size < 2:
+        blockers.append("sample_count_too_small")
+    if len(bins) != 2 or bins[0] < 2 or bins[1] < 2:
+        blockers.append("histogram_bins_too_small")
+    if np.any(~np.isfinite(x_values)) or np.any(~np.isfinite(y_values)):
+        blockers.append("samples_not_finite")
+    if value_range is not None:
+        x_range, y_range = value_range
+        if x_range[0] >= x_range[1] or y_range[0] >= y_range[1]:
+            blockers.append("histogram_range_not_increasing")
+
+    if blockers:
+        return {
+            "ready": False,
+            "sample_count": int(x_values.size),
+            "bins": list(bins),
+            "x_coordinates": [],
+            "y_coordinates": [],
+            "density": [],
+            "density_norm": 0.0,
+            "peak_x": None,
+            "peak_y": None,
+            "blockers": sorted(set(blockers)),
+        }
+
+    density, x_edges, y_edges = np.histogram2d(
+        x_values,
+        y_values,
+        bins=bins,
+        range=value_range,
+        density=True,
+    )
+    x_widths = np.diff(x_edges)
+    y_widths = np.diff(y_edges)
+    x_centers = x_edges[:-1] + 0.5 * x_widths
+    y_centers = y_edges[:-1] + 0.5 * y_widths
+    norm = float(np.sum(density * x_widths[:, None] * y_widths[None, :]))
+    peak = np.unravel_index(int(np.argmax(density)), density.shape)
+    return {
+        "ready": True,
+        "sample_count": int(x_values.size),
+        "bins": [int(bins[0]), int(bins[1])],
+        "x_coordinates": x_centers.tolist(),
+        "y_coordinates": y_centers.tolist(),
+        "density": density.tolist(),
+        "density_norm": norm,
+        "peak_x": float(x_centers[peak[0]]),
+        "peak_y": float(y_centers[peak[1]]),
+        "blockers": [],
+    }
+
+
 def parse_callister_fixed_rate_hdf_datasets(
     datasets: dict[str, Any],
     *,

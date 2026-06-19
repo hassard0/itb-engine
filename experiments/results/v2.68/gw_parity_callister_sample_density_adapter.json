@@ -1,0 +1,62 @@
+{
+  "version": "v2.68",
+  "basis": [
+    "v2.67_gw_parity_callister_variable_evolution_probe",
+    "Callister_Zenodo_10.5281_zenodo.10384998"
+  ],
+  "zenodo_record_url": "https://zenodo.org/records/10384998",
+  "zenodo_api_url": "https://zenodo.org/api/records/10384998",
+  "archive_filename": "stochastic-birefringence-data.zip",
+  "archive_md5_expected": "1373cfdd037b5d87c201e2aba06e8b42",
+  "archive_md5_observed": "1373cfdd037b5d87c201e2aba06e8b42",
+  "archive_md5_verified": true,
+  "sample_density_adapter_ready": true,
+  "variable_evolution_file": "birefringence_variable_evolution.hdf",
+  "variable_kappa_Dc_density": {
+    "ready": true,
+    "sample_count": 4500,
+    "bins": 80,
+    "density_norm": 1.0,
+    "blockers": [],
+    "peak_coordinate": 0.0050000000000000044
+  },
+  "variable_kappa_z_density": {
+    "ready": true,
+    "sample_count": 4500,
+    "bins": 80,
+    "density_norm": 1.0,
+    "blockers": [],
+    "peak_coordinate": -0.01874999999999996
+  },
+  "variable_joint_density": {
+    "ready": true,
+    "sample_count": 4500,
+    "bins": [
+      80,
+      80
+    ],
+    "density_norm": 1.0,
+    "blockers": [],
+    "peak_x": -0.03500000000000003,
+    "peak_y": -0.19374999999999998
+  },
+  "fixed_reference_file": "fixed_rate_delayedSFR.hdf",
+  "fixed_reference_peaks": {
+    "kappa_D_1D": 0.10275689223057644,
+    "kappa_z_1D": -0.059147869674185505,
+    "joint_kappa_D": 0.10651629072681701,
+    "joint_kappa_z": -0.01005025125628134
+  },
+  "ppv_beta1_projection_ready": false,
+  "engine_projection_ready": false,
+  "claimable_discriminator_now": false,
+  "artifact_blockers": [
+    "fixed_variable_posterior_model_comparison_not_interpreted",
+    "helicity_convention_not_harmonized_across_sources",
+    "ppv_beta1_normalization_not_finalized",
+    "engine_projection_out_of_scope"
+  ],
+  "route_status": "callister_sample_density_adapter_ready_projection_blocked",
+  "best_next_artifact": "Define a sourced comparison statistic between fixed-rate grid posteriors and variable-evolution sample densities, still before PPV beta or engine-axis promotion.",
+  "interpretation": "Variable-evolution kappa samples can now be converted into normalized source-native histogram densities. The comparison to a fixed-rate reference is diagnostic only and does not carry a physics claim."
+}
