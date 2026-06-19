@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (149 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (150 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -198,3 +198,4 @@ Auto-generated front door to the full research program (149 notes). Regenerate w
 | v2.36 | [v2.36 - Quintic promotion forecast: ownership would improve, exclusion](2026-06-19-v2.36-quintic-promotion-forecast.md) | v2.34 produced a schema-ready sourced tower candidate. v2.35 showed it is not an |
 | v2.37 | [v2.37 - Large-volume SDC benchmark: math exclusion, still not a framew](2026-06-19-v2.37-large-volume-sdc-benchmark.md) | v2.36 ended with two possible next moves: asymptotic lightest-tower extraction or a |
 | v2.38 | [v2.38 - Analytic KK tower benchmark: rates are enough, ownership is no](2026-06-19-v2.38-analytic-kk-tower-benchmark.md) | v2.37 found a large-volume benchmark that crosses the tower threshold, but still lacks |
+| v2.39 | [v2.39 - Tower-gate calibration: positive controls fail, so no discrimi](2026-06-19-v2.39-tower-gate-positive-control-calibration.md) | v2.37 and v2.38 found primary-source benchmarks that cross the current tower threshold. |

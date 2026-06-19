@@ -1,0 +1,125 @@
+{
+  "basis": [
+    "tower_gate",
+    "known_qg_positive_control",
+    "calibration_audit"
+  ],
+  "positive_control_count": 7,
+  "positive_controls_rejected_by_gate": [
+    "blumenhagen_large_volume_delta1_benchmark",
+    "d4_p1_kk_vector",
+    "d4_p2_kk_vector",
+    "d4_p3_kk_vector",
+    "d4_p4_kk_vector",
+    "d4_p5_kk_vector",
+    "d4_p6_kk_vector"
+  ],
+  "positive_control_rejection_count": 7,
+  "calibration_status": "tower_gate_fails_positive_control_calibration",
+  "calibrated_discriminator_ready": false,
+  "tower_discriminator_candidates_now": [],
+  "claimable_framework_exclusions_now": [],
+  "controls": [
+    {
+      "label": "blumenhagen_large_volume_delta1_benchmark",
+      "source_family": "large_volume_calabi_yau_sdc",
+      "known_qg_positive_control": true,
+      "math_excluded_by_current_gate": true,
+      "gate_verdict": "tower_excluded_by_predictive_spectrum",
+      "two_sigma_phi_interval": [
+        0.9810129064237817,
+        1.1635079459270259
+      ],
+      "critical_phi_tower": 0.7433019116911739,
+      "calibration_verdict": "positive_control_rejected_by_tower_gate",
+      "scope": "asymptotic large-volume Calabi-Yau benchmark with audit-supplied Delta_moduli=1"
+    },
+    {
+      "label": "d4_p1_kk_vector",
+      "source_family": "analytic_kk_decompactification_vector",
+      "known_qg_positive_control": true,
+      "math_excluded_by_current_gate": true,
+      "gate_verdict": "benchmark_excluding",
+      "phi_tower_mean": 1.224744871391589,
+      "phi_tower_sigma": 0.0,
+      "critical_phi_tower": 0.7433019116911739,
+      "calibration_verdict": "positive_control_rejected_by_tower_gate",
+      "scope": "analytic KK decompactification vector with audit-supplied Delta_moduli=1"
+    },
+    {
+      "label": "d4_p2_kk_vector",
+      "source_family": "analytic_kk_decompactification_vector",
+      "known_qg_positive_control": true,
+      "math_excluded_by_current_gate": true,
+      "gate_verdict": "benchmark_excluding",
+      "phi_tower_mean": 1.0,
+      "phi_tower_sigma": 0.0,
+      "critical_phi_tower": 0.7433019116911739,
+      "calibration_verdict": "positive_control_rejected_by_tower_gate",
+      "scope": "analytic KK decompactification vector with audit-supplied Delta_moduli=1"
+    },
+    {
+      "label": "d4_p3_kk_vector",
+      "source_family": "analytic_kk_decompactification_vector",
+      "known_qg_positive_control": true,
+      "math_excluded_by_current_gate": true,
+      "gate_verdict": "benchmark_excluding",
+      "phi_tower_mean": 0.9128709291752769,
+      "phi_tower_sigma": 0.0,
+      "critical_phi_tower": 0.7433019116911739,
+      "calibration_verdict": "positive_control_rejected_by_tower_gate",
+      "scope": "analytic KK decompactification vector with audit-supplied Delta_moduli=1"
+    },
+    {
+      "label": "d4_p4_kk_vector",
+      "source_family": "analytic_kk_decompactification_vector",
+      "known_qg_positive_control": true,
+      "math_excluded_by_current_gate": true,
+      "gate_verdict": "benchmark_excluding",
+      "phi_tower_mean": 0.8660254037844386,
+      "phi_tower_sigma": 0.0,
+      "critical_phi_tower": 0.7433019116911739,
+      "calibration_verdict": "positive_control_rejected_by_tower_gate",
+      "scope": "analytic KK decompactification vector with audit-supplied Delta_moduli=1"
+    },
+    {
+      "label": "d4_p5_kk_vector",
+      "source_family": "analytic_kk_decompactification_vector",
+      "known_qg_positive_control": true,
+      "math_excluded_by_current_gate": true,
+      "gate_verdict": "benchmark_excluding",
+      "phi_tower_mean": 0.8366600265340756,
+      "phi_tower_sigma": 0.0,
+      "critical_phi_tower": 0.7433019116911739,
+      "calibration_verdict": "positive_control_rejected_by_tower_gate",
+      "scope": "analytic KK decompactification vector with audit-supplied Delta_moduli=1"
+    },
+    {
+      "label": "d4_p6_kk_vector",
+      "source_family": "analytic_kk_decompactification_vector",
+      "known_qg_positive_control": true,
+      "math_excluded_by_current_gate": true,
+      "gate_verdict": "benchmark_excluding",
+      "phi_tower_mean": 0.816496580927726,
+      "phi_tower_sigma": 0.0,
+      "critical_phi_tower": 0.7433019116911739,
+      "calibration_verdict": "positive_control_rejected_by_tower_gate",
+      "scope": "analytic KK decompactification vector with audit-supplied Delta_moduli=1"
+    }
+  ],
+  "action_required": "Do not promote tower-gate math exclusions into framework exclusions until the gate is recalibrated or scope-limited so it does not reject known string-compatible decompactification controls.",
+  "literature_guardrail": {
+    "claim": "This is an adversarial calibration audit. Positive-control rejection is evidence against the current gate as a universal quantum-gravity discriminator, not evidence for a solution claim.",
+    "primary_sources": [
+      {
+        "title": "Blumenhagen, Klaewer, Schlechter, and Wolf, The Refined Swampland Distance Conjecture in Calabi-Yau Moduli Spaces",
+        "url": "https://arxiv.org/abs/1803.04989"
+      },
+      {
+        "title": "Aoufia, Castellano, and Ibanez, Laplacians in Various Dimensions and the Swampland",
+        "url": "https://arxiv.org/abs/2506.03253"
+      }
+    ]
+  },
+  "interpretation": "The current tower gate is useful as a benchmark stress test, but it cannot support framework exclusions while it rejects string-compatible large-volume and analytic KK positive controls."
+}
