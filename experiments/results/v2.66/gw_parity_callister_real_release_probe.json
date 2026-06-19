@@ -1,0 +1,402 @@
+{
+  "version": "v2.66",
+  "basis": [
+    "v2.65_gw_parity_callister_posterior_parser",
+    "Callister_Zenodo_10.5281_zenodo.10384998"
+  ],
+  "zenodo_record_url": "https://zenodo.org/records/10384998",
+  "zenodo_api_url": "https://zenodo.org/api/records/10384998",
+  "archive_filename": "stochastic-birefringence-data.zip",
+  "archive_size_bytes": 27563789,
+  "archive_md5_expected": "1373cfdd037b5d87c201e2aba06e8b42",
+  "archive_md5_observed": "1373cfdd037b5d87c201e2aba06e8b42",
+  "archive_md5_verified": true,
+  "fixed_rate_files_checked": [
+    "fixed_rate_uniform.hdf",
+    "fixed_rate_SFR.hdf",
+    "fixed_rate_delayedSFR.hdf",
+    "fixed_rate_delayedSFR_HLO1.hdf",
+    "fixed_rate_delayedSFR_HLO2.hdf",
+    "fixed_rate_delayedSFR_HLO3.hdf",
+    "fixed_rate_delayedSFR_HVO3.hdf",
+    "fixed_rate_delayedSFR_LVO3.hdf"
+  ],
+  "fixed_rate_file_count": 8,
+  "all_fixed_rate_parsers_ready": true,
+  "real_release_file_bundled": false,
+  "hdf_dependency_declared": true,
+  "ppv_beta1_projection_ready": false,
+  "engine_projection_ready": false,
+  "claimable_discriminator_now": false,
+  "artifact_blockers": [
+    "variable_rate_hdf_parser_not_implemented",
+    "helicity_convention_not_harmonized_across_sources",
+    "ppv_beta1_normalization_not_finalized",
+    "engine_projection_out_of_scope"
+  ],
+  "file_summaries": [
+    {
+      "filename": "fixed_rate_uniform.hdf",
+      "parser_ready": true,
+      "parser_blockers": [],
+      "projection_blockers": [
+        "helicity_convention_not_harmonized_across_sources",
+        "ppv_beta1_normalization_not_finalized",
+        "engine_projection_out_of_scope"
+      ],
+      "engine_projection_ready": false,
+      "claimable_discriminator_now": false,
+      "kappa_D_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.2,
+        "coordinate_max": 0.2,
+        "normalized_norm": 1.0,
+        "peak_coordinate": 0.11679197994987467,
+        "blockers": []
+      },
+      "kappa_z_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.4,
+        "coordinate_max": 0.4,
+        "normalized_norm": 1.0,
+        "peak_coordinate": 0.22957393483709265,
+        "blockers": []
+      },
+      "joint": {
+        "ready": true,
+        "shape": [
+          400,
+          399
+        ],
+        "kappa_D_min": -0.5,
+        "kappa_D_max": 0.5,
+        "kappa_z_min": -1.0,
+        "kappa_z_max": 1.0,
+        "normalized_norm": 1.0,
+        "peak_kappa_D": 0.081453634085213,
+        "peak_kappa_z": 0.09045226130653261,
+        "blockers": []
+      }
+    },
+    {
+      "filename": "fixed_rate_SFR.hdf",
+      "parser_ready": true,
+      "parser_blockers": [],
+      "projection_blockers": [
+        "helicity_convention_not_harmonized_across_sources",
+        "ppv_beta1_normalization_not_finalized",
+        "engine_projection_out_of_scope"
+      ],
+      "engine_projection_ready": false,
+      "claimable_discriminator_now": false,
+      "kappa_D_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.2,
+        "coordinate_max": 0.2,
+        "normalized_norm": 1.0,
+        "peak_coordinate": 0.10175438596491226,
+        "blockers": []
+      },
+      "kappa_z_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.4,
+        "coordinate_max": 0.4,
+        "normalized_norm": 1.0,
+        "peak_coordinate": -0.07518796992481208,
+        "blockers": []
+      },
+      "joint": {
+        "ready": true,
+        "shape": [
+          400,
+          399
+        ],
+        "kappa_D_min": -0.5,
+        "kappa_D_max": 0.5,
+        "kappa_z_min": -1.0,
+        "kappa_z_max": 1.0,
+        "normalized_norm": 0.9999999999999999,
+        "peak_kappa_D": 0.0864661654135338,
+        "peak_kappa_z": 0.04020100502512558,
+        "blockers": []
+      }
+    },
+    {
+      "filename": "fixed_rate_delayedSFR.hdf",
+      "parser_ready": true,
+      "parser_blockers": [],
+      "projection_blockers": [
+        "helicity_convention_not_harmonized_across_sources",
+        "ppv_beta1_normalization_not_finalized",
+        "engine_projection_out_of_scope"
+      ],
+      "engine_projection_ready": false,
+      "claimable_discriminator_now": false,
+      "kappa_D_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.2,
+        "coordinate_max": 0.2,
+        "normalized_norm": 1.0,
+        "peak_coordinate": 0.10275689223057644,
+        "blockers": []
+      },
+      "kappa_z_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.4,
+        "coordinate_max": 0.4,
+        "normalized_norm": 1.0,
+        "peak_coordinate": -0.059147869674185505,
+        "blockers": []
+      },
+      "joint": {
+        "ready": true,
+        "shape": [
+          400,
+          399
+        ],
+        "kappa_D_min": -0.5,
+        "kappa_D_max": 0.5,
+        "kappa_z_min": -1.0,
+        "kappa_z_max": 1.0,
+        "normalized_norm": 1.0,
+        "peak_kappa_D": 0.10651629072681701,
+        "peak_kappa_z": -0.01005025125628134,
+        "blockers": []
+      }
+    },
+    {
+      "filename": "fixed_rate_delayedSFR_HLO1.hdf",
+      "parser_ready": true,
+      "parser_blockers": [],
+      "projection_blockers": [
+        "helicity_convention_not_harmonized_across_sources",
+        "ppv_beta1_normalization_not_finalized",
+        "engine_projection_out_of_scope"
+      ],
+      "engine_projection_ready": false,
+      "claimable_discriminator_now": false,
+      "kappa_D_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.2,
+        "coordinate_max": 0.2,
+        "normalized_norm": 1.0,
+        "peak_coordinate": 0.10676691729323307,
+        "blockers": []
+      },
+      "kappa_z_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.4,
+        "coordinate_max": 0.4,
+        "normalized_norm": 1.0,
+        "peak_coordinate": 0.2115288220551378,
+        "blockers": []
+      },
+      "joint": {
+        "ready": true,
+        "shape": [
+          400,
+          399
+        ],
+        "kappa_D_min": -0.5,
+        "kappa_D_max": 0.5,
+        "kappa_z_min": -1.0,
+        "kappa_z_max": 1.0,
+        "normalized_norm": 1.0,
+        "peak_kappa_D": 0.03132832080200498,
+        "peak_kappa_z": 0.170854271356784,
+        "blockers": []
+      }
+    },
+    {
+      "filename": "fixed_rate_delayedSFR_HLO2.hdf",
+      "parser_ready": true,
+      "parser_blockers": [],
+      "projection_blockers": [
+        "helicity_convention_not_harmonized_across_sources",
+        "ppv_beta1_normalization_not_finalized",
+        "engine_projection_out_of_scope"
+      ],
+      "engine_projection_ready": false,
+      "claimable_discriminator_now": false,
+      "kappa_D_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.2,
+        "coordinate_max": 0.2,
+        "normalized_norm": 1.0,
+        "peak_coordinate": 0.08771929824561403,
+        "blockers": []
+      },
+      "kappa_z_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.4,
+        "coordinate_max": 0.4,
+        "normalized_norm": 1.0,
+        "peak_coordinate": -0.18345864661654138,
+        "blockers": []
+      },
+      "joint": {
+        "ready": true,
+        "shape": [
+          400,
+          399
+        ],
+        "kappa_D_min": -0.5,
+        "kappa_D_max": 0.5,
+        "kappa_z_min": -1.0,
+        "kappa_z_max": 1.0,
+        "normalized_norm": 1.0,
+        "peak_kappa_D": 0.27694235588972427,
+        "peak_kappa_z": -0.507537688442211,
+        "blockers": []
+      }
+    },
+    {
+      "filename": "fixed_rate_delayedSFR_HLO3.hdf",
+      "parser_ready": true,
+      "parser_blockers": [],
+      "projection_blockers": [
+        "helicity_convention_not_harmonized_across_sources",
+        "ppv_beta1_normalization_not_finalized",
+        "engine_projection_out_of_scope"
+      ],
+      "engine_projection_ready": false,
+      "claimable_discriminator_now": false,
+      "kappa_D_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.2,
+        "coordinate_max": 0.2,
+        "normalized_norm": 1.0000000000000002,
+        "peak_coordinate": 0.10275689223057644,
+        "blockers": []
+      },
+      "kappa_z_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.4,
+        "coordinate_max": 0.4,
+        "normalized_norm": 1.0,
+        "peak_coordinate": -0.041102756892230585,
+        "blockers": []
+      },
+      "joint": {
+        "ready": true,
+        "shape": [
+          400,
+          399
+        ],
+        "kappa_D_min": -0.5,
+        "kappa_D_max": 0.5,
+        "kappa_z_min": -1.0,
+        "kappa_z_max": 1.0,
+        "normalized_norm": 1.0,
+        "peak_kappa_D": 0.10902255639097747,
+        "peak_kappa_z": -0.015075376884422065,
+        "blockers": []
+      }
+    },
+    {
+      "filename": "fixed_rate_delayedSFR_HVO3.hdf",
+      "parser_ready": true,
+      "parser_blockers": [],
+      "projection_blockers": [
+        "helicity_convention_not_harmonized_across_sources",
+        "ppv_beta1_normalization_not_finalized",
+        "engine_projection_out_of_scope"
+      ],
+      "engine_projection_ready": false,
+      "claimable_discriminator_now": false,
+      "kappa_D_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.2,
+        "coordinate_max": 0.2,
+        "normalized_norm": 1.0,
+        "peak_coordinate": 0.11779448621553884,
+        "blockers": []
+      },
+      "kappa_z_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.4,
+        "coordinate_max": 0.4,
+        "normalized_norm": 1.0,
+        "peak_coordinate": -0.21152882205513787,
+        "blockers": []
+      },
+      "joint": {
+        "ready": true,
+        "shape": [
+          400,
+          399
+        ],
+        "kappa_D_min": -0.5,
+        "kappa_D_max": 0.5,
+        "kappa_z_min": -1.0,
+        "kappa_z_max": 1.0,
+        "normalized_norm": 1.0,
+        "peak_kappa_D": 0.11152882205513781,
+        "peak_kappa_z": 0.015075376884422065,
+        "blockers": []
+      }
+    },
+    {
+      "filename": "fixed_rate_delayedSFR_LVO3.hdf",
+      "parser_ready": true,
+      "parser_blockers": [],
+      "projection_blockers": [
+        "helicity_convention_not_harmonized_across_sources",
+        "ppv_beta1_normalization_not_finalized",
+        "engine_projection_out_of_scope"
+      ],
+      "engine_projection_ready": false,
+      "claimable_discriminator_now": false,
+      "kappa_D_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.2,
+        "coordinate_max": 0.2,
+        "normalized_norm": 1.0,
+        "peak_coordinate": -0.10977443609022558,
+        "blockers": []
+      },
+      "kappa_z_1D": {
+        "ready": true,
+        "points": 400,
+        "coordinate_min": -0.4,
+        "coordinate_max": 0.4,
+        "normalized_norm": 1.0,
+        "peak_coordinate": 0.019047619047619035,
+        "blockers": []
+      },
+      "joint": {
+        "ready": true,
+        "shape": [
+          400,
+          399
+        ],
+        "kappa_D_min": -0.5,
+        "kappa_D_max": 0.5,
+        "kappa_z_min": -1.0,
+        "kappa_z_max": 1.0,
+        "normalized_norm": 1.0,
+        "peak_kappa_D": -0.14661654135338348,
+        "peak_kappa_z": 0.09547738693467345,
+        "blockers": []
+      }
+    }
+  ],
+  "route_status": "callister_real_fixed_rate_posteriors_ingested_projection_blocked",
+  "best_next_artifact": "Implement the separate variable-evolution HDF parser, then harmonize helicity and PPV beta normalization before considering any promotion.",
+  "interpretation": "All eight Callister fixed-rate Zenodo HDF files parse and normalize with the guarded source-native parser. This closes the fixed-rate real-file ingestion blocker, but the result remains native posterior material and does not produce an engine-axis discriminator."
+}
