@@ -1,0 +1,128 @@
+{
+  "basis": [
+    "v2.48_tower_candidate_promotion",
+    "v2.49_birefringence_freshness",
+    "v2.51_weyl_g8_sourceability",
+    "v2.52_nontower_promotion_guard"
+  ],
+  "route_count": 4,
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "routes": [
+    {
+      "route": "native_tower_adapter",
+      "family": "tower",
+      "current_status": "blocked_missing_framework_owned_native_adapter",
+      "latest_audit": "v2.48",
+      "claim_ready": false,
+      "blocker_summary": [
+        "finite_range_not_asymptotic",
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+        "not_exposed_by_registered_framework_adapter",
+        "single_compactification_not_generic_framework",
+        "tower_math_not_excluding"
+      ],
+      "next_required_artifact": "A registered in-scope framework-owned native TowerEvidence adapter with endpoint, displacement, source, normalization, uncertainty, and excluding tower math.",
+      "evidence_snapshot": {
+        "candidate_count": 8,
+        "promotable_native_adapter_candidates": [],
+        "tower_math_excluding_candidates": [
+          "blumenhagen_large_volume_delta1_benchmark",
+          "d4_p1_kk_vector",
+          "d4_p2_kk_vector",
+          "d4_p3_kk_vector",
+          "d4_p4_kk_vector",
+          "d4_p5_kk_vector",
+          "d4_p6_kk_vector"
+        ]
+      }
+    },
+    {
+      "route": "cosmic_birefringence",
+      "family": "non_tower_parity",
+      "current_status": "alive_but_promotion_guard_blocked",
+      "latest_audit": "v2.49/v2.52",
+      "claim_ready": false,
+      "blocker_summary": [
+        "axis_mapping_not_source_backed",
+        "data_driven_eft_still_one_observable_dominated",
+        "discriminator_math_not_excluding",
+        "external_measurement_evidence_not_ready",
+        "foreground_systematics_not_closed",
+        "instrument_angle_miscalibration_degeneracy",
+        "no_5sigma_single_dataset_detection",
+        "systematics_not_closed"
+      ],
+      "next_required_artifact": "A systematics-closed external beta measurement with a source-backed mapping from beta to the engine parity axis.",
+      "evidence_snapshot": {
+        "route_status": "alive_but_not_claimable",
+        "positive_sign_dataset_count": 5,
+        "dataset_count": 5,
+        "independent_pair_zero_exclusion_sigma": 4.5333911785122005,
+        "guard_status": "non_tower_promotion_guard_blocked"
+      }
+    },
+    {
+      "route": "weyl_g_C",
+      "family": "non_tower_weyl",
+      "current_status": "sourceability_and_promotion_guard_blocked",
+      "latest_audit": "v2.50/v2.51/v2.52",
+      "claim_ready": false,
+      "blocker_summary": [
+        "axis_mapping_not_source_backed",
+        "discriminator_math_not_excluding",
+        "external_measurement_evidence_not_ready",
+        "internal_cut_not_external_measurement",
+        "measurement_kind_not_external_numeric",
+        "missing_external_numeric_measurement",
+        "systematics_not_closed"
+      ],
+      "next_required_artifact": "A direct external numerical Weyl-sector measurement or validated framework adapter; structural a/c and holographic proxies are not enough.",
+      "evidence_snapshot": {
+        "candidate_routes": 3,
+        "source_backed_theory_routes": 3,
+        "external_numeric_measurement_routes": 0,
+        "claim_ready_routes": 0
+      }
+    },
+    {
+      "route": "matter_high_moment_g_8",
+      "family": "non_tower_matter",
+      "current_status": "design_probe_and_promotion_guard_blocked",
+      "latest_audit": "v2.50/v2.51/v2.52",
+      "claim_ready": false,
+      "blocker_summary": [
+        "axis_mapping_not_source_backed",
+        "discriminator_math_not_excluding",
+        "external_measurement_evidence_not_ready",
+        "internal_cut_not_external_measurement",
+        "measurement_kind_not_external_numeric",
+        "missing_external_numeric_measurement",
+        "systematics_not_closed"
+      ],
+      "next_required_artifact": "A sourced spin-4, detector, or high-moment measurement program with direct mapping to g_8 and closed systematics.",
+      "evidence_snapshot": {
+        "candidate_routes": 3,
+        "source_backed_theory_routes": 3,
+        "external_numeric_measurement_routes": 0,
+        "claim_ready_routes": 0
+      }
+    }
+  ],
+  "synthetic_positive_control": {
+    "ready_routes": [
+      "synthetic:ready_external_measurement"
+    ],
+    "purpose": "Proves the non-tower positive path without asserting any current framework claim."
+  },
+  "priority_order": [
+    "matter_high_moment_g_8",
+    "cosmic_birefringence",
+    "weyl_g_C",
+    "native_tower_adapter"
+  ],
+  "route_status": "no_claim_ready_route",
+  "interpretation": "The frontier is organized but unsolved. The most actionable next artifact is an external, sourced g_8 high-moment/partial-wave measurement specification; birefringence remains empirically alive but systematics- and mapping-blocked; g_C remains structural; the tower route remains adapter-ownership blocked."
+}
