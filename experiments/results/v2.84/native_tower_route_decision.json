@@ -1,0 +1,161 @@
+{
+  "version": "v2.84",
+  "basis": [
+    "v2.83_native_tower_current_source_audit",
+    "v2.82_post_g8_route_decision_frontier",
+    "v2.46_native_tower_ownership_frontier",
+    "v2.47_native_adapter_acceptance_harness"
+  ],
+  "decision_scope": "native_tower_sources_to_registered_framework_adapters",
+  "route_count": 7,
+  "retired_routes": [
+    "quintic_single_compactification_direct_string_tree_promotion",
+    "string_positive_control_direct_exclusion",
+    "asymptotic_safety_swampland_comparison_direct_tower",
+    "horava_witten_to_horava_lifshitz_promotion"
+  ],
+  "retained_nonpromoting_routes": [
+    "registered_native_tower_adapter_authoring",
+    "framework_specific_asymptotic_source_search",
+    "native_tower_source_archive"
+  ],
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "adapter_normalization_missing": 1,
+    "asymptotic_tower_spectrum_missing": 1,
+    "dark_dimension_candidate_not_registered_framework_adapter": 1,
+    "finite_range_not_asymptotic": 1,
+    "framework_owned_displacement_missing": 1,
+    "framework_owned_endpoint_missing": 1,
+    "framework_relative_swampland_assessment_not_tower_spectrum": 1,
+    "horava_witten_string_setup_not_horava_lifshitz_framework": 1,
+    "known_qg_positive_control_family": 1,
+    "missing_framework_owned_displacement": 4,
+    "missing_framework_owned_endpoint": 4,
+    "missing_native_tower_evidence": 2,
+    "missing_native_tower_spectrum": 2,
+    "named_framework_native_source_missing": 1,
+    "not_exposed_by_registered_framework_adapter": 4,
+    "ownership_metadata_missing": 1,
+    "registered_framework_exclusion_math_missing": 4,
+    "single_compactification_not_generic_framework": 1,
+    "single_scalar_laplacian_subtower_not_complete_tower_spectrum": 1,
+    "source_archive_not_framework_claim": 1,
+    "source_owned_tower_evidence_missing": 1,
+    "source_owned_tower_spectrum_missing": 1,
+    "two_sigma_tower_exclusion_missing": 1
+  },
+  "rows": [
+    {
+      "route": "quintic_single_compactification_direct_string_tree_promotion",
+      "status": "retired_for_generic_framework_claims",
+      "retained": false,
+      "claim_ready": false,
+      "reason": "The Ashmore/Ruehle quintic row is a useful numeric KK subtower candidate, but v2.83 keeps it finite-range, single-compactification, and not owned by the registered string_tree_eft adapter.",
+      "next_action": "Do not use the quintic subtower as a generic string_tree_eft framework verdict. Keep it only as a scoped candidate row.",
+      "blockers": [
+        "finite_range_not_asymptotic",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+        "not_exposed_by_registered_framework_adapter",
+        "registered_framework_exclusion_math_missing",
+        "single_compactification_not_generic_framework",
+        "single_scalar_laplacian_subtower_not_complete_tower_spectrum"
+      ]
+    },
+    {
+      "route": "string_positive_control_direct_exclusion",
+      "status": "retired_for_framework_exclusion",
+      "retained": false,
+      "claim_ready": false,
+      "reason": "Large-volume and analytic KK decompactification sources are known string-compatible positive controls, so exclusion math cannot be promoted into a framework claim.",
+      "next_action": "Use positive controls to test guard behavior only; do not count them as quantum-gravity exclusions.",
+      "blockers": [
+        "known_qg_positive_control_family",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+        "not_exposed_by_registered_framework_adapter",
+        "registered_framework_exclusion_math_missing"
+      ]
+    },
+    {
+      "route": "asymptotic_safety_swampland_comparison_direct_tower",
+      "status": "retired_as_native_tower_source",
+      "retained": false,
+      "claim_ready": false,
+      "reason": "The asymptotic-safety source is a conceptual swampland assessment, not a native TowerSpectrum/TowerEvidence adapter.",
+      "next_action": "Only revisit if an asymptotic-safety source publishes explicit tower spectra with endpoint and displacement ownership.",
+      "blockers": [
+        "framework_relative_swampland_assessment_not_tower_spectrum",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+        "missing_native_tower_evidence",
+        "missing_native_tower_spectrum",
+        "not_exposed_by_registered_framework_adapter",
+        "registered_framework_exclusion_math_missing"
+      ]
+    },
+    {
+      "route": "horava_witten_to_horava_lifshitz_promotion",
+      "status": "retired_wrong_registered_framework_target",
+      "retained": false,
+      "claim_ready": false,
+      "reason": "The Horava-Witten dark-dimension source is a string setup and does not target the registered Horava-Lifshitz framework.",
+      "next_action": "Do not merge Horava-Witten string evidence into the horava_lifshitz framework adapter.",
+      "blockers": [
+        "dark_dimension_candidate_not_registered_framework_adapter",
+        "horava_witten_string_setup_not_horava_lifshitz_framework",
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+        "missing_native_tower_evidence",
+        "missing_native_tower_spectrum",
+        "not_exposed_by_registered_framework_adapter",
+        "registered_framework_exclusion_math_missing"
+      ]
+    },
+    {
+      "route": "registered_native_tower_adapter_authoring",
+      "status": "retained_required_before_any_native_tower_claim",
+      "retained": true,
+      "claim_ready": false,
+      "reason": "The native tower route remains possible only when a registered framework exposes source-owned TowerSpectrum and TowerEvidence methods with endpoint/displacement ownership.",
+      "next_action": "Implement a real native adapter only from a source that owns the registered framework endpoint, displacement, spectrum, and normalization.",
+      "blockers": [
+        "framework_owned_displacement_missing",
+        "framework_owned_endpoint_missing",
+        "source_owned_tower_evidence_missing",
+        "source_owned_tower_spectrum_missing",
+        "two_sigma_tower_exclusion_missing"
+      ]
+    },
+    {
+      "route": "framework_specific_asymptotic_source_search",
+      "status": "retained_as_search_route",
+      "retained": true,
+      "claim_ready": false,
+      "reason": "The current search did not find a registered native adapter, but a narrower framework-by-framework search could still find one.",
+      "next_action": "Search one registered framework at a time for asymptotic tower spectra and ownership metadata.",
+      "blockers": [
+        "adapter_normalization_missing",
+        "asymptotic_tower_spectrum_missing",
+        "named_framework_native_source_missing"
+      ]
+    },
+    {
+      "route": "native_tower_source_archive",
+      "status": "retained_as_nonpromoting_design_material",
+      "retained": true,
+      "claim_ready": false,
+      "reason": "The audited string/swampland sources remain useful for guard tests, positive controls, and future adapter design.",
+      "next_action": "Keep source rows archived with their blockers; never use them as framework verdicts without native ownership.",
+      "blockers": [
+        "ownership_metadata_missing",
+        "source_archive_not_framework_claim"
+      ]
+    }
+  ],
+  "route_status": "direct_native_tower_source_promotion_retired_no_claim_ready_route",
+  "best_next_artifact": "Pivot out of direct native-source promotion. Either find a registered-framework-owned native tower adapter or move to the next frontier route.",
+  "interpretation": "The current native tower sources are useful but non-promoting. Direct promotion of finite-range, positive-control, conceptual, or wrong-framework sources is retired. The only retained native route is a proper registered adapter with source-owned endpoint and displacement."
+}
