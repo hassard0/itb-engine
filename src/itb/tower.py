@@ -33,6 +33,83 @@ class TowerSpectrum:
         }
 
 
+@dataclass(frozen=True)
+class TowerEvidence:
+    framework: str
+    spectrum: TowerSpectrum
+    adapter_kind: str
+    source_url: str
+    source_type: str
+    derivation_kind: str
+    uncertainty_kind: str
+    normalization_reference: str
+    metadata: dict[str, Any] = field(default_factory=dict)
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "framework": self.framework,
+            "spectrum": self.spectrum.to_dict(),
+            "adapter_kind": self.adapter_kind,
+            "source_url": self.source_url,
+            "source_type": self.source_type,
+            "derivation_kind": self.derivation_kind,
+            "uncertainty_kind": self.uncertainty_kind,
+            "normalization_reference": self.normalization_reference,
+            "metadata": dict(self.metadata),
+        }
+
+
+REQUIRED_TOWER_EVIDENCE_FIELDS = (
+    "framework",
+    "adapter_kind",
+    "source_url",
+    "source_type",
+    "derivation_kind",
+    "uncertainty_kind",
+    "normalization_reference",
+)
+
+
+def validate_tower_evidence(evidence: TowerEvidence | dict[str, Any]) -> dict[str, Any]:
+    row = evidence.to_dict() if hasattr(evidence, "to_dict") else dict(evidence)
+    missing = [
+        field for field in REQUIRED_TOWER_EVIDENCE_FIELDS
+        if row.get(field) in (None, "")
+    ]
+    spectrum = row.get("spectrum")
+    if not isinstance(spectrum, dict):
+        missing.append("spectrum")
+    else:
+        for field in ("tower_family", "phi_tower_mean", "phi_tower_sigma", "normalization", "source"):
+            if spectrum.get(field) in (None, ""):
+                missing.append(f"spectrum.{field}")
+
+    source_url = row.get("source_url") or ""
+    source_url_valid = source_url.startswith(("https://arxiv.org/", "https://doi.org/"))
+    source_type = row.get("source_type")
+    source_type_valid = source_type in {
+        "primary_literature",
+        "computed_compactification",
+        "validated_measurement",
+    }
+    ready = not missing and source_url_valid and source_type_valid
+    blockers = []
+    if missing:
+        blockers.append("missing_required_fields")
+    if source_url and not source_url_valid:
+        blockers.append("source_url_not_primary_allowed")
+    if source_type and not source_type_valid:
+        blockers.append("source_type_not_allowed")
+
+    return {
+        "ready_for_framework_claim": ready,
+        "missing_fields": sorted(set(missing)),
+        "source_url_valid": source_url_valid,
+        "source_type_valid": source_type_valid,
+        "blockers": blockers,
+    }
+
+
 def sdc_tower_spectrum(
     *,
     tower_family: str,

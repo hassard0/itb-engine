@@ -5,7 +5,13 @@ from itb.frameworks.pure_gr import PureGR
 from itb.theory import Theory
 import pytest
 
-from itb.tower import TowerSpectrum, kk_radius_tower_spectrum, sdc_tower_spectrum
+from itb.tower import (
+    TowerEvidence,
+    TowerSpectrum,
+    kk_radius_tower_spectrum,
+    sdc_tower_spectrum,
+    validate_tower_evidence,
+)
 
 
 class SyntheticTowerFramework(Framework):
@@ -91,3 +97,54 @@ def test_kk_radius_tower_spectrum_rejects_invalid_inputs():
             normalization="unit-test radius normalization",
             source="unit-test source",
         )
+
+
+def test_tower_evidence_validation_accepts_complete_primary_source():
+    spectrum = kk_radius_tower_spectrum(
+        tower_family="kk_fixture",
+        radius_ratio_mean=2.6,
+        log_radius_sigma=0.04,
+        normalization="unit-test radius normalization",
+        source="unit-test source",
+    )
+    evidence = TowerEvidence(
+        framework="string_tree_eft",
+        spectrum=spectrum,
+        adapter_kind="kk_radius",
+        source_url="https://arxiv.org/abs/1812.07548",
+        source_type="primary_literature",
+        derivation_kind="diagnostic_fixture",
+        uncertainty_kind="log_radius_one_sigma",
+        normalization_reference="R/R0 diagnostic normalization",
+    )
+
+    result = validate_tower_evidence(evidence)
+
+    assert result["ready_for_framework_claim"] is True
+    assert result["blockers"] == []
+
+
+def test_tower_evidence_validation_rejects_incomplete_or_untrusted_source():
+    spectrum = kk_radius_tower_spectrum(
+        tower_family="kk_fixture",
+        radius_ratio_mean=2.6,
+        log_radius_sigma=0.04,
+        normalization="unit-test radius normalization",
+        source="unit-test source",
+    )
+
+    result = validate_tower_evidence({
+        "framework": "string_tree_eft",
+        "spectrum": spectrum.to_dict(),
+        "adapter_kind": "kk_radius",
+        "source_url": "https://example.com/not-primary",
+        "source_type": "blog_post",
+        "derivation_kind": "",
+        "uncertainty_kind": "log_radius_one_sigma",
+        "normalization_reference": "R/R0 diagnostic normalization",
+    })
+
+    assert result["ready_for_framework_claim"] is False
+    assert "derivation_kind" in result["missing_fields"]
+    assert "source_url_not_primary_allowed" in result["blockers"]
+    assert "source_type_not_allowed" in result["blockers"]

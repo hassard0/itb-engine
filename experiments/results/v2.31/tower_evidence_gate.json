@@ -1,0 +1,80 @@
+{
+  "basis": [
+    "TowerSpectrum",
+    "TowerEvidence",
+    "framework_verdict"
+  ],
+  "candidate_count": 3,
+  "schema_ready_and_tower_excluding_fixtures": [
+    "complete_schema_exclusion_fixture"
+  ],
+  "math_excluding_but_evidence_rejected": [
+    "math_excludes_but_missing_source"
+  ],
+  "claimable_framework_exclusions_now": [],
+  "candidates": [
+    {
+      "label": "math_excludes_but_missing_source",
+      "framework": "string_tree_eft",
+      "framework_tower_verdict": "tower_excluded_by_predictive_spectrum",
+      "tower_claimable_by_math": true,
+      "evidence_validation": {
+        "ready_for_framework_claim": false,
+        "missing_fields": [
+          "source_type",
+          "source_url"
+        ],
+        "source_url_valid": false,
+        "source_type_valid": false,
+        "blockers": [
+          "missing_required_fields"
+        ]
+      },
+      "schema_ready_and_tower_excluding": false,
+      "claimable_now": false,
+      "claim_guardrail": "Synthetic fixture rows can prove wiring and schema behavior, but they are not current framework claims."
+    },
+    {
+      "label": "primary_source_but_overlaps_threshold",
+      "framework": "string_tree_eft",
+      "framework_tower_verdict": "tower_prediction_overlaps_threshold",
+      "tower_claimable_by_math": false,
+      "evidence_validation": {
+        "ready_for_framework_claim": true,
+        "missing_fields": [],
+        "source_url_valid": true,
+        "source_type_valid": true,
+        "blockers": []
+      },
+      "schema_ready_and_tower_excluding": false,
+      "claimable_now": false,
+      "claim_guardrail": "Synthetic fixture rows can prove wiring and schema behavior, but they are not current framework claims."
+    },
+    {
+      "label": "complete_schema_exclusion_fixture",
+      "framework": "string_tree_eft",
+      "framework_tower_verdict": "tower_excluded_by_predictive_spectrum",
+      "tower_claimable_by_math": true,
+      "evidence_validation": {
+        "ready_for_framework_claim": true,
+        "missing_fields": [],
+        "source_url_valid": true,
+        "source_type_valid": true,
+        "blockers": []
+      },
+      "schema_ready_and_tower_excluding": true,
+      "claimable_now": false,
+      "claim_guardrail": "Synthetic fixture rows can prove wiring and schema behavior, but they are not current framework claims."
+    }
+  ],
+  "literature_guardrail": {
+    "claim": "A tower verdict is not a framework-level quantum-gravity claim unless both the tower math and the evidence provenance gate pass. This audit uses synthetic fixtures, so it proves the gate rather than claiming an exclusion.",
+    "primary_sources": [
+      {
+        "title": "Corvilain, Grimm, and Valenzuela, The Swampland Distance Conjecture for Kahler moduli",
+        "url": "https://arxiv.org/abs/1812.07548"
+      }
+    ]
+  },
+  "interpretation": "v2.31 separates mathematical tower exclusion from evidential claim readiness. The current repo still has no non-synthetic evidence row for a registered framework."
+}
