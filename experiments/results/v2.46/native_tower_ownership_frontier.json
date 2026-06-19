@@ -1,0 +1,269 @@
+{
+  "basis": [
+    "registered_frameworks",
+    "native_tower_spectrum",
+    "native_tower_evidence",
+    "generic_framework_claim_guard"
+  ],
+  "registered_framework_count": 13,
+  "critical_phi_tower": 0.7433019116911739,
+  "pass_condition": {
+    "target_reference_feasible_in_scope": true,
+    "native_tower_evidence_present": true,
+    "native_ownership_ready": true,
+    "generic_claim_guard_ready": true,
+    "two_sigma_lower_bound_required": "phi_tower_mean - 2 * phi_tower_sigma > critical_phi_tower"
+  },
+  "reference_feasible_in_scope_frameworks": [
+    "pure_gr",
+    "string_tree_eft",
+    "asymptotic_safety",
+    "cdt",
+    "discovered_novel",
+    "discovered_parity_violating",
+    "discovered_high_g8",
+    "discovered_data_driven"
+  ],
+  "n_reference_feasible_in_scope_frameworks": 8,
+  "native_tower_evidence_frameworks": [],
+  "native_ownership_ready_frameworks": [],
+  "generic_framework_claim_ready_candidates": [],
+  "tower_discriminator_claim_ready": [],
+  "claimable_framework_exclusions_now": [],
+  "target_blocker_counts": {
+    "missing_native_tower_evidence": 8,
+    "missing_native_tower_spectrum": 8
+  },
+  "frameworks": {
+    "pure_gr": {
+      "framework": "pure_gr",
+      "target_reference_feasible_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_ready": false,
+      "tower_claimable_by_math": false,
+      "generic_claim_guard_ready": false,
+      "native_ownership_ready": false,
+      "two_sigma_phi_interval": null,
+      "critical_phi_tower": null,
+      "blockers": [
+        "missing_native_tower_evidence",
+        "missing_native_tower_spectrum"
+      ]
+    },
+    "string_tree_eft": {
+      "framework": "string_tree_eft",
+      "target_reference_feasible_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_ready": false,
+      "tower_claimable_by_math": false,
+      "generic_claim_guard_ready": false,
+      "native_ownership_ready": false,
+      "two_sigma_phi_interval": null,
+      "critical_phi_tower": null,
+      "blockers": [
+        "missing_native_tower_evidence",
+        "missing_native_tower_spectrum"
+      ]
+    },
+    "asymptotic_safety": {
+      "framework": "asymptotic_safety",
+      "target_reference_feasible_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_ready": false,
+      "tower_claimable_by_math": false,
+      "generic_claim_guard_ready": false,
+      "native_ownership_ready": false,
+      "two_sigma_phi_interval": null,
+      "critical_phi_tower": null,
+      "blockers": [
+        "missing_native_tower_evidence",
+        "missing_native_tower_spectrum"
+      ]
+    },
+    "lqg_induced": {
+      "framework": "lqg_induced",
+      "target_reference_feasible_in_scope": false,
+      "frontier_status": "reference_excluded_before_tower",
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_ready": false,
+      "tower_claimable_by_math": false,
+      "generic_claim_guard_ready": false,
+      "native_ownership_ready": false,
+      "two_sigma_phi_interval": null,
+      "critical_phi_tower": null,
+      "blockers": [
+        "reference_excluded_before_tower"
+      ]
+    },
+    "cdt": {
+      "framework": "cdt",
+      "target_reference_feasible_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_ready": false,
+      "tower_claimable_by_math": false,
+      "generic_claim_guard_ready": false,
+      "native_ownership_ready": false,
+      "two_sigma_phi_interval": null,
+      "critical_phi_tower": null,
+      "blockers": [
+        "missing_native_tower_evidence",
+        "missing_native_tower_spectrum"
+      ]
+    },
+    "group_field_theory": {
+      "framework": "group_field_theory",
+      "target_reference_feasible_in_scope": false,
+      "frontier_status": "reference_excluded_before_tower",
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_ready": false,
+      "tower_claimable_by_math": false,
+      "generic_claim_guard_ready": false,
+      "native_ownership_ready": false,
+      "two_sigma_phi_interval": null,
+      "critical_phi_tower": null,
+      "blockers": [
+        "reference_excluded_before_tower"
+      ]
+    },
+    "horava_lifshitz": {
+      "framework": "horava_lifshitz",
+      "target_reference_feasible_in_scope": false,
+      "frontier_status": "reference_excluded_before_tower",
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_ready": false,
+      "tower_claimable_by_math": false,
+      "generic_claim_guard_ready": false,
+      "native_ownership_ready": false,
+      "two_sigma_phi_interval": null,
+      "critical_phi_tower": null,
+      "blockers": [
+        "reference_excluded_before_tower"
+      ]
+    },
+    "causal_set": {
+      "framework": "causal_set",
+      "target_reference_feasible_in_scope": false,
+      "frontier_status": "scope_limited_reference_survivor",
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_ready": false,
+      "tower_claimable_by_math": false,
+      "generic_claim_guard_ready": false,
+      "native_ownership_ready": false,
+      "two_sigma_phi_interval": null,
+      "critical_phi_tower": null,
+      "blockers": [
+        "engine_scope_limited"
+      ]
+    },
+    "emergent_gravity": {
+      "framework": "emergent_gravity",
+      "target_reference_feasible_in_scope": false,
+      "frontier_status": "scope_limited_reference_survivor",
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_ready": false,
+      "tower_claimable_by_math": false,
+      "generic_claim_guard_ready": false,
+      "native_ownership_ready": false,
+      "two_sigma_phi_interval": null,
+      "critical_phi_tower": null,
+      "blockers": [
+        "engine_scope_limited"
+      ]
+    },
+    "discovered_novel": {
+      "framework": "discovered_novel",
+      "target_reference_feasible_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_ready": false,
+      "tower_claimable_by_math": false,
+      "generic_claim_guard_ready": false,
+      "native_ownership_ready": false,
+      "two_sigma_phi_interval": null,
+      "critical_phi_tower": null,
+      "blockers": [
+        "missing_native_tower_evidence",
+        "missing_native_tower_spectrum"
+      ]
+    },
+    "discovered_parity_violating": {
+      "framework": "discovered_parity_violating",
+      "target_reference_feasible_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_ready": false,
+      "tower_claimable_by_math": false,
+      "generic_claim_guard_ready": false,
+      "native_ownership_ready": false,
+      "two_sigma_phi_interval": null,
+      "critical_phi_tower": null,
+      "blockers": [
+        "missing_native_tower_evidence",
+        "missing_native_tower_spectrum"
+      ]
+    },
+    "discovered_high_g8": {
+      "framework": "discovered_high_g8",
+      "target_reference_feasible_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_ready": false,
+      "tower_claimable_by_math": false,
+      "generic_claim_guard_ready": false,
+      "native_ownership_ready": false,
+      "two_sigma_phi_interval": null,
+      "critical_phi_tower": null,
+      "blockers": [
+        "missing_native_tower_evidence",
+        "missing_native_tower_spectrum"
+      ]
+    },
+    "discovered_data_driven": {
+      "framework": "discovered_data_driven",
+      "target_reference_feasible_in_scope": true,
+      "frontier_status": "missing_native_tower_spectrum",
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_ready": false,
+      "tower_claimable_by_math": false,
+      "generic_claim_guard_ready": false,
+      "native_ownership_ready": false,
+      "two_sigma_phi_interval": null,
+      "critical_phi_tower": null,
+      "blockers": [
+        "missing_native_tower_evidence",
+        "missing_native_tower_spectrum"
+      ]
+    }
+  },
+  "literature_guardrail": {
+    "claim": "This is a live native-adapter audit, not a solution claim. A framework can move to claim readiness only with native, sourced, owned tower evidence whose two-sigma lower phi bound exceeds the tower threshold.",
+    "primary_sources": [
+      {
+        "title": "Dvali and Redi, Black Hole Bound on the Number of Species and Quantum Gravity at LHC",
+        "url": "https://arxiv.org/abs/0710.4344"
+      },
+      {
+        "title": "van de Heisteeg, Vafa, and Wiesner, Bounds on Species Scale and the Distance Conjecture",
+        "url": "https://arxiv.org/abs/2303.13580"
+      }
+    ]
+  },
+  "interpretation": "The live registered framework frontier is still blocked before source-scope ownership can be evaluated: all reference-feasible, in-scope targets lack native TowerSpectrum and TowerEvidence adapters. The next frontier-moving change must implement one native adapter row, not add another external candidate row."
+}
