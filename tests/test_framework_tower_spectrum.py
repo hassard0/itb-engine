@@ -34,6 +34,7 @@ class SyntheticTowerFramework(Framework):
 
 def test_framework_tower_spectrum_defaults_to_none():
     assert PureGR().tower_spectrum() is None
+    assert PureGR().tower_evidence() is None
 
 
 def test_framework_tower_spectrum_contract_serializes():

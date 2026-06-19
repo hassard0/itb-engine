@@ -1,0 +1,407 @@
+{
+  "basis": [
+    "framework",
+    "reference_stack",
+    "TowerSpectrum",
+    "TowerEvidence"
+  ],
+  "registered_framework_count": 13,
+  "reference_feasible_frameworks": [
+    "pure_gr",
+    "string_tree_eft",
+    "asymptotic_safety",
+    "cdt",
+    "causal_set",
+    "emergent_gravity",
+    "discovered_novel",
+    "discovered_parity_violating",
+    "discovered_high_g8",
+    "discovered_data_driven"
+  ],
+  "reference_excluded_frameworks": [
+    "lqg_induced",
+    "group_field_theory",
+    "horava_lifshitz"
+  ],
+  "frontier_status_counts": {
+    "missing_native_tower_spectrum": 8,
+    "reference_excluded_before_tower": 3,
+    "scope_limited_reference_survivor": 2
+  },
+  "tower_discriminator_claim_ready": [],
+  "claimable_framework_exclusions_now": [],
+  "frameworks": {
+    "pure_gr": {
+      "framework": "pure_gr",
+      "reference_feasible": true,
+      "reference_binding": null,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_validation": {
+        "ready_for_framework_claim": false,
+        "missing_fields": [
+          "TowerEvidence"
+        ],
+        "source_url_valid": false,
+        "source_type_valid": false,
+        "blockers": [
+          "missing_native_tower_evidence"
+        ]
+      },
+      "tower_readiness_verdict": "missing_actionable_tower_spectrum",
+      "tower_claimable_by_math": false,
+      "frontier_status": "missing_native_tower_spectrum",
+      "next_required_artifact": "Implement a sourced TowerSpectrum or TowerEvidence adapter."
+    },
+    "string_tree_eft": {
+      "framework": "string_tree_eft",
+      "reference_feasible": true,
+      "reference_binding": null,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_validation": {
+        "ready_for_framework_claim": false,
+        "missing_fields": [
+          "TowerEvidence"
+        ],
+        "source_url_valid": false,
+        "source_type_valid": false,
+        "blockers": [
+          "missing_native_tower_evidence"
+        ]
+      },
+      "tower_readiness_verdict": "missing_actionable_tower_spectrum",
+      "tower_claimable_by_math": false,
+      "frontier_status": "missing_native_tower_spectrum",
+      "next_required_artifact": "Implement a sourced TowerSpectrum or TowerEvidence adapter."
+    },
+    "asymptotic_safety": {
+      "framework": "asymptotic_safety",
+      "reference_feasible": true,
+      "reference_binding": null,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_validation": {
+        "ready_for_framework_claim": false,
+        "missing_fields": [
+          "TowerEvidence"
+        ],
+        "source_url_valid": false,
+        "source_type_valid": false,
+        "blockers": [
+          "missing_native_tower_evidence"
+        ]
+      },
+      "tower_readiness_verdict": "missing_actionable_tower_spectrum",
+      "tower_claimable_by_math": false,
+      "frontier_status": "missing_native_tower_spectrum",
+      "next_required_artifact": "Implement a sourced TowerSpectrum or TowerEvidence adapter."
+    },
+    "lqg_induced": {
+      "framework": "lqg_induced",
+      "reference_feasible": false,
+      "reference_binding": "cft_flat_space_bound",
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_validation": {
+        "ready_for_framework_claim": false,
+        "missing_fields": [
+          "TowerEvidence"
+        ],
+        "source_url_valid": false,
+        "source_type_valid": false,
+        "blockers": [
+          "missing_native_tower_evidence"
+        ]
+      },
+      "tower_readiness_verdict": "missing_actionable_tower_spectrum",
+      "tower_claimable_by_math": false,
+      "frontier_status": "reference_excluded_before_tower",
+      "next_required_artifact": "Adversarial review of the reference-stack exclusion."
+    },
+    "cdt": {
+      "framework": "cdt",
+      "reference_feasible": true,
+      "reference_binding": null,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_validation": {
+        "ready_for_framework_claim": false,
+        "missing_fields": [
+          "TowerEvidence"
+        ],
+        "source_url_valid": false,
+        "source_type_valid": false,
+        "blockers": [
+          "missing_native_tower_evidence"
+        ]
+      },
+      "tower_readiness_verdict": "missing_actionable_tower_spectrum",
+      "tower_claimable_by_math": false,
+      "frontier_status": "missing_native_tower_spectrum",
+      "next_required_artifact": "Implement a sourced TowerSpectrum or TowerEvidence adapter."
+    },
+    "group_field_theory": {
+      "framework": "group_field_theory",
+      "reference_feasible": false,
+      "reference_binding": "graviton_forward_positivity",
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_validation": {
+        "ready_for_framework_claim": false,
+        "missing_fields": [
+          "TowerEvidence"
+        ],
+        "source_url_valid": false,
+        "source_type_valid": false,
+        "blockers": [
+          "missing_native_tower_evidence"
+        ]
+      },
+      "tower_readiness_verdict": "missing_actionable_tower_spectrum",
+      "tower_claimable_by_math": false,
+      "frontier_status": "reference_excluded_before_tower",
+      "next_required_artifact": "Adversarial review of the reference-stack exclusion."
+    },
+    "horava_lifshitz": {
+      "framework": "horava_lifshitz",
+      "reference_feasible": false,
+      "reference_binding": "cft_flat_space_bound",
+      "engine_scope": {
+        "in_scope": false,
+        "violations": [
+          "Lorentz invariance (assumed by amplitude-positivity bounds)"
+        ],
+        "note": "OUT OF SCOPE: the engine's feasibility verdict is NOT meaningful for this framework \u2014 it breaks Lorentz invariance (assumed by amplitude-positivity bounds), which are assumptions used to derive the constraints. Treat any verdict as an artifact of applying inapplicable bounds."
+      },
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_validation": {
+        "ready_for_framework_claim": false,
+        "missing_fields": [
+          "TowerEvidence"
+        ],
+        "source_url_valid": false,
+        "source_type_valid": false,
+        "blockers": [
+          "missing_native_tower_evidence"
+        ]
+      },
+      "tower_readiness_verdict": "missing_actionable_tower_spectrum",
+      "tower_claimable_by_math": false,
+      "frontier_status": "reference_excluded_before_tower",
+      "next_required_artifact": "Adversarial review of the reference-stack exclusion."
+    },
+    "causal_set": {
+      "framework": "causal_set",
+      "reference_feasible": true,
+      "reference_binding": null,
+      "engine_scope": {
+        "in_scope": false,
+        "violations": [
+          "locality (assumed by the swampland/positivity program)"
+        ],
+        "note": "OUT OF SCOPE: the engine's feasibility verdict is NOT meaningful for this framework \u2014 it breaks locality (assumed by the swampland/positivity program), which are assumptions used to derive the constraints. Treat any verdict as an artifact of applying inapplicable bounds."
+      },
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_validation": {
+        "ready_for_framework_claim": false,
+        "missing_fields": [
+          "TowerEvidence"
+        ],
+        "source_url_valid": false,
+        "source_type_valid": false,
+        "blockers": [
+          "missing_native_tower_evidence"
+        ]
+      },
+      "tower_readiness_verdict": "missing_actionable_tower_spectrum",
+      "tower_claimable_by_math": false,
+      "frontier_status": "scope_limited_reference_survivor",
+      "next_required_artifact": "Resolve engine scope assumptions before treating verdict as physical."
+    },
+    "emergent_gravity": {
+      "framework": "emergent_gravity",
+      "reference_feasible": true,
+      "reference_binding": null,
+      "engine_scope": {
+        "in_scope": false,
+        "violations": [
+          "locality (assumed by the swampland/positivity program)",
+          "a fundamental UV graviton field (the bounds expand the graviton amplitude; emergent gravity has no such UV expansion)"
+        ],
+        "note": "OUT OF SCOPE: the engine's feasibility verdict is NOT meaningful for this framework \u2014 it breaks locality (assumed by the swampland/positivity program) and a fundamental UV graviton field (the bounds expand the graviton amplitude; emergent gravity has no such UV expansion), which are assumptions used to derive the constraints. Treat any verdict as an artifact of applying inapplicable bounds."
+      },
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_validation": {
+        "ready_for_framework_claim": false,
+        "missing_fields": [
+          "TowerEvidence"
+        ],
+        "source_url_valid": false,
+        "source_type_valid": false,
+        "blockers": [
+          "missing_native_tower_evidence"
+        ]
+      },
+      "tower_readiness_verdict": "missing_actionable_tower_spectrum",
+      "tower_claimable_by_math": false,
+      "frontier_status": "scope_limited_reference_survivor",
+      "next_required_artifact": "Resolve engine scope assumptions before treating verdict as physical."
+    },
+    "discovered_novel": {
+      "framework": "discovered_novel",
+      "reference_feasible": true,
+      "reference_binding": null,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_validation": {
+        "ready_for_framework_claim": false,
+        "missing_fields": [
+          "TowerEvidence"
+        ],
+        "source_url_valid": false,
+        "source_type_valid": false,
+        "blockers": [
+          "missing_native_tower_evidence"
+        ]
+      },
+      "tower_readiness_verdict": "missing_actionable_tower_spectrum",
+      "tower_claimable_by_math": false,
+      "frontier_status": "missing_native_tower_spectrum",
+      "next_required_artifact": "Implement a sourced TowerSpectrum or TowerEvidence adapter."
+    },
+    "discovered_parity_violating": {
+      "framework": "discovered_parity_violating",
+      "reference_feasible": true,
+      "reference_binding": null,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_validation": {
+        "ready_for_framework_claim": false,
+        "missing_fields": [
+          "TowerEvidence"
+        ],
+        "source_url_valid": false,
+        "source_type_valid": false,
+        "blockers": [
+          "missing_native_tower_evidence"
+        ]
+      },
+      "tower_readiness_verdict": "missing_actionable_tower_spectrum",
+      "tower_claimable_by_math": false,
+      "frontier_status": "missing_native_tower_spectrum",
+      "next_required_artifact": "Implement a sourced TowerSpectrum or TowerEvidence adapter."
+    },
+    "discovered_high_g8": {
+      "framework": "discovered_high_g8",
+      "reference_feasible": true,
+      "reference_binding": null,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_validation": {
+        "ready_for_framework_claim": false,
+        "missing_fields": [
+          "TowerEvidence"
+        ],
+        "source_url_valid": false,
+        "source_type_valid": false,
+        "blockers": [
+          "missing_native_tower_evidence"
+        ]
+      },
+      "tower_readiness_verdict": "missing_actionable_tower_spectrum",
+      "tower_claimable_by_math": false,
+      "frontier_status": "missing_native_tower_spectrum",
+      "next_required_artifact": "Implement a sourced TowerSpectrum or TowerEvidence adapter."
+    },
+    "discovered_data_driven": {
+      "framework": "discovered_data_driven",
+      "reference_feasible": true,
+      "reference_binding": null,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "native_tower_spectrum_present": false,
+      "native_tower_evidence_present": false,
+      "tower_evidence_validation": {
+        "ready_for_framework_claim": false,
+        "missing_fields": [
+          "TowerEvidence"
+        ],
+        "source_url_valid": false,
+        "source_type_valid": false,
+        "blockers": [
+          "missing_native_tower_evidence"
+        ]
+      },
+      "tower_readiness_verdict": "missing_actionable_tower_spectrum",
+      "tower_claimable_by_math": false,
+      "frontier_status": "missing_native_tower_spectrum",
+      "next_required_artifact": "Implement a sourced TowerSpectrum or TowerEvidence adapter."
+    }
+  },
+  "literature_guardrail": {
+    "claim": "This is a frontier audit, not a solution claim. A framework requires reference feasibility, in-scope assumptions, native tower evidence, and an excluding two-sigma tower interval before the engine can promote it to an adversarial-review candidate.",
+    "primary_sources": [
+      {
+        "title": "Dvali and Redi, Black Hole Bound on the Number of Species and Quantum Gravity at LHC",
+        "url": "https://arxiv.org/abs/0710.4344"
+      },
+      {
+        "title": "Corvilain, Grimm, and Valenzuela, The Swampland Distance Conjecture for Kahler moduli",
+        "url": "https://arxiv.org/abs/1812.07548"
+      }
+    ]
+  },
+  "interpretation": "The current frontier has reference-stack exclusions and reference-feasible survivors, but no registered framework has native non-synthetic tower evidence. The next required artifact is a sourced TowerEvidence row for one reference-feasible, in-scope framework."
+}

@@ -3,7 +3,7 @@
 from abc import ABC, abstractmethod
 
 from itb.theory import Theory
-from itb.tower import TowerSpectrum
+from itb.tower import TowerEvidence, TowerSpectrum
 
 
 class Framework(ABC):
@@ -27,4 +27,7 @@ class Framework(ABC):
         ...
 
     def tower_spectrum(self) -> TowerSpectrum | None:
+        return None
+
+    def tower_evidence(self) -> TowerEvidence | None:
         return None

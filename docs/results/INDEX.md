@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (142 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (143 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -191,3 +191,4 @@ Auto-generated front door to the full research program (142 notes). Regenerate w
 | v2.29 | [v2.29 - KK radius adapter scan: radius ratios can drive the tower gate](2026-06-19-v2.29-kk-radius-adapter-scan.md) | v2.28 showed how to convert an SDC moduli distance into a `TowerSpectrum`. v2.29 asks: |
 | v2.30 | [v2.30 - KK radius precision requirements: how accurate the radius must](2026-06-19-v2.30-kk-radius-precision-requirements.md) | v2.29 gave radius-ratio thresholds at fixed uncertainty. v2.30 asks the inverse question: |
 | v2.31 | [v2.31 - Tower evidence gate: math is not enough for a framework claim](2026-06-19-v2.31-tower-evidence-gate.md) | v2.30 made the KK-radius route precise. v2.31 asks: |
+| v2.32 | [v2.32 - Discriminator frontier: what is actually blocking a claim](2026-06-19-v2.32-discriminator-frontier.md) | v2.31 added a provenance gate for tower claims. v2.32 asks: |
