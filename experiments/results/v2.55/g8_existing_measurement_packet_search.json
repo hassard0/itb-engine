@@ -1,0 +1,397 @@
+{
+  "basis": [
+    "v2.54_g8_measurement_contract",
+    "web_primary_source_search_2026_06_19",
+    "nontower_promotion_guard"
+  ],
+  "axis": "g_8",
+  "contract_requirement_ids": [
+    "external_numeric_observable",
+    "source_backed_g8_axis_mapping",
+    "angular_or_partial_wave_isolation",
+    "public_likelihood_or_covariance",
+    "eft_valid_energy_window",
+    "closed_systematics_budget",
+    "framework_applicability_domain",
+    "excluding_discriminator_math"
+  ],
+  "candidate_count": 5,
+  "external_numeric_candidate_count": 3,
+  "source_backed_candidate_count": 5,
+  "contract_satisfied_candidates": [],
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "contract_failure_counts": {
+    "angular_or_partial_wave_isolation": 5,
+    "closed_systematics_budget": 3,
+    "eft_valid_energy_window": 5,
+    "excluding_discriminator_math": 5,
+    "external_numeric_observable": 5,
+    "framework_applicability_domain": 5,
+    "public_likelihood_or_covariance": 5,
+    "source_backed_g8_axis_mapping": 5
+  },
+  "rows": [
+    {
+      "label": "cms_e2c_e3c_jet_substructure",
+      "source": {
+        "title": "CMS, Measurement of energy correlators inside jets and determination of the strong coupling",
+        "url": "https://arxiv.org/abs/2402.13864",
+        "source_kind": "primary_literature"
+      },
+      "evidence": {
+        "axis": "g_8",
+        "route": "cms_e2c_e3c_jet_substructure",
+        "source_url": "https://arxiv.org/abs/2402.13864",
+        "source_type": "primary_literature",
+        "measurement_kind": "external_numeric_measurement",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "toy_or_missing",
+        "systematics_status": "bounded",
+        "metadata": {
+          "detector_moment_relevance": "qcd_energy_correlator_not_spin4_g8",
+          "public_likelihood_or_covariance": "public_tables_not_engine_likelihood",
+          "g8_axis_mapping": "absent_qcd_jet_observable",
+          "eft_domain": "qcd_jet_substructure_not_qg_eft",
+          "framework_applicability": "standard_model_qcd_not_registered_qg_framework",
+          "discriminator_math": "no_qg_framework_exclusion"
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": true,
+          "axis_mapping_valid": false,
+          "systematics_closed": true,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "missing_external_numeric_measurement"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "missing_external_numeric_measurement"
+        ]
+      },
+      "contract_failures": [
+        "external_numeric_observable",
+        "source_backed_g8_axis_mapping",
+        "angular_or_partial_wave_isolation",
+        "public_likelihood_or_covariance",
+        "eft_valid_energy_window",
+        "framework_applicability_domain",
+        "excluding_discriminator_math"
+      ],
+      "contract_satisfied": false,
+      "ready_for_g8_claim": false,
+      "frontier_status": "external_candidate_not_g8_claim_ready",
+      "notes": [
+        "External energy-correlator data exist and include tabulated results.",
+        "The observable constrains QCD jet structure and alpha_s, not the engine g_8."
+      ]
+    },
+    {
+      "label": "cms_open_data_n_point_energy_correlators",
+      "source": {
+        "title": "Komiske et al., N-point energy correlators inside CMS open data",
+        "url": "https://arxiv.org/abs/2201.07800",
+        "source_kind": "primary_literature"
+      },
+      "evidence": {
+        "axis": "g_8",
+        "route": "cms_open_data_n_point_energy_correlators",
+        "source_url": "https://arxiv.org/abs/2201.07800",
+        "source_type": "primary_literature",
+        "measurement_kind": "external_numeric_measurement",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "toy_or_missing",
+        "systematics_status": "open",
+        "metadata": {
+          "detector_moment_relevance": "multipoint_qcd_energy_flow",
+          "public_likelihood_or_covariance": "open_data_analysis_not_engine_likelihood",
+          "g8_axis_mapping": "absent_qcd_jet_observable",
+          "eft_domain": "qcd_open_data_not_qg_eft",
+          "framework_applicability": "standard_model_qcd_not_registered_qg_framework",
+          "discriminator_math": "no_qg_framework_exclusion"
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": true,
+          "axis_mapping_valid": false,
+          "systematics_closed": false,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "missing_external_numeric_measurement",
+          "systematics_not_closed"
+        ]
+      },
+      "contract_failures": [
+        "external_numeric_observable",
+        "source_backed_g8_axis_mapping",
+        "angular_or_partial_wave_isolation",
+        "public_likelihood_or_covariance",
+        "eft_valid_energy_window",
+        "closed_systematics_budget",
+        "framework_applicability_domain",
+        "excluding_discriminator_math"
+      ],
+      "contract_satisfied": false,
+      "ready_for_g8_claim": false,
+      "frontier_status": "external_candidate_not_g8_claim_ready",
+      "notes": [
+        "Good design precedent for measuring multipoint energy flow.",
+        "It is not a source-backed projection to the engine's g_8 coordinate."
+      ]
+    },
+    {
+      "label": "cms_heavy_ion_eec_modification",
+      "source": {
+        "title": "CMS, Observation of nuclear modification of energy-energy correlators inside jets in heavy ion collisions",
+        "url": "https://arxiv.org/abs/2503.19993",
+        "source_kind": "primary_literature"
+      },
+      "evidence": {
+        "axis": "g_8",
+        "route": "cms_heavy_ion_eec_modification",
+        "source_url": "https://arxiv.org/abs/2503.19993",
+        "source_type": "primary_literature",
+        "measurement_kind": "external_numeric_measurement",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "toy_or_missing",
+        "systematics_status": "bounded",
+        "metadata": {
+          "detector_moment_relevance": "qcd_medium_energy_correlator",
+          "public_likelihood_or_covariance": "hepdata_tables_not_engine_likelihood",
+          "g8_axis_mapping": "absent_heavy_ion_qcd_observable",
+          "eft_domain": "qcd_medium_not_qg_eft",
+          "framework_applicability": "qgp_model_comparison_not_qg_framework",
+          "discriminator_math": "no_qg_framework_exclusion"
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": true,
+          "axis_mapping_valid": false,
+          "systematics_closed": true,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "missing_external_numeric_measurement"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "missing_external_numeric_measurement"
+        ]
+      },
+      "contract_failures": [
+        "external_numeric_observable",
+        "source_backed_g8_axis_mapping",
+        "angular_or_partial_wave_isolation",
+        "public_likelihood_or_covariance",
+        "eft_valid_energy_window",
+        "framework_applicability_domain",
+        "excluding_discriminator_math"
+      ],
+      "contract_satisfied": false,
+      "ready_for_g8_claim": false,
+      "frontier_status": "external_candidate_not_g8_claim_ready",
+      "notes": [
+        "The CMS page links a HepData record and reports statistical/systematic uncertainties.",
+        "The measured ratio probes quark-gluon-plasma jet modification, not g_8."
+      ]
+    },
+    {
+      "label": "detector_operator_theory_bridge",
+      "source": {
+        "title": "Caron-Huot et al., Detectors in weakly-coupled field theories",
+        "url": "https://arxiv.org/abs/2209.00008",
+        "source_kind": "primary_literature"
+      },
+      "evidence": {
+        "axis": "g_8",
+        "route": "detector_operator_theory_bridge",
+        "source_url": "https://arxiv.org/abs/2209.00008",
+        "source_type": "primary_literature",
+        "measurement_kind": "theory_formalism",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "toy_or_missing",
+        "systematics_status": "open",
+        "metadata": {
+          "detector_moment_relevance": "detector_formalism_theory",
+          "public_likelihood_or_covariance": "none_theory_only",
+          "g8_axis_mapping": "not_engine_normalized",
+          "eft_domain": "formal_qft_not_specific_qg_eft_cut",
+          "framework_applicability": "not_registered_framework_adapter",
+          "discriminator_math": "no_qg_framework_exclusion"
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": false,
+          "axis_mapping_valid": false,
+          "systematics_closed": false,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "measurement_kind_not_external_numeric",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "systematics_not_closed"
+        ]
+      },
+      "contract_failures": [
+        "external_numeric_observable",
+        "source_backed_g8_axis_mapping",
+        "angular_or_partial_wave_isolation",
+        "public_likelihood_or_covariance",
+        "eft_valid_energy_window",
+        "closed_systematics_budget",
+        "framework_applicability_domain",
+        "excluding_discriminator_math"
+      ],
+      "contract_satisfied": false,
+      "ready_for_g8_claim": false,
+      "frontier_status": "external_candidate_not_g8_claim_ready",
+      "notes": [
+        "This remains a source-backed theory bridge.",
+        "It is not an external numerical measurement packet."
+      ]
+    },
+    {
+      "label": "hadron_eec_celestial_block_partial_wave_decomposition",
+      "source": {
+        "title": "Chen, Ruan, and Zhu, Energy-energy correlator at hadron colliders: celestial blocks and singularities",
+        "url": "https://doi.org/10.1007/JHEP12(2025)168",
+        "source_kind": "primary_literature"
+      },
+      "evidence": {
+        "axis": "g_8",
+        "route": "hadron_eec_celestial_block_partial_wave_decomposition",
+        "source_url": "https://doi.org/10.1007/JHEP12(2025)168",
+        "source_type": "primary_literature",
+        "measurement_kind": "theory_formalism",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "toy_or_missing",
+        "systematics_status": "open",
+        "metadata": {
+          "detector_moment_relevance": "partial_wave_decomposition_theory",
+          "public_likelihood_or_covariance": "none_theory_only",
+          "g8_axis_mapping": "not_engine_normalized",
+          "eft_domain": "pure_yang_mills_example_not_qg_eft_cut",
+          "framework_applicability": "not_registered_framework_adapter",
+          "discriminator_math": "no_qg_framework_exclusion"
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": false,
+          "axis_mapping_valid": false,
+          "systematics_closed": false,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "measurement_kind_not_external_numeric",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "systematics_not_closed"
+        ]
+      },
+      "contract_failures": [
+        "external_numeric_observable",
+        "source_backed_g8_axis_mapping",
+        "angular_or_partial_wave_isolation",
+        "public_likelihood_or_covariance",
+        "eft_valid_energy_window",
+        "closed_systematics_budget",
+        "framework_applicability_domain",
+        "excluding_discriminator_math"
+      ],
+      "contract_satisfied": false,
+      "ready_for_g8_claim": false,
+      "frontier_status": "external_candidate_not_g8_claim_ready",
+      "notes": [
+        "Useful bridge from EECs to partial-wave language.",
+        "Still lacks an external g_8 measurement and framework cut."
+      ]
+    }
+  ],
+  "route_status": "existing_public_measurements_do_not_satisfy_g8_contract",
+  "best_next_artifact": "A source-backed adapter deriving an engine-normalized g_8 likelihood from spin-4/energy-correlator data, or a new measurement designed directly for that coefficient.",
+  "interpretation": "Existing collider energy-correlator measurements are real external data and useful design seeds. None currently supplies a public, engine-usable, source-backed map to the quantum-gravity g_8 axis, an EFT-valid framework domain, or excluding discriminator math."
+}
