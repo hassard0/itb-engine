@@ -1,0 +1,128 @@
+{
+  "version": "v2.89",
+  "basis": [
+    "v2.88_post_g8_derivation_route_decision_frontier",
+    "v2.79_g8_adapter_acceptance_harness",
+    "v2.54_g8_high_moment_measurement_specification"
+  ],
+  "route": "new_spin4_or_detector_g8_measurement",
+  "repo_can_create_external_measurement_packet": false,
+  "unsatisfied_requirement_count": 5,
+  "external_required_requirements": [
+    "external_numeric_spin4_or_detector_observable",
+    "public_g8_likelihood_or_covariance",
+    "component_level_systematics_budget",
+    "bounded_low_energy_qg_eft_domain"
+  ],
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "capabilities": [
+    {
+      "capability": "measurement_contract_and_acceptance_gate",
+      "available_in_repo": true,
+      "can_create_external_measurement": false,
+      "role": "Defines packet schema and rejects incomplete packets.",
+      "blockers": [
+        "schema_not_measurement"
+      ]
+    },
+    {
+      "capability": "mock_or_synthetic_fixture_generation",
+      "available_in_repo": true,
+      "can_create_external_measurement": false,
+      "role": "Tests plumbing and positive/negative guard branches.",
+      "blockers": [
+        "synthetic_fixture_not_real_source"
+      ]
+    },
+    {
+      "capability": "public_source_and_data_product_audit",
+      "available_in_repo": true,
+      "can_create_external_measurement": false,
+      "role": "Finds and classifies public sources and datasets.",
+      "blockers": [
+        "source_audit_cannot_generate_new_data"
+      ]
+    },
+    {
+      "capability": "external_spin4_detector_experiment",
+      "available_in_repo": false,
+      "can_create_external_measurement": true,
+      "role": "Would produce the missing external numerical g_8 packet.",
+      "blockers": [
+        "external_experimental_program_required"
+      ]
+    },
+    {
+      "capability": "public_likelihood_and_systematics_release",
+      "available_in_repo": false,
+      "can_create_external_measurement": true,
+      "role": "Would release covariance, likelihood, and systematics budget.",
+      "blockers": [
+        "external_public_release_required"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "requirement": "external_numeric_spin4_or_detector_observable",
+      "satisfied_now": false,
+      "satisfiable_by_repo_only": false,
+      "needed_artifact": "Published numerical spin-4 partial-wave, detector-moment, or source-projected high-moment observable.",
+      "blockers": [
+        "external_measurement_missing"
+      ]
+    },
+    {
+      "requirement": "public_g8_likelihood_or_covariance",
+      "satisfied_now": false,
+      "satisfiable_by_repo_only": false,
+      "needed_artifact": "Public likelihood/covariance containing engine g_8.",
+      "blockers": [
+        "public_likelihood_release_missing"
+      ]
+    },
+    {
+      "requirement": "component_level_systematics_budget",
+      "satisfied_now": false,
+      "satisfiable_by_repo_only": false,
+      "needed_artifact": "Angular acceptance, calibration, backgrounds, EFT truncation, and running/renormalization systematics.",
+      "blockers": [
+        "external_systematics_budget_missing"
+      ]
+    },
+    {
+      "requirement": "bounded_low_energy_qg_eft_domain",
+      "satisfied_now": false,
+      "satisfiable_by_repo_only": false,
+      "needed_artifact": "Published validity domain for the measured observable.",
+      "blockers": [
+        "external_eft_domain_missing"
+      ]
+    },
+    {
+      "requirement": "registered_framework_exclusion_math",
+      "satisfied_now": false,
+      "satisfiable_by_repo_only": true,
+      "needed_artifact": "Engine exclusion calculation after the external packet exists.",
+      "blockers": [
+        "blocked_until_external_packet_exists"
+      ]
+    }
+  ],
+  "blocker_counts": {
+    "blocked_until_external_packet_exists": 1,
+    "external_eft_domain_missing": 1,
+    "external_experimental_program_required": 1,
+    "external_measurement_missing": 1,
+    "external_public_release_required": 1,
+    "external_systematics_budget_missing": 1,
+    "public_likelihood_release_missing": 1,
+    "schema_not_measurement": 1,
+    "source_audit_cannot_generate_new_data": 1,
+    "synthetic_fixture_not_real_source": 1
+  },
+  "route_status": "direct_g8_measurement_requires_external_experiment",
+  "best_next_artifact": "Either obtain an external published spin-4/detector g_8 packet, or retire this route for the current in-repo run and reprioritize.",
+  "interpretation": "The repo can define, validate, and consume a g_8 measurement packet, but cannot create the external measurement, public likelihood, or component systematics required for one. This is an external-state blocker, not an implementation gap in the adapter harness."
+}
