@@ -1,19 +1,17 @@
-"""Theory-space phase mapping via feasible-walk sampling (v1.28).
+"""Theory-space phase mapping via feasible-seed connectivity (v1.28/v2.13).
 
-The feasible region is a thin sliver in 7-D (uniform hit rate ~1e-6), so
+The feasible region is a thin sliver in 8-D (uniform hit rate ~1e-6), so
 rejection sampling fails. Instead we: (1) multistart-optimize to deep-interior
-feasible SEEDS spread across the region; (2) run a Metropolis FEASIBLE WALK from
-each seed (Gaussian proposals accepted only if they stay feasible), which
-densely samples whatever connected pocket the seed lives in; (3) pool all walk
-samples and compute connected components vs connection radius (scipy cKDTree).
+feasible SEEDS spread across the region; (2) test straight-segment feasibility
+between seed pairs; (3) compute connected components of the resulting seed graph.
 
-If a feasible walk can travel between two seeds, they are the same phase. Two
-seeds whose walks never meet (no edge at small radius, persisting as the radius
-grows) are genuinely disconnected phases — distinct classes of consistent UV
-completion.
+If the straight segment between two seeds is feasible, they are the same phase.
+No straight edge is not proof of disconnection, because a curved path may still
+connect the points. This experiment is a conservative connectivity witness, not
+a topology theorem.
 
 Usage:
-    python -m experiments.phases --seeds 240 --walk 600 --workers 16
+    python -m experiments.phases --seeds 240 --workers 16
 """
 
 import argparse
@@ -25,20 +23,20 @@ import numpy as np
 from scipy.optimize import minimize
 from scipy.sparse import coo_matrix
 from scipy.sparse.csgraph import connected_components
-from scipy.spatial import cKDTree
 
 from itb.engine import check
 from itb.theory import Theory
 
 sys.path.insert(0, ".")
-from experiments.stack import build_stack, frameworks
+from experiments.stack import build_stack
+from itb.predict import FRAMEWORKS
 
-KEYS = ["g_4", "g_6", "g_8", "g_R2", "g_R3", "g_R2_parity", "g_R3_parity"]
+KEYS = ["g_4", "g_6", "g_8", "g_R2", "g_R3", "g_C", "g_R2_parity", "g_R3_parity"]
 CONSTRAINTS = build_stack(bnossw_mean="geometric", rfc_form="convex_hull")
-KNOWN = {fw.name: np.array([fw.encode().coefficients.get(k, 0.0) for k in KEYS])
-         for fw in frameworks()}
-LO = np.array([0.0, 0.0, 0.0, 0.0, 0.0, -0.30, -0.30])
-HI = np.array([1.2, 1.0, 1.0, 0.7, 0.7, 0.30, 0.30])
+KNOWN = {name: np.array([fw.encode().coefficients.get(k, 0.0) for k in KEYS])
+         for name, fw in FRAMEWORKS.items()}
+LO = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.02, -0.30, -0.30])
+HI = np.array([1.2, 1.0, 1.0, 0.7, 0.7, 0.80, 0.30, 0.30])
 
 
 def _worst_margin(x):
@@ -150,26 +148,30 @@ def main():
             "centroid": {k: float(v) for k, v in zip(KEYS, centroid)},
             "nearest_framework": nm, "nearest_distance": dists[nm],
             "contains_framework": dists[nm] < 0.10,
-            "parity_violating": bool(abs(centroid[5]) + abs(centroid[6]) > 0.02),
+            "parity_violating": bool(abs(centroid[6]) + abs(centroid[7]) > 0.02),
         })
 
     out = {"n_seeds": n, "n_components_straightline": int(ncomp),
-           "method": "straight-segment feasibility connectivity (lower bound on connectivity)",
+           "basis": KEYS,
+           "box": {k: [float(LO[i]), float(HI[i])] for i, k in enumerate(KEYS)},
+           "method": "8D straight-segment feasibility connectivity (lower bound on connectivity)",
            "phases": phases[:20]}
     with open(args.out, "w") as f:
         json.dump(out, f, indent=2)
 
-    print(f"\n=== THEORY-SPACE STRUCTURE ===")
+    print("\n=== THEORY-SPACE STRUCTURE ===")
     print(f"  {n} diverse feasible seeds -> {ncomp} straight-line-connected component(s)")
-    print(f"  (straight-line is a LOWER bound on connectivity; curved feasible "
-          f"paths can merge these further)")
+    print("  (straight-line is a LOWER bound on connectivity; curved feasible "
+          "paths can merge these further)")
     big = [p for p in phases if p["size"] >= 2]
     print(f"\n  components with >=2 seeds: {len(big)}")
     for i, ph in enumerate(phases[:8], 1):
         tag = (f"CONTAINS {ph['nearest_framework']}" if ph["contains_framework"]
                else f"novel (nearest {ph['nearest_framework']} @ {ph['nearest_distance']:.2f})")
         pv = " PARITY-VIOLATING" if ph["parity_violating"] else ""
-        cen = ", ".join(f"{k}={ph['centroid'][k]:.2f}" for k in ("g_4", "g_R2", "g_R3"))
+        cen = ", ".join(
+            f"{k}={ph['centroid'][k]:.2f}" for k in ("g_4", "g_R2", "g_C", "g_R3")
+        )
         print(f"  comp {i}: {ph['size']:>3} seeds, span {ph['span']:.2f}  [{tag}]{pv}  {cen}")
     print(f"\nwrote {args.out}")
 

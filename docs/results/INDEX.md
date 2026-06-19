@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (123 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (124 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -172,3 +172,4 @@ Auto-generated front door to the full research program (123 notes). Regenerate w
 |---|---|---|
 | v2.11 | [v2.11 Agent Swarm Research Program (2026-06-19)](2026-06-19-v2.11-agent-swarm-research-program.md) | Use a coordinated adversarial swarm to push the ITB engine toward a quantum-gravity discriminator: a compact set of consistency constraints plus measurements th |
 | v2.12 | [v2.12 - Agent-swarm cycle 1: boundary audit and parity contingency](2026-06-19-v2.12-agent-swarm-cycle-1.md) | Run the engine as a research team and ask what survives adversarial review: |
+| v2.13 | [v2.13 - Full-basis connectivity: g_C restores the topology test](2026-06-19-v2.13-full-basis-connectivity.md) | v2.12 identified a stale topology path: `experiments/phases.py` still used a |

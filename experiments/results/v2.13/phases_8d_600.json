@@ -1,0 +1,123 @@
+{
+  "n_seeds": 48,
+  "n_components_straightline": 4,
+  "basis": [
+    "g_4",
+    "g_6",
+    "g_8",
+    "g_R2",
+    "g_R3",
+    "g_C",
+    "g_R2_parity",
+    "g_R3_parity"
+  ],
+  "box": {
+    "g_4": [
+      0.0,
+      1.2
+    ],
+    "g_6": [
+      0.0,
+      1.0
+    ],
+    "g_8": [
+      0.0,
+      1.0
+    ],
+    "g_R2": [
+      0.0,
+      0.7
+    ],
+    "g_R3": [
+      0.0,
+      0.7
+    ],
+    "g_C": [
+      0.02,
+      0.8
+    ],
+    "g_R2_parity": [
+      -0.3,
+      0.3
+    ],
+    "g_R3_parity": [
+      -0.3,
+      0.3
+    ]
+  },
+  "method": "8D straight-segment feasibility connectivity (lower bound on connectivity)",
+  "phases": [
+    {
+      "size": 16,
+      "span": 0.5592700313440836,
+      "centroid": {
+        "g_4": 0.5731264142660825,
+        "g_6": 0.36668153180659313,
+        "g_8": 0.34817494105633506,
+        "g_R2": 0.2718633620945791,
+        "g_R3": 0.1164488550590687,
+        "g_C": 0.3596298042812084,
+        "g_R2_parity": -0.05423907422492025,
+        "g_R3_parity": 0.03401744984023265
+      },
+      "nearest_framework": "discovered_data_driven",
+      "nearest_distance": 0.18924619568219778,
+      "contains_framework": false,
+      "parity_violating": true
+    },
+    {
+      "size": 14,
+      "span": 0.5627738634902292,
+      "centroid": {
+        "g_4": 0.5473185100081404,
+        "g_6": 0.3584767888662879,
+        "g_8": 0.27131909886228545,
+        "g_R2": 0.2697869594877395,
+        "g_R3": 0.11511787818530275,
+        "g_C": 0.35897374316176334,
+        "g_R2_parity": 0.04216406714820746,
+        "g_R3_parity": 0.03232809146483268
+      },
+      "nearest_framework": "discovered_data_driven",
+      "nearest_distance": 0.18203086966791038,
+      "contains_framework": false,
+      "parity_violating": true
+    },
+    {
+      "size": 11,
+      "span": 0.6017120387123283,
+      "centroid": {
+        "g_4": 0.5109477577408746,
+        "g_6": 0.3062695340831205,
+        "g_8": 0.3184934609851997,
+        "g_R2": 0.23375576959657118,
+        "g_R3": 0.08125298920313638,
+        "g_C": 0.3942853909923482,
+        "g_R2_parity": 0.042665519115380586,
+        "g_R3_parity": -0.02988246386069667
+      },
+      "nearest_framework": "discovered_data_driven",
+      "nearest_distance": 0.22782737385380783,
+      "contains_framework": false,
+      "parity_violating": true
+    },
+    {
+      "size": 7,
+      "span": 0.5909652584099833,
+      "centroid": {
+        "g_4": 0.537480455820515,
+        "g_6": 0.3552521411377777,
+        "g_8": 0.34971822010390635,
+        "g_R2": 0.2697432872617688,
+        "g_R3": 0.10229483616896205,
+        "g_C": 0.30867721209877647,
+        "g_R2_parity": -0.046483512855741135,
+        "g_R3_parity": -0.035574155160369623
+      },
+      "nearest_framework": "discovered_data_driven",
+      "nearest_distance": 0.20851706221671848,
+      "contains_framework": false,
+      "parity_violating": true
+    }
+  ]
+}

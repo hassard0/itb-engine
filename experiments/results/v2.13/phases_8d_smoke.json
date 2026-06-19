@@ -1,0 +1,69 @@
+{
+  "n_seeds": 1,
+  "n_components_straightline": 1,
+  "basis": [
+    "g_4",
+    "g_6",
+    "g_8",
+    "g_R2",
+    "g_R3",
+    "g_C",
+    "g_R2_parity",
+    "g_R3_parity"
+  ],
+  "box": {
+    "g_4": [
+      0.0,
+      1.2
+    ],
+    "g_6": [
+      0.0,
+      1.0
+    ],
+    "g_8": [
+      0.0,
+      1.0
+    ],
+    "g_R2": [
+      0.0,
+      0.7
+    ],
+    "g_R3": [
+      0.0,
+      0.7
+    ],
+    "g_C": [
+      0.02,
+      0.8
+    ],
+    "g_R2_parity": [
+      -0.3,
+      0.3
+    ],
+    "g_R3_parity": [
+      -0.3,
+      0.3
+    ]
+  },
+  "method": "8D straight-segment feasibility connectivity (lower bound on connectivity)",
+  "phases": [
+    {
+      "size": 1,
+      "span": 0.0,
+      "centroid": {
+        "g_4": 0.6402600405665808,
+        "g_6": 0.4129329701642764,
+        "g_8": 0.28038767460782454,
+        "g_R2": 0.359432961902449,
+        "g_R3": 0.14988055993271712,
+        "g_C": 0.48918444838648284,
+        "g_R2_parity": -0.07127872226534147,
+        "g_R3_parity": 0.05351247418974933
+      },
+      "nearest_framework": "discovered_data_driven",
+      "nearest_distance": 0.2654836741528114,
+      "contains_framework": false,
+      "parity_violating": true
+    }
+  ]
+}
