@@ -62,6 +62,15 @@ CALLISTER_VARIABLE_EVOLUTION_HDF_KEYS = (
     "zMax",
 )
 
+NG_GAUSSIAN_NPZ_FILENAME = "samples_Gaussian.npz"
+
+NG_GAUSSIAN_NPZ_KEYS = (
+    "chains",
+    "log_prob",
+    "local_accs",
+    "global_accs",
+)
+
 GW_PARITY_PROJECTION_BLOCKERS = (
     "helicity_convention_not_harmonized_across_sources",
     "ppv_beta1_normalization_not_finalized",
@@ -673,6 +682,15 @@ def _sample_summary(values: np.ndarray) -> dict[str, float]:
     }
 
 
+def _sample_quantile_summary(values: np.ndarray) -> dict[str, float]:
+    return {
+        **_sample_summary(values),
+        "p05": float(np.percentile(values, 5)),
+        "p50": float(np.percentile(values, 50)),
+        "p95": float(np.percentile(values, 95)),
+    }
+
+
 def parse_callister_variable_evolution_hdf_datasets(
     datasets: dict[str, Any],
     *,
@@ -820,6 +838,122 @@ def load_callister_variable_evolution_hdf(path: str) -> dict[str, Any]:
 
     with h5py.File(path, "r") as hdf:
         return parse_callister_variable_evolution_hdf_datasets(hdf, source_file=path)
+
+
+def parse_ng_gaussian_hyperposterior_npz_datasets(
+    datasets: dict[str, Any],
+    *,
+    source_file: str | None = None,
+) -> dict[str, Any]:
+    """Parse Ng et al. Gaussian hyperposterior samples from an NPZ-like mapping."""
+    missing_keys = [key for key in NG_GAUSSIAN_NPZ_KEYS if key not in datasets]
+    if missing_keys:
+        parser_blockers = ["missing_ng_gaussian_npz_keys"]
+        return {
+            "schema": "ng_gaussian_hyperposterior_npz_v1",
+            "source_file": source_file,
+            "required_keys": list(NG_GAUSSIAN_NPZ_KEYS),
+            "missing_keys": missing_keys,
+            "parser_ready": False,
+            "parser_blockers": parser_blockers,
+            "projection_blockers": list(GW_PARITY_PROJECTION_BLOCKERS),
+            "blockers": sorted(
+                set(parser_blockers + list(GW_PARITY_PROJECTION_BLOCKERS))
+            ),
+            "engine_projection_ready": False,
+            "claimable_discriminator_now": False,
+        }
+
+    arrays = {key: _array_from_dataset(datasets[key]) for key in NG_GAUSSIAN_NPZ_KEYS}
+    chains = arrays["chains"]
+    log_prob = arrays["log_prob"]
+    local_accs = arrays["local_accs"]
+    global_accs = arrays["global_accs"]
+    blockers = []
+
+    if chains.ndim != 3:
+        blockers.append("chains_not_three_dimensional")
+        step_count = 0
+        walker_count = 0
+        parameter_count = 0
+    else:
+        step_count = int(chains.shape[0])
+        walker_count = int(chains.shape[1])
+        parameter_count = int(chains.shape[2])
+        if parameter_count != 2:
+            blockers.append("chains_last_dimension_not_mu_sigma")
+        if step_count < 1 or walker_count < 1:
+            blockers.append("chains_empty")
+
+    if log_prob.ndim != 2:
+        blockers.append("log_prob_not_two_dimensional")
+    elif chains.ndim == 3 and log_prob.shape != chains.shape[:2]:
+        blockers.append("log_prob_shape_mismatch")
+
+    for key, values in (("local_accs", local_accs), ("global_accs", global_accs)):
+        if values.ndim != 2:
+            blockers.append(f"{key}_not_two_dimensional")
+        elif chains.ndim == 3 and values.shape[0] != step_count:
+            blockers.append(f"{key}_step_count_mismatch")
+
+    for key, values in arrays.items():
+        if np.any(~np.isfinite(values)):
+            blockers.append(f"{key}_not_finite")
+    if chains.ndim == 3 and parameter_count == 2:
+        sigma = chains[:, :, 1]
+        if np.any(sigma < 0):
+            blockers.append("sigma_samples_negative")
+
+    parser_ready = not blockers
+    projection_blockers = list(GW_PARITY_PROJECTION_BLOCKERS)
+    parameter_summaries = {}
+    if parser_ready:
+        flat = chains.reshape(-1, 2)
+        parameter_summaries = {
+            "mu": _sample_quantile_summary(flat[:, 0]),
+            "sigma": _sample_quantile_summary(flat[:, 1]),
+        }
+
+    return {
+        "schema": "ng_gaussian_hyperposterior_npz_v1",
+        "source_file": source_file,
+        "required_keys": list(NG_GAUSSIAN_NPZ_KEYS),
+        "missing_keys": [],
+        "parser_ready": parser_ready,
+        "parser_blockers": sorted(set(blockers)),
+        "projection_blockers": projection_blockers,
+        "blockers": sorted(set(blockers + projection_blockers)),
+        "engine_projection_ready": False,
+        "claimable_discriminator_now": False,
+        "chain_shape": list(chains.shape),
+        "log_prob_shape": list(log_prob.shape),
+        "local_accs_shape": list(local_accs.shape),
+        "global_accs_shape": list(global_accs.shape),
+        "step_count": step_count,
+        "walker_count": walker_count,
+        "parameter_count": parameter_count,
+        "sample_count": int(step_count * walker_count),
+        "parameter_names": ["mu", "sigma"],
+        "parameter_summaries": parameter_summaries,
+        "log_prob_summary": _sample_summary(log_prob) if parser_ready else {},
+        "acceptance_summary": (
+            {
+                "local_accs": _sample_summary(local_accs),
+                "global_accs": _sample_summary(global_accs),
+            }
+            if parser_ready
+            else {}
+        ),
+    }
+
+
+def load_ng_gaussian_hyperposterior_npz(path: str) -> dict[str, Any]:
+    """Load the Ng et al. Gaussian hyperposterior NPZ file."""
+    with np.load(path) as data:
+        return parse_ng_gaussian_hyperposterior_npz_datasets(
+            data,
+            source_file=path,
+        )
 
 
 def validate_gw_parity_native_packet(

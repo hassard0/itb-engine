@@ -1,0 +1,84 @@
+{
+  "version": "v2.71",
+  "basis": [
+    "v2.70_gw_parity_ppv_convention_audit",
+    "Ng_Zenodo_10.5281_zenodo.7935107",
+    "Ng_repository_showyourwork_dataset_manifest",
+    "Ng_repository_kappa_constraint_generic_script"
+  ],
+  "zenodo_record_url": "https://zenodo.org/records/7935107",
+  "zenodo_api_url": "https://zenodo.org/api/records/7935107",
+  "zenodo_concept_doi": "10.5281/zenodo.7338923",
+  "zenodo_version_doi": "10.5281/zenodo.7935107",
+  "source_file": "samples_Gaussian.npz",
+  "source_file_size_expected": 28777020,
+  "source_file_size_observed": 28777020,
+  "source_file_size_verified": true,
+  "source_file_md5_expected": "4d8db1755415f92b7db821277c1ed04b",
+  "source_file_md5_observed": "4d8db1755415f92b7db821277c1ed04b",
+  "source_file_md5_verified": true,
+  "parser_ready": true,
+  "parser_result": {
+    "schema": "ng_gaussian_hyperposterior_npz_v1",
+    "chain_shape": [
+      1000,
+      1800,
+      2
+    ],
+    "log_prob_shape": [
+      1000,
+      1800
+    ],
+    "local_accs_shape": [
+      1000,
+      897
+    ],
+    "global_accs_shape": [
+      1000,
+      897
+    ],
+    "sample_count": 1800000,
+    "parameter_names": [
+      "mu",
+      "sigma"
+    ],
+    "mu": {
+      "min": -0.07679817080497742,
+      "max": 0.06944113969802856,
+      "mean": -0.007984212272914721,
+      "std": 0.01871668292904962,
+      "p05": -0.03860464319586754,
+      "p50": -0.008095468860119581,
+      "p95": 0.023134382441639866
+    },
+    "sigma": {
+      "min": 7.636845111846924e-08,
+      "max": 0.09527517855167389,
+      "mean": 0.02847168063593385,
+      "std": 0.01506620331754454,
+      "p05": 0.0038379263132810593,
+      "p50": 0.028807864524424076,
+      "p95": 0.05305318534374237
+    },
+    "parser_blockers": [],
+    "projection_blockers": [
+      "helicity_convention_not_harmonized_across_sources",
+      "ppv_beta1_normalization_not_finalized",
+      "engine_projection_out_of_scope"
+    ]
+  },
+  "ng_beta10_candidate_ready": true,
+  "ppv_beta1_projection_ready": false,
+  "engine_projection_ready": false,
+  "claimable_discriminator_now": false,
+  "artifact_blockers": [
+    "ng_gaussian_hyperposterior_not_restricted_global_kappa_likelihood",
+    "full_event_level_feather_table_not_ingested",
+    "helicity_convention_not_harmonized_across_sources",
+    "ppv_beta1_normalization_not_finalized",
+    "engine_projection_out_of_scope"
+  ],
+  "route_status": "ng_gaussian_hyperposterior_parser_ready_projection_blocked",
+  "best_next_artifact": "Build a sign-harmonized beta_1_0 likelihood adapter and decide whether to add pyarrow for the full event-level Feather posterior table.",
+  "interpretation": "The Ng Gaussian hyperposterior product is now a verified, parsed source-native release artifact. It summarizes the population-level mu/sigma distribution of event kappas, not the restricted global kappa likelihood and not an engine-axis quantum-gravity discriminator."
+}
