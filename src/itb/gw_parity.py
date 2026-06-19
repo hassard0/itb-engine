@@ -71,6 +71,17 @@ NG_GAUSSIAN_NPZ_KEYS = (
     "global_accs",
 )
 
+NG_EVENT_LEVEL_FEATHER_FILENAME = "samples_posterior_birefringence.feather"
+
+NG_EVENT_LEVEL_FEATHER_REQUIRED_COLUMNS = (
+    "event",
+    "kappa",
+    "log_likelihood",
+    "log_prior",
+    "redshift",
+    "comoving_distance",
+)
+
 GW_PARITY_PROJECTION_BLOCKERS = (
     "helicity_convention_not_harmonized_across_sources",
     "ppv_beta1_normalization_not_finalized",
@@ -954,6 +965,153 @@ def load_ng_gaussian_hyperposterior_npz(path: str) -> dict[str, Any]:
             data,
             source_file=path,
         )
+
+
+def _table_column_to_float_array(table: Any, column: str) -> np.ndarray:
+    return np.asarray(table[column].to_numpy(zero_copy_only=False), dtype=float)
+
+
+def parse_ng_event_level_feather_table(
+    table: Any,
+    *,
+    source_file: str | None = None,
+) -> dict[str, Any]:
+    """Parse Ng et al. event-level birefringence posterior Feather data."""
+    column_names = list(table.column_names)
+    missing_columns = [
+        column
+        for column in NG_EVENT_LEVEL_FEATHER_REQUIRED_COLUMNS
+        if column not in column_names
+    ]
+    row_count = int(table.num_rows)
+    column_count = int(table.num_columns)
+    projection_blockers = list(GW_PARITY_PROJECTION_BLOCKERS)
+
+    if missing_columns:
+        parser_blockers = ["missing_ng_event_level_feather_columns"]
+        return {
+            "schema": "ng_event_level_feather_v1",
+            "source_file": source_file,
+            "required_columns": list(NG_EVENT_LEVEL_FEATHER_REQUIRED_COLUMNS),
+            "missing_columns": missing_columns,
+            "parser_ready": False,
+            "parser_blockers": parser_blockers,
+            "projection_blockers": projection_blockers,
+            "blockers": sorted(set(parser_blockers + projection_blockers)),
+            "engine_projection_ready": False,
+            "claimable_discriminator_now": False,
+            "row_count": row_count,
+            "column_count": column_count,
+        }
+
+    blockers = []
+    if row_count < 1:
+        blockers.append("event_level_table_empty")
+
+    null_counts = {
+        column: int(table[column].null_count)
+        for column in NG_EVENT_LEVEL_FEATHER_REQUIRED_COLUMNS
+    }
+    for column, null_count in null_counts.items():
+        if null_count:
+            blockers.append(f"{column}_contains_nulls")
+
+    numeric_arrays = {}
+    if not blockers:
+        for column in (
+            "kappa",
+            "log_likelihood",
+            "log_prior",
+            "redshift",
+            "comoving_distance",
+        ):
+            values = _table_column_to_float_array(table, column)
+            numeric_arrays[column] = values
+            if values.ndim != 1:
+                blockers.append(f"{column}_not_one_dimensional")
+            elif values.size != row_count:
+                blockers.append(f"{column}_row_count_mismatch")
+            if np.any(~np.isfinite(values)):
+                blockers.append(f"{column}_not_finite")
+
+    events = np.asarray([], dtype=str)
+    if not blockers:
+        events = np.asarray(table["event"].to_pylist(), dtype=str)
+        if events.ndim != 1 or events.size != row_count:
+            blockers.append("event_row_count_mismatch")
+        if np.any(events == ""):
+            blockers.append("event_empty")
+        if np.any(numeric_arrays["redshift"] < 0.0):
+            blockers.append("redshift_negative")
+        if np.any(numeric_arrays["comoving_distance"] < 0.0):
+            blockers.append("comoving_distance_negative")
+
+    parser_ready = not blockers
+    event_count = 0
+    event_sample_count_min = 0
+    event_sample_count_max = 0
+    event_counts_preview: list[dict[str, Any]] = []
+    numeric_summaries: dict[str, dict[str, float]] = {}
+    if parser_ready:
+        event_names, event_counts = np.unique(events, return_counts=True)
+        event_count = int(event_names.size)
+        event_sample_count_min = int(np.min(event_counts))
+        event_sample_count_max = int(np.max(event_counts))
+        event_counts_preview = [
+            {"event": str(event), "sample_count": int(count)}
+            for event, count in zip(event_names[:5], event_counts[:5], strict=True)
+        ]
+        numeric_summaries = {
+            column: _sample_quantile_summary(values)
+            for column, values in numeric_arrays.items()
+        }
+
+    parser_blockers = sorted(set(blockers))
+    return {
+        "schema": "ng_event_level_feather_v1",
+        "source_file": source_file,
+        "required_columns": list(NG_EVENT_LEVEL_FEATHER_REQUIRED_COLUMNS),
+        "missing_columns": [],
+        "parser_ready": parser_ready,
+        "parser_blockers": parser_blockers,
+        "projection_blockers": projection_blockers,
+        "blockers": sorted(set(parser_blockers + projection_blockers)),
+        "engine_projection_ready": False,
+        "claimable_discriminator_now": False,
+        "row_count": row_count,
+        "column_count": column_count,
+        "null_counts": null_counts,
+        "event_count": event_count,
+        "event_sample_count_min": event_sample_count_min,
+        "event_sample_count_max": event_sample_count_max,
+        "event_counts_preview": event_counts_preview,
+        "numeric_summaries": numeric_summaries,
+        "restricted_global_kappa_likelihood_ready": False,
+    }
+
+
+def load_ng_event_level_feather(path: str) -> dict[str, Any]:
+    """Load the Ng et al. event-level posterior Feather file."""
+    try:
+        import pyarrow.feather as feather
+    except ImportError:
+        parser_blockers = ["pyarrow_not_installed"]
+        projection_blockers = list(GW_PARITY_PROJECTION_BLOCKERS)
+        return {
+            "schema": "ng_event_level_feather_v1",
+            "source_file": path,
+            "required_columns": list(NG_EVENT_LEVEL_FEATHER_REQUIRED_COLUMNS),
+            "missing_columns": [],
+            "parser_ready": False,
+            "parser_blockers": parser_blockers,
+            "projection_blockers": projection_blockers,
+            "blockers": sorted(set(parser_blockers + projection_blockers)),
+            "engine_projection_ready": False,
+            "claimable_discriminator_now": False,
+        }
+
+    table = feather.read_table(path, memory_map=True)
+    return parse_ng_event_level_feather_table(table, source_file=path)
 
 
 def validate_gw_parity_native_packet(

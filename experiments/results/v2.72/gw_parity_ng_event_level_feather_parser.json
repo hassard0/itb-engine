@@ -1,0 +1,116 @@
+{
+  "version": "v2.72",
+  "basis": [
+    "v2.71_gw_parity_ng_gaussian_posterior_parser",
+    "Ng_Zenodo_10.5281_zenodo.7935107",
+    "Ng_repository_sample_posterior_birefringence_release"
+  ],
+  "zenodo_record_url": "https://zenodo.org/records/7935107",
+  "zenodo_api_url": "https://zenodo.org/api/records/7935107",
+  "zenodo_concept_doi": "10.5281/zenodo.7338923",
+  "zenodo_version_doi": "10.5281/zenodo.7935107",
+  "source_file": "samples_posterior_birefringence.feather",
+  "source_file_size_expected": 636846658,
+  "source_file_size_observed": 636846658,
+  "source_file_size_verified": true,
+  "source_file_md5_expected": "b60baf8bac203cb462943cc8e93f9a01",
+  "source_file_md5_observed": "b60baf8bac203cb462943cc8e93f9a01",
+  "source_file_md5_verified": true,
+  "pyarrow_dependency_declared": true,
+  "parser_ready": true,
+  "parser_result": {
+    "schema": "ng_event_level_feather_v1",
+    "row_count": 710000,
+    "column_count": 153,
+    "event_count": 71,
+    "event_sample_count_min": 10000,
+    "event_sample_count_max": 10000,
+    "event_counts_preview": [
+      {
+        "event": "GW150914",
+        "sample_count": 10000
+      },
+      {
+        "event": "GW151012",
+        "sample_count": 10000
+      },
+      {
+        "event": "GW151226",
+        "sample_count": 10000
+      },
+      {
+        "event": "GW170104",
+        "sample_count": 10000
+      },
+      {
+        "event": "GW170608",
+        "sample_count": 10000
+      }
+    ],
+    "kappa": {
+      "min": -0.9995784719545616,
+      "max": 0.99888177723515,
+      "mean": 0.0008580147587124048,
+      "std": 0.17669644566992881,
+      "p05": -0.2728967798591203,
+      "p50": -0.00193953741733065,
+      "p95": 0.27273816663044476
+    },
+    "redshift": {
+      "min": 0.016137937466392,
+      "max": 2.4101237857525284,
+      "mean": 0.32715876141219247,
+      "std": 0.2674650216184734,
+      "p05": 0.07496408743375979,
+      "p50": 0.25337767804498734,
+      "p95": 0.8145954686608531
+    },
+    "comoving_distance": {
+      "min": 71.15262422491134,
+      "max": 5863.235590047987,
+      "mean": 1264.7687793249522,
+      "std": 847.9402227525735,
+      "p05": 325.9201769684653,
+      "p50": 1053.183644325949,
+      "p95": 2908.3075804277955
+    },
+    "log_likelihood": {
+      "min": 1.7277389102873713,
+      "max": 355.4918688897633,
+      "mean": 87.24331629106634,
+      "std": 70.87463600595015,
+      "p05": 27.708739433699613,
+      "p50": 67.21325327394379,
+      "p95": 307.43521149238046
+    },
+    "log_prior": {
+      "min": 36.14437940121987,
+      "max": 387.2944850994307,
+      "mean": 137.6612083678216,
+      "std": 74.13229586713054,
+      "p05": 68.33895558451361,
+      "p50": 122.60294070493376,
+      "p95": 357.68482943391547
+    },
+    "parser_blockers": [],
+    "projection_blockers": [
+      "helicity_convention_not_harmonized_across_sources",
+      "ppv_beta1_normalization_not_finalized",
+      "engine_projection_out_of_scope"
+    ]
+  },
+  "event_level_kappa_samples_ready": true,
+  "restricted_global_kappa_likelihood_ready": false,
+  "ppv_beta1_projection_ready": false,
+  "engine_projection_ready": false,
+  "claimable_discriminator_now": false,
+  "artifact_blockers": [
+    "restricted_global_kappa_likelihood_not_recomputed",
+    "helicity_convention_not_harmonized_across_sources",
+    "ppv_beta1_normalization_not_finalized",
+    "engine_projection_out_of_scope"
+  ],
+  "route_status": "ng_event_level_feather_parser_ready_projection_blocked",
+  "best_next_artifact": "Recompute the restricted global kappa likelihood from the event-level posterior samples, then map it to source-declared beta_1_0 with a sign and frequency-normalization guard.",
+  "interpretation": "The full Ng event-level posterior table is now verified and parsed as source-native kappa material. This closes the Feather ingestion blocker, but it still does not provide the restricted global kappa likelihood or an engine-axis quantum-gravity discriminator."
+}

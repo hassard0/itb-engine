@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (182 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (183 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -231,3 +231,4 @@ Auto-generated front door to the full research program (182 notes). Regenerate w
 | v2.69 | [v2.69 - GW parity Callister fixed-variable comparison: source-native sensitivity quantified](2026-06-19-v2.69-gw-parity-callister-fixed-variable-comparison.md) | v2.69 compares Callister fixed-rate and variable-evolution native posterior densities with TV/Hellinger/peak-offset diagnostics while keeping engine projection blocked. |
 | v2.70 | [v2.70 - GW parity PPV convention audit: candidates identified, promotion blocked](2026-06-19-v2.70-gw-parity-ppv-convention-audit.md) | v2.70 separates source-declared PPV candidate mappings from promotion, identifying Ng as the closest beta_1_0 route while keeping Callister alpha/beta and SGWB energy conventions distinct. |
 | v2.71 | [v2.71 - GW parity Ng Gaussian posterior parser: source-native NPZ ingested](2026-06-19-v2.71-gw-parity-ng-gaussian-posterior-parser.md) | v2.71 verifies and parses the Ng Zenodo Gaussian hyperposterior NPZ with existing NumPy dependencies while keeping the restricted global kappa likelihood and engine projection blocked. |
+| v2.72 | [v2.72 - GW parity Ng event-level parser: full Feather table ingested](2026-06-19-v2.72-gw-parity-ng-event-level-feather-parser.md) | v2.72 verifies and parses the full Ng event-level Feather posterior table with pyarrow while keeping the restricted global kappa likelihood and engine projection blocked. |
