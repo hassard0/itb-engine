@@ -1,0 +1,140 @@
+{
+  "basis": [
+    "KK_radius",
+    "TowerSpectrum",
+    "radius_ratio",
+    "framework_verdict"
+  ],
+  "radius_thresholds": [
+    {
+      "phi_tower_sigma": 0.0,
+      "claimable_exclusion_requires_radius_ratio_gt": 2.102867546654528,
+      "claimable_allowance_requires_radius_ratio_lte": 2.102867546654528
+    },
+    {
+      "phi_tower_sigma": 0.01,
+      "claimable_exclusion_requires_radius_ratio_gt": 2.145348288995726,
+      "claimable_allowance_requires_radius_ratio_lte": 2.0612279793705994
+    },
+    {
+      "phi_tower_sigma": 0.05,
+      "claimable_exclusion_requires_radius_ratio_gt": 2.3240280571276695,
+      "claimable_allowance_requires_radius_ratio_lte": 1.9027532413864958
+    },
+    {
+      "phi_tower_sigma": 0.1,
+      "claimable_exclusion_requires_radius_ratio_gt": 2.56844822152935,
+      "claimable_allowance_requires_radius_ratio_lte": 1.72168233009571
+    },
+    {
+      "phi_tower_sigma": 0.2,
+      "claimable_exclusion_requires_radius_ratio_gt": 3.137109741967531,
+      "claimable_allowance_requires_radius_ratio_lte": 1.409594270680315
+    }
+  ],
+  "candidate_count": 3,
+  "claimable_if_sourced": [
+    "kk_exclusion_fixture"
+  ],
+  "verdict_counts": {
+    "tower_allowed_by_predictive_spectrum": 1,
+    "tower_excluded_by_predictive_spectrum": 1,
+    "tower_prediction_overlaps_threshold": 1
+  },
+  "candidates": [
+    {
+      "label": "kk_allowance_fixture",
+      "radius_ratio_mean": 1.7,
+      "log_radius_sigma": 0.03,
+      "tower_spectrum": {
+        "tower_family": "kk_radius_synthetic_candidate",
+        "phi_tower_mean": 0.5306282510621704,
+        "phi_tower_sigma": 0.03,
+        "normalization": "radius_ratio_R_over_R0_diagnostic",
+        "source": "synthetic v2.29 KK-radius adapter candidate",
+        "tower_mass_gap": 0.5882352941176471,
+        "metadata": {
+          "radius_ratio_mean": 1.7,
+          "log_radius_sigma": 0.03,
+          "relation": "m_KK/m0 = R0/R = exp(-log(R/R0))",
+          "candidate_label": "kk_allowance_fixture"
+        }
+      },
+      "framework_tower_verdict": "tower_allowed_by_predictive_spectrum",
+      "two_sigma_phi_interval": [
+        0.4706282510621704,
+        0.5906282510621703
+      ],
+      "claimable_exclusion_if_sourced": false
+    },
+    {
+      "label": "kk_overlap_fixture",
+      "radius_ratio_mean": 2.1,
+      "log_radius_sigma": 0.05,
+      "tower_spectrum": {
+        "tower_family": "kk_radius_synthetic_candidate",
+        "phi_tower_mean": 0.7419373447293773,
+        "phi_tower_sigma": 0.05,
+        "normalization": "radius_ratio_R_over_R0_diagnostic",
+        "source": "synthetic v2.29 KK-radius adapter candidate",
+        "tower_mass_gap": 0.47619047619047616,
+        "metadata": {
+          "radius_ratio_mean": 2.1,
+          "log_radius_sigma": 0.05,
+          "relation": "m_KK/m0 = R0/R = exp(-log(R/R0))",
+          "candidate_label": "kk_overlap_fixture"
+        }
+      },
+      "framework_tower_verdict": "tower_prediction_overlaps_threshold",
+      "two_sigma_phi_interval": [
+        0.6419373447293774,
+        0.8419373447293773
+      ],
+      "claimable_exclusion_if_sourced": false
+    },
+    {
+      "label": "kk_exclusion_fixture",
+      "radius_ratio_mean": 2.6,
+      "log_radius_sigma": 0.04,
+      "tower_spectrum": {
+        "tower_family": "kk_radius_synthetic_candidate",
+        "phi_tower_mean": 0.9555114450274363,
+        "phi_tower_sigma": 0.04,
+        "normalization": "radius_ratio_R_over_R0_diagnostic",
+        "source": "synthetic v2.29 KK-radius adapter candidate",
+        "tower_mass_gap": 0.3846153846153846,
+        "metadata": {
+          "radius_ratio_mean": 2.6,
+          "log_radius_sigma": 0.04,
+          "relation": "m_KK/m0 = R0/R = exp(-log(R/R0))",
+          "candidate_label": "kk_exclusion_fixture"
+        }
+      },
+      "framework_tower_verdict": "tower_excluded_by_predictive_spectrum",
+      "two_sigma_phi_interval": [
+        0.8755114450274364,
+        1.0355114450274363
+      ],
+      "claimable_exclusion_if_sourced": true
+    }
+  ],
+  "claimable_framework_exclusions_now": [],
+  "literature_guardrail": {
+    "claim": "These are synthetic KK-radius adapter candidates. A sourced radius ratio can drive the tower-verdict path, but these fixture rows are not framework predictions.",
+    "primary_sources": [
+      {
+        "title": "Ooguri and Vafa, On the Geometry of the String Landscape and the Swampland",
+        "url": "https://arxiv.org/abs/hep-th/0605264"
+      },
+      {
+        "title": "Corvilain, Grimm, and Valenzuela, The Swampland Distance Conjecture for Kahler moduli",
+        "url": "https://arxiv.org/abs/1812.07548"
+      },
+      {
+        "title": "Etheredge, Heidenreich, Kaya, Qiu, and Reece, Sharpening the Distance Conjecture in diverse dimensions",
+        "url": "https://arxiv.org/abs/2206.04063"
+      }
+    ]
+  },
+  "interpretation": "A KK-radius measurement or compactification calculation can now be converted to the tower gate through phi_tower=log(R/R0). The current rows are fixtures, so the audit demonstrates readiness and threshold values rather than claiming a registered framework exclusion."
+}

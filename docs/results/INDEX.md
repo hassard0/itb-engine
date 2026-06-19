@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (139 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (140 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -188,3 +188,4 @@ Auto-generated front door to the full research program (139 notes). Regenerate w
 | v2.26 | [v2.26 - Tower literature seed audit: qualitative SDC sources are not a](2026-06-19-v2.26-tower-literature-seed-audit.md) | v2.25 defined the numerical thresholds a future framework tower adapter must clear. |
 | v2.27 | [v2.27 - SDC distance requirements: turning tower seeds into adapter ta](2026-06-19-v2.27-sdc-distance-requirements.md) | v2.26 found qualitative SDC sources but no actionable `TowerSpectrum`. v2.27 asks: |
 | v2.28 | [v2.28 - SDC adapter candidate scan: the conversion path is ready](2026-06-19-v2.28-sdc-adapter-candidate-scan.md) | v2.27 translated SDC slopes into required moduli distances. v2.28 asks: |
+| v2.29 | [v2.29 - KK radius adapter scan: radius ratios can drive the tower gate](2026-06-19-v2.29-kk-radius-adapter-scan.md) | v2.28 showed how to convert an SDC moduli distance into a `TowerSpectrum`. v2.29 asks: |
