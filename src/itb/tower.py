@@ -7,6 +7,7 @@ unchanged unless an experiment explicitly consumes the tower axis.
 """
 
 from dataclasses import dataclass, field
+import math
 from typing import Any
 
 
@@ -30,3 +31,47 @@ class TowerSpectrum:
             "tower_mass_gap": self.tower_mass_gap,
             "metadata": dict(self.metadata),
         }
+
+
+def sdc_tower_spectrum(
+    *,
+    tower_family: str,
+    delta_moduli_mean: float,
+    delta_moduli_sigma: float,
+    lambda_sdc: float,
+    normalization: str,
+    source: str,
+    metadata: dict[str, Any] | None = None,
+) -> TowerSpectrum:
+    """Convert an SDC exponential tower relation into a TowerSpectrum.
+
+    The convention matches the v2.20 diagnostic tower coordinate:
+    m_tower / m0 = exp(-phi_tower), with phi_tower = lambda_sdc * Delta.
+    """
+    if lambda_sdc <= 0.0:
+        raise ValueError("lambda_sdc must be positive")
+    if delta_moduli_mean < 0.0:
+        raise ValueError("delta_moduli_mean must be non-negative")
+    if delta_moduli_sigma < 0.0:
+        raise ValueError("delta_moduli_sigma must be non-negative")
+
+    phi_mean = lambda_sdc * delta_moduli_mean
+    phi_sigma = lambda_sdc * delta_moduli_sigma
+    adapter_metadata = {
+        "delta_moduli_mean": delta_moduli_mean,
+        "delta_moduli_sigma": delta_moduli_sigma,
+        "lambda_sdc": lambda_sdc,
+        "relation": "m_tower/m0 = exp(-lambda_sdc * Delta_moduli)",
+    }
+    if metadata:
+        adapter_metadata.update(metadata)
+
+    return TowerSpectrum(
+        tower_family=tower_family,
+        phi_tower_mean=phi_mean,
+        phi_tower_sigma=phi_sigma,
+        tower_mass_gap=math.exp(-phi_mean),
+        normalization=normalization,
+        source=source,
+        metadata=adapter_metadata,
+    )

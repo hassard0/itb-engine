@@ -1,0 +1,123 @@
+{
+  "basis": [
+    "SDC",
+    "TowerSpectrum",
+    "Delta_moduli",
+    "framework_verdict"
+  ],
+  "dimension": 4,
+  "lambda_sdc": 0.7071067811865475,
+  "candidate_count": 3,
+  "claimable_if_sourced": [
+    "d4_exclusion_fixture"
+  ],
+  "verdict_counts": {
+    "tower_allowed_by_predictive_spectrum": 1,
+    "tower_excluded_by_predictive_spectrum": 1,
+    "tower_prediction_overlaps_threshold": 1
+  },
+  "candidates": [
+    {
+      "label": "d4_allowance_fixture",
+      "dimension": 4,
+      "lambda_sdc": 0.7071067811865475,
+      "delta_moduli_mean": 0.8,
+      "delta_moduli_sigma": 0.05,
+      "tower_spectrum": {
+        "tower_family": "sdc_synthetic_candidate",
+        "phi_tower_mean": 0.565685424949238,
+        "phi_tower_sigma": 0.035355339059327376,
+        "normalization": "sharpened_sdc_d_4_diagnostic",
+        "source": "synthetic v2.28 adapter candidate",
+        "tower_mass_gap": 0.5679707120121922,
+        "metadata": {
+          "delta_moduli_mean": 0.8,
+          "delta_moduli_sigma": 0.05,
+          "lambda_sdc": 0.7071067811865475,
+          "relation": "m_tower/m0 = exp(-lambda_sdc * Delta_moduli)",
+          "candidate_label": "d4_allowance_fixture",
+          "dimension": 4
+        }
+      },
+      "framework_tower_verdict": "tower_allowed_by_predictive_spectrum",
+      "two_sigma_phi_interval": [
+        0.4949747468305833,
+        0.6363961030678927
+      ],
+      "claimable_exclusion_if_sourced": false
+    },
+    {
+      "label": "d4_overlap_fixture",
+      "dimension": 4,
+      "lambda_sdc": 0.7071067811865475,
+      "delta_moduli_mean": 1.05,
+      "delta_moduli_sigma": 0.05,
+      "tower_spectrum": {
+        "tower_family": "sdc_synthetic_candidate",
+        "phi_tower_mean": 0.7424621202458749,
+        "phi_tower_sigma": 0.035355339059327376,
+        "normalization": "sharpened_sdc_d_4_diagnostic",
+        "source": "synthetic v2.28 adapter candidate",
+        "tower_mass_gap": 0.47594064864480506,
+        "metadata": {
+          "delta_moduli_mean": 1.05,
+          "delta_moduli_sigma": 0.05,
+          "lambda_sdc": 0.7071067811865475,
+          "relation": "m_tower/m0 = exp(-lambda_sdc * Delta_moduli)",
+          "candidate_label": "d4_overlap_fixture",
+          "dimension": 4
+        }
+      },
+      "framework_tower_verdict": "tower_prediction_overlaps_threshold",
+      "two_sigma_phi_interval": [
+        0.6717514421272202,
+        0.8131727983645296
+      ],
+      "claimable_exclusion_if_sourced": false
+    },
+    {
+      "label": "d4_exclusion_fixture",
+      "dimension": 4,
+      "lambda_sdc": 0.7071067811865475,
+      "delta_moduli_mean": 1.25,
+      "delta_moduli_sigma": 0.05,
+      "tower_spectrum": {
+        "tower_family": "sdc_synthetic_candidate",
+        "phi_tower_mean": 0.8838834764831843,
+        "phi_tower_sigma": 0.035355339059327376,
+        "normalization": "sharpened_sdc_d_4_diagnostic",
+        "source": "synthetic v2.28 adapter candidate",
+        "tower_mass_gap": 0.41317523570486175,
+        "metadata": {
+          "delta_moduli_mean": 1.25,
+          "delta_moduli_sigma": 0.05,
+          "lambda_sdc": 0.7071067811865475,
+          "relation": "m_tower/m0 = exp(-lambda_sdc * Delta_moduli)",
+          "candidate_label": "d4_exclusion_fixture",
+          "dimension": 4
+        }
+      },
+      "framework_tower_verdict": "tower_excluded_by_predictive_spectrum",
+      "two_sigma_phi_interval": [
+        0.8131727983645296,
+        0.954594154601839
+      ],
+      "claimable_exclusion_if_sourced": true
+    }
+  ],
+  "claimable_framework_exclusions_now": [],
+  "literature_guardrail": {
+    "claim": "These are synthetic SDC adapter candidates. A row marked claimable_if_sourced shows the adapter path would support a verdict only after a real framework source supplies that Delta_moduli and uncertainty.",
+    "primary_sources": [
+      {
+        "title": "Ooguri and Vafa, On the Geometry of the String Landscape and the Swampland",
+        "url": "https://arxiv.org/abs/hep-th/0605264"
+      },
+      {
+        "title": "Etheredge, Heidenreich, Kaya, Qiu, and Reece, Sharpening the Distance Conjecture in diverse dimensions",
+        "url": "https://arxiv.org/abs/2206.04063"
+      }
+    ]
+  },
+  "interpretation": "The adapter utility is sufficient to turn a sourced SDC distance into the existing tower-verdict machinery. The current candidates are synthetic fixtures, so they demonstrate readiness rather than claiming a framework exclusion."
+}
