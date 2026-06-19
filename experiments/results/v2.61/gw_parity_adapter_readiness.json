@@ -1,0 +1,234 @@
+{
+  "basis": [
+    "v2.59_parity_route_split",
+    "v2.60_gw_parity_measurement_packet_search",
+    "public_code_data_audit_2026_06_19"
+  ],
+  "target_axis": "g_R2_parity/g_R3_parity",
+  "candidate_count": 5,
+  "source_side_likelihood_ready_routes": [
+    "ng_gwtc3_kappa_at_100hz",
+    "callister_sgwb_kappaD_kappaz"
+  ],
+  "source_side_likelihood_ready_count": 2,
+  "engine_adapter_ready_routes": [],
+  "engine_adapter_ready_count": 0,
+  "claimable_discriminator_now": false,
+  "adapter_blocker_counts": {
+    "missing_dimensionful_to_engine_normalization": 5,
+    "missing_engine_axis_map": 4,
+    "missing_framework_exclusion_math": 5,
+    "missing_frequency_normalization": 5,
+    "missing_public_source_likelihood_material": 3,
+    "missing_published_numeric_constraint": 2,
+    "missing_source_backed_operator_map": 4
+  },
+  "legacy_stack_warning": "The existing LIGOBirefringenceBound is a legacy toy constraint and must not be treated as an external claim-ready likelihood.",
+  "can_build_nonpromoting_source_loader_now": true,
+  "can_promote_engine_packet_now": false,
+  "recommended_intermediate_basis": {
+    "name": "gw_parity_native_or_ppv_basis",
+    "native_axes": [
+      "ng:kappa_Gpc^-1_at_100_Hz",
+      "callister:kappa_D",
+      "callister:kappa_z",
+      "jenks:ppE_or_parameterized_parity_basis"
+    ],
+    "engine_projection_status": "blocked_pending_source_backed_operator_normalization"
+  },
+  "rows": [
+    {
+      "label": "ng_gwtc3_kappa_at_100hz",
+      "source": {
+        "paper": "https://arxiv.org/abs/2305.05844",
+        "code": "https://github.com/thomasckng/Constraining-Birefringence-with-GWTC-3",
+        "data": "https://zenodo.org/records/7935107"
+      },
+      "measured_parameters": [
+        "kappa_Gpc^-1_at_100_Hz",
+        "M_PV_lower_bound_GeV"
+      ],
+      "public_material": {
+        "code": true,
+        "data": true,
+        "docs": true,
+        "source_likelihood_material_public": true
+      },
+      "published_numeric_constraint": true,
+      "source_side_likelihood_ready": true,
+      "engine_adapter_ready": false,
+      "maps_to_engine_axes": false,
+      "source_backed_operator_map": false,
+      "dimensional_conversion_ready": false,
+      "frequency_normalization_ready": false,
+      "framework_exclusion_math_ready": false,
+      "adapter_blockers": [
+        "missing_engine_axis_map",
+        "missing_source_backed_operator_map",
+        "missing_dimensionful_to_engine_normalization",
+        "missing_frequency_normalization",
+        "missing_framework_exclusion_math"
+      ],
+      "adapter_role": "best_source_side_reproduction_seed",
+      "notes": [
+        "The paper reports kappa=-0.019^{+0.038}_{-0.029} Gpc^-1 at 100 Hz.",
+        "The public repository and Zenodo release can seed a source-side posterior loader.",
+        "The dimensionful kappa/M_PV convention is not the engine's dimensionless g_R2/g_R3 basis."
+      ]
+    },
+    {
+      "label": "callister_sgwb_kappaD_kappaz",
+      "source": {
+        "paper": "https://arxiv.org/abs/2312.12532",
+        "code": "https://github.com/tcallister/stochastic-birefringence",
+        "data": "https://zenodo.org/doi/10.5281/zenodo.10384997",
+        "docs": "https://tcallister.github.io/stochastic-birefringence/"
+      },
+      "measured_parameters": [
+        "kappa_D",
+        "kappa_z"
+      ],
+      "public_material": {
+        "code": true,
+        "data": true,
+        "docs": true,
+        "source_likelihood_material_public": true
+      },
+      "published_numeric_constraint": true,
+      "source_side_likelihood_ready": true,
+      "engine_adapter_ready": false,
+      "maps_to_engine_axes": false,
+      "source_backed_operator_map": false,
+      "dimensional_conversion_ready": false,
+      "frequency_normalization_ready": false,
+      "framework_exclusion_math_ready": false,
+      "adapter_blockers": [
+        "missing_engine_axis_map",
+        "missing_source_backed_operator_map",
+        "missing_dimensionful_to_engine_normalization",
+        "missing_frequency_normalization",
+        "missing_framework_exclusion_math"
+      ],
+      "adapter_role": "best_sgwb_public_release_seed",
+      "notes": [
+        "The arXiv record advertises public code and data for regenerating results.",
+        "The reported joint order-0.1 constraint is on generic SGWB birefringence parameters.",
+        "The kappa_D/kappa_z parameter basis is not an engine-axis likelihood."
+      ]
+    },
+    {
+      "label": "jenks_parameterized_parity_formalism",
+      "source": {
+        "paper": "https://arxiv.org/abs/2305.10478"
+      },
+      "measured_parameters": [
+        "generic_parity_parameters",
+        "ppE_mapping"
+      ],
+      "public_material": {
+        "code": false,
+        "data": false,
+        "docs": false,
+        "source_likelihood_material_public": false
+      },
+      "published_numeric_constraint": false,
+      "source_side_likelihood_ready": false,
+      "engine_adapter_ready": false,
+      "maps_to_engine_axes": false,
+      "source_backed_operator_map": true,
+      "dimensional_conversion_ready": false,
+      "frequency_normalization_ready": false,
+      "framework_exclusion_math_ready": false,
+      "adapter_blockers": [
+        "missing_public_source_likelihood_material",
+        "missing_published_numeric_constraint",
+        "missing_engine_axis_map",
+        "missing_dimensionful_to_engine_normalization",
+        "missing_frequency_normalization",
+        "missing_framework_exclusion_math"
+      ],
+      "adapter_role": "operator_language_seed_not_measurement",
+      "notes": [
+        "The formalism is source-backed and maps generic parity parameters to ppE language.",
+        "It is not an external measurement likelihood or engine normalization by itself."
+      ]
+    },
+    {
+      "label": "zhu_gwtc3_modified_propagation",
+      "source": {
+        "paper": "https://arxiv.org/abs/2304.09025"
+      },
+      "measured_parameters": [
+        "parity_modified_propagation_parameters",
+        "lorentz_modified_propagation_parameters"
+      ],
+      "public_material": {
+        "code": false,
+        "data": true,
+        "docs": false,
+        "source_likelihood_material_public": false
+      },
+      "published_numeric_constraint": true,
+      "source_side_likelihood_ready": false,
+      "engine_adapter_ready": false,
+      "maps_to_engine_axes": false,
+      "source_backed_operator_map": false,
+      "dimensional_conversion_ready": false,
+      "frequency_normalization_ready": false,
+      "framework_exclusion_math_ready": false,
+      "adapter_blockers": [
+        "missing_public_source_likelihood_material",
+        "missing_engine_axis_map",
+        "missing_source_backed_operator_map",
+        "missing_dimensionful_to_engine_normalization",
+        "missing_frequency_normalization",
+        "missing_framework_exclusion_math"
+      ],
+      "adapter_role": "published_constraint_not_public_adapter_seed",
+      "notes": [
+        "The paper analyzes open LIGO-Virgo-KAGRA events.",
+        "No dedicated public likelihood/code release was identified in this audit.",
+        "The modified-propagation parameterization is not projected to g_R2_parity/g_R3_parity."
+      ]
+    },
+    {
+      "label": "engine_gravitational_birefringence_observable",
+      "source": {
+        "implementation": "src/itb/gravitational_observables.py:GravitationalBirefringence"
+      },
+      "measured_parameters": [
+        "g_R2_parity + omega/omega0 * g_R3_parity"
+      ],
+      "public_material": {
+        "code": false,
+        "data": false,
+        "docs": false,
+        "source_likelihood_material_public": false
+      },
+      "published_numeric_constraint": false,
+      "source_side_likelihood_ready": false,
+      "engine_adapter_ready": false,
+      "maps_to_engine_axes": true,
+      "source_backed_operator_map": false,
+      "dimensional_conversion_ready": false,
+      "frequency_normalization_ready": false,
+      "framework_exclusion_math_ready": false,
+      "adapter_blockers": [
+        "missing_public_source_likelihood_material",
+        "missing_published_numeric_constraint",
+        "missing_source_backed_operator_map",
+        "missing_dimensionful_to_engine_normalization",
+        "missing_frequency_normalization",
+        "missing_framework_exclusion_math"
+      ],
+      "adapter_role": "engine_target_basis_toy_normalization",
+      "notes": [
+        "The engine observable touches the right axes.",
+        "Its omega0 and linear normalization are internal toy conventions until an adapter is derived."
+      ]
+    }
+  ],
+  "route_status": "public_gw_likelihood_material_exists_engine_adapter_missing",
+  "best_next_artifact": "A native-parameter or PPV-basis source packet for Ng and/or Callister, followed by a source-backed operator-normalization concordance before any engine g_R2_parity/g_R3_parity projection.",
+  "interpretation": "Public reproduction material exists for source-side GW parity constraints, but no audited route supplies the operator map, dimensional conversion, frequency normalization, and framework-exclusion math required for an engine claim packet."
+}
