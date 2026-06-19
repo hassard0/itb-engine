@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (134 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (135 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -183,3 +183,4 @@ Auto-generated front door to the full research program (134 notes). Regenerate w
 | v2.21 | [v2.21 - Tower-observable thresholds: what would make the 9D gate measu](2026-06-19-v2.21-tower-observable-thresholds.md) | v2.20 found a nonredundant 9D tower gate, but it is not framework discrimination until |
 | v2.22 | [v2.22 - Tower framework scenarios: exclusions are assignment-dependent](2026-06-19-v2.22-tower-framework-scenarios.md) | v2.21 identified concrete tower-observable thresholds, but named framework encoders still |
 | v2.23 | [v2.23 - Tower measurement design: observations reduce assignments, not](2026-06-19-v2.23-tower-measurement-design.md) | v2.22 showed that framework exclusions depend on how `phi_tower` is assigned. v2.23 asks: |
+| v2.24 | [v2.24 - Tower spectrum readiness: framework claims are blocked on miss](2026-06-19-v2.24-tower-spectrum-readiness.md) | v2.23 identified which tower measurements would reduce assignment ambiguity. v2.24 asks: |

@@ -1,0 +1,299 @@
+{
+  "basis": [
+    "framework",
+    "tower_spectrum",
+    "phi_tower",
+    "Lambda_species"
+  ],
+  "model": {
+    "lambda_eft": 0.65,
+    "m0": 1.0,
+    "lambda_tower": 1.0,
+    "density": 1.0,
+    "exponent_p": 1.0,
+    "fixed_point_iters": 96
+  },
+  "critical_phi_tower": 0.7433019116911739,
+  "required_actionable_fields": [
+    "tower_family",
+    "phi_tower_mean",
+    "phi_tower_sigma",
+    "normalization",
+    "source"
+  ],
+  "adapter_contract": {
+    "tower_family": "string label such as KK, string_oscillator, species, or model_specific",
+    "phi_tower_mean": "dimensionless tower coordinate in the v2.20 normalization",
+    "phi_tower_sigma": "one-sigma uncertainty in the same normalization",
+    "tower_mass_gap": "optional mass-gap input; converted to phi_tower if phi is absent",
+    "normalization": "how the framework maps its physical scale into m0/lambda_tower units",
+    "source": "literature, data product, or generator that justifies the spectrum"
+  },
+  "reference_feasible_frameworks": [
+    "pure_gr",
+    "string_tree_eft",
+    "asymptotic_safety",
+    "cdt",
+    "causal_set",
+    "emergent_gravity",
+    "discovered_novel",
+    "discovered_parity_violating",
+    "discovered_high_g8",
+    "discovered_data_driven"
+  ],
+  "native_prediction_frameworks": [],
+  "n_native_prediction_frameworks": 0,
+  "actionable_prediction_frameworks": [],
+  "n_actionable_prediction_frameworks": 0,
+  "claimable_framework_exclusions": [],
+  "frameworks": {
+    "pure_gr": {
+      "framework": "pure_gr",
+      "reference_feasible": true,
+      "prediction_present": false,
+      "actionable": false,
+      "missing_fields": [
+        "tower_family",
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization",
+        "source"
+      ],
+      "tower_prediction": null,
+      "two_sigma_phi_interval": null,
+      "tower_allowed_at_mean": null,
+      "framework_tower_verdict": "missing_actionable_tower_spectrum",
+      "claimable_exclusion": false
+    },
+    "string_tree_eft": {
+      "framework": "string_tree_eft",
+      "reference_feasible": true,
+      "prediction_present": false,
+      "actionable": false,
+      "missing_fields": [
+        "tower_family",
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization",
+        "source"
+      ],
+      "tower_prediction": null,
+      "two_sigma_phi_interval": null,
+      "tower_allowed_at_mean": null,
+      "framework_tower_verdict": "missing_actionable_tower_spectrum",
+      "claimable_exclusion": false
+    },
+    "asymptotic_safety": {
+      "framework": "asymptotic_safety",
+      "reference_feasible": true,
+      "prediction_present": false,
+      "actionable": false,
+      "missing_fields": [
+        "tower_family",
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization",
+        "source"
+      ],
+      "tower_prediction": null,
+      "two_sigma_phi_interval": null,
+      "tower_allowed_at_mean": null,
+      "framework_tower_verdict": "missing_actionable_tower_spectrum",
+      "claimable_exclusion": false
+    },
+    "lqg_induced": {
+      "framework": "lqg_induced",
+      "reference_feasible": false,
+      "prediction_present": false,
+      "actionable": false,
+      "missing_fields": [
+        "tower_family",
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization",
+        "source"
+      ],
+      "tower_prediction": null,
+      "two_sigma_phi_interval": null,
+      "tower_allowed_at_mean": null,
+      "framework_tower_verdict": "missing_actionable_tower_spectrum",
+      "claimable_exclusion": false
+    },
+    "cdt": {
+      "framework": "cdt",
+      "reference_feasible": true,
+      "prediction_present": false,
+      "actionable": false,
+      "missing_fields": [
+        "tower_family",
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization",
+        "source"
+      ],
+      "tower_prediction": null,
+      "two_sigma_phi_interval": null,
+      "tower_allowed_at_mean": null,
+      "framework_tower_verdict": "missing_actionable_tower_spectrum",
+      "claimable_exclusion": false
+    },
+    "group_field_theory": {
+      "framework": "group_field_theory",
+      "reference_feasible": false,
+      "prediction_present": false,
+      "actionable": false,
+      "missing_fields": [
+        "tower_family",
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization",
+        "source"
+      ],
+      "tower_prediction": null,
+      "two_sigma_phi_interval": null,
+      "tower_allowed_at_mean": null,
+      "framework_tower_verdict": "missing_actionable_tower_spectrum",
+      "claimable_exclusion": false
+    },
+    "horava_lifshitz": {
+      "framework": "horava_lifshitz",
+      "reference_feasible": false,
+      "prediction_present": false,
+      "actionable": false,
+      "missing_fields": [
+        "tower_family",
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization",
+        "source"
+      ],
+      "tower_prediction": null,
+      "two_sigma_phi_interval": null,
+      "tower_allowed_at_mean": null,
+      "framework_tower_verdict": "missing_actionable_tower_spectrum",
+      "claimable_exclusion": false
+    },
+    "causal_set": {
+      "framework": "causal_set",
+      "reference_feasible": true,
+      "prediction_present": false,
+      "actionable": false,
+      "missing_fields": [
+        "tower_family",
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization",
+        "source"
+      ],
+      "tower_prediction": null,
+      "two_sigma_phi_interval": null,
+      "tower_allowed_at_mean": null,
+      "framework_tower_verdict": "missing_actionable_tower_spectrum",
+      "claimable_exclusion": false
+    },
+    "emergent_gravity": {
+      "framework": "emergent_gravity",
+      "reference_feasible": true,
+      "prediction_present": false,
+      "actionable": false,
+      "missing_fields": [
+        "tower_family",
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization",
+        "source"
+      ],
+      "tower_prediction": null,
+      "two_sigma_phi_interval": null,
+      "tower_allowed_at_mean": null,
+      "framework_tower_verdict": "missing_actionable_tower_spectrum",
+      "claimable_exclusion": false
+    },
+    "discovered_novel": {
+      "framework": "discovered_novel",
+      "reference_feasible": true,
+      "prediction_present": false,
+      "actionable": false,
+      "missing_fields": [
+        "tower_family",
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization",
+        "source"
+      ],
+      "tower_prediction": null,
+      "two_sigma_phi_interval": null,
+      "tower_allowed_at_mean": null,
+      "framework_tower_verdict": "missing_actionable_tower_spectrum",
+      "claimable_exclusion": false
+    },
+    "discovered_parity_violating": {
+      "framework": "discovered_parity_violating",
+      "reference_feasible": true,
+      "prediction_present": false,
+      "actionable": false,
+      "missing_fields": [
+        "tower_family",
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization",
+        "source"
+      ],
+      "tower_prediction": null,
+      "two_sigma_phi_interval": null,
+      "tower_allowed_at_mean": null,
+      "framework_tower_verdict": "missing_actionable_tower_spectrum",
+      "claimable_exclusion": false
+    },
+    "discovered_high_g8": {
+      "framework": "discovered_high_g8",
+      "reference_feasible": true,
+      "prediction_present": false,
+      "actionable": false,
+      "missing_fields": [
+        "tower_family",
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization",
+        "source"
+      ],
+      "tower_prediction": null,
+      "two_sigma_phi_interval": null,
+      "tower_allowed_at_mean": null,
+      "framework_tower_verdict": "missing_actionable_tower_spectrum",
+      "claimable_exclusion": false
+    },
+    "discovered_data_driven": {
+      "framework": "discovered_data_driven",
+      "reference_feasible": true,
+      "prediction_present": false,
+      "actionable": false,
+      "missing_fields": [
+        "tower_family",
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization",
+        "source"
+      ],
+      "tower_prediction": null,
+      "two_sigma_phi_interval": null,
+      "tower_allowed_at_mean": null,
+      "framework_tower_verdict": "missing_actionable_tower_spectrum",
+      "claimable_exclusion": false
+    }
+  },
+  "literature_guardrail": {
+    "claim": "This is a tower-spectrum readiness audit, not a quantum-gravity solution. Default missing spectra are wiring gaps; only an actionable, sourced, normalized framework prediction can create a claimable tower exclusion.",
+    "primary_sources": [
+      {
+        "title": "Dvali and Redi, Black Hole Bound on the Number of Species and Quantum Gravity at LHC",
+        "url": "https://arxiv.org/abs/0710.4344"
+      },
+      {
+        "title": "van de Heisteeg, Vafa, and Wiesner, Bounds on Species Scale and the Distance Conjecture",
+        "url": "https://arxiv.org/abs/2303.13580"
+      }
+    ]
+  },
+  "interpretation": "The current framework encoders produce Wilson coefficients but not tower spectra. v2.24 therefore blocks framework-level tower claims until a framework supplies the adapter contract above."
+}
