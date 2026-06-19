@@ -1,0 +1,419 @@
+{
+  "basis": [
+    "ExternalMeasurementEvidence",
+    "non_tower_promotion_guard",
+    "v2.51_sourceability_rows",
+    "birefringence_hint_guard"
+  ],
+  "scenario_count": 8,
+  "status_counts": {
+    "non_tower_discriminator_claim_ready": 1,
+    "non_tower_promotion_guard_blocked": 7
+  },
+  "current_claim_ready_routes": [],
+  "synthetic_claim_ready_routes": [
+    "synthetic:ready_external_measurement"
+  ],
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "axis_mapping_not_source_backed": 5,
+    "discriminator_math_not_excluding": 7,
+    "external_measurement_evidence_not_ready": 7,
+    "internal_cut_not_external_measurement": 6,
+    "measurement_kind_not_external_numeric": 6,
+    "missing_external_numeric_measurement": 6,
+    "systematics_not_closed": 7
+  },
+  "scenarios": [
+    {
+      "label": "sourceability:conformal_collider_a_over_c_wedge",
+      "evidence": {
+        "axis": "g_C",
+        "route": "conformal_collider_a_over_c_wedge",
+        "source_url": "https://arxiv.org/abs/0803.1467",
+        "source_type": "primary_literature",
+        "measurement_kind": "structural_cft_consistency_bound",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "source_backed_direct",
+        "systematics_status": "unresolved",
+        "metadata": {
+          "status": "source_backed_structural_bound",
+          "implementation": "src/itb/constraints/hofman_maldacena.py",
+          "internal_cut_only": true
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": false,
+          "axis_mapping_valid": true,
+          "systematics_closed": false,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "measurement_kind_not_external_numeric",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "blockers": [
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "internal_cut_not_external_measurement",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "systematics_not_closed"
+        ]
+      },
+      "frontier_status": "non_tower_promotion_guard_blocked"
+    },
+    {
+      "label": "sourceability:holographic_complexity_rate",
+      "evidence": {
+        "axis": "g_C",
+        "route": "holographic_complexity_rate",
+        "source_url": "https://arxiv.org/abs/1509.07876",
+        "source_type": "primary_literature",
+        "measurement_kind": "holographic_proxy_toy_normalization",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "toy_or_structural_proxy",
+        "systematics_status": "unresolved",
+        "metadata": {
+          "status": "source_backed_proxy_not_measurement_ready",
+          "implementation": "src/itb/gravitational_observables.py:HolographicComplexityRate",
+          "internal_cut_only": true
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": false,
+          "axis_mapping_valid": false,
+          "systematics_closed": false,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "measurement_kind_not_external_numeric",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "internal_cut_not_external_measurement",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "systematics_not_closed"
+        ]
+      },
+      "frontier_status": "non_tower_promotion_guard_blocked"
+    },
+    {
+      "label": "sourceability:black_hole_entropy_shift",
+      "evidence": {
+        "axis": "g_C",
+        "route": "black_hole_entropy_shift",
+        "source_url": "https://arxiv.org/abs/1801.08546",
+        "source_type": "primary_literature",
+        "measurement_kind": "thermodynamic_sign_proxy",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "toy_or_structural_proxy",
+        "systematics_status": "unresolved",
+        "metadata": {
+          "status": "source_backed_proxy_not_measurement_ready",
+          "implementation": "src/itb/gravitational_observables.py:BlackHoleEntropyShift",
+          "internal_cut_only": true
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": false,
+          "axis_mapping_valid": false,
+          "systematics_closed": false,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "measurement_kind_not_external_numeric",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "internal_cut_not_external_measurement",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "systematics_not_closed"
+        ]
+      },
+      "frontier_status": "non_tower_promotion_guard_blocked"
+    },
+    {
+      "label": "sourceability:core_scalar_forward_amplitude",
+      "evidence": {
+        "axis": "g_8",
+        "route": "core_scalar_forward_amplitude",
+        "source_url": "https://arxiv.org/abs/2102.08951",
+        "source_type": "primary_literature",
+        "measurement_kind": "implemented_but_blind_to_g_8",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "toy_or_structural_proxy",
+        "systematics_status": "unresolved",
+        "metadata": {
+          "status": "implemented_core_observable_does_not_touch_axis",
+          "implementation": "src/itb/observables.py:ScalarForwardAmplitude",
+          "internal_cut_only": true
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": false,
+          "axis_mapping_valid": false,
+          "systematics_closed": false,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "measurement_kind_not_external_numeric",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "internal_cut_not_external_measurement",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "systematics_not_closed"
+        ]
+      },
+      "frontier_status": "non_tower_promotion_guard_blocked"
+    },
+    {
+      "label": "sourceability:high_scattering_moment_design_probe",
+      "evidence": {
+        "axis": "g_8",
+        "route": "high_scattering_moment_design_probe",
+        "source_url": "https://arxiv.org/abs/2209.00008",
+        "source_type": "primary_literature",
+        "measurement_kind": "internal_design_probe_no_program",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "toy_or_structural_proxy",
+        "systematics_status": "unresolved",
+        "metadata": {
+          "status": "source_motivated_design_probe_not_measurement_ready",
+          "implementation": "experiments/min_experiment_set.py:HighScatteringMoment",
+          "internal_cut_only": true
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": false,
+          "axis_mapping_valid": false,
+          "systematics_closed": false,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "measurement_kind_not_external_numeric",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "internal_cut_not_external_measurement",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "systematics_not_closed"
+        ]
+      },
+      "frontier_status": "non_tower_promotion_guard_blocked"
+    },
+    {
+      "label": "sourceability:spin_four_positivity_constraint",
+      "evidence": {
+        "axis": "g_8",
+        "route": "spin_four_positivity_constraint",
+        "source_url": "https://arxiv.org/abs/2102.08951",
+        "source_type": "primary_literature",
+        "measurement_kind": "source_backed_consistency_bound",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "source_backed_direct",
+        "systematics_status": "unresolved",
+        "metadata": {
+          "status": "source_backed_structural_bound",
+          "implementation": "src/itb/constraints/spin_four_positivity.py",
+          "internal_cut_only": true
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": false,
+          "axis_mapping_valid": true,
+          "systematics_closed": false,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "measurement_kind_not_external_numeric",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "blockers": [
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "internal_cut_not_external_measurement",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "systematics_not_closed"
+        ]
+      },
+      "frontier_status": "non_tower_promotion_guard_blocked"
+    },
+    {
+      "label": "birefringence:act_dr6_hint",
+      "evidence": {
+        "axis": "g_R2_parity",
+        "route": "cosmic_birefringence_hint",
+        "source_url": "https://arxiv.org/abs/2509.13654",
+        "source_type": "primary_literature",
+        "measurement_kind": "external_detection",
+        "numerical_value": 0.215,
+        "uncertainty": 0.074,
+        "axis_mapping_kind": "toy_or_structural_proxy",
+        "systematics_status": "unresolved",
+        "metadata": {
+          "internal_cut_only": false,
+          "blocker_context": [
+            "sub_5sigma_detection",
+            "instrument_angle_miscalibration_degeneracy",
+            "one_observable_dominated_engine_route"
+          ]
+        }
+      },
+      "guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": true,
+          "axis_mapping_valid": false,
+          "systematics_closed": false,
+          "numerical_value_present": true,
+          "uncertainty_valid": true,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "systematics_not_closed"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "systematics_not_closed"
+        ]
+      },
+      "frontier_status": "non_tower_promotion_guard_blocked"
+    },
+    {
+      "label": "synthetic:ready_external_measurement",
+      "evidence": {
+        "axis": "g_8",
+        "route": "synthetic_external_spin4_measurement",
+        "source_url": "https://doi.org/10.0000/synthetic.v2.52",
+        "source_type": "validated_measurement",
+        "measurement_kind": "external_numeric_measurement",
+        "numerical_value": 0.41,
+        "uncertainty": 0.02,
+        "axis_mapping_kind": "source_backed_direct",
+        "systematics_status": "closed",
+        "metadata": {
+          "synthetic_fixture": true,
+          "internal_cut_only": false
+        }
+      },
+      "guard": {
+        "ready_for_promotion": true,
+        "discriminator_claimable_by_math": true,
+        "evidence_ready": true,
+        "validation": {
+          "ready_for_discriminator_claim": true,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": true,
+          "axis_mapping_valid": true,
+          "systematics_closed": true,
+          "numerical_value_present": true,
+          "uncertainty_valid": true,
+          "blockers": []
+        },
+        "blockers": []
+      },
+      "frontier_status": "non_tower_discriminator_claim_ready"
+    }
+  ],
+  "route_status": "promotion_guard_enforced",
+  "interpretation": "The non-tower promotion guard blocks every current g_C/g_8 and birefringence route. A synthetic fixture proves the positive path: external numeric evidence, source-backed axis mapping, closed systematics, and excluding math are all required."
+}
