@@ -1,0 +1,160 @@
+{
+  "version": "v2.88",
+  "basis": [
+    "v2.87_g8_adapter_derivation_route_decision",
+    "v2.85_post_native_tower_route_decision_frontier"
+  ],
+  "frontier_scope": "post_current_g8_adapter_derivation_retirement",
+  "route_count": 6,
+  "g8_derivation_retired_routes": [
+    "current_detector_formalism_direct_g8_adapter",
+    "current_wilson_formalism_direct_detector_adapter",
+    "public_energy_correlator_data_without_operator_identity"
+  ],
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "priority_order": [
+    "new_spin4_or_detector_g8_measurement",
+    "future_source_backed_g8_operator_identity_search",
+    "framework_specific_native_tower_search",
+    "weyl_g8_joint_frontier",
+    "gw_parity_operator_normalization_search",
+    "cmb_beta_em_axion"
+  ],
+  "top_priority_route": "new_spin4_or_detector_g8_measurement",
+  "blocker_counts": {
+    "adapter_normalization_missing": 1,
+    "asymptotic_tower_spectrum_missing": 1,
+    "component_level_systematics_budget_missing": 1,
+    "direct_ng_ppv_engine_promotion_retired": 1,
+    "em_gravity_bridge_missing": 1,
+    "engine_axis_target_missing": 1,
+    "external_numeric_g8_measurement_missing": 1,
+    "future_source_framework_exclusion_missing": 1,
+    "future_source_operator_identity_missing": 1,
+    "future_source_public_covariance_missing": 1,
+    "g8_external_measurement_missing": 1,
+    "g_C_external_measurement_missing": 1,
+    "joint_likelihood_missing": 1,
+    "named_framework_native_source_missing": 1,
+    "not_engine_gravity_parity_axis": 1,
+    "public_g8_likelihood_or_covariance_missing": 1,
+    "registered_framework_exclusion_math_missing": 1,
+    "source_backed_operator_normalization_missing": 1,
+    "systematics_not_closed_for_framework_claim": 1
+  },
+  "rows": [
+    {
+      "route": "new_spin4_or_detector_g8_measurement",
+      "family": "matter_forward_amplitude",
+      "status": "clean_route_requires_new_external_measurement",
+      "claim_ready": false,
+      "priority_rank": 1,
+      "reason": "v2.87 retired current-source g_8 adapter derivation. The remaining clean g_8 route is an external measurement published directly in the spin-4/detector low-energy QG EFT basis.",
+      "next_artifact": "Audit whether this measurement can be specified and executed inside the current tool, or whether it is an external-experiment blocker.",
+      "blockers": [
+        "component_level_systematics_budget_missing",
+        "external_numeric_g8_measurement_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "registered_framework_exclusion_math_missing"
+      ],
+      "basis": [
+        "v2.54_g8_high_moment_measurement_specification",
+        "v2.79_g8_adapter_acceptance_harness",
+        "v2.87_g8_adapter_derivation_route_decision"
+      ]
+    },
+    {
+      "route": "future_source_backed_g8_operator_identity_search",
+      "family": "matter_forward_amplitude",
+      "status": "retained_future_source_search",
+      "claim_ready": false,
+      "priority_rank": 2,
+      "reason": "The derivation route can reopen only if a future source supplies the missing operator identity and covariance.",
+      "next_artifact": "Monitor for new sources; do not treat current formalism sources as adapters.",
+      "blockers": [
+        "future_source_framework_exclusion_missing",
+        "future_source_operator_identity_missing",
+        "future_source_public_covariance_missing"
+      ],
+      "basis": [
+        "v2.86_g8_adapter_derivation_source_audit",
+        "v2.87_g8_adapter_derivation_route_decision"
+      ]
+    },
+    {
+      "route": "framework_specific_native_tower_search",
+      "family": "swampland_tower",
+      "status": "retained_search_route_no_current_adapter",
+      "claim_ready": false,
+      "priority_rank": 3,
+      "reason": "Native tower evidence remains retained only as a future named-framework source search after v2.84.",
+      "next_artifact": "Revisit only when a registered framework source provides owned asymptotic tower spectra.",
+      "blockers": [
+        "adapter_normalization_missing",
+        "asymptotic_tower_spectrum_missing",
+        "named_framework_native_source_missing"
+      ],
+      "basis": [
+        "v2.83_native_tower_current_source_audit",
+        "v2.84_native_tower_route_decision"
+      ]
+    },
+    {
+      "route": "weyl_g8_joint_frontier",
+      "family": "non_tower_geometry_matter",
+      "status": "theory_frontier_confirmed_measurement_blocked",
+      "claim_ready": false,
+      "priority_rank": 4,
+      "reason": "Joint likelihood still lacks external g_C and g_8 packets.",
+      "next_artifact": "Defer until at least one external packet exists.",
+      "blockers": [
+        "g8_external_measurement_missing",
+        "g_C_external_measurement_missing",
+        "joint_likelihood_missing"
+      ],
+      "basis": [
+        "v2.50_weyl_g8_discriminator_frontier",
+        "v2.51_weyl_g8_observable_sourceability"
+      ]
+    },
+    {
+      "route": "gw_parity_operator_normalization_search",
+      "family": "gravitational_wave_parity",
+      "status": "retained_operator_bridge_missing",
+      "claim_ready": false,
+      "priority_rank": 5,
+      "reason": "Direct GW parity promotion is retired until an operator bridge exists.",
+      "next_artifact": "Search only if a new PPV-to-engine parity source appears.",
+      "blockers": [
+        "direct_ng_ppv_engine_promotion_retired",
+        "engine_axis_target_missing",
+        "source_backed_operator_normalization_missing"
+      ],
+      "basis": [
+        "v2.71_to_v2.76_gw_parity_ng_source_native_chain"
+      ]
+    },
+    {
+      "route": "cmb_beta_em_axion",
+      "family": "electromagnetic_axion",
+      "status": "retired_as_direct_gravity_discriminator",
+      "claim_ready": false,
+      "priority_rank": 6,
+      "reason": "CMB beta is not a direct gravitational parity engine route.",
+      "next_artifact": "Only revisit as a separate EM/axion route.",
+      "blockers": [
+        "em_gravity_bridge_missing",
+        "not_engine_gravity_parity_axis",
+        "systematics_not_closed_for_framework_claim"
+      ],
+      "basis": [
+        "v2.58_birefringence_adapter_literature_sourceability",
+        "v2.59_parity_route_split_frontier"
+      ]
+    }
+  ],
+  "route_status": "post_g8_derivation_frontier_no_claim_ready_new_measurement_next",
+  "best_next_artifact": "Audit whether this measurement can be specified and executed inside the current tool, or whether it is an external-experiment blocker.",
+  "interpretation": "Current-source g_8 adapter derivation is retired. The next route is a direct spin-4/detector g_8 measurement packet, which likely tests whether the project now needs external experimental input rather than more in-repo adapter work."
+}
