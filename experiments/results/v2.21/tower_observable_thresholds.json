@@ -1,0 +1,240 @@
+{
+  "basis": [
+    "phi_tower",
+    "m_tower",
+    "Lambda_species"
+  ],
+  "phi_grid": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0,
+    1.2,
+    1.4,
+    1.6
+  ],
+  "model": {
+    "lambda_eft": 0.65,
+    "m0": 1.0,
+    "lambda_tower": 1.0,
+    "density": 1.0,
+    "exponent_p": 1.0,
+    "fixed_point_iters": 96
+  },
+  "literature_guardrail": {
+    "claim": "These thresholds translate the v2.20 diagnostic tower coordinate into observable requirements. They do not assign phi_tower to any framework and do not constitute a physical SDC solution.",
+    "primary_sources": [
+      {
+        "title": "Dvali and Redi, Black Hole Bound on the Number of Species and Quantum Gravity at LHC",
+        "url": "https://arxiv.org/abs/0710.4344"
+      },
+      {
+        "title": "van de Heisteeg, Vafa, and Wiesner, Bounds on Species Scale and the Distance Conjecture",
+        "url": "https://arxiv.org/abs/2303.13580"
+      }
+    ]
+  },
+  "lambda_eft_thresholds": [
+    {
+      "lambda_eft": 0.5,
+      "critical_phi_tower": 1.7917594692280554,
+      "critical_tower_mass": 0.1666666666666666,
+      "critical_species_cutoff": 0.5,
+      "allowed_fraction_on_phi_grid": 1.0
+    },
+    {
+      "lambda_eft": 0.6,
+      "critical_phi_tower": 1.0861897686695525,
+      "critical_tower_mass": 0.3375,
+      "critical_species_cutoff": 0.5999999999999999,
+      "allowed_fraction_on_phi_grid": 0.6666666666666666
+    },
+    {
+      "lambda_eft": 0.65,
+      "critical_phi_tower": 0.7433019116911739,
+      "critical_tower_mass": 0.47554112554112576,
+      "critical_species_cutoff": 0.6499999999999999,
+      "allowed_fraction_on_phi_grid": 0.4444444444444444
+    },
+    {
+      "lambda_eft": 0.7,
+      "critical_phi_tower": 0.3966802785524318,
+      "critical_tower_mass": 0.672549019607843,
+      "critical_species_cutoff": 0.7,
+      "allowed_fraction_on_phi_grid": 0.2222222222222222
+    }
+  ],
+  "tower_mass_floor_thresholds": [
+    {
+      "tower_mass_floor": 0.2,
+      "implied_phi_tower_max": 1.6094379124341003,
+      "rules_out_tower_excluded_region": false,
+      "observable_statement": "A lower bound m_tower >= floor implies phi_tower <= -log(floor/m0)/lambda_tower."
+    },
+    {
+      "tower_mass_floor": 0.3,
+      "implied_phi_tower_max": 1.2039728043259361,
+      "rules_out_tower_excluded_region": false,
+      "observable_statement": "A lower bound m_tower >= floor implies phi_tower <= -log(floor/m0)/lambda_tower."
+    },
+    {
+      "tower_mass_floor": 0.4,
+      "implied_phi_tower_max": 0.916290731874155,
+      "rules_out_tower_excluded_region": false,
+      "observable_statement": "A lower bound m_tower >= floor implies phi_tower <= -log(floor/m0)/lambda_tower."
+    },
+    {
+      "tower_mass_floor": 0.4755,
+      "implied_phi_tower_max": 0.7433883969966921,
+      "rules_out_tower_excluded_region": false,
+      "observable_statement": "A lower bound m_tower >= floor implies phi_tower <= -log(floor/m0)/lambda_tower."
+    },
+    {
+      "tower_mass_floor": 0.5,
+      "implied_phi_tower_max": 0.6931471805599453,
+      "rules_out_tower_excluded_region": true,
+      "observable_statement": "A lower bound m_tower >= floor implies phi_tower <= -log(floor/m0)/lambda_tower."
+    },
+    {
+      "tower_mass_floor": 0.6,
+      "implied_phi_tower_max": 0.5108256237659907,
+      "rules_out_tower_excluded_region": true,
+      "observable_statement": "A lower bound m_tower >= floor implies phi_tower <= -log(floor/m0)/lambda_tower."
+    },
+    {
+      "tower_mass_floor": 0.8,
+      "implied_phi_tower_max": 0.2231435513142097,
+      "rules_out_tower_excluded_region": true,
+      "observable_statement": "A lower bound m_tower >= floor implies phi_tower <= -log(floor/m0)/lambda_tower."
+    }
+  ],
+  "species_cutoff_floor_thresholds": [
+    {
+      "species_cutoff_floor": 0.5,
+      "implied_phi_tower_max": 1.7917594692280554,
+      "tower_mass_at_threshold": 0.1666666666666666,
+      "observable_statement": "A lower bound Lambda_s >= floor permits phi_tower only below the listed critical value."
+    },
+    {
+      "species_cutoff_floor": 0.6,
+      "implied_phi_tower_max": 1.0861897686695525,
+      "tower_mass_at_threshold": 0.3375,
+      "observable_statement": "A lower bound Lambda_s >= floor permits phi_tower only below the listed critical value."
+    },
+    {
+      "species_cutoff_floor": 0.65,
+      "implied_phi_tower_max": 0.7433019116911739,
+      "tower_mass_at_threshold": 0.47554112554112576,
+      "observable_statement": "A lower bound Lambda_s >= floor permits phi_tower only below the listed critical value."
+    },
+    {
+      "species_cutoff_floor": 0.7,
+      "implied_phi_tower_max": 0.3966802785524318,
+      "tower_mass_at_threshold": 0.672549019607843,
+      "observable_statement": "A lower bound Lambda_s >= floor permits phi_tower only below the listed critical value."
+    },
+    {
+      "species_cutoff_floor": 0.8,
+      "implied_phi_tower_max": 0.0,
+      "tower_mass_at_threshold": 1.0,
+      "observable_statement": "A lower bound Lambda_s >= floor permits phi_tower only below the listed critical value."
+    }
+  ],
+  "fiber_fraction_targets": [
+    {
+      "allowed_fiber_fraction_target": 0.1,
+      "required_phi_tower_upper_bound": 0.16000000000000003,
+      "required_tower_mass_floor": 0.8521437889662113,
+      "interpretation": "For the uniform diagnostic phi_grid prior, this phi upper bound leaves approximately the listed fraction of the tower fiber."
+    },
+    {
+      "allowed_fiber_fraction_target": 0.25,
+      "required_phi_tower_upper_bound": 0.4,
+      "required_tower_mass_floor": 0.6703200460356393,
+      "interpretation": "For the uniform diagnostic phi_grid prior, this phi upper bound leaves approximately the listed fraction of the tower fiber."
+    },
+    {
+      "allowed_fiber_fraction_target": 0.5,
+      "required_phi_tower_upper_bound": 0.8,
+      "required_tower_mass_floor": 0.44932896411722156,
+      "interpretation": "For the uniform diagnostic phi_grid prior, this phi upper bound leaves approximately the listed fraction of the tower fiber."
+    },
+    {
+      "allowed_fiber_fraction_target": 0.75,
+      "required_phi_tower_upper_bound": 1.2000000000000002,
+      "required_tower_mass_floor": 0.301194211912202,
+      "interpretation": "For the uniform diagnostic phi_grid prior, this phi upper bound leaves approximately the listed fraction of the tower fiber."
+    },
+    {
+      "allowed_fiber_fraction_target": 0.9,
+      "required_phi_tower_upper_bound": 1.4400000000000002,
+      "required_tower_mass_floor": 0.2369277586821217,
+      "interpretation": "For the uniform diagnostic phi_grid prior, this phi upper bound leaves approximately the listed fraction of the tower fiber."
+    }
+  ],
+  "measurement_scenarios": [
+    {
+      "measured_phi_tower": 0.25,
+      "sigma": 0.05,
+      "two_sigma_interval": [
+        0.15,
+        0.35
+      ],
+      "grid_points_in_interval": 1,
+      "compatible_allowed_grid_points": 1,
+      "rules_out_entire_tower_fiber": false,
+      "above_critical_phi": false
+    },
+    {
+      "measured_phi_tower": 0.55,
+      "sigma": 0.05,
+      "two_sigma_interval": [
+        0.45000000000000007,
+        0.65
+      ],
+      "grid_points_in_interval": 1,
+      "compatible_allowed_grid_points": 1,
+      "rules_out_entire_tower_fiber": false,
+      "above_critical_phi": false
+    },
+    {
+      "measured_phi_tower": 0.75,
+      "sigma": 0.05,
+      "two_sigma_interval": [
+        0.65,
+        0.85
+      ],
+      "grid_points_in_interval": 1,
+      "compatible_allowed_grid_points": 0,
+      "rules_out_entire_tower_fiber": true,
+      "above_critical_phi": false
+    },
+    {
+      "measured_phi_tower": 0.95,
+      "sigma": 0.1,
+      "two_sigma_interval": [
+        0.75,
+        1.15
+      ],
+      "grid_points_in_interval": 2,
+      "compatible_allowed_grid_points": 0,
+      "rules_out_entire_tower_fiber": true,
+      "above_critical_phi": true
+    },
+    {
+      "measured_phi_tower": 1.2,
+      "sigma": 0.1,
+      "two_sigma_interval": [
+        1.0,
+        1.4
+      ],
+      "grid_points_in_interval": 3,
+      "compatible_allowed_grid_points": 0,
+      "rules_out_entire_tower_fiber": true,
+      "above_critical_phi": true
+    }
+  ],
+  "interpretation": "The explicit tower axis becomes a discriminator only after a tower observable bounds phi_tower, m_tower, or Lambda_species. Without that observable, the 8D framework projection remains unchanged."
+}
