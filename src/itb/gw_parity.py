@@ -47,6 +47,21 @@ CALLISTER_FIXED_RATE_HDF_KEYS = (
     "probabilities",
 )
 
+CALLISTER_VARIABLE_EVOLUTION_HDF_FILENAME = "birefringence_variable_evolution.hdf"
+
+CALLISTER_VARIABLE_EVOLUTION_HDF_KEYS = (
+    "frequencies",
+    "Omg_I_model",
+    "Omg_V_model",
+    "kappa_Dc",
+    "kappa_z",
+    "R0",
+    "alpha",
+    "beta",
+    "zp",
+    "zMax",
+)
+
 GW_PARITY_PROJECTION_BLOCKERS = (
     "helicity_convention_not_harmonized_across_sources",
     "ppv_beta1_normalization_not_finalized",
@@ -416,6 +431,164 @@ def load_callister_fixed_rate_hdf(path: str) -> dict[str, Any]:
 
     with h5py.File(path, "r") as hdf:
         return parse_callister_fixed_rate_hdf_datasets(hdf, source_file=path)
+
+
+def _sample_summary(values: np.ndarray) -> dict[str, float]:
+    return {
+        "min": float(np.min(values)),
+        "max": float(np.max(values)),
+        "mean": float(np.mean(values)),
+        "std": float(np.std(values)),
+    }
+
+
+def parse_callister_variable_evolution_hdf_datasets(
+    datasets: dict[str, Any],
+    *,
+    source_file: str | None = None,
+) -> dict[str, Any]:
+    """Parse Callister variable-rate posterior samples from an HDF-like mapping."""
+    result_group = _callister_result_group(datasets)
+    missing_keys = [
+        key for key in CALLISTER_VARIABLE_EVOLUTION_HDF_KEYS
+        if key not in result_group
+    ]
+    if missing_keys:
+        parser_blockers = ["missing_callister_variable_evolution_hdf_keys"]
+        return {
+            "schema": "callister_variable_evolution_hdf_v1",
+            "source_file": source_file,
+            "required_keys": list(CALLISTER_VARIABLE_EVOLUTION_HDF_KEYS),
+            "missing_keys": missing_keys,
+            "parser_ready": False,
+            "parser_blockers": parser_blockers,
+            "projection_blockers": list(GW_PARITY_PROJECTION_BLOCKERS),
+            "blockers": sorted(
+                set(parser_blockers + list(GW_PARITY_PROJECTION_BLOCKERS))
+            ),
+            "engine_projection_ready": False,
+            "claimable_discriminator_now": False,
+        }
+
+    arrays = {
+        key: _array_from_dataset(result_group[key])
+        for key in CALLISTER_VARIABLE_EVOLUTION_HDF_KEYS
+    }
+    frequencies = arrays["frequencies"]
+    omg_i = arrays["Omg_I_model"]
+    omg_v = arrays["Omg_V_model"]
+    sample_keys = ("kappa_Dc", "kappa_z", "R0", "alpha", "beta", "zp", "zMax")
+    sample_arrays = {key: arrays[key] for key in sample_keys}
+    blockers = []
+
+    if frequencies.ndim != 1:
+        blockers.append("frequencies_not_one_dimensional")
+    elif frequencies.size < 2:
+        blockers.append("frequency_grid_too_short")
+    elif np.any(np.diff(frequencies) <= 0):
+        blockers.append("frequencies_not_strictly_increasing")
+    if omg_i.ndim != 2 or omg_v.ndim != 2:
+        blockers.append("spectra_not_two_dimensional")
+
+    sample_lengths = {}
+    for key, values in sample_arrays.items():
+        if values.ndim != 1:
+            blockers.append(f"{key}_not_one_dimensional")
+        sample_lengths[key] = int(values.size)
+    unique_sample_lengths = set(sample_lengths.values())
+    sample_count = unique_sample_lengths.pop() if len(unique_sample_lengths) == 1 else 0
+    if sample_count < 1:
+        blockers.append("sample_count_not_positive_or_consistent")
+
+    expected_shape = (frequencies.size, sample_count)
+    if omg_i.ndim == 2 and sample_count and omg_i.shape != expected_shape:
+        blockers.append("Omg_I_model_shape_mismatch")
+    if omg_v.ndim == 2 and sample_count and omg_v.shape != expected_shape:
+        blockers.append("Omg_V_model_shape_mismatch")
+    if np.any(~np.isfinite(frequencies)):
+        blockers.append("frequencies_not_finite")
+    if np.any(~np.isfinite(omg_i)) or np.any(~np.isfinite(omg_v)):
+        blockers.append("spectra_not_finite")
+    for key, values in sample_arrays.items():
+        if np.any(~np.isfinite(values)):
+            blockers.append(f"{key}_not_finite")
+    if not blockers and np.any(frequencies <= 0):
+        blockers.append("frequencies_not_positive")
+    for key in ("R0", "zp", "zMax"):
+        values = sample_arrays[key]
+        if values.ndim == 1 and np.any(values <= 0):
+            blockers.append(f"{key}_not_positive")
+
+    parser_ready = not blockers
+    projection_blockers = list(GW_PARITY_PROJECTION_BLOCKERS)
+    parameter_summaries = (
+        {
+            key: _sample_summary(values)
+            for key, values in sample_arrays.items()
+        }
+        if parser_ready
+        else {}
+    )
+    spectra_summary = (
+        {
+            "frequencies": {
+                "count": int(frequencies.size),
+                "min_hz": float(frequencies[0]),
+                "max_hz": float(frequencies[-1]),
+            },
+            "Omg_I_model": {
+                "shape": list(omg_i.shape),
+                **_sample_summary(omg_i),
+            },
+            "Omg_V_model": {
+                "shape": list(omg_v.shape),
+                **_sample_summary(omg_v),
+            },
+        }
+        if parser_ready
+        else {}
+    )
+    return {
+        "schema": "callister_variable_evolution_hdf_v1",
+        "source_file": source_file,
+        "required_keys": list(CALLISTER_VARIABLE_EVOLUTION_HDF_KEYS),
+        "missing_keys": [],
+        "parser_ready": parser_ready,
+        "parser_blockers": sorted(set(blockers)),
+        "projection_blockers": projection_blockers,
+        "blockers": sorted(set(blockers + projection_blockers)),
+        "engine_projection_ready": False,
+        "claimable_discriminator_now": False,
+        "sample_count": int(sample_count),
+        "sample_lengths": sample_lengths,
+        "parameter_summaries": parameter_summaries,
+        "spectra_summary": spectra_summary,
+    }
+
+
+def load_callister_variable_evolution_hdf(path: str) -> dict[str, Any]:
+    """Load the Callister variable-evolution HDF file when h5py is installed."""
+    try:
+        import h5py
+    except ImportError:
+        parser_blockers = ["h5py_not_installed"]
+        return {
+            "schema": "callister_variable_evolution_hdf_v1",
+            "source_file": path,
+            "required_keys": list(CALLISTER_VARIABLE_EVOLUTION_HDF_KEYS),
+            "missing_keys": [],
+            "parser_ready": False,
+            "parser_blockers": parser_blockers,
+            "projection_blockers": list(GW_PARITY_PROJECTION_BLOCKERS),
+            "blockers": sorted(
+                set(parser_blockers + list(GW_PARITY_PROJECTION_BLOCKERS))
+            ),
+            "engine_projection_ready": False,
+            "claimable_discriminator_now": False,
+        }
+
+    with h5py.File(path, "r") as hdf:
+        return parse_callister_variable_evolution_hdf_datasets(hdf, source_file=path)
 
 
 def validate_gw_parity_native_packet(

@@ -1,0 +1,106 @@
+{
+  "version": "v2.67",
+  "basis": [
+    "v2.66_gw_parity_callister_real_release_probe",
+    "Callister_Zenodo_10.5281_zenodo.10384998_variable_evolution"
+  ],
+  "zenodo_record_url": "https://zenodo.org/records/10384998",
+  "zenodo_api_url": "https://zenodo.org/api/records/10384998",
+  "archive_filename": "stochastic-birefringence-data.zip",
+  "archive_md5_expected": "1373cfdd037b5d87c201e2aba06e8b42",
+  "archive_md5_observed": "1373cfdd037b5d87c201e2aba06e8b42",
+  "archive_md5_verified": true,
+  "variable_evolution_file": "birefringence_variable_evolution.hdf",
+  "variable_evolution_file_size_bytes": 21865024,
+  "parser_ready": true,
+  "parser_blockers": [],
+  "sample_count": 4500,
+  "parameter_summaries": {
+    "kappa_Dc": {
+      "min": -0.2387237018725679,
+      "max": 0.22439119616639794,
+      "mean": 0.004844526544617421,
+      "std": 0.10206624157151646
+    },
+    "kappa_z": {
+      "min": -0.35367954041433597,
+      "max": 0.3651939552981751,
+      "mean": -0.005977078803638978,
+      "std": 0.16808193847554345
+    },
+    "R0": {
+      "min": 6.026282299617442,
+      "max": 37.82716615962746,
+      "mean": 16.22680735140705,
+      "std": 3.769057611247765
+    },
+    "alpha": {
+      "min": -3.9118168638876925,
+      "max": 7.860692416913224,
+      "mean": 2.5558327135812156,
+      "std": 1.3820654549787204
+    },
+    "beta": {
+      "min": 1.0118139339464183,
+      "max": 9.993671354909834,
+      "mean": 5.678746545893707,
+      "std": 2.5426382895900907
+    },
+    "zp": {
+      "min": 0.5001783252816446,
+      "max": 3.999104888321673,
+      "mean": 2.0352022316057825,
+      "std": 0.9878638422062972
+    },
+    "zMax": {
+      "min": 10.006739433096511,
+      "max": 14.99861150150351,
+      "mean": 12.524878462206235,
+      "std": 1.4448400691048189
+    }
+  },
+  "spectra_summary": {
+    "frequencies": {
+      "count": 300,
+      "min_hz": 20.000000000000004,
+      "max_hz": 1726.0000000000007
+    },
+    "Omg_I_model": {
+      "shape": [
+        300,
+        4500
+      ],
+      "min": 2.021093891223561e-14,
+      "max": 0.0026807298317883675,
+      "mean": 2.571955135576268e-06,
+      "std": 2.6650070373602088e-05
+    },
+    "Omg_V_model": {
+      "shape": [
+        300,
+        4500
+      ],
+      "min": -0.002680729781214542,
+      "max": 0.00046806769001858086,
+      "mean": -7.72495885089728e-07,
+      "std": 2.676273698742161e-05
+    }
+  },
+  "ppv_beta1_projection_ready": false,
+  "engine_projection_ready": false,
+  "claimable_discriminator_now": false,
+  "artifact_blockers": [
+    "posterior_sample_to_density_adapter_not_implemented",
+    "helicity_convention_not_harmonized_across_sources",
+    "ppv_beta1_normalization_not_finalized",
+    "engine_projection_out_of_scope"
+  ],
+  "parser_projection_blockers": [
+    "helicity_convention_not_harmonized_across_sources",
+    "ppv_beta1_normalization_not_finalized",
+    "engine_projection_out_of_scope"
+  ],
+  "route_status": "callister_variable_evolution_ingested_projection_blocked",
+  "best_next_artifact": "Build a source-native posterior-sample density adapter for kappa_Dc/kappa_z, then compare fixed-rate and variable-evolution posteriors without engine-axis promotion.",
+  "interpretation": "The remaining public Callister HDF product now has guarded ingestion coverage. The file is sample-based, not fixed-grid; it can be summarized safely, but a posterior-sample density adapter is still needed before combining it with the fixed-rate grids."
+}

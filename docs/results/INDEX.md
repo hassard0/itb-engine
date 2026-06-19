@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (177 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (178 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -226,3 +226,4 @@ Auto-generated front door to the full research program (177 notes). Regenerate w
 | v2.64 | [v2.64 - GW parity formula implementation: source-native log gain only](2026-06-19-v2.64-gw-parity-ppv-formula-implementation.md) | v2.64 implements tested Ng/Callister source-native amplitude log-gain formulas while keeping PPV beta and engine projection blocked. |
 | v2.65 | [v2.65 - GW parity Callister posterior parser: release schema ready, real file blocked](2026-06-19-v2.65-gw-parity-callister-posterior-parser.md) | v2.65 implements the Callister fixed-rate HDF parser contract on release-shaped data while keeping real-file ingestion and engine projection blocked. |
 | v2.66 | [v2.66 - GW parity Callister real release probe: fixed-rate files ingested](2026-06-19-v2.66-gw-parity-callister-real-release-probe.md) | v2.66 verifies all eight Callister fixed-rate Zenodo HDF files with the guarded parser while keeping variable-rate ingestion and engine projection blocked. |
+| v2.67 | [v2.67 - GW parity Callister variable evolution probe: sample file ingested](2026-06-19-v2.67-gw-parity-callister-variable-evolution-probe.md) | v2.67 parses the remaining Callister variable-evolution HDF sample product while keeping sample-density adaptation and engine projection blocked. |
