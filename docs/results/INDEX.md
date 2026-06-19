@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (200 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (201 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -249,3 +249,4 @@ Auto-generated front door to the full research program (200 notes). Regenerate w
 | v2.87 | [v2.87 - g8 derivation route decision: current sources retired](2026-06-19-v2.87-g8-adapter-derivation-route-decision.md) | v2.87 retires current-source g8 adapter derivation while retaining future operator-identity search and direct spin-4/detector measurement routes. |
 | v2.88 | [v2.88 - Post-g8 derivation frontier: direct measurement is next](2026-06-19-v2.88-post-g8-derivation-route-decision-frontier.md) | v2.88 reprioritizes after current-source g8 derivation is retired, selecting direct spin-4/detector g8 measurement as the next route. |
 | v2.89 | [v2.89 - g8 direct measurement feasibility: external experiment required](2026-06-19-v2.89-g8-direct-measurement-feasibility-audit.md) | v2.89 audits whether the repo can produce the missing spin-4/detector g8 packet and classifies it as requiring external measurement data. |
+| v2.90 | [v2.90 - g8 direct measurement route decision: external dependency](2026-06-19-v2.90-g8-direct-measurement-route-decision.md) | v2.90 retires direct in-repo execution of the spin-4/detector g8 measurement while retaining external measurement request and future ingestion routes. |

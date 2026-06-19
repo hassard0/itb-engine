@@ -1,0 +1,102 @@
+{
+  "version": "v2.90",
+  "basis": [
+    "v2.89_g8_direct_measurement_feasibility_audit",
+    "v2.88_post_g8_derivation_route_decision_frontier",
+    "v2.79_g8_adapter_acceptance_harness"
+  ],
+  "decision_scope": "direct_g8_measurement_current_in_repo_run",
+  "route_count": 5,
+  "retired_routes": [
+    "direct_spin4_detector_measurement_in_repo_execution",
+    "synthetic_g8_measurement_fixture_as_claim"
+  ],
+  "retained_nonpromoting_routes": [
+    "external_spin4_detector_measurement_request",
+    "future_public_g8_measurement_ingestion",
+    "g8_measurement_schema_archive"
+  ],
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "blocked_until_external_packet_exists": 1,
+    "external_eft_domain_missing": 1,
+    "external_experimental_program_required": 1,
+    "external_measurement_missing": 2,
+    "external_public_release_required": 1,
+    "external_systematics_budget_missing": 2,
+    "future_public_g8_packet_missing": 1,
+    "public_likelihood_release_missing": 1,
+    "schema_not_measurement": 1,
+    "source_archive_not_framework_claim": 1,
+    "synthetic_fixture_not_real_source": 1
+  },
+  "rows": [
+    {
+      "route": "direct_spin4_detector_measurement_in_repo_execution",
+      "status": "retired_for_current_in_repo_run",
+      "retained": false,
+      "claim_ready": false,
+      "reason": "v2.89 shows the repo can validate a g_8 packet but cannot create the external spin-4/detector measurement, public likelihood, or systematics release.",
+      "next_action": "Do not keep attempting to manufacture the measurement in repo; seek external data or reprioritize.",
+      "blockers": [
+        "external_eft_domain_missing",
+        "external_measurement_missing",
+        "external_systematics_budget_missing",
+        "public_likelihood_release_missing"
+      ]
+    },
+    {
+      "route": "synthetic_g8_measurement_fixture_as_claim",
+      "status": "retired_as_invalid_claim_route",
+      "retained": false,
+      "claim_ready": false,
+      "reason": "Synthetic fixtures prove the adapter accepts a well-shaped row, but they are not external physics evidence.",
+      "next_action": "Use fixtures only for tests and schema validation.",
+      "blockers": [
+        "external_measurement_missing",
+        "synthetic_fixture_not_real_source"
+      ]
+    },
+    {
+      "route": "external_spin4_detector_measurement_request",
+      "status": "retained_external_dependency",
+      "retained": true,
+      "claim_ready": false,
+      "reason": "A real external measurement remains the cleanest g_8 path, but it is outside the repo's executable capabilities.",
+      "next_action": "Specify the packet requirements for an outside measurement or watch for a public release.",
+      "blockers": [
+        "external_experimental_program_required",
+        "external_public_release_required",
+        "external_systematics_budget_missing"
+      ]
+    },
+    {
+      "route": "future_public_g8_measurement_ingestion",
+      "status": "retained_ingestion_route",
+      "retained": true,
+      "claim_ready": false,
+      "reason": "Once a public packet exists, the repo can ingest and test it through the v2.79 acceptance harness.",
+      "next_action": "Implement parser/adapter only after a concrete public data product exists.",
+      "blockers": [
+        "blocked_until_external_packet_exists",
+        "future_public_g8_packet_missing"
+      ]
+    },
+    {
+      "route": "g8_measurement_schema_archive",
+      "status": "retained_as_nonpromoting_design_material",
+      "retained": true,
+      "claim_ready": false,
+      "reason": "The measurement contract and acceptance harness remain useful for future data even though the current run lacks the packet.",
+      "next_action": "Keep the schema and fixtures; do not claim from them.",
+      "blockers": [
+        "schema_not_measurement",
+        "source_archive_not_framework_claim"
+      ]
+    }
+  ],
+  "route_status": "direct_g8_measurement_execution_retired_external_dependency",
+  "best_next_artifact": "Reprioritize the frontier with direct g_8 measurement marked as an external dependency, or obtain a real external packet.",
+  "interpretation": "The direct g_8 measurement route is not false, but it cannot be completed inside this run without external experimental data. Schema, synthetic fixtures, and source audits remain non-promoting."
+}
