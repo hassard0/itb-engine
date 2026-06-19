@@ -46,6 +46,61 @@ def _native_evidence(framework: Any) -> dict | None:
     return _to_dict(method()) if callable(method) else None
 
 
+def classify_discriminator_frontier_status(
+    *,
+    reference_feasible: bool,
+    engine_in_scope: bool,
+    native_tower_spectrum_present: bool,
+    evidence_ready_for_framework_claim: bool,
+    tower_claimable_by_math: bool,
+    promotion_ready: bool,
+) -> dict[str, str]:
+    if not reference_feasible:
+        return {
+            "frontier_status": "reference_excluded_before_tower",
+            "next_required_artifact": "Adversarial review of the reference-stack exclusion.",
+        }
+    if not engine_in_scope:
+        return {
+            "frontier_status": "scope_limited_reference_survivor",
+            "next_required_artifact": (
+                "Resolve engine scope assumptions before treating verdict as physical."
+            ),
+        }
+    if not native_tower_spectrum_present:
+        return {
+            "frontier_status": "missing_native_tower_spectrum",
+            "next_required_artifact": (
+                "Implement a sourced TowerSpectrum or TowerEvidence adapter."
+            ),
+        }
+    if not evidence_ready_for_framework_claim:
+        return {
+            "frontier_status": "missing_or_rejected_tower_evidence",
+            "next_required_artifact": (
+                "Supply TowerEvidence with source, derivation, normalization, and uncertainty."
+            ),
+        }
+    if not tower_claimable_by_math:
+        return {
+            "frontier_status": "tower_evidence_present_but_not_excluding",
+            "next_required_artifact": (
+                "Improve tower precision or accept non-excluding tower evidence."
+            ),
+        }
+    if not promotion_ready:
+        return {
+            "frontier_status": "tower_promotion_guard_blocked",
+            "next_required_artifact": (
+                "Resolve tower promotion guard blockers before adversarial-review claim."
+            ),
+        }
+    return {
+        "frontier_status": "tower_discriminator_claim_ready",
+        "next_required_artifact": "Run adversarial review before solution claim.",
+    }
+
+
 def _framework_row(
     name: str,
     reference: dict[str, dict],
@@ -82,29 +137,16 @@ def _framework_row(
         }
     )
     ref_ok = bool(reference[name]["reference_feasible"])
-    if not ref_ok:
-        frontier_status = "reference_excluded_before_tower"
-        next_required_artifact = "Adversarial review of the reference-stack exclusion."
-    elif not scope.in_scope:
-        frontier_status = "scope_limited_reference_survivor"
-        next_required_artifact = "Resolve engine scope assumptions before treating verdict as physical."
-    elif spectrum is None:
-        frontier_status = "missing_native_tower_spectrum"
-        next_required_artifact = "Implement a sourced TowerSpectrum or TowerEvidence adapter."
-    elif not evidence_validation["ready_for_framework_claim"]:
-        frontier_status = "missing_or_rejected_tower_evidence"
-        next_required_artifact = "Supply TowerEvidence with source, derivation, normalization, and uncertainty."
-    elif not tower_row["claimable_exclusion"]:
-        frontier_status = "tower_evidence_present_but_not_excluding"
-        next_required_artifact = "Improve tower precision or accept non-excluding tower evidence."
-    elif not promotion_guard["ready_for_promotion"]:
-        frontier_status = "tower_promotion_guard_blocked"
-        next_required_artifact = (
-            "Resolve tower promotion guard blockers before adversarial-review claim."
-        )
-    else:
-        frontier_status = "tower_discriminator_claim_ready"
-        next_required_artifact = "Run adversarial review before solution claim."
+    status = classify_discriminator_frontier_status(
+        reference_feasible=ref_ok,
+        engine_in_scope=scope.in_scope,
+        native_tower_spectrum_present=spectrum is not None,
+        evidence_ready_for_framework_claim=(
+            evidence_validation["ready_for_framework_claim"]
+        ),
+        tower_claimable_by_math=tower_row["claimable_exclusion"],
+        promotion_ready=promotion_guard["ready_for_promotion"],
+    )
 
     return {
         "framework": name,
@@ -121,8 +163,7 @@ def _framework_row(
         "tower_promotion_guard": promotion_guard,
         "tower_readiness_verdict": tower_row["framework_tower_verdict"],
         "tower_claimable_by_math": tower_row["claimable_exclusion"],
-        "frontier_status": frontier_status,
-        "next_required_artifact": next_required_artifact,
+        **status,
     }
 
 
