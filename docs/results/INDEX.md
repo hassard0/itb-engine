@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (196 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (197 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -245,3 +245,4 @@ Auto-generated front door to the full research program (196 notes). Regenerate w
 | v2.83 | [v2.83 - Native tower source audit: no registered adapter](2026-06-19-v2.83-native-tower-current-source-audit.md) | v2.83 audits current string, species-scale, asymptotic-safety, and dark-dimension tower sources, finding useful candidates but no registered-framework native adapter. |
 | v2.84 | [v2.84 - Native tower route decision: direct source promotion retired](2026-06-19-v2.84-native-tower-route-decision.md) | v2.84 retires direct promotion of current native-tower-like sources while retaining only registered native adapter authoring and framework-specific source search. |
 | v2.85 | [v2.85 - Post-native frontier: g8 adapter derivation is next](2026-06-19-v2.85-post-native-tower-route-decision-frontier.md) | v2.85 reprioritizes after native tower direct promotion is retired, selecting source-backed g8 adapter derivation as the next route to resolve. |
+| v2.86 | [v2.86 - g8 adapter derivation audit: no source-backed identity](2026-06-19-v2.86-g8-adapter-derivation-source-audit.md) | v2.86 audits detector, energy-correlator, and Wilson-coefficient sources for a g8 adapter identity, finding no public Jacobian, covariance, or claim route. |

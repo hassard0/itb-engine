@@ -1,0 +1,258 @@
+{
+  "version": "v2.86",
+  "basis": [
+    "v2.85_post_native_tower_route_decision_frontier",
+    "v2.79_g8_adapter_acceptance_harness",
+    "v2.80_g8_public_data_product_acquisition_audit",
+    "current_primary_source_search_2026_06_19"
+  ],
+  "route": "source_backed_g8_adapter_derivation",
+  "requirements": [
+    "detector_or_energy_correlator_observable",
+    "source_backed_operator_identity_to_engine_g8",
+    "public_g8_jacobian_or_projection",
+    "public_covariance_or_likelihood",
+    "bounded_low_energy_qg_eft_domain",
+    "component_level_systematics_budget",
+    "registered_framework_exclusion_math"
+  ],
+  "candidate_count": 7,
+  "detector_formalism_sources": [
+    "energy_correlators_four_dimensional_gravity",
+    "light_ray_operators_gravitational_event_shapes",
+    "energy_correlator_conformal_blocks_positivity",
+    "energy_correlators_perturbative_quantum_gravity"
+  ],
+  "wilson_formalism_sources": [
+    "bootstrapping_string_theory_eft",
+    "graviton_loops_and_negativity",
+    "gravity_universal_cutoff_field_theory"
+  ],
+  "adapter_derivation_ready_candidates": [],
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "bounded_low_energy_qg_eft_domain_missing": 4,
+    "component_level_systematics_budget_missing": 7,
+    "detector_or_energy_correlator_observable_missing": 3,
+    "public_covariance_or_likelihood_missing": 7,
+    "public_g8_jacobian_or_projection_missing": 7,
+    "registered_framework_exclusion_math_missing": 7,
+    "source_backed_operator_identity_to_engine_g8_missing": 7
+  },
+  "rows": [
+    {
+      "label": "energy_correlators_four_dimensional_gravity",
+      "title": "Energy correlators in four-dimensional gravity",
+      "source_url": "https://arxiv.org/abs/2512.23791",
+      "source_role": "gravity_detector_formalism",
+      "gates": {
+        "detector_or_energy_correlator_observable": true,
+        "wilson_coefficient_formalism": false,
+        "source_backed_operator_identity_to_engine_g8": false,
+        "public_g8_jacobian_or_projection": false,
+        "public_covariance_or_likelihood": false,
+        "bounded_low_energy_qg_eft_domain": false,
+        "component_level_systematics_budget": false,
+        "registered_framework_exclusion_math": false
+      },
+      "adapter_derivation_ready": false,
+      "ready_for_g8_claim": false,
+      "blockers": [
+        "bounded_low_energy_qg_eft_domain_missing",
+        "component_level_systematics_budget_missing",
+        "public_covariance_or_likelihood_missing",
+        "public_g8_jacobian_or_projection_missing",
+        "registered_framework_exclusion_math_missing",
+        "source_backed_operator_identity_to_engine_g8_missing"
+      ],
+      "notes": [
+        "Computes gravity energy correlators as infrared-finite observables.",
+        "Does not publish an engine g_8 projection or measurement covariance."
+      ]
+    },
+    {
+      "label": "light_ray_operators_gravitational_event_shapes",
+      "title": "Light-ray operators, detectors and gravitational event shapes",
+      "source_url": "https://arxiv.org/abs/2012.01406",
+      "source_role": "gravity_detector_operator_formalism",
+      "gates": {
+        "detector_or_energy_correlator_observable": true,
+        "wilson_coefficient_formalism": false,
+        "source_backed_operator_identity_to_engine_g8": false,
+        "public_g8_jacobian_or_projection": false,
+        "public_covariance_or_likelihood": false,
+        "bounded_low_energy_qg_eft_domain": false,
+        "component_level_systematics_budget": false,
+        "registered_framework_exclusion_math": false
+      },
+      "adapter_derivation_ready": false,
+      "ready_for_g8_claim": false,
+      "blockers": [
+        "bounded_low_energy_qg_eft_domain_missing",
+        "component_level_systematics_budget_missing",
+        "public_covariance_or_likelihood_missing",
+        "public_g8_jacobian_or_projection_missing",
+        "registered_framework_exclusion_math_missing",
+        "source_backed_operator_identity_to_engine_g8_missing"
+      ],
+      "notes": [
+        "Connects light-ray operators to gravitational detector event shapes.",
+        "No low-energy Wilson-coordinate adapter or public likelihood is supplied."
+      ]
+    },
+    {
+      "label": "energy_correlator_conformal_blocks_positivity",
+      "title": "Energy Correlator Conformal Blocks and Positivity",
+      "source_url": "https://arxiv.org/abs/2512.09986",
+      "source_role": "energy_correlator_positivity_formalism",
+      "gates": {
+        "detector_or_energy_correlator_observable": true,
+        "wilson_coefficient_formalism": false,
+        "source_backed_operator_identity_to_engine_g8": false,
+        "public_g8_jacobian_or_projection": false,
+        "public_covariance_or_likelihood": false,
+        "bounded_low_energy_qg_eft_domain": false,
+        "component_level_systematics_budget": false,
+        "registered_framework_exclusion_math": false
+      },
+      "adapter_derivation_ready": false,
+      "ready_for_g8_claim": false,
+      "blockers": [
+        "bounded_low_energy_qg_eft_domain_missing",
+        "component_level_systematics_budget_missing",
+        "public_covariance_or_likelihood_missing",
+        "public_g8_jacobian_or_projection_missing",
+        "registered_framework_exclusion_math_missing",
+        "source_backed_operator_identity_to_engine_g8_missing"
+      ],
+      "notes": [
+        "Develops source-detector OPE language and positivity context.",
+        "Not a measured quantum-gravity g_8 adapter."
+      ]
+    },
+    {
+      "label": "energy_correlators_perturbative_quantum_gravity",
+      "title": "Energy Correlators in Perturbative Quantum Gravity",
+      "source_url": "https://arxiv.org/abs/2412.05384",
+      "source_role": "perturbative_quantum_gravity_detector_calculation",
+      "gates": {
+        "detector_or_energy_correlator_observable": true,
+        "wilson_coefficient_formalism": false,
+        "source_backed_operator_identity_to_engine_g8": false,
+        "public_g8_jacobian_or_projection": false,
+        "public_covariance_or_likelihood": false,
+        "bounded_low_energy_qg_eft_domain": false,
+        "component_level_systematics_budget": false,
+        "registered_framework_exclusion_math": false
+      },
+      "adapter_derivation_ready": false,
+      "ready_for_g8_claim": false,
+      "blockers": [
+        "bounded_low_energy_qg_eft_domain_missing",
+        "component_level_systematics_budget_missing",
+        "public_covariance_or_likelihood_missing",
+        "public_g8_jacobian_or_projection_missing",
+        "registered_framework_exclusion_math_missing",
+        "source_backed_operator_identity_to_engine_g8_missing"
+      ],
+      "notes": [
+        "Computes detector-operator correlators from squared amplitudes.",
+        "Provides theory context, not an engine-normalized g_8 likelihood."
+      ]
+    },
+    {
+      "label": "bootstrapping_string_theory_eft",
+      "title": "Bootstrapping string theory EFT",
+      "source_url": "https://arxiv.org/abs/2310.10710",
+      "source_role": "gravitational_eft_partial_wave_wilson_formalism",
+      "gates": {
+        "detector_or_energy_correlator_observable": false,
+        "wilson_coefficient_formalism": true,
+        "source_backed_operator_identity_to_engine_g8": false,
+        "public_g8_jacobian_or_projection": false,
+        "public_covariance_or_likelihood": false,
+        "bounded_low_energy_qg_eft_domain": true,
+        "component_level_systematics_budget": false,
+        "registered_framework_exclusion_math": false
+      },
+      "adapter_derivation_ready": false,
+      "ready_for_g8_claim": false,
+      "blockers": [
+        "component_level_systematics_budget_missing",
+        "detector_or_energy_correlator_observable_missing",
+        "public_covariance_or_likelihood_missing",
+        "public_g8_jacobian_or_projection_missing",
+        "registered_framework_exclusion_math_missing",
+        "source_backed_operator_identity_to_engine_g8_missing"
+      ],
+      "notes": [
+        "Uses gravitational EFT Wilson coefficients and partial-wave language.",
+        "Does not connect a public detector measurement to engine g_8."
+      ]
+    },
+    {
+      "label": "graviton_loops_and_negativity",
+      "title": "Graviton loops and negativity",
+      "source_url": "https://arxiv.org/abs/2501.17949",
+      "source_role": "gravitational_eft_sum_rule_formalism",
+      "gates": {
+        "detector_or_energy_correlator_observable": false,
+        "wilson_coefficient_formalism": true,
+        "source_backed_operator_identity_to_engine_g8": false,
+        "public_g8_jacobian_or_projection": false,
+        "public_covariance_or_likelihood": false,
+        "bounded_low_energy_qg_eft_domain": true,
+        "component_level_systematics_budget": false,
+        "registered_framework_exclusion_math": false
+      },
+      "adapter_derivation_ready": false,
+      "ready_for_g8_claim": false,
+      "blockers": [
+        "component_level_systematics_budget_missing",
+        "detector_or_energy_correlator_observable_missing",
+        "public_covariance_or_likelihood_missing",
+        "public_g8_jacobian_or_projection_missing",
+        "registered_framework_exclusion_math_missing",
+        "source_backed_operator_identity_to_engine_g8_missing"
+      ],
+      "notes": [
+        "Analyzes gravitational EFT Wilson coefficients and sum rules.",
+        "No detector-observable-to-engine-g_8 adapter is present."
+      ]
+    },
+    {
+      "label": "gravity_universal_cutoff_field_theory",
+      "title": "Gravity and a universal cutoff for field theory",
+      "source_url": "https://arxiv.org/abs/2408.06440",
+      "source_role": "gravitational_sum_rule_and_species_context",
+      "gates": {
+        "detector_or_energy_correlator_observable": false,
+        "wilson_coefficient_formalism": true,
+        "source_backed_operator_identity_to_engine_g8": false,
+        "public_g8_jacobian_or_projection": false,
+        "public_covariance_or_likelihood": false,
+        "bounded_low_energy_qg_eft_domain": true,
+        "component_level_systematics_budget": false,
+        "registered_framework_exclusion_math": false
+      },
+      "adapter_derivation_ready": false,
+      "ready_for_g8_claim": false,
+      "blockers": [
+        "component_level_systematics_budget_missing",
+        "detector_or_energy_correlator_observable_missing",
+        "public_covariance_or_likelihood_missing",
+        "public_g8_jacobian_or_projection_missing",
+        "registered_framework_exclusion_math_missing",
+        "source_backed_operator_identity_to_engine_g8_missing"
+      ],
+      "notes": [
+        "Discusses gravitational sum rules and low-energy Wilson coefficients.",
+        "Coefficient basis is not an adapter from public detector data to engine g_8."
+      ]
+    }
+  ],
+  "route_status": "current_sources_no_source_backed_g8_adapter_identity",
+  "best_next_artifact": "Retire the source-backed g_8 adapter derivation route unless a new source supplies the missing operator identity and covariance.",
+  "interpretation": "Current sources split into detector/energy-correlator formalism and Wilson-coefficient formalism, but none joins them with a cited operator identity, public g_8 projection, covariance, systematics, and registered-framework exclusion math. The retained g_8 adapter route therefore remains non-claimable."
+}
