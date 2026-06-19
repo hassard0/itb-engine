@@ -1,0 +1,190 @@
+{
+  "version": "v2.70",
+  "basis": [
+    "v2.64_gw_parity_ppv_formula_implementation",
+    "v2.69_gw_parity_callister_fixed_variable_comparison",
+    "Ng_2305.05844_waveform_modification",
+    "Jenks_2305.10478_parameterized_parity_violation",
+    "Callister_2312.12532_sgwb_birefringence",
+    "Callister_public_code_numpyro_likelihoods"
+  ],
+  "audit_scope": "source_formula_and_helicity_conventions_only",
+  "row_count": 3,
+  "source_declared_ppv_candidate_routes": [
+    "ng_kappa_to_jenks_beta10_candidate",
+    "callister_waveform_alpha1_beta1_split_candidate"
+  ],
+  "formula_candidate_routes": [
+    "ng_kappa_to_jenks_beta10_candidate",
+    "callister_waveform_alpha1_beta1_split_candidate",
+    "callister_public_code_energy_density_convention"
+  ],
+  "ng_beta10_candidate_ready": true,
+  "callister_alpha1_beta1_split_candidate_ready": true,
+  "callister_energy_code_convention_ready": true,
+  "ppv_beta1_projection_ready": false,
+  "helicity_harmonization_ready": false,
+  "engine_projection_ready": false,
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "energy_density_argument_not_waveform_beta_parameter": 1,
+    "engine_projection_out_of_scope": 3,
+    "helicity_convention_not_harmonized_across_sources": 3,
+    "ng_public_posterior_parser_not_implemented": 1,
+    "no_posterior_to_waveform_ppv_likelihood_map": 1,
+    "population_model_sensitivity_present": 1,
+    "ppv_beta1_normalization_not_finalized": 3,
+    "public_code_matches_energy_argument_not_waveform_log_gain": 1,
+    "redshift_term_not_beta1_distance_only": 1,
+    "source_declared_beta10_not_engine_axis": 1,
+    "two_axis_alpha1_beta1_not_single_beta1": 1
+  },
+  "rows": [
+    {
+      "label": "ng_kappa_to_jenks_beta10_candidate",
+      "source_packet": "ng_gwtc3_kappa_at_100hz",
+      "source_urls": {
+        "ng_paper": "https://arxiv.org/abs/2305.05844",
+        "jenks_ppv": "https://arxiv.org/abs/2305.10478",
+        "ng_repository": "https://github.com/thomasckng/Constraining-Birefringence-with-GWTC-3"
+      },
+      "source_formulas": [
+        "Ng: h_L/R^br = h_L/R^GR * exp(+/- kappa*d_C*f/100Hz)",
+        "Ng: positive kappa enhances left-handed polarization.",
+        "Jenks: delta_phi_A = kappa*D_C*(f/100Hz) is encoded in beta_1_0.",
+        "Jenks: D_2*(1+z)=D_C for the Ng frequency and distance dependence."
+      ],
+      "source_declared_mapping": {
+        "target_ppv_parameter": "beta_1_0_amplitude_branch",
+        "source_declares_ng_mapping": true,
+        "formula_candidate_ready": true,
+        "candidate_formula": "delta_phi_A = kappa_Gpc_inv*D_C_Gpc*(f_hz/100)",
+        "posterior_product_ready_in_engine": false
+      },
+      "helicity_conventions": {
+        "ng": "positive_kappa_enhances_left",
+        "jenks": "lambda_R=+1_lambda_L=-1",
+        "harmonization_status": "sign_map_still_nonpromoting"
+      },
+      "readiness": {
+        "source_declared_ppv_mapping_ready": true,
+        "posterior_ingestion_ready": false,
+        "helicity_harmonization_ready": false,
+        "ppv_beta1_likelihood_ready": false,
+        "engine_projection_ready": false,
+        "claim_ready": false
+      },
+      "engine_projection_allowed": false,
+      "blockers": [
+        "engine_projection_out_of_scope",
+        "helicity_convention_not_harmonized_across_sources",
+        "ng_public_posterior_parser_not_implemented",
+        "ppv_beta1_normalization_not_finalized",
+        "source_declared_beta10_not_engine_axis"
+      ],
+      "notes": [
+        "This is the strongest current PPV candidate route.",
+        "The source-declared beta mapping is not an engine likelihood."
+      ]
+    },
+    {
+      "label": "callister_waveform_alpha1_beta1_split_candidate",
+      "source_packet": "callister_sgwb_kappaD_kappaz",
+      "source_urls": {
+        "callister_paper": "https://arxiv.org/abs/2312.12532",
+        "jenks_ppv": "https://arxiv.org/abs/2305.10478",
+        "callister_repository": "https://github.com/tcallister/stochastic-birefringence"
+      },
+      "source_formulas": [
+        "Callister: v_p = pi*(f/100Hz)*(kappa_z*z + kappa_D*D_C/Gpc).",
+        "Callister: kappa_z corresponds to alpha_1 and kappa_D to beta_1.",
+        "Callister: right-polarized waves are enhanced in the phenomenological approach."
+      ],
+      "source_declared_mapping": {
+        "target_ppv_parameters": [
+          "alpha_1_redshift_branch",
+          "beta_1_distance_branch"
+        ],
+        "source_declares_alpha_beta_split": true,
+        "formula_candidate_ready": true,
+        "candidate_formula": "v_p = pi*(f_hz/100)*(kappa_z*z + kappa_D*D_C_Gpc)",
+        "single_beta1_likelihood_ready": false
+      },
+      "helicity_conventions": {
+        "callister": "positive_vp_enhances_right",
+        "jenks": "lambda_R=+1_lambda_L=-1",
+        "harmonization_status": "right_left_sign_not_combined_with_ng"
+      },
+      "readiness": {
+        "source_declared_ppv_mapping_ready": true,
+        "posterior_ingestion_ready": true,
+        "helicity_harmonization_ready": false,
+        "ppv_beta1_likelihood_ready": false,
+        "engine_projection_ready": false,
+        "claim_ready": false
+      },
+      "engine_projection_allowed": false,
+      "blockers": [
+        "engine_projection_out_of_scope",
+        "helicity_convention_not_harmonized_across_sources",
+        "population_model_sensitivity_present",
+        "ppv_beta1_normalization_not_finalized",
+        "redshift_term_not_beta1_distance_only",
+        "two_axis_alpha1_beta1_not_single_beta1"
+      ],
+      "notes": [
+        "The Callister waveform-level formula is source-backed.",
+        "It is a two-axis alpha/beta route, not the same object as the Ng-only beta route."
+      ]
+    },
+    {
+      "label": "callister_public_code_energy_density_convention",
+      "source_packet": "callister_sgwb_kappaD_kappaz_energy_density",
+      "source_urls": {
+        "callister_paper": "https://arxiv.org/abs/2312.12532",
+        "callister_code": "https://github.com/tcallister/stochastic-birefringence/blob/main/code/numpyro_likelihoods.py"
+      },
+      "source_formulas": [
+        "Paper: SGWB Stokes I/V use cosh(2*v_p) and sinh(2*v_p).",
+        "Code: A = 2*pi*(kappa_Dc*Dcs_fs + kappa_z*zs_fs)/100.",
+        "Code: Omg_I weights multiply by cosh(A); Omg_V weights multiply by sinh(A)."
+      ],
+      "source_declared_mapping": {
+        "target_quantity": "sgwb_energy_density_hyperbolic_argument",
+        "code_argument_matches_2vp": true,
+        "formula_candidate_ready": true,
+        "candidate_formula": "A = 2*pi*(kappa_Dc*D_C_Gpc*f_hz + kappa_z*z*f_hz)/100",
+        "waveform_ppv_beta_parameter_ready": false
+      },
+      "helicity_conventions": {
+        "callister_code": "positive_A_gives_positive_Stokes_V",
+        "waveform": "A_is_energy_density_argument_not_waveform_log_gain",
+        "harmonization_status": "energy_sign_not_a_standalone_ppv_beta"
+      },
+      "readiness": {
+        "source_declared_ppv_mapping_ready": false,
+        "posterior_ingestion_ready": true,
+        "helicity_harmonization_ready": false,
+        "ppv_beta1_likelihood_ready": false,
+        "engine_projection_ready": false,
+        "claim_ready": false
+      },
+      "engine_projection_allowed": false,
+      "blockers": [
+        "energy_density_argument_not_waveform_beta_parameter",
+        "engine_projection_out_of_scope",
+        "helicity_convention_not_harmonized_across_sources",
+        "no_posterior_to_waveform_ppv_likelihood_map",
+        "ppv_beta1_normalization_not_finalized",
+        "public_code_matches_energy_argument_not_waveform_log_gain"
+      ],
+      "notes": [
+        "This row protects the factor-of-two distinction between waveform log gain and SGWB energy density.",
+        "It is implementation-ready as code convention, not as a PPV promotion route."
+      ]
+    }
+  ],
+  "route_status": "ppv_convention_audit_partial_candidates_projection_blocked",
+  "best_next_artifact": "Implement an Ng public posterior parser and a sign-harmonized beta_1_0 posterior adapter, while keeping Callister alpha/beta and SGWB energy routes separate.",
+  "interpretation": "Ng is source-declared by Jenks as the closest beta_1_0 amplitude candidate. Callister supplies a source-backed alpha_1/beta_1 split and a separate public-code SGWB energy-density convention. None of these rows is an engine-axis quantum-gravity discriminator because helicity signs, posterior likelihood ownership, and engine projection remain blocked."
+}
