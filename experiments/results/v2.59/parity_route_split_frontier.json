@@ -1,0 +1,113 @@
+{
+  "basis": [
+    "v2.58_birefringence_adapter_sourceability",
+    "implemented_gravitational_birefringence_observable",
+    "v1.56_multimessenger_caveat"
+  ],
+  "route_count": 4,
+  "direct_cmb_beta_to_gravity_route_retired": true,
+  "engine_gravity_parity_routes": [
+    "gw_gravitational_birefringence",
+    "pta_chiral_sgwb"
+  ],
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "rows": [
+    {
+      "route": "cmb_em_axion_beta",
+      "channel": "electromagnetic_axion_photon",
+      "target_axis": "axion_photon_coupling_or_field_history",
+      "engine_gravity_parity_route": false,
+      "implemented_observable": null,
+      "external_measurement_ready": false,
+      "source_backed_theory": true,
+      "current_status": "external_em_hint_not_engine_gravity_discriminator",
+      "claim_ready": false,
+      "blockers": [
+        "not_engine_gravity_parity_axis",
+        "instrument_systematics_not_closed_for_claim",
+        "no_registered_framework_em_axion_predictions"
+      ],
+      "next_required_artifact": "Treat CMB beta as a separate EM/axion observable with its own framework predictions and systematics closure.",
+      "evidence": {
+        "sourceability_route_status": "cmb_beta_not_direct_gravitational_parity_adapter",
+        "cmb_beta_measurement_source_backed": true,
+        "em_birefringence_source_backed": true
+      }
+    },
+    {
+      "route": "gw_gravitational_birefringence",
+      "channel": "gravitational_wave_parity",
+      "target_axis": "g_R2_parity,g_R3_parity",
+      "engine_gravity_parity_route": true,
+      "implemented_observable": "src/itb/gravitational_observables.py:GravitationalBirefringence",
+      "external_measurement_ready": false,
+      "source_backed_theory": true,
+      "current_status": "right_engine_axis_but_external_measurement_missing",
+      "claim_ready": false,
+      "blockers": [
+        "no_external_gw_parity_measurement_packet",
+        "toy_frequency_normalization",
+        "no_framework_excluding_gw_likelihood"
+      ],
+      "next_required_artifact": "A public GW birefringence likelihood or bound mapped directly to g_R2_parity/g_R3_parity with frequency normalization.",
+      "evidence": {
+        "implemented_axes_touched": [
+          "g_R2_parity",
+          "g_R3_parity"
+        ],
+        "sourceability_gravity_channel": true
+      }
+    },
+    {
+      "route": "pta_chiral_sgwb",
+      "channel": "gravitational_wave_chirality",
+      "target_axis": "g_R2_parity,g_R3_parity",
+      "engine_gravity_parity_route": true,
+      "implemented_observable": null,
+      "external_measurement_ready": false,
+      "source_backed_theory": false,
+      "current_status": "future_gravity_parity_probe_not_measurement_ready",
+      "claim_ready": false,
+      "blockers": [
+        "no_external_pta_chirality_likelihood",
+        "engine_prediction_is_order_of_magnitude",
+        "no_source_backed_axis_normalization"
+      ],
+      "next_required_artifact": "A PTA circular-polarization or chiral Hellings-Downs likelihood with a source-backed projection to the engine parity axes.",
+      "evidence": {
+        "role": "long-baseline gravity parity cross-check",
+        "current_engine_status": "design_probe"
+      }
+    },
+    {
+      "route": "multimessenger_common_axion",
+      "channel": "em_plus_gravity_common_field",
+      "target_axis": "coupled_axion_photon_and_axion_gravity_parameters",
+      "engine_gravity_parity_route": false,
+      "implemented_observable": null,
+      "external_measurement_ready": false,
+      "source_backed_theory": true,
+      "current_status": "common_origin_hypothesis_not_adapter",
+      "claim_ready": false,
+      "blockers": [
+        "no_source_backed_photon_gravity_coupling_relation",
+        "requires_high_redshift_joint_em_gw_source",
+        "ratio_not_clean_normalization_cancellation"
+      ],
+      "next_required_artifact": "A source-backed multimessenger model relating photon and gravity Chern-Simons couplings plus a high-redshift joint EM/GW event.",
+      "evidence": {
+        "v1_56_status": "correlation_test_not_clean_ratio",
+        "v2_58_best_next_artifact": "Either a source-backed multimessenger axion model relating photon and gravity Chern-Simons couplings, or a pivot that treats CMB beta as an electromagnetic/axion route and uses GW birefringence for engine gravitational parity."
+      }
+    }
+  ],
+  "priority_order": [
+    "gw_gravitational_birefringence",
+    "multimessenger_common_axion",
+    "cmb_em_axion_beta",
+    "pta_chiral_sgwb"
+  ],
+  "route_status": "parity_routes_split_no_claim_ready_path",
+  "interpretation": "The overloaded birefringence route is now split. CMB beta remains a source-backed EM/axion hint, but it is retired as a direct engine-gravity-parity discriminator. The right engine axis is GW gravitational birefringence, currently blocked on an external likelihood and source-backed normalization."
+}
