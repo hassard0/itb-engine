@@ -1,0 +1,99 @@
+{
+  "basis": [
+    "literature_seed",
+    "TowerSpectrum",
+    "phi_tower"
+  ],
+  "required_actionable_fields": [
+    "tower_family",
+    "phi_tower_mean",
+    "phi_tower_sigma",
+    "normalization",
+    "source"
+  ],
+  "seeded_frameworks": [
+    "string_tree_eft"
+  ],
+  "registered_frameworks_without_literature_seed": [
+    "asymptotic_safety",
+    "causal_set",
+    "cdt",
+    "discovered_data_driven",
+    "discovered_high_g8",
+    "discovered_novel",
+    "discovered_parity_violating",
+    "emergent_gravity",
+    "group_field_theory",
+    "horava_lifshitz",
+    "lqg_induced",
+    "pure_gr"
+  ],
+  "candidate_seed_count": 2,
+  "actionable_seed_count": 0,
+  "actionable_seeds": [],
+  "claimable_framework_exclusions_now": [],
+  "seeds": [
+    {
+      "framework": "string_tree_eft",
+      "seed_id": "ooguri_vafa_distance_conjecture",
+      "tower_family": "sdc_exponential_tower",
+      "source": "Ooguri and Vafa, On the Geometry of the String Landscape and the Swampland",
+      "url": "https://arxiv.org/abs/hep-th/0605264",
+      "source_type": "primary_conjecture",
+      "qualitative_relation": "infinite-distance limits are accompanied by an infinite tower of light states",
+      "adapter_status": "qualitative_tower_relation_only",
+      "provided_actionable_fields": [
+        "tower_family",
+        "source"
+      ],
+      "missing_actionable_fields": [
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization"
+      ],
+      "actionable_as_tower_spectrum": false,
+      "threshold_context_sigma_0.05": {
+        "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+        "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739
+      }
+    },
+    {
+      "framework": "string_tree_eft",
+      "seed_id": "species_scale_distance_bound",
+      "tower_family": "species_scale_tower_bound",
+      "source": "van de Heisteeg, Vafa, and Wiesner, Bounds on Species Scale and the Distance Conjecture",
+      "url": "https://arxiv.org/abs/2303.13580",
+      "source_type": "primary_bound",
+      "qualitative_relation": "tower masses cannot go to zero faster than exponentially in field distance",
+      "adapter_status": "slope_bound_without_framework_coordinate",
+      "provided_actionable_fields": [
+        "tower_family",
+        "source"
+      ],
+      "missing_actionable_fields": [
+        "phi_tower_mean",
+        "phi_tower_sigma",
+        "normalization"
+      ],
+      "actionable_as_tower_spectrum": false,
+      "threshold_context_sigma_0.05": {
+        "claimable_exclusion_requires_phi_mean_gt": 0.8433019116911739,
+        "claimable_allowance_requires_phi_mean_lte": 0.6433019116911739
+      }
+    }
+  ],
+  "literature_guardrail": {
+    "claim": "Primary sources can seed a tower-adapter search, but a qualitative tower relation is not an actionable TowerSpectrum. The adapter still needs phi_tower_mean, phi_tower_sigma, normalization, and source fields in the v2.24 contract.",
+    "primary_sources": [
+      {
+        "title": "Ooguri and Vafa, On the Geometry of the String Landscape and the Swampland",
+        "url": "https://arxiv.org/abs/hep-th/0605264"
+      },
+      {
+        "title": "van de Heisteeg, Vafa, and Wiesner, Bounds on Species Scale and the Distance Conjecture",
+        "url": "https://arxiv.org/abs/2303.13580"
+      }
+    ]
+  },
+  "interpretation": "The strongest current literature seed for a registered framework is string/SDC-like, but it does not assign the current string_tree_eft encoder a normalized phi_tower value or uncertainty. It therefore cannot clear the v2.25 thresholds."
+}
