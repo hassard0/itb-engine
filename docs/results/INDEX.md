@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (192 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (193 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -241,3 +241,4 @@ Auto-generated front door to the full research program (192 notes). Regenerate w
 | v2.79 | [v2.79 - g8 adapter acceptance harness: future gate ready, no real packet](2026-06-19-v2.79-g8-adapter-acceptance-harness.md) | v2.79 turns the g8 partial-wave/detector bridge into an executable adapter gate, proving a future source packet can be accepted while current real packets remain non-claimable. |
 | v2.80 | [v2.80 - g8 public data acquisition: data exists, no adapter packet](2026-06-19-v2.80-g8-public-data-product-acquisition-audit.md) | v2.80 audits public energy-correlator data products and current theory bridges against the g8 adapter gate, finding useful acquisition targets but no engine-normalized packet. |
 | v2.81 | [v2.81 - g8 route decision: direct public-data promotion retired](2026-06-19-v2.81-g8-route-decision.md) | v2.81 retires direct promotion of current public energy-correlator products to engine g8 while retaining source-backed adapter and new spin-4 measurement routes. |
+| v2.82 | [v2.82 - Post-g8 frontier: native tower evidence is next](2026-06-19-v2.82-post-g8-route-decision-frontier.md) | v2.82 reprioritizes the frontier after direct g8 public-data promotion is retired, selecting native tower evidence as the next no-new-experiment route. |
