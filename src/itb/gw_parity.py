@@ -26,6 +26,33 @@ REQUIRED_NATIVE_PARAMETERS = {
     "parameterized_parity_ppv": ("branch",),
 }
 
+CALLISTER_FIXED_RATE_HDF_FILENAMES = (
+    "fixed_rate_uniform.hdf",
+    "fixed_rate_SFR.hdf",
+    "fixed_rate_delayedSFR.hdf",
+    "fixed_rate_delayedSFR_HLO1.hdf",
+    "fixed_rate_delayedSFR_HLO2.hdf",
+    "fixed_rate_delayedSFR_HLO3.hdf",
+    "fixed_rate_delayedSFR_HVO3.hdf",
+    "fixed_rate_delayedSFR_LVO3.hdf",
+)
+
+CALLISTER_FIXED_RATE_HDF_KEYS = (
+    "kappa_dcs_1D",
+    "probability_kappa_dc_1D",
+    "kappa_zs_1D",
+    "probability_kappa_z_1D",
+    "kappa_dcs_2D",
+    "kappa_zs_2D",
+    "probabilities",
+)
+
+GW_PARITY_PROJECTION_BLOCKERS = (
+    "helicity_convention_not_harmonized_across_sources",
+    "ppv_beta1_normalization_not_finalized",
+    "engine_projection_out_of_scope",
+)
+
 
 @dataclass(frozen=True)
 class GWParityNativePacket:
@@ -212,6 +239,183 @@ def normalize_discrete_posterior(
         "density": normalized.tolist(),
         "blockers": sorted(set(blockers)),
     }
+
+
+def _array_from_dataset(value: Any) -> np.ndarray:
+    try:
+        value = value[()]
+    except (AttributeError, TypeError, ValueError):
+        pass
+    return np.asarray(value, dtype=float)
+
+
+def _prefixed_blockers(prefix: str, blockers: list[str]) -> list[str]:
+    return [f"{prefix}_{blocker}" for blocker in blockers]
+
+
+def _callister_result_group(datasets: dict[str, Any]) -> Any:
+    if "result" in datasets and not all(
+        key in datasets for key in CALLISTER_FIXED_RATE_HDF_KEYS
+    ):
+        return datasets["result"]
+    return datasets
+
+
+def normalize_callister_joint_posterior(
+    kappa_d_coordinates: list[float] | np.ndarray,
+    kappa_z_coordinates: list[float] | np.ndarray,
+    density: list[list[float]] | np.ndarray,
+) -> dict[str, Any]:
+    """Normalize a Callister fixed-rate joint posterior grid.
+
+    The public computation documents `probabilities[i,j]` as the posterior value
+    at `kappa_dcs_2D[i]` and `kappa_zs_2D[j]`.
+    """
+    kappa_d = np.asarray(kappa_d_coordinates, dtype=float)
+    kappa_z = np.asarray(kappa_z_coordinates, dtype=float)
+    probability = np.asarray(density, dtype=float)
+    blockers = []
+
+    if kappa_d.ndim != 1 or kappa_z.ndim != 1:
+        blockers.append("coordinates_not_one_dimensional")
+    if probability.ndim != 2:
+        blockers.append("probability_not_two_dimensional")
+    expected_shape = (kappa_d.size, kappa_z.size)
+    if probability.ndim == 2 and probability.shape != expected_shape:
+        blockers.append("probability_shape_mismatch")
+    if kappa_d.size < 2 or kappa_z.size < 2:
+        blockers.append("grid_too_short")
+    if (
+        np.any(~np.isfinite(kappa_d))
+        or np.any(~np.isfinite(kappa_z))
+        or np.any(~np.isfinite(probability))
+    ):
+        blockers.append("grid_not_finite")
+    if np.any(probability < 0):
+        blockers.append("probability_negative")
+    if not blockers and (
+        np.any(np.diff(kappa_d) <= 0) or np.any(np.diff(kappa_z) <= 0)
+    ):
+        blockers.append("coordinates_not_strictly_increasing")
+
+    norm = 0.0
+    if not blockers:
+        norm = float(np.trapezoid(np.trapezoid(probability, kappa_z, axis=1), kappa_d))
+        if norm <= 0.0:
+            blockers.append("norm_not_positive")
+
+    normalized = probability / norm if not blockers else np.zeros_like(probability)
+    normalized_norm = (
+        float(np.trapezoid(np.trapezoid(normalized, kappa_z, axis=1), kappa_d))
+        if not blockers
+        else 0.0
+    )
+    return {
+        "ready": not blockers,
+        "norm": norm,
+        "normalized_norm": normalized_norm,
+        "kappa_d_coordinates": kappa_d.tolist(),
+        "kappa_z_coordinates": kappa_z.tolist(),
+        "density": normalized.tolist(),
+        "shape": list(probability.shape),
+        "blockers": sorted(set(blockers)),
+    }
+
+
+def parse_callister_fixed_rate_hdf_datasets(
+    datasets: dict[str, Any],
+    *,
+    source_file: str | None = None,
+) -> dict[str, Any]:
+    """Parse Callister fixed-rate posterior datasets from an HDF-like mapping."""
+    result_group = _callister_result_group(datasets)
+    missing_keys = [
+        key for key in CALLISTER_FIXED_RATE_HDF_KEYS
+        if key not in result_group
+    ]
+    if missing_keys:
+        parser_blockers = ["missing_callister_fixed_rate_hdf_keys"]
+        return {
+            "schema": "callister_fixed_rate_hdf_v1",
+            "source_file": source_file,
+            "required_keys": list(CALLISTER_FIXED_RATE_HDF_KEYS),
+            "missing_keys": missing_keys,
+            "parser_ready": False,
+            "parser_blockers": parser_blockers,
+            "projection_blockers": list(GW_PARITY_PROJECTION_BLOCKERS),
+            "blockers": sorted(
+                set(parser_blockers + list(GW_PARITY_PROJECTION_BLOCKERS))
+            ),
+            "engine_projection_ready": False,
+            "claimable_discriminator_now": False,
+        }
+
+    arrays = {
+        key: _array_from_dataset(result_group[key])
+        for key in CALLISTER_FIXED_RATE_HDF_KEYS
+    }
+    kappa_d_1d = normalize_discrete_posterior(
+        arrays["kappa_dcs_1D"],
+        arrays["probability_kappa_dc_1D"],
+    )
+    kappa_z_1d = normalize_discrete_posterior(
+        arrays["kappa_zs_1D"],
+        arrays["probability_kappa_z_1D"],
+    )
+    joint = normalize_callister_joint_posterior(
+        arrays["kappa_dcs_2D"],
+        arrays["kappa_zs_2D"],
+        arrays["probabilities"],
+    )
+    parser_blockers = []
+    parser_blockers.extend(_prefixed_blockers("kappa_d_1d", kappa_d_1d["blockers"]))
+    parser_blockers.extend(_prefixed_blockers("kappa_z_1d", kappa_z_1d["blockers"]))
+    parser_blockers.extend(_prefixed_blockers("joint", joint["blockers"]))
+
+    parser_ready = not parser_blockers
+    projection_blockers = list(GW_PARITY_PROJECTION_BLOCKERS)
+    return {
+        "schema": "callister_fixed_rate_hdf_v1",
+        "source_file": source_file,
+        "required_keys": list(CALLISTER_FIXED_RATE_HDF_KEYS),
+        "missing_keys": [],
+        "parser_ready": parser_ready,
+        "parser_blockers": sorted(set(parser_blockers)),
+        "projection_blockers": projection_blockers,
+        "blockers": sorted(set(parser_blockers + projection_blockers)),
+        "engine_projection_ready": False,
+        "claimable_discriminator_now": False,
+        "one_dimensional": {
+            "kappa_D": kappa_d_1d,
+            "kappa_z": kappa_z_1d,
+        },
+        "joint": joint,
+    }
+
+
+def load_callister_fixed_rate_hdf(path: str) -> dict[str, Any]:
+    """Load a Callister fixed-rate HDF file when optional h5py is installed."""
+    try:
+        import h5py
+    except ImportError:
+        parser_blockers = ["h5py_not_installed"]
+        return {
+            "schema": "callister_fixed_rate_hdf_v1",
+            "source_file": path,
+            "required_keys": list(CALLISTER_FIXED_RATE_HDF_KEYS),
+            "missing_keys": [],
+            "parser_ready": False,
+            "parser_blockers": parser_blockers,
+            "projection_blockers": list(GW_PARITY_PROJECTION_BLOCKERS),
+            "blockers": sorted(
+                set(parser_blockers + list(GW_PARITY_PROJECTION_BLOCKERS))
+            ),
+            "engine_projection_ready": False,
+            "claimable_discriminator_now": False,
+        }
+
+    with h5py.File(path, "r") as hdf:
+        return parse_callister_fixed_rate_hdf_datasets(hdf, source_file=path)
 
 
 def validate_gw_parity_native_packet(
