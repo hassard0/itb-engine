@@ -1,0 +1,55 @@
+{
+  "basis": [
+    "tower_gate",
+    "positive_control_calibration",
+    "recalibration_options"
+  ],
+  "current_critical_phi_tower": 0.7433019116911739,
+  "positive_control_safe_critical_phi_tower": 1.224744871391589,
+  "positive_control_count": 7,
+  "positive_controls_rejected_by_current_gate": [
+    "blumenhagen_large_volume_delta1_benchmark",
+    "d4_p1_kk_vector",
+    "d4_p2_kk_vector",
+    "d4_p3_kk_vector",
+    "d4_p4_kk_vector",
+    "d4_p5_kk_vector",
+    "d4_p6_kk_vector"
+  ],
+  "positive_controls_rejected_after_global_threshold_recalibration": [],
+  "options": {
+    "raise_global_threshold": {
+      "candidate_threshold": 1.224744871391589,
+      "positive_control_rejections_after": 0,
+      "tradeoff": "Removes positive-control rejection but weakens all future tower exclusions below the strongest known KK benchmark.",
+      "production_change_recommended_now": false
+    },
+    "scope_limit_decompactification_controls": {
+      "candidate_rule": "Do not apply the current tower exclusion gate to candidates whose source_scope is known string-compatible decompactification.",
+      "positive_control_rejections_after": 0,
+      "tradeoff": "Preserves the numeric threshold for non-decompactification uses but requires a source-scope classifier before promotion.",
+      "production_change_recommended_now": false
+    },
+    "positive_control_promotion_block": {
+      "candidate_rule": "A candidate cannot become tower_discriminator_claim_ready if it matches a known positive-control family rejected by the gate.",
+      "positive_control_rejections_after": 0,
+      "tradeoff": "Adds a conservative promotion guard while leaving diagnostic math unchanged.",
+      "production_change_recommended_now": true
+    }
+  },
+  "recommended_next_implementation": "Add a promotion guard that blocks tower_discriminator_claim_ready for known string-compatible decompactification families, then keep the numeric gate as a diagnostic until a broader calibrated threshold is justified.",
+  "claimable_framework_exclusions_now": [],
+  "literature_guardrail": {
+    "claim": "This audit proposes calibration options; it does not change the engine gate and does not create framework exclusions.",
+    "primary_sources": [
+      {
+        "title": "Blumenhagen, Klaewer, Schlechter, and Wolf, The Refined Swampland Distance Conjecture in Calabi-Yau Moduli Spaces",
+        "url": "https://arxiv.org/abs/1803.04989"
+      },
+      {
+        "title": "Aoufia, Castellano, and Ibanez, Laplacians in Various Dimensions and the Swampland",
+        "url": "https://arxiv.org/abs/2506.03253"
+      }
+    ]
+  }
+}
