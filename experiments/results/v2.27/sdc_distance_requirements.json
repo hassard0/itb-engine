@@ -1,0 +1,368 @@
+{
+  "basis": [
+    "SDC",
+    "TowerSpectrum",
+    "Delta_moduli",
+    "phi_tower"
+  ],
+  "critical_phi_tower": 0.7433019116911739,
+  "critical_tower_mass": 0.47554112554112576,
+  "sigma_values": [
+    0.0,
+    0.01,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "dimension_requirements": [
+    {
+      "dimension": 4,
+      "label": "sharpened_d_4",
+      "lambda_sdc": 0.7071067811865475,
+      "distance_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_distance_gt": 1.051187644451507,
+          "claimable_allowance_requires_distance_lte": 1.051187644451507,
+          "claimable_exclusion_requires_mass_gap_lt": 0.47554112554112576,
+          "claimable_allowance_requires_mass_gap_gte": 0.47554112554112576
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_distance_gt": 1.0794719156989687,
+          "claimable_allowance_requires_distance_lte": 1.022903373204045,
+          "claimable_exclusion_requires_mass_gap_lt": 0.46612478035821264,
+          "claimable_allowance_requires_mass_gap_gte": 0.48514769351488823
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_distance_gt": 1.1926090006888164,
+          "claimable_allowance_requires_distance_lte": 0.9097662882141974,
+          "claimable_exclusion_requires_mass_gap_lt": 0.43028740420454636,
+          "claimable_allowance_requires_mass_gap_gte": 0.5255542222970128
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_distance_gt": 1.3340303569261258,
+          "claimable_allowance_requires_distance_lte": 0.7683449319768878,
+          "claimable_exclusion_requires_mass_gap_lt": 0.389340143833837,
+          "claimable_allowance_requires_mass_gap_gte": 0.5808272423545225
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_distance_gt": 1.6168730694007447,
+          "claimable_allowance_requires_distance_lte": 0.4855022195022687,
+          "claimable_exclusion_requires_mass_gap_lt": 0.31876474916456715,
+          "claimable_allowance_requires_mass_gap_gte": 0.7094239958263793
+        }
+      ]
+    },
+    {
+      "dimension": 5,
+      "label": "sharpened_d_5",
+      "lambda_sdc": 0.5773502691896258,
+      "distance_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_distance_gt": 1.2874366764121878,
+          "claimable_allowance_requires_distance_lte": 1.2874366764121878,
+          "claimable_exclusion_requires_mass_gap_lt": 0.47554112554112576,
+          "claimable_allowance_requires_mass_gap_gte": 0.47554112554112576
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_distance_gt": 1.3220776925635653,
+          "claimable_allowance_requires_distance_lte": 1.2527956602608104,
+          "claimable_exclusion_requires_mass_gap_lt": 0.46612478035821264,
+          "claimable_allowance_requires_mass_gap_gte": 0.48514769351488823
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_distance_gt": 1.4606417571690755,
+          "claimable_allowance_requires_distance_lte": 1.1142315956553002,
+          "claimable_exclusion_requires_mass_gap_lt": 0.43028740420454636,
+          "claimable_allowance_requires_mass_gap_gte": 0.5255542222970128
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_distance_gt": 1.6338468379259632,
+          "claimable_allowance_requires_distance_lte": 0.9410265148984125,
+          "claimable_exclusion_requires_mass_gap_lt": 0.389340143833837,
+          "claimable_allowance_requires_mass_gap_gte": 0.5808272423545225
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_distance_gt": 1.9802569994397385,
+          "claimable_allowance_requires_distance_lte": 0.594616353384637,
+          "claimable_exclusion_requires_mass_gap_lt": 0.31876474916456715,
+          "claimable_allowance_requires_mass_gap_gte": 0.7094239958263793
+        }
+      ]
+    },
+    {
+      "dimension": 6,
+      "label": "sharpened_d_6",
+      "lambda_sdc": 0.5,
+      "distance_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_distance_gt": 1.4866038233823478,
+          "claimable_allowance_requires_distance_lte": 1.4866038233823478,
+          "claimable_exclusion_requires_mass_gap_lt": 0.47554112554112576,
+          "claimable_allowance_requires_mass_gap_gte": 0.47554112554112576
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_distance_gt": 1.5266038233823478,
+          "claimable_allowance_requires_distance_lte": 1.4466038233823477,
+          "claimable_exclusion_requires_mass_gap_lt": 0.46612478035821264,
+          "claimable_allowance_requires_mass_gap_gte": 0.48514769351488823
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_distance_gt": 1.6866038233823477,
+          "claimable_allowance_requires_distance_lte": 1.2866038233823478,
+          "claimable_exclusion_requires_mass_gap_lt": 0.43028740420454636,
+          "claimable_allowance_requires_mass_gap_gte": 0.5255542222970128
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_distance_gt": 1.8866038233823477,
+          "claimable_allowance_requires_distance_lte": 1.0866038233823478,
+          "claimable_exclusion_requires_mass_gap_lt": 0.389340143833837,
+          "claimable_allowance_requires_mass_gap_gte": 0.5808272423545225
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_distance_gt": 2.2866038233823476,
+          "claimable_allowance_requires_distance_lte": 0.6866038233823477,
+          "claimable_exclusion_requires_mass_gap_lt": 0.31876474916456715,
+          "claimable_allowance_requires_mass_gap_gte": 0.7094239958263793
+        }
+      ]
+    },
+    {
+      "dimension": 10,
+      "label": "sharpened_d_10",
+      "lambda_sdc": 0.35355339059327373,
+      "distance_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_distance_gt": 2.102375288903014,
+          "claimable_allowance_requires_distance_lte": 2.102375288903014,
+          "claimable_exclusion_requires_mass_gap_lt": 0.47554112554112576,
+          "claimable_allowance_requires_mass_gap_gte": 0.47554112554112576
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_distance_gt": 2.1589438313979374,
+          "claimable_allowance_requires_distance_lte": 2.04580674640809,
+          "claimable_exclusion_requires_mass_gap_lt": 0.46612478035821264,
+          "claimable_allowance_requires_mass_gap_gte": 0.48514769351488823
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_distance_gt": 2.3852180013776327,
+          "claimable_allowance_requires_distance_lte": 1.8195325764283947,
+          "claimable_exclusion_requires_mass_gap_lt": 0.43028740420454636,
+          "claimable_allowance_requires_mass_gap_gte": 0.5255542222970128
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_distance_gt": 2.6680607138522516,
+          "claimable_allowance_requires_distance_lte": 1.5366898639537756,
+          "claimable_exclusion_requires_mass_gap_lt": 0.389340143833837,
+          "claimable_allowance_requires_mass_gap_gte": 0.5808272423545225
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_distance_gt": 3.2337461388014894,
+          "claimable_allowance_requires_distance_lte": 0.9710044390045374,
+          "claimable_exclusion_requires_mass_gap_lt": 0.31876474916456715,
+          "claimable_allowance_requires_mass_gap_gte": 0.7094239958263793
+        }
+      ]
+    }
+  ],
+  "slope_requirements": [
+    {
+      "label": "lambda_0.5",
+      "lambda_sdc": 0.5,
+      "distance_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_distance_gt": 1.4866038233823478,
+          "claimable_allowance_requires_distance_lte": 1.4866038233823478,
+          "claimable_exclusion_requires_mass_gap_lt": 0.47554112554112576,
+          "claimable_allowance_requires_mass_gap_gte": 0.47554112554112576
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_distance_gt": 1.5266038233823478,
+          "claimable_allowance_requires_distance_lte": 1.4466038233823477,
+          "claimable_exclusion_requires_mass_gap_lt": 0.46612478035821264,
+          "claimable_allowance_requires_mass_gap_gte": 0.48514769351488823
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_distance_gt": 1.6866038233823477,
+          "claimable_allowance_requires_distance_lte": 1.2866038233823478,
+          "claimable_exclusion_requires_mass_gap_lt": 0.43028740420454636,
+          "claimable_allowance_requires_mass_gap_gte": 0.5255542222970128
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_distance_gt": 1.8866038233823477,
+          "claimable_allowance_requires_distance_lte": 1.0866038233823478,
+          "claimable_exclusion_requires_mass_gap_lt": 0.389340143833837,
+          "claimable_allowance_requires_mass_gap_gte": 0.5808272423545225
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_distance_gt": 2.2866038233823476,
+          "claimable_allowance_requires_distance_lte": 0.6866038233823477,
+          "claimable_exclusion_requires_mass_gap_lt": 0.31876474916456715,
+          "claimable_allowance_requires_mass_gap_gte": 0.7094239958263793
+        }
+      ]
+    },
+    {
+      "label": "lambda_0.75",
+      "lambda_sdc": 0.75,
+      "distance_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_distance_gt": 0.9910692155882318,
+          "claimable_allowance_requires_distance_lte": 0.9910692155882318,
+          "claimable_exclusion_requires_mass_gap_lt": 0.47554112554112576,
+          "claimable_allowance_requires_mass_gap_gte": 0.47554112554112576
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_distance_gt": 1.0177358822548985,
+          "claimable_allowance_requires_distance_lte": 0.9644025489215652,
+          "claimable_exclusion_requires_mass_gap_lt": 0.46612478035821264,
+          "claimable_allowance_requires_mass_gap_gte": 0.48514769351488823
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_distance_gt": 1.1244025489215652,
+          "claimable_allowance_requires_distance_lte": 0.8577358822548985,
+          "claimable_exclusion_requires_mass_gap_lt": 0.43028740420454636,
+          "claimable_allowance_requires_mass_gap_gte": 0.5255542222970128
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_distance_gt": 1.2577358822548985,
+          "claimable_allowance_requires_distance_lte": 0.7244025489215652,
+          "claimable_exclusion_requires_mass_gap_lt": 0.389340143833837,
+          "claimable_allowance_requires_mass_gap_gte": 0.5808272423545225
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_distance_gt": 1.5244025489215651,
+          "claimable_allowance_requires_distance_lte": 0.4577358822548985,
+          "claimable_exclusion_requires_mass_gap_lt": 0.31876474916456715,
+          "claimable_allowance_requires_mass_gap_gte": 0.7094239958263793
+        }
+      ]
+    },
+    {
+      "label": "lambda_1",
+      "lambda_sdc": 1.0,
+      "distance_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_distance_gt": 0.7433019116911739,
+          "claimable_allowance_requires_distance_lte": 0.7433019116911739,
+          "claimable_exclusion_requires_mass_gap_lt": 0.47554112554112576,
+          "claimable_allowance_requires_mass_gap_gte": 0.47554112554112576
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_distance_gt": 0.7633019116911739,
+          "claimable_allowance_requires_distance_lte": 0.7233019116911739,
+          "claimable_exclusion_requires_mass_gap_lt": 0.46612478035821264,
+          "claimable_allowance_requires_mass_gap_gte": 0.48514769351488823
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_distance_gt": 0.8433019116911739,
+          "claimable_allowance_requires_distance_lte": 0.6433019116911739,
+          "claimable_exclusion_requires_mass_gap_lt": 0.43028740420454636,
+          "claimable_allowance_requires_mass_gap_gte": 0.5255542222970128
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_distance_gt": 0.9433019116911738,
+          "claimable_allowance_requires_distance_lte": 0.5433019116911739,
+          "claimable_exclusion_requires_mass_gap_lt": 0.389340143833837,
+          "claimable_allowance_requires_mass_gap_gte": 0.5808272423545225
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_distance_gt": 1.1433019116911738,
+          "claimable_allowance_requires_distance_lte": 0.34330191169117386,
+          "claimable_exclusion_requires_mass_gap_lt": 0.31876474916456715,
+          "claimable_allowance_requires_mass_gap_gte": 0.7094239958263793
+        }
+      ]
+    },
+    {
+      "label": "lambda_1.25",
+      "lambda_sdc": 1.25,
+      "distance_thresholds": [
+        {
+          "phi_tower_sigma": 0.0,
+          "claimable_exclusion_requires_distance_gt": 0.5946415293529391,
+          "claimable_allowance_requires_distance_lte": 0.5946415293529391,
+          "claimable_exclusion_requires_mass_gap_lt": 0.47554112554112576,
+          "claimable_allowance_requires_mass_gap_gte": 0.47554112554112576
+        },
+        {
+          "phi_tower_sigma": 0.01,
+          "claimable_exclusion_requires_distance_gt": 0.6106415293529391,
+          "claimable_allowance_requires_distance_lte": 0.5786415293529391,
+          "claimable_exclusion_requires_mass_gap_lt": 0.46612478035821264,
+          "claimable_allowance_requires_mass_gap_gte": 0.48514769351488823
+        },
+        {
+          "phi_tower_sigma": 0.05,
+          "claimable_exclusion_requires_distance_gt": 0.6746415293529391,
+          "claimable_allowance_requires_distance_lte": 0.5146415293529392,
+          "claimable_exclusion_requires_mass_gap_lt": 0.43028740420454636,
+          "claimable_allowance_requires_mass_gap_gte": 0.5255542222970128
+        },
+        {
+          "phi_tower_sigma": 0.1,
+          "claimable_exclusion_requires_distance_gt": 0.754641529352939,
+          "claimable_allowance_requires_distance_lte": 0.43464152935293915,
+          "claimable_exclusion_requires_mass_gap_lt": 0.389340143833837,
+          "claimable_allowance_requires_mass_gap_gte": 0.5808272423545225
+        },
+        {
+          "phi_tower_sigma": 0.2,
+          "claimable_exclusion_requires_distance_gt": 0.9146415293529391,
+          "claimable_allowance_requires_distance_lte": 0.27464152935293906,
+          "claimable_exclusion_requires_mass_gap_lt": 0.31876474916456715,
+          "claimable_allowance_requires_mass_gap_gte": 0.7094239958263793
+        }
+      ]
+    }
+  ],
+  "claimable_framework_exclusions_now": [],
+  "literature_guardrail": {
+    "claim": "These are SDC distance requirements for a future adapter, not framework predictions. They assume an exponential tower relation and still require a framework-specific Delta_moduli and normalization before any tower verdict is claimable.",
+    "primary_sources": [
+      {
+        "title": "Ooguri and Vafa, On the Geometry of the String Landscape and the Swampland",
+        "url": "https://arxiv.org/abs/hep-th/0605264"
+      },
+      {
+        "title": "Etheredge, Heidenreich, Kaya, Qiu, and Reece, Sharpening the Distance Conjecture in diverse dimensions",
+        "url": "https://arxiv.org/abs/2206.04063"
+      }
+    ]
+  },
+  "interpretation": "The SDC seed becomes operational only after a compactification or framework adapter supplies Delta_moduli. For d=4 and sigma=0.05, a sharpened lambda=1/sqrt(2) requires Delta above the listed threshold to claim tower exclusion."
+}
