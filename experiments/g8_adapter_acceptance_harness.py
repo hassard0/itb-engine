@@ -139,7 +139,7 @@ def _systematics_summary(packet: dict[str, Any]) -> dict[str, Any]:
             "systematics_status": status,
             "missing_components": list(REQUIRED_SYSTEMATICS_COMPONENTS),
             "components_closed": False,
-            "budget_closed": status in CLOSED_SYSTEMATICS_STATUSES,
+            "budget_closed": False,
         }
 
     status = _status_value(budget)

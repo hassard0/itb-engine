@@ -1,0 +1,1035 @@
+{
+  "version": "v2.80",
+  "basis": [
+    "v2.79_g8_adapter_acceptance_harness",
+    "current_primary_source_search_2026_06_19",
+    "hepdata_cms_energy_correlator_record"
+  ],
+  "axis": "g_8",
+  "candidate_count": 6,
+  "public_data_product_candidates": [
+    "cms_smp_22_015_hepdata_energy_correlators",
+    "cms_hin_23_004_heavy_ion_eec",
+    "cms_open_data_npoint_energy_correlators"
+  ],
+  "theory_bridge_candidates": [
+    "gravity_energy_correlators_four_dimensional",
+    "spinning_energy_correlators_theory",
+    "long_range_partial_wave_unitarity"
+  ],
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "axis_mapping_not_source_backed": 6,
+    "data_product_measures_alpha_s_and_qcd_jet_structure_not_qg_g8": 1,
+    "discriminator_math_not_excluding": 6,
+    "eft_validity_not_bounded": 6,
+    "external_measurement_evidence_not_ready": 6,
+    "framework_domain_not_validated": 6,
+    "g8_not_isolated_from_lower_matter_moments": 3,
+    "heavy_ion_medium_observable_not_low_energy_qg_eft_g8": 1,
+    "long_range_partial_wave_formalism_not_measurement_packet": 1,
+    "measurement_kind_not_external_numeric": 3,
+    "missing_external_numeric_measurement": 6,
+    "missing_public_likelihood_or_covariance": 6,
+    "missing_required_fields": 6,
+    "observable_basis_not_adapter_supported": 3,
+    "open_data_requires_new_analysis_before_any_adapter_packet": 1,
+    "projection_missing_g8_component": 3,
+    "spin_sensitive_formalism_not_external_g8_measurement": 1,
+    "systematics_not_closed": 6,
+    "theory_calculation_not_external_measurement": 1,
+    "wilson_coefficient_normalization_not_engine_g8": 6
+  },
+  "rows": [
+    {
+      "label": "cms_smp_22_015_hepdata_energy_correlators",
+      "title": "CMS energy correlators inside jets and alpha_s determination",
+      "source_url": "https://doi.org/10.17182/hepdata.147275",
+      "publication_url": "https://doi.org/10.1103/PhysRevLett.133.071903",
+      "data_product_url": "https://www.hepdata.net/record/150737",
+      "data_product_kind": "hepdata_collection_and_table_dois",
+      "acquisition_status": "public_table_collection_identified",
+      "external_numerical_data": true,
+      "adapter_role": "data_seed_not_qg_g8_packet",
+      "adapter_assessment": {
+        "label": "cms_smp_22_015_hepdata_energy_correlators",
+        "axis": "g_8",
+        "route": "cms_smp_22_015_hepdata_energy_correlators",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty"
+        ],
+        "projection_summary": {
+          "projection_present": true,
+          "g8_component": null,
+          "lower_moment_l1": 0.0,
+          "pure_g8_projection": false,
+          "lower_moment_mixing_controlled": false,
+          "mixing_status": "uncontrolled"
+        },
+        "likelihood_summary": {
+          "likelihood_status": "public_tables_not_engine_likelihood",
+          "engine_usable": false,
+          "contains_g8": false
+        },
+        "systematics_summary": {
+          "systematics_status": "bounded",
+          "missing_components": [
+            "angular_acceptance",
+            "calibration",
+            "background_model",
+            "eft_truncation",
+            "renormalization_or_running"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "evidence": {
+          "axis": "g_8",
+          "route": "cms_smp_22_015_hepdata_energy_correlators",
+          "source_url": "https://doi.org/10.17182/hepdata.147275",
+          "source_type": "public_dataset",
+          "measurement_kind": "external_numeric_measurement",
+          "numerical_value": null,
+          "uncertainty": null,
+          "axis_mapping_kind": "adapter_incomplete",
+          "systematics_status": "bounded",
+          "metadata": {
+            "observable_basis": "qcd_jet_energy_correlator",
+            "wilson_coefficient_normalization": "qcd_alpha_s_not_engine_g8",
+            "cutoff_or_energy_domain": "qcd_jet_substructure_not_qg_eft",
+            "projection_summary": {
+              "projection_present": true,
+              "g8_component": null,
+              "lower_moment_l1": 0.0,
+              "pure_g8_projection": false,
+              "lower_moment_mixing_controlled": false,
+              "mixing_status": "uncontrolled"
+            },
+            "likelihood_summary": {
+              "likelihood_status": "public_tables_not_engine_likelihood",
+              "engine_usable": false,
+              "contains_g8": false
+            },
+            "systematics_summary": {
+              "systematics_status": "bounded",
+              "missing_components": [
+                "angular_acceptance",
+                "calibration",
+                "background_model",
+                "eft_truncation",
+                "renormalization_or_running"
+              ],
+              "components_closed": false,
+              "budget_closed": false
+            },
+            "synthetic_fixture": false
+          }
+        },
+        "promotion_guard": {
+          "ready_for_promotion": false,
+          "discriminator_claimable_by_math": false,
+          "evidence_ready": false,
+          "validation": {
+            "ready_for_discriminator_claim": false,
+            "missing_fields": [],
+            "source_url_valid": true,
+            "source_type_valid": true,
+            "measurement_kind_valid": true,
+            "axis_mapping_valid": false,
+            "systematics_closed": true,
+            "numerical_value_present": false,
+            "uncertainty_valid": false,
+            "blockers": [
+              "axis_mapping_not_source_backed",
+              "missing_external_numeric_measurement"
+            ]
+          },
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "discriminator_math_not_excluding",
+            "external_measurement_evidence_not_ready",
+            "missing_external_numeric_measurement"
+          ]
+        },
+        "adapter_acceptance_ready": false,
+        "ready_for_g8_claim": false,
+        "acceptance_blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "eft_validity_not_bounded",
+          "external_measurement_evidence_not_ready",
+          "framework_domain_not_validated",
+          "g8_not_isolated_from_lower_matter_moments",
+          "missing_external_numeric_measurement",
+          "missing_public_likelihood_or_covariance",
+          "missing_required_fields",
+          "observable_basis_not_adapter_supported",
+          "projection_missing_g8_component",
+          "systematics_not_closed",
+          "wilson_coefficient_normalization_not_engine_g8"
+        ],
+        "claim_blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "eft_validity_not_bounded",
+          "external_measurement_evidence_not_ready",
+          "framework_domain_not_validated",
+          "g8_not_isolated_from_lower_matter_moments",
+          "missing_external_numeric_measurement",
+          "missing_public_likelihood_or_covariance",
+          "missing_required_fields",
+          "observable_basis_not_adapter_supported",
+          "projection_missing_g8_component",
+          "systematics_not_closed",
+          "wilson_coefficient_normalization_not_engine_g8"
+        ],
+        "frontier_status": "g8_adapter_packet_blocked"
+      },
+      "acquisition_blockers": [
+        "axis_mapping_not_source_backed",
+        "data_product_measures_alpha_s_and_qcd_jet_structure_not_qg_g8",
+        "discriminator_math_not_excluding",
+        "eft_validity_not_bounded",
+        "external_measurement_evidence_not_ready",
+        "framework_domain_not_validated",
+        "g8_not_isolated_from_lower_matter_moments",
+        "missing_external_numeric_measurement",
+        "missing_public_likelihood_or_covariance",
+        "missing_required_fields",
+        "observable_basis_not_adapter_supported",
+        "projection_missing_g8_component",
+        "systematics_not_closed",
+        "wilson_coefficient_normalization_not_engine_g8"
+      ],
+      "ready_for_g8_claim": false
+    },
+    {
+      "label": "cms_hin_23_004_heavy_ion_eec",
+      "title": "CMS heavy-ion energy-energy correlators inside jets",
+      "source_url": "https://arxiv.org/abs/2503.19993",
+      "publication_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-23-004/",
+      "data_product_url": "https://cms-results.web.cern.ch/cms-results/public-results/publications/HIN-23-004/",
+      "data_product_kind": "publication_page_links_hepdata_record",
+      "acquisition_status": "public_measurement_with_hepdata_link_identified",
+      "external_numerical_data": true,
+      "adapter_role": "heavy_ion_qcd_design_seed_not_qg_g8",
+      "adapter_assessment": {
+        "label": "cms_hin_23_004_heavy_ion_eec",
+        "axis": "g_8",
+        "route": "cms_hin_23_004_heavy_ion_eec",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty"
+        ],
+        "projection_summary": {
+          "projection_present": true,
+          "g8_component": null,
+          "lower_moment_l1": 0.0,
+          "pure_g8_projection": false,
+          "lower_moment_mixing_controlled": false,
+          "mixing_status": "uncontrolled"
+        },
+        "likelihood_summary": {
+          "likelihood_status": "hepdata_tables_not_engine_likelihood",
+          "engine_usable": false,
+          "contains_g8": false
+        },
+        "systematics_summary": {
+          "systematics_status": "bounded",
+          "missing_components": [
+            "angular_acceptance",
+            "calibration",
+            "background_model",
+            "eft_truncation",
+            "renormalization_or_running"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "evidence": {
+          "axis": "g_8",
+          "route": "cms_hin_23_004_heavy_ion_eec",
+          "source_url": "https://arxiv.org/abs/2503.19993",
+          "source_type": "primary_literature",
+          "measurement_kind": "external_numeric_measurement",
+          "numerical_value": null,
+          "uncertainty": null,
+          "axis_mapping_kind": "adapter_incomplete",
+          "systematics_status": "bounded",
+          "metadata": {
+            "observable_basis": "qcd_heavy_ion_energy_correlator",
+            "wilson_coefficient_normalization": "qgp_model_comparison_not_engine_g8",
+            "cutoff_or_energy_domain": "heavy_ion_qcd_medium_not_qg_eft",
+            "projection_summary": {
+              "projection_present": true,
+              "g8_component": null,
+              "lower_moment_l1": 0.0,
+              "pure_g8_projection": false,
+              "lower_moment_mixing_controlled": false,
+              "mixing_status": "uncontrolled"
+            },
+            "likelihood_summary": {
+              "likelihood_status": "hepdata_tables_not_engine_likelihood",
+              "engine_usable": false,
+              "contains_g8": false
+            },
+            "systematics_summary": {
+              "systematics_status": "bounded",
+              "missing_components": [
+                "angular_acceptance",
+                "calibration",
+                "background_model",
+                "eft_truncation",
+                "renormalization_or_running"
+              ],
+              "components_closed": false,
+              "budget_closed": false
+            },
+            "synthetic_fixture": false
+          }
+        },
+        "promotion_guard": {
+          "ready_for_promotion": false,
+          "discriminator_claimable_by_math": false,
+          "evidence_ready": false,
+          "validation": {
+            "ready_for_discriminator_claim": false,
+            "missing_fields": [],
+            "source_url_valid": true,
+            "source_type_valid": true,
+            "measurement_kind_valid": true,
+            "axis_mapping_valid": false,
+            "systematics_closed": true,
+            "numerical_value_present": false,
+            "uncertainty_valid": false,
+            "blockers": [
+              "axis_mapping_not_source_backed",
+              "missing_external_numeric_measurement"
+            ]
+          },
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "discriminator_math_not_excluding",
+            "external_measurement_evidence_not_ready",
+            "missing_external_numeric_measurement"
+          ]
+        },
+        "adapter_acceptance_ready": false,
+        "ready_for_g8_claim": false,
+        "acceptance_blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "eft_validity_not_bounded",
+          "external_measurement_evidence_not_ready",
+          "framework_domain_not_validated",
+          "g8_not_isolated_from_lower_matter_moments",
+          "missing_external_numeric_measurement",
+          "missing_public_likelihood_or_covariance",
+          "missing_required_fields",
+          "observable_basis_not_adapter_supported",
+          "projection_missing_g8_component",
+          "systematics_not_closed",
+          "wilson_coefficient_normalization_not_engine_g8"
+        ],
+        "claim_blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "eft_validity_not_bounded",
+          "external_measurement_evidence_not_ready",
+          "framework_domain_not_validated",
+          "g8_not_isolated_from_lower_matter_moments",
+          "missing_external_numeric_measurement",
+          "missing_public_likelihood_or_covariance",
+          "missing_required_fields",
+          "observable_basis_not_adapter_supported",
+          "projection_missing_g8_component",
+          "systematics_not_closed",
+          "wilson_coefficient_normalization_not_engine_g8"
+        ],
+        "frontier_status": "g8_adapter_packet_blocked"
+      },
+      "acquisition_blockers": [
+        "axis_mapping_not_source_backed",
+        "discriminator_math_not_excluding",
+        "eft_validity_not_bounded",
+        "external_measurement_evidence_not_ready",
+        "framework_domain_not_validated",
+        "g8_not_isolated_from_lower_matter_moments",
+        "heavy_ion_medium_observable_not_low_energy_qg_eft_g8",
+        "missing_external_numeric_measurement",
+        "missing_public_likelihood_or_covariance",
+        "missing_required_fields",
+        "observable_basis_not_adapter_supported",
+        "projection_missing_g8_component",
+        "systematics_not_closed",
+        "wilson_coefficient_normalization_not_engine_g8"
+      ],
+      "ready_for_g8_claim": false
+    },
+    {
+      "label": "cms_open_data_npoint_energy_correlators",
+      "title": "N-point energy correlators inside CMS open data",
+      "source_url": "https://arxiv.org/abs/2201.07800",
+      "publication_url": "https://arxiv.org/abs/2201.07800",
+      "data_product_url": "https://opendata.cern.ch/",
+      "data_product_kind": "cms_open_data_analysis",
+      "acquisition_status": "open_data_analysis_identified",
+      "external_numerical_data": true,
+      "adapter_role": "open_data_method_seed_not_engine_likelihood",
+      "adapter_assessment": {
+        "label": "cms_open_data_npoint_energy_correlators",
+        "axis": "g_8",
+        "route": "cms_open_data_npoint_energy_correlators",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty"
+        ],
+        "projection_summary": {
+          "projection_present": true,
+          "g8_component": null,
+          "lower_moment_l1": 0.0,
+          "pure_g8_projection": false,
+          "lower_moment_mixing_controlled": false,
+          "mixing_status": "uncontrolled"
+        },
+        "likelihood_summary": {
+          "likelihood_status": "open_data_analysis_not_engine_likelihood",
+          "engine_usable": false,
+          "contains_g8": false
+        },
+        "systematics_summary": {
+          "systematics_status": "open",
+          "missing_components": [
+            "angular_acceptance",
+            "calibration",
+            "background_model",
+            "eft_truncation",
+            "renormalization_or_running"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "evidence": {
+          "axis": "g_8",
+          "route": "cms_open_data_npoint_energy_correlators",
+          "source_url": "https://arxiv.org/abs/2201.07800",
+          "source_type": "primary_literature",
+          "measurement_kind": "external_numeric_measurement",
+          "numerical_value": null,
+          "uncertainty": null,
+          "axis_mapping_kind": "adapter_incomplete",
+          "systematics_status": "open",
+          "metadata": {
+            "observable_basis": "qcd_multipoint_energy_flow",
+            "wilson_coefficient_normalization": "qcd_jet_observable_not_engine_g8",
+            "cutoff_or_energy_domain": "qcd_open_data_not_qg_eft",
+            "projection_summary": {
+              "projection_present": true,
+              "g8_component": null,
+              "lower_moment_l1": 0.0,
+              "pure_g8_projection": false,
+              "lower_moment_mixing_controlled": false,
+              "mixing_status": "uncontrolled"
+            },
+            "likelihood_summary": {
+              "likelihood_status": "open_data_analysis_not_engine_likelihood",
+              "engine_usable": false,
+              "contains_g8": false
+            },
+            "systematics_summary": {
+              "systematics_status": "open",
+              "missing_components": [
+                "angular_acceptance",
+                "calibration",
+                "background_model",
+                "eft_truncation",
+                "renormalization_or_running"
+              ],
+              "components_closed": false,
+              "budget_closed": false
+            },
+            "synthetic_fixture": false
+          }
+        },
+        "promotion_guard": {
+          "ready_for_promotion": false,
+          "discriminator_claimable_by_math": false,
+          "evidence_ready": false,
+          "validation": {
+            "ready_for_discriminator_claim": false,
+            "missing_fields": [],
+            "source_url_valid": true,
+            "source_type_valid": true,
+            "measurement_kind_valid": true,
+            "axis_mapping_valid": false,
+            "systematics_closed": false,
+            "numerical_value_present": false,
+            "uncertainty_valid": false,
+            "blockers": [
+              "axis_mapping_not_source_backed",
+              "missing_external_numeric_measurement",
+              "systematics_not_closed"
+            ]
+          },
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "discriminator_math_not_excluding",
+            "external_measurement_evidence_not_ready",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "adapter_acceptance_ready": false,
+        "ready_for_g8_claim": false,
+        "acceptance_blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "eft_validity_not_bounded",
+          "external_measurement_evidence_not_ready",
+          "framework_domain_not_validated",
+          "g8_not_isolated_from_lower_matter_moments",
+          "missing_external_numeric_measurement",
+          "missing_public_likelihood_or_covariance",
+          "missing_required_fields",
+          "observable_basis_not_adapter_supported",
+          "projection_missing_g8_component",
+          "systematics_not_closed",
+          "wilson_coefficient_normalization_not_engine_g8"
+        ],
+        "claim_blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "eft_validity_not_bounded",
+          "external_measurement_evidence_not_ready",
+          "framework_domain_not_validated",
+          "g8_not_isolated_from_lower_matter_moments",
+          "missing_external_numeric_measurement",
+          "missing_public_likelihood_or_covariance",
+          "missing_required_fields",
+          "observable_basis_not_adapter_supported",
+          "projection_missing_g8_component",
+          "systematics_not_closed",
+          "wilson_coefficient_normalization_not_engine_g8"
+        ],
+        "frontier_status": "g8_adapter_packet_blocked"
+      },
+      "acquisition_blockers": [
+        "axis_mapping_not_source_backed",
+        "discriminator_math_not_excluding",
+        "eft_validity_not_bounded",
+        "external_measurement_evidence_not_ready",
+        "framework_domain_not_validated",
+        "g8_not_isolated_from_lower_matter_moments",
+        "missing_external_numeric_measurement",
+        "missing_public_likelihood_or_covariance",
+        "missing_required_fields",
+        "observable_basis_not_adapter_supported",
+        "open_data_requires_new_analysis_before_any_adapter_packet",
+        "projection_missing_g8_component",
+        "systematics_not_closed",
+        "wilson_coefficient_normalization_not_engine_g8"
+      ],
+      "ready_for_g8_claim": false
+    },
+    {
+      "label": "gravity_energy_correlators_four_dimensional",
+      "title": "Energy correlators in four-dimensional gravity",
+      "source_url": "https://arxiv.org/abs/2512.23791",
+      "publication_url": "https://arxiv.org/abs/2512.23791",
+      "data_product_url": null,
+      "data_product_kind": "theory_calculation",
+      "acquisition_status": "theory_bridge_identified",
+      "external_numerical_data": false,
+      "adapter_role": "gravity_detector_observable_bridge",
+      "adapter_assessment": {
+        "label": "gravity_energy_correlators_four_dimensional",
+        "axis": "g_8",
+        "route": "gravity_energy_correlators_four_dimensional",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty"
+        ],
+        "projection_summary": {
+          "projection_present": true,
+          "g8_component": 1.0,
+          "lower_moment_l1": 0.0,
+          "pure_g8_projection": true,
+          "lower_moment_mixing_controlled": true,
+          "mixing_status": "uncontrolled"
+        },
+        "likelihood_summary": {
+          "likelihood_status": "none_theory_only",
+          "engine_usable": false,
+          "contains_g8": false
+        },
+        "systematics_summary": {
+          "systematics_status": "open",
+          "missing_components": [
+            "angular_acceptance",
+            "calibration",
+            "background_model",
+            "eft_truncation",
+            "renormalization_or_running"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "evidence": {
+          "axis": "g_8",
+          "route": "gravity_energy_correlators_four_dimensional",
+          "source_url": "https://arxiv.org/abs/2512.23791",
+          "source_type": "primary_literature",
+          "measurement_kind": "theory_formalism",
+          "numerical_value": null,
+          "uncertainty": null,
+          "axis_mapping_kind": "adapter_incomplete",
+          "systematics_status": "open",
+          "metadata": {
+            "observable_basis": "asymptotic_detector_moment",
+            "wilson_coefficient_normalization": "gravity_correlator_not_engine_g8",
+            "cutoff_or_energy_domain": "theory_calculation_no_external_eft_window",
+            "projection_summary": {
+              "projection_present": true,
+              "g8_component": 1.0,
+              "lower_moment_l1": 0.0,
+              "pure_g8_projection": true,
+              "lower_moment_mixing_controlled": true,
+              "mixing_status": "uncontrolled"
+            },
+            "likelihood_summary": {
+              "likelihood_status": "none_theory_only",
+              "engine_usable": false,
+              "contains_g8": false
+            },
+            "systematics_summary": {
+              "systematics_status": "open",
+              "missing_components": [
+                "angular_acceptance",
+                "calibration",
+                "background_model",
+                "eft_truncation",
+                "renormalization_or_running"
+              ],
+              "components_closed": false,
+              "budget_closed": false
+            },
+            "synthetic_fixture": false
+          }
+        },
+        "promotion_guard": {
+          "ready_for_promotion": false,
+          "discriminator_claimable_by_math": false,
+          "evidence_ready": false,
+          "validation": {
+            "ready_for_discriminator_claim": false,
+            "missing_fields": [],
+            "source_url_valid": true,
+            "source_type_valid": true,
+            "measurement_kind_valid": false,
+            "axis_mapping_valid": false,
+            "systematics_closed": false,
+            "numerical_value_present": false,
+            "uncertainty_valid": false,
+            "blockers": [
+              "axis_mapping_not_source_backed",
+              "measurement_kind_not_external_numeric",
+              "missing_external_numeric_measurement",
+              "systematics_not_closed"
+            ]
+          },
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "discriminator_math_not_excluding",
+            "external_measurement_evidence_not_ready",
+            "measurement_kind_not_external_numeric",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "adapter_acceptance_ready": false,
+        "ready_for_g8_claim": false,
+        "acceptance_blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "eft_validity_not_bounded",
+          "external_measurement_evidence_not_ready",
+          "framework_domain_not_validated",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "missing_public_likelihood_or_covariance",
+          "missing_required_fields",
+          "systematics_not_closed",
+          "wilson_coefficient_normalization_not_engine_g8"
+        ],
+        "claim_blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "eft_validity_not_bounded",
+          "external_measurement_evidence_not_ready",
+          "framework_domain_not_validated",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "missing_public_likelihood_or_covariance",
+          "missing_required_fields",
+          "systematics_not_closed",
+          "wilson_coefficient_normalization_not_engine_g8"
+        ],
+        "frontier_status": "g8_adapter_packet_blocked"
+      },
+      "acquisition_blockers": [
+        "axis_mapping_not_source_backed",
+        "discriminator_math_not_excluding",
+        "eft_validity_not_bounded",
+        "external_measurement_evidence_not_ready",
+        "framework_domain_not_validated",
+        "measurement_kind_not_external_numeric",
+        "missing_external_numeric_measurement",
+        "missing_public_likelihood_or_covariance",
+        "missing_required_fields",
+        "systematics_not_closed",
+        "theory_calculation_not_external_measurement",
+        "wilson_coefficient_normalization_not_engine_g8"
+      ],
+      "ready_for_g8_claim": false
+    },
+    {
+      "label": "spinning_energy_correlators_theory",
+      "title": "Energy correlators of spinning sources",
+      "source_url": "https://arxiv.org/abs/2512.16985",
+      "publication_url": "https://arxiv.org/abs/2512.16985",
+      "data_product_url": null,
+      "data_product_kind": "theory_calculation",
+      "acquisition_status": "spin_sensitive_theory_bridge_identified",
+      "external_numerical_data": false,
+      "adapter_role": "angular_information_bridge",
+      "adapter_assessment": {
+        "label": "spinning_energy_correlators_theory",
+        "axis": "g_8",
+        "route": "spinning_energy_correlators_theory",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty"
+        ],
+        "projection_summary": {
+          "projection_present": true,
+          "g8_component": 1.0,
+          "lower_moment_l1": 0.0,
+          "pure_g8_projection": true,
+          "lower_moment_mixing_controlled": true,
+          "mixing_status": "uncontrolled"
+        },
+        "likelihood_summary": {
+          "likelihood_status": "none_theory_only",
+          "engine_usable": false,
+          "contains_g8": false
+        },
+        "systematics_summary": {
+          "systematics_status": "open",
+          "missing_components": [
+            "angular_acceptance",
+            "calibration",
+            "background_model",
+            "eft_truncation",
+            "renormalization_or_running"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "evidence": {
+          "axis": "g_8",
+          "route": "spinning_energy_correlators_theory",
+          "source_url": "https://arxiv.org/abs/2512.16985",
+          "source_type": "primary_literature",
+          "measurement_kind": "theory_formalism",
+          "numerical_value": null,
+          "uncertainty": null,
+          "axis_mapping_kind": "adapter_incomplete",
+          "systematics_status": "open",
+          "metadata": {
+            "observable_basis": "asymptotic_detector_moment",
+            "wilson_coefficient_normalization": "spinning_correlator_not_engine_g8",
+            "cutoff_or_energy_domain": "theory_calculation_no_external_eft_window",
+            "projection_summary": {
+              "projection_present": true,
+              "g8_component": 1.0,
+              "lower_moment_l1": 0.0,
+              "pure_g8_projection": true,
+              "lower_moment_mixing_controlled": true,
+              "mixing_status": "uncontrolled"
+            },
+            "likelihood_summary": {
+              "likelihood_status": "none_theory_only",
+              "engine_usable": false,
+              "contains_g8": false
+            },
+            "systematics_summary": {
+              "systematics_status": "open",
+              "missing_components": [
+                "angular_acceptance",
+                "calibration",
+                "background_model",
+                "eft_truncation",
+                "renormalization_or_running"
+              ],
+              "components_closed": false,
+              "budget_closed": false
+            },
+            "synthetic_fixture": false
+          }
+        },
+        "promotion_guard": {
+          "ready_for_promotion": false,
+          "discriminator_claimable_by_math": false,
+          "evidence_ready": false,
+          "validation": {
+            "ready_for_discriminator_claim": false,
+            "missing_fields": [],
+            "source_url_valid": true,
+            "source_type_valid": true,
+            "measurement_kind_valid": false,
+            "axis_mapping_valid": false,
+            "systematics_closed": false,
+            "numerical_value_present": false,
+            "uncertainty_valid": false,
+            "blockers": [
+              "axis_mapping_not_source_backed",
+              "measurement_kind_not_external_numeric",
+              "missing_external_numeric_measurement",
+              "systematics_not_closed"
+            ]
+          },
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "discriminator_math_not_excluding",
+            "external_measurement_evidence_not_ready",
+            "measurement_kind_not_external_numeric",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "adapter_acceptance_ready": false,
+        "ready_for_g8_claim": false,
+        "acceptance_blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "eft_validity_not_bounded",
+          "external_measurement_evidence_not_ready",
+          "framework_domain_not_validated",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "missing_public_likelihood_or_covariance",
+          "missing_required_fields",
+          "systematics_not_closed",
+          "wilson_coefficient_normalization_not_engine_g8"
+        ],
+        "claim_blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "eft_validity_not_bounded",
+          "external_measurement_evidence_not_ready",
+          "framework_domain_not_validated",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "missing_public_likelihood_or_covariance",
+          "missing_required_fields",
+          "systematics_not_closed",
+          "wilson_coefficient_normalization_not_engine_g8"
+        ],
+        "frontier_status": "g8_adapter_packet_blocked"
+      },
+      "acquisition_blockers": [
+        "axis_mapping_not_source_backed",
+        "discriminator_math_not_excluding",
+        "eft_validity_not_bounded",
+        "external_measurement_evidence_not_ready",
+        "framework_domain_not_validated",
+        "measurement_kind_not_external_numeric",
+        "missing_external_numeric_measurement",
+        "missing_public_likelihood_or_covariance",
+        "missing_required_fields",
+        "spin_sensitive_formalism_not_external_g8_measurement",
+        "systematics_not_closed",
+        "wilson_coefficient_normalization_not_engine_g8"
+      ],
+      "ready_for_g8_claim": false
+    },
+    {
+      "label": "long_range_partial_wave_unitarity",
+      "title": "Partial-wave unitarity and long-range interactions",
+      "source_url": "https://arxiv.org/abs/2606.19432",
+      "publication_url": "https://arxiv.org/abs/2606.19432",
+      "data_product_url": null,
+      "data_product_kind": "theory_formalism",
+      "acquisition_status": "current_long_range_partial_wave_bridge_identified",
+      "external_numerical_data": false,
+      "adapter_role": "ir_obstruction_bridge",
+      "adapter_assessment": {
+        "label": "long_range_partial_wave_unitarity",
+        "axis": "g_8",
+        "route": "long_range_partial_wave_unitarity",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty"
+        ],
+        "projection_summary": {
+          "projection_present": true,
+          "g8_component": 1.0,
+          "lower_moment_l1": 0.0,
+          "pure_g8_projection": true,
+          "lower_moment_mixing_controlled": true,
+          "mixing_status": "uncontrolled"
+        },
+        "likelihood_summary": {
+          "likelihood_status": "none_theory_only",
+          "engine_usable": false,
+          "contains_g8": false
+        },
+        "systematics_summary": {
+          "systematics_status": "open",
+          "missing_components": [
+            "angular_acceptance",
+            "calibration",
+            "background_model",
+            "eft_truncation",
+            "renormalization_or_running"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "evidence": {
+          "axis": "g_8",
+          "route": "long_range_partial_wave_unitarity",
+          "source_url": "https://arxiv.org/abs/2606.19432",
+          "source_type": "primary_literature",
+          "measurement_kind": "theory_formalism",
+          "numerical_value": null,
+          "uncertainty": null,
+          "axis_mapping_kind": "adapter_incomplete",
+          "systematics_status": "open",
+          "metadata": {
+            "observable_basis": "spin_4_partial_wave",
+            "wilson_coefficient_normalization": "long_range_partial_wave_not_engine_g8",
+            "cutoff_or_energy_domain": "formalism_only",
+            "projection_summary": {
+              "projection_present": true,
+              "g8_component": 1.0,
+              "lower_moment_l1": 0.0,
+              "pure_g8_projection": true,
+              "lower_moment_mixing_controlled": true,
+              "mixing_status": "uncontrolled"
+            },
+            "likelihood_summary": {
+              "likelihood_status": "none_theory_only",
+              "engine_usable": false,
+              "contains_g8": false
+            },
+            "systematics_summary": {
+              "systematics_status": "open",
+              "missing_components": [
+                "angular_acceptance",
+                "calibration",
+                "background_model",
+                "eft_truncation",
+                "renormalization_or_running"
+              ],
+              "components_closed": false,
+              "budget_closed": false
+            },
+            "synthetic_fixture": false
+          }
+        },
+        "promotion_guard": {
+          "ready_for_promotion": false,
+          "discriminator_claimable_by_math": false,
+          "evidence_ready": false,
+          "validation": {
+            "ready_for_discriminator_claim": false,
+            "missing_fields": [],
+            "source_url_valid": true,
+            "source_type_valid": true,
+            "measurement_kind_valid": false,
+            "axis_mapping_valid": false,
+            "systematics_closed": false,
+            "numerical_value_present": false,
+            "uncertainty_valid": false,
+            "blockers": [
+              "axis_mapping_not_source_backed",
+              "measurement_kind_not_external_numeric",
+              "missing_external_numeric_measurement",
+              "systematics_not_closed"
+            ]
+          },
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "discriminator_math_not_excluding",
+            "external_measurement_evidence_not_ready",
+            "measurement_kind_not_external_numeric",
+            "missing_external_numeric_measurement",
+            "systematics_not_closed"
+          ]
+        },
+        "adapter_acceptance_ready": false,
+        "ready_for_g8_claim": false,
+        "acceptance_blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "eft_validity_not_bounded",
+          "external_measurement_evidence_not_ready",
+          "framework_domain_not_validated",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "missing_public_likelihood_or_covariance",
+          "missing_required_fields",
+          "systematics_not_closed",
+          "wilson_coefficient_normalization_not_engine_g8"
+        ],
+        "claim_blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "eft_validity_not_bounded",
+          "external_measurement_evidence_not_ready",
+          "framework_domain_not_validated",
+          "measurement_kind_not_external_numeric",
+          "missing_external_numeric_measurement",
+          "missing_public_likelihood_or_covariance",
+          "missing_required_fields",
+          "systematics_not_closed",
+          "wilson_coefficient_normalization_not_engine_g8"
+        ],
+        "frontier_status": "g8_adapter_packet_blocked"
+      },
+      "acquisition_blockers": [
+        "axis_mapping_not_source_backed",
+        "discriminator_math_not_excluding",
+        "eft_validity_not_bounded",
+        "external_measurement_evidence_not_ready",
+        "framework_domain_not_validated",
+        "long_range_partial_wave_formalism_not_measurement_packet",
+        "measurement_kind_not_external_numeric",
+        "missing_external_numeric_measurement",
+        "missing_public_likelihood_or_covariance",
+        "missing_required_fields",
+        "systematics_not_closed",
+        "wilson_coefficient_normalization_not_engine_g8"
+      ],
+      "ready_for_g8_claim": false
+    }
+  ],
+  "route_status": "public_data_products_exist_but_no_g8_adapter_packet",
+  "best_next_artifact": "Either a source-backed derivation from a public energy-correlator dataset to engine g_8 with covariance, or a new spin-4/detector measurement published directly in the low-energy QG EFT basis.",
+  "interpretation": "The acquisition audit finds public, citable energy-correlator data products and useful gravity/partial-wave theory bridges. They do not satisfy the v2.79 adapter gate because none supplies an engine-normalized g_8 likelihood, bounded QG EFT domain, and framework-exclusion calculation."
+}
