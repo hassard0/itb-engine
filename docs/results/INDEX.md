@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (160 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (161 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -213,3 +213,4 @@ Auto-generated front door to the full research program (160 notes). Regenerate w
 | v2.51 | [v2.51 - Weyl/g8 observable sourceability: source-rich, measurement-blocked](2026-06-19-v2.51-weyl-g8-observable-sourceability.md) | v2.51 audits whether the robust `g_C/g_8` frontier has source-backed measurement routes; it finds theory support but zero claim-ready external numerical cuts. |
 | v2.52 | [v2.52 - Non-tower promotion guard: internal cuts cannot become claims](2026-06-19-v2.52-nontower-promotion-guard.md) | v2.52 adds a reusable external-measurement guard and proves every current non-tower route remains blocked while a synthetic fully sourced fixture can pass. |
 | v2.53 | [v2.53 - Unified discriminator route frontier: organized, still unsolved](2026-06-19-v2.53-unified-discriminator-route-frontier.md) | v2.53 consolidates tower, birefringence, Weyl `g_C`, and matter `g_8` routes into one frontier table with zero current claim-ready paths. |
+| v2.54 | [v2.54 - g8 high-moment measurement specification: the route is defined, not satisfied](2026-06-19-v2.54-g8-high-moment-measurement-specification.md) | v2.54 turns the `g_8` high-moment route into an explicit external-measurement contract, rejecting forward-energy artifacts and keeping the route non-claimable. |

@@ -1,0 +1,251 @@
+{
+  "basis": [
+    "v1.36_partial_wave_identifiability",
+    "v1.88_high_moment_design_probe",
+    "v2.51_g8_sourceability_audit",
+    "v2.52_nontower_promotion_guard",
+    "v2.53_unified_route_frontier"
+  ],
+  "axis": "g_8",
+  "route": "matter_high_moment_g_8",
+  "primary_sources": [
+    {
+      "title": "Caron-Huot et al., Sharp Boundaries for the Swampland",
+      "url": "https://arxiv.org/abs/2102.08951",
+      "role": "Dispersive sum-rule basis for higher-derivative gravitational couplings away from the naive forward-limit obstruction."
+    },
+    {
+      "title": "Caron-Huot et al., Detectors in weakly-coupled field theories",
+      "url": "https://arxiv.org/abs/2209.00008",
+      "role": "Asymptotic detector/light-ray observable framework that motivates a published detector-moment route rather than an internal toy cut."
+    },
+    {
+      "title": "Bresciani, Levati, and Paradisi, partial-wave unitarity bounds",
+      "url": "https://arxiv.org/abs/2504.12855",
+      "role": "Source for modern partial-wave unitarity formalism relevant to higher-spin and gravitational EFT amplitude constraints."
+    }
+  ],
+  "design_summaries": {
+    "forward_only_narrow": {
+      "condition_number": 11955.960225813511,
+      "resolution": {
+        "g_4": 0.27371360085087126,
+        "g_6": 0.7127607734245094,
+        "g_8": 0.45316251399991403
+      },
+      "g8_resolution_fraction_of_frontier": 0.9621284798299662,
+      "pure_g8_row_count": 0,
+      "pure_g8_row_indices": [],
+      "column_purity": 0.37878000052147703,
+      "geometry_passes_isolation_gate": false,
+      "status": "rejected_forward_degeneracy"
+    },
+    "forward_only_wide_energy": {
+      "condition_number": 53422.29889488822,
+      "resolution": {
+        "g_4": 0.03243670468663785,
+        "g_6": 0.028049216172685815,
+        "g_8": 0.005919082238650589
+      },
+      "g8_resolution_fraction_of_frontier": 0.012567053585245413,
+      "pure_g8_row_count": 0,
+      "pure_g8_row_indices": [],
+      "column_purity": 0.7223852631453055,
+      "geometry_passes_isolation_gate": false,
+      "status": "rejected_energy_reach_artifact_without_eft_control"
+    },
+    "high_moment_design_probe": {
+      "condition_number": 131.90016389905819,
+      "resolution": {
+        "g_4": 0.0,
+        "g_6": 0.0888862709152142,
+        "g_8": 0.09844404833892985
+      },
+      "g8_resolution_fraction_of_frontier": 0.20901071834167698,
+      "pure_g8_row_count": 0,
+      "pure_g8_row_indices": [],
+      "column_purity": 0.474489507459951,
+      "geometry_passes_isolation_gate": false,
+      "status": "internal_design_probe_needs_external_mapping"
+    },
+    "spin_0_2_4_partial_waves": {
+      "condition_number": 14.640544888458892,
+      "resolution": {
+        "g_4": 0.01754183519890887,
+        "g_6": 0.019942347117543543,
+        "g_8": 0.015223204860060083
+      },
+      "g8_resolution_fraction_of_frontier": 0.03232102942687916,
+      "pure_g8_row_count": 9,
+      "pure_g8_row_indices": [
+        2,
+        5,
+        8,
+        11,
+        14,
+        17,
+        20,
+        23,
+        26
+      ],
+      "column_purity": 0.46823556469669597,
+      "geometry_passes_isolation_gate": true,
+      "status": "geometry_satisfies_isolation_but_needs_external_measurement"
+    }
+  },
+  "measurement_contract": [
+    {
+      "id": "external_numeric_observable",
+      "description": "A published numerical value or upper/lower bound for a spin-4, detector, or high-moment observable with uncertainty.",
+      "current_status": "missing",
+      "blocker_if_missing": "missing_external_numeric_measurement"
+    },
+    {
+      "id": "source_backed_g8_axis_mapping",
+      "description": "A cited map from the published observable basis to the engine g_8 coordinate, including normalization and operator basis.",
+      "current_status": "missing",
+      "blocker_if_missing": "axis_mapping_not_source_backed"
+    },
+    {
+      "id": "angular_or_partial_wave_isolation",
+      "description": "Angular, spin-4, or detector-moment information that breaks the g_4/g_6/g_8 forward-amplitude degeneracy.",
+      "current_status": "geometry_only_internal",
+      "blocker_if_missing": "g8_not_isolated_from_lower_matter_moments"
+    },
+    {
+      "id": "public_likelihood_or_covariance",
+      "description": "A public covariance, likelihood, or reproducible error budget so the engine can compute exclusion rather than read a plot.",
+      "current_status": "missing",
+      "blocker_if_missing": "missing_public_likelihood_or_covariance"
+    },
+    {
+      "id": "eft_valid_energy_window",
+      "description": "A published energy/cutoff domain proving the observable is inside the EFT validity regime; wide-energy conditioning alone cannot count as g_8 isolation.",
+      "current_status": "missing",
+      "blocker_if_missing": "eft_validity_not_bounded"
+    },
+    {
+      "id": "closed_systematics_budget",
+      "description": "Calibration, angular acceptance, EFT-truncation, and background systematics bounded strongly enough for a framework cut.",
+      "current_status": "open",
+      "blocker_if_missing": "systematics_not_closed"
+    },
+    {
+      "id": "framework_applicability_domain",
+      "description": "A stated domain showing the measurement constrains the same low-energy EFT coefficient used by registered frameworks.",
+      "current_status": "missing",
+      "blocker_if_missing": "framework_domain_not_validated"
+    },
+    {
+      "id": "excluding_discriminator_math",
+      "description": "A source-backed numerical cut that excludes at least one registered framework or island branch beyond uncertainty.",
+      "current_status": "missing",
+      "blocker_if_missing": "discriminator_math_not_excluding"
+    }
+  ],
+  "measurement_packet_template": {
+    "axis": "g_8",
+    "route": "spin_4_partial_wave_or_detector_high_moment",
+    "required_source_url_prefixes": [
+      "https://arxiv.org/",
+      "https://doi.org/"
+    ],
+    "required_source_type": "primary_literature_or_public_dataset",
+    "required_measurement_kind": "external_numeric_measurement",
+    "required_numerical_fields": [
+      "central_value_or_bound",
+      "statistical_uncertainty",
+      "systematic_uncertainty",
+      "covariance_or_likelihood"
+    ],
+    "required_mapping_fields": [
+      "observable_basis",
+      "wilson_coefficient_normalization",
+      "cutoff_or_energy_domain",
+      "jacobian_or_projection_to_g_8",
+      "mixing_with_g_4_g_6"
+    ],
+    "required_systematics_fields": [
+      "angular_acceptance",
+      "calibration",
+      "background_model",
+      "eft_truncation",
+      "renormalization_or_running"
+    ]
+  },
+  "current_design_probe_evidence": {
+    "axis": "g_8",
+    "route": "high_scattering_moment_design_probe",
+    "source_url": "https://arxiv.org/abs/2209.00008",
+    "source_type": "primary_literature",
+    "measurement_kind": "internal_design_probe",
+    "numerical_value": null,
+    "uncertainty": null,
+    "axis_mapping_kind": "toy_jacobian",
+    "systematics_status": "open",
+    "metadata": {
+      "internal_cut_only": true,
+      "implemented_design": "experiments/min_experiment_set.py:HighScatteringMoment",
+      "required_external_route": "published spin-4 partial-wave or detector-moment observable"
+    }
+  },
+  "current_design_probe_guard": {
+    "ready_for_promotion": false,
+    "discriminator_claimable_by_math": false,
+    "evidence_ready": false,
+    "validation": {
+      "ready_for_discriminator_claim": false,
+      "missing_fields": [],
+      "source_url_valid": true,
+      "source_type_valid": true,
+      "measurement_kind_valid": false,
+      "axis_mapping_valid": false,
+      "systematics_closed": false,
+      "numerical_value_present": false,
+      "uncertainty_valid": false,
+      "blockers": [
+        "axis_mapping_not_source_backed",
+        "measurement_kind_not_external_numeric",
+        "missing_external_numeric_measurement",
+        "systematics_not_closed"
+      ]
+    },
+    "blockers": [
+      "axis_mapping_not_source_backed",
+      "discriminator_math_not_excluding",
+      "external_measurement_evidence_not_ready",
+      "internal_cut_not_external_measurement",
+      "measurement_kind_not_external_numeric",
+      "missing_external_numeric_measurement",
+      "systematics_not_closed"
+    ]
+  },
+  "missing_or_open_contract_requirements": [
+    "external_numeric_observable",
+    "source_backed_g8_axis_mapping",
+    "angular_or_partial_wave_isolation",
+    "public_likelihood_or_covariance",
+    "eft_valid_energy_window",
+    "closed_systematics_budget",
+    "framework_applicability_domain",
+    "excluding_discriminator_math"
+  ],
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "claim_blockers": [
+    "axis_mapping_not_source_backed",
+    "discriminator_math_not_excluding",
+    "eft_validity_not_bounded",
+    "external_measurement_evidence_not_ready",
+    "framework_domain_not_validated",
+    "g8_not_isolated_from_lower_matter_moments",
+    "internal_cut_not_external_measurement",
+    "measurement_kind_not_external_numeric",
+    "missing_external_numeric_measurement",
+    "missing_public_likelihood_or_covariance",
+    "systematics_not_closed"
+  ],
+  "route_status": "measurement_spec_defined_not_satisfied",
+  "best_next_artifact": "A public spin-4 partial-wave or asymptotic-detector-moment measurement packet satisfying the contract and yielding excluding math against a registered framework branch.",
+  "interpretation": "The spin-0/2/4 design has the right internal geometry to isolate g_8, unlike a forward-only amplitude. That is still not a quantum gravity solution: the current route has no external numerical measurement, no source-backed engine-axis normalization, no public likelihood, no closed systematics budget, and no excluding math."
+}
