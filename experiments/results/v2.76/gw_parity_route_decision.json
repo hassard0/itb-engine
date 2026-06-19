@@ -1,0 +1,95 @@
+{
+  "version": "v2.76",
+  "basis": [
+    "v2.75_gw_parity_engine_axis_audit",
+    "v2.74_gw_parity_ng_ppv_beta_candidate",
+    "v2.70_gw_parity_ppv_convention_audit",
+    "targeted_primary_source_search_jenks_ng_callister"
+  ],
+  "decision_scope": "gw_parity_source_native_to_engine_routes",
+  "route_count": 4,
+  "retired_routes": [
+    "ng_ppv_beta10_direct_engine_promotion"
+  ],
+  "retained_nonpromoting_routes": [
+    "ng_source_native_likelihood_archive",
+    "callister_alpha_beta_split_route",
+    "external_operator_normalization_search"
+  ],
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "dimensionful_to_dimensionless_normalization_missing": 1,
+    "dimensionless_ppv_beta10_normalization_missing": 1,
+    "engine_canonical_helicity_sign_missing": 1,
+    "engine_projection_out_of_scope": 1,
+    "framework_exclusion_math_missing": 2,
+    "no_current_engine_axis_target": 2,
+    "noncircular_framework_predictions_missing": 1,
+    "operator_identity_not_source_backed_in_engine_basis": 1,
+    "sgwb_energy_convention_not_waveform_beta": 1,
+    "source_backed_operator_normalization_missing": 2,
+    "source_native_packet_not_engine_axis": 1,
+    "two_axis_alpha1_beta1_not_single_beta10": 1
+  },
+  "rows": [
+    {
+      "route": "ng_ppv_beta10_direct_engine_promotion",
+      "status": "retired_for_current_engine",
+      "retained": false,
+      "claim_ready": false,
+      "reason": "v2.75 found zero current engine axes that can accept the source-native Ng/Jenks beta_1_0 candidate packet.",
+      "next_action": "Do not use this route for framework verdicts unless a new source-backed operator-normalization map is added.",
+      "blockers": [
+        "dimensionless_ppv_beta10_normalization_missing",
+        "engine_canonical_helicity_sign_missing",
+        "framework_exclusion_math_missing",
+        "no_current_engine_axis_target",
+        "source_backed_operator_normalization_missing"
+      ]
+    },
+    {
+      "route": "ng_source_native_likelihood_archive",
+      "status": "retained_as_nonpromoting_measurement_packet",
+      "retained": true,
+      "claim_ready": false,
+      "reason": "v2.71-v2.74 verified public data, reproduced the restricted kappa likelihood, and wrapped it as a guarded PPV candidate.",
+      "next_action": "Keep the packet available for comparison, plotting, and future adapter tests; never treat it as an engine-axis likelihood.",
+      "blockers": [
+        "engine_projection_out_of_scope",
+        "source_native_packet_not_engine_axis"
+      ]
+    },
+    {
+      "route": "callister_alpha_beta_split_route",
+      "status": "open_source_native_route_engine_blocked",
+      "retained": true,
+      "claim_ready": false,
+      "reason": "Callister supplies source-backed alpha/beta and SGWB energy material, but it is a two-axis stochastic-background route.",
+      "next_action": "Only revisit after a separate alpha_1/beta_1 engine adapter contract exists; do not merge it into the Ng beta_1_0 route.",
+      "blockers": [
+        "framework_exclusion_math_missing",
+        "no_current_engine_axis_target",
+        "sgwb_energy_convention_not_waveform_beta",
+        "source_backed_operator_normalization_missing",
+        "two_axis_alpha1_beta1_not_single_beta10"
+      ]
+    },
+    {
+      "route": "external_operator_normalization_search",
+      "status": "required_before_any_gw_parity_claim",
+      "retained": true,
+      "claim_ready": false,
+      "reason": "The live missing artifact is not another posterior parser; it is an operator-level normalization from a source parameter to the engine Wilson basis.",
+      "next_action": "Search for or derive a source-backed map from PPV beta_1_0 or a named parity-violating theory to the engine parity axes.",
+      "blockers": [
+        "dimensionful_to_dimensionless_normalization_missing",
+        "noncircular_framework_predictions_missing",
+        "operator_identity_not_source_backed_in_engine_basis"
+      ]
+    }
+  ],
+  "route_status": "direct_ng_ppv_engine_promotion_retired_no_claim_ready_route",
+  "best_next_artifact": "Pivot out of direct Ng promotion and search for an independent operator-normalization source, or move to a different discriminator frontier with a cleaner engine-axis measurement contract.",
+  "interpretation": "The GW parity work produced high-quality source-native likelihood material, but no current engine-normalized framework discriminator. The direct Ng PPV beta_1_0 promotion route is therefore retired for the current engine rather than left as an ambiguous blocker."
+}

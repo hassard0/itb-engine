@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (186 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (187 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -235,3 +235,4 @@ Auto-generated front door to the full research program (186 notes). Regenerate w
 | v2.73 | [v2.73 - GW parity Ng restricted likelihood: source result reproduced](2026-06-19-v2.73-gw-parity-ng-restricted-likelihood.md) | v2.73 reproduces Ng's restricted global-kappa KDE-product likelihood from the public event samples and matches the published rounded constraint while keeping PPV and engine projection blocked. |
 | v2.74 | [v2.74 - GW parity Ng PPV beta candidate: packet ready, engine blocked](2026-06-19-v2.74-gw-parity-ng-ppv-beta-candidate.md) | v2.74 wraps the reproduced Ng kappa likelihood as a source-native Jenks beta_1_0 candidate packet while explicitly blocking canonical engine sign and normalization. |
 | v2.75 | [v2.75 - GW parity engine-axis audit: Ng PPV cannot promote](2026-06-19-v2.75-gw-parity-engine-axis-audit.md) | v2.75 audits the current engine parity axes and proves none can accept the Ng PPV beta_1_0 candidate without a source-backed operator normalization. |
+| v2.76 | [v2.76 - GW parity route decision: direct Ng promotion retired](2026-06-19-v2.76-gw-parity-route-decision.md) | v2.76 retires direct Ng PPV beta_1_0 promotion for the current engine while retaining the reproduced likelihood as non-promoting source-native material. |
