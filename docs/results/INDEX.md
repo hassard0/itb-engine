@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (154 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (155 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -203,3 +203,4 @@ Auto-generated front door to the full research program (154 notes). Regenerate w
 | v2.41 | [v2.41 - Tower promotion guard: positive controls blocked before claims](2026-06-19-v2.41-tower-promotion-guard-audit.md) | v2.40 recommended adding a promotion guard before changing tower-gate math. v2.41 asks: |
 | v2.42 | [v2.42 - Frontier status matrix: guard-blocked is not claim-ready](2026-06-19-v2.42-discriminator-frontier-status-matrix.md) | v2.41 added a promotion guard. v2.42 asks: |
 | v2.43 | [v2.43 - Post-guard discriminator frontier: live catalogue is still blo](2026-06-19-v2.43-post-guard-discriminator-frontier.md) | v2.41 and v2.42 installed and tested the tower-promotion guard. v2.43 asks: |
+| v2.44 | [v2.44 - Tower source-scope classifier: guard-ready is not source-ready](2026-06-19-v2.44-tower-source-scope-classifier.md) | v2.41 added a promotion guard for known positive controls. v2.44 asks: |

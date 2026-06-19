@@ -79,6 +79,38 @@ POSITIVE_CONTROL_FAMILY_MARKERS = (
     "kk_decompactification",
 )
 
+FINITE_RANGE_MARKERS = (
+    "finite_range",
+    "quintic_scalar_laplacian_kk",
+    "scalar_laplacian_subtower",
+    "one-parameter quintic",
+)
+
+ASYMPTOTIC_RANGE_MARKERS = (
+    "asymptotic",
+    "large_volume",
+    "decompactification",
+)
+
+SINGLE_COMPACTIFICATION_MARKERS = (
+    "single_compactification",
+    "one-parameter quintic",
+    "quintic calabi-yau",
+)
+
+NATIVE_OWNERSHIP_MARKERS = {
+    "endpoint": (
+        "native_framework_endpoint",
+        "framework_owned_endpoint",
+        "endpoint_owned_by_framework",
+    ),
+    "displacement": (
+        "native_framework_displacement",
+        "framework_owned_displacement",
+        "displacement_owned_by_framework",
+    ),
+}
+
 
 def validate_tower_evidence(evidence: TowerEvidence | dict[str, Any]) -> dict[str, Any]:
     row = evidence.to_dict() if hasattr(evidence, "to_dict") else dict(evidence)
@@ -154,6 +186,72 @@ def tower_positive_control_matches(evidence: TowerEvidence | dict[str, Any]) -> 
     return sorted(set(matches))
 
 
+def _tokens_match(tokens: list[str], markers: tuple[str, ...]) -> bool:
+    return any(marker in token for marker in markers for token in tokens)
+
+
+def classify_tower_source_scope(evidence: TowerEvidence | dict[str, Any]) -> dict[str, Any]:
+    """Classify source scope for claim-readiness promotion.
+
+    This classifier is conservative: unknown ownership is treated as not ready.
+    It does not decide tower math, only whether the source looks like something
+    that could be promoted to a generic framework claim.
+    """
+    row = evidence.to_dict() if hasattr(evidence, "to_dict") else dict(evidence)
+    tokens = _metadata_tokens(row)
+    positive_matches = tower_positive_control_matches(row)
+    finite_range = _tokens_match(tokens, FINITE_RANGE_MARKERS)
+    asymptotic = _tokens_match(tokens, ASYMPTOTIC_RANGE_MARKERS)
+    single_compactification = _tokens_match(tokens, SINGLE_COMPACTIFICATION_MARKERS)
+    endpoint_owned = _tokens_match(tokens, NATIVE_OWNERSHIP_MARKERS["endpoint"])
+    displacement_owned = _tokens_match(tokens, NATIVE_OWNERSHIP_MARKERS["displacement"])
+
+    if finite_range and not asymptotic:
+        range_scope = "finite_range"
+    elif asymptotic:
+        range_scope = "asymptotic"
+    else:
+        range_scope = "unspecified"
+
+    if single_compactification:
+        compactification_scope = "single_compactification"
+    elif positive_matches:
+        compactification_scope = "decompactification_or_large_volume_benchmark"
+    else:
+        compactification_scope = "unspecified"
+
+    if _tokens_match(tokens, ("scalar_laplacian", "laplacian_subtower")):
+        tower_scope = "scalar_laplacian_subtower"
+    elif _tokens_match(tokens, ("kk", "kaluza-klein")):
+        tower_scope = "kk_or_decompactification_tower"
+    else:
+        tower_scope = "unspecified"
+
+    scope_blockers = []
+    if positive_matches:
+        scope_blockers.append("known_qg_positive_control_family")
+    if range_scope == "finite_range":
+        scope_blockers.append("finite_range_not_asymptotic")
+    if single_compactification:
+        scope_blockers.append("single_compactification_not_generic_framework")
+    if not endpoint_owned:
+        scope_blockers.append("missing_framework_owned_endpoint")
+    if not displacement_owned:
+        scope_blockers.append("missing_framework_owned_displacement")
+
+    generic_framework_claim_ready = not scope_blockers
+    return {
+        "compactification_scope": compactification_scope,
+        "tower_scope": tower_scope,
+        "range_scope": range_scope,
+        "endpoint_owned_by_framework": endpoint_owned,
+        "displacement_owned_by_framework": displacement_owned,
+        "positive_control_matches": positive_matches,
+        "generic_framework_claim_ready": generic_framework_claim_ready,
+        "scope_blockers": sorted(set(scope_blockers)),
+    }
+
+
 def evaluate_tower_promotion_guard(
     evidence: TowerEvidence | dict[str, Any],
     *,
@@ -161,7 +259,8 @@ def evaluate_tower_promotion_guard(
 ) -> dict[str, Any]:
     """Gate a tower row before promoting math exclusion to a framework claim."""
     validation = validate_tower_evidence(evidence)
-    positive_control_matches = tower_positive_control_matches(evidence)
+    source_scope = classify_tower_source_scope(evidence)
+    positive_control_matches = source_scope["positive_control_matches"]
     blockers = []
     if not validation["ready_for_framework_claim"]:
         blockers.append("tower_evidence_not_ready")
@@ -174,6 +273,7 @@ def evaluate_tower_promotion_guard(
         "ready_for_promotion": not blockers,
         "tower_claimable_by_math": bool(tower_claimable_by_math),
         "evidence_ready": validation["ready_for_framework_claim"],
+        "source_scope": source_scope,
         "positive_control_matches": positive_control_matches,
         "blockers": sorted(set(blockers)),
     }

@@ -3,6 +3,7 @@
 from itb.tower import (
     TowerEvidence,
     kk_radius_tower_spectrum,
+    classify_tower_source_scope,
     evaluate_tower_promotion_guard,
     tower_positive_control_matches,
 )
@@ -56,6 +57,10 @@ def test_promotion_guard_blocks_known_positive_control_family():
     assert "analytic_kk_decompactification_vector" in (
         result["positive_control_matches"]
     )
+    assert result["source_scope"]["range_scope"] == "asymptotic"
+    assert "known_qg_positive_control_family" in (
+        result["source_scope"]["scope_blockers"]
+    )
     assert "known_qg_positive_control" in tower_positive_control_matches(evidence)
 
 
@@ -67,3 +72,15 @@ def test_promotion_guard_blocks_non_excluding_math():
 
     assert result["ready_for_promotion"] is False
     assert result["blockers"] == ["tower_math_not_excluding"]
+
+
+def test_source_scope_classifier_requires_framework_owned_endpoint_and_displacement():
+    result = classify_tower_source_scope(_evidence())
+
+    assert result["generic_framework_claim_ready"] is False
+    assert result["range_scope"] == "unspecified"
+    assert result["compactification_scope"] == "unspecified"
+    assert result["scope_blockers"] == [
+        "missing_framework_owned_displacement",
+        "missing_framework_owned_endpoint",
+    ]
