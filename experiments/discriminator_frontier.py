@@ -20,7 +20,7 @@ from experiments.tower_framework_scenarios import _framework_reference_verdicts
 from experiments.tower_spectrum_readiness import diagnose_tower_spectrum_readiness
 from itb.predict import FRAMEWORKS
 from itb.scope import engine_validity
-from itb.tower import validate_tower_evidence
+from itb.tower import evaluate_tower_promotion_guard, validate_tower_evidence
 
 
 def _to_dict(value: Any) -> dict | None:
@@ -67,6 +67,20 @@ def _framework_row(
         }
     )
     tower_row = readiness["frameworks"][name]
+    promotion_guard = (
+        evaluate_tower_promotion_guard(
+            evidence,
+            tower_claimable_by_math=tower_row["claimable_exclusion"],
+        )
+        if evidence is not None
+        else {
+            "ready_for_promotion": False,
+            "tower_claimable_by_math": tower_row["claimable_exclusion"],
+            "evidence_ready": False,
+            "positive_control_matches": [],
+            "blockers": ["missing_native_tower_evidence"],
+        }
+    )
     ref_ok = bool(reference[name]["reference_feasible"])
     if not ref_ok:
         frontier_status = "reference_excluded_before_tower"
@@ -83,6 +97,11 @@ def _framework_row(
     elif not tower_row["claimable_exclusion"]:
         frontier_status = "tower_evidence_present_but_not_excluding"
         next_required_artifact = "Improve tower precision or accept non-excluding tower evidence."
+    elif not promotion_guard["ready_for_promotion"]:
+        frontier_status = "tower_promotion_guard_blocked"
+        next_required_artifact = (
+            "Resolve tower promotion guard blockers before adversarial-review claim."
+        )
     else:
         frontier_status = "tower_discriminator_claim_ready"
         next_required_artifact = "Run adversarial review before solution claim."
@@ -99,6 +118,7 @@ def _framework_row(
         "native_tower_spectrum_present": spectrum is not None,
         "native_tower_evidence_present": evidence is not None,
         "tower_evidence_validation": evidence_validation,
+        "tower_promotion_guard": promotion_guard,
         "tower_readiness_verdict": tower_row["framework_tower_verdict"],
         "tower_claimable_by_math": tower_row["claimable_exclusion"],
         "frontier_status": frontier_status,

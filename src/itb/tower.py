@@ -69,6 +69,16 @@ REQUIRED_TOWER_EVIDENCE_FIELDS = (
     "normalization_reference",
 )
 
+POSITIVE_CONTROL_FAMILY_MARKERS = (
+    "known_qg_positive_control",
+    "large_volume_calabi_yau_sdc",
+    "large_volume_calabi_yau_sdc_lambda_table3",
+    "one_planck_large_volume_displacement",
+    "analytic_kk_decompactification_vector",
+    "string_compatible_decompactification",
+    "kk_decompactification",
+)
+
 
 def validate_tower_evidence(evidence: TowerEvidence | dict[str, Any]) -> dict[str, Any]:
     row = evidence.to_dict() if hasattr(evidence, "to_dict") else dict(evidence)
@@ -107,6 +117,65 @@ def validate_tower_evidence(evidence: TowerEvidence | dict[str, Any]) -> dict[st
         "source_url_valid": source_url_valid,
         "source_type_valid": source_type_valid,
         "blockers": blockers,
+    }
+
+
+def _metadata_tokens(value: Any) -> list[str]:
+    if isinstance(value, dict):
+        tokens = []
+        for key, item in value.items():
+            tokens.append(str(key).lower())
+            tokens.extend(_metadata_tokens(item))
+        return tokens
+    if isinstance(value, (list, tuple, set)):
+        tokens = []
+        for item in value:
+            tokens.extend(_metadata_tokens(item))
+        return tokens
+    if isinstance(value, str):
+        return [value.lower()]
+    if isinstance(value, bool) and value:
+        return ["true"]
+    return []
+
+
+def tower_positive_control_matches(evidence: TowerEvidence | dict[str, Any]) -> list[str]:
+    """Return known string-compatible positive-control markers in evidence.
+
+    Positive controls are not bad data. They are cases that should not be promoted
+    to framework exclusions merely because the diagnostic tower gate rejects them.
+    """
+    row = evidence.to_dict() if hasattr(evidence, "to_dict") else dict(evidence)
+    tokens = _metadata_tokens(row)
+    matches = [
+        marker for marker in POSITIVE_CONTROL_FAMILY_MARKERS
+        if any(marker in token for token in tokens)
+    ]
+    return sorted(set(matches))
+
+
+def evaluate_tower_promotion_guard(
+    evidence: TowerEvidence | dict[str, Any],
+    *,
+    tower_claimable_by_math: bool,
+) -> dict[str, Any]:
+    """Gate a tower row before promoting math exclusion to a framework claim."""
+    validation = validate_tower_evidence(evidence)
+    positive_control_matches = tower_positive_control_matches(evidence)
+    blockers = []
+    if not validation["ready_for_framework_claim"]:
+        blockers.append("tower_evidence_not_ready")
+    if not tower_claimable_by_math:
+        blockers.append("tower_math_not_excluding")
+    if positive_control_matches:
+        blockers.append("known_qg_positive_control_family")
+
+    return {
+        "ready_for_promotion": not blockers,
+        "tower_claimable_by_math": bool(tower_claimable_by_math),
+        "evidence_ready": validation["ready_for_framework_claim"],
+        "positive_control_matches": positive_control_matches,
+        "blockers": sorted(set(blockers)),
     }
 
 
