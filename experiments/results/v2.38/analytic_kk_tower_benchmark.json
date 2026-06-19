@@ -1,0 +1,160 @@
+{
+  "basis": [
+    "analytic_KK_vector",
+    "primary_literature",
+    "benchmark_gate"
+  ],
+  "source": {
+    "title": "Aoufia, Castellano, and Ibanez, Laplacians in Various Dimensions and the Swampland",
+    "url": "https://arxiv.org/abs/2506.03253",
+    "formula": "|zeta_KK,p| = sqrt((d + p - 2) / (p * (d - 2)))"
+  },
+  "dimension": 4,
+  "delta_moduli_benchmark": 1.0,
+  "critical_phi_tower": 0.7433019116911739,
+  "candidate_count": 6,
+  "benchmark_excluding_candidates": [
+    "d4_p1_kk_vector",
+    "d4_p2_kk_vector",
+    "d4_p3_kk_vector",
+    "d4_p4_kk_vector",
+    "d4_p5_kk_vector",
+    "d4_p6_kk_vector"
+  ],
+  "registration_ready_if_scoped_candidates": [
+    "d4_p1_kk_vector",
+    "d4_p2_kk_vector",
+    "d4_p3_kk_vector",
+    "d4_p4_kk_vector",
+    "d4_p5_kk_vector",
+    "d4_p6_kk_vector"
+  ],
+  "claimable_framework_exclusions_now": [],
+  "candidates": [
+    {
+      "label": "d4_p1_kk_vector",
+      "dimension": 4,
+      "internal_dimension": 1,
+      "lambda_kk": 1.224744871391589,
+      "delta_moduli_benchmark": 1.0,
+      "phi_tower_mean": 1.224744871391589,
+      "phi_tower_sigma": 0.0,
+      "tower_mass_gap": 0.293832655878073,
+      "critical_phi_tower": 0.7433019116911739,
+      "delta_moduli_required_for_exclusion": 0.6069034694928861,
+      "benchmark_tower_verdict": "benchmark_excluding",
+      "claimable_now": false,
+      "scope_blockers": [
+        "analytic_tower_vector_not_registered_framework_evidence",
+        "delta_moduli_benchmark_not_framework_owned_prediction",
+        "decompactification_endpoint_not_selected_by_current_catalogue"
+      ]
+    },
+    {
+      "label": "d4_p2_kk_vector",
+      "dimension": 4,
+      "internal_dimension": 2,
+      "lambda_kk": 1.0,
+      "delta_moduli_benchmark": 1.0,
+      "phi_tower_mean": 1.0,
+      "phi_tower_sigma": 0.0,
+      "tower_mass_gap": 0.36787944117144233,
+      "critical_phi_tower": 0.7433019116911739,
+      "delta_moduli_required_for_exclusion": 0.7433019116911739,
+      "benchmark_tower_verdict": "benchmark_excluding",
+      "claimable_now": false,
+      "scope_blockers": [
+        "analytic_tower_vector_not_registered_framework_evidence",
+        "delta_moduli_benchmark_not_framework_owned_prediction",
+        "decompactification_endpoint_not_selected_by_current_catalogue"
+      ]
+    },
+    {
+      "label": "d4_p3_kk_vector",
+      "dimension": 4,
+      "internal_dimension": 3,
+      "lambda_kk": 0.9128709291752769,
+      "delta_moduli_benchmark": 1.0,
+      "phi_tower_mean": 0.9128709291752769,
+      "phi_tower_sigma": 0.0,
+      "tower_mass_gap": 0.40137026275824994,
+      "critical_phi_tower": 0.7433019116911739,
+      "delta_moduli_required_for_exclusion": 0.8142464481399377,
+      "benchmark_tower_verdict": "benchmark_excluding",
+      "claimable_now": false,
+      "scope_blockers": [
+        "analytic_tower_vector_not_registered_framework_evidence",
+        "delta_moduli_benchmark_not_framework_owned_prediction",
+        "decompactification_endpoint_not_selected_by_current_catalogue"
+      ]
+    },
+    {
+      "label": "d4_p4_kk_vector",
+      "dimension": 4,
+      "internal_dimension": 4,
+      "lambda_kk": 0.8660254037844386,
+      "delta_moduli_benchmark": 1.0,
+      "phi_tower_mean": 0.8660254037844386,
+      "phi_tower_sigma": 0.0,
+      "tower_mass_gap": 0.4206200260541148,
+      "critical_phi_tower": 0.7433019116911739,
+      "delta_moduli_required_for_exclusion": 0.8582911176081254,
+      "benchmark_tower_verdict": "benchmark_excluding",
+      "claimable_now": false,
+      "scope_blockers": [
+        "analytic_tower_vector_not_registered_framework_evidence",
+        "delta_moduli_benchmark_not_framework_owned_prediction",
+        "decompactification_endpoint_not_selected_by_current_catalogue"
+      ]
+    },
+    {
+      "label": "d4_p5_kk_vector",
+      "dimension": 4,
+      "internal_dimension": 5,
+      "lambda_kk": 0.8366600265340756,
+      "delta_moduli_benchmark": 1.0,
+      "phi_tower_mean": 0.8366600265340756,
+      "phi_tower_sigma": 0.0,
+      "tower_mass_gap": 0.4331548357620682,
+      "critical_phi_tower": 0.7433019116911739,
+      "delta_moduli_required_for_exclusion": 0.888415710226238,
+      "benchmark_tower_verdict": "benchmark_excluding",
+      "claimable_now": false,
+      "scope_blockers": [
+        "analytic_tower_vector_not_registered_framework_evidence",
+        "delta_moduli_benchmark_not_framework_owned_prediction",
+        "decompactification_endpoint_not_selected_by_current_catalogue"
+      ]
+    },
+    {
+      "label": "d4_p6_kk_vector",
+      "dimension": 4,
+      "internal_dimension": 6,
+      "lambda_kk": 0.816496580927726,
+      "delta_moduli_benchmark": 1.0,
+      "phi_tower_mean": 0.816496580927726,
+      "phi_tower_sigma": 0.0,
+      "tower_mass_gap": 0.44197737724067393,
+      "critical_phi_tower": 0.7433019116911739,
+      "delta_moduli_required_for_exclusion": 0.910355204239329,
+      "benchmark_tower_verdict": "benchmark_excluding",
+      "claimable_now": false,
+      "scope_blockers": [
+        "analytic_tower_vector_not_registered_framework_evidence",
+        "delta_moduli_benchmark_not_framework_owned_prediction",
+        "decompactification_endpoint_not_selected_by_current_catalogue"
+      ]
+    }
+  ],
+  "literature_guardrail": {
+    "claim": "Analytic KK vector norms identify threshold-crossing benchmark rates, not current framework exclusions. Promotion still requires a scoped framework endpoint and displacement.",
+    "primary_sources": [
+      {
+        "title": "Aoufia, Castellano, and Ibanez, Laplacians in Various Dimensions and the Swampland",
+        "url": "https://arxiv.org/abs/2506.03253",
+        "formula": "|zeta_KK,p| = sqrt((d + p - 2) / (p * (d - 2)))"
+      }
+    ]
+  },
+  "interpretation": "For d=4 and Delta_moduli=1, every scanned KK decompactification vector crosses the current tower threshold. This makes endpoint ownership, not rate size, the next limiting requirement."
+}
