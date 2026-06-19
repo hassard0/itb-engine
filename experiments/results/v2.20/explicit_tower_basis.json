@@ -1,0 +1,661 @@
+{
+  "input": "experiments/results/v2.13/phases_8d_1200.json",
+  "basis": [
+    "g_4",
+    "g_6",
+    "g_8",
+    "g_R2",
+    "g_R3",
+    "g_C",
+    "g_R2_parity",
+    "g_R3_parity",
+    "phi_tower"
+  ],
+  "samples": 20000,
+  "seed": 1618,
+  "phi_grid": [
+    0.0,
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0,
+    1.2,
+    1.4,
+    1.6
+  ],
+  "model": {
+    "lambda_eft": 0.65,
+    "m0": 1.0,
+    "lambda_tower": 1.0,
+    "density": 1.0,
+    "exponent_p": 1.0,
+    "fixed_point_iters": 96
+  },
+  "legacy_overlap_constraints": [
+    "swampland_distance_conjecture",
+    "species_scale_bound",
+    "complexity_cutoff"
+  ],
+  "literature_guardrail": {
+    "claim": "This 9D extension adds an explicit auxiliary tower coordinate. It is a diagnostic basis-extension test, not an assignment of physical moduli coordinates to the encoded frameworks and not a validation of the Swampland Distance Conjecture.",
+    "primary_sources": [
+      {
+        "title": "Ooguri and Vafa, On the Geometry of the String Landscape and the Swampland",
+        "url": "https://arxiv.org/abs/hep-th/0605264"
+      },
+      {
+        "title": "Dvali and Redi, Black Hole Bound on the Number of Species and Quantum Gravity at LHC",
+        "url": "https://arxiv.org/abs/0710.4344"
+      },
+      {
+        "title": "van de Heisteeg, Vafa, and Wiesner, Bounds on Species Scale and the Distance Conjecture",
+        "url": "https://arxiv.org/abs/2303.13580"
+      }
+    ]
+  },
+  "tower_monotonicity": {
+    "rows": [
+      {
+        "phi_tower": 0.0,
+        "tower_mass": 1.0,
+        "species_count_at_cutoff": 1.7548776662466927,
+        "species_cutoff": 0.7548776662466927,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": 0.1048776662466927,
+        "satisfied": true
+      },
+      {
+        "phi_tower": 0.2,
+        "tower_mass": 0.8187307530779818,
+        "species_count_at_cutoff": 1.888736819699015,
+        "species_cutoff": 0.7276361656803052,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": 0.07763616568030518,
+        "satisfied": true
+      },
+      {
+        "phi_tower": 0.4,
+        "tower_mass": 0.6703200460356393,
+        "species_count_at_cutoff": 2.0435727712489142,
+        "species_cutoff": 0.6995277480651119,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": 0.04952774806511184,
+        "satisfied": true
+      },
+      {
+        "phi_tower": 0.6,
+        "tower_mass": 0.5488116360940264,
+        "species_count_at_cutoff": 2.2222945571151236,
+        "species_cutoff": 0.6708094756791743,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": 0.02080947567917424,
+        "satisfied": true
+      },
+      {
+        "phi_tower": 0.8,
+        "tower_mass": 0.44932896411722156,
+        "species_count_at_cutoff": 2.4282110019680463,
+        "species_cutoff": 0.6417365700551214,
+        "cutoff_residual": -1.1102230246251565e-16,
+        "lambda_eft": 0.65,
+        "cutoff_margin": -0.008263429944878609,
+        "satisfied": false
+      },
+      {
+        "phi_tower": 1.0,
+        "tower_mass": 0.36787944117144233,
+        "species_count_at_cutoff": 2.6650924231783155,
+        "species_cutoff": 0.6125532701376415,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": -0.03744672986235853,
+        "satisfied": false
+      },
+      {
+        "phi_tower": 1.2,
+        "tower_mass": 0.30119421191220214,
+        "species_count_at_cutoff": 2.937240783551955,
+        "species_cutoff": 0.583485711086108,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": -0.066514288913892,
+        "satisfied": false
+      },
+      {
+        "phi_tower": 1.4,
+        "tower_mass": 0.2465969639416065,
+        "species_count_at_cutoff": 3.2495692867781276,
+        "species_cutoff": 0.5547369562957714,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": -0.09526304370422867,
+        "satisfied": false
+      },
+      {
+        "phi_tower": 1.6,
+        "tower_mass": 0.20189651799465538,
+        "species_count_at_cutoff": 3.6076926602858954,
+        "species_cutoff": 0.526484068111942,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": -0.12351593188805798,
+        "satisfied": false
+      }
+    ],
+    "tower_mass_non_increasing": true,
+    "species_count_non_decreasing": true,
+    "species_cutoff_non_increasing": true,
+    "margin_non_increasing": true
+  },
+  "parameter_monotonicity": {
+    "density_rows": [
+      {
+        "density": 0.0,
+        "phi_tower": 1.0,
+        "tower_mass": 0.36787944117144233,
+        "species_count_at_cutoff": 1.0,
+        "species_cutoff": 1.0,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": 0.35,
+        "satisfied": true
+      },
+      {
+        "density": 0.5,
+        "phi_tower": 1.0,
+        "tower_mass": 0.36787944117144233,
+        "species_count_at_cutoff": 1.9686738931904073,
+        "species_cutoff": 0.7127104210085049,
+        "cutoff_residual": 1.1102230246251565e-16,
+        "lambda_eft": 0.65,
+        "cutoff_margin": 0.06271042100850488,
+        "satisfied": true
+      },
+      {
+        "density": 1.0,
+        "phi_tower": 1.0,
+        "tower_mass": 0.36787944117144233,
+        "species_count_at_cutoff": 2.6650924231783155,
+        "species_cutoff": 0.6125532701376415,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": -0.03744672986235853,
+        "satisfied": false
+      },
+      {
+        "density": 2.0,
+        "phi_tower": 1.0,
+        "tower_mass": 0.36787944117144233,
+        "species_count_at_cutoff": 3.791882055670125,
+        "species_cutoff": 0.5135380052282517,
+        "cutoff_residual": -1.1102230246251565e-16,
+        "lambda_eft": 0.65,
+        "cutoff_margin": -0.13646199477174836,
+        "satisfied": false
+      }
+    ],
+    "lambda_rows": [
+      {
+        "lambda_tower": 0.0,
+        "phi_tower": 1.0,
+        "tower_mass": 1.0,
+        "species_count_at_cutoff": 1.7548776662466927,
+        "species_cutoff": 0.7548776662466927,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": 0.1048776662466927,
+        "satisfied": true
+      },
+      {
+        "lambda_tower": 0.5,
+        "phi_tower": 1.0,
+        "tower_mass": 0.6065306597126334,
+        "species_count_at_cutoff": 2.1297511873347004,
+        "species_cutoff": 0.6852287329652467,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": 0.035228732965246645,
+        "satisfied": true
+      },
+      {
+        "lambda_tower": 1.0,
+        "phi_tower": 1.0,
+        "tower_mass": 0.36787944117144233,
+        "species_count_at_cutoff": 2.6650924231783155,
+        "species_cutoff": 0.6125532701376415,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": -0.03744672986235853,
+        "satisfied": false
+      },
+      {
+        "lambda_tower": 1.5,
+        "phi_tower": 1.0,
+        "tower_mass": 0.22313016014842982,
+        "species_count_at_cutoff": 3.4225255796830107,
+        "species_cutoff": 0.540538520558338,
+        "cutoff_residual": -1.1102230246251565e-16,
+        "lambda_eft": 0.65,
+        "cutoff_margin": -0.10946147944166207,
+        "satisfied": false
+      }
+    ],
+    "cutoff_non_increasing_with_density": true,
+    "cutoff_non_increasing_with_lambda": true,
+    "mass_non_increasing_with_lambda": true
+  },
+  "solver_edge_cases": {
+    "cases": {
+      "rho_zero": {
+        "phi_tower": 1.0,
+        "tower_mass": 0.36787944117144233,
+        "species_count_at_cutoff": 1.0,
+        "species_cutoff": 1.0,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": 0.35,
+        "satisfied": true
+      },
+      "lambda_zero": {
+        "phi_tower": 1.0,
+        "tower_mass": 1.0,
+        "species_count_at_cutoff": 1.7548776662466927,
+        "species_cutoff": 0.7548776662466927,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": 0.1048776662466927,
+        "satisfied": true
+      },
+      "phi_zero": {
+        "phi_tower": 0.0,
+        "tower_mass": 1.0,
+        "species_count_at_cutoff": 1.7548776662466927,
+        "species_cutoff": 0.7548776662466927,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": 0.1048776662466927,
+        "satisfied": true
+      },
+      "large_phi": {
+        "phi_tower": 50.0,
+        "tower_mass": 1.9287498479639178e-22,
+        "species_count_at_cutoff": 100000000.66666667,
+        "species_cutoff": 9.999999966666667e-05,
+        "cutoff_residual": 0.0,
+        "lambda_eft": 0.65,
+        "cutoff_margin": -0.6499000000003333,
+        "satisfied": false
+      }
+    },
+    "max_abs_residual": 0.0,
+    "all_cutoffs_in_unit_interval": true
+  },
+  "critical_phi": {
+    "critical_phi": 0.7433019116911739,
+    "phi_tower": 0.7433019116911739,
+    "tower_mass": 0.47554112554112576,
+    "species_count_at_cutoff": 2.366863905325443,
+    "species_cutoff": 0.6499999999999999,
+    "cutoff_residual": -2.220446049250313e-16,
+    "lambda_eft": 0.65,
+    "cutoff_margin": -1.1102230246251565e-16,
+    "satisfied": false
+  },
+  "main_gate": {
+    "reference_feasible_extended": 110106,
+    "candidate_feasible_extended": 48936,
+    "explicit_tower_gate_count": 61170,
+    "irreplaceability_growth_pct": 125.0,
+    "gate_by_phi": {
+      "0.0": 0,
+      "0.2": 0,
+      "0.4": 0,
+      "0.6": 0,
+      "0.8": 12234,
+      "1.0": 12234,
+      "1.2": 12234,
+      "1.4": 12234,
+      "1.6": 12234
+    },
+    "gate_passes_old_distance_and_species": 12440,
+    "overlap_reference_gate": {
+      "complexity_cutoff": {
+        "count": 0,
+        "fraction_of_gate": 0.0
+      },
+      "swampland_distance_conjecture": {
+        "count": 48730,
+        "fraction_of_gate": 0.7966323361124734
+      },
+      "species_scale_bound": {
+        "count": 0,
+        "fraction_of_gate": 0.0
+      }
+    }
+  },
+  "old_stack_phi_isolation": {
+    "old_stack_verdicts_invariant_under_phi_tower": true,
+    "checked_phi_values": [
+      0.0,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0,
+      1.2,
+      1.4,
+      1.6
+    ],
+    "reference_feasible": 143
+  },
+  "projection_audit": {
+    "reference_survivors": 12234,
+    "projected_island_unchanged": true,
+    "allowed_phi_count_per_8d_survivor": 4,
+    "allowed_phi_fraction_per_8d_survivor": 0.4444444444444444,
+    "max_allowed_phi_on_grid": 0.6,
+    "note": "Every 8D survivor remains in the projected island if at least one phi_tower value is allowed; the tower coordinate restricts the fiber, not the 8D projection."
+  },
+  "lambda_eft_sweep": {
+    "0.5": {
+      "critical_phi": {
+        "critical_phi": 1.7917594692280554,
+        "phi_tower": 1.7917594692280554,
+        "tower_mass": 0.1666666666666666,
+        "species_count_at_cutoff": 4.000000000000002,
+        "species_cutoff": 0.5,
+        "cutoff_residual": 1.1102230246251565e-16,
+        "lambda_eft": 0.5,
+        "cutoff_margin": 0.0,
+        "satisfied": true
+      },
+      "gate": {
+        "reference_feasible_extended": 110106,
+        "candidate_feasible_extended": 110106,
+        "explicit_tower_gate_count": 0,
+        "irreplaceability_growth_pct": 0.0,
+        "gate_by_phi": {
+          "0.0": 0,
+          "0.2": 0,
+          "0.4": 0,
+          "0.6": 0,
+          "0.8": 0,
+          "1.0": 0,
+          "1.2": 0,
+          "1.4": 0,
+          "1.6": 0
+        },
+        "gate_passes_old_distance_and_species": 0,
+        "overlap_reference_gate": {
+          "complexity_cutoff": {
+            "count": 0,
+            "fraction_of_gate": null
+          },
+          "swampland_distance_conjecture": {
+            "count": 0,
+            "fraction_of_gate": null
+          },
+          "species_scale_bound": {
+            "count": 0,
+            "fraction_of_gate": null
+          }
+        }
+      }
+    },
+    "0.6": {
+      "critical_phi": {
+        "critical_phi": 1.0861897686695525,
+        "phi_tower": 1.0861897686695525,
+        "tower_mass": 0.3375,
+        "species_count_at_cutoff": 2.7777777777777772,
+        "species_cutoff": 0.5999999999999999,
+        "cutoff_residual": -2.220446049250313e-16,
+        "lambda_eft": 0.6,
+        "cutoff_margin": -1.1102230246251565e-16,
+        "satisfied": false
+      },
+      "gate": {
+        "reference_feasible_extended": 110106,
+        "candidate_feasible_extended": 73404,
+        "explicit_tower_gate_count": 36702,
+        "irreplaceability_growth_pct": 50.0,
+        "gate_by_phi": {
+          "0.0": 0,
+          "0.2": 0,
+          "0.4": 0,
+          "0.6": 0,
+          "0.8": 0,
+          "1.0": 0,
+          "1.2": 12234,
+          "1.4": 12234,
+          "1.6": 12234
+        },
+        "gate_passes_old_distance_and_species": 7464,
+        "overlap_reference_gate": {
+          "complexity_cutoff": {
+            "count": 0,
+            "fraction_of_gate": 0.0
+          },
+          "swampland_distance_conjecture": {
+            "count": 29238,
+            "fraction_of_gate": 0.7966323361124734
+          },
+          "species_scale_bound": {
+            "count": 0,
+            "fraction_of_gate": 0.0
+          }
+        }
+      }
+    },
+    "0.65": {
+      "critical_phi": {
+        "critical_phi": 0.7433019116911739,
+        "phi_tower": 0.7433019116911739,
+        "tower_mass": 0.47554112554112576,
+        "species_count_at_cutoff": 2.366863905325443,
+        "species_cutoff": 0.6499999999999999,
+        "cutoff_residual": -2.220446049250313e-16,
+        "lambda_eft": 0.65,
+        "cutoff_margin": -1.1102230246251565e-16,
+        "satisfied": false
+      },
+      "gate": {
+        "reference_feasible_extended": 110106,
+        "candidate_feasible_extended": 48936,
+        "explicit_tower_gate_count": 61170,
+        "irreplaceability_growth_pct": 125.0,
+        "gate_by_phi": {
+          "0.0": 0,
+          "0.2": 0,
+          "0.4": 0,
+          "0.6": 0,
+          "0.8": 12234,
+          "1.0": 12234,
+          "1.2": 12234,
+          "1.4": 12234,
+          "1.6": 12234
+        },
+        "gate_passes_old_distance_and_species": 12440,
+        "overlap_reference_gate": {
+          "complexity_cutoff": {
+            "count": 0,
+            "fraction_of_gate": 0.0
+          },
+          "swampland_distance_conjecture": {
+            "count": 48730,
+            "fraction_of_gate": 0.7966323361124734
+          },
+          "species_scale_bound": {
+            "count": 0,
+            "fraction_of_gate": 0.0
+          }
+        }
+      }
+    },
+    "0.7": {
+      "critical_phi": {
+        "critical_phi": 0.3966802785524318,
+        "phi_tower": 0.3966802785524318,
+        "tower_mass": 0.672549019607843,
+        "species_count_at_cutoff": 2.0408163265306127,
+        "species_cutoff": 0.7,
+        "cutoff_residual": 1.1102230246251565e-16,
+        "lambda_eft": 0.7,
+        "cutoff_margin": 0.0,
+        "satisfied": true
+      },
+      "gate": {
+        "reference_feasible_extended": 110106,
+        "candidate_feasible_extended": 24468,
+        "explicit_tower_gate_count": 85638,
+        "irreplaceability_growth_pct": 350.0,
+        "gate_by_phi": {
+          "0.0": 0,
+          "0.2": 0,
+          "0.4": 12234,
+          "0.6": 12234,
+          "0.8": 12234,
+          "1.0": 12234,
+          "1.2": 12234,
+          "1.4": 12234,
+          "1.6": 12234
+        },
+        "gate_passes_old_distance_and_species": 17416,
+        "overlap_reference_gate": {
+          "complexity_cutoff": {
+            "count": 0,
+            "fraction_of_gate": 0.0
+          },
+          "swampland_distance_conjecture": {
+            "count": 68222,
+            "fraction_of_gate": 0.7966323361124734
+          },
+          "species_scale_bound": {
+            "count": 0,
+            "fraction_of_gate": 0.0
+          }
+        }
+      }
+    }
+  },
+  "framework_phi_allowance": {
+    "pure_gr": {
+      "reference_feasible": true,
+      "max_phi_tower_allowed": 0.7433019116911739,
+      "excluded_without_phi_assignment": false
+    },
+    "string_tree_eft": {
+      "reference_feasible": true,
+      "max_phi_tower_allowed": 0.7433019116911739,
+      "excluded_without_phi_assignment": false
+    },
+    "asymptotic_safety": {
+      "reference_feasible": true,
+      "max_phi_tower_allowed": 0.7433019116911739,
+      "excluded_without_phi_assignment": false
+    },
+    "lqg_induced": {
+      "reference_feasible": false,
+      "max_phi_tower_allowed": 0.7433019116911739,
+      "excluded_without_phi_assignment": false
+    },
+    "cdt": {
+      "reference_feasible": true,
+      "max_phi_tower_allowed": 0.7433019116911739,
+      "excluded_without_phi_assignment": false
+    },
+    "group_field_theory": {
+      "reference_feasible": false,
+      "max_phi_tower_allowed": 0.7433019116911739,
+      "excluded_without_phi_assignment": false
+    },
+    "horava_lifshitz": {
+      "reference_feasible": false,
+      "max_phi_tower_allowed": 0.7433019116911739,
+      "excluded_without_phi_assignment": false
+    },
+    "causal_set": {
+      "reference_feasible": true,
+      "max_phi_tower_allowed": 0.7433019116911739,
+      "excluded_without_phi_assignment": false
+    },
+    "emergent_gravity": {
+      "reference_feasible": true,
+      "max_phi_tower_allowed": 0.7433019116911739,
+      "excluded_without_phi_assignment": false
+    },
+    "discovered_novel": {
+      "reference_feasible": true,
+      "max_phi_tower_allowed": 0.7433019116911739,
+      "excluded_without_phi_assignment": false
+    },
+    "discovered_parity_violating": {
+      "reference_feasible": true,
+      "max_phi_tower_allowed": 0.7433019116911739,
+      "excluded_without_phi_assignment": false
+    },
+    "discovered_high_g8": {
+      "reference_feasible": true,
+      "max_phi_tower_allowed": 0.7433019116911739,
+      "excluded_without_phi_assignment": false
+    },
+    "discovered_data_driven": {
+      "reference_feasible": true,
+      "max_phi_tower_allowed": 0.7433019116911739,
+      "excluded_without_phi_assignment": false
+    }
+  },
+  "topology_by_phi": {
+    "0.0": {
+      "tower_coordinate_allowed": true,
+      "coefficient_detour_still_available_if_allowed": true,
+      "components_checked": 4
+    },
+    "0.2": {
+      "tower_coordinate_allowed": true,
+      "coefficient_detour_still_available_if_allowed": true,
+      "components_checked": 4
+    },
+    "0.4": {
+      "tower_coordinate_allowed": true,
+      "coefficient_detour_still_available_if_allowed": true,
+      "components_checked": 4
+    },
+    "0.6": {
+      "tower_coordinate_allowed": true,
+      "coefficient_detour_still_available_if_allowed": true,
+      "components_checked": 4
+    },
+    "0.8": {
+      "tower_coordinate_allowed": false,
+      "coefficient_detour_still_available_if_allowed": true,
+      "components_checked": 4
+    },
+    "1.0": {
+      "tower_coordinate_allowed": false,
+      "coefficient_detour_still_available_if_allowed": true,
+      "components_checked": 4
+    },
+    "1.2": {
+      "tower_coordinate_allowed": false,
+      "coefficient_detour_still_available_if_allowed": true,
+      "components_checked": 4
+    },
+    "1.4": {
+      "tower_coordinate_allowed": false,
+      "coefficient_detour_still_available_if_allowed": true,
+      "components_checked": 4
+    },
+    "1.6": {
+      "tower_coordinate_allowed": false,
+      "coefficient_detour_still_available_if_allowed": true,
+      "components_checked": 4
+    }
+  },
+  "interpretation": "If explicit_tower_gate_count is positive and some gated points pass the old coefficient-only distance/species constraints, the new tower coordinate adds an independent diagnostic axis. Frameworks are not excluded until a phi_tower assignment or measurement is supplied."
+}
