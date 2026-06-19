@@ -62,12 +62,15 @@ A full, navigable account of every cycle is in [docs/FINDINGS.md](docs/FINDINGS.
 ```bash
 git clone https://github.com/hassard0/itb-engine && cd itb-engine
 python -m venv .venv && . .venv/bin/activate     # (Windows: .venv\Scripts\activate)
-pip install -e .
-pytest -q                                         # 498 tests
+pip install -e ".[dev]"
+pytest -q                                         # 565 tests
 
 # the affirmative answer: what a consistent QG EFT looks like + its full fingerprint
 itb predict discovered_data_driven
 itb predict string_tree_eft --json
+
+# write the current multi-persona research-swarm agenda
+itb swarm-plan
 
 # run a flagship experiment (each writes a figure + JSON to /tmp and prints a summary)
 python experiments/island_census.py 300000        # how rare/low-dimensional is the island
@@ -76,6 +79,15 @@ python experiments/godel_test.py 1500000           # is the engine internally co
 ```
 
 Most experiments parallelize across cores; the heavy Monte-Carlo runs were done on a 16-core box.
+
+For remote research-agent and Vulcan compute helpers:
+
+```bash
+pip install -e ".[agent,remote]"
+python tools/vulcan.py run "hostname && python3 --version"
+```
+
+`tools/vulcan.py` defaults to `admin@192.168.4.178` and key auth through `~/.ssh/id_ed25519`; set `VULCAN_HOST`, `VULCAN_USER`, or `VULCAN_KEY` to override.
 
 ---
 
