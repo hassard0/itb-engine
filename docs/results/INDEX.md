@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (126 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (127 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -175,3 +175,4 @@ Auto-generated front door to the full research program (126 notes). Regenerate w
 | v2.13 | [v2.13 - Full-basis connectivity: g_C restores the topology test](2026-06-19-v2.13-full-basis-connectivity.md) | v2.12 identified a stale topology path: `experiments/phases.py` still used a |
 | v2.14 | [v2.14 - Parity bridge diagnostic: the four lobes are a distance-prior ](2026-06-19-v2.14-parity-bridge-diagnostic.md) | v2.13 found four straight-line components in the full 8D phase graph. The open question was |
 | v2.15 | [v2.15 - Distance-prior variant: parity lobes reconnect when parity zer](2026-06-19-v2.15-distance-prior-variant.md) | v2.14 showed that the four v2.13 parity lobes are split by the hard nonzero-threshold |
+| v2.16 | [v2.16 - Continuous distance-prior diagnostics: parity topology is stil](2026-06-19-v2.16-continuous-distance-prior.md) | v2.14 and v2.15 showed that the four v2.13 parity lobes are split by the hard |

@@ -1,0 +1,2108 @@
+{
+  "input": "experiments/results/v2.13/phases_8d_1200.json",
+  "basis": [
+    "g_4",
+    "g_6",
+    "g_8",
+    "g_R2",
+    "g_R3",
+    "g_C",
+    "g_R2_parity",
+    "g_R3_parity"
+  ],
+  "samples_per_segment": 101,
+  "sweep_values": {
+    "thresholds": [
+      1e-06,
+      0.005,
+      0.01,
+      0.02,
+      0.025,
+      0.03,
+      0.04,
+      0.05
+    ],
+    "floors": [
+      1e-06,
+      0.005,
+      0.01,
+      0.02,
+      0.025,
+      0.03,
+      0.04,
+      0.05
+    ]
+  },
+  "literature_guardrail": {
+    "claim": "The Swampland Distance Conjecture is a moduli-space statement about geodesic distance and towers of light states. These coefficient-space hierarchy priors are diagnostics, not a replacement for a moduli/tower model.",
+    "primary_sources": [
+      {
+        "title": "Ooguri and Vafa, On the Geometry of the String Landscape and the Swampland",
+        "url": "https://arxiv.org/abs/hep-th/0605264"
+      },
+      {
+        "title": "Palti, The Swampland: Introduction and Review",
+        "url": "https://arxiv.org/abs/1903.06239"
+      },
+      {
+        "title": "Debusschere, Tonioni, and Van Riet, A distance conjecture beyond moduli?",
+        "url": "https://arxiv.org/html/2407.03715v3"
+      }
+    ]
+  },
+  "variants": {
+    "default": {
+      "all_lobes_reach_parity_zero": false,
+      "parity_zero_plane_connected": true,
+      "all_connected_by_parity_zero_detour": false,
+      "lobe_to_zero_first_failure_blockers": {
+        "swampland_distance_conjecture": 4
+      },
+      "lobe_to_zero_worst_constraints": [
+        "swampland_distance_conjecture",
+        "swampland_distance_conjecture",
+        "swampland_distance_conjecture",
+        "swampland_distance_conjecture"
+      ],
+      "minimum_worst_lobe_margin": -1672.9107299848865,
+      "direct_pair_failures": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "first_failure": {
+            "t": 0.19,
+            "constraint": "swampland_distance_conjecture",
+            "margin": -0.7406305687313726
+          }
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "first_failure": {
+            "t": 0.08,
+            "constraint": "swampland_distance_conjecture",
+            "margin": -0.20628266837229603
+          }
+        },
+        {
+          "pair": [
+            0,
+            3
+          ],
+          "first_failure": {
+            "t": 0.08,
+            "constraint": "swampland_distance_conjecture",
+            "margin": -0.37484942995520143
+          }
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "first_failure": {
+            "t": 0.09,
+            "constraint": "swampland_distance_conjecture",
+            "margin": -0.3554708268467728
+          }
+        },
+        {
+          "pair": [
+            1,
+            3
+          ],
+          "first_failure": {
+            "t": 0.08,
+            "constraint": "swampland_distance_conjecture",
+            "margin": -0.04118576902076754
+          }
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "first_failure": {
+            "t": 0.2,
+            "constraint": "t_hooft_anomaly_matching",
+            "margin": -0.0003134018213956716
+          }
+        }
+      ]
+    },
+    "no_distance_prior": {
+      "all_lobes_reach_parity_zero": true,
+      "parity_zero_plane_connected": true,
+      "all_connected_by_parity_zero_detour": true,
+      "lobe_to_zero_first_failure_blockers": {},
+      "lobe_to_zero_worst_constraints": [
+        "generalized_anomaly_inflow",
+        "generalized_anomaly_inflow",
+        "generalized_anomaly_inflow",
+        "generalized_anomaly_inflow"
+      ],
+      "minimum_worst_lobe_margin": 0.0038452307989352294,
+      "direct_pair_failures": [
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "first_failure": {
+            "t": 0.19,
+            "constraint": "t_hooft_anomaly_matching",
+            "margin": -0.0004419608757207441
+          }
+        },
+        {
+          "pair": [
+            2,
+            3
+          ],
+          "first_failure": {
+            "t": 0.2,
+            "constraint": "t_hooft_anomaly_matching",
+            "margin": -0.0003134018213956716
+          }
+        }
+      ]
+    },
+    "hard_threshold_sweep": {
+      "rows": [
+        {
+          "value": 1e-06,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "hard_threshold_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -1672.9107299848865,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.7406305687313726
+              }
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.20628266837229603
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.37484942995520143
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.09,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.3554708268467728
+              }
+            },
+            {
+              "pair": [
+                1,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.04118576902076754
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.005,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "hard_threshold_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -91.82217527266583,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.7406305687313726
+              }
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.20628266837229603
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.37484942995520143
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.09,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.3554708268467728
+              }
+            },
+            {
+              "pair": [
+                1,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.04118576902076754
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.01,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "hard_threshold_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -36.00231674626764,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.7406305687313726
+              }
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.20628266837229603
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.37484942995520143
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.09,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.3554708268467728
+              }
+            },
+            {
+              "pair": [
+                1,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.04118576902076754
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.02,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "hard_threshold_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -8.001158373133812,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.7406305687313726
+              }
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.20628266837229603
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.37484942995520143
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.09,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.3554708268467728
+              }
+            },
+            {
+              "pair": [
+                1,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.04118576902076754
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.025,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "hard_threshold_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior",
+            "hard_threshold_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -2.3644350545331747,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.7406305687313726
+              }
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.20628266837229603
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.37484942995520143
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.09,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.3554708268467728
+              }
+            },
+            {
+              "pair": [
+                1,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "hard_threshold_distance_prior",
+                "margin": -0.04118576902076754
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.03,
+          "all_lobes_reach_parity_zero": true,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": true,
+          "lobe_to_zero_first_failure_blockers": {},
+          "lobe_to_zero_worst_constraints": [
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow"
+          ],
+          "minimum_worst_lobe_margin": 0.0038452307989352294,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.04,
+          "all_lobes_reach_parity_zero": true,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": true,
+          "lobe_to_zero_first_failure_blockers": {},
+          "lobe_to_zero_worst_constraints": [
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow"
+          ],
+          "minimum_worst_lobe_margin": 0.0038452307989352294,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.05,
+          "all_lobes_reach_parity_zero": true,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": true,
+          "lobe_to_zero_first_failure_blockers": {},
+          "lobe_to_zero_worst_constraints": [
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow"
+          ],
+          "minimum_worst_lobe_margin": 0.0038452307989352294,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        }
+      ],
+      "first_connecting_value": 0.03
+    },
+    "smooth_floor_sweep": {
+      "rows": [
+        {
+          "value": 1e-06,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": false,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "smooth_floor_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -560389.1329526895,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.7406305537478737
+              }
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.20628265435920667
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.37484941561791985
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.09,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.3554708133960993
+              }
+            },
+            {
+              "pair": [
+                1,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.04118575621639309
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.005,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": false,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "smooth_floor_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -92.08628752809777,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.37592475824846616
+              }
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "first_failure": {
+                "t": 0.09,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.33987886116341315
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.025635483299982553
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.09,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.027339049667972404
+              }
+            },
+            {
+              "pair": [
+                1,
+                3
+              ],
+              "first_failure": {
+                "t": 0.09,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.20555905084280823
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.01,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": false,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "smooth_floor_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -36.04983463809552,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "first_failure": {
+                "t": 0.11,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.2178314237599288
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.11,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.43541506748554326
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.12,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.4099307773389249
+              }
+            },
+            {
+              "pair": [
+                1,
+                3
+              ],
+              "first_failure": {
+                "t": 0.11,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.17345484510005704
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.02,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": false,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "smooth_floor_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -8.038295075476022,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "first_failure": {
+                "t": 0.22,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.29379079403878805
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.21,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.27848458817883426
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.22,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.2762140680587635
+              }
+            },
+            {
+              "pair": [
+                1,
+                3
+              ],
+              "first_failure": {
+                "t": 0.21,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.25881202260817915
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.025,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": false,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "smooth_floor_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior",
+            "smooth_floor_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -2.438659364437445,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "first_failure": {
+                "t": 0.33,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.009380673732923839
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.32,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.12834736992114415
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.33,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.18721888407610265
+              }
+            },
+            {
+              "pair": [
+                1,
+                3
+              ],
+              "first_failure": {
+                "t": 0.31,
+                "constraint": "smooth_floor_distance_prior",
+                "margin": -0.09810866572522059
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.03,
+          "all_lobes_reach_parity_zero": true,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": true,
+          "lobe_to_zero_first_failure_blockers": {},
+          "lobe_to_zero_worst_constraints": [
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow"
+          ],
+          "minimum_worst_lobe_margin": 0.0038452307989352294,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.04,
+          "all_lobes_reach_parity_zero": true,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": true,
+          "lobe_to_zero_first_failure_blockers": {},
+          "lobe_to_zero_worst_constraints": [
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow"
+          ],
+          "minimum_worst_lobe_margin": 0.0038452307989352294,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.05,
+          "all_lobes_reach_parity_zero": true,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": true,
+          "lobe_to_zero_first_failure_blockers": {},
+          "lobe_to_zero_worst_constraints": [
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow"
+          ],
+          "minimum_worst_lobe_margin": 0.0038452307989352294,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        }
+      ],
+      "first_connecting_value": 0.03
+    },
+    "soft_active_log_sweep": {
+      "rows": [
+        {
+          "value": 1e-06,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "soft_active_log_hierarchy_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "soft_active_log_hierarchy_prior",
+            "soft_active_log_hierarchy_prior",
+            "soft_active_log_hierarchy_prior",
+            "soft_active_log_hierarchy_prior"
+          ],
+          "minimum_worst_lobe_margin": -4.438431145540855,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "soft_active_log_hierarchy_prior",
+                "margin": -0.0363623293689459
+              }
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "soft_active_log_hierarchy_prior",
+                "margin": -0.010261302893831203
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "soft_active_log_hierarchy_prior",
+                "margin": -0.018568992769771864
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.09,
+                "constraint": "soft_active_log_hierarchy_prior",
+                "margin": -0.017617436242976847
+              }
+            },
+            {
+              "pair": [
+                1,
+                3
+              ],
+              "first_failure": {
+                "t": 0.08,
+                "constraint": "soft_active_log_hierarchy_prior",
+                "margin": -0.002057168459247638
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.005,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "soft_active_log_hierarchy_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "soft_active_log_hierarchy_prior",
+            "soft_active_log_hierarchy_prior",
+            "soft_active_log_hierarchy_prior",
+            "soft_active_log_hierarchy_prior"
+          ],
+          "minimum_worst_lobe_margin": -0.5053974780798303,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                0,
+                2
+              ],
+              "first_failure": {
+                "t": 0.11,
+                "constraint": "soft_active_log_hierarchy_prior",
+                "margin": -0.005648560546877235
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.11,
+                "constraint": "soft_active_log_hierarchy_prior",
+                "margin": -0.015938886258290985
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.12,
+                "constraint": "soft_active_log_hierarchy_prior",
+                "margin": -0.015367680707805587
+              }
+            },
+            {
+              "pair": [
+                1,
+                3
+              ],
+              "first_failure": {
+                "t": 0.11,
+                "constraint": "soft_active_log_hierarchy_prior",
+                "margin": -0.004179757358177216
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.01,
+          "all_lobes_reach_parity_zero": true,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": true,
+          "lobe_to_zero_first_failure_blockers": {},
+          "lobe_to_zero_worst_constraints": [
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow"
+          ],
+          "minimum_worst_lobe_margin": 0.0038452307989352294,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.02,
+          "all_lobes_reach_parity_zero": true,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": true,
+          "lobe_to_zero_first_failure_blockers": {},
+          "lobe_to_zero_worst_constraints": [
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow"
+          ],
+          "minimum_worst_lobe_margin": 0.0038452307989352294,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.025,
+          "all_lobes_reach_parity_zero": true,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": true,
+          "lobe_to_zero_first_failure_blockers": {},
+          "lobe_to_zero_worst_constraints": [
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow"
+          ],
+          "minimum_worst_lobe_margin": 0.0038452307989352294,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.03,
+          "all_lobes_reach_parity_zero": true,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": true,
+          "lobe_to_zero_first_failure_blockers": {},
+          "lobe_to_zero_worst_constraints": [
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow"
+          ],
+          "minimum_worst_lobe_margin": 0.0038452307989352294,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.04,
+          "all_lobes_reach_parity_zero": true,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": true,
+          "lobe_to_zero_first_failure_blockers": {},
+          "lobe_to_zero_worst_constraints": [
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow"
+          ],
+          "minimum_worst_lobe_margin": 0.0038452307989352294,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.05,
+          "all_lobes_reach_parity_zero": true,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": true,
+          "lobe_to_zero_first_failure_blockers": {},
+          "lobe_to_zero_worst_constraints": [
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow"
+          ],
+          "minimum_worst_lobe_margin": 0.0038452307989352294,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        }
+      ],
+      "first_connecting_value": 0.01
+    },
+    "sector_norm_threshold_sweep": {
+      "rows": [
+        {
+          "value": 1e-06,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "sector_norm_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -1298.4965976790415,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.16,
+                "constraint": "sector_norm_distance_prior",
+                "margin": -0.243358495736004
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.21,
+                "constraint": "sector_norm_distance_prior",
+                "margin": -0.1745650587640064
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.005,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "sector_norm_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -128.73404504454987,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.16,
+                "constraint": "sector_norm_distance_prior",
+                "margin": -0.243358495736004
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.21,
+                "constraint": "sector_norm_distance_prior",
+                "margin": -0.1745650587640064
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.01,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "sector_norm_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -54.36702252227488,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.16,
+                "constraint": "sector_norm_distance_prior",
+                "margin": -0.243358495736004
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.21,
+                "constraint": "sector_norm_distance_prior",
+                "margin": -0.1745650587640064
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.02,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "sector_norm_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -17.18351126113746,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.16,
+                "constraint": "sector_norm_distance_prior",
+                "margin": -0.243358495736004
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.21,
+                "constraint": "sector_norm_distance_prior",
+                "margin": -0.1745650587640064
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.025,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "sector_norm_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -9.746809008909963,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.16,
+                "constraint": "sector_norm_distance_prior",
+                "margin": -0.243358495736004
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.21,
+                "constraint": "sector_norm_distance_prior",
+                "margin": -0.1745650587640064
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.03,
+          "all_lobes_reach_parity_zero": false,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": false,
+          "lobe_to_zero_first_failure_blockers": {
+            "sector_norm_distance_prior": 4
+          },
+          "lobe_to_zero_worst_constraints": [
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior",
+            "sector_norm_distance_prior"
+          ],
+          "minimum_worst_lobe_margin": -4.789007507424969,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                0,
+                3
+              ],
+              "first_failure": {
+                "t": 0.16,
+                "constraint": "sector_norm_distance_prior",
+                "margin": -0.243358495736004
+              }
+            },
+            {
+              "pair": [
+                1,
+                2
+              ],
+              "first_failure": {
+                "t": 0.21,
+                "constraint": "sector_norm_distance_prior",
+                "margin": -0.1745650587640064
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.04,
+          "all_lobes_reach_parity_zero": true,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": true,
+          "lobe_to_zero_first_failure_blockers": {},
+          "lobe_to_zero_worst_constraints": [
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow"
+          ],
+          "minimum_worst_lobe_margin": 0.0038452307989352294,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.05,
+          "all_lobes_reach_parity_zero": true,
+          "parity_zero_plane_connected": true,
+          "all_connected_by_parity_zero_detour": true,
+          "lobe_to_zero_first_failure_blockers": {},
+          "lobe_to_zero_worst_constraints": [
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow",
+            "generalized_anomaly_inflow"
+          ],
+          "minimum_worst_lobe_margin": 0.0038452307989352294,
+          "direct_pair_failures": [
+            {
+              "pair": [
+                0,
+                1
+              ],
+              "first_failure": {
+                "t": 0.19,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0004419608757207441
+              }
+            },
+            {
+              "pair": [
+                2,
+                3
+              ],
+              "first_failure": {
+                "t": 0.2,
+                "constraint": "t_hooft_anomaly_matching",
+                "margin": -0.0003134018213956716
+              }
+            }
+          ]
+        }
+      ],
+      "first_connecting_value": 0.04
+    }
+  },
+  "interpretation": "If multiple continuous or sectorized hierarchy priors reconnect the v2.13 parity lobes through the parity-zero plane, the four-lobe topology remains a functional-form artifact of the current distance prior rather than evidence for disconnected physical phases."
+}
