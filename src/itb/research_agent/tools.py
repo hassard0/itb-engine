@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import ast
 import importlib
-import json
 import subprocess
 import sys
 from pathlib import Path
@@ -66,65 +65,28 @@ def list_findings_docs() -> dict:
 
 
 def read_findings_doc(filename: str) -> dict:
-    p = RESULTS_ROOT / filename
-    if not p.exists():
+    if Path(filename).name != filename:
+        return {"error": "filename must be a document name under docs/results/"}
+    p = (RESULTS_ROOT / filename).resolve()
+    try:
+        p.relative_to(RESULTS_ROOT.resolve())
+    except ValueError:
+        return {"error": "filename must stay under docs/results/"}
+    if not p.exists() or not p.is_file():
         return {"error": f"document not found: {filename}"}
     return {"filename": filename, "content": p.read_text(encoding="utf-8")}
 
 
 def compute_intersection() -> dict:
     """Run the engine's all-constraint optimizer."""
-    from itb.constraints.anomaly import AnomalyCancellation
-    from itb.constraints.anomaly_flow import (
-        GeneralizedAnomalyInflow,
-        tHooftAnomalyMatching,
-    )
-    from itb.constraints.bekenstein_tight import BekensteinTight
-    from itb.constraints.causality import CausalityBound
-    from itb.constraints.complexity_cutoff import ComplexityCutoff
-    from itb.constraints.cubic_parity import ParityViolatingCubicBound
-    from itb.constraints.dispersion_tower import (
-        DispersionTowerCauchySchwarz, ScalarPositivityG8,
-    )
-    from itb.constraints.eft_validity import EFTValidityBox
-    from itb.constraints.graviton_eft import GravitonMixedPositivity
-    from itb.constraints.graviton_self_coupling import (
-        CubicCurvaturePositivity, CubicGravitonMatterBound,
-    )
-    from itb.constraints.holographic_entropy import (
-        BNOSSWMonogamy, HolographicSubadditivity,
-    )
-    from itb.constraints.ligo_graviton_mass import LIGOGravitonMassBound
-    from itb.constraints.parity_violation import (
-        LIGOBirefringenceBound, LeftHandedGravitonPositivity,
-        ParityViolatingPositivity, RightHandedGravitonPositivity,
-    )
-    from itb.constraints.scalar_convexity import ScalarConvexityG6vsG4
-    from itb.constraints.scalar_positivity import (
-        ScalarPositivityG4, ScalarPositivityG6,
-    )
-    from itb.constraints.swampland import WeakGravityConjecture
     from itb.intersection_search import search_intersection
 
-    constraints = [
-        ScalarPositivityG4(), ScalarPositivityG6(), ScalarPositivityG8(),
-        ScalarConvexityG6vsG4(), DispersionTowerCauchySchwarz(),
-        GravitonMixedPositivity(), CubicCurvaturePositivity(),
-        CubicGravitonMatterBound(kappa=1.0),
-        BekensteinTight(), HolographicSubadditivity(), BNOSSWMonogamy(),
-        ParityViolatingPositivity(kappa=1.0),
-        LeftHandedGravitonPositivity(kappa=1.0),
-        RightHandedGravitonPositivity(kappa=1.0),
-        ParityViolatingCubicBound(kappa=1.0),
-        LIGOBirefringenceBound(bound=0.1),
-        EFTValidityBox(box=2.0), CausalityBound(gamma=1.0),
-        AnomalyCancellation(c_anom=1.0, tolerance=0.2),
-        GeneralizedAnomalyInflow(rho=0.06),
-        tHooftAnomalyMatching(rho_match=0.5, slack=0.02),
-        WeakGravityConjecture(alpha=1.0),
-        LIGOGravitonMassBound(bound=0.5),
-        ComplexityCutoff(c_max=1.5),
-    ]
+    experiments_root = str(REPO_ROOT / "experiments")
+    if experiments_root not in sys.path:
+        sys.path.insert(0, experiments_root)
+    from stack import build_stack
+
+    constraints = build_stack(bnossw_mean="geometric", rfc_form="convex_hull")
     initial = {
         "g_4": 0.5, "g_6": 0.4, "g_8": 0.4, "g_R2": 0.2,
         "g_R3": 0.15, "g_R2_parity": 0.0, "g_R3_parity": 0.0,

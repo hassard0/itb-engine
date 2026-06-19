@@ -3,18 +3,18 @@ metadata to a localhost UI."""
 
 import json
 from pathlib import Path
+from typing import Literal
 
 import numpy as np
 from fastapi import FastAPI, HTTPException
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from itb.adversarial import adversarial_bootstrap
 from itb.completeness import check_boundedness
 from itb.duality import cross_class_duality_2d
 from itb.fingerprint import (
-    fingerprint_distance,
     fingerprint_framework,
     fingerprint_matrix,
 )
@@ -27,11 +27,17 @@ from itb.constraints.anomaly_flow import (
     GeneralizedAnomalyInflow,
     tHooftAnomalyMatching,
 )
+from itb.constraints.bh_entropy_positivity import WaldEntropyPositivity
+from itb.constraints.cemz_causality import CEMZCausality
+from itb.constraints.cft_flat_space import CFTFlatSpaceBound
 from itb.constraints.complexity_cutoff import ComplexityCutoff
+from itb.constraints.cosmic_birefringence import CosmicBirefringenceData
+from itb.constraints.cross_sector_efthedron import CrossSectorEFThedron
 from itb.constraints.quantum_focusing import QuantumFocusingConjecture
 from itb.constraints.spin_four_positivity import SpinFourPositivity
 from itb.constraints.cubic_parity import ParityViolatingCubicBound
 from itb.constraints.causality import CausalityBound
+from itb.constraints.distance_conjecture import DistanceConjecture
 from itb.constraints.dispersion_tower import (
     DispersionTowerCauchySchwarz,
     ScalarPositivityG8,
@@ -42,19 +48,31 @@ from itb.constraints.holographic_entropy import (
 )
 from itb.constraints.eft_validity import EFTValidityBox
 from itb.constraints.experimental import MeasuredWilsonCoefficient
+from itb.constraints.generalized_second_law import GeneralizedSecondLaw
 from itb.constraints.graviton_eft import GravitonMixedPositivity
+from itb.constraints.graviton_forward_positivity import GravitonForwardPositivity
 from itb.constraints.graviton_self_coupling import (
     CubicCurvaturePositivity,
     CubicGravitonMatterBound,
 )
+from itb.constraints.gw_dispersion import GWDispersionBound
+from itb.constraints.gw_speed import GWSpeedBound
+from itb.constraints.hofman_maldacena import HofmanMaldacenaWedge
 from itb.constraints.ligo_graviton_mass import LIGOGravitonMassBound
+from itb.constraints.matter_s3_positivity import MatterS3Positivity
 from itb.constraints.parity_violation import (
     LIGOBirefringenceBound,
     LeftHandedGravitonPositivity,
     ParityViolatingPositivity,
     RightHandedGravitonPositivity,
 )
+from itb.constraints.species_scale import SpeciesScaleBound
+from itb.constraints.submm_gravity import SubmmGravityYukawaBound
 from itb.constraints.swampland import WeakGravityConjecture
+from itb.constraints.swampland_variants import (
+    RepulsiveForceConjecture,
+    ScalarWGC,
+)
 from itb.constraints.spin_decomposed import (
     SpinTwoPositivity,
     SpinZeroPositivity,
@@ -70,7 +88,17 @@ from itb.fisher import fisher_metric
 from itb.fragility import fragility_map_2d
 from itb.frameworks.base import Framework
 from itb.frameworks.asymptotic_safety import AsymptoticSafety
+from itb.frameworks.causal_set import CausalSet
 from itb.frameworks.cdt import CausalDynamicalTriangulation
+from itb.frameworks.data_driven import DiscoveredDataDriven
+from itb.frameworks.discovered import (
+    DiscoveredHighG8,
+    DiscoveredNovel,
+    DiscoveredParityViolating,
+)
+from itb.frameworks.emergent_gravity import EmergentGravity
+from itb.frameworks.group_field_theory import GroupFieldTheory
+from itb.frameworks.horava_lifshitz import HoravaLifshitz
 from itb.frameworks.lqg_induced import LQGInduced
 from itb.frameworks.pure_gr import PureGR
 from itb.frameworks.string_tree_eft import StringTreeEFT
@@ -125,6 +153,22 @@ CONSTRAINTS: dict[str, type[Constraint]] = {
     "quantum_focusing_conjecture": QuantumFocusingConjecture,
     "spin_four_positivity": SpinFourPositivity,
     "scalar_positivity_g4_sdp": ScalarPositivityG4SDP,
+    "cft_flat_space_bound": CFTFlatSpaceBound,
+    "graviton_forward_positivity": GravitonForwardPositivity,
+    "matter_s3_positivity": MatterS3Positivity,
+    "cemz_causality": CEMZCausality,
+    "cross_sector_efthedron": CrossSectorEFThedron,
+    "hofman_maldacena_wedge": HofmanMaldacenaWedge,
+    "generalized_second_law": GeneralizedSecondLaw,
+    "wald_entropy_positivity": WaldEntropyPositivity,
+    "scalar_wgc": ScalarWGC,
+    "repulsive_force_conjecture": RepulsiveForceConjecture,
+    "swampland_distance_conjecture": DistanceConjecture,
+    "species_scale_bound": SpeciesScaleBound,
+    "submm_gravity_yukawa_bound": SubmmGravityYukawaBound,
+    "cosmic_birefringence_data": CosmicBirefringenceData,
+    "gw_speed_bound": GWSpeedBound,
+    "gw_dispersion_bound": GWDispersionBound,
 }
 
 FRAMEWORKS: dict[str, type[Framework]] = {
@@ -133,6 +177,14 @@ FRAMEWORKS: dict[str, type[Framework]] = {
     "asymptotic_safety": AsymptoticSafety,
     "lqg_induced": LQGInduced,
     "cdt": CausalDynamicalTriangulation,
+    "group_field_theory": GroupFieldTheory,
+    "horava_lifshitz": HoravaLifshitz,
+    "causal_set": CausalSet,
+    "emergent_gravity": EmergentGravity,
+    "discovered_novel": DiscoveredNovel,
+    "discovered_parity_violating": DiscoveredParityViolating,
+    "discovered_high_g8": DiscoveredHighG8,
+    "discovered_data_driven": DiscoveredDataDriven,
 }
 
 
@@ -147,58 +199,58 @@ def _resolve_constraints(names: list[str]) -> list[Constraint]:
 
 class CheckRequest(BaseModel):
     coefficients: dict[str, float]
-    constraints: list[str]
-    tolerance: float | None = None
+    constraints: list[str] = Field(min_length=1, max_length=80)
+    tolerance: float | None = Field(default=None, ge=0.0)
 
 
 class SweepRequest(BaseModel):
     x_param: str
     x_range: tuple[float, float]
-    x_steps: int
+    x_steps: int = Field(ge=2, le=401)
     y_param: str
     y_range: tuple[float, float]
-    y_steps: int
-    constraints: list[str]
+    y_steps: int = Field(ge=2, le=401)
+    constraints: list[str] = Field(min_length=1, max_length=80)
     fixed_coefficients: dict[str, float] | None = None
-    color_by: str = "feasibility"  # feasibility | binding_class | per_constraint
+    color_by: Literal["feasibility", "binding_class", "per_constraint"] = "feasibility"
     overlay_frameworks: list[str] | None = None
 
 
 class PerturbationRequest(BaseModel):
     coefficients: dict[str, float]
-    constraints: list[str]
+    constraints: list[str] = Field(min_length=1, max_length=80)
 
 
 class FisherRequest(BaseModel):
     coefficients: dict[str, float]
-    params: list[str]
-    s_values: list[float]
-    sigma: float
+    params: list[str] = Field(min_length=1, max_length=24)
+    s_values: list[float] = Field(min_length=1, max_length=4096)
+    sigma: float = Field(gt=0.0)
 
 
 class FragilityRequest(BaseModel):
     x_param: str
     x_range: tuple[float, float]
-    x_steps: int
+    x_steps: int = Field(ge=2, le=301)
     y_param: str
     y_range: tuple[float, float]
-    y_steps: int
-    constraints: list[str]
+    y_steps: int = Field(ge=2, le=301)
+    constraints: list[str] = Field(min_length=1, max_length=80)
 
 
 class ImportanceRequest(BaseModel):
     x_param: str
     x_range: tuple[float, float]
-    x_steps: int
+    x_steps: int = Field(ge=2, le=301)
     y_param: str
     y_range: tuple[float, float]
-    y_steps: int
-    constraints: list[str]
+    y_steps: int = Field(ge=2, le=301)
+    constraints: list[str] = Field(min_length=1, max_length=80)
 
 
 class AdversarialRequest(BaseModel):
     initial_guess: dict[str, float]
-    constraints: list[str]
+    constraints: list[str] = Field(min_length=1, max_length=80)
 
 
 class PathRequest(BaseModel):
@@ -206,101 +258,107 @@ class PathRequest(BaseModel):
     end: dict[str, float]
     x_param: str
     x_range: tuple[float, float]
-    x_steps: int
+    x_steps: int = Field(ge=2, le=301)
     y_param: str
     y_range: tuple[float, float]
-    y_steps: int
-    constraints: list[str]
+    y_steps: int = Field(ge=2, le=301)
+    constraints: list[str] = Field(min_length=1, max_length=80)
 
 
 class CompletenessRequest(BaseModel):
-    constraints: list[str]
-    params: list[str]
-    starting_box: float = 2.0
-    max_box: float = 8.0
-    steps_per_axis: int = 11
+    constraints: list[str] = Field(min_length=1, max_length=80)
+    params: list[str] = Field(min_length=1, max_length=12)
+    starting_box: float = Field(default=2.0, gt=0.0, le=1000.0)
+    max_box: float = Field(default=8.0, gt=0.0, le=1000.0)
+    steps_per_axis: int = Field(default=11, ge=2, le=101)
 
 
 class SensitivityProbabilityRequest(BaseModel):
     coefficients: dict[str, float]
-    constraints: list[str]
-    sigma: float = 0.1
-    n_samples: int = 200
+    constraints: list[str] = Field(min_length=1, max_length=80)
+    sigma: float = Field(default=0.1, gt=0.0, le=100.0)
+    n_samples: int = Field(default=200, ge=1, le=10000)
 
 
 class SensitivityGridRequest(BaseModel):
     x_param: str
     x_range: tuple[float, float]
-    x_steps: int
+    x_steps: int = Field(ge=2, le=151)
     y_param: str
     y_range: tuple[float, float]
-    y_steps: int
-    constraints: list[str]
-    sigma: float = 0.1
-    n_samples: int = 80
+    y_steps: int = Field(ge=2, le=151)
+    constraints: list[str] = Field(min_length=1, max_length=80)
+    sigma: float = Field(default=0.1, gt=0.0, le=100.0)
+    n_samples: int = Field(default=80, ge=1, le=5000)
     fixed_coefficients: dict[str, float] | None = None
 
 
 class DualityRequest(BaseModel):
-    constraints: list[str]
+    constraints: list[str] = Field(min_length=1, max_length=80)
     x_param: str
     x_range: tuple[float, float]
-    x_steps: int
+    x_steps: int = Field(ge=2, le=301)
     y_param: str
     y_range: tuple[float, float]
-    y_steps: int
+    y_steps: int = Field(ge=2, le=301)
     fixed_coefficients: dict[str, float] | None = None
 
 
 class VoxelRequest(BaseModel):
-    x_param: str; x_range: tuple[float, float]; x_steps: int
-    y_param: str; y_range: tuple[float, float]; y_steps: int
-    z_param: str; z_range: tuple[float, float]; z_steps: int
-    constraints: list[str]
+    x_param: str
+    x_range: tuple[float, float]
+    x_steps: int = Field(ge=2, le=101)
+    y_param: str
+    y_range: tuple[float, float]
+    y_steps: int = Field(ge=2, le=101)
+    z_param: str
+    z_range: tuple[float, float]
+    z_steps: int = Field(ge=2, le=101)
+    constraints: list[str] = Field(min_length=1, max_length=80)
     slice_axis: str | None = None
     slice_value: float | None = None
 
 
 class FingerprintRequest(BaseModel):
-    frameworks: list[str]
-    constraints: list[str]
+    frameworks: list[str] = Field(min_length=1, max_length=32)
+    constraints: list[str] = Field(min_length=1, max_length=80)
 
 
 class MeasurementRequest(BaseModel):
     coefficient_name: str
     central_value: float
-    sigma: float
-    sigma_threshold: float = 2.0
+    sigma: float = Field(gt=0.0)
+    sigma_threshold: float = Field(default=2.0, gt=0.0)
     experiment_label: str = "synthetic"
     coefficients: dict[str, float]
 
 
 class FrameworkReportRequest(BaseModel):
-    frameworks: list[str]
-    constraints: list[str]
+    frameworks: list[str] = Field(min_length=1, max_length=32)
+    constraints: list[str] = Field(min_length=1, max_length=80)
 
 
 class ExperimentPriorityRequest(BaseModel):
-    base_constraints: list[str]
-    experiments: list[dict]   # [{label, coefficient_name, central_value, sigma}]
+    base_constraints: list[str] = Field(min_length=1, max_length=80)
+    experiments: list[dict] = Field(min_length=1, max_length=64)
     x_param: str = "g_4"
     x_range: tuple[float, float] = (0.0, 2.0)
-    x_steps: int = 21
+    x_steps: int = Field(default=21, ge=2, le=301)
     y_param: str = "g_6"
     y_range: tuple[float, float] = (0.0, 2.0)
-    y_steps: int = 21
+    y_steps: int = Field(default=21, ge=2, le=301)
     fixed_coefficients: dict[str, float] | None = None
 
 
 class BatteryRequest(BaseModel):
-    constraints: list[str]
-    frameworks: list[str]
+    constraints: list[str] = Field(min_length=1, max_length=80)
+    frameworks: list[str] = Field(min_length=1, max_length=32)
     x_param: str = "g_4"
     x_range: tuple[float, float] = (-1.0, 2.0)
-    x_steps: int = 21
+    x_steps: int = Field(default=21, ge=2, le=301)
     y_param: str = "g_6"
     y_range: tuple[float, float] = (-1.0, 2.0)
-    y_steps: int = 21
+    y_steps: int = Field(default=21, ge=2, le=301)
     fixed_coefficients: dict[str, float] | None = None
     label: str = "battery"
 
@@ -308,11 +366,11 @@ class BatteryRequest(BaseModel):
 class PhasesRequest(BaseModel):
     x_param: str
     x_range: tuple[float, float]
-    x_steps: int
+    x_steps: int = Field(ge=2, le=401)
     y_param: str
     y_range: tuple[float, float]
-    y_steps: int
-    constraints: list[str]
+    y_steps: int = Field(ge=2, le=401)
+    constraints: list[str] = Field(min_length=1, max_length=80)
 
 
 app = FastAPI(title="ITB Engine", version="0.2.0")

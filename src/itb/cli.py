@@ -82,6 +82,14 @@ def cmd_research_agent(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_swarm_plan(args: argparse.Namespace) -> int:
+    from itb.research_agent.swarm import write_swarm_brief
+
+    path = write_swarm_brief(path=args.output, vulcan_host=args.vulcan_host)
+    print(f"wrote {path}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="itb", description="ITB Engine CLI")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -119,6 +127,14 @@ def main(argv: list[str] | None = None) -> int:
     p_agent.add_argument("--max-tokens", type=int, default=4096)
     p_agent.add_argument("--temperature", type=float, default=0.6)
     p_agent.set_defaults(fn=cmd_research_agent)
+
+    p_swarm = sub.add_parser(
+        "swarm-plan",
+        help="Write the current multi-persona research-swarm agenda",
+    )
+    p_swarm.add_argument("--output", help="Markdown path to write")
+    p_swarm.add_argument("--vulcan-host", default="192.168.4.178")
+    p_swarm.set_defaults(fn=cmd_swarm_plan)
 
     args = parser.parse_args(argv)
     return args.fn(args)
