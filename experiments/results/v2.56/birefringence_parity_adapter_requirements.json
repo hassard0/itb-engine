@@ -1,0 +1,170 @@
+{
+  "basis": [
+    "v2.49_birefringence_evidence_freshness",
+    "v2.52_nontower_promotion_guard",
+    "engine_cosmic_birefringence_constraint"
+  ],
+  "route": "cosmic_birefringence",
+  "axis_candidates": [
+    "g_R2_parity",
+    "g_R3_parity"
+  ],
+  "engine_current_mapping": {
+    "formula": "beta_pred_deg = KAPPA_BETA * g_R2_parity",
+    "kappa_beta_deg_per_unit_g_R2_parity": 3.4,
+    "mapping_status": "toy_order_of_magnitude_not_source_backed",
+    "preferred_g_R2_parity_band_2sigma": [
+      0.04705882352941178,
+      0.15294117647058825
+    ],
+    "zero_exclusion_sigma_engine_constraint": 3.777777777777778
+  },
+  "evidence_freshness_snapshot": {
+    "route_status": "alive_but_not_claimable",
+    "dataset_count": 5,
+    "positive_sign_dataset_count": 5,
+    "independent_pair_zero_exclusion_sigma": 4.5333911785122005,
+    "systematic_dominated_datasets": [
+      "planck_pr4_map_space_sevem",
+      "planck_pr4_map_space_commander"
+    ]
+  },
+  "adapter_requirements": [
+    {
+      "id": "source_backed_operator_identity",
+      "description": "A cited operator-level statement identifying which parity-odd term rotates CMB polarization and which engine coefficient it maps to.",
+      "current_status": "missing",
+      "blocker_if_missing": "operator_identity_not_source_backed"
+    },
+    {
+      "id": "beta_to_engine_axis_normalization",
+      "description": "A source-backed normalization replacing the current toy KAPPA_BETA value.",
+      "current_status": "toy_only",
+      "blocker_if_missing": "beta_axis_normalization_toy"
+    },
+    {
+      "id": "em_vs_gravitational_parity_separation",
+      "description": "A separation between electromagnetic cosmic rotation and gravitational parity coefficients such as g_R2_parity/g_R3_parity.",
+      "current_status": "missing",
+      "blocker_if_missing": "em_gravity_parity_map_not_separated"
+    },
+    {
+      "id": "frequency_and_redshift_transfer_model",
+      "description": "A transfer model for whether beta is achromatic, frequency-dependent, redshift-dependent, or sourced by a late-time field.",
+      "current_status": "missing",
+      "blocker_if_missing": "missing_frequency_redshift_transfer"
+    },
+    {
+      "id": "public_likelihood_or_covariance",
+      "description": "A public beta likelihood/covariance usable by the engine rather than a single copied central value.",
+      "current_status": "missing",
+      "blocker_if_missing": "missing_public_beta_likelihood"
+    },
+    {
+      "id": "absolute_angle_calibration_closure",
+      "description": "Instrument polarization-angle calibration closed without using the sought cosmic signal as the calibrator.",
+      "current_status": "open",
+      "blocker_if_missing": "instrument_angle_miscalibration_degeneracy"
+    },
+    {
+      "id": "foreground_systematics_closure",
+      "description": "Foreground EB and map-making systematics bounded across independent pipeline choices.",
+      "current_status": "open",
+      "blocker_if_missing": "foreground_systematics_not_closed"
+    },
+    {
+      "id": "five_sigma_or_preregistered_subclaim",
+      "description": "A discovery-grade detection or a strictly labelled sub-discovery evidence row that cannot be used as a framework exclusion.",
+      "current_status": "sub_discovery",
+      "blocker_if_missing": "no_5sigma_single_dataset_detection"
+    },
+    {
+      "id": "non_circular_framework_predictions",
+      "description": "Framework beta/parity predictions computed without using the same beta measurement as both construction input and validation target.",
+      "current_status": "open",
+      "blocker_if_missing": "data_driven_eft_reuses_birefringence"
+    },
+    {
+      "id": "excluding_discriminator_math",
+      "description": "A source-backed mapped parity value that excludes at least one registered framework beyond uncertainty.",
+      "current_status": "missing",
+      "blocker_if_missing": "discriminator_math_not_excluding"
+    }
+  ],
+  "open_adapter_requirements": [
+    "source_backed_operator_identity",
+    "beta_to_engine_axis_normalization",
+    "em_vs_gravitational_parity_separation",
+    "frequency_and_redshift_transfer_model",
+    "public_likelihood_or_covariance",
+    "absolute_angle_calibration_closure",
+    "foreground_systematics_closure",
+    "five_sigma_or_preregistered_subclaim",
+    "non_circular_framework_predictions",
+    "excluding_discriminator_math"
+  ],
+  "current_evidence": {
+    "axis": "g_R2_parity",
+    "route": "cosmic_birefringence_beta_hint",
+    "source_url": "https://arxiv.org/abs/2205.13962",
+    "source_type": "primary_literature",
+    "measurement_kind": "external_numeric_measurement",
+    "numerical_value": 0.342,
+    "uncertainty": 0.094,
+    "axis_mapping_kind": "toy_linear_beta_map",
+    "systematics_status": "open",
+    "metadata": {
+      "kappa_beta_deg_per_unit_g_R2_parity": 3.4,
+      "kappa_status": "order_of_magnitude_toy_normalization",
+      "internal_cut_only": false,
+      "source_title": "Eskilt and Komatsu, Improved Constraints on Cosmic Birefringence from the WMAP and Planck CMB Polarization Data"
+    }
+  },
+  "current_guard": {
+    "ready_for_promotion": false,
+    "discriminator_claimable_by_math": false,
+    "evidence_ready": false,
+    "validation": {
+      "ready_for_discriminator_claim": false,
+      "missing_fields": [],
+      "source_url_valid": true,
+      "source_type_valid": true,
+      "measurement_kind_valid": true,
+      "axis_mapping_valid": false,
+      "systematics_closed": false,
+      "numerical_value_present": true,
+      "uncertainty_valid": true,
+      "blockers": [
+        "axis_mapping_not_source_backed",
+        "systematics_not_closed"
+      ]
+    },
+    "blockers": [
+      "axis_mapping_not_source_backed",
+      "discriminator_math_not_excluding",
+      "external_measurement_evidence_not_ready",
+      "systematics_not_closed"
+    ]
+  },
+  "claim_ready_routes": [],
+  "claimable_discriminator_now": false,
+  "claim_blockers": [
+    "axis_mapping_not_source_backed",
+    "beta_axis_normalization_toy",
+    "data_driven_eft_reuses_birefringence",
+    "data_driven_eft_still_one_observable_dominated",
+    "discriminator_math_not_excluding",
+    "em_gravity_parity_map_not_separated",
+    "external_measurement_evidence_not_ready",
+    "foreground_systematics_not_closed",
+    "instrument_angle_miscalibration_degeneracy",
+    "missing_frequency_redshift_transfer",
+    "missing_public_beta_likelihood",
+    "no_5sigma_single_dataset_detection",
+    "operator_identity_not_source_backed",
+    "systematics_not_closed"
+  ],
+  "route_status": "parity_adapter_required_not_satisfied",
+  "best_next_artifact": "A source-backed beta-to-parity adapter with public likelihood, closed calibration/foreground systematics, and non-circular framework predictions.",
+  "interpretation": "Cosmic birefringence remains empirically alive, but the engine's current beta-to-g_R2_parity map is a toy normalization. A framework claim needs a source-backed operator identity, EM-versus-gravity parity separation, public likelihood, closed systematics, and non-circular predictions."
+}
