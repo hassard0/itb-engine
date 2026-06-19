@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (129 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (130 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -178,3 +178,4 @@ Auto-generated front door to the full research program (129 notes). Regenerate w
 | v2.16 | [v2.16 - Continuous distance-prior diagnostics: parity topology is stil](2026-06-19-v2.16-continuous-distance-prior.md) | v2.14 and v2.15 showed that the four v2.13 parity lobes are split by the hard |
 | v2.17 | [v2.17 - Tower/species surrogate gate: continuous replacements pass top](2026-06-19-v2.17-tower-surrogate-distance.md) | v2.16 showed that the parity-lobe topology is functional-form dependent. The next |
 | v2.18 | [v2.18 - Tower-surrogate overlap audit: cleaner priors, still redundant](2026-06-19-v2.18-tower-surrogate-overlap.md) | v2.17 showed that continuous tower/species surrogates pass a basic sanity gate: they |
+| v2.19 | [v2.19 - Latent moduli/tower diagnostic: explicit tower chain, still no](2026-06-19-v2.19-latent-moduli-tower.md) | v2.18 closed the simple tower-norm loop: continuous species/tower priors are better |
