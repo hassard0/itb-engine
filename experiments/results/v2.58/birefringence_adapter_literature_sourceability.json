@@ -1,0 +1,131 @@
+{
+  "basis": [
+    "v2.56_birefringence_adapter_requirements",
+    "v2.57_prediction_noncircularity",
+    "primary_literature_channel_split"
+  ],
+  "row_count": 5,
+  "em_birefringence_source_backed": true,
+  "cmb_beta_measurement_source_backed": true,
+  "gravitational_parity_channel_source_backed": true,
+  "universal_em_to_gravity_relation_found": false,
+  "engine_axis_normalization_found": false,
+  "claim_ready_adapter_pieces": [],
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "gravitational_birefringence_is_separate_observable": 1,
+    "gravitational_parity_requires_gw_channel": 1,
+    "instrument_systematics_not_closed_for_claim": 2,
+    "maps_beta_to_alp_photon_not_gravity_parity": 1,
+    "measurement_not_operator_adapter": 2,
+    "no_cmb_beta_to_gravity_coupling_relation": 2,
+    "no_engine_g_R2_parity_normalization": 1
+  },
+  "rows": [
+    {
+      "label": "alp_photon_cmb_rotation_mechanism",
+      "source": {
+        "title": "Murai, Isotropic cosmic birefringence from an oscillating axion-like field",
+        "url": "https://arxiv.org/abs/2407.14162",
+        "channel": "electromagnetic_axion_photon"
+      },
+      "supports_beta_measurement": false,
+      "supports_em_axion_photon_map": true,
+      "supports_gravitational_parity_map": false,
+      "provides_universal_em_to_gravity_relation": false,
+      "provides_engine_axis_normalization": false,
+      "status": "source_backed_em_birefringence_mechanism",
+      "claim_ready_adapter_piece": false,
+      "blockers": [
+        "maps_beta_to_alp_photon_not_gravity_parity",
+        "no_engine_g_R2_parity_normalization"
+      ]
+    },
+    {
+      "label": "wmap_planck_beta_measurement",
+      "source": {
+        "title": "Eskilt and Komatsu, Improved Constraints on Cosmic Birefringence from WMAP and Planck",
+        "url": "https://arxiv.org/abs/2205.13962",
+        "channel": "cmb_beta_measurement"
+      },
+      "supports_beta_measurement": true,
+      "supports_em_axion_photon_map": false,
+      "supports_gravitational_parity_map": false,
+      "provides_universal_em_to_gravity_relation": false,
+      "provides_engine_axis_normalization": false,
+      "status": "external_beta_hint_without_gravity_adapter",
+      "claim_ready_adapter_piece": false,
+      "blockers": [
+        "measurement_not_operator_adapter",
+        "instrument_systematics_not_closed_for_claim"
+      ]
+    },
+    {
+      "label": "act_dr6_beta_measurement",
+      "source": {
+        "title": "Diego-Palazuelos and Komatsu, ACT DR6 cosmic birefringence",
+        "url": "https://arxiv.org/abs/2509.13654",
+        "channel": "cmb_beta_measurement"
+      },
+      "supports_beta_measurement": true,
+      "supports_em_axion_photon_map": false,
+      "supports_gravitational_parity_map": false,
+      "provides_universal_em_to_gravity_relation": false,
+      "provides_engine_axis_normalization": false,
+      "status": "external_beta_hint_without_gravity_adapter",
+      "claim_ready_adapter_piece": false,
+      "blockers": [
+        "measurement_not_operator_adapter",
+        "instrument_systematics_not_closed_for_claim"
+      ]
+    },
+    {
+      "label": "ligo_axion_gravity_coupling_constraint",
+      "source": {
+        "title": "Jung et al., Constraining the gravitational coupling of axion dark matter at LIGO",
+        "url": "https://arxiv.org/abs/2003.02853",
+        "channel": "gravitational_axion_chern_simons"
+      },
+      "supports_beta_measurement": false,
+      "supports_em_axion_photon_map": false,
+      "supports_gravitational_parity_map": true,
+      "provides_universal_em_to_gravity_relation": false,
+      "provides_engine_axis_normalization": false,
+      "status": "source_backed_gravity_channel_not_cmb_beta_adapter",
+      "claim_ready_adapter_piece": false,
+      "blockers": [
+        "gravitational_parity_requires_gw_channel",
+        "no_cmb_beta_to_gravity_coupling_relation"
+      ]
+    },
+    {
+      "label": "axion_gravity_wave_birefringence_mechanism",
+      "source": {
+        "title": "Chu, Soda, and Yoshida, Gravitational Waves in Axion Dark Matter",
+        "url": "https://arxiv.org/abs/2002.04859",
+        "channel": "gravitational_axion_chern_simons"
+      },
+      "supports_beta_measurement": false,
+      "supports_em_axion_photon_map": false,
+      "supports_gravitational_parity_map": true,
+      "provides_universal_em_to_gravity_relation": false,
+      "provides_engine_axis_normalization": false,
+      "status": "source_backed_gravity_channel_not_cmb_beta_adapter",
+      "claim_ready_adapter_piece": false,
+      "blockers": [
+        "gravitational_birefringence_is_separate_observable",
+        "no_cmb_beta_to_gravity_coupling_relation"
+      ]
+    }
+  ],
+  "route_status": "cmb_beta_not_direct_gravitational_parity_adapter",
+  "claim_blockers": [
+    "cmb_beta_maps_to_photon_axion_not_engine_gravity_parity",
+    "no_universal_em_gravity_coupling_relation",
+    "gw_gravity_parity_is_separate_measurement_channel",
+    "no_engine_axis_normalization",
+    "birefringence_route_still_systematics_and_adapter_blocked"
+  ],
+  "best_next_artifact": "Either a source-backed multimessenger axion model relating photon and gravity Chern-Simons couplings, or a pivot that treats CMB beta as an electromagnetic/axion route and uses GW birefringence for engine gravitational parity.",
+  "interpretation": "The literature supports CMB beta as an electromagnetic axion-photon birefringence observable and separately supports gravitational Chern-Simons parity channels. It does not provide a universal, engine-normalized bridge from CMB beta to g_R2_parity/g_R3_parity. The direct beta-to-gravity-parity route should therefore remain blocked or be split into EM/axion and GW parity channels."
+}
