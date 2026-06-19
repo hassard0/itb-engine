@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (132 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (133 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -181,3 +181,4 @@ Auto-generated front door to the full research program (132 notes). Regenerate w
 | v2.19 | [v2.19 - Latent moduli/tower diagnostic: explicit tower chain, still no](2026-06-19-v2.19-latent-moduli-tower.md) | v2.18 closed the simple tower-norm loop: continuous species/tower priors are better |
 | v2.20 | [v2.20 - Explicit tower-coordinate basis: a nonredundant 9D gate, not f](2026-06-19-v2.20-explicit-tower-basis.md) | v2.16-v2.19 showed that every coefficient-only replacement for the hard distance prior |
 | v2.21 | [v2.21 - Tower-observable thresholds: what would make the 9D gate measu](2026-06-19-v2.21-tower-observable-thresholds.md) | v2.20 found a nonredundant 9D tower gate, but it is not framework discrimination until |
+| v2.22 | [v2.22 - Tower framework scenarios: exclusions are assignment-dependent](2026-06-19-v2.22-tower-framework-scenarios.md) | v2.21 identified concrete tower-observable thresholds, but named framework encoders still |
