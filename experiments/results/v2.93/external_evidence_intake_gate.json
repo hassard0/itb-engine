@@ -1,0 +1,177 @@
+{
+  "version": "v2.93",
+  "basis": [
+    "v2.92_external_evidence_packet_contract",
+    "v2.91_post_g8_direct_measurement_frontier"
+  ],
+  "gate_scope": "external_evidence_packet_intake",
+  "contract_route_status": "external_evidence_contract_ready_no_packet",
+  "contract_route_count": 6,
+  "sample_packet_count": 4,
+  "schema_ready_sample_packets": [
+    "synthetic_complete_future_public_g8_measurement_ingestion"
+  ],
+  "claim_ready_sample_packets": [],
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "claim_gate_not_satisfied:component_systematics_budget_closed": 1,
+    "claim_gate_not_satisfied:engine_axis_mapping_source_backed": 1,
+    "claim_gate_not_satisfied:framework_exclusion_math_present": 1,
+    "claim_gate_not_satisfied:public_likelihood_or_covariance_present": 1,
+    "claim_gate_not_satisfied:registered_framework_domain_bounded": 1,
+    "claim_gate_not_satisfied:synthetic_fixture_false": 1,
+    "missing_public_likelihood_or_covariance": 1,
+    "missing_required_fields": 2,
+    "ownership_metadata_missing": 1,
+    "synthetic_fixture_not_real_source": 1,
+    "unknown_route_no_contract": 1,
+    "wilson_coefficient_normalization_not_engine_g8": 1
+  },
+  "evaluations": [
+    {
+      "label": "synthetic_complete_future_public_g8_measurement_ingestion",
+      "route": "future_public_g8_measurement_ingestion",
+      "contract_found": true,
+      "external_object": "engine_normalized_g8_measurement_packet",
+      "synthetic_fixture": true,
+      "missing_fields": [],
+      "claim_gate_results": {
+        "primary_or_release_source_present": true,
+        "public_likelihood_or_covariance_present": true,
+        "component_systematics_budget_closed": true,
+        "engine_axis_mapping_source_backed": true,
+        "registered_framework_domain_bounded": true,
+        "framework_exclusion_math_present": true,
+        "synthetic_fixture_false": false
+      },
+      "failed_claim_gates": [
+        "synthetic_fixture_false"
+      ],
+      "active_rejection_tests": [],
+      "unknown_rejection_tests": [],
+      "schema_ready": true,
+      "claim_ready": false,
+      "blockers": [
+        "claim_gate_not_satisfied:synthetic_fixture_false",
+        "synthetic_fixture_not_real_source"
+      ],
+      "status": "external_packet_rejected_or_nonpromoting"
+    },
+    {
+      "label": "incomplete_g8_packet",
+      "route": "future_public_g8_measurement_ingestion",
+      "contract_found": true,
+      "external_object": "engine_normalized_g8_measurement_packet",
+      "synthetic_fixture": false,
+      "missing_fields": [
+        "analysis_code_or_likelihood_sampler",
+        "axis",
+        "central_value_or_bound",
+        "citation",
+        "covariance_or_likelihood",
+        "cutoff_or_energy_domain",
+        "discriminator_math",
+        "framework_applicability_domain",
+        "jacobian_or_projection_to_g_8",
+        "license_or_access_terms",
+        "low_energy_eft_validity_statement",
+        "measurement_kind",
+        "mixing_with_g_4_g_6",
+        "observable_basis",
+        "public_data_or_code_url",
+        "source_type",
+        "source_version_or_release",
+        "statistical_uncertainty",
+        "systematic_uncertainty",
+        "systematics_budget",
+        "systematics_components",
+        "wilson_coefficient_normalization"
+      ],
+      "claim_gate_results": {
+        "primary_or_release_source_present": true,
+        "public_likelihood_or_covariance_present": false,
+        "component_systematics_budget_closed": false,
+        "engine_axis_mapping_source_backed": false,
+        "registered_framework_domain_bounded": false,
+        "framework_exclusion_math_present": false,
+        "synthetic_fixture_false": true
+      },
+      "failed_claim_gates": [
+        "public_likelihood_or_covariance_present",
+        "component_systematics_budget_closed",
+        "engine_axis_mapping_source_backed",
+        "registered_framework_domain_bounded",
+        "framework_exclusion_math_present"
+      ],
+      "active_rejection_tests": [
+        "missing_public_likelihood_or_covariance",
+        "wilson_coefficient_normalization_not_engine_g8"
+      ],
+      "unknown_rejection_tests": [],
+      "schema_ready": false,
+      "claim_ready": false,
+      "blockers": [
+        "claim_gate_not_satisfied:component_systematics_budget_closed",
+        "claim_gate_not_satisfied:engine_axis_mapping_source_backed",
+        "claim_gate_not_satisfied:framework_exclusion_math_present",
+        "claim_gate_not_satisfied:public_likelihood_or_covariance_present",
+        "claim_gate_not_satisfied:registered_framework_domain_bounded",
+        "missing_public_likelihood_or_covariance",
+        "missing_required_fields",
+        "wilson_coefficient_normalization_not_engine_g8"
+      ],
+      "status": "external_packet_rejected_or_nonpromoting"
+    },
+    {
+      "label": "native_packet_missing_ownership",
+      "route": "framework_specific_native_tower_search",
+      "contract_found": true,
+      "external_object": "registered_framework_native_tower_packet",
+      "synthetic_fixture": false,
+      "missing_fields": [
+        "ownership_metadata"
+      ],
+      "claim_gate_results": {
+        "primary_or_release_source_present": true,
+        "public_likelihood_or_covariance_present": true,
+        "component_systematics_budget_closed": true,
+        "engine_axis_mapping_source_backed": true,
+        "registered_framework_domain_bounded": true,
+        "framework_exclusion_math_present": true,
+        "synthetic_fixture_false": true
+      },
+      "failed_claim_gates": [],
+      "active_rejection_tests": [
+        "ownership_metadata_missing"
+      ],
+      "unknown_rejection_tests": [],
+      "schema_ready": false,
+      "claim_ready": false,
+      "blockers": [
+        "missing_required_fields",
+        "ownership_metadata_missing"
+      ],
+      "status": "external_packet_rejected_or_nonpromoting"
+    },
+    {
+      "label": "unknown_route_packet",
+      "route": "unregistered_external_route",
+      "contract_found": false,
+      "missing_fields": [],
+      "claim_gate_results": {},
+      "active_rejection_tests": [],
+      "unknown_rejection_tests": [
+        "unmapped_route"
+      ],
+      "schema_ready": false,
+      "claim_ready": false,
+      "blockers": [
+        "unknown_route_no_contract"
+      ],
+      "status": "external_packet_rejected_no_contract"
+    }
+  ],
+  "route_status": "external_evidence_intake_gate_ready_no_real_packet",
+  "best_next_artifact": "Use this gate on a real external packet; do not promote synthetic or contract-incomplete packets.",
+  "interpretation": "The intake gate is executable. It can distinguish schema-complete fixtures from real claim evidence and rejects unknown, incomplete, or route-rejected packets before discriminator promotion."
+}
