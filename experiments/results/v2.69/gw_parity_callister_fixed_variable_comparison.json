@@ -1,0 +1,53 @@
+{
+  "version": "v2.69",
+  "basis": [
+    "v2.68_gw_parity_callister_sample_density_adapter",
+    "Callister_Zenodo_10.5281_zenodo.10384998"
+  ],
+  "zenodo_record_url": "https://zenodo.org/records/10384998",
+  "zenodo_api_url": "https://zenodo.org/api/records/10384998",
+  "archive_filename": "stochastic-birefringence-data.zip",
+  "archive_md5_expected": "1373cfdd037b5d87c201e2aba06e8b42",
+  "archive_md5_observed": "1373cfdd037b5d87c201e2aba06e8b42",
+  "archive_md5_verified": true,
+  "fixed_reference_file": "fixed_rate_delayedSFR.hdf",
+  "variable_reference_file": "birefringence_variable_evolution.hdf",
+  "comparison_ready": true,
+  "kappa_D_fixed_vs_variable_kappa_Dc": {
+    "ready": true,
+    "comparison_points": 512,
+    "overlap_min": -0.2,
+    "overlap_max": 0.2,
+    "reference_peak_coordinate": 0.10215264187866929,
+    "candidate_peak_coordinate": 0.08336594911937378,
+    "peak_offset_candidate_minus_reference": -0.01878669275929551,
+    "total_variation_distance": 0.31877239370013705,
+    "hellinger_distance": 0.421274010278444,
+    "blockers": []
+  },
+  "kappa_z_fixed_vs_variable": {
+    "ready": true,
+    "comparison_points": 512,
+    "overlap_min": -0.4,
+    "overlap_max": 0.4,
+    "reference_peak_coordinate": -0.060273972602739756,
+    "candidate_peak_coordinate": -0.013307240704501011,
+    "peak_offset_candidate_minus_reference": 0.046966731898238745,
+    "total_variation_distance": 0.37123047274901727,
+    "hellinger_distance": 0.43687616624436193,
+    "blockers": []
+  },
+  "ppv_beta1_projection_ready": false,
+  "engine_projection_ready": false,
+  "claimable_discriminator_now": false,
+  "artifact_blockers": [
+    "comparison_statistic_source_native_only",
+    "population_assumption_change_not_framework_exclusion_math",
+    "helicity_convention_not_harmonized_across_sources",
+    "ppv_beta1_normalization_not_finalized",
+    "engine_projection_out_of_scope"
+  ],
+  "route_status": "callister_fixed_variable_comparison_ready_projection_blocked",
+  "best_next_artifact": "Use the source-native comparison to define a release-internal robustness criterion, then separately harmonize PPV beta conventions.",
+  "interpretation": "Fixed-rate and variable-evolution Callister posteriors can now be compared in native kappa coordinates. The distances quantify population-model sensitivity only; they are not a quantum-gravity framework exclusion or engine-axis projection."
+}

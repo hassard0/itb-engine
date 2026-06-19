@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (179 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (180 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -228,3 +228,4 @@ Auto-generated front door to the full research program (179 notes). Regenerate w
 | v2.66 | [v2.66 - GW parity Callister real release probe: fixed-rate files ingested](2026-06-19-v2.66-gw-parity-callister-real-release-probe.md) | v2.66 verifies all eight Callister fixed-rate Zenodo HDF files with the guarded parser while keeping variable-rate ingestion and engine projection blocked. |
 | v2.67 | [v2.67 - GW parity Callister variable evolution probe: sample file ingested](2026-06-19-v2.67-gw-parity-callister-variable-evolution-probe.md) | v2.67 parses the remaining Callister variable-evolution HDF sample product while keeping sample-density adaptation and engine projection blocked. |
 | v2.68 | [v2.68 - GW parity Callister sample density adapter: source-native histograms ready](2026-06-19-v2.68-gw-parity-callister-sample-density-adapter.md) | v2.68 converts Callister variable-evolution samples into normalized source-native histogram densities while keeping comparison interpretation and engine projection blocked. |
+| v2.69 | [v2.69 - GW parity Callister fixed-variable comparison: source-native sensitivity quantified](2026-06-19-v2.69-gw-parity-callister-fixed-variable-comparison.md) | v2.69 compares Callister fixed-rate and variable-evolution native posterior densities with TV/Hellinger/peak-offset diagnostics while keeping engine projection blocked. |

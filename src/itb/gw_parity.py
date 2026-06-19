@@ -458,6 +458,116 @@ def joint_histogram_posterior_from_samples(
     }
 
 
+def compare_one_dimensional_posteriors(
+    reference_coordinates: list[float] | np.ndarray,
+    reference_density: list[float] | np.ndarray,
+    candidate_coordinates: list[float] | np.ndarray,
+    candidate_density: list[float] | np.ndarray,
+    *,
+    comparison_points: int = 512,
+) -> dict[str, Any]:
+    """Compare two source-native one-dimensional posterior densities."""
+    ref_x = np.asarray(reference_coordinates, dtype=float)
+    ref_y = np.asarray(reference_density, dtype=float)
+    cand_x = np.asarray(candidate_coordinates, dtype=float)
+    cand_y = np.asarray(candidate_density, dtype=float)
+    blockers = []
+
+    if ref_x.ndim != 1 or ref_y.ndim != 1 or ref_x.shape != ref_y.shape:
+        blockers.append("reference_grid_shape_mismatch")
+    if cand_x.ndim != 1 or cand_y.ndim != 1 or cand_x.shape != cand_y.shape:
+        blockers.append("candidate_grid_shape_mismatch")
+    if ref_x.size < 2 or cand_x.size < 2:
+        blockers.append("comparison_grid_too_short")
+    if comparison_points < 2:
+        blockers.append("comparison_points_too_small")
+    if (
+        np.any(~np.isfinite(ref_x))
+        or np.any(~np.isfinite(ref_y))
+        or np.any(~np.isfinite(cand_x))
+        or np.any(~np.isfinite(cand_y))
+    ):
+        blockers.append("comparison_grid_not_finite")
+    if np.any(ref_y < 0) or np.any(cand_y < 0):
+        blockers.append("comparison_density_negative")
+    if not blockers and (
+        np.any(np.diff(ref_x) <= 0) or np.any(np.diff(cand_x) <= 0)
+    ):
+        blockers.append("comparison_coordinates_not_strictly_increasing")
+
+    overlap_min = float(max(ref_x[0], cand_x[0])) if ref_x.size and cand_x.size else 0.0
+    overlap_max = float(min(ref_x[-1], cand_x[-1])) if ref_x.size and cand_x.size else 0.0
+    if overlap_min >= overlap_max:
+        blockers.append("comparison_supports_do_not_overlap")
+
+    if blockers:
+        return {
+            "ready": False,
+            "comparison_points": int(comparison_points),
+            "overlap_min": overlap_min,
+            "overlap_max": overlap_max,
+            "reference_peak_coordinate": None,
+            "candidate_peak_coordinate": None,
+            "peak_offset_candidate_minus_reference": None,
+            "total_variation_distance": None,
+            "hellinger_distance": None,
+            "blockers": sorted(set(blockers)),
+        }
+
+    common_x = np.linspace(overlap_min, overlap_max, int(comparison_points))
+    ref_common = np.interp(common_x, ref_x, ref_y)
+    cand_common = np.interp(common_x, cand_x, cand_y)
+    ref_normalized = normalize_discrete_posterior(common_x, ref_common)
+    cand_normalized = normalize_discrete_posterior(common_x, cand_common)
+    norm_blockers = []
+    norm_blockers.extend(
+        _prefixed_blockers("reference", ref_normalized["blockers"])
+    )
+    norm_blockers.extend(
+        _prefixed_blockers("candidate", cand_normalized["blockers"])
+    )
+    if norm_blockers:
+        return {
+            "ready": False,
+            "comparison_points": int(comparison_points),
+            "overlap_min": overlap_min,
+            "overlap_max": overlap_max,
+            "reference_peak_coordinate": None,
+            "candidate_peak_coordinate": None,
+            "peak_offset_candidate_minus_reference": None,
+            "total_variation_distance": None,
+            "hellinger_distance": None,
+            "blockers": sorted(set(norm_blockers)),
+        }
+
+    ref_density = np.asarray(ref_normalized["density"], dtype=float)
+    cand_density = np.asarray(cand_normalized["density"], dtype=float)
+    ref_peak = float(common_x[int(np.argmax(ref_density))])
+    cand_peak = float(common_x[int(np.argmax(cand_density))])
+    tv = 0.5 * float(np.trapezoid(np.abs(ref_density - cand_density), common_x))
+    hellinger = math.sqrt(
+        0.5
+        * float(
+            np.trapezoid(
+                (np.sqrt(ref_density) - np.sqrt(cand_density)) ** 2,
+                common_x,
+            )
+        )
+    )
+    return {
+        "ready": True,
+        "comparison_points": int(comparison_points),
+        "overlap_min": overlap_min,
+        "overlap_max": overlap_max,
+        "reference_peak_coordinate": ref_peak,
+        "candidate_peak_coordinate": cand_peak,
+        "peak_offset_candidate_minus_reference": cand_peak - ref_peak,
+        "total_variation_distance": tv,
+        "hellinger_distance": hellinger,
+        "blockers": [],
+    }
+
+
 def parse_callister_fixed_rate_hdf_datasets(
     datasets: dict[str, Any],
     *,

@@ -4,6 +4,7 @@ import numpy as np
 import pytest
 
 from itb.gw_parity import (
+    compare_one_dimensional_posteriors,
     histogram_posterior_from_samples,
     joint_histogram_posterior_from_samples,
 )
@@ -62,3 +63,30 @@ def test_joint_histogram_blocks_shape_mismatch():
 
     assert result["ready"] is False
     assert "sample_shape_mismatch" in result["blockers"]
+
+
+def test_compare_one_dimensional_posteriors_reports_zero_for_same_density():
+    result = compare_one_dimensional_posteriors(
+        reference_coordinates=[-1.0, 0.0, 1.0],
+        reference_density=[0.0, 2.0, 0.0],
+        candidate_coordinates=[-1.0, 0.0, 1.0],
+        candidate_density=[0.0, 4.0, 0.0],
+        comparison_points=101,
+    )
+
+    assert result["ready"] is True
+    assert result["total_variation_distance"] == pytest.approx(0.0)
+    assert result["hellinger_distance"] == pytest.approx(0.0)
+    assert result["peak_offset_candidate_minus_reference"] == pytest.approx(0.0)
+
+
+def test_compare_one_dimensional_posteriors_blocks_nonoverlap():
+    result = compare_one_dimensional_posteriors(
+        reference_coordinates=[-1.0, 0.0],
+        reference_density=[1.0, 1.0],
+        candidate_coordinates=[1.0, 2.0],
+        candidate_density=[1.0, 1.0],
+    )
+
+    assert result["ready"] is False
+    assert "comparison_supports_do_not_overlap" in result["blockers"]
