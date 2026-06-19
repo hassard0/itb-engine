@@ -1,0 +1,200 @@
+{
+  "basis": [
+    "KK_radius",
+    "precision_requirement",
+    "TowerSpectrum"
+  ],
+  "critical_phi_tower": 0.7433019116911739,
+  "critical_tower_mass": 0.47554112554112576,
+  "critical_radius_ratio": 2.102867546654528,
+  "check_sigmas": [
+    0.03,
+    0.05,
+    0.1
+  ],
+  "radius_precision_requirements": [
+    {
+      "radius_ratio_mean": 1.5,
+      "phi_tower_mean": 0.4054651081081644,
+      "tower_mass_gap_mean": 0.6666666666666666,
+      "side_of_critical_radius": "allowance_side",
+      "target_verdict": "tower_allowance",
+      "max_log_radius_sigma_for_target_verdict": 0.16891840179150475,
+      "max_one_sigma_radius_factor_for_target_verdict": 1.184023520783977,
+      "precision_inequality": "log_radius_sigma must be at or below this value",
+      "verdict_at_check_sigmas": [
+        {
+          "log_radius_sigma": 0.03,
+          "verdict": "tower_allowance"
+        },
+        {
+          "log_radius_sigma": 0.05,
+          "verdict": "tower_allowance"
+        },
+        {
+          "log_radius_sigma": 0.1,
+          "verdict": "tower_allowance"
+        }
+      ]
+    },
+    {
+      "radius_ratio_mean": 1.7,
+      "phi_tower_mean": 0.5306282510621704,
+      "tower_mass_gap_mean": 0.5882352941176471,
+      "side_of_critical_radius": "allowance_side",
+      "target_verdict": "tower_allowance",
+      "max_log_radius_sigma_for_target_verdict": 0.10633683031450175,
+      "max_one_sigma_radius_factor_for_target_verdict": 1.1121964348966333,
+      "precision_inequality": "log_radius_sigma must be at or below this value",
+      "verdict_at_check_sigmas": [
+        {
+          "log_radius_sigma": 0.03,
+          "verdict": "tower_allowance"
+        },
+        {
+          "log_radius_sigma": 0.05,
+          "verdict": "tower_allowance"
+        },
+        {
+          "log_radius_sigma": 0.1,
+          "verdict": "tower_allowance"
+        }
+      ]
+    },
+    {
+      "radius_ratio_mean": 1.9,
+      "phi_tower_mean": 0.6418538861723947,
+      "tower_mass_gap_mean": 0.5263157894736842,
+      "side_of_critical_radius": "allowance_side",
+      "target_verdict": "tower_allowance",
+      "max_log_radius_sigma_for_target_verdict": 0.05072401275938959,
+      "max_one_sigma_radius_factor_for_target_verdict": 1.0520325056651374,
+      "precision_inequality": "log_radius_sigma must be at or below this value",
+      "verdict_at_check_sigmas": [
+        {
+          "log_radius_sigma": 0.03,
+          "verdict": "tower_allowance"
+        },
+        {
+          "log_radius_sigma": 0.05,
+          "verdict": "tower_allowance"
+        },
+        {
+          "log_radius_sigma": 0.1,
+          "verdict": "overlap"
+        }
+      ]
+    },
+    {
+      "radius_ratio_mean": 2.102867546654528,
+      "phi_tower_mean": 0.743301911691174,
+      "tower_mass_gap_mean": 0.4755411255411257,
+      "side_of_critical_radius": "critical_boundary",
+      "target_verdict": "tower_allowance_only_at_zero_uncertainty",
+      "max_log_radius_sigma_for_target_verdict": 0.0,
+      "max_one_sigma_radius_factor_for_target_verdict": 1.0,
+      "precision_inequality": "only zero uncertainty reaches the allowance boundary",
+      "verdict_at_check_sigmas": [
+        {
+          "log_radius_sigma": 0.03,
+          "verdict": "overlap"
+        },
+        {
+          "log_radius_sigma": 0.05,
+          "verdict": "overlap"
+        },
+        {
+          "log_radius_sigma": 0.1,
+          "verdict": "overlap"
+        }
+      ]
+    },
+    {
+      "radius_ratio_mean": 2.3,
+      "phi_tower_mean": 0.8329091229351039,
+      "tower_mass_gap_mean": 0.4347826086956522,
+      "side_of_critical_radius": "exclusion_side",
+      "target_verdict": "tower_exclusion",
+      "max_log_radius_sigma_for_target_verdict": 0.044803605621965004,
+      "max_one_sigma_radius_factor_for_target_verdict": 1.0458224460894827,
+      "precision_inequality": "log_radius_sigma must be strictly below this value",
+      "verdict_at_check_sigmas": [
+        {
+          "log_radius_sigma": 0.03,
+          "verdict": "tower_exclusion"
+        },
+        {
+          "log_radius_sigma": 0.05,
+          "verdict": "overlap"
+        },
+        {
+          "log_radius_sigma": 0.1,
+          "verdict": "overlap"
+        }
+      ]
+    },
+    {
+      "radius_ratio_mean": 2.6,
+      "phi_tower_mean": 0.9555114450274363,
+      "tower_mass_gap_mean": 0.3846153846153846,
+      "side_of_critical_radius": "exclusion_side",
+      "target_verdict": "tower_exclusion",
+      "max_log_radius_sigma_for_target_verdict": 0.10610476666813123,
+      "max_one_sigma_radius_factor_for_target_verdict": 1.1119383644820098,
+      "precision_inequality": "log_radius_sigma must be strictly below this value",
+      "verdict_at_check_sigmas": [
+        {
+          "log_radius_sigma": 0.03,
+          "verdict": "tower_exclusion"
+        },
+        {
+          "log_radius_sigma": 0.05,
+          "verdict": "tower_exclusion"
+        },
+        {
+          "log_radius_sigma": 0.1,
+          "verdict": "tower_exclusion"
+        }
+      ]
+    },
+    {
+      "radius_ratio_mean": 3.0,
+      "phi_tower_mean": 1.0986122886681098,
+      "tower_mass_gap_mean": 0.3333333333333333,
+      "side_of_critical_radius": "exclusion_side",
+      "target_verdict": "tower_exclusion",
+      "max_log_radius_sigma_for_target_verdict": 0.17765518848846795,
+      "max_one_sigma_radius_factor_for_target_verdict": 1.1944134027309712,
+      "precision_inequality": "log_radius_sigma must be strictly below this value",
+      "verdict_at_check_sigmas": [
+        {
+          "log_radius_sigma": 0.03,
+          "verdict": "tower_exclusion"
+        },
+        {
+          "log_radius_sigma": 0.05,
+          "verdict": "tower_exclusion"
+        },
+        {
+          "log_radius_sigma": 0.1,
+          "verdict": "tower_exclusion"
+        }
+      ]
+    }
+  ],
+  "claimable_framework_exclusions_now": [],
+  "literature_guardrail": {
+    "claim": "These are inverse precision requirements for future sourced KK-radius adapters. They do not assign a radius to any registered framework and therefore do not create a framework exclusion.",
+    "primary_sources": [
+      {
+        "title": "Ooguri and Vafa, On the Geometry of the String Landscape and the Swampland",
+        "url": "https://arxiv.org/abs/hep-th/0605264"
+      },
+      {
+        "title": "Corvilain, Grimm, and Valenzuela, The Swampland Distance Conjecture for Kahler moduli",
+        "url": "https://arxiv.org/abs/1812.07548"
+      }
+    ]
+  },
+  "interpretation": "The KK-radius path becomes decisive only when the one-sigma uncertainty in log(R/R0) is small enough that the two-sigma interval sits entirely on one side of the critical tower threshold."
+}
