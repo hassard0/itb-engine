@@ -1,0 +1,214 @@
+{
+  "version": "v2.168",
+  "basis": [
+    "v2.61_gw_parity_adapter_readiness",
+    "v2.76_gw_parity_route_decision",
+    "v2.92_external_evidence_packet_contract"
+  ],
+  "route": "gw_parity_operator_normalization_search",
+  "contract": {
+    "version": "v2.168",
+    "route": "gw_parity_operator_normalization_search",
+    "external_object": "ppv_to_engine_parity_operator_bridge",
+    "required_bridge_fields": [
+      "label",
+      "source_url",
+      "source_type",
+      "source_native_likelihood",
+      "source_backed_operator_normalization",
+      "ppv_parameter_definition",
+      "engine_axis_target",
+      "sign_convention",
+      "unit_conversion",
+      "frequency_reference",
+      "covariance_or_samples",
+      "helicity_basis_harmonization",
+      "framework_exclusion_projection",
+      "claim_controls"
+    ],
+    "engine_parity_axes": [
+      "g_R2_parity",
+      "g_R3_parity"
+    ],
+    "claim_control_fields": [
+      "claim_use_allowed",
+      "framework_claim_allowed",
+      "external_adversarial_review_complete"
+    ],
+    "source_url_policy": "https://arxiv.org/ or https://doi.org/",
+    "claim_rule": "The bridge can become engine-ready only with a source-backed operator normalization, dimensionless unit conversion, frequency reference, helicity convention, covariance/samples, and framework projection. Claims remain disabled until external adversarial review completes."
+  },
+  "source_side_likelihood_ready_routes": [
+    "ng_gwtc3_kappa_at_100hz",
+    "callister_sgwb_kappaD_kappaz"
+  ],
+  "engine_adapter_ready_routes_before_bridge": [],
+  "synthetic_control_evaluation": {
+    "label": "synthetic_ready_ppv_to_engine_parity_bridge",
+    "ready_for_engine_parity_bridge": true,
+    "ready_for_framework_claim": false,
+    "synthetic_control": true,
+    "missing_required_fields": [],
+    "missing_claim_controls": [],
+    "bridge_blockers": [],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "synthetic_control_not_claim_evidence"
+    ],
+    "route_status": "gw_parity_operator_bridge_ready_nonclaiming"
+  },
+  "current_missing_bridge_slot_evaluation": {
+    "label": "current_missing_ppv_to_engine_parity_bridge_slot",
+    "ready_for_engine_parity_bridge": false,
+    "ready_for_framework_claim": false,
+    "synthetic_control": false,
+    "missing_required_fields": [
+      "covariance_or_samples",
+      "engine_axis_target",
+      "framework_exclusion_projection",
+      "frequency_reference",
+      "helicity_basis_harmonization",
+      "ppv_parameter_definition",
+      "sign_convention",
+      "source_backed_operator_normalization",
+      "source_native_likelihood",
+      "source_type",
+      "source_url",
+      "unit_conversion"
+    ],
+    "missing_claim_controls": [],
+    "bridge_blockers": [
+      "covariance_or_samples",
+      "covariance_or_samples_missing",
+      "dimensionful_to_dimensionless_normalization_missing",
+      "engine_axis_target",
+      "engine_axis_target_missing",
+      "framework_exclusion_projection",
+      "framework_exclusion_projection_missing",
+      "frequency_reference",
+      "frequency_reference_missing",
+      "helicity_basis_harmonization",
+      "helicity_harmonization_missing",
+      "ppv_parameter_definition",
+      "ppv_parameter_definition_missing",
+      "sign_convention",
+      "sign_convention_missing",
+      "source_backed_operator_normalization",
+      "source_backed_operator_normalization_missing",
+      "source_native_likelihood",
+      "source_native_likelihood_missing",
+      "source_type",
+      "source_url",
+      "unit_conversion"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "parity_operator_bridge_not_ready"
+    ],
+    "route_status": "gw_parity_operator_bridge_blocked"
+  },
+  "current_source_gap_rows": [
+    {
+      "label": "callister_sgwb_kappaD_kappaz",
+      "source": {
+        "paper": "https://arxiv.org/abs/2312.12532",
+        "code": "https://github.com/tcallister/stochastic-birefringence",
+        "data": "https://zenodo.org/doi/10.5281/zenodo.10384997",
+        "docs": "https://tcallister.github.io/stochastic-birefringence/"
+      },
+      "source_side_likelihood_ready": true,
+      "engine_adapter_ready": false,
+      "adapter_blockers": [
+        "missing_engine_axis_map",
+        "missing_source_backed_operator_map",
+        "missing_dimensionful_to_engine_normalization",
+        "missing_frequency_normalization",
+        "missing_framework_exclusion_math"
+      ],
+      "fills_operator_bridge_contract_now": false,
+      "gap_count": 5
+    },
+    {
+      "label": "ng_gwtc3_kappa_at_100hz",
+      "source": {
+        "paper": "https://arxiv.org/abs/2305.05844",
+        "code": "https://github.com/thomasckng/Constraining-Birefringence-with-GWTC-3",
+        "data": "https://zenodo.org/records/7935107"
+      },
+      "source_side_likelihood_ready": true,
+      "engine_adapter_ready": false,
+      "adapter_blockers": [
+        "missing_engine_axis_map",
+        "missing_source_backed_operator_map",
+        "missing_dimensionful_to_engine_normalization",
+        "missing_frequency_normalization",
+        "missing_framework_exclusion_math"
+      ],
+      "fills_operator_bridge_contract_now": false,
+      "gap_count": 5
+    },
+    {
+      "label": "engine_gravitational_birefringence_observable",
+      "source": {
+        "implementation": "src/itb/gravitational_observables.py:GravitationalBirefringence"
+      },
+      "source_side_likelihood_ready": false,
+      "engine_adapter_ready": false,
+      "adapter_blockers": [
+        "missing_public_source_likelihood_material",
+        "missing_published_numeric_constraint",
+        "missing_source_backed_operator_map",
+        "missing_dimensionful_to_engine_normalization",
+        "missing_frequency_normalization",
+        "missing_framework_exclusion_math"
+      ],
+      "fills_operator_bridge_contract_now": false,
+      "gap_count": 6
+    },
+    {
+      "label": "jenks_parameterized_parity_formalism",
+      "source": {
+        "paper": "https://arxiv.org/abs/2305.10478"
+      },
+      "source_side_likelihood_ready": false,
+      "engine_adapter_ready": false,
+      "adapter_blockers": [
+        "missing_public_source_likelihood_material",
+        "missing_published_numeric_constraint",
+        "missing_engine_axis_map",
+        "missing_dimensionful_to_engine_normalization",
+        "missing_frequency_normalization",
+        "missing_framework_exclusion_math"
+      ],
+      "fills_operator_bridge_contract_now": false,
+      "gap_count": 6
+    },
+    {
+      "label": "zhu_gwtc3_modified_propagation",
+      "source": {
+        "paper": "https://arxiv.org/abs/2304.09025"
+      },
+      "source_side_likelihood_ready": false,
+      "engine_adapter_ready": false,
+      "adapter_blockers": [
+        "missing_public_source_likelihood_material",
+        "missing_engine_axis_map",
+        "missing_source_backed_operator_map",
+        "missing_dimensionful_to_engine_normalization",
+        "missing_frequency_normalization",
+        "missing_framework_exclusion_math"
+      ],
+      "fills_operator_bridge_contract_now": false,
+      "gap_count": 6
+    }
+  ],
+  "ready_current_operator_bridges": [],
+  "claimable_framework_exclusions_now": [],
+  "claimable_discriminator_now": false,
+  "route_status": "gw_parity_operator_bridge_spec_ready_no_real_bridge",
+  "selected_next_build_action": "search_or_derive_source_backed_ppv_to_engine_parity_bridge",
+  "best_next_artifact": "A source-backed PPV/native parity operator-normalization bridge that maps public GW parity likelihood material into engine g_R2_parity/g_R3_parity axes with declared units and helicity basis.",
+  "interpretation": "Public source-side GW parity likelihood material exists, but no current row fills the operator-normalization bridge into engine axes. The new evaluator can accept a complete bridge packet while keeping claims disabled before adversarial review."
+}
