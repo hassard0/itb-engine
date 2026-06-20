@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (241 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (242 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -290,3 +290,4 @@ Auto-generated front door to the full research program (241 notes). Regenerate w
 | v2.128 | [v2.128 - GW alpha/G8 sidecar gate: executable, no real packet](2026-06-20-v2.128-gw-alpha-g8-sidecar-acceptance-gate.md) | v2.127 selected the next implementation step: |
 | v2.129 | [v2.129 - GW alpha/G8 sidecar source scout: current sources scanned, no](2026-06-20-v2.129-gw-alpha-g8-sidecar-source-scout.md) | v2.128 selected the next implementation step: |
 | v2.130 | [v2.130 - Bresciani v2 projection audit: R4 gravity formalism, not engi](2026-06-20-v2.130-bresciani-g8-projection-audit.md) | v2.129 selected the next implementation step: |
+| v2.131 | [v2.131 - Gravity R4 axis candidate: source preserved, non-claiming](2026-06-20-v2.131-gravity-r4-axis-extension-candidate.md) | v2.130 selected the next implementation step: |
