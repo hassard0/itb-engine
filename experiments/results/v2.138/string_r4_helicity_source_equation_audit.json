@@ -1,0 +1,322 @@
+{
+  "version": "v2.138",
+  "basis": [
+    "v2.137_gravity_r4_source_provenance_guard",
+    "v2.136_symbolic_helicity_projection_fixture",
+    "source_tex_equation_audit_for_string_R4"
+  ],
+  "source_equation_rows": [
+    {
+      "source_id": "bresciani_levati_paradisi_2026",
+      "url": "https://arxiv.org/abs/2504.12855",
+      "source_version": "arXiv:2504.12855v2",
+      "role": "target_bresciani_spin2_coordinate_contract",
+      "equation_refs": [
+        "eq:Lag-quartic",
+        "eq:amplitude",
+        "eq:positivitybounds"
+      ],
+      "provides_bresciani_operator_basis": true,
+      "provides_c_plus_c_minus_contract": true,
+      "provides_spin2_positivity_guard": true,
+      "provides_string_r4_family": false,
+      "provides_string_helicity_amplitude_expansion": false,
+      "provides_four_dimensional_string_to_bresciani_projection": false,
+      "provides_engine_lambda_r4_normalization": false,
+      "adapter_use": "Defines the target c_i^(2) basis, helicity matrix, c_plus/c_minus coordinates, and positivity inequalities."
+    },
+    {
+      "source_id": "peeters_vanhove_westerberg_2001",
+      "url": "https://arxiv.org/abs/hep-th/0010167",
+      "source_version": "arXiv:hep-th/0010167v4",
+      "role": "string_tensor_structure_source",
+      "equation_refs": [
+        "e:R4",
+        "e:basicinvariants",
+        "e:t8_definition",
+        "t8t8R4_reduction_to_Fulling_invariants"
+      ],
+      "provides_bresciani_operator_basis": false,
+      "provides_c_plus_c_minus_contract": false,
+      "provides_spin2_positivity_guard": false,
+      "provides_string_r4_family": true,
+      "provides_string_helicity_amplitude_expansion": false,
+      "provides_four_dimensional_string_to_bresciani_projection": false,
+      "provides_engine_lambda_r4_normalization": false,
+      "adapter_use": "Documents ten-dimensional t8t8R4, epsilon10-epsilon10 R4, and invariant reductions, but not the four-dimensional Bresciani three-axis projection."
+    },
+    {
+      "source_id": "russo_1997_type_iib_four_graviton",
+      "url": "https://arxiv.org/abs/hep-th/9707241",
+      "source_version": "arXiv:hep-th/9707241v3",
+      "role": "type_iib_four_graviton_amplitude_expansion_source",
+      "equation_refs": [
+        "venez",
+        "logve",
+        "aaa",
+        "efff"
+      ],
+      "provides_bresciani_operator_basis": false,
+      "provides_c_plus_c_minus_contract": false,
+      "provides_spin2_positivity_guard": false,
+      "provides_string_r4_family": true,
+      "provides_string_helicity_amplitude_expansion": true,
+      "provides_four_dimensional_string_to_bresciani_projection": false,
+      "provides_engine_lambda_r4_normalization": false,
+      "adapter_use": "Gives a type IIB four-graviton amplitude expansion with a zeta(3) R4 term and higher-derivative R4 tower, but not Bresciani c_i^(2) values."
+    },
+    {
+      "source_id": "gross_witten_1986",
+      "url": "https://doi.org/10.1016/0550-3213(86)90429-3",
+      "source_version": "Nucl.Phys.B277_1986",
+      "role": "type_ii_tree_level_r4_primary_source",
+      "equation_refs": [
+        "tree_level_gravitational_scattering_amplitudes",
+        "quartic_order_in_Riemann_effective_action"
+      ],
+      "provides_bresciani_operator_basis": false,
+      "provides_c_plus_c_minus_contract": false,
+      "provides_spin2_positivity_guard": false,
+      "provides_string_r4_family": true,
+      "provides_string_helicity_amplitude_expansion": true,
+      "provides_four_dimensional_string_to_bresciani_projection": false,
+      "provides_engine_lambda_r4_normalization": false,
+      "adapter_use": "Primary type-II string R4 provenance, but not an engine normalization or a Bresciani coordinate projection."
+    }
+  ],
+  "required_source_backed_helicity_steps": [
+    {
+      "step": "target_coordinate_contract",
+      "status": "sourced",
+      "source_ids": [
+        "bresciani_levati_paradisi_2026"
+      ],
+      "blocker": null
+    },
+    {
+      "step": "string_r4_family_and_amplitude",
+      "status": "sourced",
+      "source_ids": [
+        "gross_witten_1986",
+        "peeters_vanhove_westerberg_2001",
+        "russo_1997_type_iib_four_graviton"
+      ],
+      "blocker": null
+    },
+    {
+      "step": "four_dimensional_string_frame_choice",
+      "status": "missing",
+      "source_ids": [],
+      "blocker": "four_dimensional_string_frame_choice_missing"
+    },
+    {
+      "step": "string_tensor_to_bresciani_projection",
+      "status": "missing",
+      "source_ids": [],
+      "blocker": "string_tensor_to_bresciani_projection_missing"
+    },
+    {
+      "step": "source_backed_c_plus_c_minus_values",
+      "status": "missing",
+      "source_ids": [],
+      "blocker": "source_backed_c_plus_c_minus_values_missing"
+    },
+    {
+      "step": "alpha_prime_to_engine_lambda_r4_normalization",
+      "status": "missing",
+      "source_ids": [],
+      "blocker": "engine_lambda_r4_normalization_missing"
+    },
+    {
+      "step": "strict_source_provenance_packet",
+      "status": "missing",
+      "source_ids": [],
+      "blocker": "strict_source_provenance_packet_missing"
+    }
+  ],
+  "target_coordinate_sources": [
+    "bresciani_levati_paradisi_2026"
+  ],
+  "string_r4_family_sources": [
+    "peeters_vanhove_westerberg_2001",
+    "russo_1997_type_iib_four_graviton",
+    "gross_witten_1986"
+  ],
+  "direct_string_to_bresciani_projection_sources": [],
+  "source_backed_c_plus_c_minus_sources": [],
+  "can_replace_fixture_with_source_backed_evaluation_now": false,
+  "strict_guard_probe": {
+    "framework": "string_tree_eft",
+    "base_ready_for_framework_projection": false,
+    "ready_for_source_backed_framework_projection": false,
+    "ready_for_framework_claim": false,
+    "base_guard": {
+      "framework": "string_tree_eft",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "missing_required_fields": [
+        "coefficients",
+        "derived",
+        "normalization",
+        "operator_projection_matrix",
+        "uncertainty_or_covariance",
+        "unitarity_bound",
+        "valid_energy_domain"
+      ],
+      "source_url_valid": true,
+      "source_type_valid": true,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": null,
+          "g_R4_c2": null,
+          "g_R4_c3": null
+        },
+        "missing_or_nonnumeric": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "positivity_passed": false,
+        "positivity_residual": null
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "expected": null,
+        "provided": {
+          "g_R4_plus": null,
+          "g_R4_minus_abs": null
+        },
+        "consistent": false
+      },
+      "normalization_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "operator_projection_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "energy_domain_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "uncertainty_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ownership_summary": {
+        "framework_source_owned": true
+      },
+      "unitarity_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "uses_bresciani_spin2_bound": false
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded"
+      ],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "measurement_likelihood_missing_or_incomplete",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded"
+      ]
+    },
+    "source_provenance_summary": {
+      "source_provenance_present": true,
+      "missing_source_provenance_fields": [],
+      "source_backed_derivation": false,
+      "derivation_kind": "source_family_only",
+      "derivation_kind_valid": false,
+      "primary_source_urls": [
+        "https://arxiv.org/abs/hep-th/9707241"
+      ],
+      "primary_source_urls_valid": true,
+      "packet_source_url": "https://arxiv.org/abs/hep-th/9707241",
+      "source_url_is_listed": true,
+      "synthetic_fixture_declared_false": true,
+      "truthy_synthetic_fixture_paths": [],
+      "fixture_text_paths": [
+        "$.source_provenance.synthetic_fixture"
+      ],
+      "source_provenance_complete": false,
+      "source_provenance_blockers": [
+        "source_provenance_missing_or_incomplete"
+      ]
+    },
+    "strict_projection_blockers": [
+      "missing_required_fields",
+      "r4_coefficients_missing_or_nonnumeric",
+      "r4_derived_coordinates_missing_or_nonnumeric",
+      "r4_normalization_not_source_backed",
+      "r4_operator_projection_matrix_not_source_backed",
+      "r4_positivity_status_not_checked",
+      "r4_uncertainty_or_covariance_incomplete",
+      "r4_unitarity_bound_not_source_backed",
+      "r4_valid_energy_domain_not_bounded",
+      "source_provenance_missing_or_incomplete"
+    ],
+    "strict_claim_blockers": [
+      "discriminator_math_not_excluding",
+      "measurement_likelihood_missing_or_incomplete",
+      "missing_required_fields",
+      "r4_coefficients_missing_or_nonnumeric",
+      "r4_derived_coordinates_missing_or_nonnumeric",
+      "r4_normalization_not_source_backed",
+      "r4_operator_projection_matrix_not_source_backed",
+      "r4_positivity_status_not_checked",
+      "r4_uncertainty_or_covariance_incomplete",
+      "r4_unitarity_bound_not_source_backed",
+      "r4_valid_energy_domain_not_bounded",
+      "source_provenance_missing_or_incomplete"
+    ]
+  },
+  "current_blockers": [
+    "engine_lambda_r4_normalization_missing",
+    "four_dimensional_string_frame_choice_missing",
+    "source_backed_c_plus_c_minus_values_missing",
+    "strict_source_provenance_packet_missing",
+    "string_tensor_to_bresciani_projection_missing"
+  ],
+  "claimable_framework_exclusions_now": [],
+  "route_status": "string_r4_helicity_sources_audited_projection_missing",
+  "selected_next_build_action": "build_four_dimensional_r4_projection_derivation_workbench",
+  "best_next_artifact": "A symbolic tensor/helicity workbench that takes the source t8t8R4 or four-graviton amplitude structures, fixes a four-dimensional frame, and derives Bresciani c_plus/c_minus with explicit provenance.",
+  "interpretation": "The source equation audit now separates the target coordinate contract from the string R4 source family. The checked sources are sufficient to justify pursuing string_tree_eft, but they do not yet contain the four-dimensional string-to-Bresciani projection or source-backed c_plus/c_minus values needed to replace the v2.136 fixture."
+}
