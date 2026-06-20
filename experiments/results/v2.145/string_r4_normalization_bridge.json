@@ -1,0 +1,138 @@
+{
+  "version": "v2.145",
+  "basis": [
+    "v2.144_supersymmetric_r4_shape_projection",
+    "Russo_arXiv_hep-th_9707241_type_IIB_R4_contact_scalar",
+    "v2.133_gravity_r4_projection_guard_schema"
+  ],
+  "normalization_bridge_requirements": [
+    {
+      "field": "source_contact_scalar",
+      "required_status": "source_backed",
+      "source_value": "2*zeta(3)",
+      "reason": "Russo's type-IIB four-graviton tree expansion fixes the R4 contact scalar multiplying K."
+    },
+    {
+      "field": "k_convention_bridge",
+      "required_status": "source_backed",
+      "source_value": "K_Russo / Kallosh_R4_shape",
+      "reason": "The source K factor must be normalized against the v2.144 helicity shape before a numeric engine coefficient is real."
+    },
+    {
+      "field": "engine_lambda_r4_unit_conversion",
+      "required_status": "source_backed",
+      "source_value": "alpha_prime/string_scale units to Lambda_R4 units",
+      "reason": "The engine axis is dimensionless in Lambda_R4 units, so alpha-prime and Planck/string-frame factors must be fixed."
+    }
+  ],
+  "source_fixed_terms": {
+    "R4_contact_scalar": {
+      "expression": "2*zeta(3)",
+      "value": 2.404113806319
+    },
+    "shape": {
+      "K_plus": 1.0,
+      "K_minus_real": 0.0,
+      "K_minus_imag": 0.0
+    }
+  },
+  "bridge_equation": "overall_R4_factor = 2*zeta(3) * k_convention_bridge * engine_lambda_r4_unit_conversion",
+  "evaluations": {
+    "source_fixed_partial_packet": {
+      "label": "russo_kallosh_source_fixed_partial_normalization",
+      "source_contact_scalar": 2.404113806319,
+      "k_convention_bridge": null,
+      "engine_lambda_r4_unit_conversion": null,
+      "candidate_projection": null,
+      "ready_for_engine_normalized_r4_projection": false,
+      "blockers": [
+        "engine_lambda_r4_unit_conversion_missing_or_not_source_backed",
+        "k_convention_bridge_missing_or_not_source_backed",
+        "source_backed_normalization_missing"
+      ]
+    },
+    "synthetic_unit_bridge_packet": {
+      "label": "synthetic_unit_string_r4_normalization_bridge",
+      "source_contact_scalar": 2.404113806319,
+      "k_convention_bridge": null,
+      "engine_lambda_r4_unit_conversion": null,
+      "candidate_projection": null,
+      "ready_for_engine_normalized_r4_projection": false,
+      "blockers": [
+        "engine_lambda_r4_unit_conversion_missing_or_not_source_backed",
+        "k_convention_bridge_missing_or_not_source_backed",
+        "source_backed_normalization_missing"
+      ]
+    },
+    "source_backed_unit_shape_control": {
+      "label": "source_backed_unit_shape_control",
+      "source_contact_scalar": 2.404113806319,
+      "k_convention_bridge": 1.0,
+      "engine_lambda_r4_unit_conversion": 1.0,
+      "candidate_projection": {
+        "helicity_coordinates": {
+          "c_plus": 0.30051422579,
+          "c_minus": {
+            "real": 0.0,
+            "imag": 0.0
+          }
+        },
+        "inverted_coefficients": {
+          "g_R4_c1": 0.150257112895,
+          "g_R4_c2": 0.150257112895,
+          "g_R4_c3": 0.0
+        },
+        "derived_coordinates": {
+          "g_R4_plus": 0.30051422579,
+          "g_R4_minus_abs": 0.0
+        },
+        "positivity_summary": {
+          "c1_nonnegative": true,
+          "c2_nonnegative": true,
+          "c3_square_bound_residual": 0.090308799902,
+          "passed": true
+        }
+      },
+      "ready_for_engine_normalized_r4_projection": true,
+      "blockers": []
+    }
+  },
+  "ready_normalization_packets": [],
+  "ready_control_packets": [
+    "source_backed_unit_shape_control"
+  ],
+  "current_blockers": [
+    "engine_lambda_r4_unit_conversion_missing_or_not_source_backed",
+    "k_convention_bridge_missing_or_not_source_backed",
+    "source_backed_normalization_missing"
+  ],
+  "unit_bridge_shape_control_projection": {
+    "helicity_coordinates": {
+      "c_plus": 0.30051422579,
+      "c_minus": {
+        "real": 0.0,
+        "imag": 0.0
+      }
+    },
+    "inverted_coefficients": {
+      "g_R4_c1": 0.150257112895,
+      "g_R4_c2": 0.150257112895,
+      "g_R4_c3": 0.0
+    },
+    "derived_coordinates": {
+      "g_R4_plus": 0.30051422579,
+      "g_R4_minus_abs": 0.0
+    },
+    "positivity_summary": {
+      "c1_nonnegative": true,
+      "c2_nonnegative": true,
+      "c3_square_bound_residual": 0.090308799902,
+      "passed": true
+    }
+  },
+  "claimable_framework_exclusions_now": [],
+  "route_status": "string_r4_normalization_equation_ready_bridge_missing",
+  "selected_next_build_action": "source_k_convention_bridge_or_define_engine_lambda_r4_unit",
+  "best_next_artifact": "A source-backed value for K_Russo/Kallosh_R4_shape and the engine Lambda_R4 unit conversion, after which the v2.133 guard can receive a real string_tree_eft R4 projection packet.",
+  "interpretation": "The string R4 normalization problem is now an executable equation. The source fixes the scalar contact term 2*zeta(3) and v2.144 fixes the helicity shape, but the current repo still lacks the source-backed K-convention bridge and Lambda_R4 unit conversion needed for a real framework-normalized claim."
+}
