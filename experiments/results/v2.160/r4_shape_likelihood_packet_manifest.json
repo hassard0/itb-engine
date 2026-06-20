@@ -1,0 +1,209 @@
+{
+  "version": "v2.160",
+  "basis": [
+    "v2.159_r4_public_shape_likelihood_search",
+    "r4_likelihood_packet_contract"
+  ],
+  "schema": {
+    "version": "v2.160",
+    "required_packet_fields": [
+      "packet_id",
+      "source_url",
+      "source_type",
+      "target_axes",
+      "likelihood",
+      "axis_mapping",
+      "normalization",
+      "domain",
+      "systematics",
+      "provenance",
+      "discriminator_math",
+      "claim_controls"
+    ],
+    "target_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3",
+      "g_R4_plus",
+      "g_R4_minus_abs"
+    ],
+    "valid_likelihood_statuses": [
+      "public_covariance_matrix",
+      "public_likelihood_samples",
+      "public_log_likelihood_grid"
+    ],
+    "acceptance_contract": {
+      "target_axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3",
+        "g_R4_plus",
+        "g_R4_minus_abs"
+      ],
+      "required_fields": [
+        "public_likelihood_or_covariance",
+        "maps_to_bresciani_r4_axes",
+        "axis_normalization_declared",
+        "reproducible_data_or_code",
+        "systematics_or_domain_declared",
+        "excluding_discriminator_math"
+      ],
+      "claim_rule": "A candidate may become claim evidence only if all required fields are true and the R4 query row remains source-provenance clean."
+    },
+    "claim_rule": "All schema fields and acceptance criteria must pass before the packet can be considered claim evidence. This schema by itself does not make any framework claim."
+  },
+  "example_packets": {
+    "empty": {
+      "packet_id": "empty_r4_shape_likelihood_packet",
+      "source_url": "",
+      "source_type": "",
+      "target_axes": [],
+      "likelihood": {},
+      "axis_mapping": {},
+      "normalization": {},
+      "domain": {},
+      "systematics": {},
+      "provenance": {},
+      "discriminator_math": "projection_only",
+      "claim_controls": {
+        "claim_use_allowed": false,
+        "framework_claim_allowed": false
+      }
+    },
+    "synthetic_complete_control": {
+      "packet_id": "synthetic_complete_r4_shape_likelihood_packet",
+      "source_url": "https://example.invalid/synthetic-r4-likelihood",
+      "source_type": "unit_test_control",
+      "target_axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3",
+        "g_R4_plus",
+        "g_R4_minus_abs"
+      ],
+      "likelihood": {
+        "status": "public_covariance_matrix",
+        "central_values": {
+          "g_R4_c1": 0.5,
+          "g_R4_c2": 0.5,
+          "g_R4_c3": 0.0
+        },
+        "covariance": [
+          [
+            0.01,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.01,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.01
+          ]
+        ],
+        "axes": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ]
+      },
+      "axis_mapping": {
+        "status": "maps_to_bresciani_r4_axes",
+        "mapped_axes": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3",
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ]
+      },
+      "normalization": {
+        "axis_normalization_declared": true,
+        "uses_numeric_lambda_r4_scale": false,
+        "normalization_scope": "shape_likelihood_only"
+      },
+      "domain": {
+        "status": "bounded_for_qg_eft",
+        "shared_domain_with_query_row": true
+      },
+      "systematics": {
+        "status": "declared",
+        "items": [
+          "synthetic_control_only"
+        ]
+      },
+      "provenance": {
+        "reproducible_data_or_code": true,
+        "public_likelihood_or_covariance": true,
+        "synthetic_control": true
+      },
+      "discriminator_math": "excludes_registered_framework",
+      "claim_controls": {
+        "claim_use_allowed": false,
+        "framework_claim_allowed": false,
+        "synthetic_control_not_claim_evidence": true
+      }
+    }
+  },
+  "evaluations": {
+    "empty_r4_shape_likelihood_packet": {
+      "packet_id": "empty_r4_shape_likelihood_packet",
+      "likelihood_status": "",
+      "ready_for_engine_likelihood_packet": false,
+      "ready_for_framework_claim": false,
+      "blockers": [
+        "axis_mapping",
+        "axis_mapping_not_bresciani_r4",
+        "axis_normalization_not_declared",
+        "domain",
+        "domain_not_shared_with_query_row",
+        "excluding_discriminator_math_missing",
+        "likelihood",
+        "likelihood_central_values_missing",
+        "likelihood_status_not_public_engine_usable",
+        "normalization",
+        "provenance",
+        "public_likelihood_or_covariance_missing",
+        "reproducible_data_or_code_missing",
+        "source_type",
+        "source_url",
+        "systematics",
+        "systematics_not_declared",
+        "target_axes",
+        "target_axes_incomplete"
+      ],
+      "missing_required_fields": [
+        "axis_mapping",
+        "domain",
+        "likelihood",
+        "normalization",
+        "provenance",
+        "source_type",
+        "source_url",
+        "systematics",
+        "target_axes"
+      ]
+    },
+    "synthetic_complete_r4_shape_likelihood_packet": {
+      "packet_id": "synthetic_complete_r4_shape_likelihood_packet",
+      "likelihood_status": "public_covariance_matrix",
+      "ready_for_engine_likelihood_packet": true,
+      "ready_for_framework_claim": false,
+      "blockers": [
+        "synthetic_control_not_claim_evidence"
+      ],
+      "missing_required_fields": []
+    }
+  },
+  "ready_likelihood_packets_now": [],
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "route_status": "r4_shape_likelihood_packet_manifest_ready_nonclaiming",
+  "selected_next_build_action": "monitor_or_ingest_future_r4_likelihood_sources",
+  "best_next_artifact": "A future evidence ingester can use this manifest to validate GW/GREFT likelihood packets before they touch framework-claim logic.",
+  "interpretation": "The engine now has a reusable packet schema for future public R4 shape likelihood evidence. The schema is not itself evidence and does not enable a framework claim."
+}

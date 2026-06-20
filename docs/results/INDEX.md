@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (270 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (271 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -319,3 +319,4 @@ Auto-generated front door to the full research program (270 notes). Regenerate w
 | v2.157 | [v2.157 - Compactification-agnostic R4 routes: Bresciani diagnostic win](2026-06-20-v2.157-r4-compactification-agnostic-observable-routes.md) | v2.156 showed that a numeric `Lambda_R4` scale policy is blocked by |
 | v2.158 | [v2.158 - Bresciani R4 shape-unitarity diagnostic: passes internally, n](2026-06-20-v2.158-bresciani-r4-shape-unitarity-diagnostic.md) | v2.157 selected the compactification-agnostic Bresciani spin-2 R4 route. Can the |
 | v2.159 | [v2.159 - Public R4 shape likelihood search: no ready packet](2026-06-20-v2.159-r4-public-shape-likelihood-search.md) | v2.158 produced an internal Bresciani R4 shape diagnostic. Is there any public |
+| v2.160 | [v2.160 - R4 shape likelihood manifest: reusable packet gate, no claim](2026-06-20-v2.160-r4-shape-likelihood-packet-manifest.md) | v2.159 found no public R4 shape likelihood packet. Can the engine define a |
