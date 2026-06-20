@@ -1,0 +1,104 @@
+{
+  "version": "v2.105",
+  "basis": [
+    "v2.104_gw170608_alpha_reanalysis_manifest",
+    "v2.103_interval_covariance_surrogate",
+    "v2.102_source_native_adapter"
+  ],
+  "stub_scope": "synthetic_quadratic_alpha_likelihood_surface",
+  "parameters": [
+    "alpha_bar_1",
+    "alpha_bar_2"
+  ],
+  "prior_box": {
+    "alpha_bar_1": [
+      -8.0,
+      8.0
+    ],
+    "alpha_bar_2": [
+      -8.0,
+      8.0
+    ]
+  },
+  "center": {
+    "alpha_bar_1": 0.87,
+    "alpha_bar_2": -0.35
+  },
+  "covariance": [
+    [
+      0.8205745121703398,
+      0.0
+    ],
+    [
+      0.0,
+      4.579634446914725
+    ]
+  ],
+  "grid_point_count": 961,
+  "best_grid_point": {
+    "alpha_bar_1": 0.8700000000000001,
+    "alpha_bar_2": -0.34999999999999964,
+    "log_likelihood": -1.962217995715311e-32
+  },
+  "center_log_likelihood": -0.0,
+  "shifted_log_likelihood_alpha_plus_one": -0.7185082063541244,
+  "source_native_packet_label": "synthetic_alpha_likelihood_stub_packet",
+  "adapter_evaluation": {
+    "label": "synthetic_alpha_likelihood_stub_packet",
+    "source_url": "https://doi.org/10.0000/synthetic-alpha-likelihood-stub",
+    "event": "GW170608",
+    "source_model": "cubic_parity_preserving_higher_curvature_eft",
+    "synthetic_fixture": true,
+    "missing_fields": [],
+    "constraints_summary": {
+      "parameters_present": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "parameters_missing": [],
+      "all_source_parameters_numeric": true
+    },
+    "likelihood_summary": {
+      "status": "reproduced_source_native_likelihood",
+      "contains_source_parameters": true,
+      "source_native_usable": true,
+      "kind": "quadratic_alpha_bar_likelihood_stub"
+    },
+    "covariance_summary": {
+      "present": true,
+      "parameters_covered": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "parameters_missing": [],
+      "numeric": true
+    },
+    "systematics_summary": {
+      "status": "bounded",
+      "missing_components": [],
+      "components_closed": true,
+      "budget_closed": true
+    },
+    "engine_projection_summary": {
+      "status": "source_native_alpha_space_only",
+      "source_native_only": true,
+      "engine_projection_ready": false,
+      "target_axis": null
+    },
+    "native_adapter_ready": true,
+    "claim_ready": false,
+    "adapter_blockers": [],
+    "claim_blockers": [
+      "engine_projection_not_ready",
+      "g8_joint_component_missing",
+      "synthetic_fixture_not_real_source"
+    ],
+    "status": "gw_cubic_source_native_packet_rejected_or_nonpromoting"
+  },
+  "native_adapter_ready": true,
+  "claimable_discriminator_now": false,
+  "route_status": "minimal_alpha_likelihood_stub_ready_synthetic_only",
+  "selected_next_build_action": "connect_public_strain_to_alpha_waveform_likelihood",
+  "best_next_artifact": "Replace the quadratic stub residual with a public-GW170608 strain-driven waveform likelihood while preserving this packet contract and v2.102 adapter evaluation.",
+  "interpretation": "The alpha likelihood surface is now executable and exports a v2.102-compatible source-native packet, but it is synthetic and not connected to public strain. It is useful as a harness for the real reanalysis implementation, not as evidence."
+}
