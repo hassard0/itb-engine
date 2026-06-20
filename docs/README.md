@@ -32,12 +32,13 @@ Start with the generated [`results/INDEX.md`](results/INDEX.md) for the full cur
 
 ## Highlights
 
-If you only read seven documents, read these:
+If you only read eight documents, read these:
 
-1. **[`results/2026-06-20-v2.186-r4-nuisance-covariance-export.md`](results/2026-06-20-v2.186-r4-nuisance-covariance-export.md)** — latest R4/GWOSC artifact exporting nuisance-grid covariance
-2. **[`results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md`](results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md)** — calibrated R4/GWOSC projection using the H1/L1 LALSuite response
-3. **[`results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md`](results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md)** — R4/GWOSC/LALSuite frontier summary and claim boundary
-4. **[`FINDINGS.md`](FINDINGS.md)** — curated one-page findings, now including the v2.170-v2.186 frontier
-5. **[`results/2026-06-09-v2.10-capstone.md`](results/2026-06-09-v2.10-capstone.md)** — the program in one page
-6. **[`results/2026-06-09-v2.0-RESEARCH-REPORT.md`](results/2026-06-09-v2.0-RESEARCH-REPORT.md)** — publication-style overview of the core engine
-7. **[`results/INDEX.md`](results/INDEX.md)** — generated chronological index for the full research loop
+1. **[`results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md`](results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md)** — latest R4/GWOSC waveform-likelihood posterior bridge
+2. **[`results/2026-06-20-v2.186-r4-nuisance-covariance-export.md`](results/2026-06-20-v2.186-r4-nuisance-covariance-export.md)** — R4/GWOSC artifact exporting nuisance-grid covariance
+3. **[`results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md`](results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md)** — calibrated R4/GWOSC projection using the H1/L1 LALSuite response
+4. **[`results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md`](results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md)** — R4/GWOSC/LALSuite frontier summary and claim boundary
+5. **[`FINDINGS.md`](FINDINGS.md)** — curated one-page findings, now including the v2.170-v2.187 frontier
+6. **[`results/2026-06-09-v2.10-capstone.md`](results/2026-06-09-v2.10-capstone.md)** — the program in one page
+7. **[`results/2026-06-09-v2.0-RESEARCH-REPORT.md`](results/2026-06-09-v2.0-RESEARCH-REPORT.md)** — publication-style overview of the core engine
+8. **[`results/INDEX.md`](results/INDEX.md)** — generated chronological index for the full research loop
