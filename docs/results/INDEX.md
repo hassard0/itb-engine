@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (237 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (238 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -286,3 +286,4 @@ Auto-generated front door to the full research program (237 notes). Regenerate w
 | v2.124 | [v2.124 - GW alpha waveform/EFT bounds: components bounded, budget held](2026-06-20-v2.124-gw-alpha-waveform-eft-bound.md) | v2.123 selected the next implementation step: |
 | v2.125 | [v2.125 - GW alpha joint likelihood calibration: alpha packet ready, G8](2026-06-20-v2.125-gw-alpha-joint-likelihood-calibration.md) | v2.124 selected the next implementation step: |
 | v2.126 | [v2.126 - GW alpha/G8 joint audit: alpha ready, no current G8 component](2026-06-20-v2.126-gw-alpha-g8-joint-component-audit.md) | v2.125 selected the next implementation step: |
+| v2.127 | [v2.127 - GW alpha/G8 external sidecar spec: contract defined, not sati](2026-06-20-v2.127-gw-alpha-g8-external-measurement-spec.md) | v2.126 selected the next implementation step: |
