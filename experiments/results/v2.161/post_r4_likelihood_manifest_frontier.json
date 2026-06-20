@@ -1,0 +1,210 @@
+{
+  "version": "v2.161",
+  "basis": [
+    "v2.160_r4_shape_likelihood_packet_manifest",
+    "v2.159_r4_public_shape_likelihood_search",
+    "v2.158_bresciani_r4_shape_unitarity_diagnostic",
+    "v2.91_post_g8_direct_measurement_frontier"
+  ],
+  "frontier_scope": "post_r4_likelihood_manifest",
+  "route_count": 6,
+  "r4_ready_likelihood_packets_now": [],
+  "claim_ready_routes": [],
+  "current_in_repo_promotion_ready_routes": [],
+  "current_in_repo_diagnostic_ready_routes": [
+    "future_public_r4_shape_likelihood_ingestion",
+    "r4_symbolic_scale_resolution"
+  ],
+  "external_dependency_routes": [
+    "future_public_r4_shape_likelihood_ingestion",
+    "future_public_g8_measurement_ingestion",
+    "framework_specific_native_tower_search",
+    "weyl_g8_joint_frontier",
+    "gw_parity_operator_normalization_search",
+    "r4_symbolic_scale_resolution"
+  ],
+  "claimable_discriminator_now": false,
+  "priority_order": [
+    "future_public_r4_shape_likelihood_ingestion",
+    "future_public_g8_measurement_ingestion",
+    "framework_specific_native_tower_search",
+    "weyl_g8_joint_frontier",
+    "gw_parity_operator_normalization_search",
+    "r4_symbolic_scale_resolution"
+  ],
+  "top_priority_route": "future_public_r4_shape_likelihood_ingestion",
+  "blocker_counts": {
+    "adapter_normalization_missing": 1,
+    "asymptotic_tower_spectrum_missing": 1,
+    "axis_normalization_declared": 1,
+    "axis_normalization_declared_missing": 1,
+    "compactification_or_planck_normalization_policy_missing": 1,
+    "component_level_systematics_budget_missing": 1,
+    "direct_ng_ppv_engine_promotion_retired": 1,
+    "engine_axis_target_missing": 1,
+    "excluding_discriminator_math": 1,
+    "excluding_discriminator_math_missing": 1,
+    "external_eft_domain_missing": 1,
+    "four_dimensional_frame_and_field_redefinition_policy_missing": 1,
+    "future_public_g8_packet_missing": 1,
+    "g8_external_measurement_missing": 1,
+    "g_C_external_measurement_missing": 1,
+    "joint_likelihood_missing": 1,
+    "maps_to_bresciani_r4_axes": 1,
+    "maps_to_bresciani_r4_axes_missing": 1,
+    "named_framework_native_source_missing": 1,
+    "numeric_alpha_prime_to_lambda_r4_value_missing": 1,
+    "public_g8_likelihood_or_covariance_missing": 1,
+    "public_likelihood_or_covariance": 1,
+    "public_r4_shape_likelihood_or_covariance_missing": 1,
+    "reproducible_data_or_code": 1,
+    "source_backed_operator_normalization_missing": 1
+  },
+  "execution_class_counts": {
+    "external_dual_likelihood_required": 1,
+    "external_packet_required_before_claim_adapter": 1,
+    "external_packet_required_before_in_repo_adapter": 1,
+    "future_operator_bridge_required": 1,
+    "future_source_or_compactification_policy_required": 1,
+    "future_source_required": 1
+  },
+  "rows": [
+    {
+      "route": "future_public_r4_shape_likelihood_ingestion",
+      "family": "gravity_R4_shape",
+      "status": "diagnostic_and_manifest_ready_public_likelihood_missing",
+      "execution_class": "external_packet_required_before_claim_adapter",
+      "priority_rank": 1,
+      "current_in_repo_diagnostic_ready": true,
+      "current_in_repo_promotion_ready": false,
+      "claim_ready": false,
+      "reason": "The R4 path is now more mature than before v2.153: it has a source-backed shape projection, symbolic Lambda ledger, compactification-agnostic Bresciani diagnostic, public-source search, and future likelihood manifest. It still lacks the external likelihood/covariance packet required for a claim.",
+      "next_artifact": "Ingest a future public R4 shape likelihood packet only if it passes the v2.160 manifest; otherwise keep the R4 diagnostic non-claiming.",
+      "blockers": [
+        "axis_normalization_declared",
+        "axis_normalization_declared_missing",
+        "excluding_discriminator_math",
+        "excluding_discriminator_math_missing",
+        "maps_to_bresciani_r4_axes",
+        "maps_to_bresciani_r4_axes_missing",
+        "public_likelihood_or_covariance",
+        "public_r4_shape_likelihood_or_covariance_missing",
+        "reproducible_data_or_code"
+      ],
+      "basis": [
+        "v2.158_bresciani_r4_shape_unitarity_diagnostic",
+        "v2.159_r4_public_shape_likelihood_search",
+        "v2.160_r4_shape_likelihood_packet_manifest"
+      ]
+    },
+    {
+      "route": "future_public_g8_measurement_ingestion",
+      "family": "matter_forward_amplitude",
+      "status": "retained_waiting_for_real_external_packet",
+      "execution_class": "external_packet_required_before_in_repo_adapter",
+      "priority_rank": 2,
+      "current_in_repo_diagnostic_ready": false,
+      "current_in_repo_promotion_ready": false,
+      "claim_ready": false,
+      "reason": "The v2.79 acceptance harness can consume a real source packet, but v2.90 confirms the repo cannot produce the missing spin-4/detector measurement internally.",
+      "next_artifact": "Keep an intake contract ready and ingest only after a public packet supplies values, covariance, systematics, and EFT domain.",
+      "blockers": [
+        "component_level_systematics_budget_missing",
+        "external_eft_domain_missing",
+        "future_public_g8_packet_missing",
+        "public_g8_likelihood_or_covariance_missing"
+      ],
+      "basis": [
+        "v2.79_g8_adapter_acceptance_harness",
+        "v2.89_g8_direct_measurement_feasibility_audit",
+        "v2.90_g8_direct_measurement_route_decision"
+      ]
+    },
+    {
+      "route": "framework_specific_native_tower_search",
+      "family": "swampland_tower",
+      "status": "retained_future_named_framework_search",
+      "execution_class": "future_source_required",
+      "priority_rank": 3,
+      "current_in_repo_diagnostic_ready": false,
+      "current_in_repo_promotion_ready": false,
+      "claim_ready": false,
+      "reason": "Native tower evidence remains potentially decisive, but current audited sources do not provide a registered-framework-owned adapter row.",
+      "next_artifact": "Monitor named registered-framework sources for asymptotic tower spectra with ownership metadata.",
+      "blockers": [
+        "adapter_normalization_missing",
+        "asymptotic_tower_spectrum_missing",
+        "named_framework_native_source_missing"
+      ],
+      "basis": [
+        "v2.83_native_tower_current_source_audit",
+        "v2.84_native_tower_route_decision"
+      ]
+    },
+    {
+      "route": "weyl_g8_joint_frontier",
+      "family": "non_tower_geometry_matter",
+      "status": "theory_frontier_confirmed_measurement_blocked",
+      "execution_class": "external_dual_likelihood_required",
+      "priority_rank": 4,
+      "current_in_repo_diagnostic_ready": false,
+      "current_in_repo_promotion_ready": false,
+      "claim_ready": false,
+      "reason": "The geometry is stable, but the joint cut needs external g_C and g_8 likelihood packets in engine normalization.",
+      "next_artifact": "Defer joint likelihood work until at least one external engine-normalized packet exists.",
+      "blockers": [
+        "g8_external_measurement_missing",
+        "g_C_external_measurement_missing",
+        "joint_likelihood_missing"
+      ],
+      "basis": [
+        "v2.50_weyl_g8_discriminator_frontier",
+        "v2.51_weyl_g8_observable_sourceability"
+      ]
+    },
+    {
+      "route": "gw_parity_operator_normalization_search",
+      "family": "gravitational_wave_parity",
+      "status": "retained_operator_bridge_missing",
+      "execution_class": "future_operator_bridge_required",
+      "priority_rank": 5,
+      "current_in_repo_diagnostic_ready": false,
+      "current_in_repo_promotion_ready": false,
+      "claim_ready": false,
+      "reason": "The Ng public likelihood is reproduced, but direct promotion remains retired without a source-backed PPV-to-engine operator normalization.",
+      "next_artifact": "Search only when a source-backed bridge appears; do not treat additional posterior parsing as a promotion route.",
+      "blockers": [
+        "direct_ng_ppv_engine_promotion_retired",
+        "engine_axis_target_missing",
+        "source_backed_operator_normalization_missing"
+      ],
+      "basis": [
+        "v2.71_to_v2.76_gw_parity_ng_source_native_chain"
+      ]
+    },
+    {
+      "route": "r4_symbolic_scale_resolution",
+      "family": "gravity_R4_normalization",
+      "status": "symbolic_policy_ready_numeric_scale_blocked",
+      "execution_class": "future_source_or_compactification_policy_required",
+      "priority_rank": 6,
+      "current_in_repo_diagnostic_ready": true,
+      "current_in_repo_promotion_ready": false,
+      "claim_ready": false,
+      "reason": "The symbolic R4 scale ledger is implemented, but v2.156 showed that current primary sources do not define a compactification-independent numeric Lambda_R4 scale.",
+      "next_artifact": "Reopen only if a source-backed four-dimensional frame and alpha-prime/kappa-to-Lambda_R4 policy appears.",
+      "blockers": [
+        "compactification_or_planck_normalization_policy_missing",
+        "four_dimensional_frame_and_field_redefinition_policy_missing",
+        "numeric_alpha_prime_to_lambda_r4_value_missing"
+      ],
+      "basis": [
+        "v2.154_r4_lambda_unit_policy",
+        "v2.156_r4_frame_scale_policy_audit"
+      ]
+    }
+  ],
+  "route_status": "post_r4_frontier_diagnostic_ready_no_claim_ready_route",
+  "best_next_artifact": "Ingest a future public R4 shape likelihood packet only if it passes the v2.160 manifest; otherwise keep the R4 diagnostic non-claiming.",
+  "interpretation": "The R4 branch is now diagnostic-ready and future-evidence-ready, but it is not claim-ready. The frontier still has no current in-repo promotion-ready route; the highest priority is future public R4 shape likelihood ingestion, followed by the existing g_8 external packet route."
+}
