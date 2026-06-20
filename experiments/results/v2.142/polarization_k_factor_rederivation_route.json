@@ -1,0 +1,117 @@
+{
+  "version": "v2.142",
+  "basis": [
+    "v2.141_gross_witten_k_factor_ingestion_attempt",
+    "v2.139_four_dimensional_r4_projection_derivation_workbench",
+    "Bresciani_helicity_matching_contract"
+  ],
+  "required_derivation_packet_fields": [
+    "source_urls",
+    "source_equation_refs",
+    "four_dimensional_policy",
+    "polarization_dictionary",
+    "source_k_formula",
+    "helicity_components",
+    "normalization",
+    "source_backed_derivation"
+  ],
+  "valid_four_dimensional_policies": [
+    "four_dimensional_on_shell_riemann_with_eom_terms_removed",
+    "four_dimensional_on_shell_weyl_ricci_flat"
+  ],
+  "rederivation_stages": [
+    {
+      "stage": "fix_four_dimensional_policy",
+      "required_output": "four_dimensional_policy",
+      "acceptance_test": "Policy is one of the explicit on-shell Weyl/Riemann options."
+    },
+    {
+      "stage": "define_polarization_dictionary",
+      "required_output": "polarization_dictionary",
+      "acceptance_test": "Maps graviton helicity states to spinor-helicity Weyl building blocks used by the source K expression."
+    },
+    {
+      "stage": "state_source_k_formula",
+      "required_output": "source_k_formula",
+      "acceptance_test": "Formula is page/equation anchored to a primary source or derived algebraically from source tensor contractions."
+    },
+    {
+      "stage": "project_helicity_components",
+      "required_output": "K_plus, Re(K_minus), Im(K_minus)",
+      "acceptance_test": "Components match Bresciani same-helicity and complex helicity-flip monomial families."
+    },
+    {
+      "stage": "normalize_to_engine_lambda_r4",
+      "required_output": "overall_R4_factor",
+      "acceptance_test": "Normalization is dimensionless in the engine Lambda_R4 convention and tied to source alpha-prime units."
+    },
+    {
+      "stage": "invert_and_check_positivity",
+      "required_output": "g_R4_c1, g_R4_c2, g_R4_c3",
+      "acceptance_test": "v2.139 inversion is applied and the Bresciani positivity residual is computed."
+    }
+  ],
+  "evaluations": {
+    "empty_packet": {
+      "label": "empty_source_backed_k_rederivation_packet",
+      "missing_fields": [
+        "source_urls",
+        "source_equation_refs",
+        "four_dimensional_policy",
+        "polarization_dictionary",
+        "source_k_formula",
+        "helicity_components",
+        "normalization"
+      ],
+      "source_urls_primary": false,
+      "four_dimensional_policy_valid": false,
+      "k_components": {
+        "K_plus": null,
+        "K_minus_real": null,
+        "K_minus_imag": null
+      },
+      "overall_R4_factor": null,
+      "derived_bresciani_projection": null,
+      "ready_for_k_factor_projection": false,
+      "blockers": [
+        "four_dimensional_policy_invalid",
+        "k_plus_k_minus_components_missing_or_nonnumeric",
+        "missing_required_fields",
+        "overall_r4_factor_missing_or_nonnumeric",
+        "source_backed_derivation_missing",
+        "source_urls_not_primary"
+      ]
+    },
+    "synthetic_control": {
+      "label": "synthetic_k_rederivation_control",
+      "missing_fields": [],
+      "source_urls_primary": true,
+      "four_dimensional_policy_valid": true,
+      "k_components": {
+        "K_plus": 0.3,
+        "K_minus_real": 0.1,
+        "K_minus_imag": 0.05
+      },
+      "overall_R4_factor": 8.0,
+      "derived_bresciani_projection": null,
+      "ready_for_k_factor_projection": false,
+      "blockers": [
+        "source_backed_derivation_missing"
+      ]
+    }
+  },
+  "ready_k_factor_projection_packets": [],
+  "current_blockers": [
+    "four_dimensional_policy_invalid",
+    "k_plus_k_minus_components_missing_or_nonnumeric",
+    "missing_required_fields",
+    "overall_r4_factor_missing_or_nonnumeric",
+    "source_backed_derivation_missing",
+    "source_urls_not_primary"
+  ],
+  "claimable_framework_exclusions_now": [],
+  "route_status": "polarization_k_factor_rederivation_route_specified_no_source_packet",
+  "selected_next_build_action": "derive_or_ingest_source_backed_k_rederivation_packet",
+  "best_next_artifact": "A source-backed K rederivation packet that passes this validator and feeds v2.139 with K_plus, K_minus, and overall_R4_factor.",
+  "interpretation": "The fallback route now has executable acceptance tests. Synthetic components are rejected unless a source-backed derivation is present, so the engine can safely evaluate future K-factor rederivations without promoting fixtures."
+}

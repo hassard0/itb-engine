@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (252 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (253 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -301,3 +301,4 @@ Auto-generated front door to the full research program (252 notes). Regenerate w
 | v2.139 | [v2.139 - Four-dimensional R4 projection derivation workbench](2026-06-20-v2.139-four-dimensional-r4-projection-derivation-workbench.md) | v2.138 showed that the checked sources give a Bresciani target contract and a |
 | v2.140 | [v2.140 - Source K-factor helicity decomposition audit](2026-06-20-v2.140-source-k-factor-helicity-decomposition-audit.md) | v2.139 made the downstream Bresciani matching executable if a source-backed |
 | v2.141 | [v2.141 - Gross-Witten K-factor ingestion attempt: record corrected](2026-06-20-v2.141-gross-witten-k-factor-ingestion-attempt.md) | v2.140 selected: |
+| v2.142 | [v2.142 - Polarization K-factor rederivation route specified](2026-06-20-v2.142-polarization-k-factor-rederivation-route.md) | v2.141 corrected the Gross-Witten source trail but still could not ingest a |
