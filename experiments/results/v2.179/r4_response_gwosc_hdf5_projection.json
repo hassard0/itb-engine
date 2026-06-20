@@ -1,0 +1,935 @@
+{
+  "version": "v2.179",
+  "basis": [
+    "v2.178_r4_response_public_strain_projection",
+    "v2.177_r4_lalsuite_waveform_response_contract",
+    "v2.107_gw_public_strain_loader",
+    "GWOSC_GW170608_v3_H1_L1_32s_HDF5"
+  ],
+  "cache_dir": "data/runs/gwosc_cache",
+  "projected_hdf5_packet": {
+    "packet_id": "gw170608_r4_gwosc_hdf5_projection_seed_v1",
+    "source_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3",
+    "source_type": "public_gw_reanalysis_fixture",
+    "target_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3",
+      "g_R4_plus",
+      "g_R4_minus_abs"
+    ],
+    "likelihood": {
+      "status": "public_covariance_matrix",
+      "central_values": {
+        "g_R4_c1": 0.499478594265,
+        "g_R4_c2": 0.501910857336,
+        "g_R4_c3": -0.000967417961
+      },
+      "covariance": [
+        [
+          0.250001841722,
+          0.02,
+          0.0
+        ],
+        [
+          0.02,
+          0.250004115564,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.250002343366
+        ]
+      ],
+      "axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "generation": "real_gwosc_hdf5_r4_response_projection_seed"
+    },
+    "axis_mapping": {
+      "dictionary_id": "bresciani_r4_axis_dictionary_v1",
+      "dictionary_version": "v2.175",
+      "status": "maps_to_bresciani_r4_axes",
+      "mapped_axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3",
+        "g_R4_plus",
+        "g_R4_minus_abs"
+      ],
+      "projection_axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "derived_axes": [
+        "g_R4_plus",
+        "g_R4_minus_abs"
+      ],
+      "source_coordinates": [
+        "overall_R4_factor",
+        "K_plus",
+        "Re(K_minus)",
+        "Im(K_minus)"
+      ],
+      "axis_normalization_declared": true,
+      "normalization_scope": "shape_likelihood_only",
+      "uses_numeric_lambda_r4_scale": false,
+      "engine_unit_policy_id": "engine_r4_shape_unit_v1",
+      "engine_unit_policy_version": "v2.147",
+      "claim_controls": {
+        "claim_use_allowed": false,
+        "framework_claim_allowed": false,
+        "axis_dictionary_only_not_claim_evidence": true
+      }
+    },
+    "normalization": {
+      "axis_normalization_declared": true,
+      "uses_numeric_lambda_r4_scale": false,
+      "normalization_scope": "shape_likelihood_only",
+      "axis_dictionary_id": "bresciani_r4_axis_dictionary_v1",
+      "axis_dictionary_version": "v2.175"
+    },
+    "domain": {
+      "status": "bounded_for_qg_eft",
+      "shared_domain_with_query_row": true,
+      "event": "GW170608",
+      "domain_notes": [
+        "dimensionless_r4_shape_axes_only",
+        "no_numeric_lambda_r4_scale_claim"
+      ]
+    },
+    "systematics": {
+      "status": "declared",
+      "items": [
+        "fixture_linearized_r4_waveform_response",
+        "public_strain_urls_declared_not_redownloaded_by_fixture",
+        "calibration_prior_and_sampler_systematics_open",
+        "no_external_adversarial_review"
+      ]
+    },
+    "provenance": {
+      "reproducible_data_or_code": true,
+      "public_likelihood_or_covariance": true,
+      "synthetic_control": true,
+      "public_data_inputs_declared": true,
+      "public_r4_reanalysis_output": false,
+      "source_urls": [
+        "https://gwosc.org/api/v2/event-versions/GW170608-v3",
+        "https://gwosc.org/eventapi/html/GWTC/",
+        "https://arxiv.org/abs/2504.12855",
+        "https://arxiv.org/abs/2407.08929"
+      ],
+      "source_package": {
+        "event": "GW170608",
+        "event_record": {
+          "name": "GW170608",
+          "event_version": "GW170608-v3",
+          "version": 3,
+          "catalog": "GWTC-1-confident",
+          "run": "O2",
+          "gps": 1180922494.5,
+          "detectors": [
+            "H1",
+            "L1"
+          ],
+          "event_version_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3",
+          "strain_files_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files",
+          "source_url": "https://gwosc.org/GWTC-1/"
+        },
+        "strain_summary": {
+          "records": [
+            {
+              "detector": "H1",
+              "duration": 32,
+              "sample_rate_hz": 4096,
+              "gps_start": 1180922479,
+              "file_format": "HDF",
+              "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/H-H1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+              "expected_sample_count": 131072,
+              "event_offset_seconds": 15.5,
+              "event_inside_segment": true,
+              "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=H1&sample-rate=4&duration=32&file-format=hdf5"
+            },
+            {
+              "detector": "L1",
+              "duration": 32,
+              "sample_rate_hz": 4096,
+              "gps_start": 1180922479,
+              "file_format": "HDF",
+              "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/L-L1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+              "expected_sample_count": 131072,
+              "event_offset_seconds": 15.5,
+              "event_inside_segment": true,
+              "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=L1&sample-rate=4&duration=32&file-format=hdf5"
+            },
+            {
+              "detector": "H1",
+              "duration": 4096,
+              "sample_rate_hz": 4096,
+              "gps_start": 1180920447,
+              "file_format": "HDF",
+              "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/H-H1_GWOSC_4KHZ_R1-1180920447-4096.hdf5",
+              "expected_sample_count": 16777216,
+              "event_offset_seconds": 2047.5,
+              "event_inside_segment": true,
+              "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=H1&sample-rate=4&duration=4096&file-format=hdf5"
+            },
+            {
+              "detector": "L1",
+              "duration": 4096,
+              "sample_rate_hz": 4096,
+              "gps_start": 1180920447,
+              "file_format": "HDF",
+              "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/L-L1_GWOSC_4KHZ_R1-1180920447-4096.hdf5",
+              "expected_sample_count": 16777216,
+              "event_offset_seconds": 2047.5,
+              "event_inside_segment": true,
+              "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=L1&sample-rate=4&duration=4096&file-format=hdf5"
+            }
+          ],
+          "record_count": 4,
+          "required_record_count": 4,
+          "missing_required_records": [],
+          "malformed_records": [],
+          "public_strain_urls_ready": true
+        },
+        "strain_records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1180922479,
+            "file_format": "HDF",
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/H-H1_GWOSC_4KHZ_R1-1180922479-32.hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1180922479,
+            "file_format": "HDF",
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/L-L1_GWOSC_4KHZ_R1-1180922479-32.hdf5"
+          },
+          {
+            "detector": "H1",
+            "duration": 4096,
+            "sample_rate_hz": 4096,
+            "gps_start": 1180920447,
+            "file_format": "HDF",
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/H-H1_GWOSC_4KHZ_R1-1180920447-4096.hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 4096,
+            "sample_rate_hz": 4096,
+            "gps_start": 1180920447,
+            "file_format": "HDF",
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/L-L1_GWOSC_4KHZ_R1-1180920447-4096.hdf5"
+          }
+        ],
+        "source_urls": [
+          "https://gwosc.org/api/v2/event-versions/GW170608-v3",
+          "https://gwosc.org/eventapi/html/GWTC/",
+          "https://arxiv.org/abs/2504.12855",
+          "https://arxiv.org/abs/2407.08929"
+        ],
+        "public_inputs_declared": true,
+        "required_reanalysis_steps": [
+          "load_h1_l1_32s_public_strain",
+          "build_gr_reference_waveform_and_nuisance_grid",
+          "inject_linearized_r4_shape_response",
+          "sample_or_grid_g_R4_c1_c2_c3",
+          "export_v2_160_r4_shape_likelihood_packet"
+        ],
+        "fixture_boundary": {
+          "public_strain_inputs": true,
+          "r4_waveform_response_is_synthetic_fixture": true,
+          "public_r4_likelihood_release": false
+        }
+      },
+      "waveform_parameterization": {
+        "status": "fixture_parameterization_ready",
+        "event": "GW170608",
+        "source_coordinates": [
+          "delta_K_plus",
+          "delta_Re_K_minus",
+          "delta_Im_K_minus"
+        ],
+        "engine_axes": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "source_to_engine_jacobian_for_overall_R4_factor_8": [
+          [
+            0.5,
+            0.5,
+            0.0
+          ],
+          [
+            0.5,
+            -0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "axis_mapping_sidecar": {
+          "dictionary_id": "bresciani_r4_axis_dictionary_v1",
+          "dictionary_version": "v2.175",
+          "status": "maps_to_bresciani_r4_axes",
+          "mapped_axes": [
+            "g_R4_c1",
+            "g_R4_c2",
+            "g_R4_c3",
+            "g_R4_plus",
+            "g_R4_minus_abs"
+          ],
+          "projection_axes": [
+            "g_R4_c1",
+            "g_R4_c2",
+            "g_R4_c3"
+          ],
+          "derived_axes": [
+            "g_R4_plus",
+            "g_R4_minus_abs"
+          ],
+          "source_coordinates": [
+            "overall_R4_factor",
+            "K_plus",
+            "Re(K_minus)",
+            "Im(K_minus)"
+          ],
+          "axis_normalization_declared": true,
+          "normalization_scope": "shape_likelihood_only",
+          "uses_numeric_lambda_r4_scale": false,
+          "engine_unit_policy_id": "engine_r4_shape_unit_v1",
+          "engine_unit_policy_version": "v2.147",
+          "claim_controls": {
+            "claim_use_allowed": false,
+            "framework_claim_allowed": false,
+            "axis_dictionary_only_not_claim_evidence": true
+          }
+        },
+        "response_model": {
+          "kind": "linearized_post_inspiral_phase_fixture",
+          "real_waveform_code_attached": false,
+          "lalsuite_r4_waveform_plugin": "missing",
+          "purpose": "exercise packet covariance wiring before real R4 waveform generation exists"
+        },
+        "normalization": {
+          "scope": "shape_likelihood_only",
+          "uses_numeric_lambda_r4_scale": false,
+          "dictionary_id": "bresciani_r4_axis_dictionary_v1"
+        }
+      },
+      "real_public_hdf5_projection": true,
+      "r4_gwosc_hdf5_projection_harness": {
+        "cache_dir": "data/runs/gwosc_cache",
+        "template_summary": {
+          "template_kind": "r4_response_contract_time_domain_projection_fixture",
+          "sample_count": 16384,
+          "sample_rate_hz": 4096,
+          "axes": [
+            "g_R4_c1",
+            "g_R4_c2",
+            "g_R4_c3"
+          ],
+          "template_norms": {
+            "g_R4_c1": 1.0,
+            "g_R4_c2": 1.0,
+            "g_R4_c3": 1.0
+          },
+          "template_gram_matrix": [
+            [
+              1.0,
+              -0.0,
+              -0.0
+            ],
+            [
+              -0.0,
+              1.0,
+              -0.0
+            ],
+            [
+              -0.0,
+              -0.0,
+              1.0
+            ]
+          ],
+          "orthonormal_within_tolerance": true
+        },
+        "detector_rows": [
+          {
+            "detector": "H1",
+            "cache_path": "data/runs/gwosc_cache/H-H1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+            "metadata": {
+              "path": "data/runs/gwosc_cache/H-H1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+              "file_size_bytes": 1034918,
+              "sha256": "c1d3e5d3365977012b0380c4e5064cab4b0761d0d928b98bbe402245ca177a27",
+              "datasets_present": [
+                "/strain/Strain",
+                "/meta/GPSstart",
+                "/meta/Duration",
+                "/meta/Detector"
+              ],
+              "datasets_missing": [],
+              "detector": "H1",
+              "gps_start": 1180922479,
+              "duration": 32,
+              "sample_count": 131072,
+              "sample_rate_hz": 4096,
+              "strain_finite": true,
+              "strain_mean": -0.0,
+              "strain_rms": 0.0,
+              "strain_min": -0.0,
+              "strain_max": 0.0
+            },
+            "loader_ready": true,
+            "synthetic_strain_fixture": false,
+            "real_public_hdf5_projection": true,
+            "conditioning": {
+              "start_index": 55296,
+              "stop_index": 71680,
+              "sample_count": 16384,
+              "raw_mean": 0.0,
+              "raw_rms": 0.0,
+              "conditioned_mean": 0.015910358089,
+              "conditioned_rms": 1.0
+            },
+            "projection": {
+              "g_R4_c1": -0.119995597146,
+              "g_R4_c2": 0.292520002224,
+              "g_R4_c3": -0.173282072003
+            },
+            "projection_ready": true
+          },
+          {
+            "detector": "L1",
+            "cache_path": "data/runs/gwosc_cache/L-L1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+            "metadata": {
+              "path": "data/runs/gwosc_cache/L-L1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+              "file_size_bytes": 1036678,
+              "sha256": "eb680f2fa9fc5a4223c697e17351d5c5d8f45f05623ee3a6a55cf67f55586a81",
+              "datasets_present": [
+                "/strain/Strain",
+                "/meta/GPSstart",
+                "/meta/Duration",
+                "/meta/Detector"
+              ],
+              "datasets_missing": [],
+              "detector": "L1",
+              "gps_start": 1180922479,
+              "duration": 32,
+              "sample_count": 131072,
+              "sample_rate_hz": 4096,
+              "strain_finite": true,
+              "strain_mean": -0.0,
+              "strain_rms": 0.0,
+              "strain_min": -0.0,
+              "strain_max": 0.0
+            },
+            "loader_ready": true,
+            "synthetic_strain_fixture": false,
+            "real_public_hdf5_projection": true,
+            "conditioning": {
+              "start_index": 55296,
+              "stop_index": 71680,
+              "sample_count": 16384,
+              "raw_mean": -0.0,
+              "raw_rms": 0.0,
+              "conditioned_mean": 0.005026576205,
+              "conditioned_rms": 1.0
+            },
+            "projection": {
+              "g_R4_c1": 0.015714450107,
+              "g_R4_c2": 0.089651464902,
+              "g_R4_c3": -0.020201520242
+            },
+            "projection_ready": true
+          }
+        ],
+        "network_projection": {
+          "detectors": [
+            "H1",
+            "L1"
+          ],
+          "axes": [
+            "g_R4_c1",
+            "g_R4_c2",
+            "g_R4_c3"
+          ],
+          "projection_means": {
+            "g_R4_c1": -0.05214057352,
+            "g_R4_c2": 0.191085733563,
+            "g_R4_c3": -0.096741796123
+          },
+          "projection_spreads": {
+            "g_R4_c1": 0.135710047253,
+            "g_R4_c2": 0.202868537322,
+            "g_R4_c3": 0.153080551761
+          },
+          "central_values": {
+            "g_R4_c1": 0.499478594265,
+            "g_R4_c2": 0.501910857336,
+            "g_R4_c3": -0.000967417961
+          },
+          "covariance": [
+            [
+              0.250001841722,
+              0.02,
+              0.0
+            ],
+            [
+              0.02,
+              0.250004115564,
+              0.0
+            ],
+            [
+              0.0,
+              0.0,
+              0.250002343366
+            ]
+          ],
+          "covariance_status": "real_hdf5_projection_seed_positive_definite",
+          "synthetic_strain_fixture": false,
+          "real_public_hdf5_projection": true
+        },
+        "real_public_hdf5_projection": true,
+        "r4_waveform_kernels_source_backed": false
+      }
+    },
+    "discriminator_math": "excludes_registered_framework",
+    "claim_controls": {
+      "claim_use_allowed": false,
+      "framework_claim_allowed": false,
+      "external_adversarial_review_complete": false,
+      "synthetic_control_not_claim_evidence": true
+    }
+  },
+  "evaluation": {
+    "packet_id": "gw170608_r4_gwosc_hdf5_projection_seed_v1",
+    "response_contract_evaluation": {
+      "label": "synthetic_lalsuite_r4_response_contract_candidate",
+      "software_response_contract_ready": true,
+      "ready_to_replace_v2_176_fixture_response_contract": true,
+      "ready_for_real_public_r4_reanalysis": false,
+      "ready_for_framework_claim": false,
+      "contract_blockers": [],
+      "real_reanalysis_blockers": [
+        "external_adversarial_review_complete",
+        "lalsuite_runtime_with_imrphenomd_or_successor",
+        "nuisance_marginalized_public_covariance_export",
+        "public_strain_projection_over_g_R4_c1_c2_c3",
+        "source_backed_r4_pn_or_imr_waveform_derivation",
+        "waveform_calibration_prior_and_eft_systematics_closed"
+      ],
+      "claim_blockers": [
+        "external_adversarial_review_complete",
+        "framework_claim_controls_disabled",
+        "lalsuite_runtime_with_imrphenomd_or_successor",
+        "nuisance_marginalized_public_covariance_export",
+        "public_strain_projection_over_g_R4_c1_c2_c3",
+        "source_backed_r4_pn_or_imr_waveform_derivation",
+        "waveform_calibration_prior_and_eft_systematics_closed"
+      ],
+      "kernel_rank": 3,
+      "lalsuite_runtime_status": {
+        "available": false,
+        "lal_version": null,
+        "has_imrphenomd": false
+      },
+      "route_status": "lalsuite_r4_response_contract_ready_nonclaiming"
+    },
+    "fixture_packet_evaluation": {
+      "packet_id": "gw170608_r4_gwosc_hdf5_projection_seed_v1",
+      "manifest_evaluation": {
+        "packet_id": "gw170608_r4_gwosc_hdf5_projection_seed_v1",
+        "likelihood_status": "public_covariance_matrix",
+        "ready_for_engine_likelihood_packet": true,
+        "ready_for_framework_claim": false,
+        "blockers": [
+          "synthetic_control_not_claim_evidence"
+        ],
+        "missing_required_fields": []
+      },
+      "ingestion_evaluation": {
+        "packet_id": "gw170608_r4_gwosc_hdf5_projection_seed_v1",
+        "manifest_evaluation": {
+          "packet_id": "gw170608_r4_gwosc_hdf5_projection_seed_v1",
+          "likelihood_status": "public_covariance_matrix",
+          "ready_for_engine_likelihood_packet": true,
+          "ready_for_framework_claim": false,
+          "blockers": [
+            "synthetic_control_not_claim_evidence"
+          ],
+          "missing_required_fields": []
+        },
+        "shape_score": {
+          "score_available": true,
+          "axes": [
+            "g_R4_c1",
+            "g_R4_c2",
+            "g_R4_c3"
+          ],
+          "reference_shape": {
+            "g_R4_c1": 0.5,
+            "g_R4_c2": 0.5,
+            "g_R4_c3": 0.0
+          },
+          "packet_central_values": {
+            "g_R4_c1": 0.499478594265,
+            "g_R4_c2": 0.501910857336,
+            "g_R4_c3": -0.000967417961
+          },
+          "residual": {
+            "g_R4_c1": -0.000521405735,
+            "g_R4_c2": 0.001910857336,
+            "g_R4_c3": -0.000967417961
+          },
+          "chi_square_to_string_tree_r4_shape": 2.0179087e-05,
+          "sigma_distance_to_string_tree_r4_shape": 0.004492113921,
+          "degrees_of_freedom": 3,
+          "inside_one_sigma_shape_tube": true,
+          "blockers": [],
+          "missing_central_axes": []
+        },
+        "synthetic_control": true,
+        "adapter_ingestion_ready": true,
+        "ready_for_shape_likelihood_diagnostic": true,
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions": [],
+        "ingestion_blockers": [],
+        "claim_blockers": [
+          "external_adversarial_review_missing",
+          "framework_claim_controls_disabled",
+          "synthetic_control_not_claim_evidence"
+        ],
+        "route_status": "r4_shape_likelihood_packet_ingestion_ready_nonclaiming"
+      },
+      "axis_dictionary_evaluation": {
+        "dictionary_id": "bresciani_r4_axis_dictionary_v1",
+        "ready_for_r4_shape_packet_axis_mapping": true,
+        "ready_for_likelihood_packet": false,
+        "ready_for_framework_claim": false,
+        "blockers": [],
+        "downstream_likelihood_blockers": [
+          "modified_gravity_r4_waveform_adapter_missing",
+          "public_covariance_over_engine_r4_axes_missing",
+          "framework_exclusion_math_missing",
+          "external_adversarial_review_missing"
+        ],
+        "engine_unit_formula_check": {
+          "ready": true,
+          "coefficients": {
+            "g_R4_c1": 0.5,
+            "g_R4_c2": 0.5,
+            "g_R4_c3": 0.0
+          },
+          "derived": {
+            "g_R4_plus": 1.0,
+            "g_R4_minus_abs": 0.0
+          }
+        }
+      },
+      "fixture_packet_engine_ready": true,
+      "ready_for_shape_likelihood_diagnostic": true,
+      "ready_for_real_public_r4_reanalysis": false,
+      "ready_for_framework_claim": false,
+      "synthetic_control": true,
+      "fixture_blockers": [],
+      "real_reanalysis_blockers": [
+        "external_adversarial_review_missing",
+        "public_r4_reanalysis_samples_missing",
+        "r4_waveform_response_model_is_fixture",
+        "waveform_systematics_not_closed_for_r4"
+      ],
+      "claim_blockers": [
+        "external_adversarial_review_missing",
+        "public_r4_reanalysis_samples_missing",
+        "r4_waveform_response_model_is_fixture",
+        "synthetic_control_not_claim_evidence",
+        "waveform_systematics_not_closed_for_r4"
+      ],
+      "shape_score": {
+        "score_available": true,
+        "axes": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "reference_shape": {
+          "g_R4_c1": 0.5,
+          "g_R4_c2": 0.5,
+          "g_R4_c3": 0.0
+        },
+        "packet_central_values": {
+          "g_R4_c1": 0.499478594265,
+          "g_R4_c2": 0.501910857336,
+          "g_R4_c3": -0.000967417961
+        },
+        "residual": {
+          "g_R4_c1": -0.000521405735,
+          "g_R4_c2": 0.001910857336,
+          "g_R4_c3": -0.000967417961
+        },
+        "chi_square_to_string_tree_r4_shape": 2.0179087e-05,
+        "sigma_distance_to_string_tree_r4_shape": 0.004492113921,
+        "degrees_of_freedom": 3,
+        "inside_one_sigma_shape_tube": true,
+        "blockers": [],
+        "missing_central_axes": []
+      },
+      "route_status": "public_gw_r4_reanalysis_fixture_engine_ready_nonclaiming"
+    },
+    "hdf5_projection_harness_engine_ready": true,
+    "ready_for_real_public_r4_reanalysis": false,
+    "ready_for_framework_claim": false,
+    "projection_blockers": [],
+    "real_hdf5_reanalysis_blockers": [
+      "external_adversarial_review_missing",
+      "lalsuite_r4_runtime_projection_not_run",
+      "nuisance_marginalized_covariance_not_exported",
+      "r4_response_kernels_are_ansatz_not_source_backed",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "lalsuite_r4_runtime_projection_not_run",
+      "nuisance_marginalized_covariance_not_exported",
+      "r4_response_kernels_are_ansatz_not_source_backed",
+      "synthetic_control_not_claim_evidence",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "shape_score": {
+      "score_available": true,
+      "axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "reference_shape": {
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.0
+      },
+      "packet_central_values": {
+        "g_R4_c1": 0.499478594265,
+        "g_R4_c2": 0.501910857336,
+        "g_R4_c3": -0.000967417961
+      },
+      "residual": {
+        "g_R4_c1": -0.000521405735,
+        "g_R4_c2": 0.001910857336,
+        "g_R4_c3": -0.000967417961
+      },
+      "chi_square_to_string_tree_r4_shape": 2.0179087e-05,
+      "sigma_distance_to_string_tree_r4_shape": 0.004492113921,
+      "degrees_of_freedom": 3,
+      "inside_one_sigma_shape_tube": true,
+      "blockers": [],
+      "missing_central_axes": []
+    },
+    "route_status": "r4_response_gwosc_hdf5_projection_ready_nonclaiming"
+  },
+  "malformed_control_evaluation": {
+    "packet_id": "gw170608_r4_gwosc_hdf5_projection_seed_v1",
+    "response_contract_evaluation": {
+      "label": "synthetic_lalsuite_r4_response_contract_candidate",
+      "software_response_contract_ready": true,
+      "ready_to_replace_v2_176_fixture_response_contract": true,
+      "ready_for_real_public_r4_reanalysis": false,
+      "ready_for_framework_claim": false,
+      "contract_blockers": [],
+      "real_reanalysis_blockers": [
+        "external_adversarial_review_complete",
+        "lalsuite_runtime_with_imrphenomd_or_successor",
+        "nuisance_marginalized_public_covariance_export",
+        "public_strain_projection_over_g_R4_c1_c2_c3",
+        "source_backed_r4_pn_or_imr_waveform_derivation",
+        "waveform_calibration_prior_and_eft_systematics_closed"
+      ],
+      "claim_blockers": [
+        "external_adversarial_review_complete",
+        "framework_claim_controls_disabled",
+        "lalsuite_runtime_with_imrphenomd_or_successor",
+        "nuisance_marginalized_public_covariance_export",
+        "public_strain_projection_over_g_R4_c1_c2_c3",
+        "source_backed_r4_pn_or_imr_waveform_derivation",
+        "waveform_calibration_prior_and_eft_systematics_closed"
+      ],
+      "kernel_rank": 3,
+      "lalsuite_runtime_status": {
+        "available": false,
+        "lal_version": null,
+        "has_imrphenomd": false
+      },
+      "route_status": "lalsuite_r4_response_contract_ready_nonclaiming"
+    },
+    "fixture_packet_evaluation": {
+      "packet_id": "gw170608_r4_gwosc_hdf5_projection_seed_v1",
+      "manifest_evaluation": {
+        "packet_id": "gw170608_r4_gwosc_hdf5_projection_seed_v1",
+        "likelihood_status": "public_covariance_matrix",
+        "ready_for_engine_likelihood_packet": true,
+        "ready_for_framework_claim": false,
+        "blockers": [
+          "synthetic_control_not_claim_evidence"
+        ],
+        "missing_required_fields": []
+      },
+      "ingestion_evaluation": {
+        "packet_id": "gw170608_r4_gwosc_hdf5_projection_seed_v1",
+        "manifest_evaluation": {
+          "packet_id": "gw170608_r4_gwosc_hdf5_projection_seed_v1",
+          "likelihood_status": "public_covariance_matrix",
+          "ready_for_engine_likelihood_packet": true,
+          "ready_for_framework_claim": false,
+          "blockers": [
+            "synthetic_control_not_claim_evidence"
+          ],
+          "missing_required_fields": []
+        },
+        "shape_score": {
+          "score_available": false,
+          "axes": [
+            "g_R4_c1",
+            "g_R4_c2",
+            "g_R4_c3"
+          ],
+          "blockers": [
+            "covariance_nonpositive_variance_g_R4_c3"
+          ],
+          "missing_central_axes": []
+        },
+        "synthetic_control": true,
+        "adapter_ingestion_ready": false,
+        "ready_for_shape_likelihood_diagnostic": false,
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions": [],
+        "ingestion_blockers": [
+          "shape_likelihood_score_unavailable"
+        ],
+        "claim_blockers": [
+          "adapter_ingestion_not_ready",
+          "external_adversarial_review_missing",
+          "framework_claim_controls_disabled",
+          "synthetic_control_not_claim_evidence"
+        ],
+        "route_status": "r4_shape_likelihood_packet_ingestion_blocked"
+      },
+      "axis_dictionary_evaluation": {
+        "dictionary_id": "bresciani_r4_axis_dictionary_v1",
+        "ready_for_r4_shape_packet_axis_mapping": true,
+        "ready_for_likelihood_packet": false,
+        "ready_for_framework_claim": false,
+        "blockers": [],
+        "downstream_likelihood_blockers": [
+          "modified_gravity_r4_waveform_adapter_missing",
+          "public_covariance_over_engine_r4_axes_missing",
+          "framework_exclusion_math_missing",
+          "external_adversarial_review_missing"
+        ],
+        "engine_unit_formula_check": {
+          "ready": true,
+          "coefficients": {
+            "g_R4_c1": 0.5,
+            "g_R4_c2": 0.5,
+            "g_R4_c3": 0.0
+          },
+          "derived": {
+            "g_R4_plus": 1.0,
+            "g_R4_minus_abs": 0.0
+          }
+        }
+      },
+      "fixture_packet_engine_ready": false,
+      "ready_for_shape_likelihood_diagnostic": false,
+      "ready_for_real_public_r4_reanalysis": false,
+      "ready_for_framework_claim": false,
+      "synthetic_control": true,
+      "fixture_blockers": [
+        "r4_ingestion_adapter_failed"
+      ],
+      "real_reanalysis_blockers": [
+        "external_adversarial_review_missing",
+        "public_r4_reanalysis_samples_missing",
+        "r4_waveform_response_model_is_fixture",
+        "waveform_systematics_not_closed_for_r4"
+      ],
+      "claim_blockers": [
+        "external_adversarial_review_missing",
+        "fixture_packet_not_engine_ready",
+        "public_r4_reanalysis_samples_missing",
+        "r4_waveform_response_model_is_fixture",
+        "synthetic_control_not_claim_evidence",
+        "waveform_systematics_not_closed_for_r4"
+      ],
+      "shape_score": {
+        "score_available": false,
+        "axes": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "blockers": [
+          "covariance_nonpositive_variance_g_R4_c3"
+        ],
+        "missing_central_axes": []
+      },
+      "route_status": "public_gw_r4_reanalysis_fixture_blocked"
+    },
+    "hdf5_projection_harness_engine_ready": false,
+    "ready_for_real_public_r4_reanalysis": false,
+    "ready_for_framework_claim": false,
+    "projection_blockers": [
+      "hdf5_projection_packet_not_engine_ready",
+      "network_projection_not_marked_real_hdf5",
+      "projection_detectors_not_h1_l1"
+    ],
+    "real_hdf5_reanalysis_blockers": [
+      "external_adversarial_review_missing",
+      "lalsuite_r4_runtime_projection_not_run",
+      "nuisance_marginalized_covariance_not_exported",
+      "r4_response_kernels_are_ansatz_not_source_backed",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "hdf5_projection_harness_not_engine_ready",
+      "lalsuite_r4_runtime_projection_not_run",
+      "nuisance_marginalized_covariance_not_exported",
+      "r4_response_kernels_are_ansatz_not_source_backed",
+      "synthetic_control_not_claim_evidence",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "shape_score": {
+      "score_available": false,
+      "axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "blockers": [
+        "covariance_nonpositive_variance_g_R4_c3"
+      ],
+      "missing_central_axes": []
+    },
+    "route_status": "r4_response_gwosc_hdf5_projection_blocked"
+  },
+  "hdf5_projection_harness_engine_ready": true,
+  "ready_real_public_r4_reanalysis_packets_now": [],
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "route_status": "r4_response_gwosc_hdf5_projection_ready_nonclaiming",
+  "selected_next_build_action": "replace_ansatz_r4_kernels_with_source_backed_pn_imr_derivation",
+  "best_next_artifact": "A source-backed R4 PN/IMR waveform derivation for g_R4_c1, g_R4_c2, and g_R4_c3 that can replace the ansatz response kernels while preserving the real GWOSC HDF5 projection path.",
+  "interpretation": "The R4 response contract now projects through real public GWOSC H1/L1 HDF5 strain bytes and emits an ingestible covariance seed. This removes the synthetic-strain-row blocker but remains nonclaiming because the R4 waveform kernels are still an ansatz and no nuisance-marginalized public covariance has been exported."
+}
