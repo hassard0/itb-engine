@@ -1,0 +1,91 @@
+{
+  "version": "v2.147",
+  "basis": [
+    "v2.146_k_convention_bridge_audit",
+    "v2.144_supersymmetric_r4_shape_projection",
+    "v2.133_gravity_r4_projection_guard_schema"
+  ],
+  "policy": {
+    "policy_id": "engine_r4_shape_unit_v1",
+    "version": "v2.147",
+    "status": "engine_convention_nonclaiming",
+    "normalized_shape_source": {
+      "shape_packet": "kallosh_n8_r4_shape_packet",
+      "source_urls": [
+        "https://arxiv.org/abs/0811.3417",
+        "https://arxiv.org/abs/2504.12855"
+      ],
+      "source_equation_refs": {
+        "kallosh_lee_rube_2008": [
+          "Omega4",
+          "P3-loop_UV",
+          "Omega",
+          "M_UV_3-loop"
+        ],
+        "bresciani_levati_paradisi_2025": [
+          "eq:amplitude",
+          "c_plus_c_minus_definitions"
+        ]
+      },
+      "source_backed_shape": true,
+      "K_plus": 1.0,
+      "K_minus_real": 0.0,
+      "K_minus_imag": 0.0
+    },
+    "engine_unit_definition": {
+      "overall_R4_factor": 8.0,
+      "c_plus": 1.0,
+      "c_minus_real": 0.0,
+      "c_minus_imag": 0.0,
+      "g_R4_c1": 0.5,
+      "g_R4_c2": 0.5,
+      "g_R4_c3": 0.0,
+      "definition": "One engine R4 shape unit equals the v2.144 Kallosh/Bresciani maximally supersymmetric R4 helicity shape."
+    },
+    "absolute_normalization": {
+      "type_II_string_alpha_prime_units_source_backed": false,
+      "engine_lambda_r4_unit_conversion_source_backed": false,
+      "k_convention_bridge_source_backed": false
+    },
+    "allowed_uses": [
+      "internal_bresciani_basis_projection",
+      "positivity_and_unitarity_algebra",
+      "adapter_fixture_replacement",
+      "relative_shape_comparison"
+    ],
+    "disallowed_uses": [
+      "absolute_type_II_string_scale_claim",
+      "framework_exclusion_claim",
+      "measurement_likelihood_claim",
+      "wilson_coefficient_magnitude_claim"
+    ],
+    "framework_claim_allowed": false,
+    "measurement_claim_allowed": false
+  },
+  "evaluation": {
+    "policy_id": "engine_r4_shape_unit_v1",
+    "ready_for_internal_shape_normalization": true,
+    "ready_for_absolute_string_normalization": false,
+    "ready_for_framework_claim": false,
+    "blockers": [],
+    "warnings": [],
+    "allowed_uses": [
+      "adapter_fixture_replacement",
+      "internal_bresciani_basis_projection",
+      "positivity_and_unitarity_algebra",
+      "relative_shape_comparison"
+    ],
+    "disallowed_uses": [
+      "absolute_type_II_string_scale_claim",
+      "framework_exclusion_claim",
+      "measurement_likelihood_claim",
+      "wilson_coefficient_magnitude_claim"
+    ]
+  },
+  "ready_internal_shape_policy": true,
+  "claimable_framework_exclusions_now": [],
+  "route_status": "engine_r4_shape_unit_policy_ready_nonclaiming",
+  "selected_next_build_action": "build_policy_scoped_string_tree_r4_projection_packet",
+  "best_next_artifact": "A string_tree_eft R4 projection packet that can pass internal shape normalization gates under this policy while still failing absolute-normalization and framework-claim gates.",
+  "interpretation": "The engine now has an explicit non-claiming R4 shape unit. This unblocks internal Bresciani-basis algebra and adapter tests without pretending that the Gross-Witten/Russo absolute string normalization has been solved."
+}
