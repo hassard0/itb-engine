@@ -1,0 +1,268 @@
+{
+  "version": "v2.134",
+  "basis": [
+    "v2.133_gravity_r4_projection_guard_schema",
+    "string_tree_eft_highest_priority_translation_candidate",
+    "current_primary_and_public_string_R4_sources"
+  ],
+  "source_count": 6,
+  "useful_string_r4_sources": [
+    "gross_witten_1986",
+    "gross_sloan_1987",
+    "peeters_vanhove_westerberg_2001",
+    "russo_1997",
+    "basu_2016_heterotic_one_loop"
+  ],
+  "direct_guard_ready_projection_sources": [],
+  "can_build_guard_passing_string_r4_adapter_now": false,
+  "sources": [
+    {
+      "source_id": "bresciani_levati_paradisi_2026",
+      "title": "Amplitudes and partial wave unitarity bounds",
+      "url": "https://arxiv.org/abs/2504.12855",
+      "source_role": "target_bresciani_spin2_basis",
+      "establishes_string_r4_family": false,
+      "establishes_bresciani_target_basis": true,
+      "gives_four_graviton_r4_action_or_amplitude": true,
+      "gives_bresciani_c_i_spin2_values": true,
+      "gives_string_to_bresciani_projection_matrix": false,
+      "normalization_to_engine_lambda_r4": false,
+      "four_dimensional_engine_frame_fixed": false,
+      "uncertainty_or_covariance_ready": false,
+      "interpretation": "Defines the target c_i^(2) Riemann^4 basis and source bounds, but does not translate string R4 tensors into that basis."
+    },
+    {
+      "source_id": "gross_witten_1986",
+      "title": "Superstring modifications of Einstein's equations",
+      "url": "https://doi.org/10.1016/0550-3213(86)90429-3",
+      "source_role": "type_ii_tree_level_r4_source",
+      "establishes_string_r4_family": true,
+      "establishes_bresciani_target_basis": false,
+      "gives_four_graviton_r4_action_or_amplitude": true,
+      "gives_bresciani_c_i_spin2_values": false,
+      "gives_string_to_bresciani_projection_matrix": false,
+      "normalization_to_engine_lambda_r4": false,
+      "four_dimensional_engine_frame_fixed": false,
+      "uncertainty_or_covariance_ready": false,
+      "interpretation": "A primary source for tree-level string corrections through quartic order in Riemann, but not an engine-normalized Bresciani c_i projection."
+    },
+    {
+      "source_id": "gross_sloan_1987",
+      "title": "The Quartic Effective Action for the Heterotic String",
+      "url": "https://doi.org/10.1016/0550-3213(87)90465-2",
+      "source_role": "heterotic_quartic_action_source",
+      "establishes_string_r4_family": true,
+      "establishes_bresciani_target_basis": false,
+      "gives_four_graviton_r4_action_or_amplitude": true,
+      "gives_bresciani_c_i_spin2_values": false,
+      "gives_string_to_bresciani_projection_matrix": false,
+      "normalization_to_engine_lambda_r4": false,
+      "four_dimensional_engine_frame_fixed": false,
+      "uncertainty_or_covariance_ready": false,
+      "interpretation": "A primary heterotic quartic-action source. It supports the string R4 route but does not provide c_i^(2) values or an operator projection matrix to the Bresciani basis."
+    },
+    {
+      "source_id": "peeters_vanhove_westerberg_2001",
+      "title": "Supersymmetric higher-derivative actions in ten and eleven dimensions",
+      "url": "https://arxiv.org/abs/hep-th/0010167",
+      "source_role": "supersymmetric_r4_structure_source",
+      "establishes_string_r4_family": true,
+      "establishes_bresciani_target_basis": false,
+      "gives_four_graviton_r4_action_or_amplitude": true,
+      "gives_bresciani_c_i_spin2_values": false,
+      "gives_string_to_bresciani_projection_matrix": false,
+      "normalization_to_engine_lambda_r4": false,
+      "four_dimensional_engine_frame_fixed": false,
+      "uncertainty_or_covariance_ready": false,
+      "interpretation": "Documents t8t8R4 and related higher-derivative structures, including normalization and frame issues, but still not the required Bresciani three-axis adapter."
+    },
+    {
+      "source_id": "russo_1997",
+      "title": "An ansatz for a non-perturbative four-graviton amplitude in type IIB superstring theory",
+      "url": "https://arxiv.org/abs/hep-th/9707241",
+      "source_role": "four_graviton_amplitude_expansion_source",
+      "establishes_string_r4_family": true,
+      "establishes_bresciani_target_basis": false,
+      "gives_four_graviton_r4_action_or_amplitude": true,
+      "gives_bresciani_c_i_spin2_values": false,
+      "gives_string_to_bresciani_projection_matrix": false,
+      "normalization_to_engine_lambda_r4": false,
+      "four_dimensional_engine_frame_fixed": false,
+      "uncertainty_or_covariance_ready": false,
+      "interpretation": "Gives a four-graviton amplitude expansion with an R4 term, but not a source-backed map into g_R4_c1/c2/c3."
+    },
+    {
+      "source_id": "basu_2016_heterotic_one_loop",
+      "title": "A simplifying feature of the heterotic one loop four graviton amplitude",
+      "url": "https://inspirehep.net/literature/1473144",
+      "source_role": "higher_loop_tensor_structure_context",
+      "establishes_string_r4_family": true,
+      "establishes_bresciani_target_basis": false,
+      "gives_four_graviton_r4_action_or_amplitude": true,
+      "gives_bresciani_c_i_spin2_values": false,
+      "gives_string_to_bresciani_projection_matrix": false,
+      "normalization_to_engine_lambda_r4": false,
+      "four_dimensional_engine_frame_fixed": false,
+      "uncertainty_or_covariance_ready": false,
+      "interpretation": "Useful tensor-structure context for string four-graviton amplitudes, but not a complete tree-level string_tree_eft projection into the Bresciani basis."
+    }
+  ],
+  "required_translation_steps": [
+    {
+      "step": "choose_string_r4_source_family",
+      "status": "partially_sourced",
+      "blocker": null,
+      "reason": "Primary sources establish string R4 action/amplitude families."
+    },
+    {
+      "step": "fix_four_dimensional_engine_frame",
+      "status": "blocked",
+      "blocker": "four_dimensional_compactification_frame_missing",
+      "reason": "The engine axes are four-dimensional; the scanned sources are primarily ten- or eleven-dimensional action/amplitude sources."
+    },
+    {
+      "step": "derive_operator_projection_matrix",
+      "status": "blocked",
+      "blocker": "string_to_bresciani_operator_projection_matrix_missing",
+      "reason": "No scanned source directly maps t8t8R4/epsilon structures to the Bresciani c_1^(2), c_2^(2), c_3^(2) coordinates."
+    },
+    {
+      "step": "fix_engine_normalization",
+      "status": "blocked",
+      "blocker": "engine_lambda_r4_normalization_missing",
+      "reason": "A guard-ready packet needs Lambda_R4 or an equivalent source-backed dimensionless normalization."
+    },
+    {
+      "step": "propagate_uncertainty",
+      "status": "blocked",
+      "blocker": "r4_uncertainty_or_covariance_missing",
+      "reason": "No covariance, uncertainty envelope, or likelihood over g_R4_c1/c2/c3 is present."
+    },
+    {
+      "step": "supply_claim_likelihood",
+      "status": "blocked",
+      "blocker": "measurement_likelihood_missing",
+      "reason": "A framework projection alone is not a measurement-backed framework exclusion."
+    }
+  ],
+  "translation_blockers": [
+    "engine_lambda_r4_normalization_missing",
+    "four_dimensional_compactification_frame_missing",
+    "measurement_likelihood_missing",
+    "r4_uncertainty_or_covariance_missing",
+    "string_to_bresciani_operator_projection_matrix_missing"
+  ],
+  "string_tree_guard_probe": {
+    "framework": "string_tree_eft",
+    "framework_registered": true,
+    "engine_scope": {
+      "in_scope": true,
+      "violations": [],
+      "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+    },
+    "missing_required_fields": [
+      "coefficients",
+      "derived",
+      "normalization",
+      "operator_projection_matrix",
+      "uncertainty_or_covariance",
+      "unitarity_bound",
+      "valid_energy_domain"
+    ],
+    "source_url_valid": true,
+    "source_type_valid": true,
+    "coefficient_summary": {
+      "coefficient_values": {
+        "g_R4_c1": null,
+        "g_R4_c2": null,
+        "g_R4_c3": null
+      },
+      "missing_or_nonnumeric": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "positivity_passed": false,
+      "positivity_residual": null
+    },
+    "derived_summary": {
+      "missing_or_nonnumeric": [
+        "g_R4_plus",
+        "g_R4_minus_abs"
+      ],
+      "expected": null,
+      "provided": {
+        "g_R4_plus": null,
+        "g_R4_minus_abs": null
+      },
+      "consistent": false
+    },
+    "normalization_summary": {
+      "present": false,
+      "status": "",
+      "status_valid": false
+    },
+    "operator_projection_summary": {
+      "present": false,
+      "status": "",
+      "status_valid": false
+    },
+    "energy_domain_summary": {
+      "present": false,
+      "status": "",
+      "status_valid": false
+    },
+    "uncertainty_summary": {
+      "present": false,
+      "status": "",
+      "status_valid": false,
+      "axes_cover_required": false
+    },
+    "ownership_summary": {
+      "framework_source_owned": true
+    },
+    "unitarity_summary": {
+      "present": false,
+      "status": "",
+      "status_valid": false,
+      "uses_bresciani_spin2_bound": false
+    },
+    "likelihood_summary": {
+      "present": false,
+      "status": "",
+      "status_valid": false,
+      "axes_cover_required": false
+    },
+    "ready_for_framework_projection": false,
+    "ready_for_framework_claim": false,
+    "projection_blockers": [
+      "missing_required_fields",
+      "r4_coefficients_missing_or_nonnumeric",
+      "r4_derived_coordinates_missing_or_nonnumeric",
+      "r4_normalization_not_source_backed",
+      "r4_operator_projection_matrix_not_source_backed",
+      "r4_positivity_status_not_checked",
+      "r4_uncertainty_or_covariance_incomplete",
+      "r4_unitarity_bound_not_source_backed",
+      "r4_valid_energy_domain_not_bounded"
+    ],
+    "claim_blockers": [
+      "discriminator_math_not_excluding",
+      "measurement_likelihood_missing_or_incomplete",
+      "missing_required_fields",
+      "r4_coefficients_missing_or_nonnumeric",
+      "r4_derived_coordinates_missing_or_nonnumeric",
+      "r4_normalization_not_source_backed",
+      "r4_operator_projection_matrix_not_source_backed",
+      "r4_positivity_status_not_checked",
+      "r4_uncertainty_or_covariance_incomplete",
+      "r4_unitarity_bound_not_source_backed",
+      "r4_valid_energy_domain_not_bounded"
+    ]
+  },
+  "claimable_framework_exclusions_now": [],
+  "route_status": "string_r4_sources_found_no_bresciani_projection_adapter",
+  "selected_next_build_action": "build_symbolic_string_r4_to_bresciani_projection_plan",
+  "best_next_artifact": "A symbolic helicity/operator projection plan for the string R4 candidate, explicitly deciding whether t8t8R4 and epsilon structures can be reduced to c_1^(2), c_2^(2), c_3^(2) after a four-dimensional frame choice.",
+  "interpretation": "The source search confirms that string theory is the right R4 family to pursue, but it does not yet provide a guard-ready adapter. The missing object is a source-backed projection matrix from string R4 tensor structures into the Bresciani spin-2 three-coordinate basis, with normalization and uncertainty."
+}
