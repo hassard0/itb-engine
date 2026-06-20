@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (277 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (278 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -326,3 +326,4 @@ Auto-generated front door to the full research program (277 notes). Regenerate w
 | v2.164 | [v2.164 - Native tower adapter requirement sheet: per-framework contrac](2026-06-20-v2.164-native-tower-adapter-requirement-sheet.md) | v2.163 found live native-tower-adjacent sources but no registered adapter. Can |
 | v2.165 | [v2.165 - Post-adapter frontier refresh: infrastructure improved, no cl](2026-06-20-v2.165-post-adapter-frontier-refresh.md) | After v2.162 added the R4 likelihood ingester and v2.164 defined native tower |
 | v2.166 | [v2.166 - External G8 measurement packet spec: alpha can join, real G8 ](2026-06-20-v2.166-external-g8-measurement-packet-spec.md) | v2.126 showed that the calibrated GW alpha packet is ready for a G8 join, but no |
+| v2.167 | [v2.167 - Post-external-G8-spec frontier: contract ready, no real G8 pa](2026-06-20-v2.167-post-external-g8-spec-frontier.md) | After v2.166 defined the exact external G8 packet needed to join the calibrated |
