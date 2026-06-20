@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (254 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (255 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -303,3 +303,4 @@ Auto-generated front door to the full research program (254 notes). Regenerate w
 | v2.141 | [v2.141 - Gross-Witten K-factor ingestion attempt: record corrected](2026-06-20-v2.141-gross-witten-k-factor-ingestion-attempt.md) | v2.140 selected: |
 | v2.142 | [v2.142 - Polarization K-factor rederivation route specified](2026-06-20-v2.142-polarization-k-factor-rederivation-route.md) | v2.141 corrected the Gross-Witten source trail but still could not ingest a |
 | v2.143 | [v2.143 - Bresciani K monomial projector](2026-06-20-v2.143-bresciani-k-monomial-projector.md) | v2.142 specified the source-backed K-factor rederivation route, but a future |
+| v2.144 | [v2.144 - Supersymmetric R4 shape projection: K plus fixed, normalizati](2026-06-20-v2.144-supersymmetric-r4-shape-projection.md) | v2.143 made the Bresciani monomial projector executable, but only a synthetic |

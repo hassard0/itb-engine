@@ -1,0 +1,278 @@
+{
+  "version": "v2.144",
+  "basis": [
+    "v2.143_bresciani_k_monomial_projector",
+    "v2.142_polarization_k_factor_rederivation_route",
+    "Kallosh_Lee_Rube_arXiv_0811_3417_N8_R4_helicity_counterterm",
+    "Bresciani_Levati_Paradisi_arXiv_2504_12855_eq_amplitude"
+  ],
+  "source_evidence": {
+    "kallosh_lee_rube_2008": {
+      "url": "https://arxiv.org/abs/0811.3417",
+      "source_tarball_sha256": "e78d7380d7e80bb8c3b293b5c9546653344696c5b08e806e479699be730089f3",
+      "equation_refs": [
+        "November20.tex:Omega4",
+        "November20.tex:P3-loop_UV",
+        "November20.tex:Omega",
+        "November20.tex:M_UV_3-loop"
+      ],
+      "source_facts": [
+        "The N=8 four-point generating function carries a degree-16 eta delta/product structure.",
+        "Positive-helicity gravitons are extracted by the identity operator, while negative-helicity gravitons require eight eta derivatives.",
+        "The Bel-Robinson-square R4 counterterm component is M_UV(1-,2-,3+,4+) = kappa^4 <12>^4 [34]^4 in the paper's bracket convention.",
+        "The paper's angle bracket is built from tilde-lambda and therefore maps to Bresciani's square bracket; the paper's square bracket maps to Bresciani's angle bracket."
+      ]
+    },
+    "bresciani_levati_paradisi_2025": {
+      "url": "https://arxiv.org/abs/2504.12855",
+      "source_tarball_sha256": "393c41cd748ff5ba2e21f2113860cce3d3970646c2ae6d1ba24cb749e92c53ed",
+      "equation_refs": [
+        "letter.tex:eq:Lag-quartic",
+        "letter.tex:eq:amplitude",
+        "letter.tex:c_plus_c_minus_definitions"
+      ],
+      "source_facts": [
+        "The S=2 target amplitude has three equal c_plus monomial channels and chiral c_minus/conjugate families.",
+        "For the Bresciani normalization, each target matrix entry contains an explicit factor of 8 multiplying c_plus or c_minus."
+      ]
+    }
+  },
+  "shape_packet": {
+    "label": "kallosh_n8_r4_shape_packet",
+    "source_urls": [
+      "https://arxiv.org/abs/0811.3417",
+      "https://arxiv.org/abs/2504.12855"
+    ],
+    "source_equation_refs": {
+      "kallosh_lee_rube_2008": [
+        "Omega4",
+        "P3-loop_UV",
+        "Omega",
+        "M_UV_3-loop"
+      ],
+      "bresciani_levati_paradisi_2025": [
+        "eq:amplitude",
+        "c_plus_c_minus_definitions"
+      ]
+    },
+    "source_backed_derivation": true,
+    "derivation_scope": "R4 helicity shape of the maximally supersymmetric Bel-Robinson-square counterterm; not the absolute type-II string alpha-prime coefficient.",
+    "derivation_steps": [
+      {
+        "step": "map_kallosh_component_to_bresciani_monomial",
+        "input": "M_UV(1-,2-,3+,4+) = kappa^4 <12>^4 [34]^4",
+        "bracket_policy": "Kallosh angle = Bresciani square; Kallosh square = Bresciani angle.",
+        "output": "angle34^4_square12^4 has unit K_plus coefficient"
+      },
+      {
+        "step": "extend_by_permutation_and_bresciani_target_symmetry",
+        "input": "Kallosh P^L is symmetric in four points and Bresciani's eq:amplitude gives one common c_plus coefficient.",
+        "output": "all K_plus monomial-family coefficients are 1"
+      },
+      {
+        "step": "exclude_chiral_k_minus_shape",
+        "input": "The source superamplitude has degree 16 in eta; all-plus requires zero derivatives and all-minus requires 32.",
+        "output": "K_minus and conjugate monomial-family coefficients are 0"
+      }
+    ],
+    "monomial_coefficients": {
+      "angle12^4_square34^4": 1.0,
+      "angle14^4_square23^4": 1.0,
+      "angle34^4_square12^4": 1.0,
+      "angle12^4_angle34^4": 0.0,
+      "angle13^4_angle24^4": 0.0,
+      "angle14^4_angle23^4": 0.0,
+      "square12^4_square34^4": 0.0,
+      "square13^4_square24^4": 0.0,
+      "square14^4_square23^4": 0.0
+    },
+    "normalization": {
+      "overall_R4_factor": 8.0,
+      "normalization_scope": "Bresciani unit shape: c_plus=1, c_minus=0",
+      "absolute_string_alpha_prime_normalization_backed": false,
+      "absolute_normalization_blocker": "Gross-Witten/Russo fixes the string R4 coefficient trail, but the absolute engine Lambda_R4 normalization remains separate from this helicity-shape projection."
+    }
+  },
+  "projector_evaluation": {
+    "label": "kallosh_n8_r4_shape_packet",
+    "families": {
+      "K_plus": {
+        "monomials": [
+          "angle12^4_square34^4",
+          "angle14^4_square23^4",
+          "angle34^4_square12^4"
+        ],
+        "missing": [],
+        "nonnumeric": [],
+        "values": [
+          {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          {
+            "real": 1.0,
+            "imag": 0.0
+          },
+          {
+            "real": 1.0,
+            "imag": 0.0
+          }
+        ],
+        "common_coefficient": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "equal_within_tolerance": true
+      },
+      "K_minus": {
+        "monomials": [
+          "angle12^4_angle34^4",
+          "angle13^4_angle24^4",
+          "angle14^4_angle23^4"
+        ],
+        "missing": [],
+        "nonnumeric": [],
+        "values": [
+          {
+            "real": 0.0,
+            "imag": 0.0
+          },
+          {
+            "real": 0.0,
+            "imag": 0.0
+          },
+          {
+            "real": 0.0,
+            "imag": 0.0
+          }
+        ],
+        "common_coefficient": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "equal_within_tolerance": true
+      },
+      "K_minus_conjugate": {
+        "monomials": [
+          "square12^4_square34^4",
+          "square13^4_square24^4",
+          "square14^4_square23^4"
+        ],
+        "missing": [],
+        "nonnumeric": [],
+        "values": [
+          {
+            "real": 0.0,
+            "imag": 0.0
+          },
+          {
+            "real": 0.0,
+            "imag": 0.0
+          },
+          {
+            "real": 0.0,
+            "imag": 0.0
+          }
+        ],
+        "common_coefficient": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "equal_within_tolerance": true
+      }
+    },
+    "projected_components": {
+      "K_plus": {
+        "real": 1.0,
+        "imag": 0.0
+      },
+      "K_minus": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "K_minus_conjugate": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "overall_R4_factor": 8.0
+    },
+    "derived_bresciani_projection": {
+      "helicity_coordinates": {
+        "c_plus": 1.0,
+        "c_minus": {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      },
+      "inverted_coefficients": {
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.0
+      },
+      "derived_coordinates": {
+        "g_R4_plus": 1.0,
+        "g_R4_minus_abs": 0.0
+      },
+      "positivity_summary": {
+        "c1_nonnegative": true,
+        "c2_nonnegative": true,
+        "c3_square_bound_residual": 1.0,
+        "passed": true
+      }
+    },
+    "ready_for_k_factor_projection": true,
+    "blockers": []
+  },
+  "rederivation_evaluation": {
+    "label": "kallosh_n8_r4_rederivation_shape_packet",
+    "missing_fields": [],
+    "source_urls_primary": true,
+    "four_dimensional_policy_valid": true,
+    "k_components": {
+      "K_plus": 1.0,
+      "K_minus_real": 0.0,
+      "K_minus_imag": 0.0
+    },
+    "overall_R4_factor": 8.0,
+    "derived_bresciani_projection": {
+      "helicity_coordinates": {
+        "c_plus": 1.0,
+        "c_minus": {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      },
+      "inverted_coefficients": {
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.0
+      },
+      "derived_coordinates": {
+        "g_R4_plus": 1.0,
+        "g_R4_minus_abs": 0.0
+      },
+      "positivity_summary": {
+        "c1_nonnegative": true,
+        "c2_nonnegative": true,
+        "c3_square_bound_residual": 1.0,
+        "passed": true
+      }
+    },
+    "ready_for_k_factor_projection": true,
+    "blockers": []
+  },
+  "resolved_gap_this_iteration": [
+    "source_backed_K_plus_monomial_shape",
+    "source_backed_K_minus_zero_for_maximally_supersymmetric_R4_shape"
+  ],
+  "remaining_normalization_gaps": [
+    "absolute_type_II_string_alpha_prime_R4_coefficient",
+    "engine_Lambda_R4_unit_conversion"
+  ],
+  "ready_for_framework_claim": false,
+  "claimable_framework_exclusions_now": [],
+  "route_status": "supersymmetric_r4_shape_projected_string_normalization_open",
+  "selected_next_build_action": "normalize_supersymmetric_r4_shape_to_string_alpha_prime_units",
+  "best_next_artifact": "A source-backed conversion from the Kallosh/Russo/Gross-Witten R4 coefficient convention into the engine Lambda_R4 convention.",
+  "interpretation": "A source-backed helicity shape now reaches the Bresciani projector: K_plus=1 and K_minus=0 for the maximally supersymmetric R4 Bel-Robinson-square shape. This is a real projection result, but not yet a quantum-gravity discriminator because the absolute string/engine normalization is still open."
+}
