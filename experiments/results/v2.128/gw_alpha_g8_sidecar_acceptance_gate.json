@@ -1,0 +1,176 @@
+{
+  "version": "v2.128",
+  "basis": [
+    "v2.127_alpha_g8_external_measurement_spec",
+    "v2.126_alpha_g8_joint_component_audit"
+  ],
+  "spec_path": "experiments/results/v2.126/gw_alpha_g8_joint_component_audit.json",
+  "required_sidecar_fields": [
+    "label",
+    "source_url",
+    "source_type",
+    "observable_basis",
+    "g8_axis_normalization",
+    "g8_central_value_or_bound",
+    "statistical_uncertainty",
+    "systematic_uncertainty",
+    "covariance_or_likelihood",
+    "projection_to_engine_g8",
+    "cross_covariance_with_alpha",
+    "systematics_budget",
+    "shared_eft_domain",
+    "framework_projection",
+    "discriminator_math",
+    "synthetic_fixture"
+  ],
+  "sample_packet_count": 2,
+  "acceptance_ready_sample_packets": [
+    "synthetic_ready_g8_sidecar_packet"
+  ],
+  "claim_ready_sample_packets": [],
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "cross_covariance_with_alpha_missing": 1,
+    "engine_g8_normalization_missing": 1,
+    "external_numeric_measurement_missing": 1,
+    "framework_pair_exclusion_math_missing": 1,
+    "framework_projection_missing_or_nonexcluding": 1,
+    "g8_systematics_not_closed": 1,
+    "missing_required_fields": 1,
+    "projection_to_engine_g8_missing": 1,
+    "public_g8_likelihood_or_covariance_missing": 1,
+    "shared_eft_domain_not_bounded": 1,
+    "statistical_uncertainty_missing_or_invalid": 1,
+    "synthetic_fixture_not_real_source": 1,
+    "systematic_uncertainty_missing_or_invalid": 1
+  },
+  "evaluations": [
+    {
+      "label": "synthetic_ready_g8_sidecar_packet",
+      "synthetic_fixture": true,
+      "missing_fields": [],
+      "likelihood_summary": {
+        "status": "public_engine_usable",
+        "contains_g8": true,
+        "public_engine_usable": true,
+        "kind": "g8_sidecar_gaussian_likelihood"
+      },
+      "cross_covariance_summary": {
+        "status": "source_backed_independence_proof_with_error_bound",
+        "acceptable": true,
+        "has_numeric_bound": true,
+        "error_bound": 0.01,
+        "max_abs_correlation_with_alpha": 0.0
+      },
+      "systematics_summary": {
+        "status": "bounded",
+        "missing_components": [],
+        "components_closed": true,
+        "budget_closed": true
+      },
+      "framework_projection_summary": {
+        "status": "source_backed_framework_projection",
+        "excludes_framework": true,
+        "confidence_sigma": 2.5,
+        "framework_projection_ready": true
+      },
+      "discriminator_summary": {
+        "status": "excludes_registered_framework_branch",
+        "confidence_sigma": 2.5,
+        "excluding": true
+      },
+      "acceptance_ready": true,
+      "claim_ready": false,
+      "acceptance_blockers": [],
+      "claim_blockers": [
+        "synthetic_fixture_not_real_source"
+      ],
+      "status": "g8_sidecar_packet_rejected_or_nonpromoting"
+    },
+    {
+      "label": "incomplete_g8_sidecar_packet",
+      "synthetic_fixture": false,
+      "missing_fields": [
+        "g8_axis_normalization",
+        "g8_central_value_or_bound",
+        "statistical_uncertainty",
+        "systematic_uncertainty",
+        "covariance_or_likelihood",
+        "projection_to_engine_g8",
+        "cross_covariance_with_alpha",
+        "systematics_budget",
+        "shared_eft_domain",
+        "framework_projection",
+        "discriminator_math"
+      ],
+      "likelihood_summary": {
+        "status": "",
+        "contains_g8": false,
+        "public_engine_usable": false
+      },
+      "cross_covariance_summary": {
+        "status": "",
+        "acceptable": false,
+        "has_numeric_bound": false
+      },
+      "systematics_summary": {
+        "status": "",
+        "missing_components": [
+          "g8_adapter",
+          "cross_covariance",
+          "eft_truncation",
+          "calibration_or_acceptance",
+          "background_model",
+          "running_or_renormalization"
+        ],
+        "components_closed": false,
+        "budget_closed": false
+      },
+      "framework_projection_summary": {
+        "status": "",
+        "excludes_framework": false,
+        "confidence_sigma": null
+      },
+      "discriminator_summary": {
+        "status": "",
+        "confidence_sigma": null,
+        "excluding": false
+      },
+      "acceptance_ready": false,
+      "claim_ready": false,
+      "acceptance_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "status": "g8_sidecar_packet_rejected_or_nonpromoting"
+    }
+  ],
+  "route_status": "g8_sidecar_acceptance_gate_ready_no_real_packet",
+  "selected_next_build_action": "run_gate_on_real_external_g8_sidecar_packet",
+  "best_next_artifact": "A real non-synthetic external G8 sidecar packet that passes this gate and can be joined to the calibrated alpha packet.",
+  "interpretation": "The sidecar contract is now executable. A correctly shaped packet can satisfy acceptance in a synthetic fixture, but the fixture stays nonclaiming and the incomplete current-source packet is rejected."
+}
