@@ -1,0 +1,199 @@
+{
+  "version": "v2.157",
+  "basis": [
+    "v2.156_r4_frame_scale_policy_audit",
+    "compactification_agnostic_route_search",
+    "Bresciani_Levati_Paradisi_arXiv_2504_12855"
+  ],
+  "source_routes": [
+    {
+      "source_id": "bresciani_levati_paradisi_2025_partial_wave_unitarity",
+      "url": "https://arxiv.org/abs/2504.12855",
+      "route_family": "shape_unity_and_positivity_bounds",
+      "provides_machine_route": true,
+      "provides_public_likelihood": false,
+      "uses_absolute_lambda_scale": false,
+      "usable_axes": [
+        "Bresciani_c_i_spin2_Riemann4",
+        "g_R4_plus",
+        "g_R4_minus_abs"
+      ],
+      "claim_limit": "theoretical consistency diagnostic only unless paired with a measurement likelihood"
+    },
+    {
+      "source_id": "greft_qnm_observability_discussion",
+      "url": "https://link.springer.com/article/10.1140/epjp/s13360-024-05520-5",
+      "route_family": "black_hole_qnm_or_gw_observable",
+      "provides_machine_route": false,
+      "provides_public_likelihood": false,
+      "uses_absolute_lambda_scale": true,
+      "usable_axes": [
+        "GREFT_cubic_and_quartic_curvature_coefficients"
+      ],
+      "claim_limit": "observability discussion is useful, but not a public Bresciani-axis likelihood packet"
+    },
+    {
+      "source_id": "uv_graviton_scattering_positivity_bounds",
+      "url": "https://link.aps.org/doi/10.1103/PhysRevD.106.105002",
+      "route_family": "dispersion_positivity_bounds",
+      "provides_machine_route": false,
+      "provides_public_likelihood": false,
+      "uses_absolute_lambda_scale": false,
+      "usable_axes": [
+        "gravitational_EFT_Wilson_coefficient_ratios"
+      ],
+      "claim_limit": "theoretical positivity bound family, not a measurement likelihood over the engine R4 packet"
+    },
+    {
+      "source_id": "generic_eft_gravitational_wave_dictionary_2025",
+      "url": "https://link.aps.org/doi/10.1103/bl9q-1q3r",
+      "route_family": "gw_waveform_dictionary",
+      "provides_machine_route": false,
+      "provides_public_likelihood": false,
+      "uses_absolute_lambda_scale": true,
+      "usable_axes": [
+        "waveform_deviation_scaling_dictionary"
+      ],
+      "claim_limit": "dictionary points toward observables but does not provide an R4 likelihood over Bresciani axes"
+    }
+  ],
+  "route_ranking": {
+    "requirements": [
+      "does_not_require_numeric_alpha_prime_to_lambda_r4_ratio",
+      "does_not_require_compactification_specific_planck_scale",
+      "has_machine_usable_axis_mapping",
+      "has_source_backed_theory_bound_or_public_likelihood",
+      "keeps_framework_claim_disabled_without_likelihood"
+    ],
+    "route_scores": {
+      "bresciani_levati_paradisi_2025_partial_wave_unitarity": {
+        "source_id": "bresciani_levati_paradisi_2025_partial_wave_unitarity",
+        "route_family": "shape_unity_and_positivity_bounds",
+        "score": 5,
+        "max_score": 5,
+        "criteria": {
+          "does_not_require_numeric_alpha_prime_to_lambda_r4_ratio": true,
+          "does_not_require_compactification_specific_planck_scale": true,
+          "has_machine_usable_axis_mapping": true,
+          "has_source_backed_theory_bound_or_public_likelihood": true,
+          "keeps_framework_claim_disabled_without_likelihood": true
+        },
+        "missing_requirements": [],
+        "provides_public_likelihood": false,
+        "ready_for_internal_diagnostic": true,
+        "ready_for_framework_claim": false,
+        "claim_limit": "theoretical consistency diagnostic only unless paired with a measurement likelihood"
+      },
+      "greft_qnm_observability_discussion": {
+        "source_id": "greft_qnm_observability_discussion",
+        "route_family": "black_hole_qnm_or_gw_observable",
+        "score": 1,
+        "max_score": 5,
+        "criteria": {
+          "does_not_require_numeric_alpha_prime_to_lambda_r4_ratio": false,
+          "does_not_require_compactification_specific_planck_scale": false,
+          "has_machine_usable_axis_mapping": false,
+          "has_source_backed_theory_bound_or_public_likelihood": false,
+          "keeps_framework_claim_disabled_without_likelihood": true
+        },
+        "missing_requirements": [
+          "does_not_require_numeric_alpha_prime_to_lambda_r4_ratio",
+          "does_not_require_compactification_specific_planck_scale",
+          "has_machine_usable_axis_mapping",
+          "has_source_backed_theory_bound_or_public_likelihood"
+        ],
+        "provides_public_likelihood": false,
+        "ready_for_internal_diagnostic": false,
+        "ready_for_framework_claim": false,
+        "claim_limit": "observability discussion is useful, but not a public Bresciani-axis likelihood packet"
+      },
+      "uv_graviton_scattering_positivity_bounds": {
+        "source_id": "uv_graviton_scattering_positivity_bounds",
+        "route_family": "dispersion_positivity_bounds",
+        "score": 3,
+        "max_score": 5,
+        "criteria": {
+          "does_not_require_numeric_alpha_prime_to_lambda_r4_ratio": true,
+          "does_not_require_compactification_specific_planck_scale": true,
+          "has_machine_usable_axis_mapping": false,
+          "has_source_backed_theory_bound_or_public_likelihood": false,
+          "keeps_framework_claim_disabled_without_likelihood": true
+        },
+        "missing_requirements": [
+          "has_machine_usable_axis_mapping",
+          "has_source_backed_theory_bound_or_public_likelihood"
+        ],
+        "provides_public_likelihood": false,
+        "ready_for_internal_diagnostic": false,
+        "ready_for_framework_claim": false,
+        "claim_limit": "theoretical positivity bound family, not a measurement likelihood over the engine R4 packet"
+      },
+      "generic_eft_gravitational_wave_dictionary_2025": {
+        "source_id": "generic_eft_gravitational_wave_dictionary_2025",
+        "route_family": "gw_waveform_dictionary",
+        "score": 1,
+        "max_score": 5,
+        "criteria": {
+          "does_not_require_numeric_alpha_prime_to_lambda_r4_ratio": false,
+          "does_not_require_compactification_specific_planck_scale": false,
+          "has_machine_usable_axis_mapping": false,
+          "has_source_backed_theory_bound_or_public_likelihood": false,
+          "keeps_framework_claim_disabled_without_likelihood": true
+        },
+        "missing_requirements": [
+          "does_not_require_numeric_alpha_prime_to_lambda_r4_ratio",
+          "does_not_require_compactification_specific_planck_scale",
+          "has_machine_usable_axis_mapping",
+          "has_source_backed_theory_bound_or_public_likelihood"
+        ],
+        "provides_public_likelihood": false,
+        "ready_for_internal_diagnostic": false,
+        "ready_for_framework_claim": false,
+        "claim_limit": "dictionary points toward observables but does not provide an R4 likelihood over Bresciani axes"
+      }
+    },
+    "ranked_route_ids": [
+      "bresciani_levati_paradisi_2025_partial_wave_unitarity",
+      "uv_graviton_scattering_positivity_bounds",
+      "greft_qnm_observability_discussion",
+      "generic_eft_gravitational_wave_dictionary_2025"
+    ],
+    "best_internal_diagnostic_route": "bresciani_levati_paradisi_2025_partial_wave_unitarity",
+    "public_likelihood_ready_routes": []
+  },
+  "internal_diagnostic_ready_routes": [
+    "bresciani_levati_paradisi_2025_partial_wave_unitarity"
+  ],
+  "public_likelihood_ready_routes": [],
+  "selected_observable_spec": {
+    "route_id": "bresciani_levati_paradisi_2025_partial_wave_unitarity",
+    "status": "internal_theory_diagnostic_ready_nonclaiming",
+    "source_url": "https://arxiv.org/abs/2504.12855",
+    "observable_family": "Bresciani_spin2_R4_shape_unitarity",
+    "input_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3",
+      "g_R4_plus",
+      "g_R4_minus_abs"
+    ],
+    "does_not_use_numeric_lambda_r4_scale": true,
+    "does_not_use_compactification_policy": true,
+    "claim_use_allowed": false,
+    "measurement_likelihood_attached": false,
+    "diagnostic_outputs": [
+      "positivity_residual",
+      "unitarity_shape_family",
+      "shape_ratio_summary",
+      "claim_blocker_ledger"
+    ]
+  },
+  "ready_for_internal_observable_diagnostic": true,
+  "ready_for_measurement_likelihood_claim": false,
+  "ready_for_framework_claim": false,
+  "claimable_framework_exclusions_now": [],
+  "route_status": "compactification_agnostic_r4_routes_ranked_no_public_likelihood",
+  "selected_next_build_action": "implement_bresciani_r4_shape_unitarity_diagnostic",
+  "best_next_artifact": "A non-claiming Bresciani R4 shape diagnostic adapter that consumes the registered string_tree_eft R4 query row, reports positivity and shape-unitarity diagnostics, and keeps the measurement likelihood and numeric Lambda_R4 blockers visible.",
+  "interpretation": "A compactification-agnostic theory-diagnostic route exists via Bresciani spin-2 R4 shape bounds, but no public measurement likelihood over the engine R4 axes was found in this pass."
+}
