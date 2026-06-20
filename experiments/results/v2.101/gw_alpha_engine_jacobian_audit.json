@@ -1,0 +1,175 @@
+{
+  "version": "v2.101",
+  "basis": [
+    "v2.100_gw_secondary_axis_adapter_blueprint",
+    "arXiv_2407.08929_cubic_parity_preserving_gw170608_constraints",
+    "arXiv_2507.17143_curvature_operator_dictionary",
+    "engine_axes_g_C_g_R2_g_R3"
+  ],
+  "question": "Can alpha_bar_1/alpha_bar_2 be source-backed into existing engine secondary axes g_C or g_R2?",
+  "source_facts": [
+    {
+      "source_url": "https://arxiv.org/abs/2407.08929",
+      "role": "measurement_analysis",
+      "facts": [
+        "GW170608 Bayesian analysis",
+        "cubic parity-preserving higher-curvature EFT waveform model",
+        "numeric alpha_bar_1 and alpha_bar_2 constraints"
+      ]
+    },
+    {
+      "source_url": "https://arxiv.org/abs/2507.17143",
+      "role": "operator_dictionary",
+      "facts": [
+        "curvature-operator scaling dictionary",
+        "not an event-level engine likelihood"
+      ]
+    }
+  ],
+  "source_parameter_summary": {
+    "source_model": "cubic_parity_preserving_higher_curvature_eft",
+    "parameters": [
+      "alpha_bar_1",
+      "alpha_bar_2"
+    ],
+    "parameters_with_numeric_constraints": [
+      "alpha_bar_1",
+      "alpha_bar_2"
+    ],
+    "all_source_parameters_numeric": true,
+    "intervals": {
+      "alpha_bar_1": {
+        "central": 0.87,
+        "lower_90": -0.16,
+        "upper_90": 2.82
+      },
+      "alpha_bar_2": {
+        "central": -0.35,
+        "lower_90": -3.27,
+        "upper_90": 3.77
+      }
+    }
+  },
+  "required_promotion_criteria": [
+    "curvature_order_match",
+    "operator_family_match",
+    "source_backed_normalization",
+    "dimensionless_scaling_defined",
+    "covariance_or_likelihood_export_available",
+    "shared_eft_domain_bounded",
+    "framework_projection_defined"
+  ],
+  "existing_secondary_axes_checked": [
+    "g_C",
+    "g_R2"
+  ],
+  "native_cubic_candidate_axis": "g_R3",
+  "mapping_attempts": [
+    {
+      "source_parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "source_model": "cubic_parity_preserving_higher_curvature_eft",
+      "target_axis": "g_C",
+      "target_axis_definition": {
+        "engine_role": "weyl_squared_central_charge_axis",
+        "curvature_order": 2,
+        "operator_family": "quadratic_weyl_or_c_anomaly",
+        "status": "registered_secondary_axis",
+        "compatible_source_models": [
+          "quadratic_weyl_eft"
+        ]
+      },
+      "passed_criteria": [],
+      "failed_criteria": [
+        "curvature_order_mismatch",
+        "operator_family_mismatch",
+        "source_backed_normalization",
+        "dimensionless_scaling_defined",
+        "covariance_or_likelihood_export_available",
+        "shared_eft_domain_bounded",
+        "framework_projection_defined"
+      ],
+      "promotion_ready": false,
+      "direct_existing_secondary_axis": true,
+      "decision": "reject_direct_jacobian_to_existing_secondary_axis",
+      "next_action": "do_not_force_alpha_bar_into_quadratic_axis",
+      "risk_if_forced": "would reinterpret cubic GW EFT constraints as a different engine operator family without a source-backed Jacobian"
+    },
+    {
+      "source_parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "source_model": "cubic_parity_preserving_higher_curvature_eft",
+      "target_axis": "g_R2",
+      "target_axis_definition": {
+        "engine_role": "r_squared_or_euler_proxy_axis",
+        "curvature_order": 2,
+        "operator_family": "quadratic_scalar_or_euler_curvature",
+        "status": "registered_secondary_axis",
+        "compatible_source_models": [
+          "r_squared_scalar_eft"
+        ]
+      },
+      "passed_criteria": [],
+      "failed_criteria": [
+        "curvature_order_mismatch",
+        "operator_family_mismatch",
+        "source_backed_normalization",
+        "dimensionless_scaling_defined",
+        "covariance_or_likelihood_export_available",
+        "shared_eft_domain_bounded",
+        "framework_projection_defined"
+      ],
+      "promotion_ready": false,
+      "direct_existing_secondary_axis": true,
+      "decision": "reject_direct_jacobian_to_existing_secondary_axis",
+      "next_action": "do_not_force_alpha_bar_into_quadratic_axis",
+      "risk_if_forced": "would reinterpret cubic GW EFT constraints as a different engine operator family without a source-backed Jacobian"
+    },
+    {
+      "source_parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "source_model": "cubic_parity_preserving_higher_curvature_eft",
+      "target_axis": "g_R3",
+      "target_axis_definition": {
+        "engine_role": "cubic_graviton_forward_amplitude_axis",
+        "curvature_order": 3,
+        "operator_family": "cubic_parity_even_curvature",
+        "status": "registered_engine_coefficient_not_v2_98_secondary_axis",
+        "compatible_source_models": [
+          "cubic_parity_preserving_higher_curvature_eft"
+        ]
+      },
+      "passed_criteria": [
+        "curvature_order_match",
+        "operator_family_match"
+      ],
+      "failed_criteria": [
+        "source_backed_normalization",
+        "dimensionless_scaling_defined",
+        "covariance_or_likelihood_export_available",
+        "shared_eft_domain_bounded",
+        "framework_projection_defined",
+        "source_native_axis_not_registered_for_v2_98_gate"
+      ],
+      "promotion_ready": false,
+      "direct_existing_secondary_axis": false,
+      "decision": "axis_extension_candidate_nonpromoting",
+      "next_action": "register_source_native_cubic_gw_axis_adapter",
+      "risk_if_forced": "would reinterpret cubic GW EFT constraints as a different engine operator family without a source-backed Jacobian"
+    }
+  ],
+  "direct_existing_secondary_axis_jacobian_ready": false,
+  "source_native_cubic_axis_extension_available": true,
+  "claimable_discriminator_now": false,
+  "claim_ready_mappings": [],
+  "route_status": "alpha_to_existing_secondary_axes_rejected_cubic_axis_extension_selected",
+  "selected_next_build_action": "register_source_native_cubic_gw_axis_adapter",
+  "best_next_artifact": "A non-promoting source-native cubic GW packet schema for alpha_bar_1/alpha_bar_2, with explicit normalization and likelihood export requirements before any g8 joint-gate use.",
+  "interpretation": "The Liu-Yunes constraints are useful, but forcing them into g_C or g_R2 would mix cubic GW EFT parameters into quadratic engine axes. The build path is to preserve the source-native cubic basis first, then decide whether a defensible g_R3-family projection or new joint gate is possible."
+}
