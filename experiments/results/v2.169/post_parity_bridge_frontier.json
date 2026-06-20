@@ -1,0 +1,251 @@
+{
+  "version": "v2.169",
+  "basis": [
+    "v2.168_gw_parity_operator_bridge_spec",
+    "v2.167_post_external_g8_spec_frontier",
+    "v2.166_external_g8_measurement_packet_spec"
+  ],
+  "frontier_scope": "post_gw_parity_operator_bridge_spec",
+  "route_count": 6,
+  "source_side_parity_likelihood_ready_routes": [
+    "ng_gwtc3_kappa_at_100hz",
+    "callister_sgwb_kappaD_kappaz"
+  ],
+  "ready_current_operator_bridges": [],
+  "claim_ready_routes": [],
+  "current_in_repo_promotion_ready_routes": [],
+  "current_in_repo_diagnostic_ready_routes": [
+    "future_public_r4_shape_likelihood_ingestion",
+    "external_spin4_or_detector_g8_measurement_packet_spec",
+    "registered_native_tower_adapter_authoring",
+    "gw_parity_operator_normalization_search",
+    "r4_symbolic_scale_resolution"
+  ],
+  "external_dependency_routes": [
+    "future_public_r4_shape_likelihood_ingestion",
+    "external_spin4_or_detector_g8_measurement_packet_spec",
+    "registered_native_tower_adapter_authoring",
+    "weyl_g8_joint_frontier",
+    "gw_parity_operator_normalization_search",
+    "r4_symbolic_scale_resolution"
+  ],
+  "claimable_discriminator_now": false,
+  "priority_order": [
+    "future_public_r4_shape_likelihood_ingestion",
+    "external_spin4_or_detector_g8_measurement_packet_spec",
+    "registered_native_tower_adapter_authoring",
+    "weyl_g8_joint_frontier",
+    "gw_parity_operator_normalization_search",
+    "r4_symbolic_scale_resolution"
+  ],
+  "top_priority_route": "future_public_r4_shape_likelihood_ingestion",
+  "blocker_counts": {
+    "adapter_authoring_ready_framework_missing": 1,
+    "adapter_kind": 1,
+    "alpha_join_extension_gate_failed": 1,
+    "base_g8_adapter_gate_failed": 1,
+    "compactification_or_planck_normalization_policy_missing": 1,
+    "covariance_or_samples": 1,
+    "covariance_or_samples_missing": 1,
+    "derivation_kind": 1,
+    "dimensionful_to_dimensionless_normalization_missing": 1,
+    "engine_axis_target": 1,
+    "engine_axis_target_missing": 1,
+    "external_adversarial_review_status": 1,
+    "four_dimensional_frame_and_field_redefinition_policy_missing": 1,
+    "framework": 1,
+    "framework_exclusion_projection": 1,
+    "framework_exclusion_projection_missing": 1,
+    "frequency_reference": 1,
+    "frequency_reference_missing": 1,
+    "g8_external_measurement_missing": 1,
+    "g_C_external_measurement_missing": 1,
+    "generic_framework_claim_guard_ready": 1,
+    "helicity_basis_harmonization": 1,
+    "helicity_harmonization_missing": 1,
+    "joint_likelihood_missing": 1,
+    "manifest_packet_gate_failed": 1,
+    "native_framework_displacement": 1,
+    "native_framework_endpoint": 1,
+    "normalization_reference": 1,
+    "numeric_alpha_prime_to_lambda_r4_value_missing": 1,
+    "ppv_parameter_definition": 1,
+    "ppv_parameter_definition_missing": 1,
+    "ready_current_external_g8_packet_missing": 1,
+    "ready_current_operator_bridge_missing": 1,
+    "ready_public_r4_likelihood_packet_missing": 1,
+    "registered_framework_exclusion_math": 1,
+    "shape_likelihood_score_unavailable": 1,
+    "sign_convention": 1,
+    "sign_convention_missing": 1,
+    "source_backed_operator_normalization": 1,
+    "source_backed_operator_normalization_missing": 1,
+    "source_native_likelihood": 1,
+    "source_native_likelihood_missing": 1,
+    "source_owned_tower_evidence": 1,
+    "source_type": 1,
+    "source_url": 1,
+    "unit_conversion": 1
+  },
+  "rows": [
+    {
+      "route": "future_public_r4_shape_likelihood_ingestion",
+      "family": "gravity_R4_shape",
+      "status": "ingestion_adapter_ready_public_packet_missing",
+      "execution_class": "external_packet_required_to_use_ready_adapter",
+      "priority_rank": 1,
+      "current_in_repo_diagnostic_ready": true,
+      "current_in_repo_promotion_ready": false,
+      "claim_ready": false,
+      "reason": "v2.162 implemented a manifest-gated R4 likelihood ingester and covariance-weighted Bresciani shape score. It has no ready public packet, so it remains diagnostic infrastructure.",
+      "next_artifact": "A real public packet satisfying the v2.160 manifest with a covariance over g_R4_c1, g_R4_c2, and g_R4_c3. The adapter will score it against the registered string-tree R4 shape but will still require adversarial review before any framework claim.",
+      "blockers": [
+        "manifest_packet_gate_failed",
+        "ready_public_r4_likelihood_packet_missing",
+        "shape_likelihood_score_unavailable"
+      ],
+      "basis": [
+        "v2.162_r4_shape_likelihood_ingestion_adapter",
+        "v2.161_post_r4_likelihood_manifest_frontier"
+      ]
+    },
+    {
+      "route": "external_spin4_or_detector_g8_measurement_packet_spec",
+      "family": "matter_forward_amplitude",
+      "status": "packet_contract_ready_real_external_g8_packet_missing",
+      "execution_class": "external_packet_required_to_use_ready_contract",
+      "priority_rank": 2,
+      "current_in_repo_diagnostic_ready": true,
+      "current_in_repo_promotion_ready": false,
+      "claim_ready": false,
+      "reason": "v2.166 defines the exact external G8 packet needed to join the calibrated GW alpha likelihood. The alpha side is ready, the synthetic control passes, but no real current external G8 packet fills the contract.",
+      "next_artifact": "A public spin-4 partial-wave, detector-moment, or source-projected high-moment g_8 packet with covariance to the calibrated alpha likelihood and closed systematics.",
+      "blockers": [
+        "alpha_join_extension_gate_failed",
+        "base_g8_adapter_gate_failed",
+        "ready_current_external_g8_packet_missing"
+      ],
+      "basis": [
+        "v2.166_external_g8_measurement_packet_spec",
+        "v2.126_gw_alpha_g8_joint_component_audit",
+        "v2.98_g8_joint_packet_acceptance_gate"
+      ]
+    },
+    {
+      "route": "registered_native_tower_adapter_authoring",
+      "family": "swampland_tower",
+      "status": "requirements_defined_no_source_ready_framework",
+      "execution_class": "future_source_required_before_adapter_authoring",
+      "priority_rank": 3,
+      "current_in_repo_diagnostic_ready": true,
+      "current_in_repo_promotion_ready": false,
+      "claim_ready": false,
+      "reason": "v2.164 converted the native-tower blocker into a per-framework authoring contract. No registered framework currently fills the source-backed spectrum, evidence, ownership, normalization, threshold, and review fields.",
+      "next_artifact": "A source-backed adapter packet for one registered framework that fills the TowerSpectrum, TowerEvidence, ownership, normalization, threshold, and review fields in this sheet.",
+      "blockers": [
+        "adapter_authoring_ready_framework_missing",
+        "adapter_kind",
+        "derivation_kind",
+        "external_adversarial_review_status",
+        "framework",
+        "generic_framework_claim_guard_ready",
+        "native_framework_displacement",
+        "native_framework_endpoint",
+        "normalization_reference",
+        "registered_framework_exclusion_math",
+        "source_owned_tower_evidence"
+      ],
+      "basis": [
+        "v2.163_native_tower_live_source_triage",
+        "v2.164_native_tower_adapter_requirement_sheet"
+      ]
+    },
+    {
+      "route": "weyl_g8_joint_frontier",
+      "family": "non_tower_geometry_matter",
+      "status": "theory_frontier_confirmed_measurement_blocked",
+      "execution_class": "external_dual_likelihood_required",
+      "priority_rank": 4,
+      "current_in_repo_diagnostic_ready": false,
+      "current_in_repo_promotion_ready": false,
+      "claim_ready": false,
+      "reason": "The geometry is stable, but the joint cut needs external g_C and g_8 likelihood packets in engine normalization.",
+      "next_artifact": "Defer joint likelihood work until at least one external engine-normalized packet exists.",
+      "blockers": [
+        "g8_external_measurement_missing",
+        "g_C_external_measurement_missing",
+        "joint_likelihood_missing"
+      ],
+      "basis": [
+        "v2.50_weyl_g8_discriminator_frontier",
+        "v2.51_weyl_g8_observable_sourceability"
+      ]
+    },
+    {
+      "route": "gw_parity_operator_normalization_search",
+      "family": "gravitational_wave_parity",
+      "status": "operator_bridge_contract_ready_real_bridge_missing",
+      "execution_class": "external_bridge_required_to_use_ready_contract",
+      "priority_rank": 5,
+      "current_in_repo_diagnostic_ready": true,
+      "current_in_repo_promotion_ready": false,
+      "claim_ready": false,
+      "reason": "v2.168 defines an executable PPV/native-parameter to engine parity-axis bridge. Public source-native likelihood material exists, but no real current row fills the bridge contract.",
+      "next_artifact": "A source-backed PPV/native parity operator-normalization bridge that maps public GW parity likelihood material into engine g_R2_parity/g_R3_parity axes with declared units and helicity basis.",
+      "blockers": [
+        "covariance_or_samples",
+        "covariance_or_samples_missing",
+        "dimensionful_to_dimensionless_normalization_missing",
+        "engine_axis_target",
+        "engine_axis_target_missing",
+        "framework_exclusion_projection",
+        "framework_exclusion_projection_missing",
+        "frequency_reference",
+        "frequency_reference_missing",
+        "helicity_basis_harmonization",
+        "helicity_harmonization_missing",
+        "ppv_parameter_definition",
+        "ppv_parameter_definition_missing",
+        "ready_current_operator_bridge_missing",
+        "sign_convention",
+        "sign_convention_missing",
+        "source_backed_operator_normalization",
+        "source_backed_operator_normalization_missing",
+        "source_native_likelihood",
+        "source_native_likelihood_missing",
+        "source_type",
+        "source_url",
+        "unit_conversion"
+      ],
+      "basis": [
+        "v2.168_gw_parity_operator_bridge_spec",
+        "v2.76_gw_parity_route_decision",
+        "v2.61_gw_parity_adapter_readiness"
+      ]
+    },
+    {
+      "route": "r4_symbolic_scale_resolution",
+      "family": "gravity_R4_normalization",
+      "status": "symbolic_policy_ready_numeric_scale_blocked",
+      "execution_class": "future_source_or_compactification_policy_required",
+      "priority_rank": 6,
+      "current_in_repo_diagnostic_ready": true,
+      "current_in_repo_promotion_ready": false,
+      "claim_ready": false,
+      "reason": "The symbolic R4 scale ledger is implemented, but the source-backed four-dimensional numeric Lambda_R4 policy is still missing.",
+      "next_artifact": "Reopen only if a source-backed four-dimensional frame and alpha-prime/kappa-to-Lambda_R4 policy appears.",
+      "blockers": [
+        "compactification_or_planck_normalization_policy_missing",
+        "four_dimensional_frame_and_field_redefinition_policy_missing",
+        "numeric_alpha_prime_to_lambda_r4_value_missing"
+      ],
+      "basis": [
+        "v2.154_r4_lambda_unit_policy",
+        "v2.156_r4_frame_scale_policy_audit"
+      ]
+    }
+  ],
+  "route_status": "post_parity_bridge_frontier_no_claim_route",
+  "best_next_artifact": "A real public packet satisfying the v2.160 manifest with a covariance over g_R4_c1, g_R4_c2, and g_R4_c3. The adapter will score it against the registered string-tree R4 shape but will still require adversarial review before any framework claim.",
+  "interpretation": "R4, G8, native tower, and parity routes now have sharper packet or adapter contracts, but each remains blocked on missing real external evidence/source rows. No current route is promotion-ready or claim-ready."
+}

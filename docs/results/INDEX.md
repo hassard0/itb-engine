@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (279 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (280 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -328,3 +328,4 @@ Auto-generated front door to the full research program (279 notes). Regenerate w
 | v2.166 | [v2.166 - External G8 measurement packet spec: alpha can join, real G8 ](2026-06-20-v2.166-external-g8-measurement-packet-spec.md) | v2.126 showed that the calibrated GW alpha packet is ready for a G8 join, but no |
 | v2.167 | [v2.167 - Post-external-G8-spec frontier: contract ready, no real G8 pa](2026-06-20-v2.167-post-external-g8-spec-frontier.md) | After v2.166 defined the exact external G8 packet needed to join the calibrated |
 | v2.168 | [v2.168 - GW parity operator bridge spec: source likelihoods exist, no ](2026-06-20-v2.168-gw-parity-operator-bridge-spec.md) | The GW parity route has public source-native likelihood material, but no |
+| v2.169 | [v2.169 - Post-parity-bridge frontier: parity contract ready, no real b](2026-06-20-v2.169-post-parity-bridge-frontier.md) | After v2.168 defined the GW parity PPV/native-parameter to engine-axis bridge, |
