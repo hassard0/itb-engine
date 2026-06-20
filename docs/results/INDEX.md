@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (234 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (235 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -283,3 +283,4 @@ Auto-generated front door to the full research program (234 notes). Regenerate w
 | v2.121 | [v2.121 - GW alpha prior treatment stress test: cube export required](2026-06-20-v2.121-gw-alpha-prior-treatment-stress-test.md) | v2.120 selected the next implementation step: |
 | v2.122 | [v2.122 - GW alpha likelihood cube export: prior blocker made actionabl](2026-06-20-v2.122-gw-alpha-likelihood-cube-export.md) | v2.121 selected the next implementation step: |
 | v2.123 | [v2.123 - GW alpha prior reweight sweep: prior sensitivity bounded for ](2026-06-20-v2.123-gw-alpha-prior-reweight-sweep.md) | v2.122 selected the next implementation step: |
+| v2.124 | [v2.124 - GW alpha waveform/EFT bounds: components bounded, budget held](2026-06-20-v2.124-gw-alpha-waveform-eft-bound.md) | v2.123 selected the next implementation step: |

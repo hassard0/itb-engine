@@ -1,0 +1,991 @@
+{
+  "version": "v2.124",
+  "basis": [
+    "v2.123_alpha_prior_reweight_sweep",
+    "v2.113_lalsuite_imr_projection",
+    "v2.112_leading_order_gr_projection",
+    "v2.109_source_backed_cubic_inspiral_response"
+  ],
+  "paths": {
+    "prior_reweight": "experiments/results/v2.123/gw_alpha_prior_reweight_sweep.json",
+    "gr_reference": "experiments/results/v2.112/gw_gr_inspiral_reference_projection.json",
+    "imr_reference": "experiments/results/v2.113/gw_lalsuite_imr_projection.json",
+    "source_response": "experiments/results/v2.109/gw_source_backed_cubic_waveform_response.json"
+  },
+  "alpha_domain": {
+    "axis_step": 0.2,
+    "max_abs_best_alpha": 0.2,
+    "domain_half_width": 0.4,
+    "max_delta_log_likelihood_best_vs_gr": 0.000542496189
+  },
+  "waveform_component_bound": {
+    "status": "bounded",
+    "basis": "source_backed_imr_minus_inspiral_projection_envelope",
+    "source_reference": "https://arxiv.org/abs/2407.08929",
+    "reference_models": {
+      "left": "leading_order_gr_stationary_phase_inspiral",
+      "right": "LALSuite_IMRPhenomD"
+    },
+    "parameters": {
+      "alpha_bar_1": {
+        "abs_mean_delta": -0.009632060413,
+        "real_mean_delta": -0.031203424883,
+        "imag_mean_delta": 0.003275552161
+      },
+      "alpha_bar_2": {
+        "abs_mean_delta": -0.002560701265,
+        "real_mean_delta": 0.036062186854,
+        "imag_mean_delta": -0.002197600579
+      }
+    },
+    "max_network_projection_component_delta": 0.036062186854,
+    "safety_factor": 1.25,
+    "waveform_projection_envelope": 0.045077733567,
+    "alpha_domain": {
+      "axis_step": 0.2,
+      "max_abs_best_alpha": 0.2,
+      "domain_half_width": 0.4,
+      "max_delta_log_likelihood_best_vs_gr": 0.000542496189
+    },
+    "bounded_ready": true,
+    "scope": "Finite conservative component bound for the current source-backed alpha projection. It is not a replacement for a published full-IMR cubic-EFT waveform family and is therefore paired with a top-level budget hold."
+  },
+  "eft_truncation_component_bound": {
+    "status": "bounded",
+    "basis": "source_backed_next_pn_power_counting_remainder_bound",
+    "source_reference": "https://arxiv.org/abs/2407.08929",
+    "source_equation_refs": {
+      "phase": [
+        "Eq. phase_EFT",
+        "Eq. aPN_EFT",
+        "Eq. aPN_EFT_2"
+      ],
+      "amplitude": [
+        "Eq. amp_EFT"
+      ],
+      "normalization": "dimensionless_alpha_bar_1_alpha_bar_2"
+    },
+    "v_f_max": 0.319804329926,
+    "next_order_power_suppression": 0.10227480944,
+    "coefficient_ratio_cap": 10.0,
+    "relative_remainder_bound": 1.022748094396,
+    "max_source_kernel_abs_value": 0.929838967159,
+    "kernel_remainder_bound": 0.950991031757,
+    "alpha_domain": {
+      "axis_step": 0.2,
+      "max_abs_best_alpha": 0.2,
+      "domain_half_width": 0.4,
+      "max_delta_log_likelihood_best_vs_gr": 0.000542496189
+    },
+    "alpha_equivalent_remainder_bound": 0.409099237758,
+    "bounded_ready": true,
+    "scope": "Finite EFT truncation component bound under the declared Wilson coefficient-ratio cap. The cap is deliberately conservative and keeps the route nonclaiming until likelihood-scale and joint posterior checks are built."
+  },
+  "packet": {
+    "label": "v2_124_waveform_eft_component_bounded_alpha_packet",
+    "source_url": "https://arxiv.org/abs/2407.08929",
+    "source_model": "cubic_parity_preserving_higher_curvature_eft",
+    "event": "GW170608",
+    "source_parameters": [
+      "alpha_bar_1",
+      "alpha_bar_2"
+    ],
+    "parameter_constraints": {
+      "alpha_bar_1": {
+        "central": 0.001002701248,
+        "lower_90": -1.8,
+        "upper_90": 1.8
+      },
+      "alpha_bar_2": {
+        "central": 0.000788661485,
+        "lower_90": -1.8,
+        "upper_90": 1.8
+      }
+    },
+    "posterior_or_likelihood_export": {
+      "status": "reproduced_source_native_likelihood",
+      "kind": "coarse_nuisance_marginal_lalsuite_imrphenomd_grid",
+      "parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "grid_points": 441,
+      "detectors": [
+        "H1",
+        "L1"
+      ],
+      "nuisance_points_per_detector": 81,
+      "best_marginal_grid_point": {
+        "alpha_bar_1": 0.0,
+        "alpha_bar_2": 0.0,
+        "log_marginal_likelihood": -1.0,
+        "profile_log_likelihood": -1.0
+      },
+      "best_profile_grid_point": {
+        "alpha_bar_1": 0.6,
+        "alpha_bar_2": 0.6,
+        "log_marginal_likelihood": -1.004194650312,
+        "profile_log_likelihood": -0.993959859965
+      },
+      "weight_summary": {
+        "grid_points": 441,
+        "max_weight": 0.006283482646,
+        "effective_sample_size": 218.798942192739
+      }
+    },
+    "source_parameter_covariance": {
+      "parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "matrix": [
+        [
+          1.23637770635,
+          1.023911859153
+        ],
+        [
+          1.023911859153,
+          1.236411695879
+        ]
+      ]
+    },
+    "waveform_model_reference": "LALSuite_IMRPhenomD_linearized_cubic_EFT_response",
+    "normalization_convention": "paper_native_dimensionless_alpha_bar",
+    "engine_axis_strategy": {
+      "status": "explicit_engine_projection",
+      "target_axis": "gw_cubic_alpha",
+      "source_parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "engine_parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "source_to_engine_jacobian": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "normalization": "identity_in_paper_native_dimensionless_alpha_bar_basis",
+      "projection_scope": "source_native_cubic_alpha_axis_not_quadratic_curvature_or_g8"
+    },
+    "framework_projection_strategy": "framework_alpha_response_defined",
+    "systematics_budget": {
+      "status": "open",
+      "components": {
+        "waveform_systematics": "bounded",
+        "detector_calibration": "bounded",
+        "prior_sensitivity": "bounded",
+        "eft_truncation": "bounded",
+        "sampler_convergence": "bounded",
+        "public_data_reproducibility": "bounded"
+      },
+      "evidence": {
+        "waveform_systematics": {
+          "status": "bounded",
+          "basis": "source_backed_imr_minus_inspiral_projection_envelope",
+          "source_reference": "https://arxiv.org/abs/2407.08929",
+          "reference_models": {
+            "left": "leading_order_gr_stationary_phase_inspiral",
+            "right": "LALSuite_IMRPhenomD"
+          },
+          "parameters": {
+            "alpha_bar_1": {
+              "abs_mean_delta": -0.009632060413,
+              "real_mean_delta": -0.031203424883,
+              "imag_mean_delta": 0.003275552161
+            },
+            "alpha_bar_2": {
+              "abs_mean_delta": -0.002560701265,
+              "real_mean_delta": 0.036062186854,
+              "imag_mean_delta": -0.002197600579
+            }
+          },
+          "max_network_projection_component_delta": 0.036062186854,
+          "safety_factor": 1.25,
+          "waveform_projection_envelope": 0.045077733567,
+          "alpha_domain": {
+            "axis_step": 0.2,
+            "max_abs_best_alpha": 0.2,
+            "domain_half_width": 0.4,
+            "max_delta_log_likelihood_best_vs_gr": 0.000542496189
+          },
+          "bounded_ready": true,
+          "scope": "Finite conservative component bound for the current source-backed alpha projection. It is not a replacement for a published full-IMR cubic-EFT waveform family and is therefore paired with a top-level budget hold."
+        },
+        "detector_calibration": {
+          "status": "bounded",
+          "basis": "gw170608_published_calibration_uncertainty_2sigma_corner_propagation",
+          "calibration_source": {
+            "title": "GW170608: Observation of a 19-solar-mass Binary Black Hole Coalescence",
+            "url": "https://arxiv.org/abs/1711.05578",
+            "reported_max_1sigma_amplitude_fraction": 0.05,
+            "reported_max_1sigma_phase_degrees": 3.0,
+            "frequency_band_hz": [
+              20.0,
+              111.25
+            ]
+          },
+          "applied_envelope": {
+            "sigma_multiplier": 2.0,
+            "amplitude_fraction": 0.1,
+            "phase_degrees": 6.0,
+            "detectors": [
+              "H1",
+              "L1"
+            ]
+          },
+          "parameters": {
+            "alpha_bar_1": {
+              "base_complex_mean_real": -0.00557587486,
+              "base_complex_mean_imag": -0.016026386789,
+              "base_abs_detector_mean": 0.025788256709,
+              "max_real_mean_shift": 0.003196828643,
+              "max_imag_mean_shift": 0.003101297824,
+              "max_abs_detector_mean_shift": 0.002578825671,
+              "max_complex_mean_shift": 0.003829303984,
+              "calibration_corner_count": 16
+            },
+            "alpha_bar_2": {
+              "base_complex_mean_real": 0.011420432732,
+              "base_complex_mean_imag": 0.015220647789,
+              "base_abs_detector_mean": 0.031185715449,
+              "max_real_mean_shift": 0.003772865257,
+              "max_imag_mean_shift": 0.003766766154,
+              "max_abs_detector_mean_shift": 0.003118571545,
+              "max_complex_mean_shift": 0.00462900131,
+              "calibration_corner_count": 16
+            }
+          },
+          "max_network_projection_shift": 0.00462900131,
+          "bounded_ready": true,
+          "scope": "Bounds detector calibration propagation for the v2.113 H1/L1 complex alpha projections. It does not close waveform, prior, or EFT-truncation systematics."
+        },
+        "prior_sensitivity": {
+          "status": "bounded",
+          "basis": "factorized_nuisance_prior_reweight_sweep_from_likelihood_cube",
+          "source_cube_version": "v2.122",
+          "prior_catalog_size": 13,
+          "alpha_axis_step": 0.2,
+          "baseline_best_grid_point": {
+            "alpha_bar_1": 0.0,
+            "alpha_bar_2": 0.0,
+            "log_reweighted_likelihood": -1.0
+          },
+          "prior_summary_rows": [
+            {
+              "prior_name": "uniform_grid_control",
+              "prior_scope": "physical_catalog",
+              "detector_weight_summaries": [
+                {
+                  "detector": "H1",
+                  "effective_sample_count": 81.0,
+                  "max_weight": 0.012345679012,
+                  "min_weight": 0.012345679012,
+                  "weight_sum": 1.0
+                },
+                {
+                  "detector": "L1",
+                  "effective_sample_count": 81.0,
+                  "max_weight": 0.012345679012,
+                  "min_weight": 0.012345679012,
+                  "weight_sum": 1.0
+                }
+              ],
+              "best_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "gr_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "delta_log_likelihood_best_vs_gr": 0.0,
+              "shift_from_uniform_best": {
+                "delta_alpha_bar_1": 0.0,
+                "delta_alpha_bar_2": 0.0,
+                "max_abs_axis_shift": 0.0,
+                "euclidean_shift": 0.0,
+                "max_abs_axis_grid_steps": 0.0,
+                "euclidean_grid_steps": 0.0
+              },
+              "within_one_cell_per_axis": true,
+              "insignificant_preference_vs_gr": true
+            },
+            {
+              "prior_name": "central_broad_event_prior",
+              "prior_scope": "physical_catalog",
+              "detector_weight_summaries": [
+                {
+                  "detector": "H1",
+                  "effective_sample_count": 53.065386154123,
+                  "max_weight": 0.048933325279,
+                  "min_weight": 0.004533212662,
+                  "weight_sum": 1.0
+                },
+                {
+                  "detector": "L1",
+                  "effective_sample_count": 53.065386154123,
+                  "max_weight": 0.048933325279,
+                  "min_weight": 0.004533212662,
+                  "weight_sum": 1.0
+                }
+              ],
+              "best_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "gr_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "delta_log_likelihood_best_vs_gr": 0.0,
+              "shift_from_uniform_best": {
+                "delta_alpha_bar_1": 0.0,
+                "delta_alpha_bar_2": 0.0,
+                "max_abs_axis_shift": 0.0,
+                "euclidean_shift": 0.0,
+                "max_abs_axis_grid_steps": 0.0,
+                "euclidean_grid_steps": 0.0
+              },
+              "within_one_cell_per_axis": true,
+              "insignificant_preference_vs_gr": true
+            },
+            {
+              "prior_name": "central_tight_event_prior",
+              "prior_scope": "physical_catalog",
+              "detector_weight_summaries": [
+                {
+                  "detector": "H1",
+                  "effective_sample_count": 6.749810465811,
+                  "max_weight": 0.327282181414,
+                  "min_weight": 6.407138e-05,
+                  "weight_sum": 1.0
+                },
+                {
+                  "detector": "L1",
+                  "effective_sample_count": 6.749810465811,
+                  "max_weight": 0.327282181414,
+                  "min_weight": 6.407138e-05,
+                  "weight_sum": 1.0
+                }
+              ],
+              "best_grid_point": {
+                "alpha_bar_1": 0.2,
+                "alpha_bar_2": 0.2,
+                "log_reweighted_likelihood": -0.999457503811
+              },
+              "gr_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "delta_log_likelihood_best_vs_gr": 0.000542496189,
+              "shift_from_uniform_best": {
+                "delta_alpha_bar_1": 0.2,
+                "delta_alpha_bar_2": 0.2,
+                "max_abs_axis_shift": 0.2,
+                "euclidean_shift": 0.282842712475,
+                "max_abs_axis_grid_steps": 1.0,
+                "euclidean_grid_steps": 1.414213562373
+              },
+              "within_one_cell_per_axis": true,
+              "insignificant_preference_vs_gr": true
+            },
+            {
+              "prior_name": "low_mass_sideband_prior",
+              "prior_scope": "physical_catalog",
+              "detector_weight_summaries": [
+                {
+                  "detector": "H1",
+                  "effective_sample_count": 38.08011167847,
+                  "max_weight": 0.060313940859,
+                  "min_weight": 2.21409e-05,
+                  "weight_sum": 1.0
+                },
+                {
+                  "detector": "L1",
+                  "effective_sample_count": 38.08011167847,
+                  "max_weight": 0.060313940859,
+                  "min_weight": 2.21409e-05,
+                  "weight_sum": 1.0
+                }
+              ],
+              "best_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "gr_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "delta_log_likelihood_best_vs_gr": 0.0,
+              "shift_from_uniform_best": {
+                "delta_alpha_bar_1": 0.0,
+                "delta_alpha_bar_2": 0.0,
+                "max_abs_axis_shift": 0.0,
+                "euclidean_shift": 0.0,
+                "max_abs_axis_grid_steps": 0.0,
+                "euclidean_grid_steps": 0.0
+              },
+              "within_one_cell_per_axis": true,
+              "insignificant_preference_vs_gr": true
+            },
+            {
+              "prior_name": "high_mass_sideband_prior",
+              "prior_scope": "physical_catalog",
+              "detector_weight_summaries": [
+                {
+                  "detector": "H1",
+                  "effective_sample_count": 38.08011167847,
+                  "max_weight": 0.060313940859,
+                  "min_weight": 2.21409e-05,
+                  "weight_sum": 1.0
+                },
+                {
+                  "detector": "L1",
+                  "effective_sample_count": 38.08011167847,
+                  "max_weight": 0.060313940859,
+                  "min_weight": 2.21409e-05,
+                  "weight_sum": 1.0
+                }
+              ],
+              "best_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "gr_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "delta_log_likelihood_best_vs_gr": 0.0,
+              "shift_from_uniform_best": {
+                "delta_alpha_bar_1": 0.0,
+                "delta_alpha_bar_2": 0.0,
+                "max_abs_axis_shift": 0.0,
+                "euclidean_shift": 0.0,
+                "max_abs_axis_grid_steps": 0.0,
+                "euclidean_grid_steps": 0.0
+              },
+              "within_one_cell_per_axis": true,
+              "insignificant_preference_vs_gr": true
+            },
+            {
+              "prior_name": "low_eta_sideband_prior",
+              "prior_scope": "physical_catalog",
+              "detector_weight_summaries": [
+                {
+                  "detector": "H1",
+                  "effective_sample_count": 33.293768565074,
+                  "max_weight": 0.079214874342,
+                  "min_weight": 0.000156683042,
+                  "weight_sum": 1.0
+                },
+                {
+                  "detector": "L1",
+                  "effective_sample_count": 33.293768565074,
+                  "max_weight": 0.079214874342,
+                  "min_weight": 0.000156683042,
+                  "weight_sum": 1.0
+                }
+              ],
+              "best_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "gr_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "delta_log_likelihood_best_vs_gr": 0.0,
+              "shift_from_uniform_best": {
+                "delta_alpha_bar_1": 0.0,
+                "delta_alpha_bar_2": 0.0,
+                "max_abs_axis_shift": 0.0,
+                "euclidean_shift": 0.0,
+                "max_abs_axis_grid_steps": 0.0,
+                "euclidean_grid_steps": 0.0
+              },
+              "within_one_cell_per_axis": true,
+              "insignificant_preference_vs_gr": true
+            },
+            {
+              "prior_name": "high_eta_sideband_prior",
+              "prior_scope": "physical_catalog",
+              "detector_weight_summaries": [
+                {
+                  "detector": "H1",
+                  "effective_sample_count": 33.293768565074,
+                  "max_weight": 0.079214874342,
+                  "min_weight": 0.000156683042,
+                  "weight_sum": 1.0
+                },
+                {
+                  "detector": "L1",
+                  "effective_sample_count": 33.293768565074,
+                  "max_weight": 0.079214874342,
+                  "min_weight": 0.000156683042,
+                  "weight_sum": 1.0
+                }
+              ],
+              "best_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "gr_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "delta_log_likelihood_best_vs_gr": 0.0,
+              "shift_from_uniform_best": {
+                "delta_alpha_bar_1": 0.0,
+                "delta_alpha_bar_2": 0.0,
+                "max_abs_axis_shift": 0.0,
+                "euclidean_shift": 0.0,
+                "max_abs_axis_grid_steps": 0.0,
+                "euclidean_grid_steps": 0.0
+              },
+              "within_one_cell_per_axis": true,
+              "insignificant_preference_vs_gr": true
+            },
+            {
+              "prior_name": "early_tc_sideband_prior",
+              "prior_scope": "physical_catalog",
+              "detector_weight_summaries": [
+                {
+                  "detector": "H1",
+                  "effective_sample_count": 28.411657163019,
+                  "max_weight": 0.076274349567,
+                  "min_weight": 4.00631e-07,
+                  "weight_sum": 1.0
+                },
+                {
+                  "detector": "L1",
+                  "effective_sample_count": 28.411657163019,
+                  "max_weight": 0.076274349567,
+                  "min_weight": 4.00631e-07,
+                  "weight_sum": 1.0
+                }
+              ],
+              "best_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "gr_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "delta_log_likelihood_best_vs_gr": 0.0,
+              "shift_from_uniform_best": {
+                "delta_alpha_bar_1": 0.0,
+                "delta_alpha_bar_2": 0.0,
+                "max_abs_axis_shift": 0.0,
+                "euclidean_shift": 0.0,
+                "max_abs_axis_grid_steps": 0.0,
+                "euclidean_grid_steps": 0.0
+              },
+              "within_one_cell_per_axis": true,
+              "insignificant_preference_vs_gr": true
+            },
+            {
+              "prior_name": "late_tc_sideband_prior",
+              "prior_scope": "physical_catalog",
+              "detector_weight_summaries": [
+                {
+                  "detector": "H1",
+                  "effective_sample_count": 28.411657163019,
+                  "max_weight": 0.076274349567,
+                  "min_weight": 4.00631e-07,
+                  "weight_sum": 1.0
+                },
+                {
+                  "detector": "L1",
+                  "effective_sample_count": 28.411657163019,
+                  "max_weight": 0.076274349567,
+                  "min_weight": 4.00631e-07,
+                  "weight_sum": 1.0
+                }
+              ],
+              "best_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "gr_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "delta_log_likelihood_best_vs_gr": 0.0,
+              "shift_from_uniform_best": {
+                "delta_alpha_bar_1": 0.0,
+                "delta_alpha_bar_2": 0.0,
+                "max_abs_axis_shift": 0.0,
+                "euclidean_shift": 0.0,
+                "max_abs_axis_grid_steps": 0.0,
+                "euclidean_grid_steps": 0.0
+              },
+              "within_one_cell_per_axis": true,
+              "insignificant_preference_vs_gr": true
+            },
+            {
+              "prior_name": "negative_phase_sideband_prior",
+              "prior_scope": "physical_catalog",
+              "detector_weight_summaries": [
+                {
+                  "detector": "H1",
+                  "effective_sample_count": 36.880080916165,
+                  "max_weight": 0.07069749642,
+                  "min_weight": 0.000431983616,
+                  "weight_sum": 1.0
+                },
+                {
+                  "detector": "L1",
+                  "effective_sample_count": 36.880080916165,
+                  "max_weight": 0.07069749642,
+                  "min_weight": 0.000431983616,
+                  "weight_sum": 1.0
+                }
+              ],
+              "best_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "gr_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "delta_log_likelihood_best_vs_gr": 0.0,
+              "shift_from_uniform_best": {
+                "delta_alpha_bar_1": 0.0,
+                "delta_alpha_bar_2": 0.0,
+                "max_abs_axis_shift": 0.0,
+                "euclidean_shift": 0.0,
+                "max_abs_axis_grid_steps": 0.0,
+                "euclidean_grid_steps": 0.0
+              },
+              "within_one_cell_per_axis": true,
+              "insignificant_preference_vs_gr": true
+            },
+            {
+              "prior_name": "positive_phase_sideband_prior",
+              "prior_scope": "physical_catalog",
+              "detector_weight_summaries": [
+                {
+                  "detector": "H1",
+                  "effective_sample_count": 36.880080916165,
+                  "max_weight": 0.07069749642,
+                  "min_weight": 0.000431983616,
+                  "weight_sum": 1.0
+                },
+                {
+                  "detector": "L1",
+                  "effective_sample_count": 36.880080916165,
+                  "max_weight": 0.07069749642,
+                  "min_weight": 0.000431983616,
+                  "weight_sum": 1.0
+                }
+              ],
+              "best_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "gr_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "delta_log_likelihood_best_vs_gr": 0.0,
+              "shift_from_uniform_best": {
+                "delta_alpha_bar_1": 0.0,
+                "delta_alpha_bar_2": 0.0,
+                "max_abs_axis_shift": 0.0,
+                "euclidean_shift": 0.0,
+                "max_abs_axis_grid_steps": 0.0,
+                "euclidean_grid_steps": 0.0
+              },
+              "within_one_cell_per_axis": true,
+              "insignificant_preference_vs_gr": true
+            },
+            {
+              "prior_name": "lower_corner_combined_stress_prior",
+              "prior_scope": "physical_catalog_boundary_stress",
+              "detector_weight_summaries": [
+                {
+                  "detector": "H1",
+                  "effective_sample_count": 1.659402611291,
+                  "max_weight": 0.762218993081,
+                  "min_weight": 0.0,
+                  "weight_sum": 1.0
+                },
+                {
+                  "detector": "L1",
+                  "effective_sample_count": 1.659402611291,
+                  "max_weight": 0.762218993081,
+                  "min_weight": 0.0,
+                  "weight_sum": 1.0
+                }
+              ],
+              "best_grid_point": {
+                "alpha_bar_1": 0.2,
+                "alpha_bar_2": 0.2,
+                "log_reweighted_likelihood": -0.999875894309
+              },
+              "gr_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "delta_log_likelihood_best_vs_gr": 0.000124105691,
+              "shift_from_uniform_best": {
+                "delta_alpha_bar_1": 0.2,
+                "delta_alpha_bar_2": 0.2,
+                "max_abs_axis_shift": 0.2,
+                "euclidean_shift": 0.282842712475,
+                "max_abs_axis_grid_steps": 1.0,
+                "euclidean_grid_steps": 1.414213562373
+              },
+              "within_one_cell_per_axis": true,
+              "insignificant_preference_vs_gr": true
+            },
+            {
+              "prior_name": "upper_corner_combined_stress_prior",
+              "prior_scope": "physical_catalog_boundary_stress",
+              "detector_weight_summaries": [
+                {
+                  "detector": "H1",
+                  "effective_sample_count": 1.659402611291,
+                  "max_weight": 0.762218993081,
+                  "min_weight": 0.0,
+                  "weight_sum": 1.0
+                },
+                {
+                  "detector": "L1",
+                  "effective_sample_count": 1.659402611291,
+                  "max_weight": 0.762218993081,
+                  "min_weight": 0.0,
+                  "weight_sum": 1.0
+                }
+              ],
+              "best_grid_point": {
+                "alpha_bar_1": -0.2,
+                "alpha_bar_2": -0.2,
+                "log_reweighted_likelihood": -0.999691295755
+              },
+              "gr_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "log_reweighted_likelihood": -1.0
+              },
+              "delta_log_likelihood_best_vs_gr": 0.000308704245,
+              "shift_from_uniform_best": {
+                "delta_alpha_bar_1": -0.2,
+                "delta_alpha_bar_2": -0.2,
+                "max_abs_axis_shift": 0.2,
+                "euclidean_shift": 0.282842712475,
+                "max_abs_axis_grid_steps": 1.0,
+                "euclidean_grid_steps": 1.414213562373
+              },
+              "within_one_cell_per_axis": true,
+              "insignificant_preference_vs_gr": true
+            }
+          ],
+          "stability_thresholds": {
+            "max_abs_axis_grid_steps": 1.0,
+            "max_delta_log_likelihood_best_vs_gr": 0.01
+          },
+          "max_abs_axis_grid_steps": 1.0,
+          "max_euclidean_grid_steps": 1.414213562373,
+          "max_delta_log_likelihood_best_vs_gr": 0.000542496189,
+          "catalog_prior_sensitivity_bounded": true,
+          "closure_scope": "Bounded for the declared factorized nuisance-prior catalog on the v2.122 detector-separable likelihood cube. This does not close waveform, EFT, or joint-event posterior systematics."
+        },
+        "eft_truncation": {
+          "status": "bounded",
+          "basis": "source_backed_next_pn_power_counting_remainder_bound",
+          "source_reference": "https://arxiv.org/abs/2407.08929",
+          "source_equation_refs": {
+            "phase": [
+              "Eq. phase_EFT",
+              "Eq. aPN_EFT",
+              "Eq. aPN_EFT_2"
+            ],
+            "amplitude": [
+              "Eq. amp_EFT"
+            ],
+            "normalization": "dimensionless_alpha_bar_1_alpha_bar_2"
+          },
+          "v_f_max": 0.319804329926,
+          "next_order_power_suppression": 0.10227480944,
+          "coefficient_ratio_cap": 10.0,
+          "relative_remainder_bound": 1.022748094396,
+          "max_source_kernel_abs_value": 0.929838967159,
+          "kernel_remainder_bound": 0.950991031757,
+          "alpha_domain": {
+            "axis_step": 0.2,
+            "max_abs_best_alpha": 0.2,
+            "domain_half_width": 0.4,
+            "max_delta_log_likelihood_best_vs_gr": 0.000542496189
+          },
+          "alpha_equivalent_remainder_bound": 0.409099237758,
+          "bounded_ready": true,
+          "scope": "Finite EFT truncation component bound under the declared Wilson coefficient-ratio cap. The cap is deliberately conservative and keeps the route nonclaiming until likelihood-scale and joint posterior checks are built."
+        },
+        "sampler_convergence": {
+          "status": "bounded",
+          "basis": "deterministic_grid_enumeration_no_stochastic_sampler",
+          "alpha_grid_points": 441,
+          "expected_alpha_grid_points": 441,
+          "nuisance_points_per_detector": [
+            81,
+            81
+          ],
+          "detectors": [
+            "H1",
+            "L1"
+          ],
+          "best_marginal_grid_point": {
+            "alpha_bar_1": 0.0,
+            "alpha_bar_2": 0.0,
+            "log_marginal_likelihood": -1.0,
+            "profile_log_likelihood": -1.0
+          },
+          "best_profile_grid_point": {
+            "alpha_bar_1": 0.6,
+            "alpha_bar_2": 0.6,
+            "log_marginal_likelihood": -1.004194650312,
+            "profile_log_likelihood": -0.993959859965
+          },
+          "deterministic_ready": true
+        },
+        "public_data_reproducibility": {
+          "status": "bounded",
+          "basis": "v2.107_hash_metadata_and_vulcan_reproduction",
+          "required_detectors": [
+            "H1",
+            "L1"
+          ],
+          "public_strain_artifact": "experiments/results/v2.107/gw_public_strain_loader.json",
+          "cache_rehydration_supported": true
+        }
+      },
+      "component_status": "bounded",
+      "budget_hold": {
+        "status": "open",
+        "reason": "All required component rows are bounded, but the top-level adapter budget remains open until the detector-separable likelihood cube is replaced or justified as a joint-event posterior, likelihood scale is calibrated to noise evidence, and the G8 joint component is supplied.",
+        "held_blockers": [
+          "detector_separable_cube_not_joint_event_posterior",
+          "likelihood_scale_not_calibrated_to_noise_evidence",
+          "g8_joint_component_missing"
+        ]
+      }
+    },
+    "shared_eft_domain": "bounded_for_source_native_cubic_gw",
+    "validation_reference": "v2.124_alpha_waveform_eft_bound",
+    "synthetic_fixture": false,
+    "projection_caveat": "This is an identity projection from the source-native alpha_bar basis to an engine gw_cubic_alpha axis. It is not a projection to g8, g_C, or quadratic curvature axes."
+  },
+  "evaluation": {
+    "waveform_systematics_bounded": true,
+    "eft_truncation_bounded": true,
+    "component_systematics_bounded": true,
+    "top_level_budget_status": "open",
+    "bounded_components": [
+      "waveform_systematics",
+      "detector_calibration",
+      "prior_sensitivity",
+      "eft_truncation",
+      "sampler_convergence",
+      "public_data_reproducibility"
+    ],
+    "open_components": [],
+    "adapter_evaluation": {
+      "label": "v2_124_waveform_eft_component_bounded_alpha_packet",
+      "source_url": "https://arxiv.org/abs/2407.08929",
+      "event": "GW170608",
+      "source_model": "cubic_parity_preserving_higher_curvature_eft",
+      "synthetic_fixture": false,
+      "missing_fields": [],
+      "constraints_summary": {
+        "parameters_present": [
+          "alpha_bar_1",
+          "alpha_bar_2"
+        ],
+        "parameters_missing": [],
+        "all_source_parameters_numeric": true
+      },
+      "likelihood_summary": {
+        "status": "reproduced_source_native_likelihood",
+        "contains_source_parameters": true,
+        "source_native_usable": true,
+        "kind": "coarse_nuisance_marginal_lalsuite_imrphenomd_grid"
+      },
+      "covariance_summary": {
+        "present": true,
+        "parameters_covered": [
+          "alpha_bar_1",
+          "alpha_bar_2"
+        ],
+        "parameters_missing": [],
+        "numeric": true
+      },
+      "systematics_summary": {
+        "status": "open",
+        "missing_components": [],
+        "components_closed": true,
+        "budget_closed": false
+      },
+      "engine_projection_summary": {
+        "status": "explicit_engine_projection",
+        "source_native_only": false,
+        "engine_projection_ready": true,
+        "target_axis": "gw_cubic_alpha"
+      },
+      "native_adapter_ready": false,
+      "claim_ready": false,
+      "adapter_blockers": [
+        "systematics_not_closed"
+      ],
+      "claim_blockers": [
+        "g8_joint_component_missing",
+        "systematics_not_closed"
+      ],
+      "status": "gw_cubic_source_native_packet_rejected_or_nonpromoting"
+    },
+    "claim_ready": false,
+    "remaining_nonclaiming_reasons": [
+      "component_systematics_bounded_but_budget_meta_hold_open",
+      "detector_separable_cube_not_joint_event_posterior",
+      "g8_joint_component_missing",
+      "likelihood_scale_not_calibrated_to_noise_evidence"
+    ]
+  },
+  "claimable_discriminator_now": false,
+  "route_status": "waveform_eft_components_bounded_budget_hold_nonclaiming",
+  "selected_next_build_action": "calibrate_likelihood_scale_and_joint_event_posterior",
+  "best_next_artifact": "Replace the detector-separable likelihood cube with a joint-event posterior or an explicit independence proof, and calibrate the coarse alpha likelihood scale against a noise evidence/null model.",
+  "interpretation": "Waveform and EFT truncation rows now carry finite conservative bounds. This closes the remaining component-level systematics rows without promoting a framework claim: the top-level budget is held open until joint-event posterior semantics, likelihood-scale calibration, and the G8 component are solved."
+}
