@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (243 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (244 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -292,3 +292,4 @@ Auto-generated front door to the full research program (243 notes). Regenerate w
 | v2.130 | [v2.130 - Bresciani v2 projection audit: R4 gravity formalism, not engi](2026-06-20-v2.130-bresciani-g8-projection-audit.md) | v2.129 selected the next implementation step: |
 | v2.131 | [v2.131 - Gravity R4 axis candidate: source preserved, non-claiming](2026-06-20-v2.131-gravity-r4-axis-extension-candidate.md) | v2.130 selected the next implementation step: |
 | v2.132 | [v2.132 - Gravity R4 framework projection requirements: no adapter read](2026-06-20-v2.132-gravity-r4-framework-projection-requirements.md) | v2.131 selected the next implementation step: |
+| v2.133 | [v2.133 - Gravity R4 projection guard schema: executable, no adapter re](2026-06-20-v2.133-gravity-r4-projection-guard-schema.md) | v2.132 selected the next implementation step: |

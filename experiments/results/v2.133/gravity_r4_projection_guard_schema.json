@@ -1,0 +1,1667 @@
+{
+  "version": "v2.133",
+  "basis": [
+    "v2.132_gravity_r4_framework_projection_requirements",
+    "Bresciani_Levati_Paradisi_arXiv_2504_12855_v2",
+    "registered_FRAMEWORKS_from_itb.predict"
+  ],
+  "source_equations": {
+    "source_unitarity_bound": {
+      "generic": "s^(2S)/(2*pi) * (abs(c_plus) + ((2S+3)/(2S+1))*abs(c_minus)) <= 1",
+      "spin2_ratio": 1.4,
+      "spin2": "s^4/(2*pi) * (abs(c_plus) + 1.4*abs(c_minus)) <= 1"
+    },
+    "source_positivity_bounds": [
+      "c_1^(S) >= 0",
+      "c_2^(S) >= 0",
+      "(c_3^(S))^2 <= 4*c_1^(S)*c_2^(S)"
+    ],
+    "engine_candidate_bound_templates": [
+      {
+        "name": "r4_source_unitarity_template",
+        "formula": "abs(g_R4_plus) + 1.4*g_R4_minus_abs <= 2*pi / (s^4 * N_R4)",
+        "status": "template_only_until_normalization_N_R4_is_defined"
+      },
+      {
+        "name": "r4_source_positivity_template",
+        "formula": "g_R4_c1 >= 0; g_R4_c2 >= 0; g_R4_c3^2 <= 4*g_R4_c1*g_R4_c2",
+        "status": "source_backed_after_axis_normalization_is_defined"
+      }
+    ]
+  },
+  "r4_framework_projection_schema": [
+    {
+      "field": "coefficients.g_R4_c1",
+      "kind": "required_numeric_axis",
+      "reason": "Framework-owned coefficient in the Bresciani R4 basis."
+    },
+    {
+      "field": "coefficients.g_R4_c2",
+      "kind": "required_numeric_axis",
+      "reason": "Framework-owned coefficient in the Bresciani R4 basis."
+    },
+    {
+      "field": "coefficients.g_R4_c3",
+      "kind": "required_numeric_axis",
+      "reason": "Framework-owned coefficient in the Bresciani R4 basis."
+    },
+    {
+      "field": "derived.g_R4_plus",
+      "kind": "derived_coordinate",
+      "reason": "Needed for source unitarity and positivity templates."
+    },
+    {
+      "field": "derived.g_R4_minus_abs",
+      "kind": "derived_coordinate",
+      "reason": "Needed for source unitarity and positivity templates."
+    },
+    {
+      "field": "metadata.r4_source_url",
+      "kind": "required_source_metadata",
+      "reason": "Required before the axis can be normalized and audited."
+    },
+    {
+      "field": "metadata.r4_source_version",
+      "kind": "required_source_metadata",
+      "reason": "Required before the axis can be normalized and audited."
+    },
+    {
+      "field": "metadata.r4_basis",
+      "kind": "required_source_metadata",
+      "reason": "Required before the axis can be normalized and audited."
+    },
+    {
+      "field": "metadata.r4_operator_projection_matrix",
+      "kind": "required_source_metadata",
+      "reason": "Required before the axis can be normalized and audited."
+    },
+    {
+      "field": "metadata.r4_normalization_scale",
+      "kind": "required_source_metadata",
+      "reason": "Required before the axis can be normalized and audited."
+    },
+    {
+      "field": "metadata.r4_valid_energy_domain",
+      "kind": "required_source_metadata",
+      "reason": "Required before the axis can be normalized and audited."
+    },
+    {
+      "field": "metadata.r4_uncertainty_or_covariance",
+      "kind": "required_source_metadata",
+      "reason": "Required before the axis can be normalized and audited."
+    }
+  ],
+  "required_packet_fields": [
+    "framework",
+    "axis_family",
+    "source_url",
+    "source_type",
+    "source_version",
+    "adapter_kind",
+    "basis",
+    "coefficients",
+    "derived",
+    "normalization",
+    "operator_projection_matrix",
+    "valid_energy_domain",
+    "uncertainty_or_covariance",
+    "ownership_metadata",
+    "unitarity_bound",
+    "positivity_status",
+    "discriminator_math"
+  ],
+  "required_metadata_keys": [
+    "r4_source_url",
+    "r4_source_version",
+    "r4_basis",
+    "r4_operator_projection_matrix",
+    "r4_normalization_scale",
+    "r4_valid_energy_domain",
+    "r4_uncertainty_or_covariance"
+  ],
+  "registered_framework_count": 13,
+  "ready_framework_projection_packets": [],
+  "claim_ready_framework_packets": [],
+  "projection_blocker_counts": {
+    "framework_outside_current_r4_gate": 3,
+    "missing_required_fields": 13,
+    "r4_coefficients_missing_or_nonnumeric": 13,
+    "r4_derived_coordinates_missing_or_nonnumeric": 13,
+    "r4_framework_source_ownership_missing": 13,
+    "r4_normalization_not_source_backed": 13,
+    "r4_operator_projection_matrix_not_source_backed": 13,
+    "r4_positivity_status_not_checked": 13,
+    "r4_uncertainty_or_covariance_incomplete": 13,
+    "r4_unitarity_bound_not_source_backed": 13,
+    "r4_valid_energy_domain_not_bounded": 13,
+    "source_type_not_allowed": 13
+  },
+  "current_framework_guard_results": {
+    "pure_gr": {
+      "framework": "pure_gr",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "missing_required_fields": [
+        "coefficients",
+        "derived",
+        "normalization",
+        "operator_projection_matrix",
+        "ownership_metadata",
+        "source_type",
+        "source_url",
+        "source_version",
+        "uncertainty_or_covariance",
+        "unitarity_bound",
+        "valid_energy_domain"
+      ],
+      "source_url_valid": false,
+      "source_type_valid": false,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": null,
+          "g_R4_c2": null,
+          "g_R4_c3": null
+        },
+        "missing_or_nonnumeric": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "positivity_passed": false,
+        "positivity_residual": null
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "expected": null,
+        "provided": {
+          "g_R4_plus": null,
+          "g_R4_minus_abs": null
+        },
+        "consistent": false
+      },
+      "normalization_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "operator_projection_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "energy_domain_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "uncertainty_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ownership_summary": {
+        "framework_source_owned": false
+      },
+      "unitarity_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "uses_bresciani_spin2_bound": false
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "measurement_likelihood_missing_or_incomplete",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ]
+    },
+    "string_tree_eft": {
+      "framework": "string_tree_eft",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "missing_required_fields": [
+        "coefficients",
+        "derived",
+        "normalization",
+        "operator_projection_matrix",
+        "ownership_metadata",
+        "source_type",
+        "source_url",
+        "source_version",
+        "uncertainty_or_covariance",
+        "unitarity_bound",
+        "valid_energy_domain"
+      ],
+      "source_url_valid": false,
+      "source_type_valid": false,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": null,
+          "g_R4_c2": null,
+          "g_R4_c3": null
+        },
+        "missing_or_nonnumeric": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "positivity_passed": false,
+        "positivity_residual": null
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "expected": null,
+        "provided": {
+          "g_R4_plus": null,
+          "g_R4_minus_abs": null
+        },
+        "consistent": false
+      },
+      "normalization_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "operator_projection_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "energy_domain_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "uncertainty_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ownership_summary": {
+        "framework_source_owned": false
+      },
+      "unitarity_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "uses_bresciani_spin2_bound": false
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "measurement_likelihood_missing_or_incomplete",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ]
+    },
+    "asymptotic_safety": {
+      "framework": "asymptotic_safety",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "missing_required_fields": [
+        "coefficients",
+        "derived",
+        "normalization",
+        "operator_projection_matrix",
+        "ownership_metadata",
+        "source_type",
+        "source_url",
+        "source_version",
+        "uncertainty_or_covariance",
+        "unitarity_bound",
+        "valid_energy_domain"
+      ],
+      "source_url_valid": false,
+      "source_type_valid": false,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": null,
+          "g_R4_c2": null,
+          "g_R4_c3": null
+        },
+        "missing_or_nonnumeric": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "positivity_passed": false,
+        "positivity_residual": null
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "expected": null,
+        "provided": {
+          "g_R4_plus": null,
+          "g_R4_minus_abs": null
+        },
+        "consistent": false
+      },
+      "normalization_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "operator_projection_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "energy_domain_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "uncertainty_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ownership_summary": {
+        "framework_source_owned": false
+      },
+      "unitarity_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "uses_bresciani_spin2_bound": false
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "measurement_likelihood_missing_or_incomplete",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ]
+    },
+    "lqg_induced": {
+      "framework": "lqg_induced",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "missing_required_fields": [
+        "coefficients",
+        "derived",
+        "normalization",
+        "operator_projection_matrix",
+        "ownership_metadata",
+        "source_type",
+        "source_url",
+        "source_version",
+        "uncertainty_or_covariance",
+        "unitarity_bound",
+        "valid_energy_domain"
+      ],
+      "source_url_valid": false,
+      "source_type_valid": false,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": null,
+          "g_R4_c2": null,
+          "g_R4_c3": null
+        },
+        "missing_or_nonnumeric": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "positivity_passed": false,
+        "positivity_residual": null
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "expected": null,
+        "provided": {
+          "g_R4_plus": null,
+          "g_R4_minus_abs": null
+        },
+        "consistent": false
+      },
+      "normalization_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "operator_projection_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "energy_domain_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "uncertainty_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ownership_summary": {
+        "framework_source_owned": false
+      },
+      "unitarity_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "uses_bresciani_spin2_bound": false
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "measurement_likelihood_missing_or_incomplete",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ]
+    },
+    "cdt": {
+      "framework": "cdt",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "missing_required_fields": [
+        "coefficients",
+        "derived",
+        "normalization",
+        "operator_projection_matrix",
+        "ownership_metadata",
+        "source_type",
+        "source_url",
+        "source_version",
+        "uncertainty_or_covariance",
+        "unitarity_bound",
+        "valid_energy_domain"
+      ],
+      "source_url_valid": false,
+      "source_type_valid": false,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": null,
+          "g_R4_c2": null,
+          "g_R4_c3": null
+        },
+        "missing_or_nonnumeric": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "positivity_passed": false,
+        "positivity_residual": null
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "expected": null,
+        "provided": {
+          "g_R4_plus": null,
+          "g_R4_minus_abs": null
+        },
+        "consistent": false
+      },
+      "normalization_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "operator_projection_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "energy_domain_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "uncertainty_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ownership_summary": {
+        "framework_source_owned": false
+      },
+      "unitarity_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "uses_bresciani_spin2_bound": false
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "measurement_likelihood_missing_or_incomplete",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ]
+    },
+    "group_field_theory": {
+      "framework": "group_field_theory",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "missing_required_fields": [
+        "coefficients",
+        "derived",
+        "normalization",
+        "operator_projection_matrix",
+        "ownership_metadata",
+        "source_type",
+        "source_url",
+        "source_version",
+        "uncertainty_or_covariance",
+        "unitarity_bound",
+        "valid_energy_domain"
+      ],
+      "source_url_valid": false,
+      "source_type_valid": false,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": null,
+          "g_R4_c2": null,
+          "g_R4_c3": null
+        },
+        "missing_or_nonnumeric": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "positivity_passed": false,
+        "positivity_residual": null
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "expected": null,
+        "provided": {
+          "g_R4_plus": null,
+          "g_R4_minus_abs": null
+        },
+        "consistent": false
+      },
+      "normalization_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "operator_projection_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "energy_domain_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "uncertainty_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ownership_summary": {
+        "framework_source_owned": false
+      },
+      "unitarity_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "uses_bresciani_spin2_bound": false
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "measurement_likelihood_missing_or_incomplete",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ]
+    },
+    "horava_lifshitz": {
+      "framework": "horava_lifshitz",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": false,
+        "violations": [
+          "Lorentz invariance (assumed by amplitude-positivity bounds)"
+        ],
+        "note": "OUT OF SCOPE: the engine's feasibility verdict is NOT meaningful for this framework \u2014 it breaks Lorentz invariance (assumed by amplitude-positivity bounds), which are assumptions used to derive the constraints. Treat any verdict as an artifact of applying inapplicable bounds."
+      },
+      "missing_required_fields": [
+        "coefficients",
+        "derived",
+        "normalization",
+        "operator_projection_matrix",
+        "ownership_metadata",
+        "source_type",
+        "source_url",
+        "source_version",
+        "uncertainty_or_covariance",
+        "unitarity_bound",
+        "valid_energy_domain"
+      ],
+      "source_url_valid": false,
+      "source_type_valid": false,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": null,
+          "g_R4_c2": null,
+          "g_R4_c3": null
+        },
+        "missing_or_nonnumeric": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "positivity_passed": false,
+        "positivity_residual": null
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "expected": null,
+        "provided": {
+          "g_R4_plus": null,
+          "g_R4_minus_abs": null
+        },
+        "consistent": false
+      },
+      "normalization_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "operator_projection_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "energy_domain_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "uncertainty_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ownership_summary": {
+        "framework_source_owned": false
+      },
+      "unitarity_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "uses_bresciani_spin2_bound": false
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [
+        "framework_outside_current_r4_gate",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "framework_outside_current_r4_gate",
+        "measurement_likelihood_missing_or_incomplete",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ]
+    },
+    "causal_set": {
+      "framework": "causal_set",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": false,
+        "violations": [
+          "locality (assumed by the swampland/positivity program)"
+        ],
+        "note": "OUT OF SCOPE: the engine's feasibility verdict is NOT meaningful for this framework \u2014 it breaks locality (assumed by the swampland/positivity program), which are assumptions used to derive the constraints. Treat any verdict as an artifact of applying inapplicable bounds."
+      },
+      "missing_required_fields": [
+        "coefficients",
+        "derived",
+        "normalization",
+        "operator_projection_matrix",
+        "ownership_metadata",
+        "source_type",
+        "source_url",
+        "source_version",
+        "uncertainty_or_covariance",
+        "unitarity_bound",
+        "valid_energy_domain"
+      ],
+      "source_url_valid": false,
+      "source_type_valid": false,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": null,
+          "g_R4_c2": null,
+          "g_R4_c3": null
+        },
+        "missing_or_nonnumeric": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "positivity_passed": false,
+        "positivity_residual": null
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "expected": null,
+        "provided": {
+          "g_R4_plus": null,
+          "g_R4_minus_abs": null
+        },
+        "consistent": false
+      },
+      "normalization_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "operator_projection_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "energy_domain_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "uncertainty_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ownership_summary": {
+        "framework_source_owned": false
+      },
+      "unitarity_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "uses_bresciani_spin2_bound": false
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [
+        "framework_outside_current_r4_gate",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "framework_outside_current_r4_gate",
+        "measurement_likelihood_missing_or_incomplete",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ]
+    },
+    "emergent_gravity": {
+      "framework": "emergent_gravity",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": false,
+        "violations": [
+          "locality (assumed by the swampland/positivity program)",
+          "a fundamental UV graviton field (the bounds expand the graviton amplitude; emergent gravity has no such UV expansion)"
+        ],
+        "note": "OUT OF SCOPE: the engine's feasibility verdict is NOT meaningful for this framework \u2014 it breaks locality (assumed by the swampland/positivity program) and a fundamental UV graviton field (the bounds expand the graviton amplitude; emergent gravity has no such UV expansion), which are assumptions used to derive the constraints. Treat any verdict as an artifact of applying inapplicable bounds."
+      },
+      "missing_required_fields": [
+        "coefficients",
+        "derived",
+        "normalization",
+        "operator_projection_matrix",
+        "ownership_metadata",
+        "source_type",
+        "source_url",
+        "source_version",
+        "uncertainty_or_covariance",
+        "unitarity_bound",
+        "valid_energy_domain"
+      ],
+      "source_url_valid": false,
+      "source_type_valid": false,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": null,
+          "g_R4_c2": null,
+          "g_R4_c3": null
+        },
+        "missing_or_nonnumeric": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "positivity_passed": false,
+        "positivity_residual": null
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "expected": null,
+        "provided": {
+          "g_R4_plus": null,
+          "g_R4_minus_abs": null
+        },
+        "consistent": false
+      },
+      "normalization_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "operator_projection_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "energy_domain_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "uncertainty_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ownership_summary": {
+        "framework_source_owned": false
+      },
+      "unitarity_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "uses_bresciani_spin2_bound": false
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [
+        "framework_outside_current_r4_gate",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "framework_outside_current_r4_gate",
+        "measurement_likelihood_missing_or_incomplete",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ]
+    },
+    "discovered_novel": {
+      "framework": "discovered_novel",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "missing_required_fields": [
+        "coefficients",
+        "derived",
+        "normalization",
+        "operator_projection_matrix",
+        "ownership_metadata",
+        "source_type",
+        "source_url",
+        "source_version",
+        "uncertainty_or_covariance",
+        "unitarity_bound",
+        "valid_energy_domain"
+      ],
+      "source_url_valid": false,
+      "source_type_valid": false,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": null,
+          "g_R4_c2": null,
+          "g_R4_c3": null
+        },
+        "missing_or_nonnumeric": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "positivity_passed": false,
+        "positivity_residual": null
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "expected": null,
+        "provided": {
+          "g_R4_plus": null,
+          "g_R4_minus_abs": null
+        },
+        "consistent": false
+      },
+      "normalization_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "operator_projection_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "energy_domain_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "uncertainty_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ownership_summary": {
+        "framework_source_owned": false
+      },
+      "unitarity_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "uses_bresciani_spin2_bound": false
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "measurement_likelihood_missing_or_incomplete",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ]
+    },
+    "discovered_parity_violating": {
+      "framework": "discovered_parity_violating",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "missing_required_fields": [
+        "coefficients",
+        "derived",
+        "normalization",
+        "operator_projection_matrix",
+        "ownership_metadata",
+        "source_type",
+        "source_url",
+        "source_version",
+        "uncertainty_or_covariance",
+        "unitarity_bound",
+        "valid_energy_domain"
+      ],
+      "source_url_valid": false,
+      "source_type_valid": false,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": null,
+          "g_R4_c2": null,
+          "g_R4_c3": null
+        },
+        "missing_or_nonnumeric": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "positivity_passed": false,
+        "positivity_residual": null
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "expected": null,
+        "provided": {
+          "g_R4_plus": null,
+          "g_R4_minus_abs": null
+        },
+        "consistent": false
+      },
+      "normalization_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "operator_projection_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "energy_domain_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "uncertainty_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ownership_summary": {
+        "framework_source_owned": false
+      },
+      "unitarity_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "uses_bresciani_spin2_bound": false
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "measurement_likelihood_missing_or_incomplete",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ]
+    },
+    "discovered_high_g8": {
+      "framework": "discovered_high_g8",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "missing_required_fields": [
+        "coefficients",
+        "derived",
+        "normalization",
+        "operator_projection_matrix",
+        "ownership_metadata",
+        "source_type",
+        "source_url",
+        "source_version",
+        "uncertainty_or_covariance",
+        "unitarity_bound",
+        "valid_energy_domain"
+      ],
+      "source_url_valid": false,
+      "source_type_valid": false,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": null,
+          "g_R4_c2": null,
+          "g_R4_c3": null
+        },
+        "missing_or_nonnumeric": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "positivity_passed": false,
+        "positivity_residual": null
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "expected": null,
+        "provided": {
+          "g_R4_plus": null,
+          "g_R4_minus_abs": null
+        },
+        "consistent": false
+      },
+      "normalization_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "operator_projection_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "energy_domain_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "uncertainty_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ownership_summary": {
+        "framework_source_owned": false
+      },
+      "unitarity_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "uses_bresciani_spin2_bound": false
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "measurement_likelihood_missing_or_incomplete",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ]
+    },
+    "discovered_data_driven": {
+      "framework": "discovered_data_driven",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "missing_required_fields": [
+        "coefficients",
+        "derived",
+        "normalization",
+        "operator_projection_matrix",
+        "ownership_metadata",
+        "source_type",
+        "source_url",
+        "source_version",
+        "uncertainty_or_covariance",
+        "unitarity_bound",
+        "valid_energy_domain"
+      ],
+      "source_url_valid": false,
+      "source_type_valid": false,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": null,
+          "g_R4_c2": null,
+          "g_R4_c3": null
+        },
+        "missing_or_nonnumeric": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "positivity_passed": false,
+        "positivity_residual": null
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "expected": null,
+        "provided": {
+          "g_R4_plus": null,
+          "g_R4_minus_abs": null
+        },
+        "consistent": false
+      },
+      "normalization_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "operator_projection_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "energy_domain_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false
+      },
+      "uncertainty_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ownership_summary": {
+        "framework_source_owned": false
+      },
+      "unitarity_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "uses_bresciani_spin2_bound": false
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "measurement_likelihood_missing_or_incomplete",
+        "missing_required_fields",
+        "r4_coefficients_missing_or_nonnumeric",
+        "r4_derived_coordinates_missing_or_nonnumeric",
+        "r4_framework_source_ownership_missing",
+        "r4_normalization_not_source_backed",
+        "r4_operator_projection_matrix_not_source_backed",
+        "r4_positivity_status_not_checked",
+        "r4_uncertainty_or_covariance_incomplete",
+        "r4_unitarity_bound_not_source_backed",
+        "r4_valid_energy_domain_not_bounded",
+        "source_type_not_allowed"
+      ]
+    }
+  },
+  "claimable_framework_exclusions_now": [],
+  "route_status": "r4_projection_guard_schema_ready_no_current_adapter",
+  "selected_next_build_action": "search_string_r4_basis_translation_source",
+  "best_next_artifact": "A source-backed string R4 basis translation audit, because string_tree_eft is the highest-priority candidate from v2.132 and the new guard can now reject incomplete adapters.",
+  "interpretation": "The guard is executable and rejects every current framework projection packet because no encoder supplies R4 coefficients, Bresciani derived coordinates, source metadata, normalization, uncertainty, or ownership. It can accept future complete projection packets without making a framework claim unless a measurement likelihood and excluding discriminator math are also present."
+}
