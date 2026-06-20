@@ -1,0 +1,236 @@
+{
+  "version": "v2.106",
+  "basis": [
+    "v2.105_alpha_likelihood_stub",
+    "GWOSC_api_event_versions_GW170608_v3",
+    "GWOSC_api_strain_files_H1_L1_4kHz_HDF5"
+  ],
+  "event_record": {
+    "name": "GW170608",
+    "event_version": "GW170608-v3",
+    "version": 3,
+    "catalog": "GWTC-1-confident",
+    "run": "O2",
+    "gps": 1180922494.5,
+    "detectors": [
+      "H1",
+      "L1"
+    ],
+    "event_version_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3",
+    "strain_files_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files",
+    "source_url": "https://gwosc.org/GWTC-1/"
+  },
+  "strain_records": [
+    {
+      "detector": "H1",
+      "duration": 32,
+      "sample_rate_hz": 4096,
+      "gps_start": 1180922479,
+      "file_format": "HDF",
+      "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/H-H1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+      "expected_sample_count": 131072,
+      "event_offset_seconds": 15.5,
+      "event_inside_segment": true,
+      "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=H1&sample-rate=4&duration=32&file-format=hdf5"
+    },
+    {
+      "detector": "L1",
+      "duration": 32,
+      "sample_rate_hz": 4096,
+      "gps_start": 1180922479,
+      "file_format": "HDF",
+      "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/L-L1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+      "expected_sample_count": 131072,
+      "event_offset_seconds": 15.5,
+      "event_inside_segment": true,
+      "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=L1&sample-rate=4&duration=32&file-format=hdf5"
+    },
+    {
+      "detector": "H1",
+      "duration": 4096,
+      "sample_rate_hz": 4096,
+      "gps_start": 1180920447,
+      "file_format": "HDF",
+      "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/H-H1_GWOSC_4KHZ_R1-1180920447-4096.hdf5",
+      "expected_sample_count": 16777216,
+      "event_offset_seconds": 2047.5,
+      "event_inside_segment": true,
+      "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=H1&sample-rate=4&duration=4096&file-format=hdf5"
+    },
+    {
+      "detector": "L1",
+      "duration": 4096,
+      "sample_rate_hz": 4096,
+      "gps_start": 1180920447,
+      "file_format": "HDF",
+      "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/L-L1_GWOSC_4KHZ_R1-1180920447-4096.hdf5",
+      "expected_sample_count": 16777216,
+      "event_offset_seconds": 2047.5,
+      "event_inside_segment": true,
+      "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=L1&sample-rate=4&duration=4096&file-format=hdf5"
+    }
+  ],
+  "sample_connector_count": 2,
+  "connector_ready_samples": [
+    "synthetic_ready_public_strain_connector"
+  ],
+  "claim_ready_samples": [],
+  "claimable_discriminator_now": false,
+  "evaluations": [
+    {
+      "label": "synthetic_ready_public_strain_connector",
+      "event_version": "GW170608-v3",
+      "synthetic_fixture": true,
+      "strain_summary": {
+        "records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1180922479,
+            "file_format": "HDF",
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/H-H1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+            "expected_sample_count": 131072,
+            "event_offset_seconds": 15.5,
+            "event_inside_segment": true,
+            "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=H1&sample-rate=4&duration=32&file-format=hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1180922479,
+            "file_format": "HDF",
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/L-L1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+            "expected_sample_count": 131072,
+            "event_offset_seconds": 15.5,
+            "event_inside_segment": true,
+            "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=L1&sample-rate=4&duration=32&file-format=hdf5"
+          },
+          {
+            "detector": "H1",
+            "duration": 4096,
+            "sample_rate_hz": 4096,
+            "gps_start": 1180920447,
+            "file_format": "HDF",
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/H-H1_GWOSC_4KHZ_R1-1180920447-4096.hdf5",
+            "expected_sample_count": 16777216,
+            "event_offset_seconds": 2047.5,
+            "event_inside_segment": true,
+            "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=H1&sample-rate=4&duration=4096&file-format=hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 4096,
+            "sample_rate_hz": 4096,
+            "gps_start": 1180920447,
+            "file_format": "HDF",
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/L-L1_GWOSC_4KHZ_R1-1180920447-4096.hdf5",
+            "expected_sample_count": 16777216,
+            "event_offset_seconds": 2047.5,
+            "event_inside_segment": true,
+            "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=L1&sample-rate=4&duration=4096&file-format=hdf5"
+          }
+        ],
+        "record_count": 4,
+        "required_record_count": 4,
+        "missing_required_records": [],
+        "malformed_records": [],
+        "public_strain_urls_ready": true
+      },
+      "connector_ready": true,
+      "claim_ready": false,
+      "connector_blockers": [],
+      "claim_blockers": [
+        "g8_joint_component_missing",
+        "synthetic_fixture_not_real_public_strain_run"
+      ],
+      "status": "public_strain_connector_rejected_or_nonpromoting"
+    },
+    {
+      "label": "current_public_strain_connector",
+      "event_version": "GW170608-v3",
+      "synthetic_fixture": false,
+      "strain_summary": {
+        "records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1180922479,
+            "file_format": "HDF",
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/H-H1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+            "expected_sample_count": 131072,
+            "event_offset_seconds": 15.5,
+            "event_inside_segment": true,
+            "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=H1&sample-rate=4&duration=32&file-format=hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1180922479,
+            "file_format": "HDF",
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/L-L1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+            "expected_sample_count": 131072,
+            "event_offset_seconds": 15.5,
+            "event_inside_segment": true,
+            "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=L1&sample-rate=4&duration=32&file-format=hdf5"
+          },
+          {
+            "detector": "H1",
+            "duration": 4096,
+            "sample_rate_hz": 4096,
+            "gps_start": 1180920447,
+            "file_format": "HDF",
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/H-H1_GWOSC_4KHZ_R1-1180920447-4096.hdf5",
+            "expected_sample_count": 16777216,
+            "event_offset_seconds": 2047.5,
+            "event_inside_segment": true,
+            "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=H1&sample-rate=4&duration=4096&file-format=hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 4096,
+            "sample_rate_hz": 4096,
+            "gps_start": 1180920447,
+            "file_format": "HDF",
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/L-L1_GWOSC_4KHZ_R1-1180920447-4096.hdf5",
+            "expected_sample_count": 16777216,
+            "event_offset_seconds": 2047.5,
+            "event_inside_segment": true,
+            "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=L1&sample-rate=4&duration=4096&file-format=hdf5"
+          }
+        ],
+        "record_count": 4,
+        "required_record_count": 4,
+        "missing_required_records": [],
+        "malformed_records": [],
+        "public_strain_urls_ready": true
+      },
+      "connector_ready": false,
+      "claim_ready": false,
+      "connector_blockers": [
+        "alpha_waveform_residual_not_connected",
+        "hdf5_loader_not_run",
+        "strain_bytes_not_ingested"
+      ],
+      "claim_blockers": [
+        "alpha_waveform_residual_not_connected",
+        "g8_joint_component_missing",
+        "hdf5_loader_not_run",
+        "strain_bytes_not_ingested"
+      ],
+      "status": "public_strain_connector_rejected_or_nonpromoting"
+    }
+  ],
+  "current_public_connector_blockers": [
+    "alpha_waveform_residual_not_connected",
+    "hdf5_loader_not_run",
+    "strain_bytes_not_ingested"
+  ],
+  "route_status": "public_strain_urls_connected_hdf5_loader_missing",
+  "selected_next_build_action": "implement_hdf5_strain_loader_smoke_test",
+  "best_next_artifact": "A small HDF5 loader that downloads or reads the 32-second H1/L1 GW170608 files, verifies /strain/Strain sample counts and GPS metadata, and exposes arrays to the alpha likelihood harness.",
+  "interpretation": "The public strain endpoint is now connected at the URL and segment level. The remaining implementation work is to ingest the HDF5 bytes and replace the synthetic alpha residual with one computed from public strain."
+}
