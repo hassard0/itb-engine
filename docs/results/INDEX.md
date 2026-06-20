@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (291 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (292 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -340,3 +340,4 @@ Auto-generated front door to the full research program (291 notes). Regenerate w
 | v2.178 | [v2.178 - R4 response public-strain projection](2026-06-20-v2.178-r4-response-public-strain-projection.md) | Can the v2.177 R4 response contract be projected through the public-strain |
 | v2.179 | [v2.179 - R4 response GWOSC HDF5 projection](2026-06-20-v2.179-r4-response-gwosc-hdf5-projection.md) | Can the v2.178 synthetic strain rows be replaced by real GWOSC H1/L1 HDF5 |
 | v2.180 | [v2.180 - R4 source-backed PN/IMR derivation](2026-06-20-v2.180-r4-source-backed-pn-imr-derivation.md) | Can the v2.177/v2.179 R4 response-shape ansatz be replaced with a |
+| v2.181 | [v2.181 - R4 source-backed GWOSC projection](2026-06-20-v2.181-r4-source-backed-gwosc-projection.md) | Can the v2.180 source-backed R4 PN channel kernels be wired into the real |
