@@ -1,0 +1,302 @@
+{
+  "version": "v2.170",
+  "basis": [
+    "v2.154_r4_lambda_unit_policy",
+    "v2.156_r4_frame_scale_policy_audit",
+    "v2.162_r4_shape_likelihood_ingestion_adapter"
+  ],
+  "route": "r4_symbolic_scale_resolution",
+  "contract": {
+    "version": "v2.170",
+    "route": "r4_symbolic_scale_resolution",
+    "external_object": "source_backed_numeric_lambda_r4_scale_policy",
+    "engine_scale_axis": "Lambda_R4",
+    "target_r4_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3",
+      "g_R4_plus",
+      "g_R4_minus_abs"
+    ],
+    "required_scale_policy_fields": [
+      "label",
+      "source_url",
+      "source_type",
+      "source_backed_absolute_normalization",
+      "four_dimensional_frame_policy",
+      "string_to_einstein_frame_map",
+      "alpha_prime_to_engine_lambda_r4",
+      "kappa_normalization",
+      "compactification_volume_or_moduli_policy",
+      "field_redefinition_policy",
+      "dimensionful_contact_normalization",
+      "engine_lambda_r4_numeric_value",
+      "uncertainty_or_covariance",
+      "measurement_likelihood_reference",
+      "claim_controls"
+    ],
+    "claim_control_fields": [
+      "claim_use_allowed",
+      "framework_claim_allowed",
+      "external_adversarial_review_complete"
+    ],
+    "source_url_policy": "https://arxiv.org/ or https://doi.org/",
+    "claim_rule": "A policy can become numeric-engine-ready only after every frame, field-basis, alpha-prime, kappa, compactification, covariance, and likelihood field is source backed. Framework claims remain disabled until external adversarial review completes."
+  },
+  "symbolic_lambda_policy_ready": true,
+  "symbolic_query_ready": true,
+  "numeric_lambda_r4_ready_before_contract": false,
+  "frame_scale_numeric_ready_candidates_before_contract": [],
+  "synthetic_control_evaluation": {
+    "label": "synthetic_ready_numeric_lambda_r4_scale_policy",
+    "ready_for_numeric_lambda_r4_scale_policy": true,
+    "ready_for_framework_claim": false,
+    "synthetic_control": true,
+    "missing_required_fields": [],
+    "missing_claim_controls": [],
+    "scale_policy_blockers": [],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "synthetic_control_not_claim_evidence"
+    ],
+    "route_status": "r4_numeric_scale_policy_ready_nonclaiming"
+  },
+  "current_symbolic_only_slot_evaluation": {
+    "label": "current_symbolic_only_lambda_r4_scale_slot",
+    "ready_for_numeric_lambda_r4_scale_policy": false,
+    "ready_for_framework_claim": false,
+    "synthetic_control": false,
+    "missing_required_fields": [
+      "alpha_prime_to_engine_lambda_r4",
+      "compactification_volume_or_moduli_policy",
+      "dimensionful_contact_normalization",
+      "engine_lambda_r4_numeric_value",
+      "field_redefinition_policy",
+      "four_dimensional_frame_policy",
+      "kappa_normalization",
+      "measurement_likelihood_reference",
+      "source_backed_absolute_normalization",
+      "source_type",
+      "source_url",
+      "string_to_einstein_frame_map",
+      "uncertainty_or_covariance"
+    ],
+    "missing_claim_controls": [],
+    "scale_policy_blockers": [
+      "alpha_prime_to_engine_lambda_r4",
+      "alpha_prime_to_engine_lambda_r4_missing",
+      "compactification_volume_or_moduli_policy",
+      "compactification_volume_or_moduli_policy_missing",
+      "dimensionful_contact_normalization",
+      "dimensionful_contact_normalization_missing",
+      "engine_lambda_r4_numeric_value",
+      "engine_lambda_r4_numeric_value_missing",
+      "field_redefinition_policy",
+      "field_redefinition_policy_missing",
+      "four_dimensional_frame_policy",
+      "four_dimensional_frame_policy_missing",
+      "kappa_normalization",
+      "kappa_normalization_missing",
+      "measurement_likelihood_reference",
+      "measurement_likelihood_reference_missing",
+      "source_backed_absolute_normalization",
+      "source_backed_absolute_normalization_missing",
+      "source_type",
+      "source_url",
+      "string_to_einstein_frame_map",
+      "string_to_einstein_frame_map_missing",
+      "uncertainty_or_covariance",
+      "uncertainty_or_covariance_missing"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "numeric_lambda_r4_scale_policy_not_ready"
+    ],
+    "route_status": "r4_numeric_scale_policy_blocked"
+  },
+  "current_source_gap_rows": [
+    {
+      "label": "peeters_vanhove_westerberg_2003_review",
+      "source_url": "https://arxiv.org/abs/hep-th/0312211",
+      "source_role": "review of string effective actions beyond leading order",
+      "machine_usable_symbolic_or_shape_input": true,
+      "fills_numeric_scale_contract_now": false,
+      "missing_contract_capabilities": [
+        "engine Lambda_R4 numeric policy",
+        "single compactification-independent R4 Wilson coefficient"
+      ],
+      "gap_count": 2
+    },
+    {
+      "label": "russo_1997_type_iib_virasoro_shapiro",
+      "source_url": "https://arxiv.org/abs/hep-th/9707241",
+      "source_role": "type-IIB four-graviton low-energy scalar expansion",
+      "machine_usable_symbolic_or_shape_input": true,
+      "fills_numeric_scale_contract_now": false,
+      "missing_contract_capabilities": [
+        "Bresciani-axis measurement likelihood",
+        "four-dimensional compactification frame policy"
+      ],
+      "gap_count": 2
+    },
+    {
+      "label": "bresciani_levati_paradisi_2025_spin2_target",
+      "source_url": "https://arxiv.org/abs/2504.12855",
+      "source_role": "four-dimensional spin-2 amplitude target basis",
+      "machine_usable_symbolic_or_shape_input": true,
+      "fills_numeric_scale_contract_now": false,
+      "missing_contract_capabilities": [
+        "compactification-dependent Planck/string scale relation",
+        "engine Lambda_R4 numeric convention",
+        "type-II string alpha-prime normalization"
+      ],
+      "gap_count": 3
+    },
+    {
+      "label": "kallosh_lee_rube_2008_r4_helicity_shape",
+      "source_url": "https://arxiv.org/abs/0811.3417",
+      "source_role": "four-dimensional supersymmetric R4 helicity shape",
+      "machine_usable_symbolic_or_shape_input": true,
+      "fills_numeric_scale_contract_now": false,
+      "missing_contract_capabilities": [
+        "Lambda_R4 scale value",
+        "measurement likelihood over R4 axes",
+        "string alpha-prime coefficient"
+      ],
+      "gap_count": 3
+    },
+    {
+      "label": "peeters_vanhove_westerberg_2000_higher_derivative_actions",
+      "source_url": "https://arxiv.org/abs/hep-th/0010167",
+      "source_role": "higher-dimensional supersymmetric R4 action context",
+      "machine_usable_symbolic_or_shape_input": true,
+      "fills_numeric_scale_contract_now": false,
+      "missing_contract_capabilities": [
+        "field-redefinition policy into Bresciani c_i coordinates",
+        "numeric Lambda_R4 scale",
+        "unique four-dimensional truncation for this engine axis"
+      ],
+      "gap_count": 3
+    },
+    {
+      "label": "kallosh_shape_unit_as_scale_policy",
+      "source_url": "",
+      "source_role": "current_candidate_frame_scale_policy",
+      "machine_usable_symbolic_or_shape_input": true,
+      "fills_numeric_scale_contract_now": false,
+      "missing_contract_capabilities": [
+        "absolute_type_II_string_alpha_prime_coefficient",
+        "alpha_prime_to_engine_Lambda_R4_ratio",
+        "amplitude_normalization_conventions_not_unified",
+        "bridge_depends_on_alpha_prime_units",
+        "bridge_depends_on_kappa_convention",
+        "discriminator_math_not_excluding",
+        "engine_lambda_r4_numeric_unit_not_defined",
+        "four_dimensional_frame_and_field_redefinition_policy_missing",
+        "measurement_likelihood_missing_or_incomplete",
+        "measurement_likelihood_over_engine_R4_axes",
+        "numeric_alpha_prime_to_lambda_r4_value_missing",
+        "source_backed_absolute_normalization_missing",
+        "string_vs_einstein_frame_not_fixed"
+      ],
+      "gap_count": 13
+    },
+    {
+      "label": "bresciani_target_axis_as_scale_policy",
+      "source_url": "",
+      "source_role": "current_candidate_frame_scale_policy",
+      "machine_usable_symbolic_or_shape_input": true,
+      "fills_numeric_scale_contract_now": false,
+      "missing_contract_capabilities": [
+        "amplitude_normalization_conventions_not_unified",
+        "bridge_depends_on_alpha_prime_units",
+        "bridge_depends_on_kappa_convention",
+        "compactification_or_planck_normalization_policy",
+        "discriminator_math_not_excluding",
+        "engine_lambda_r4_numeric_unit_not_defined",
+        "field_redefinition_policy_for_string_R4_to_Bresciani_basis",
+        "four_dimensional_frame_and_field_redefinition_policy_missing",
+        "measurement_likelihood_missing_or_incomplete",
+        "measurement_likelihood_over_engine_R4_axes",
+        "numeric_alpha_prime_to_lambda_r4_value_missing",
+        "source_backed_absolute_normalization_missing",
+        "string_vs_einstein_frame_not_fixed",
+        "type_II_alpha_prime_normalization"
+      ],
+      "gap_count": 14
+    },
+    {
+      "label": "direct_type_II_alpha_prime_to_engine_lambda_r4",
+      "source_url": "",
+      "source_role": "current_candidate_frame_scale_policy",
+      "machine_usable_symbolic_or_shape_input": true,
+      "fills_numeric_scale_contract_now": false,
+      "missing_contract_capabilities": [
+        "alpha_prime_to_engine_Lambda_R4_ratio",
+        "amplitude_normalization_conventions_not_unified",
+        "bridge_depends_on_alpha_prime_units",
+        "bridge_depends_on_kappa_convention",
+        "compactification_or_planck_normalization_policy",
+        "discriminator_math_not_excluding",
+        "engine_lambda_r4_numeric_unit_not_defined",
+        "field_redefinition_policy_for_R4_basis",
+        "four_dimensional_einstein_or_string_frame_choice",
+        "four_dimensional_frame_and_field_redefinition_policy_missing",
+        "kappa_normalization_in_four_dimensions",
+        "measurement_likelihood_missing_or_incomplete",
+        "measurement_likelihood_over_engine_R4_axes",
+        "numeric_alpha_prime_to_lambda_r4_value_missing",
+        "source_backed_absolute_normalization_missing",
+        "string_vs_einstein_frame_not_fixed"
+      ],
+      "gap_count": 16
+    },
+    {
+      "label": "symbolic_lambda_r4_sidecar_v1",
+      "source_url": "",
+      "source_role": "current_candidate_frame_scale_policy",
+      "machine_usable_symbolic_or_shape_input": true,
+      "fills_numeric_scale_contract_now": false,
+      "missing_contract_capabilities": [
+        "alpha_prime_to_engine_Lambda_R4_ratio",
+        "amplitude_normalization_conventions_not_unified",
+        "bridge_depends_on_alpha_prime_units",
+        "bridge_depends_on_kappa_convention",
+        "compactification_or_planck_normalization_policy",
+        "discriminator_math_not_excluding",
+        "engine_lambda_r4_numeric_unit_not_defined",
+        "field_redefinition_policy_for_R4_basis",
+        "four_dimensional_einstein_or_string_frame_choice",
+        "four_dimensional_frame_and_field_redefinition_policy_missing",
+        "kappa_normalization_in_four_dimensions",
+        "measurement_likelihood_missing_or_incomplete",
+        "measurement_likelihood_over_engine_R4_axes",
+        "numeric_alpha_prime_to_lambda_r4_value_missing",
+        "source_backed_absolute_normalization_missing",
+        "string_vs_einstein_frame_not_fixed"
+      ],
+      "gap_count": 16
+    }
+  ],
+  "ready_current_numeric_scale_policies": [],
+  "numeric_claim_blockers": [
+    "amplitude_normalization_conventions_not_unified",
+    "bridge_depends_on_alpha_prime_units",
+    "bridge_depends_on_kappa_convention",
+    "discriminator_math_not_excluding",
+    "engine_lambda_r4_numeric_unit_not_defined",
+    "four_dimensional_frame_and_field_redefinition_policy_missing",
+    "measurement_likelihood_missing_or_incomplete",
+    "numeric_alpha_prime_to_lambda_r4_value_missing",
+    "source_backed_absolute_normalization_missing",
+    "string_vs_einstein_frame_not_fixed"
+  ],
+  "claimable_framework_exclusions_now": [],
+  "claimable_discriminator_now": false,
+  "route_status": "r4_scale_resolution_contract_ready_no_numeric_policy",
+  "selected_next_build_action": "search_or_request_source_backed_four_dimensional_r4_scale_policy",
+  "best_next_artifact": "A public source-backed numeric Lambda_R4 policy packet with a four-dimensional frame choice, string/Einstein-frame map, alpha-prime/kappa normalization, compactification or moduli policy, field-redefinition closure, covariance, and likelihood reference over the engine R4 axes.",
+  "interpretation": "The symbolic R4 scale ledger remains useful and nonclaiming. v2.170 makes the missing numeric-scale object executable: a complete packet passes the engine gate, while every current source/candidate row still leaves the real numeric policy slot empty."
+}
