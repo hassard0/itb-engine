@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (261 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (262 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -310,3 +310,4 @@ Auto-generated front door to the full research program (261 notes). Regenerate w
 | v2.148 | [v2.148 - Policy-scoped string_tree_eft R4 projection packet](2026-06-20-v2.148-policy-scoped-string-tree-r4-projection-packet.md) | v2.147 defined a non-claiming engine R4 shape unit. Can that policy be used to |
 | v2.149 | [v2.149 - R4 adapter registry hook: internal projection, no promotion](2026-06-20-v2.149-r4-adapter-registry-hook.md) | v2.148 built a policy-scoped `string_tree_eft` R4 projection packet. Can that |
 | v2.150 | [v2.150 - R4 projection query surface: diagnostics, not claims](2026-06-20-v2.150-r4-projection-query-surface.md) | v2.149 exposed the policy-scoped `string_tree_eft` R4 projection packet through a |
+| v2.151 | [v2.151 - R4 claim-blocker attack plan: normalization route first](2026-06-20-v2.151-r4-claim-blocker-attack-plan.md) | v2.150 made the R4 projection queryable as internal diagnostics. Which remaining |
