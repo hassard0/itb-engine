@@ -1,0 +1,326 @@
+{
+  "version": "v2.175",
+  "basis": [
+    "v2.174_r4_live_source_acquisition_queue",
+    "v2.160_r4_shape_likelihood_packet_manifest",
+    "v2.158_bresciani_r4_shape_unitarity_diagnostic",
+    "v2.148_policy_scoped_string_tree_r4_projection_packet",
+    "v2.143_bresciani_k_monomial_projector",
+    "v2.139_four_dimensional_r4_projection_derivation_workbench"
+  ],
+  "axis_dictionary": {
+    "dictionary_id": "bresciani_r4_axis_dictionary_v1",
+    "version": "v2.175",
+    "source": {
+      "primary_source_url": "https://arxiv.org/abs/2504.12855",
+      "source_equation_refs": [
+        "eq:amplitude",
+        "eq:Lag-quartic",
+        "c_plus_c_minus_definitions"
+      ],
+      "basis": "Bresciani_c_i_spin2_Riemann4",
+      "spin": 2
+    },
+    "target_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3",
+      "g_R4_plus",
+      "g_R4_minus_abs"
+    ],
+    "monomial_family_dictionary": {
+      "K_plus": [
+        "angle12^4_square34^4",
+        "angle14^4_square23^4",
+        "angle34^4_square12^4"
+      ],
+      "K_minus": [
+        "angle12^4_angle34^4",
+        "angle13^4_angle24^4",
+        "angle14^4_angle23^4"
+      ],
+      "K_minus_conjugate": [
+        "square12^4_square34^4",
+        "square13^4_square24^4",
+        "square14^4_square23^4"
+      ]
+    },
+    "source_to_engine_relations": {
+      "source_coordinates": [
+        "overall_R4_factor",
+        "K_plus",
+        "Re(K_minus)",
+        "Im(K_minus)"
+      ],
+      "helicity_coordinates": {
+        "c_plus": "overall_R4_factor*K_plus/8",
+        "Re(c_minus)": "overall_R4_factor*Re(K_minus)/8",
+        "Im(c_minus)": "overall_R4_factor*Im(K_minus)/8"
+      },
+      "engine_axis_equations": {
+        "g_R4_c1": "overall_R4_factor*(K_plus + Re(K_minus))/16",
+        "g_R4_c2": "overall_R4_factor*(K_plus - Re(K_minus))/16",
+        "g_R4_c3": "overall_R4_factor*Im(K_minus)/8",
+        "g_R4_plus": "overall_R4_factor*K_plus/8",
+        "g_R4_minus_abs": "overall_R4_factor*sqrt(Re(K_minus)^2 + Im(K_minus)^2)/8"
+      },
+      "engine_unit_simplification": {
+        "condition": "overall_R4_factor=8",
+        "g_R4_c1": "(K_plus + Re(K_minus))/2",
+        "g_R4_c2": "(K_plus - Re(K_minus))/2",
+        "g_R4_c3": "Im(K_minus)",
+        "g_R4_plus": "K_plus",
+        "g_R4_minus_abs": "sqrt(Re(K_minus)^2 + Im(K_minus)^2)"
+      }
+    },
+    "operator_projection_matrix": {
+      "status": "maps_to_bresciani_r4_axes",
+      "rows": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "columns": [
+        "K_plus",
+        "Re(K_minus)",
+        "Im(K_minus)"
+      ],
+      "matrix_for_overall_R4_factor_8": [
+        [
+          0.5,
+          0.5,
+          0.0
+        ],
+        [
+          0.5,
+          -0.5,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "derived_axis_rule": {
+        "g_R4_plus": "g_R4_c1 + g_R4_c2",
+        "g_R4_minus_abs": "sqrt((g_R4_c1-g_R4_c2)^2 + g_R4_c3^2)"
+      }
+    },
+    "normalization_contract": {
+      "policy_id": "engine_r4_shape_unit_v1",
+      "policy_version": "v2.147",
+      "axis_normalization_declared": true,
+      "normalization_scope": "shape_likelihood_only",
+      "uses_numeric_lambda_r4_scale": false,
+      "absolute_string_alpha_prime_normalization_backed": false,
+      "engine_lambda_r4_unit_conversion_source_backed": false,
+      "claim_use_allowed": false,
+      "engine_unit_definition": {
+        "overall_R4_factor": 8.0,
+        "c_plus": 1.0,
+        "c_minus_real": 0.0,
+        "c_minus_imag": 0.0,
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.0,
+        "definition": "One engine R4 shape unit equals the v2.144 Kallosh/Bresciani maximally supersymmetric R4 helicity shape."
+      },
+      "policy_evaluation": {
+        "policy_id": "engine_r4_shape_unit_v1",
+        "ready_for_internal_shape_normalization": true,
+        "ready_for_absolute_string_normalization": false,
+        "ready_for_framework_claim": false,
+        "blockers": [],
+        "warnings": [],
+        "allowed_uses": [
+          "adapter_fixture_replacement",
+          "internal_bresciani_basis_projection",
+          "positivity_and_unitarity_algebra",
+          "relative_shape_comparison"
+        ],
+        "disallowed_uses": [
+          "absolute_type_II_string_scale_claim",
+          "framework_exclusion_claim",
+          "measurement_likelihood_claim",
+          "wilson_coefficient_magnitude_claim"
+        ]
+      }
+    },
+    "domain_contract": {
+      "status": "bounded_for_qg_eft",
+      "shared_domain_with_query_row": true,
+      "domain_scope": "dimensionless R4 shape axes",
+      "physical_scale_claim_allowed": false
+    },
+    "packet_builder_exports": {
+      "axis_mapping": {
+        "dictionary_id": "bresciani_r4_axis_dictionary_v1",
+        "dictionary_version": "v2.175",
+        "status": "maps_to_bresciani_r4_axes",
+        "mapped_axes": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3",
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "projection_axes": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "derived_axes": [
+          "g_R4_plus",
+          "g_R4_minus_abs"
+        ],
+        "source_coordinates": [
+          "overall_R4_factor",
+          "K_plus",
+          "Re(K_minus)",
+          "Im(K_minus)"
+        ],
+        "axis_normalization_declared": true,
+        "normalization_scope": "shape_likelihood_only",
+        "uses_numeric_lambda_r4_scale": false,
+        "engine_unit_policy_id": "engine_r4_shape_unit_v1",
+        "engine_unit_policy_version": "v2.147",
+        "claim_controls": {
+          "claim_use_allowed": false,
+          "framework_claim_allowed": false,
+          "axis_dictionary_only_not_claim_evidence": true
+        }
+      },
+      "expected_manifest_target_axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3",
+        "g_R4_plus",
+        "g_R4_minus_abs"
+      ],
+      "required_likelihood_axes_for_first_public_packet": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ]
+    },
+    "calibration_examples": {
+      "engine_unit_shape": {
+        "input_components": {
+          "overall_R4_factor": 8.0,
+          "K_plus": 1.0,
+          "K_minus_real": 0.0,
+          "K_minus_imag": 0.0
+        },
+        "helicity_coordinates": {
+          "c_plus": 1.0,
+          "c_minus": {
+            "real": 0.0,
+            "imag": 0.0
+          }
+        },
+        "coefficients": {
+          "g_R4_c1": 0.5,
+          "g_R4_c2": 0.5,
+          "g_R4_c3": 0.0
+        },
+        "derived": {
+          "g_R4_plus": 1.0,
+          "g_R4_minus_abs": 0.0
+        },
+        "positivity_summary": {
+          "c1_nonnegative": true,
+          "c2_nonnegative": true,
+          "c3_square_bound_residual": 1.0,
+          "passed": true
+        }
+      },
+      "mixed_helicity_control": {
+        "input_components": {
+          "overall_R4_factor": 8.0,
+          "K_plus": 0.3,
+          "K_minus_real": 0.1,
+          "K_minus_imag": 0.05
+        },
+        "helicity_coordinates": {
+          "c_plus": 0.3,
+          "c_minus": {
+            "real": 0.1,
+            "imag": 0.05
+          }
+        },
+        "coefficients": {
+          "g_R4_c1": 0.2,
+          "g_R4_c2": 0.1,
+          "g_R4_c3": 0.05
+        },
+        "derived": {
+          "g_R4_plus": 0.3,
+          "g_R4_minus_abs": 0.111803398875
+        },
+        "positivity_summary": {
+          "c1_nonnegative": true,
+          "c2_nonnegative": true,
+          "c3_square_bound_residual": 0.0775,
+          "passed": true
+        }
+      }
+    },
+    "provenance": {
+      "source_backed_axis_formalism": true,
+      "source_backed_engine_unit_shape": true,
+      "public_likelihood_or_covariance": false,
+      "reproducible_data_or_code": true,
+      "synthetic_measurement_fixture": false
+    },
+    "likelihood": {
+      "status": "not_attached",
+      "public_covariance_over_target_axes": false,
+      "public_likelihood_samples_over_target_axes": false
+    },
+    "claim_controls": {
+      "claim_use_allowed": false,
+      "framework_claim_allowed": false,
+      "axis_dictionary_only_not_claim_evidence": true
+    }
+  },
+  "evaluation": {
+    "dictionary_id": "bresciani_r4_axis_dictionary_v1",
+    "ready_for_r4_shape_packet_axis_mapping": true,
+    "ready_for_likelihood_packet": false,
+    "ready_for_framework_claim": false,
+    "blockers": [],
+    "downstream_likelihood_blockers": [
+      "modified_gravity_r4_waveform_adapter_missing",
+      "public_covariance_over_engine_r4_axes_missing",
+      "framework_exclusion_math_missing",
+      "external_adversarial_review_missing"
+    ],
+    "engine_unit_formula_check": {
+      "ready": true,
+      "coefficients": {
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.0
+      },
+      "derived": {
+        "g_R4_plus": 1.0,
+        "g_R4_minus_abs": 0.0
+      }
+    }
+  },
+  "ready_for_r4_shape_packet_axis_mapping": true,
+  "ready_for_likelihood_packet": false,
+  "ready_for_framework_claim": false,
+  "claimable_framework_exclusions_now": [],
+  "current_claim_blockers": [
+    "modified_gravity_r4_waveform_adapter_missing",
+    "public_covariance_over_engine_r4_axes_missing",
+    "framework_exclusion_math_missing",
+    "external_adversarial_review_missing"
+  ],
+  "route_status": "bresciani_r4_axis_dictionary_ready_nonclaiming",
+  "selected_next_build_action": "build_public_gw_reanalysis_fixture_for_r4_waveform_model",
+  "best_next_artifact": "A public GW reanalysis fixture that emits central values and a covariance over g_R4_c1, g_R4_c2, and g_R4_c3 using this dictionary as the axis contract.",
+  "interpretation": "The R4 source axis map is now machine-readable and compatible with the v2.160 packet manifest. It is ready for adapter and public-reanalysis construction, but it is not a likelihood packet and cannot support a framework claim by itself."
+}
