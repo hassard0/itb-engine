@@ -1,0 +1,148 @@
+{
+  "version": "v2.110",
+  "basis": [
+    "v2.109_source_backed_cubic_inspiral_response",
+    "v2.108_public_strain_conditioning",
+    "GWOSC_GW170608_v3_H1_L1_32s_HDF5"
+  ],
+  "source_reference": "https://arxiv.org/abs/2407.08929",
+  "cache_dir": "data\\runs\\gwosc_cache",
+  "reference_total_mass_solar": 19.0,
+  "reference_eta": 0.22,
+  "loader_evaluation": {
+    "load_count": 2,
+    "all_loader_ready": true
+  },
+  "detector_projections": [
+    {
+      "detector": "H1",
+      "path": "data\\runs\\gwosc_cache\\H-H1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+      "conditioning": {
+        "start_index": 55296,
+        "stop_index": 71680,
+        "sample_count": 16384,
+        "raw_mean": 1.802446338451568e-21,
+        "raw_rms": 4.946099266004207e-19,
+        "conditioned_mean": 0.015910358088680084,
+        "conditioned_rms": 1.0
+      },
+      "source_backed_projection": {
+        "source_reference": "https://arxiv.org/abs/2407.08929",
+        "feature_kind": "centered_unit_log_magnitude_spectrum",
+        "frequency_window": {
+          "bin_count": 366,
+          "frequency_min_hz": 20.0,
+          "frequency_max_hz": 111.25,
+          "v_f_min": 0.18049326377900485,
+          "v_f_max": 0.319804329926307,
+          "frequency_resolution_hz": 0.25,
+          "total_mass_solar": 19.0,
+          "eta_reference": 0.22
+        },
+        "projection_kind": "source_weighted_spectral_shape_projection_not_matched_filter",
+        "projections": {
+          "phase_alpha_bar_1": -0.30604928015165506,
+          "phase_alpha_bar_2": 0.3402620108759855,
+          "amplitude_alpha_bar_1": -0.23011593659374927,
+          "amplitude_alpha_bar_2": 0.24419669841562977
+        },
+        "template_norms": {
+          "phase_alpha_bar_1": 0.9999999999999999,
+          "phase_alpha_bar_2": 1.0,
+          "amplitude_alpha_bar_1": 0.9999999999999999,
+          "amplitude_alpha_bar_2": 1.0
+        },
+        "feature_norm": 0.9999999999999999,
+        "raw_log_magnitude_mean": 0.3609101373440852,
+        "raw_log_magnitude_std": 0.9497620779325796,
+        "projection_ready": true
+      },
+      "projection_ready": true
+    },
+    {
+      "detector": "L1",
+      "path": "data\\runs\\gwosc_cache\\L-L1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+      "conditioning": {
+        "start_index": 55296,
+        "stop_index": 71680,
+        "sample_count": 16384,
+        "raw_mean": -6.586659050042447e-21,
+        "raw_rms": 4.199796541491431e-19,
+        "conditioned_mean": 0.005026576205074061,
+        "conditioned_rms": 1.0
+      },
+      "source_backed_projection": {
+        "source_reference": "https://arxiv.org/abs/2407.08929",
+        "feature_kind": "centered_unit_log_magnitude_spectrum",
+        "frequency_window": {
+          "bin_count": 366,
+          "frequency_min_hz": 20.0,
+          "frequency_max_hz": 111.25,
+          "v_f_min": 0.18049326377900485,
+          "v_f_max": 0.319804329926307,
+          "frequency_resolution_hz": 0.25,
+          "total_mass_solar": 19.0,
+          "eta_reference": 0.22
+        },
+        "projection_kind": "source_weighted_spectral_shape_projection_not_matched_filter",
+        "projections": {
+          "phase_alpha_bar_1": -0.4743153593669193,
+          "phase_alpha_bar_2": 0.5106002408007002,
+          "amplitude_alpha_bar_1": -0.3835239614508368,
+          "amplitude_alpha_bar_2": 0.40141395679079644
+        },
+        "template_norms": {
+          "phase_alpha_bar_1": 0.9999999999999999,
+          "phase_alpha_bar_2": 1.0,
+          "amplitude_alpha_bar_1": 0.9999999999999999,
+          "amplitude_alpha_bar_2": 1.0
+        },
+        "feature_norm": 1.0,
+        "raw_log_magnitude_mean": 0.1511075651111723,
+        "raw_log_magnitude_std": 0.14401330464989348,
+        "projection_ready": true
+      },
+      "projection_ready": true
+    }
+  ],
+  "network_projection": {
+    "detectors": [
+      "H1",
+      "L1"
+    ],
+    "projection_names": [
+      "amplitude_alpha_bar_1",
+      "amplitude_alpha_bar_2",
+      "phase_alpha_bar_1",
+      "phase_alpha_bar_2"
+    ],
+    "amplitude_alpha_bar_1_mean": -0.30681994902229304,
+    "amplitude_alpha_bar_1_detector_spread": 0.15340802485708752,
+    "amplitude_alpha_bar_2_mean": 0.3228053276032131,
+    "amplitude_alpha_bar_2_detector_spread": 0.15721725837516667,
+    "phase_alpha_bar_1_mean": -0.3901823197592872,
+    "phase_alpha_bar_1_detector_spread": 0.16826607921526426,
+    "phase_alpha_bar_2_mean": 0.42543112583834286,
+    "phase_alpha_bar_2_detector_spread": 0.1703382299247147
+  },
+  "evaluation": {
+    "strain_projection_ready": true,
+    "claim_ready": false,
+    "projection_blockers": [],
+    "claim_blockers": [
+      "complex_gr_waveform_phase_reference_missing",
+      "event_mass_eta_posterior_sampling_missing",
+      "full_imr_merger_ringdown_response_missing",
+      "g8_joint_component_missing",
+      "posterior_sampler_and_systematics_budget_missing",
+      "projection_is_spectral_shape_not_calibrated_likelihood",
+      "psd_whitening_and_calibration_likelihood_missing"
+    ],
+    "removed_v2_109_blocker": "frequency_domain_to_strain_projection_missing"
+  },
+  "claimable_discriminator_now": false,
+  "route_status": "source_backed_frequency_domain_strain_projection_ready_nonclaiming",
+  "selected_next_build_action": "replace_spectral_shape_projection_with_psd_whitened_complex_template",
+  "best_next_artifact": "Use the source-backed alpha kernels inside a PSD-whitened complex frequency-domain residual with a GR waveform phase reference, then sample over event mass and eta instead of using a fixed reference.",
+  "interpretation": "The v2.109 source-backed alpha response now touches the verified public H1/L1 strain in frequency space. The projection is still a spectral-shape diagnostic, not a likelihood or matched-filter alpha estimate, because it lacks PSD/calibration treatment, a GR phase reference, posterior sampling over mass and eta, and a full IMR treatment."
+}
