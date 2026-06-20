@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (239 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (240 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -288,3 +288,4 @@ Auto-generated front door to the full research program (239 notes). Regenerate w
 | v2.126 | [v2.126 - GW alpha/G8 joint audit: alpha ready, no current G8 component](2026-06-20-v2.126-gw-alpha-g8-joint-component-audit.md) | v2.125 selected the next implementation step: |
 | v2.127 | [v2.127 - GW alpha/G8 external sidecar spec: contract defined, not sati](2026-06-20-v2.127-gw-alpha-g8-external-measurement-spec.md) | v2.126 selected the next implementation step: |
 | v2.128 | [v2.128 - GW alpha/G8 sidecar gate: executable, no real packet](2026-06-20-v2.128-gw-alpha-g8-sidecar-acceptance-gate.md) | v2.127 selected the next implementation step: |
+| v2.129 | [v2.129 - GW alpha/G8 sidecar source scout: current sources scanned, no](2026-06-20-v2.129-gw-alpha-g8-sidecar-source-scout.md) | v2.128 selected the next implementation step: |

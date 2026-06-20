@@ -1,0 +1,1385 @@
+{
+  "version": "v2.129",
+  "scan_date": "2026-06-20",
+  "basis": [
+    "v2.128_gw_alpha_g8_sidecar_acceptance_gate",
+    "current_primary_public_source_scan_2026_06_20",
+    "v2.99_g8_joint_source_discovery_queue"
+  ],
+  "gate_target": "v2.128_gw_alpha_g8_sidecar_acceptance_gate",
+  "legacy_source_queue_labels": [
+    "bernard_eft_gravitational_wave_dictionary_2025",
+    "bresciani_partial_wave_unitarity_bounds_2025",
+    "gwastro_o2_bbh_posterior_release",
+    "gwosc_gw170608_open_data_release",
+    "liu_yunes_gw170608_higher_curvature_eft_2024",
+    "murata_short_range_inverse_square_review_2026",
+    "sutton_quadratic_weyl_constraints_2025"
+  ],
+  "source_count": 7,
+  "evaluated_packet_attempt_count": 7,
+  "acceptance_ready_source_packets": [],
+  "claim_ready_source_packets": [],
+  "claimable_discriminator_now": false,
+  "source_urls_checked": [
+    "https://arxiv.org/abs/2102.08951",
+    "https://arxiv.org/abs/2209.00008",
+    "https://arxiv.org/abs/2407.08929",
+    "https://arxiv.org/abs/2504.12855",
+    "https://doi.org/10.17182/hepdata.147275",
+    "https://doi.org/10.7935/82H3-HH23",
+    "https://github.com/gwastro/o2-bbh-pe",
+    "https://gwosc.org/GWTC-1/",
+    "https://www.hepdata.net/record/150737"
+  ],
+  "blocker_counts": {
+    "cross_covariance_with_alpha_missing": 7,
+    "engine_g8_normalization_missing": 7,
+    "external_numeric_measurement_missing": 7,
+    "framework_pair_exclusion_math_missing": 7,
+    "framework_projection_missing_or_nonexcluding": 7,
+    "g8_systematics_not_closed": 7,
+    "missing_required_fields": 7,
+    "observable_basis_not_g8_high_moment": 6,
+    "projection_to_engine_g8_missing": 7,
+    "public_g8_likelihood_or_covariance_missing": 7,
+    "shared_eft_domain_not_bounded": 7,
+    "source_type_not_allowed": 1,
+    "source_url_not_primary_allowed": 1,
+    "statistical_uncertainty_missing_or_invalid": 7,
+    "systematic_uncertainty_missing_or_invalid": 7
+  },
+  "closest_source_packet_attempts": [
+    {
+      "label": "bresciani_partial_wave_unitarity_bounds_v2_2026",
+      "source_url": "https://arxiv.org/abs/2504.12855",
+      "source_kind": "primary_theory_formalism",
+      "supplies": [
+        "partial_wave_unitarity_formalism",
+        "gravity_eft_high_spin_relevance"
+      ],
+      "missing_for_real_sidecar": [
+        "external_numeric_g8_measurement",
+        "source_backed_engine_g8_jacobian",
+        "public_g8_likelihood_or_covariance",
+        "cross_covariance_with_alpha",
+        "closed_g8_systematics",
+        "framework_pair_exclusion_math"
+      ],
+      "acceptance_ready": false,
+      "claim_ready": false,
+      "acceptance_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blocker_count": 12,
+      "evaluation": {
+        "label": "bresciani_partial_wave_unitarity_bounds_v2_2026",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "g8_axis_normalization",
+          "g8_central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty",
+          "covariance_or_likelihood",
+          "cross_covariance_with_alpha",
+          "systematics_budget",
+          "shared_eft_domain",
+          "framework_projection",
+          "discriminator_math"
+        ],
+        "likelihood_summary": {
+          "status": "",
+          "contains_g8": false,
+          "public_engine_usable": false
+        },
+        "cross_covariance_summary": {
+          "status": "",
+          "acceptable": false,
+          "has_numeric_bound": false
+        },
+        "systematics_summary": {
+          "status": "",
+          "missing_components": [
+            "g8_adapter",
+            "cross_covariance",
+            "eft_truncation",
+            "calibration_or_acceptance",
+            "background_model",
+            "running_or_renormalization"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "framework_projection_summary": {
+          "status": "",
+          "excludes_framework": false,
+          "confidence_sigma": null
+        },
+        "discriminator_summary": {
+          "status": "",
+          "confidence_sigma": null,
+          "excluding": false
+        },
+        "acceptance_ready": false,
+        "claim_ready": false,
+        "acceptance_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "claim_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "status": "g8_sidecar_packet_rejected_or_nonpromoting"
+      }
+    },
+    {
+      "label": "caron_huot_detector_operator_formalism_2022",
+      "source_url": "https://arxiv.org/abs/2209.00008",
+      "source_kind": "primary_theory_formalism",
+      "supplies": [
+        "detector_operator_formalism",
+        "light_ray_operator_relation",
+        "regge_trajectory_mixing_discussion"
+      ],
+      "missing_for_real_sidecar": [
+        "gravity_g8_measurement",
+        "engine_g8_projection",
+        "public_numeric_likelihood",
+        "alpha_cross_covariance",
+        "framework_pair_exclusion_math"
+      ],
+      "acceptance_ready": false,
+      "claim_ready": false,
+      "acceptance_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blocker_count": 13,
+      "evaluation": {
+        "label": "caron_huot_detector_operator_formalism_2022",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "g8_axis_normalization",
+          "g8_central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty",
+          "covariance_or_likelihood",
+          "projection_to_engine_g8",
+          "cross_covariance_with_alpha",
+          "systematics_budget",
+          "shared_eft_domain",
+          "framework_projection",
+          "discriminator_math"
+        ],
+        "likelihood_summary": {
+          "status": "",
+          "contains_g8": false,
+          "public_engine_usable": false
+        },
+        "cross_covariance_summary": {
+          "status": "",
+          "acceptable": false,
+          "has_numeric_bound": false
+        },
+        "systematics_summary": {
+          "status": "",
+          "missing_components": [
+            "g8_adapter",
+            "cross_covariance",
+            "eft_truncation",
+            "calibration_or_acceptance",
+            "background_model",
+            "running_or_renormalization"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "framework_projection_summary": {
+          "status": "",
+          "excludes_framework": false,
+          "confidence_sigma": null
+        },
+        "discriminator_summary": {
+          "status": "",
+          "confidence_sigma": null,
+          "excluding": false
+        },
+        "acceptance_ready": false,
+        "claim_ready": false,
+        "acceptance_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "claim_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "status": "g8_sidecar_packet_rejected_or_nonpromoting"
+      }
+    },
+    {
+      "label": "cms_energy_correlator_hepdata_2024",
+      "source_url": "https://doi.org/10.17182/hepdata.147275",
+      "source_kind": "public_data_product",
+      "supplies": [
+        "public_energy_correlator_tables",
+        "public_correlation_matrices",
+        "alpha_s_measurement"
+      ],
+      "missing_for_real_sidecar": [
+        "quantum_gravity_g8_observable_basis",
+        "engine_g8_normalization",
+        "g8_numeric_value_or_bound",
+        "g8_likelihood_axis",
+        "shared_eft_domain_with_gw_alpha",
+        "framework_pair_exclusion_math"
+      ],
+      "acceptance_ready": false,
+      "claim_ready": false,
+      "acceptance_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blocker_count": 13,
+      "evaluation": {
+        "label": "cms_energy_correlator_hepdata_2024",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "g8_axis_normalization",
+          "g8_central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty",
+          "cross_covariance_with_alpha",
+          "systematics_budget",
+          "shared_eft_domain",
+          "framework_projection",
+          "discriminator_math"
+        ],
+        "likelihood_summary": {
+          "status": "public_covariance_matrix",
+          "contains_g8": false,
+          "public_engine_usable": false,
+          "kind": "hepdata_energy_correlator_tables"
+        },
+        "cross_covariance_summary": {
+          "status": "",
+          "acceptable": false,
+          "has_numeric_bound": false
+        },
+        "systematics_summary": {
+          "status": "",
+          "missing_components": [
+            "g8_adapter",
+            "cross_covariance",
+            "eft_truncation",
+            "calibration_or_acceptance",
+            "background_model",
+            "running_or_renormalization"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "framework_projection_summary": {
+          "status": "",
+          "excludes_framework": false,
+          "confidence_sigma": null
+        },
+        "discriminator_summary": {
+          "status": "",
+          "confidence_sigma": null,
+          "excluding": false
+        },
+        "acceptance_ready": false,
+        "claim_ready": false,
+        "acceptance_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "claim_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "status": "g8_sidecar_packet_rejected_or_nonpromoting"
+      }
+    }
+  ],
+  "evaluated_source_packet_attempts_ranked": [
+    {
+      "label": "bresciani_partial_wave_unitarity_bounds_v2_2026",
+      "source_url": "https://arxiv.org/abs/2504.12855",
+      "source_kind": "primary_theory_formalism",
+      "supplies": [
+        "partial_wave_unitarity_formalism",
+        "gravity_eft_high_spin_relevance"
+      ],
+      "missing_for_real_sidecar": [
+        "external_numeric_g8_measurement",
+        "source_backed_engine_g8_jacobian",
+        "public_g8_likelihood_or_covariance",
+        "cross_covariance_with_alpha",
+        "closed_g8_systematics",
+        "framework_pair_exclusion_math"
+      ],
+      "acceptance_ready": false,
+      "claim_ready": false,
+      "acceptance_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blocker_count": 12,
+      "evaluation": {
+        "label": "bresciani_partial_wave_unitarity_bounds_v2_2026",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "g8_axis_normalization",
+          "g8_central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty",
+          "covariance_or_likelihood",
+          "cross_covariance_with_alpha",
+          "systematics_budget",
+          "shared_eft_domain",
+          "framework_projection",
+          "discriminator_math"
+        ],
+        "likelihood_summary": {
+          "status": "",
+          "contains_g8": false,
+          "public_engine_usable": false
+        },
+        "cross_covariance_summary": {
+          "status": "",
+          "acceptable": false,
+          "has_numeric_bound": false
+        },
+        "systematics_summary": {
+          "status": "",
+          "missing_components": [
+            "g8_adapter",
+            "cross_covariance",
+            "eft_truncation",
+            "calibration_or_acceptance",
+            "background_model",
+            "running_or_renormalization"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "framework_projection_summary": {
+          "status": "",
+          "excludes_framework": false,
+          "confidence_sigma": null
+        },
+        "discriminator_summary": {
+          "status": "",
+          "confidence_sigma": null,
+          "excluding": false
+        },
+        "acceptance_ready": false,
+        "claim_ready": false,
+        "acceptance_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "claim_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "status": "g8_sidecar_packet_rejected_or_nonpromoting"
+      }
+    },
+    {
+      "label": "caron_huot_detector_operator_formalism_2022",
+      "source_url": "https://arxiv.org/abs/2209.00008",
+      "source_kind": "primary_theory_formalism",
+      "supplies": [
+        "detector_operator_formalism",
+        "light_ray_operator_relation",
+        "regge_trajectory_mixing_discussion"
+      ],
+      "missing_for_real_sidecar": [
+        "gravity_g8_measurement",
+        "engine_g8_projection",
+        "public_numeric_likelihood",
+        "alpha_cross_covariance",
+        "framework_pair_exclusion_math"
+      ],
+      "acceptance_ready": false,
+      "claim_ready": false,
+      "acceptance_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blocker_count": 13,
+      "evaluation": {
+        "label": "caron_huot_detector_operator_formalism_2022",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "g8_axis_normalization",
+          "g8_central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty",
+          "covariance_or_likelihood",
+          "projection_to_engine_g8",
+          "cross_covariance_with_alpha",
+          "systematics_budget",
+          "shared_eft_domain",
+          "framework_projection",
+          "discriminator_math"
+        ],
+        "likelihood_summary": {
+          "status": "",
+          "contains_g8": false,
+          "public_engine_usable": false
+        },
+        "cross_covariance_summary": {
+          "status": "",
+          "acceptable": false,
+          "has_numeric_bound": false
+        },
+        "systematics_summary": {
+          "status": "",
+          "missing_components": [
+            "g8_adapter",
+            "cross_covariance",
+            "eft_truncation",
+            "calibration_or_acceptance",
+            "background_model",
+            "running_or_renormalization"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "framework_projection_summary": {
+          "status": "",
+          "excludes_framework": false,
+          "confidence_sigma": null
+        },
+        "discriminator_summary": {
+          "status": "",
+          "confidence_sigma": null,
+          "excluding": false
+        },
+        "acceptance_ready": false,
+        "claim_ready": false,
+        "acceptance_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "claim_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "status": "g8_sidecar_packet_rejected_or_nonpromoting"
+      }
+    },
+    {
+      "label": "cms_energy_correlator_hepdata_2024",
+      "source_url": "https://doi.org/10.17182/hepdata.147275",
+      "source_kind": "public_data_product",
+      "supplies": [
+        "public_energy_correlator_tables",
+        "public_correlation_matrices",
+        "alpha_s_measurement"
+      ],
+      "missing_for_real_sidecar": [
+        "quantum_gravity_g8_observable_basis",
+        "engine_g8_normalization",
+        "g8_numeric_value_or_bound",
+        "g8_likelihood_axis",
+        "shared_eft_domain_with_gw_alpha",
+        "framework_pair_exclusion_math"
+      ],
+      "acceptance_ready": false,
+      "claim_ready": false,
+      "acceptance_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blocker_count": 13,
+      "evaluation": {
+        "label": "cms_energy_correlator_hepdata_2024",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "g8_axis_normalization",
+          "g8_central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty",
+          "cross_covariance_with_alpha",
+          "systematics_budget",
+          "shared_eft_domain",
+          "framework_projection",
+          "discriminator_math"
+        ],
+        "likelihood_summary": {
+          "status": "public_covariance_matrix",
+          "contains_g8": false,
+          "public_engine_usable": false,
+          "kind": "hepdata_energy_correlator_tables"
+        },
+        "cross_covariance_summary": {
+          "status": "",
+          "acceptable": false,
+          "has_numeric_bound": false
+        },
+        "systematics_summary": {
+          "status": "",
+          "missing_components": [
+            "g8_adapter",
+            "cross_covariance",
+            "eft_truncation",
+            "calibration_or_acceptance",
+            "background_model",
+            "running_or_renormalization"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "framework_projection_summary": {
+          "status": "",
+          "excludes_framework": false,
+          "confidence_sigma": null
+        },
+        "discriminator_summary": {
+          "status": "",
+          "confidence_sigma": null,
+          "excluding": false
+        },
+        "acceptance_ready": false,
+        "claim_ready": false,
+        "acceptance_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "claim_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "status": "g8_sidecar_packet_rejected_or_nonpromoting"
+      }
+    },
+    {
+      "label": "gwosc_gwtc1_gw170608_public_strain",
+      "source_url": "https://doi.org/10.7935/82H3-HH23",
+      "source_kind": "public_data_product",
+      "supplies": [
+        "public_strain_data",
+        "gw170608_special_case_metadata",
+        "calibration_uncertainty_links"
+      ],
+      "missing_for_real_sidecar": [
+        "modified_gravity_g8_waveform_adapter",
+        "engine_g8_normalization",
+        "public_g8_likelihood",
+        "closed_systematics",
+        "framework_pair_exclusion_math"
+      ],
+      "acceptance_ready": false,
+      "claim_ready": false,
+      "acceptance_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blocker_count": 13,
+      "evaluation": {
+        "label": "gwosc_gwtc1_gw170608_public_strain",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "g8_axis_normalization",
+          "g8_central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty",
+          "covariance_or_likelihood",
+          "projection_to_engine_g8",
+          "cross_covariance_with_alpha",
+          "systematics_budget",
+          "shared_eft_domain",
+          "framework_projection",
+          "discriminator_math"
+        ],
+        "likelihood_summary": {
+          "status": "",
+          "contains_g8": false,
+          "public_engine_usable": false
+        },
+        "cross_covariance_summary": {
+          "status": "",
+          "acceptable": false,
+          "has_numeric_bound": false
+        },
+        "systematics_summary": {
+          "status": "",
+          "missing_components": [
+            "g8_adapter",
+            "cross_covariance",
+            "eft_truncation",
+            "calibration_or_acceptance",
+            "background_model",
+            "running_or_renormalization"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "framework_projection_summary": {
+          "status": "",
+          "excludes_framework": false,
+          "confidence_sigma": null
+        },
+        "discriminator_summary": {
+          "status": "",
+          "confidence_sigma": null,
+          "excluding": false
+        },
+        "acceptance_ready": false,
+        "claim_ready": false,
+        "acceptance_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "claim_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "status": "g8_sidecar_packet_rejected_or_nonpromoting"
+      }
+    },
+    {
+      "label": "liu_yunes_gw170608_alpha_constraints_2024",
+      "source_url": "https://arxiv.org/abs/2407.08929",
+      "source_kind": "primary_measurement_analysis",
+      "supplies": [
+        "gw170608_bayesian_alpha_constraints",
+        "cubic_parity_preserving_waveform_analysis"
+      ],
+      "missing_for_real_sidecar": [
+        "g8_observable_axis",
+        "g8_likelihood",
+        "g8_systematics",
+        "g8_alpha_cross_covariance",
+        "framework_pair_exclusion_math"
+      ],
+      "acceptance_ready": false,
+      "claim_ready": false,
+      "acceptance_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blocker_count": 13,
+      "evaluation": {
+        "label": "liu_yunes_gw170608_alpha_constraints_2024",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "g8_axis_normalization",
+          "g8_central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty",
+          "projection_to_engine_g8",
+          "cross_covariance_with_alpha",
+          "systematics_budget",
+          "shared_eft_domain",
+          "framework_projection",
+          "discriminator_math"
+        ],
+        "likelihood_summary": {
+          "status": "public_literature_interval_not_g8_likelihood",
+          "contains_g8": false,
+          "public_engine_usable": false,
+          "kind": "alpha_bar_constraints"
+        },
+        "cross_covariance_summary": {
+          "status": "",
+          "acceptable": false,
+          "has_numeric_bound": false
+        },
+        "systematics_summary": {
+          "status": "",
+          "missing_components": [
+            "g8_adapter",
+            "cross_covariance",
+            "eft_truncation",
+            "calibration_or_acceptance",
+            "background_model",
+            "running_or_renormalization"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "framework_projection_summary": {
+          "status": "",
+          "excludes_framework": false,
+          "confidence_sigma": null
+        },
+        "discriminator_summary": {
+          "status": "",
+          "confidence_sigma": null,
+          "excluding": false
+        },
+        "acceptance_ready": false,
+        "claim_ready": false,
+        "acceptance_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "claim_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "status": "g8_sidecar_packet_rejected_or_nonpromoting"
+      }
+    },
+    {
+      "label": "sharp_boundaries_swampland_sum_rules_2021",
+      "source_url": "https://arxiv.org/abs/2102.08951",
+      "source_kind": "primary_theory_bound",
+      "supplies": [
+        "gravity_eft_order_one_bounds",
+        "small_impact_parameter_sum_rule_strategy"
+      ],
+      "missing_for_real_sidecar": [
+        "direct_g8_measurement",
+        "source_specific_engine_g8_jacobian",
+        "public_g8_likelihood",
+        "alpha_cross_covariance",
+        "registered_framework_exclusion_math"
+      ],
+      "acceptance_ready": false,
+      "claim_ready": false,
+      "acceptance_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blocker_count": 13,
+      "evaluation": {
+        "label": "sharp_boundaries_swampland_sum_rules_2021",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "g8_axis_normalization",
+          "g8_central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty",
+          "covariance_or_likelihood",
+          "projection_to_engine_g8",
+          "cross_covariance_with_alpha",
+          "systematics_budget",
+          "shared_eft_domain",
+          "framework_projection",
+          "discriminator_math"
+        ],
+        "likelihood_summary": {
+          "status": "",
+          "contains_g8": false,
+          "public_engine_usable": false
+        },
+        "cross_covariance_summary": {
+          "status": "",
+          "acceptable": false,
+          "has_numeric_bound": false
+        },
+        "systematics_summary": {
+          "status": "",
+          "missing_components": [
+            "g8_adapter",
+            "cross_covariance",
+            "eft_truncation",
+            "calibration_or_acceptance",
+            "background_model",
+            "running_or_renormalization"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "framework_projection_summary": {
+          "status": "",
+          "excludes_framework": false,
+          "confidence_sigma": null
+        },
+        "discriminator_summary": {
+          "status": "",
+          "confidence_sigma": null,
+          "excluding": false
+        },
+        "acceptance_ready": false,
+        "claim_ready": false,
+        "acceptance_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "claim_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "status": "g8_sidecar_packet_rejected_or_nonpromoting"
+      }
+    },
+    {
+      "label": "gwastro_o2_bbh_pe_public_posteriors",
+      "source_url": "https://github.com/gwastro/o2-bbh-pe",
+      "source_kind": "public_posterior_samples",
+      "supplies": [
+        "public_gr_posterior_samples",
+        "reanalysis_run_files"
+      ],
+      "missing_for_real_sidecar": [
+        "allowed_primary_source_url_form",
+        "modified_gravity_g8_samples",
+        "engine_g8_projection",
+        "public_g8_likelihood",
+        "framework_pair_exclusion_math"
+      ],
+      "acceptance_ready": false,
+      "claim_ready": false,
+      "acceptance_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "source_type_not_allowed",
+        "source_url_not_primary_allowed",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blockers": [
+        "cross_covariance_with_alpha_missing",
+        "engine_g8_normalization_missing",
+        "external_numeric_measurement_missing",
+        "framework_pair_exclusion_math_missing",
+        "framework_projection_missing_or_nonexcluding",
+        "g8_systematics_not_closed",
+        "missing_required_fields",
+        "observable_basis_not_g8_high_moment",
+        "projection_to_engine_g8_missing",
+        "public_g8_likelihood_or_covariance_missing",
+        "shared_eft_domain_not_bounded",
+        "source_type_not_allowed",
+        "source_url_not_primary_allowed",
+        "statistical_uncertainty_missing_or_invalid",
+        "systematic_uncertainty_missing_or_invalid"
+      ],
+      "claim_blocker_count": 15,
+      "evaluation": {
+        "label": "gwastro_o2_bbh_pe_public_posteriors",
+        "synthetic_fixture": false,
+        "missing_fields": [
+          "g8_axis_normalization",
+          "g8_central_value_or_bound",
+          "statistical_uncertainty",
+          "systematic_uncertainty",
+          "covariance_or_likelihood",
+          "projection_to_engine_g8",
+          "cross_covariance_with_alpha",
+          "systematics_budget",
+          "shared_eft_domain",
+          "framework_projection",
+          "discriminator_math"
+        ],
+        "likelihood_summary": {
+          "status": "",
+          "contains_g8": false,
+          "public_engine_usable": false
+        },
+        "cross_covariance_summary": {
+          "status": "",
+          "acceptable": false,
+          "has_numeric_bound": false
+        },
+        "systematics_summary": {
+          "status": "",
+          "missing_components": [
+            "g8_adapter",
+            "cross_covariance",
+            "eft_truncation",
+            "calibration_or_acceptance",
+            "background_model",
+            "running_or_renormalization"
+          ],
+          "components_closed": false,
+          "budget_closed": false
+        },
+        "framework_projection_summary": {
+          "status": "",
+          "excludes_framework": false,
+          "confidence_sigma": null
+        },
+        "discriminator_summary": {
+          "status": "",
+          "confidence_sigma": null,
+          "excluding": false
+        },
+        "acceptance_ready": false,
+        "claim_ready": false,
+        "acceptance_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "source_type_not_allowed",
+          "source_url_not_primary_allowed",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "claim_blockers": [
+          "cross_covariance_with_alpha_missing",
+          "engine_g8_normalization_missing",
+          "external_numeric_measurement_missing",
+          "framework_pair_exclusion_math_missing",
+          "framework_projection_missing_or_nonexcluding",
+          "g8_systematics_not_closed",
+          "missing_required_fields",
+          "observable_basis_not_g8_high_moment",
+          "projection_to_engine_g8_missing",
+          "public_g8_likelihood_or_covariance_missing",
+          "shared_eft_domain_not_bounded",
+          "source_type_not_allowed",
+          "source_url_not_primary_allowed",
+          "statistical_uncertainty_missing_or_invalid",
+          "systematic_uncertainty_missing_or_invalid"
+        ],
+        "status": "g8_sidecar_packet_rejected_or_nonpromoting"
+      }
+    }
+  ],
+  "route_status": "current_g8_sidecar_sources_scanned_no_real_packet",
+  "selected_next_build_action": "derive_bresciani_v2_partial_wave_to_engine_g8_projection_audit",
+  "best_next_artifact": "A source-backed projection audit for the Bresciani v2 partial-wave formalism, explicitly determining whether an engine g8 Jacobian can be derived before any numeric measurement is available.",
+  "interpretation": "Current primary/public sources provide useful formalism, public detector data, GW alpha constraints, and GW reanalysis inputs, but none is a real G8 sidecar packet. The closest route is still a formalism adapter, not a claim-ready discriminator."
+}
