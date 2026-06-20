@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (272 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (273 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -321,3 +321,4 @@ Auto-generated front door to the full research program (272 notes). Regenerate w
 | v2.159 | [v2.159 - Public R4 shape likelihood search: no ready packet](2026-06-20-v2.159-r4-public-shape-likelihood-search.md) | v2.158 produced an internal Bresciani R4 shape diagnostic. Is there any public |
 | v2.160 | [v2.160 - R4 shape likelihood manifest: reusable packet gate, no claim](2026-06-20-v2.160-r4-shape-likelihood-packet-manifest.md) | v2.159 found no public R4 shape likelihood packet. Can the engine define a |
 | v2.161 | [v2.161 - Post-R4 likelihood manifest frontier: R4 is top diagnostic ro](2026-06-20-v2.161-post-r4-likelihood-manifest-frontier.md) | After v2.160 made the R4 shape-likelihood packet contract reusable, what is the |
+| v2.162 | [v2.162 - R4 shape likelihood ingestion adapter: implementation-ready, ](2026-06-20-v2.162-r4-shape-likelihood-ingestion-adapter.md) | v2.161 made future public R4 shape-likelihood ingestion the top frontier route. |

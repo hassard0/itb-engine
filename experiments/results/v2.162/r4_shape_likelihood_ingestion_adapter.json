@@ -1,0 +1,208 @@
+{
+  "version": "v2.162",
+  "basis": [
+    "v2.158_bresciani_r4_shape_unitarity_diagnostic",
+    "v2.160_r4_shape_likelihood_packet_manifest",
+    "v2.161_post_r4_likelihood_manifest_frontier"
+  ],
+  "route": "future_public_r4_shape_likelihood_ingestion",
+  "supported_shape_score_axes": [
+    "g_R4_c1",
+    "g_R4_c2",
+    "g_R4_c3"
+  ],
+  "supported_ingestion_likelihood_statuses": [
+    "public_covariance_matrix"
+  ],
+  "synthetic_exact_control": {
+    "packet_id": "synthetic_complete_r4_shape_likelihood_packet",
+    "manifest_evaluation": {
+      "packet_id": "synthetic_complete_r4_shape_likelihood_packet",
+      "likelihood_status": "public_covariance_matrix",
+      "ready_for_engine_likelihood_packet": true,
+      "ready_for_framework_claim": false,
+      "blockers": [
+        "synthetic_control_not_claim_evidence"
+      ],
+      "missing_required_fields": []
+    },
+    "shape_score": {
+      "score_available": true,
+      "axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "reference_shape": {
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.0
+      },
+      "packet_central_values": {
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.0
+      },
+      "residual": {
+        "g_R4_c1": 0.0,
+        "g_R4_c2": 0.0,
+        "g_R4_c3": 0.0
+      },
+      "chi_square_to_string_tree_r4_shape": 0.0,
+      "sigma_distance_to_string_tree_r4_shape": 0.0,
+      "degrees_of_freedom": 3,
+      "inside_one_sigma_shape_tube": true,
+      "blockers": [],
+      "missing_central_axes": []
+    },
+    "synthetic_control": true,
+    "adapter_ingestion_ready": true,
+    "ready_for_shape_likelihood_diagnostic": true,
+    "ready_for_framework_claim": false,
+    "claimable_framework_exclusions": [],
+    "ingestion_blockers": [],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "synthetic_control_not_claim_evidence"
+    ],
+    "route_status": "r4_shape_likelihood_packet_ingestion_ready_nonclaiming"
+  },
+  "synthetic_offset_control": {
+    "packet_id": "synthetic_offset_r4_shape_likelihood_packet",
+    "manifest_evaluation": {
+      "packet_id": "synthetic_offset_r4_shape_likelihood_packet",
+      "likelihood_status": "public_covariance_matrix",
+      "ready_for_engine_likelihood_packet": true,
+      "ready_for_framework_claim": false,
+      "blockers": [
+        "synthetic_control_not_claim_evidence"
+      ],
+      "missing_required_fields": []
+    },
+    "shape_score": {
+      "score_available": true,
+      "axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "reference_shape": {
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.0
+      },
+      "packet_central_values": {
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.1
+      },
+      "residual": {
+        "g_R4_c1": 0.0,
+        "g_R4_c2": 0.0,
+        "g_R4_c3": 0.1
+      },
+      "chi_square_to_string_tree_r4_shape": 1.0,
+      "sigma_distance_to_string_tree_r4_shape": 1.0,
+      "degrees_of_freedom": 3,
+      "inside_one_sigma_shape_tube": true,
+      "blockers": [],
+      "missing_central_axes": []
+    },
+    "synthetic_control": true,
+    "adapter_ingestion_ready": true,
+    "ready_for_shape_likelihood_diagnostic": true,
+    "ready_for_framework_claim": false,
+    "claimable_framework_exclusions": [],
+    "ingestion_blockers": [],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "synthetic_control_not_claim_evidence"
+    ],
+    "route_status": "r4_shape_likelihood_packet_ingestion_ready_nonclaiming"
+  },
+  "current_public_packet_assessments": [
+    {
+      "packet_id": "current_missing_public_r4_likelihood_slot",
+      "manifest_evaluation": {
+        "packet_id": "current_missing_public_r4_likelihood_slot",
+        "likelihood_status": "",
+        "ready_for_engine_likelihood_packet": false,
+        "ready_for_framework_claim": false,
+        "blockers": [
+          "axis_mapping",
+          "axis_mapping_not_bresciani_r4",
+          "axis_normalization_not_declared",
+          "domain",
+          "domain_not_shared_with_query_row",
+          "excluding_discriminator_math_missing",
+          "likelihood",
+          "likelihood_central_values_missing",
+          "likelihood_status_not_public_engine_usable",
+          "normalization",
+          "provenance",
+          "public_likelihood_or_covariance_missing",
+          "reproducible_data_or_code_missing",
+          "source_type",
+          "source_url",
+          "systematics",
+          "systematics_not_declared",
+          "target_axes",
+          "target_axes_incomplete"
+        ],
+        "missing_required_fields": [
+          "axis_mapping",
+          "domain",
+          "likelihood",
+          "normalization",
+          "provenance",
+          "source_type",
+          "source_url",
+          "systematics",
+          "target_axes"
+        ]
+      },
+      "shape_score": {
+        "score_available": false,
+        "axes": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "blockers": [
+          "central_shape_values_missing",
+          "likelihood_axes_missing_for_covariance",
+          "likelihood_status_not_supported_by_shape_score"
+        ],
+        "missing_central_axes": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ]
+      },
+      "synthetic_control": false,
+      "adapter_ingestion_ready": false,
+      "ready_for_shape_likelihood_diagnostic": false,
+      "ready_for_framework_claim": false,
+      "claimable_framework_exclusions": [],
+      "ingestion_blockers": [
+        "manifest_packet_gate_failed",
+        "shape_likelihood_score_unavailable"
+      ],
+      "claim_blockers": [
+        "adapter_ingestion_not_ready",
+        "external_adversarial_review_missing",
+        "framework_claim_controls_disabled"
+      ],
+      "route_status": "r4_shape_likelihood_packet_ingestion_blocked"
+    }
+  ],
+  "ready_public_r4_likelihood_packets_now": [],
+  "claimable_framework_exclusions_now": [],
+  "claimable_discriminator_now": false,
+  "route_status": "r4_shape_likelihood_ingestion_adapter_ready_no_public_packet",
+  "selected_next_build_action": "wire_real_public_r4_shape_likelihood_packet_when_source_exists",
+  "best_next_artifact": "A real public packet satisfying the v2.160 manifest with a covariance over g_R4_c1, g_R4_c2, and g_R4_c3. The adapter will score it against the registered string-tree R4 shape but will still require adversarial review before any framework claim.",
+  "interpretation": "The R4 likelihood route is now implementation-ready: a future packet can be loaded, manifest-gated, and scored against the Bresciani shape diagnostic. The current public slot remains empty, so no claimable discriminator exists."
+}
