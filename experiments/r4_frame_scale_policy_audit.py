@@ -1,0 +1,309 @@
+"""Audit source support for a four-dimensional R4 frame and Lambda scale policy."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+from typing import Any
+
+sys.path.insert(0, ".")
+from experiments.explicit_tower_basis import _json_default
+from experiments.gw_alpha_prior_reweight_sweep import canonicalize_json_floats
+from experiments.r4_lambda_unit_policy import NUMERIC_CLAIM_BLOCKERS
+from experiments.r4_symbolic_lambda_query_attachment import (
+    query_r4_symbolic_lambda_surface,
+)
+
+
+VERSION = "v2.156"
+
+FRAME_SCALE_REQUIREMENTS = (
+    "four_dimensional_einstein_or_string_frame_choice",
+    "field_redefinition_policy_for_R4_basis",
+    "compactification_or_planck_normalization_policy",
+    "alpha_prime_to_engine_Lambda_R4_ratio",
+    "kappa_normalization_in_four_dimensions",
+    "measurement_likelihood_over_engine_R4_axes",
+)
+
+
+def frame_scale_source_inputs() -> list[dict[str, Any]]:
+    return [
+        {
+            "source_id": "bresciani_levati_paradisi_2025_spin2_target",
+            "url": "https://arxiv.org/abs/2504.12855",
+            "source_role": "four-dimensional spin-2 amplitude target basis",
+            "provides": [
+                "Bresciani c_i spin-2 Riemann4 target coordinates",
+                "partial-wave/positivity context for spin-2 amplitudes",
+            ],
+            "does_not_provide": [
+                "type-II string alpha-prime normalization",
+                "compactification-dependent Planck/string scale relation",
+                "engine Lambda_R4 numeric convention",
+            ],
+            "machine_usable": True,
+        },
+        {
+            "source_id": "kallosh_lee_rube_2008_r4_helicity_shape",
+            "url": "https://arxiv.org/abs/0811.3417",
+            "source_role": "four-dimensional supersymmetric R4 helicity shape",
+            "provides": [
+                "K_plus=1, K_minus=0 shape used by v2.144",
+                "on-shell four-graviton R4 counterterm component",
+            ],
+            "does_not_provide": [
+                "string alpha-prime coefficient",
+                "Lambda_R4 scale value",
+                "measurement likelihood over R4 axes",
+            ],
+            "machine_usable": True,
+        },
+        {
+            "source_id": "russo_1997_type_iib_virasoro_shapiro",
+            "url": "https://arxiv.org/abs/hep-th/9707241",
+            "source_role": "type-IIB four-graviton low-energy scalar expansion",
+            "provides": [
+                "2*zeta(3) R4 contact scalar",
+                "barred Mandelstam definition alpha_prime*s/4",
+                "raw alpha_prime/kappa dependence rederived in v2.153",
+            ],
+            "does_not_provide": [
+                "four-dimensional compactification frame policy",
+                "Bresciani-axis measurement likelihood",
+            ],
+            "machine_usable": True,
+        },
+        {
+            "source_id": "peeters_vanhove_westerberg_2000_higher_derivative_actions",
+            "url": "https://arxiv.org/abs/hep-th/0010167",
+            "source_role": "higher-dimensional supersymmetric R4 action context",
+            "provides": [
+                "supersymmetric higher-derivative R4 action context",
+                "ten/eleven-dimensional higher-curvature source family",
+            ],
+            "does_not_provide": [
+                "unique four-dimensional truncation for this engine axis",
+                "field-redefinition policy into Bresciani c_i coordinates",
+                "numeric Lambda_R4 scale",
+            ],
+            "machine_usable": True,
+        },
+        {
+            "source_id": "peeters_vanhove_westerberg_2003_review",
+            "url": "https://arxiv.org/abs/hep-th/0312211",
+            "source_role": "review of string effective actions beyond leading order",
+            "provides": [
+                "context for known higher-derivative string effective actions",
+            ],
+            "does_not_provide": [
+                "single compactification-independent R4 Wilson coefficient",
+                "engine Lambda_R4 numeric policy",
+            ],
+            "machine_usable": True,
+        },
+    ]
+
+
+def frame_scale_policy_requirements() -> list[dict[str, Any]]:
+    return [
+        {
+            "requirement": requirement,
+            "status": "missing",
+            "claim_blocker": requirement,
+        }
+        for requirement in FRAME_SCALE_REQUIREMENTS
+    ]
+
+
+def candidate_frame_scale_policies() -> list[dict[str, Any]]:
+    symbolic_row = query_r4_symbolic_lambda_surface(
+        "string_tree_eft",
+        "gravity_R4_Riemann4",
+    )
+    return [
+        {
+            "candidate": "symbolic_lambda_r4_sidecar_v1",
+            "source_backed_symbolic_policy": True,
+            "ready_for_internal_symbolic_query": (
+                symbolic_row["ready_for_internal_symbolic_query"]
+            ),
+            "ready_for_numeric_engine_lambda_r4": False,
+            "ready_for_framework_claim": False,
+            "satisfies_requirements": [],
+            "missing_requirements": list(FRAME_SCALE_REQUIREMENTS),
+            "interpretation": (
+                "Best current policy. It preserves alpha_prime, kappa, and "
+                "Lambda_R4 symbolically but deliberately refuses numeric "
+                "Wilson export."
+            ),
+        },
+        {
+            "candidate": "direct_type_II_alpha_prime_to_engine_lambda_r4",
+            "source_backed_symbolic_policy": True,
+            "ready_for_internal_symbolic_query": True,
+            "ready_for_numeric_engine_lambda_r4": False,
+            "ready_for_framework_claim": False,
+            "satisfies_requirements": [
+                "raw_type_II_R4_contact_scalar",
+                "barred_mandelstam_alpha_prime_convention",
+            ],
+            "missing_requirements": [
+                "four_dimensional_einstein_or_string_frame_choice",
+                "field_redefinition_policy_for_R4_basis",
+                "compactification_or_planck_normalization_policy",
+                "alpha_prime_to_engine_Lambda_R4_ratio",
+                "kappa_normalization_in_four_dimensions",
+                "measurement_likelihood_over_engine_R4_axes",
+            ],
+            "interpretation": (
+                "Russo fixes the string amplitude scalar, but not the "
+                "compactification and field-basis choices needed by the "
+                "engine's four-dimensional R4 axis."
+            ),
+        },
+        {
+            "candidate": "bresciani_target_axis_as_scale_policy",
+            "source_backed_symbolic_policy": True,
+            "ready_for_internal_symbolic_query": True,
+            "ready_for_numeric_engine_lambda_r4": False,
+            "ready_for_framework_claim": False,
+            "satisfies_requirements": [
+                "four_dimensional_spin2_target_axis",
+                "Bresciani_c_i_coordinate_contract",
+            ],
+            "missing_requirements": [
+                "type_II_alpha_prime_normalization",
+                "compactification_or_planck_normalization_policy",
+                "field_redefinition_policy_for_string_R4_to_Bresciani_basis",
+                "measurement_likelihood_over_engine_R4_axes",
+            ],
+            "interpretation": (
+                "The target axis is real and useful, but it is not a source "
+                "for the type-II string-to-engine scale conversion."
+            ),
+        },
+        {
+            "candidate": "kallosh_shape_unit_as_scale_policy",
+            "source_backed_symbolic_policy": True,
+            "ready_for_internal_symbolic_query": True,
+            "ready_for_numeric_engine_lambda_r4": False,
+            "ready_for_framework_claim": False,
+            "satisfies_requirements": [
+                "four_dimensional_R4_helicity_shape",
+                "relative_shape_unit",
+            ],
+            "missing_requirements": [
+                "absolute_type_II_string_alpha_prime_coefficient",
+                "alpha_prime_to_engine_Lambda_R4_ratio",
+                "measurement_likelihood_over_engine_R4_axes",
+            ],
+            "interpretation": (
+                "The Kallosh shape unit remains a safe internal convention, "
+                "not a numeric Lambda_R4 scale."
+            ),
+        },
+    ]
+
+
+def evaluate_frame_scale_candidate(candidate: dict[str, Any]) -> dict[str, Any]:
+    missing = set(candidate.get("missing_requirements", []))
+    missing.update(NUMERIC_CLAIM_BLOCKERS)
+    ready_numeric = (
+        candidate.get("ready_for_numeric_engine_lambda_r4") is True
+        and not missing
+    )
+    return canonicalize_json_floats({
+        "candidate": candidate["candidate"],
+        "ready_for_internal_symbolic_query": (
+            candidate["ready_for_internal_symbolic_query"] is True
+        ),
+        "ready_for_numeric_engine_lambda_r4": ready_numeric,
+        "ready_for_framework_claim": False,
+        "satisfies_requirements": candidate.get("satisfies_requirements", []),
+        "missing_requirements": sorted(missing),
+        "interpretation": candidate["interpretation"],
+    })
+
+
+def diagnose_r4_frame_scale_policy_audit() -> dict[str, Any]:
+    candidates = candidate_frame_scale_policies()
+    evaluations = {
+        candidate["candidate"]: evaluate_frame_scale_candidate(candidate)
+        for candidate in candidates
+    }
+    symbolic_ready = [
+        name for name, row in evaluations.items()
+        if row["ready_for_internal_symbolic_query"]
+    ]
+    numeric_ready = [
+        name for name, row in evaluations.items()
+        if row["ready_for_numeric_engine_lambda_r4"]
+    ]
+    blockers = sorted({
+        blocker
+        for row in evaluations.values()
+        for blocker in row["missing_requirements"]
+    })
+
+    return canonicalize_json_floats({
+        "version": VERSION,
+        "basis": [
+            "v2.155_r4_symbolic_lambda_query_attachment",
+            "v2.154_r4_lambda_unit_policy",
+            "primary_r4_frame_scale_source_audit",
+        ],
+        "source_inputs": frame_scale_source_inputs(),
+        "frame_scale_policy_requirements": frame_scale_policy_requirements(),
+        "candidate_frame_scale_policies": candidates,
+        "evaluations": evaluations,
+        "symbolic_policy_ready_candidates": symbolic_ready,
+        "numeric_lambda_r4_ready_candidates": numeric_ready,
+        "ready_four_dimensional_frame_policy": False,
+        "ready_numeric_lambda_r4_scale_policy": False,
+        "ready_for_framework_claim": False,
+        "claimable_framework_exclusions_now": [],
+        "current_claim_blockers": blockers,
+        "route_status": "r4_frame_scale_policy_audit_symbolic_only",
+        "selected_next_build_action": (
+            "design_compactification_agnostic_r4_observable_or_measurement_route"
+        ),
+        "best_next_artifact": (
+            "A compactification-agnostic observable route or public "
+            "measurement-likelihood search that does not require collapsing "
+            "the unresolved alpha-prime/kappa/Lambda_R4 scale relation."
+        ),
+        "interpretation": (
+            "The current primary sources support a symbolic ledger and a "
+            "four-dimensional target basis, but not a unique numeric engine "
+            "Lambda_R4 scale. A claim-ready R4 coefficient needs additional "
+            "frame, field-redefinition, compactification, and measurement "
+            "inputs."
+        ),
+    })
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--out",
+        default="experiments/results/v2.156/r4_frame_scale_policy_audit.json",
+    )
+    args = parser.parse_args()
+
+    result = diagnose_r4_frame_scale_policy_audit()
+    out_path = Path(args.out)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(
+        json.dumps(result, indent=2, default=_json_default),
+        encoding="utf-8",
+        newline="\n",
+    )
+    print(json.dumps(result, indent=2, default=_json_default))
+    print(f"wrote {out_path}")
+
+
+if __name__ == "__main__":
+    main()

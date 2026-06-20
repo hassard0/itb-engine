@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (266 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (267 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -315,3 +315,4 @@ Auto-generated front door to the full research program (266 notes). Regenerate w
 | v2.153 | [v2.153 - Virasoro-Shapiro K bridge rederivation rejects absolute R4 br](2026-06-20-v2.153-virasoro-shapiro-k-bridge-rederivation.md) | v2.152 confirmed Gross-Witten metadata but could not ingest a machine-readable |
 | v2.154 | [v2.154 - Symbolic Lambda_R4 policy: alpha-prime tracked, claims blocke](2026-06-20-v2.154-r4-lambda-unit-policy.md) | v2.153 rederived the open Virasoro-Shapiro/Russo bridge and showed that the |
 | v2.155 | [v2.155 - R4 symbolic Lambda query attachment: diagnostics exposed, cla](2026-06-20-v2.155-r4-symbolic-lambda-query-attachment.md) | v2.154 defined a symbolic `Lambda_R4` policy for the unresolved |
+| v2.156 | [v2.156 - R4 frame and Lambda scale audit: symbolic only, numeric scale](2026-06-20-v2.156-r4-frame-scale-policy-audit.md) | v2.155 exposed the symbolic R4 normalization ledger in the query surface. Can |
