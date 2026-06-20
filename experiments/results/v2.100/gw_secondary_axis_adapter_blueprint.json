@@ -1,0 +1,221 @@
+{
+  "version": "v2.100",
+  "basis": [
+    "v2.99_g8_joint_source_discovery_queue",
+    "arXiv_2407.08929_gw170608_higher_curvature_constraints",
+    "arXiv_2507.17143_eft_observation_dictionary"
+  ],
+  "adapter_scope": "public_gw_reanalysis_secondary_axis",
+  "required_adapter_fields": [
+    "label",
+    "source_url",
+    "source_model",
+    "event",
+    "source_parameters",
+    "parameter_constraints",
+    "operator_dictionary",
+    "engine_axis_target",
+    "source_to_engine_jacobian",
+    "likelihood_export",
+    "systematics_budget",
+    "shared_eft_domain",
+    "validation_reference",
+    "synthetic_fixture"
+  ],
+  "valid_engine_secondary_axes": [
+    "g_C",
+    "g_R2"
+  ],
+  "sample_packet_count": 3,
+  "adapter_ready_sample_packets": [
+    "synthetic_ready_gw_secondary_axis_adapter"
+  ],
+  "claim_ready_sample_packets": [],
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "engine_axis_likelihood_export_missing": 2,
+    "missing_required_fields": 2,
+    "shared_eft_domain_not_bounded": 2,
+    "source_parameter_constraints_incomplete": 1,
+    "source_to_engine_jacobian_missing": 2,
+    "synthetic_fixture_not_real_source": 1,
+    "systematics_not_closed": 2
+  },
+  "evaluations": [
+    {
+      "label": "synthetic_ready_gw_secondary_axis_adapter",
+      "source_url": "https://doi.org/10.0000/synthetic-gw-secondary-axis",
+      "event": "GW170608",
+      "engine_axis_target": "g_C",
+      "synthetic_fixture": true,
+      "missing_fields": [],
+      "constraints_summary": {
+        "parameters_present": [
+          "alpha_bar_1",
+          "alpha_bar_2"
+        ],
+        "parameters_missing": [],
+        "all_parameters_have_numeric_constraints": true
+      },
+      "jacobian_summary": {
+        "present": true,
+        "target_axis_matches": true,
+        "parameters_covered": [
+          "alpha_bar_1",
+          "alpha_bar_2"
+        ],
+        "parameters_missing": [],
+        "numeric": true,
+        "normalization_source_url": "https://doi.org/10.0000/synthetic-gc-normalization"
+      },
+      "likelihood_summary": {
+        "status": "public_engine_usable",
+        "contains_target_axis": true,
+        "engine_usable": true,
+        "kind": "gaussianized_source_constraints"
+      },
+      "systematics_summary": {
+        "status": "bounded",
+        "missing_components": [],
+        "components_closed": true,
+        "budget_closed": true
+      },
+      "adapter_ready": true,
+      "claim_ready": false,
+      "adapter_blockers": [],
+      "claim_blockers": [
+        "synthetic_fixture_not_real_source"
+      ],
+      "status": "gw_secondary_axis_adapter_rejected_or_nonpromoting"
+    },
+    {
+      "label": "liu_yunes_gw170608_paper_summary_adapter_candidate",
+      "source_url": "https://arxiv.org/abs/2407.08929",
+      "event": "GW170608",
+      "engine_axis_target": "g_C",
+      "synthetic_fixture": false,
+      "missing_fields": [
+        "source_to_engine_jacobian"
+      ],
+      "constraints_summary": {
+        "parameters_present": [
+          "alpha_bar_1",
+          "alpha_bar_2"
+        ],
+        "parameters_missing": [],
+        "all_parameters_have_numeric_constraints": true
+      },
+      "jacobian_summary": {
+        "present": false,
+        "target_axis_matches": false,
+        "parameters_covered": [],
+        "parameters_missing": [
+          "alpha_bar_1",
+          "alpha_bar_2"
+        ],
+        "numeric": false
+      },
+      "likelihood_summary": {
+        "status": "paper_summary_constraints_only",
+        "contains_target_axis": false,
+        "engine_usable": false,
+        "kind": "abstract_level_interval_summary"
+      },
+      "systematics_summary": {
+        "status": "published_bayesian_analysis_not_engine_axis_budget",
+        "missing_components": [
+          "waveform_systematics",
+          "detector_calibration",
+          "prior_sensitivity",
+          "eft_truncation",
+          "numerical_relativity_calibration"
+        ],
+        "components_closed": false,
+        "budget_closed": false
+      },
+      "adapter_ready": false,
+      "claim_ready": false,
+      "adapter_blockers": [
+        "engine_axis_likelihood_export_missing",
+        "missing_required_fields",
+        "shared_eft_domain_not_bounded",
+        "source_to_engine_jacobian_missing",
+        "systematics_not_closed"
+      ],
+      "claim_blockers": [
+        "engine_axis_likelihood_export_missing",
+        "missing_required_fields",
+        "shared_eft_domain_not_bounded",
+        "source_to_engine_jacobian_missing",
+        "systematics_not_closed"
+      ],
+      "status": "gw_secondary_axis_adapter_rejected_or_nonpromoting"
+    },
+    {
+      "label": "bernard_dictionary_only_adapter_candidate",
+      "source_url": "https://arxiv.org/abs/2507.17143",
+      "event": "not_event_specific",
+      "engine_axis_target": "g_C",
+      "synthetic_fixture": false,
+      "missing_fields": [
+        "source_parameters",
+        "parameter_constraints",
+        "source_to_engine_jacobian",
+        "likelihood_export",
+        "systematics_budget"
+      ],
+      "constraints_summary": {
+        "parameters_present": [],
+        "parameters_missing": [],
+        "all_parameters_have_numeric_constraints": false
+      },
+      "jacobian_summary": {
+        "present": false,
+        "target_axis_matches": false,
+        "parameters_covered": [],
+        "parameters_missing": [],
+        "numeric": false
+      },
+      "likelihood_summary": {
+        "status": "",
+        "contains_target_axis": false,
+        "engine_usable": false
+      },
+      "systematics_summary": {
+        "status": "",
+        "missing_components": [
+          "waveform_systematics",
+          "detector_calibration",
+          "prior_sensitivity",
+          "eft_truncation",
+          "numerical_relativity_calibration"
+        ],
+        "components_closed": false,
+        "budget_closed": false
+      },
+      "adapter_ready": false,
+      "claim_ready": false,
+      "adapter_blockers": [
+        "engine_axis_likelihood_export_missing",
+        "missing_required_fields",
+        "shared_eft_domain_not_bounded",
+        "source_parameter_constraints_incomplete",
+        "source_to_engine_jacobian_missing",
+        "systematics_not_closed"
+      ],
+      "claim_blockers": [
+        "engine_axis_likelihood_export_missing",
+        "missing_required_fields",
+        "shared_eft_domain_not_bounded",
+        "source_parameter_constraints_incomplete",
+        "source_to_engine_jacobian_missing",
+        "systematics_not_closed"
+      ],
+      "status": "gw_secondary_axis_adapter_rejected_or_nonpromoting"
+    }
+  ],
+  "route_status": "gw_secondary_axis_adapter_blueprint_ready_no_real_jacobian",
+  "selected_next_build_action": "derive_source_to_engine_jacobian_for_alpha_bar_to_g_C_or_g_R2",
+  "best_next_artifact": "A source-backed Jacobian from alpha_bar_1/alpha_bar_2 to an engine secondary axis, plus an engine-usable likelihood export.",
+  "interpretation": "The public-GW secondary-axis adapter is now executable. The Liu-Yunes GW170608 source supplies useful numeric alpha constraints, but it is not yet an engine-axis packet because the source-to-engine Jacobian and engine likelihood export are missing."
+}

@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (210 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (211 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -259,3 +259,4 @@ Auto-generated front door to the full research program (210 notes). Regenerate w
 | v2.97 | [v2.97 - g8 secondary-axis targets: near-degeneracy has a joint route](2026-06-20-v2.97-g8-secondary-axis-targets.md) | v2.97 maps the tightest eligible g8 near-degeneracy to secondary-axis targets, showing g_R2 and g_C joint packets could relax the single-axis precision requirement. |
 | v2.98 | [v2.98 - g8 joint-packet acceptance gate: executable route, no real packet](2026-06-20-v2.98-g8-joint-packet-acceptance-gate.md) | v2.98 adds an executable gate for future g8+g_C or g8+g_R2 packets, accepting only schema- and precision-complete packets while keeping synthetic fixtures non-claimable. |
 | v2.99 | [v2.99 - g8 joint-source discovery queue: next adapter build selected](2026-06-20-v2.99-g8-joint-source-discovery-queue.md) | v2.99 ranks current public sources and turns the missing joint packet into concrete adapter build routes, selecting the GW170608 public-reanalysis secondary-axis path next. |
+| v2.100 | [v2.100 - GW secondary-axis adapter blueprint: real constraints, no engine Jacobian](2026-06-20-v2.100-gw-secondary-axis-adapter-blueprint.md) | v2.100 builds the selected public-GW secondary-axis adapter interface, accepting synthetic complete packets while rejecting current GW170608 constraints until a source-to-engine Jacobian and engine likelihood export exist. |
