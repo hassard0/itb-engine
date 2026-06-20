@@ -1,0 +1,407 @@
+{
+  "version": "v2.172",
+  "basis": [
+    "v2.50_weyl_g8_discriminator_frontier",
+    "v2.51_weyl_g8_observable_sourceability",
+    "v2.98_g8_joint_packet_acceptance_gate",
+    "v2.99_g8_joint_source_discovery_queue"
+  ],
+  "route": "weyl_g8_joint_frontier",
+  "contract": {
+    "version": "v2.172",
+    "route": "weyl_g8_joint_frontier",
+    "external_object": "joint_engine_gC_g8_likelihood",
+    "target_axes": [
+      "g_8",
+      "g_C"
+    ],
+    "base_joint_packet_fields": [
+      "label",
+      "route",
+      "source_url",
+      "source_type",
+      "axes",
+      "framework_pair",
+      "central_values",
+      "statistical_uncertainties",
+      "systematic_uncertainties",
+      "axis_normalizations",
+      "axis_projections",
+      "covariance_or_likelihood",
+      "systematics_budget",
+      "shared_eft_domain",
+      "secondary_axis",
+      "discriminator_math",
+      "synthetic_fixture"
+    ],
+    "weyl_extension_fields": [
+      "frontier_route",
+      "weyl_frontier_basis",
+      "engine_g_c_packet",
+      "engine_g8_packet",
+      "joint_covariance_or_likelihood",
+      "cross_axis_correlation_model",
+      "framework_projection_matrix",
+      "joint_exclusion_statistic",
+      "look_elsewhere_or_scan_policy",
+      "source_reanalysis_package",
+      "claim_controls"
+    ],
+    "source_reanalysis_required_fields": [
+      "public_data_or_samples",
+      "analysis_code_or_likelihood_sampler",
+      "observable_or_waveform_model",
+      "nuisance_parameter_policy",
+      "reproducibility_instructions"
+    ],
+    "claim_control_fields": [
+      "claim_use_allowed",
+      "framework_claim_allowed",
+      "external_adversarial_review_complete"
+    ],
+    "base_gate": "v2.98_g8_joint_packet_acceptance_gate",
+    "source_url_policy": "https://arxiv.org/, https://doi.org/, or public data/code release",
+    "claim_rule": "A packet may become Weyl/G8-engine-ready only after the v2.98 joint packet gate and this frontier extension pass. Framework claims remain disabled until external adversarial review completes."
+  },
+  "base_joint_gate_status": "v2.98_g8_joint_packet_gate_ready_no_real_packet",
+  "selected_source_queue_build_route": "gw_reanalysis_to_joint_secondary_packet",
+  "synthetic_control_evaluation": {
+    "label": "synthetic_ready_weyl_g8_dual_likelihood_packet",
+    "base_joint_packet_evaluation": {
+      "label": "synthetic_ready_weyl_g8_dual_likelihood_packet",
+      "route": "g8_joint_secondary_axis_measurement_design",
+      "synthetic_fixture": true,
+      "secondary_axis": "g_C",
+      "framework_pair": [
+        "discovered_data_driven",
+        "string_tree_eft"
+      ],
+      "expected_framework_pair": [
+        "discovered_data_driven",
+        "string_tree_eft"
+      ],
+      "missing_fields": [],
+      "missing_numeric_axes": [],
+      "required_axes": [
+        "g_8",
+        "g_C"
+      ],
+      "g8_total_uncertainty": 0.001118033989,
+      "g8_required_total_sigma": 0.002,
+      "secondary_axis_total_uncertainty": 0.031622776602,
+      "secondary_axis_required_total_sigma": 0.050836956522,
+      "likelihood_summary": {
+        "status": "public_engine_usable",
+        "contains_required_axes": true,
+        "engine_usable": true,
+        "kind": "joint_gaussian_likelihood"
+      },
+      "systematics_summary": {
+        "status": "bounded",
+        "missing_components": [],
+        "components_closed": true,
+        "budget_closed": true
+      },
+      "acceptance_ready": true,
+      "claim_ready": false,
+      "acceptance_blockers": [],
+      "claim_blockers": [
+        "synthetic_fixture_not_real_source"
+      ],
+      "status": "g8_joint_packet_rejected_or_nonpromoting"
+    },
+    "weyl_extension_evaluation": {
+      "ready_for_weyl_g8_extension": true,
+      "missing_weyl_extension_fields": [],
+      "missing_source_reanalysis_fields": [],
+      "missing_claim_controls": [],
+      "extension_blockers": []
+    },
+    "synthetic_control": true,
+    "ready_for_weyl_g8_dual_likelihood": true,
+    "ready_for_framework_claim": false,
+    "claimable_framework_exclusions": [],
+    "packet_blockers": [],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "synthetic_control_not_claim_evidence"
+    ],
+    "route_status": "weyl_g8_dual_likelihood_ready_nonclaiming"
+  },
+  "current_missing_packet_slot_evaluation": {
+    "label": "current_missing_weyl_g8_dual_likelihood_slot",
+    "base_joint_packet_evaluation": {
+      "label": "current_missing_weyl_g8_dual_likelihood_slot",
+      "route": "g8_joint_secondary_axis_measurement_design",
+      "synthetic_fixture": false,
+      "secondary_axis": "g_C",
+      "framework_pair": [],
+      "expected_framework_pair": [
+        "discovered_data_driven",
+        "string_tree_eft"
+      ],
+      "missing_fields": [
+        "source_url",
+        "source_type",
+        "framework_pair",
+        "central_values",
+        "statistical_uncertainties",
+        "systematic_uncertainties",
+        "axis_normalizations",
+        "axis_projections",
+        "covariance_or_likelihood",
+        "systematics_budget",
+        "shared_eft_domain",
+        "discriminator_math"
+      ],
+      "missing_numeric_axes": [
+        "g_8",
+        "g_C"
+      ],
+      "required_axes": [
+        "g_8",
+        "g_C"
+      ],
+      "g8_total_uncertainty": null,
+      "g8_required_total_sigma": 0.002,
+      "secondary_axis_total_uncertainty": null,
+      "secondary_axis_required_total_sigma": 0.050836956522,
+      "likelihood_summary": {
+        "status": "",
+        "contains_required_axes": false,
+        "engine_usable": false
+      },
+      "systematics_summary": {
+        "status": "",
+        "missing_components": [
+          "g8_adapter",
+          "secondary_axis_adapter",
+          "cross_covariance",
+          "eft_truncation",
+          "calibration",
+          "background_model"
+        ],
+        "components_closed": false,
+        "budget_closed": false
+      },
+      "acceptance_ready": false,
+      "claim_ready": false,
+      "acceptance_blockers": [
+        "cross_axis_mixing_not_controlled",
+        "discriminator_math_not_pair_excluding",
+        "framework_pair_not_targeted",
+        "g8_normalization_not_engine",
+        "g8_projection_missing",
+        "g8_uncertainty_missing_or_unusable",
+        "missing_joint_likelihood_or_covariance",
+        "missing_joint_numeric_measurement",
+        "missing_required_fields",
+        "secondary_axis_normalization_not_engine",
+        "secondary_axis_projection_missing",
+        "secondary_axis_uncertainty_missing_or_unusable",
+        "shared_eft_domain_not_bounded",
+        "systematics_not_closed"
+      ],
+      "claim_blockers": [
+        "cross_axis_mixing_not_controlled",
+        "discriminator_math_not_pair_excluding",
+        "framework_pair_not_targeted",
+        "g8_normalization_not_engine",
+        "g8_projection_missing",
+        "g8_uncertainty_missing_or_unusable",
+        "missing_joint_likelihood_or_covariance",
+        "missing_joint_numeric_measurement",
+        "missing_required_fields",
+        "secondary_axis_normalization_not_engine",
+        "secondary_axis_projection_missing",
+        "secondary_axis_uncertainty_missing_or_unusable",
+        "shared_eft_domain_not_bounded",
+        "systematics_not_closed"
+      ],
+      "status": "g8_joint_packet_rejected_or_nonpromoting"
+    },
+    "weyl_extension_evaluation": {
+      "ready_for_weyl_g8_extension": false,
+      "missing_weyl_extension_fields": [
+        "cross_axis_correlation_model",
+        "engine_g8_packet",
+        "engine_g_c_packet",
+        "framework_projection_matrix",
+        "joint_covariance_or_likelihood",
+        "joint_exclusion_statistic",
+        "look_elsewhere_or_scan_policy",
+        "source_reanalysis_package",
+        "weyl_frontier_basis"
+      ],
+      "missing_source_reanalysis_fields": [
+        "analysis_code_or_likelihood_sampler",
+        "nuisance_parameter_policy",
+        "observable_or_waveform_model",
+        "public_data_or_samples",
+        "reproducibility_instructions"
+      ],
+      "missing_claim_controls": [],
+      "extension_blockers": [
+        "cross_axis_correlation_model",
+        "cross_axis_correlation_model_missing",
+        "engine_g8_packet",
+        "engine_g8_packet_missing",
+        "engine_g_c_packet",
+        "engine_g_c_packet_missing",
+        "framework_projection_matrix",
+        "framework_projection_matrix_missing",
+        "joint_covariance_or_likelihood",
+        "joint_covariance_or_likelihood_missing",
+        "joint_exclusion_statistic",
+        "joint_exclusion_statistic_missing",
+        "look_elsewhere_or_scan_policy",
+        "look_elsewhere_or_scan_policy_missing",
+        "source_reanalysis_package",
+        "source_reanalysis_package_missing",
+        "weyl_frontier_basis",
+        "weyl_frontier_basis_missing"
+      ]
+    },
+    "synthetic_control": false,
+    "ready_for_weyl_g8_dual_likelihood": false,
+    "ready_for_framework_claim": false,
+    "claimable_framework_exclusions": [],
+    "packet_blockers": [
+      "base_g8_gc_joint_gate_failed",
+      "weyl_g8_extension_gate_failed"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "weyl_g8_dual_likelihood_not_ready"
+    ],
+    "route_status": "weyl_g8_dual_likelihood_blocked"
+  },
+  "current_source_gap_rows": [
+    {
+      "label": "bernard_eft_gravitational_wave_dictionary_2025",
+      "source_url": "https://arxiv.org/abs/2507.17143",
+      "source_type": "primary_theory_dictionary",
+      "potential_axes": [
+        "g_C",
+        "g_R2"
+      ],
+      "g8_axis_candidate": false,
+      "g_c_axis_candidate": true,
+      "fills_weyl_g8_contract_now": false,
+      "missing_gate_capabilities": [
+        "closed_systematics_budget",
+        "engine_axis_jacobian",
+        "g8_axis_component",
+        "numeric_event_likelihood"
+      ],
+      "contract_gap_count": 4
+    },
+    {
+      "label": "gwastro_o2_bbh_posterior_release",
+      "source_url": "https://github.com/gwastro/o2-bbh-pe",
+      "source_type": "public_posterior_samples",
+      "potential_axes": [
+        "g_C",
+        "g_R2"
+      ],
+      "g8_axis_candidate": false,
+      "g_c_axis_candidate": true,
+      "fills_weyl_g8_contract_now": false,
+      "missing_gate_capabilities": [
+        "framework_pair_exclusion_math",
+        "g8_axis_component",
+        "joint_engine_covariance",
+        "modified_gravity_engine_axis_samples"
+      ],
+      "contract_gap_count": 4
+    },
+    {
+      "label": "bresciani_partial_wave_unitarity_bounds_2025",
+      "source_url": "https://arxiv.org/abs/2504.12855",
+      "source_type": "primary_theory_formalism",
+      "potential_axes": [
+        "g_8"
+      ],
+      "g8_axis_candidate": true,
+      "g_c_axis_candidate": false,
+      "fills_weyl_g8_contract_now": false,
+      "missing_gate_capabilities": [
+        "engine_g8_normalization",
+        "external_numeric_measurement",
+        "framework_pair_exclusion_math",
+        "joint_likelihood_or_covariance",
+        "secondary_axis_measurement"
+      ],
+      "contract_gap_count": 5
+    },
+    {
+      "label": "gwosc_gw170608_open_data_release",
+      "source_url": "https://gwosc.org/GWTC-1/",
+      "source_type": "public_data_product",
+      "potential_axes": [
+        "g_C",
+        "g_R2",
+        "g_8"
+      ],
+      "g8_axis_candidate": true,
+      "g_c_axis_candidate": true,
+      "fills_weyl_g8_contract_now": false,
+      "missing_gate_capabilities": [
+        "closed_systematics_budget",
+        "engine_axis_normalization",
+        "framework_pair_exclusion_math",
+        "modified_gravity_waveform_adapter",
+        "public_joint_likelihood"
+      ],
+      "contract_gap_count": 5
+    },
+    {
+      "label": "liu_yunes_gw170608_higher_curvature_eft_2024",
+      "source_url": "https://arxiv.org/abs/2407.08929",
+      "source_type": "primary_measurement_analysis",
+      "potential_axes": [
+        "g_C",
+        "g_R2"
+      ],
+      "g8_axis_candidate": false,
+      "g_c_axis_candidate": true,
+      "fills_weyl_g8_contract_now": false,
+      "missing_gate_capabilities": [
+        "engine_axis_normalization_to_g_C_or_g_R2",
+        "framework_pair_exclusion_math",
+        "joint_g8_component",
+        "public_engine_joint_covariance",
+        "shared_g8_secondary_eft_domain"
+      ],
+      "contract_gap_count": 5
+    },
+    {
+      "label": "sutton_quadratic_weyl_constraints_2025",
+      "source_url": "https://arxiv.org/abs/2504.15005",
+      "source_type": "primary_theory_constraint",
+      "potential_axes": [
+        "g_C"
+      ],
+      "g8_axis_candidate": false,
+      "g_c_axis_candidate": true,
+      "fills_weyl_g8_contract_now": false,
+      "missing_gate_capabilities": [
+        "engine_gC_normalization",
+        "framework_pair_exclusion_math",
+        "g8_axis_component",
+        "joint_covariance",
+        "public_measurement_likelihood"
+      ],
+      "contract_gap_count": 5
+    }
+  ],
+  "ready_current_weyl_g8_packets": [],
+  "claimable_framework_exclusions_now": [],
+  "claimable_discriminator_now": false,
+  "route_status": "weyl_g8_dual_likelihood_contract_ready_no_real_packet",
+  "selected_next_build_action": "build_or_request_real_joint_engine_gC_g8_likelihood_packet",
+  "best_next_artifact": "A public joint engine-normalized g_C+g_8 likelihood packet with source-backed axis packets, covariance/correlation, projection matrix, exclusion statistic, scan policy, reproducible analysis, and adversarial review controls.",
+  "interpretation": "The Weyl/G8 route now has a claim-safe executable packet contract. The v2.98 base gate and this extension accept a complete synthetic control, while current public source candidates still leave the real dual-likelihood slot empty."
+}
