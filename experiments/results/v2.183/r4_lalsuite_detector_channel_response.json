@@ -1,0 +1,120 @@
+{
+  "version": "v2.183",
+  "basis": [
+    "v2.182_r4_vulcan_lalsuite_runtime_target",
+    "v2.181_r4_source_backed_gwosc_projection",
+    "lal.ComputeDetAMResponse"
+  ],
+  "detector_channel_response": {
+    "response_id": "lalsuite_r4_detector_channel_response_v1",
+    "target_host": "192.168.4.178",
+    "lal_version": "7.7.1",
+    "event": "GW170608",
+    "event_gps": 1180922494.5,
+    "event_gmst": 40123.146792515385,
+    "grid": {
+      "ra_count": 8,
+      "dec_count": 7,
+      "psi_count": 6,
+      "sample_count": 336,
+      "dec_min_rad": -0.75,
+      "dec_max_rad": 0.75,
+      "psi_period_rad": 3.14159265359,
+      "weighting": "cos(dec)"
+    },
+    "response_kind": "sky_polarization_marginalized_lalsuite_tensor_rms_moments",
+    "source_channel_mapping": {
+      "K_plus": "sqrt(mean(F_plus^2 + F_cross^2))",
+      "Re_K_minus": "sqrt(mean((F_plus^2 - F_cross^2)^2)) / K_plus",
+      "Im_K_minus": "sqrt(mean((2*F_plus*F_cross)^2)) / K_plus"
+    },
+    "detectors": {
+      "H1": {
+        "detector": "H1",
+        "lal_detector_index": "LALDetectorIndexLHODIFF",
+        "tensor_rms": 0.606542357541,
+        "helicity_re_rms": 0.315441495679,
+        "helicity_im_rms": 0.315441495679,
+        "K_plus": 0.606542357541,
+        "Re_K_minus": 0.520065073374,
+        "Im_K_minus": 0.520065073374,
+        "max_abs_fplus": 0.981638564255,
+        "max_abs_fcross": 0.897770734719
+      },
+      "L1": {
+        "detector": "L1",
+        "lal_detector_index": "LALDetectorIndexLLODIFF",
+        "tensor_rms": 0.642279966479,
+        "helicity_re_rms": 0.349907759764,
+        "helicity_im_rms": 0.349907759764,
+        "K_plus": 0.642279966479,
+        "Re_K_minus": 0.544790088475,
+        "Im_K_minus": 0.544790088475,
+        "max_abs_fplus": 0.959188715071,
+        "max_abs_fcross": 0.902363398555
+      }
+    },
+    "calibrated_with_lalsuite": true,
+    "detector_channel_response_calibrated": true,
+    "calibration_scope": "RMS sensitivity calibration over a deterministic sky/polarization grid at the event GMST; not a sky-posterior marginalization."
+  },
+  "evaluation": {
+    "response_id": "lalsuite_r4_detector_channel_response_v1",
+    "detector_channel_response_ready": true,
+    "ready_to_replace_v2_181_detector_channel_proxy": true,
+    "ready_for_real_public_r4_reanalysis": false,
+    "ready_for_framework_claim": false,
+    "response_blockers": [],
+    "removed_v2_182_blocker": "detector_antenna_r4_channel_response_not_calibrated",
+    "remaining_real_reanalysis_blockers": [
+      "external_adversarial_review_missing",
+      "full_imr_r4_merger_ringdown_completion_missing",
+      "nuisance_marginalized_covariance_not_exported",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "full_imr_r4_merger_ringdown_completion_missing",
+      "nuisance_marginalized_covariance_not_exported",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "route_status": "r4_lalsuite_detector_channel_response_ready_nonclaiming"
+  },
+  "malformed_control_evaluation": {
+    "response_id": "lalsuite_r4_detector_channel_response_v1",
+    "detector_channel_response_ready": false,
+    "ready_to_replace_v2_181_detector_channel_proxy": false,
+    "ready_for_real_public_r4_reanalysis": false,
+    "ready_for_framework_claim": false,
+    "response_blockers": [
+      "H1_K_plus_not_positive",
+      "detector_channel_response_not_calibrated",
+      "response_grid_sample_count_unexpected",
+      "target_host_not_vulcan"
+    ],
+    "removed_v2_182_blocker": null,
+    "remaining_real_reanalysis_blockers": [
+      "external_adversarial_review_missing",
+      "full_imr_r4_merger_ringdown_completion_missing",
+      "nuisance_marginalized_covariance_not_exported",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "full_imr_r4_merger_ringdown_completion_missing",
+      "nuisance_marginalized_covariance_not_exported",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "route_status": "r4_lalsuite_detector_channel_response_blocked"
+  },
+  "detector_channel_response_ready": true,
+  "ready_real_public_r4_reanalysis_packets_now": [],
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "route_status": "r4_lalsuite_detector_channel_response_ready_nonclaiming",
+  "selected_next_build_action": "replace_v2_181_detector_proxy_with_lalsuite_channel_response",
+  "best_next_artifact": "Regenerate the GWOSC R4 projection using the calibrated LALSuite H1/L1 channel response instead of the v2.181 deterministic proxy.",
+  "interpretation": "The R4 route now has a calibrated H1/L1 detector-channel response target based on LALSuite antenna tensors and event-time sky/polarization RMS moments. It remains nonclaiming because this is not a full sky-posterior, R4 merger-ringdown, or covariance export."
+}

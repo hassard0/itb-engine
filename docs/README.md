@@ -28,12 +28,14 @@ Theoretical exploration logs — new physics directions surfaced during build.
 
 Computed research artifacts — the actual outputs of the engine across iterations.
 
-See [`results/README.md`](results/README.md) for the full chronological index.
+Start with the generated [`results/INDEX.md`](results/INDEX.md) for the full current index. The older [`results/README.md`](results/README.md) is retained as an early-program chronological snapshot.
 
 ## Highlights
 
-If you only read three documents, read these:
+If you only read five documents, read these:
 
-1. **[`results/2026-05-08-v1.8-honest-synthesis.md`](results/2026-05-08-v1.8-honest-synthesis.md)** — the engine's honest reckoning after 18 iterations
-2. **[`superpowers/notes/2026-05-07-theorizing-new-models.md`](superpowers/notes/2026-05-07-theorizing-new-models.md)** — 10 candidate QG model directions, with leverage analysis
-3. **[`results/2026-05-08-v1.8-intersection-search.md`](results/2026-05-08-v1.8-intersection-search.md)** — the engine's sharpest answer to "what UV completion satisfies every constraint?"
+1. **[`results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md`](results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md)** — current R4/GWOSC/LALSuite live-data frontier and claim boundary
+2. **[`FINDINGS.md`](FINDINGS.md)** — curated one-page findings, now including the v2.170-v2.184 frontier
+3. **[`results/2026-06-09-v2.10-capstone.md`](results/2026-06-09-v2.10-capstone.md)** — the program in one page
+4. **[`results/2026-06-09-v2.0-RESEARCH-REPORT.md`](results/2026-06-09-v2.0-RESEARCH-REPORT.md)** — publication-style overview of the core engine
+5. **[`results/INDEX.md`](results/INDEX.md)** — generated chronological index for the full research loop

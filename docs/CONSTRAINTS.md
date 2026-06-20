@@ -1,6 +1,6 @@
 # ITB Engine — Constraint reference
 
-The **37 theoretical constraints** assembled by `build_stack()` (in `experiments/stack.py`), plus the **4 opt-in data constraints**. Each is a self-contained module in `src/itb/constraints/` exposing `.evaluate(theory) → ConstraintResult(satisfied, margin, signed_distance_margin, details)`, `.gradient(theory)`, and a `.constraint_class`.
+The **38 theoretical constraints** assembled by `build_stack()` (in `experiments/stack.py`), plus the **4 opt-in data constraints**. Each is a self-contained module in `src/itb/constraints/` exposing `.evaluate(theory) → ConstraintResult(satisfied, margin, signed_distance_margin, details)`, `.gradient(theory)`, and a `.constraint_class`.
 
 > **Honest note:** most bounds use O(1) placeholder prefactors ("the right streets, the wrong house numbers"). Six are tunable knobs with stated plausibility windows (`CANONICAL` / `PLAUSIBLE_RANGES` in `stack.py`) so the *realism program* can test which conclusions survive a factor-of-~2 uncertainty. Citations indicate the *origin/form*, not that the exact coefficient is the published one.
 
