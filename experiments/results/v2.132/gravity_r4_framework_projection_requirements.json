@@ -1,0 +1,901 @@
+{
+  "version": "v2.132",
+  "basis": [
+    "v2.131",
+    "Bresciani_Levati_Paradisi_arXiv_2504_12855_v2",
+    "registered_FRAMEWORKS_from_itb.predict"
+  ],
+  "candidate_axis_contract": {
+    "candidate_family": "gravity_R4_Riemann4",
+    "source_url": "https://arxiv.org/abs/2504.12855",
+    "source_version": "arXiv:2504.12855v2",
+    "source_basis": "Bresciani c_i^(2) four-graviton eight-derivative basis",
+    "proposed_engine_axes": [
+      {
+        "axis": "g_R4_c1",
+        "source_coefficient": "c_1^(2)",
+        "operator": "(Mpl^2 * Riemann^2)^2",
+        "parity_role": "even"
+      },
+      {
+        "axis": "g_R4_c2",
+        "source_coefficient": "c_2^(2)",
+        "operator": "(Mpl^2 * Riemann * Riemann_dual)^2",
+        "parity_role": "even_from_dual_square"
+      },
+      {
+        "axis": "g_R4_c3",
+        "source_coefficient": "c_3^(2)",
+        "operator": "(Mpl^2 * Riemann^2) * (Mpl^2 * Riemann * Riemann_dual)",
+        "parity_role": "mixed_odd"
+      }
+    ],
+    "derived_source_coordinates": [
+      {
+        "axis": "g_R4_plus",
+        "source_expression": "c_1^(2) + c_2^(2)",
+        "role": "unitarity_eigenvalue_center"
+      },
+      {
+        "axis": "g_R4_minus_abs",
+        "source_expression": "abs(c_1^(2) - c_2^(2) + i*c_3^(2))",
+        "role": "unitarity_eigenvalue_radius"
+      }
+    ],
+    "normalization_options": [
+      {
+        "name": "source_running_energy_normalization",
+        "formula": "hat_c_i(s) = s^4 * c_i^(2)",
+        "status": "source_bound_dimensionless_but_energy_dependent"
+      },
+      {
+        "name": "engine_cutoff_normalization",
+        "formula": "g_R4_ci = Lambda_R4^8 * c_i^(2)",
+        "status": "requires_source_backed_cutoff_or_matching_scale"
+      }
+    ]
+  },
+  "candidate_equations": {
+    "source_unitarity_bound": {
+      "generic": "s^(2S)/(2*pi) * (abs(c_plus) + ((2S+3)/(2S+1))*abs(c_minus)) <= 1",
+      "spin2_ratio": 1.4,
+      "spin2": "s^4/(2*pi) * (abs(c_plus) + 1.4*abs(c_minus)) <= 1"
+    },
+    "source_positivity_bounds": [
+      "c_1^(S) >= 0",
+      "c_2^(S) >= 0",
+      "(c_3^(S))^2 <= 4*c_1^(S)*c_2^(S)"
+    ],
+    "engine_candidate_bound_templates": [
+      {
+        "name": "r4_source_unitarity_template",
+        "formula": "abs(g_R4_plus) + 1.4*g_R4_minus_abs <= 2*pi / (s^4 * N_R4)",
+        "status": "template_only_until_normalization_N_R4_is_defined"
+      },
+      {
+        "name": "r4_source_positivity_template",
+        "formula": "g_R4_c1 >= 0; g_R4_c2 >= 0; g_R4_c3^2 <= 4*g_R4_c1*g_R4_c2",
+        "status": "source_backed_after_axis_normalization_is_defined"
+      }
+    ]
+  },
+  "r4_framework_projection_schema": [
+    {
+      "field": "coefficients.g_R4_c1",
+      "kind": "required_numeric_axis",
+      "reason": "Framework-owned coefficient in the Bresciani R4 basis."
+    },
+    {
+      "field": "coefficients.g_R4_c2",
+      "kind": "required_numeric_axis",
+      "reason": "Framework-owned coefficient in the Bresciani R4 basis."
+    },
+    {
+      "field": "coefficients.g_R4_c3",
+      "kind": "required_numeric_axis",
+      "reason": "Framework-owned coefficient in the Bresciani R4 basis."
+    },
+    {
+      "field": "derived.g_R4_plus",
+      "kind": "derived_coordinate",
+      "reason": "Needed for source unitarity and positivity templates."
+    },
+    {
+      "field": "derived.g_R4_minus_abs",
+      "kind": "derived_coordinate",
+      "reason": "Needed for source unitarity and positivity templates."
+    },
+    {
+      "field": "metadata.r4_source_url",
+      "kind": "required_source_metadata",
+      "reason": "Required before the axis can be normalized and audited."
+    },
+    {
+      "field": "metadata.r4_source_version",
+      "kind": "required_source_metadata",
+      "reason": "Required before the axis can be normalized and audited."
+    },
+    {
+      "field": "metadata.r4_basis",
+      "kind": "required_source_metadata",
+      "reason": "Required before the axis can be normalized and audited."
+    },
+    {
+      "field": "metadata.r4_operator_projection_matrix",
+      "kind": "required_source_metadata",
+      "reason": "Required before the axis can be normalized and audited."
+    },
+    {
+      "field": "metadata.r4_normalization_scale",
+      "kind": "required_source_metadata",
+      "reason": "Required before the axis can be normalized and audited."
+    },
+    {
+      "field": "metadata.r4_valid_energy_domain",
+      "kind": "required_source_metadata",
+      "reason": "Required before the axis can be normalized and audited."
+    },
+    {
+      "field": "metadata.r4_uncertainty_or_covariance",
+      "kind": "required_source_metadata",
+      "reason": "Required before the axis can be normalized and audited."
+    }
+  ],
+  "registered_framework_count": 13,
+  "r4_projection_ready_frameworks": [],
+  "frameworks_missing_r4_projection": [
+    "asymptotic_safety",
+    "causal_set",
+    "cdt",
+    "discovered_data_driven",
+    "discovered_high_g8",
+    "discovered_novel",
+    "discovered_parity_violating",
+    "emergent_gravity",
+    "group_field_theory",
+    "horava_lifshitz",
+    "lqg_induced",
+    "pure_gr",
+    "string_tree_eft"
+  ],
+  "highest_priority_translation_candidates": [
+    "string_tree_eft",
+    "asymptotic_safety"
+  ],
+  "projection_status_counts": {
+    "known_R4_family_but_no_engine_projection": 1,
+    "not_a_fundamental_uv_eft_projection": 1,
+    "not_source_owned_framework_evidence": 4,
+    "out_of_current_lorentzian_r4_gate": 1,
+    "plausible_if_R4_fixed_point_couplings_exist": 1,
+    "requires_continuum_effective_action_matching": 2,
+    "requires_semiclassical_eft_matching": 2,
+    "zero_r4_baseline_requires_policy": 1
+  },
+  "promotion_blocker_counts": {
+    "compactification_frame_choice_missing": 1,
+    "discrete_continuum_r4_matching_missing": 2,
+    "discrete_scale_to_lambda_r4_missing": 2,
+    "engine_generated_framework_not_literature_owned": 4,
+    "framework_not_fundamental_uv_gravity": 1,
+    "framework_not_local_for_current_r4_gate": 2,
+    "framework_not_lorentz_invariant_for_current_r4_gate": 1,
+    "frg_basis_rotation_to_bresciani_missing": 1,
+    "frg_r4_fixed_point_couplings_missing": 1,
+    "lifshitz_basis_to_bresciani_missing": 1,
+    "lorentz_invariant_r4_gate_not_applicable": 1,
+    "native_r4_projection_method_missing": 13,
+    "nonlocal_emergent_r4_projection_missing": 1,
+    "not_fundamental_uv_eft_axis": 1,
+    "pure_gr_zero_r4_baseline_policy_missing": 1,
+    "quantum_loop_r4_policy_missing": 1,
+    "r4_coefficients_missing_from_encoder": 13,
+    "r4_source_metadata_missing_from_encoder": 13,
+    "r4_source_ownership_missing": 4,
+    "rg_scale_to_lambda_r4_normalization_missing": 1,
+    "semiclassical_scale_to_lambda_r4_missing": 2,
+    "spin_foam_basis_rotation_to_bresciani_missing": 2,
+    "spin_foam_r4_continuum_limit_missing": 2,
+    "string_r4_basis_translation_to_bresciani_missing": 1,
+    "string_scale_to_lambda_r4_normalization_missing": 1
+  },
+  "claimable_framework_exclusions_now": [],
+  "frameworks": {
+    "pure_gr": {
+      "framework": "pure_gr",
+      "citation": "Einstein 1915, free-theory limit",
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "projection_class": "null_baseline_policy_candidate",
+      "priority": 5,
+      "source_path_status": "zero_r4_baseline_requires_policy",
+      "r4_presence": {
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": [],
+        "required_r4_coefficients_present": [],
+        "derived_r4_coordinates_present": [],
+        "r4_metadata_keys_present": [],
+        "has_native_r4_projection_method": false
+      },
+      "missing_required_r4_coefficients": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "missing_required_r4_metadata": [
+        "r4_source_url",
+        "r4_source_version",
+        "r4_basis",
+        "r4_operator_projection_matrix",
+        "r4_normalization_scale",
+        "r4_valid_energy_domain",
+        "r4_uncertainty_or_covariance"
+      ],
+      "r4_projection_ready": false,
+      "can_enter_discriminator_math": false,
+      "promotion_blockers": [
+        "native_r4_projection_method_missing",
+        "pure_gr_zero_r4_baseline_policy_missing",
+        "quantum_loop_r4_policy_missing",
+        "r4_coefficients_missing_from_encoder",
+        "r4_source_metadata_missing_from_encoder"
+      ],
+      "next_required_data": "A repository-level policy deciding whether pure GR encodes zero higher-curvature R4 coefficients or stays undefined."
+    },
+    "string_tree_eft": {
+      "framework": "string_tree_eft",
+      "citation": "Gross-Sloan tree-level \u03b1' expansion (toy values)",
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "projection_class": "highest_priority_translation_candidate",
+      "priority": 1,
+      "source_path_status": "known_R4_family_but_no_engine_projection",
+      "r4_presence": {
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": [],
+        "required_r4_coefficients_present": [],
+        "derived_r4_coordinates_present": [],
+        "r4_metadata_keys_present": [],
+        "has_native_r4_projection_method": false
+      },
+      "missing_required_r4_coefficients": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "missing_required_r4_metadata": [
+        "r4_source_url",
+        "r4_source_version",
+        "r4_basis",
+        "r4_operator_projection_matrix",
+        "r4_normalization_scale",
+        "r4_valid_energy_domain",
+        "r4_uncertainty_or_covariance"
+      ],
+      "r4_projection_ready": false,
+      "can_enter_discriminator_math": false,
+      "promotion_blockers": [
+        "compactification_frame_choice_missing",
+        "native_r4_projection_method_missing",
+        "r4_coefficients_missing_from_encoder",
+        "r4_source_metadata_missing_from_encoder",
+        "string_r4_basis_translation_to_bresciani_missing",
+        "string_scale_to_lambda_r4_normalization_missing"
+      ],
+      "next_required_data": "A source-backed translation from the string tree-level R4 operator basis into c_1^(2), c_2^(2), c_3^(2), with the string scale and frame normalization fixed."
+    },
+    "asymptotic_safety": {
+      "framework": "asymptotic_safety",
+      "citation": "Reuter 1998, Niedermaier-Reuter 2006 (FRG truncation, toy values)",
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "projection_class": "frg_truncation_candidate",
+      "priority": 2,
+      "source_path_status": "plausible_if_R4_fixed_point_couplings_exist",
+      "r4_presence": {
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": [],
+        "required_r4_coefficients_present": [],
+        "derived_r4_coordinates_present": [],
+        "r4_metadata_keys_present": [],
+        "has_native_r4_projection_method": false
+      },
+      "missing_required_r4_coefficients": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "missing_required_r4_metadata": [
+        "r4_source_url",
+        "r4_source_version",
+        "r4_basis",
+        "r4_operator_projection_matrix",
+        "r4_normalization_scale",
+        "r4_valid_energy_domain",
+        "r4_uncertainty_or_covariance"
+      ],
+      "r4_projection_ready": false,
+      "can_enter_discriminator_math": false,
+      "promotion_blockers": [
+        "frg_basis_rotation_to_bresciani_missing",
+        "frg_r4_fixed_point_couplings_missing",
+        "native_r4_projection_method_missing",
+        "r4_coefficients_missing_from_encoder",
+        "r4_source_metadata_missing_from_encoder",
+        "rg_scale_to_lambda_r4_normalization_missing"
+      ],
+      "next_required_data": "An FRG truncation that reports independent Riemann^4 couplings and a source-backed projection into the Bresciani three-coefficient basis."
+    },
+    "lqg_induced": {
+      "framework": "lqg_induced",
+      "citation": "EPR/spin-foam semiclassical limit (toy values)",
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "projection_class": "spin_foam_continuum_matching_candidate",
+      "priority": 3,
+      "source_path_status": "requires_semiclassical_eft_matching",
+      "r4_presence": {
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": [],
+        "required_r4_coefficients_present": [],
+        "derived_r4_coordinates_present": [],
+        "r4_metadata_keys_present": [],
+        "has_native_r4_projection_method": false
+      },
+      "missing_required_r4_coefficients": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "missing_required_r4_metadata": [
+        "r4_source_url",
+        "r4_source_version",
+        "r4_basis",
+        "r4_operator_projection_matrix",
+        "r4_normalization_scale",
+        "r4_valid_energy_domain",
+        "r4_uncertainty_or_covariance"
+      ],
+      "r4_projection_ready": false,
+      "can_enter_discriminator_math": false,
+      "promotion_blockers": [
+        "native_r4_projection_method_missing",
+        "r4_coefficients_missing_from_encoder",
+        "r4_source_metadata_missing_from_encoder",
+        "semiclassical_scale_to_lambda_r4_missing",
+        "spin_foam_basis_rotation_to_bresciani_missing",
+        "spin_foam_r4_continuum_limit_missing"
+      ],
+      "next_required_data": "A continuum semiclassical effective action with independent Riemann^4 terms, plus a basis rotation into c_i^(2)."
+    },
+    "cdt": {
+      "framework": "cdt",
+      "citation": "Ambj\u00f8rn-Jurkiewicz-Loll CDT program (2004+); toy values",
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "projection_class": "discrete_continuum_eft_candidate",
+      "priority": 4,
+      "source_path_status": "requires_continuum_effective_action_matching",
+      "r4_presence": {
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": [],
+        "required_r4_coefficients_present": [],
+        "derived_r4_coordinates_present": [],
+        "r4_metadata_keys_present": [],
+        "has_native_r4_projection_method": false
+      },
+      "missing_required_r4_coefficients": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "missing_required_r4_metadata": [
+        "r4_source_url",
+        "r4_source_version",
+        "r4_basis",
+        "r4_operator_projection_matrix",
+        "r4_normalization_scale",
+        "r4_valid_energy_domain",
+        "r4_uncertainty_or_covariance"
+      ],
+      "r4_projection_ready": false,
+      "can_enter_discriminator_math": false,
+      "promotion_blockers": [
+        "discrete_continuum_r4_matching_missing",
+        "discrete_scale_to_lambda_r4_missing",
+        "native_r4_projection_method_missing",
+        "r4_coefficients_missing_from_encoder",
+        "r4_source_metadata_missing_from_encoder"
+      ],
+      "next_required_data": "A continuum effective action fit that isolates Riemann^4 operators and reports uncertainties in the Bresciani basis."
+    },
+    "group_field_theory": {
+      "framework": "group_field_theory",
+      "citation": "Oriti et al GFT / spin-foam condensates; toy representative values",
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "projection_class": "spin_foam_continuum_matching_candidate",
+      "priority": 3,
+      "source_path_status": "requires_semiclassical_eft_matching",
+      "r4_presence": {
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": [],
+        "required_r4_coefficients_present": [],
+        "derived_r4_coordinates_present": [],
+        "r4_metadata_keys_present": [],
+        "has_native_r4_projection_method": false
+      },
+      "missing_required_r4_coefficients": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "missing_required_r4_metadata": [
+        "r4_source_url",
+        "r4_source_version",
+        "r4_basis",
+        "r4_operator_projection_matrix",
+        "r4_normalization_scale",
+        "r4_valid_energy_domain",
+        "r4_uncertainty_or_covariance"
+      ],
+      "r4_projection_ready": false,
+      "can_enter_discriminator_math": false,
+      "promotion_blockers": [
+        "native_r4_projection_method_missing",
+        "r4_coefficients_missing_from_encoder",
+        "r4_source_metadata_missing_from_encoder",
+        "semiclassical_scale_to_lambda_r4_missing",
+        "spin_foam_basis_rotation_to_bresciani_missing",
+        "spin_foam_r4_continuum_limit_missing"
+      ],
+      "next_required_data": "A continuum semiclassical effective action with independent Riemann^4 terms, plus a basis rotation into c_i^(2)."
+    },
+    "horava_lifshitz": {
+      "framework": "horava_lifshitz",
+      "citation": "Ho\u0159ava 2009 (anisotropic Lifshitz scaling z=3); toy representative values",
+      "engine_scope": {
+        "in_scope": false,
+        "violations": [
+          "Lorentz invariance (assumed by amplitude-positivity bounds)"
+        ],
+        "note": "OUT OF SCOPE: the engine's feasibility verdict is NOT meaningful for this framework \u2014 it breaks Lorentz invariance (assumed by amplitude-positivity bounds), which are assumptions used to derive the constraints. Treat any verdict as an artifact of applying inapplicable bounds."
+      },
+      "projection_class": "lorentz_breaking_lifshitz_candidate",
+      "priority": 6,
+      "source_path_status": "out_of_current_lorentzian_r4_gate",
+      "r4_presence": {
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": [],
+        "required_r4_coefficients_present": [],
+        "derived_r4_coordinates_present": [],
+        "r4_metadata_keys_present": [],
+        "has_native_r4_projection_method": false
+      },
+      "missing_required_r4_coefficients": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "missing_required_r4_metadata": [
+        "r4_source_url",
+        "r4_source_version",
+        "r4_basis",
+        "r4_operator_projection_matrix",
+        "r4_normalization_scale",
+        "r4_valid_energy_domain",
+        "r4_uncertainty_or_covariance"
+      ],
+      "r4_projection_ready": false,
+      "can_enter_discriminator_math": false,
+      "promotion_blockers": [
+        "framework_not_lorentz_invariant_for_current_r4_gate",
+        "lifshitz_basis_to_bresciani_missing",
+        "lorentz_invariant_r4_gate_not_applicable",
+        "native_r4_projection_method_missing",
+        "r4_coefficients_missing_from_encoder",
+        "r4_source_metadata_missing_from_encoder"
+      ],
+      "next_required_data": "A Lorentzian low-energy EFT limit with Riemann^4 couplings, or a separate non-Lorentzian R4 gate."
+    },
+    "causal_set": {
+      "framework": "causal_set",
+      "citation": "Bombelli-Lee-Meyer-Sorkin 1987; Benincasa-Dowker action; toy representative values",
+      "engine_scope": {
+        "in_scope": false,
+        "violations": [
+          "locality (assumed by the swampland/positivity program)"
+        ],
+        "note": "OUT OF SCOPE: the engine's feasibility verdict is NOT meaningful for this framework \u2014 it breaks locality (assumed by the swampland/positivity program), which are assumptions used to derive the constraints. Treat any verdict as an artifact of applying inapplicable bounds."
+      },
+      "projection_class": "discrete_continuum_eft_candidate",
+      "priority": 4,
+      "source_path_status": "requires_continuum_effective_action_matching",
+      "r4_presence": {
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": [],
+        "required_r4_coefficients_present": [],
+        "derived_r4_coordinates_present": [],
+        "r4_metadata_keys_present": [],
+        "has_native_r4_projection_method": false
+      },
+      "missing_required_r4_coefficients": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "missing_required_r4_metadata": [
+        "r4_source_url",
+        "r4_source_version",
+        "r4_basis",
+        "r4_operator_projection_matrix",
+        "r4_normalization_scale",
+        "r4_valid_energy_domain",
+        "r4_uncertainty_or_covariance"
+      ],
+      "r4_projection_ready": false,
+      "can_enter_discriminator_math": false,
+      "promotion_blockers": [
+        "discrete_continuum_r4_matching_missing",
+        "discrete_scale_to_lambda_r4_missing",
+        "framework_not_local_for_current_r4_gate",
+        "native_r4_projection_method_missing",
+        "r4_coefficients_missing_from_encoder",
+        "r4_source_metadata_missing_from_encoder"
+      ],
+      "next_required_data": "A continuum effective action fit that isolates Riemann^4 operators and reports uncertainties in the Bresciani basis."
+    },
+    "emergent_gravity": {
+      "framework": "emergent_gravity",
+      "citation": "Verlinde 2011/2016 (entropic / emergent gravity); toy representative values",
+      "engine_scope": {
+        "in_scope": false,
+        "violations": [
+          "locality (assumed by the swampland/positivity program)",
+          "a fundamental UV graviton field (the bounds expand the graviton amplitude; emergent gravity has no such UV expansion)"
+        ],
+        "note": "OUT OF SCOPE: the engine's feasibility verdict is NOT meaningful for this framework \u2014 it breaks locality (assumed by the swampland/positivity program) and a fundamental UV graviton field (the bounds expand the graviton amplitude; emergent gravity has no such UV expansion), which are assumptions used to derive the constraints. Treat any verdict as an artifact of applying inapplicable bounds."
+      },
+      "projection_class": "outside_uv_wilson_axis_scope",
+      "priority": 7,
+      "source_path_status": "not_a_fundamental_uv_eft_projection",
+      "r4_presence": {
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": [],
+        "required_r4_coefficients_present": [],
+        "derived_r4_coordinates_present": [],
+        "r4_metadata_keys_present": [],
+        "has_native_r4_projection_method": false
+      },
+      "missing_required_r4_coefficients": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "missing_required_r4_metadata": [
+        "r4_source_url",
+        "r4_source_version",
+        "r4_basis",
+        "r4_operator_projection_matrix",
+        "r4_normalization_scale",
+        "r4_valid_energy_domain",
+        "r4_uncertainty_or_covariance"
+      ],
+      "r4_projection_ready": false,
+      "can_enter_discriminator_math": false,
+      "promotion_blockers": [
+        "framework_not_fundamental_uv_gravity",
+        "framework_not_local_for_current_r4_gate",
+        "native_r4_projection_method_missing",
+        "nonlocal_emergent_r4_projection_missing",
+        "not_fundamental_uv_eft_axis",
+        "r4_coefficients_missing_from_encoder",
+        "r4_source_metadata_missing_from_encoder"
+      ],
+      "next_required_data": "A scope expansion showing how an emergent/nonlocal model owns UV Riemann^4 Wilson coefficients."
+    },
+    "discovered_novel": {
+      "framework": "discovered_novel",
+      "citation": "ITB generative search 2026-06-08 (v1.27); engine-discovered, not from literature",
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "projection_class": "engine_generated_not_framework_owned",
+      "priority": 8,
+      "source_path_status": "not_source_owned_framework_evidence",
+      "r4_presence": {
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": [],
+        "required_r4_coefficients_present": [],
+        "derived_r4_coordinates_present": [],
+        "r4_metadata_keys_present": [],
+        "has_native_r4_projection_method": false
+      },
+      "missing_required_r4_coefficients": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "missing_required_r4_metadata": [
+        "r4_source_url",
+        "r4_source_version",
+        "r4_basis",
+        "r4_operator_projection_matrix",
+        "r4_normalization_scale",
+        "r4_valid_energy_domain",
+        "r4_uncertainty_or_covariance"
+      ],
+      "r4_projection_ready": false,
+      "can_enter_discriminator_math": false,
+      "promotion_blockers": [
+        "engine_generated_framework_not_literature_owned",
+        "native_r4_projection_method_missing",
+        "r4_coefficients_missing_from_encoder",
+        "r4_source_metadata_missing_from_encoder",
+        "r4_source_ownership_missing"
+      ],
+      "next_required_data": "An external framework-owned derivation; generated Wilson points cannot define a source-backed R4 projection."
+    },
+    "discovered_parity_violating": {
+      "framework": "discovered_parity_violating",
+      "citation": "ITB generative search 2026-06-08 (v1.31); engine-discovered, not from literature",
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "projection_class": "engine_generated_not_framework_owned",
+      "priority": 8,
+      "source_path_status": "not_source_owned_framework_evidence",
+      "r4_presence": {
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": [],
+        "required_r4_coefficients_present": [],
+        "derived_r4_coordinates_present": [],
+        "r4_metadata_keys_present": [],
+        "has_native_r4_projection_method": false
+      },
+      "missing_required_r4_coefficients": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "missing_required_r4_metadata": [
+        "r4_source_url",
+        "r4_source_version",
+        "r4_basis",
+        "r4_operator_projection_matrix",
+        "r4_normalization_scale",
+        "r4_valid_energy_domain",
+        "r4_uncertainty_or_covariance"
+      ],
+      "r4_projection_ready": false,
+      "can_enter_discriminator_math": false,
+      "promotion_blockers": [
+        "engine_generated_framework_not_literature_owned",
+        "native_r4_projection_method_missing",
+        "r4_coefficients_missing_from_encoder",
+        "r4_source_metadata_missing_from_encoder",
+        "r4_source_ownership_missing"
+      ],
+      "next_required_data": "An external framework-owned derivation; generated Wilson points cannot define a source-backed R4 projection."
+    },
+    "discovered_high_g8": {
+      "framework": "discovered_high_g8",
+      "citation": "ITB generative search 2026-06-08 (v1.32 catalog); engine-discovered, not from literature",
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "projection_class": "engine_generated_not_framework_owned",
+      "priority": 8,
+      "source_path_status": "not_source_owned_framework_evidence",
+      "r4_presence": {
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": [],
+        "required_r4_coefficients_present": [],
+        "derived_r4_coordinates_present": [],
+        "r4_metadata_keys_present": [],
+        "has_native_r4_projection_method": false
+      },
+      "missing_required_r4_coefficients": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "missing_required_r4_metadata": [
+        "r4_source_url",
+        "r4_source_version",
+        "r4_basis",
+        "r4_operator_projection_matrix",
+        "r4_normalization_scale",
+        "r4_valid_energy_domain",
+        "r4_uncertainty_or_covariance"
+      ],
+      "r4_projection_ready": false,
+      "can_enter_discriminator_math": false,
+      "promotion_blockers": [
+        "engine_generated_framework_not_literature_owned",
+        "native_r4_projection_method_missing",
+        "r4_coefficients_missing_from_encoder",
+        "r4_source_metadata_missing_from_encoder",
+        "r4_source_ownership_missing"
+      ],
+      "next_required_data": "An external framework-owned derivation; generated Wilson points cannot define a source-backed R4 projection."
+    },
+    "discovered_data_driven": {
+      "framework": "discovered_data_driven",
+      "citation": "ITB v1.79: consistency + cosmic birefringence (Minami-Komatsu) + sub-mm gravity; data-driven, screened-scalaron",
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "projection_class": "engine_generated_not_framework_owned",
+      "priority": 8,
+      "source_path_status": "not_source_owned_framework_evidence",
+      "r4_presence": {
+        "encoded_coefficient_keys": [
+          "g_4",
+          "g_6",
+          "g_8",
+          "g_C",
+          "g_R2",
+          "g_R2_parity",
+          "g_R3",
+          "g_R3_parity"
+        ],
+        "metadata_keys": [],
+        "required_r4_coefficients_present": [],
+        "derived_r4_coordinates_present": [],
+        "r4_metadata_keys_present": [],
+        "has_native_r4_projection_method": false
+      },
+      "missing_required_r4_coefficients": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "missing_required_r4_metadata": [
+        "r4_source_url",
+        "r4_source_version",
+        "r4_basis",
+        "r4_operator_projection_matrix",
+        "r4_normalization_scale",
+        "r4_valid_energy_domain",
+        "r4_uncertainty_or_covariance"
+      ],
+      "r4_projection_ready": false,
+      "can_enter_discriminator_math": false,
+      "promotion_blockers": [
+        "engine_generated_framework_not_literature_owned",
+        "native_r4_projection_method_missing",
+        "r4_coefficients_missing_from_encoder",
+        "r4_source_metadata_missing_from_encoder",
+        "r4_source_ownership_missing"
+      ],
+      "next_required_data": "An external framework-owned derivation; generated Wilson points cannot define a source-backed R4 projection."
+    }
+  },
+  "route_status": "r4_framework_projection_requirements_defined_nonclaiming",
+  "selected_next_build_action": "implement_r4_projection_guard_schema",
+  "best_next_artifact": "A small R4 projection guard/schema that can reject partial framework adapters until all required coefficients, metadata, normalization, and source ownership fields are present.",
+  "interpretation": "No registered framework currently exposes the Bresciani R4 coordinates or their source metadata. String tree-level EFT is the most promising translation target, but it still needs a basis rotation, scale normalization, and uncertainty model before the R4 axis can enter discriminator math."
+}
