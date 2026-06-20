@@ -1,0 +1,168 @@
+{
+  "version": "v2.116",
+  "basis": [
+    "v2.115_lalsuite_marginal_alpha_likelihood",
+    "v2.102_source_native_alpha_adapter"
+  ],
+  "marginal_result_path": "experiments\\results\\v2.115\\gw_lalsuite_marginal_alpha_likelihood.json",
+  "packet": {
+    "label": "v2_115_lalsuite_marginal_alpha_likelihood_packet",
+    "source_url": "https://arxiv.org/abs/2407.08929",
+    "source_model": "cubic_parity_preserving_higher_curvature_eft",
+    "event": "GW170608",
+    "source_parameters": [
+      "alpha_bar_1",
+      "alpha_bar_2"
+    ],
+    "parameter_constraints": {
+      "alpha_bar_1": {
+        "central": 0.0010027012478329624,
+        "lower_90": -1.8,
+        "upper_90": 1.8000000000000003
+      },
+      "alpha_bar_2": {
+        "central": 0.0007886614846891616,
+        "lower_90": -1.8,
+        "upper_90": 1.8000000000000003
+      }
+    },
+    "posterior_or_likelihood_export": {
+      "status": "reproduced_source_native_likelihood",
+      "kind": "coarse_nuisance_marginal_lalsuite_imrphenomd_grid",
+      "parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "grid_points": 441,
+      "detectors": [
+        "H1",
+        "L1"
+      ],
+      "nuisance_points_per_detector": 81,
+      "best_marginal_grid_point": {
+        "alpha_bar_1": 0.0,
+        "alpha_bar_2": 0.0,
+        "log_marginal_likelihood": -1.0,
+        "profile_log_likelihood": -1.0
+      },
+      "best_profile_grid_point": {
+        "alpha_bar_1": 0.6000000000000001,
+        "alpha_bar_2": 0.6000000000000001,
+        "log_marginal_likelihood": -1.0041946503118435,
+        "profile_log_likelihood": -0.9939598599646702
+      },
+      "weight_summary": {
+        "grid_points": 441,
+        "max_weight": 0.006283482645669498,
+        "effective_sample_size": 218.798942192739
+      }
+    },
+    "source_parameter_covariance": {
+      "parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "matrix": [
+        [
+          1.2363777063497354,
+          1.0239118591532115
+        ],
+        [
+          1.0239118591532115,
+          1.2364116958793123
+        ]
+      ]
+    },
+    "waveform_model_reference": "LALSuite_IMRPhenomD_linearized_cubic_EFT_response",
+    "normalization_convention": "paper_native_dimensionless_alpha_bar",
+    "engine_axis_strategy": {
+      "status": "source_native_alpha_space_only"
+    },
+    "framework_projection_strategy": "not_attempted_source_native_only",
+    "systematics_budget": {
+      "status": "open",
+      "components": {
+        "waveform_systematics": "open",
+        "detector_calibration": "open",
+        "prior_sensitivity": "open",
+        "eft_truncation": "open",
+        "sampler_convergence": "open",
+        "public_data_reproducibility": "bounded"
+      }
+    },
+    "shared_eft_domain": "bounded_for_source_native_cubic_gw",
+    "validation_reference": "v2.115_lalsuite_marginal_alpha_likelihood",
+    "synthetic_fixture": false
+  },
+  "evaluation": {
+    "packet_export_ready": true,
+    "missing_packet_fields": [],
+    "adapter_evaluation": {
+      "label": "v2_115_lalsuite_marginal_alpha_likelihood_packet",
+      "source_url": "https://arxiv.org/abs/2407.08929",
+      "event": "GW170608",
+      "source_model": "cubic_parity_preserving_higher_curvature_eft",
+      "synthetic_fixture": false,
+      "missing_fields": [],
+      "constraints_summary": {
+        "parameters_present": [
+          "alpha_bar_1",
+          "alpha_bar_2"
+        ],
+        "parameters_missing": [],
+        "all_source_parameters_numeric": true
+      },
+      "likelihood_summary": {
+        "status": "reproduced_source_native_likelihood",
+        "contains_source_parameters": true,
+        "source_native_usable": true,
+        "kind": "coarse_nuisance_marginal_lalsuite_imrphenomd_grid"
+      },
+      "covariance_summary": {
+        "present": true,
+        "parameters_covered": [
+          "alpha_bar_1",
+          "alpha_bar_2"
+        ],
+        "parameters_missing": [],
+        "numeric": true
+      },
+      "systematics_summary": {
+        "status": "open",
+        "missing_components": [],
+        "components_closed": false,
+        "budget_closed": false
+      },
+      "engine_projection_summary": {
+        "status": "source_native_alpha_space_only",
+        "source_native_only": true,
+        "engine_projection_ready": false,
+        "target_axis": null
+      },
+      "native_adapter_ready": false,
+      "claim_ready": false,
+      "adapter_blockers": [
+        "systematics_not_closed"
+      ],
+      "claim_blockers": [
+        "engine_projection_not_ready",
+        "g8_joint_component_missing",
+        "systematics_not_closed"
+      ],
+      "status": "gw_cubic_source_native_packet_rejected_or_nonpromoting"
+    },
+    "claim_ready": false,
+    "removed_v2_115_blocker": "source_native_packet_not_exported",
+    "remaining_nonclaiming_reasons": [
+      "engine_projection_not_ready",
+      "g8_joint_component_missing",
+      "likelihood_scale_not_calibrated_to_noise_evidence",
+      "systematics_budget_missing_or_open"
+    ]
+  },
+  "claimable_discriminator_now": false,
+  "route_status": "marginal_alpha_source_native_packet_exported_nonclaiming",
+  "selected_next_build_action": "close_systematics_budget_and_engine_projection_for_alpha_packet",
+  "best_next_artifact": "Add calibrated noise evidence, detector calibration bounds, sampler convergence checks, and an explicit source-to-engine projection strategy before any claim promotion.",
+  "interpretation": "The v2.115 nuisance-marginal alpha likelihood is now exported as a v2.102-shaped source-native packet. The adapter can parse the constraints, covariance, and likelihood export, but rejects the packet for claim promotion because systematics remain open and the engine/g8 projection is absent."
+}
