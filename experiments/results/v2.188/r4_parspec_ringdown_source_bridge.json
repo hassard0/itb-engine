@@ -1,0 +1,223 @@
+{
+  "version": "v2.188",
+  "basis": [
+    "v2.187_r4_lalsuite_waveform_likelihood_posterior",
+    "Silva_Ghosh_Buonanno_2023_ParSpec_higher_curvature_ringdown",
+    "PhysRevD_107_044030"
+  ],
+  "bridge_packet": {
+    "packet_id": "parspec_quartic_eft_ringdown_to_engine_r4_bridge_v1",
+    "source_url": "https://arxiv.org/abs/2205.05132",
+    "source_doi": "https://doi.org/10.1103/PhysRevD.107.044030",
+    "arxiv_doi": "https://doi.org/10.48550/arXiv.2205.05132",
+    "theory_family": "quartic_order_effective_field_theory_of_general_relativity",
+    "source_ringdown_model_available": true,
+    "quartic_eft_bound_available": true,
+    "events": [
+      "GW150914",
+      "GW200129"
+    ],
+    "engine_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3"
+    ],
+    "v2_187_frontier": {
+      "path": "experiments/results/v2.187/r4_lalsuite_waveform_likelihood_posterior.json",
+      "version": "v2.187",
+      "route_status": "r4_lalsuite_waveform_likelihood_posterior_ready_nonclaiming",
+      "ready": true,
+      "event": "GW170608",
+      "engine_axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "posterior_mean": {
+        "g_R4_c1": 0.495635486753,
+        "g_R4_c2": 0.495621203259,
+        "g_R4_c3": -0.003508798916
+      },
+      "posterior_covariance": [
+        [
+          0.000799553501,
+          -1.27635e-06,
+          -1.230669e-06
+        ],
+        [
+          -1.27635e-06,
+          0.0007995535,
+          -1.229478e-06
+        ],
+        [
+          -1.230669e-06,
+          -1.229478e-06,
+          0.000799553445
+        ]
+      ],
+      "claim_blockers": [
+        "external_adversarial_review_missing",
+        "full_r4_modified_imr_merger_ringdown_completion_missing",
+        "nuisance_grid_is_coarse_not_posterior_sampler",
+        "r4_likelihood_uses_linearized_pn_templates_not_source_owned_waveform",
+        "waveform_calibration_prior_and_eft_systematics_not_closed"
+      ]
+    },
+    "source_evidence": {
+      "source_url": "https://arxiv.org/abs/2205.05132",
+      "source_doi": "https://doi.org/10.1103/PhysRevD.107.044030",
+      "arxiv_doi": "https://doi.org/10.48550/arXiv.2205.05132",
+      "title": "Black-hole ringdown as a probe of higher-curvature gravity theories",
+      "authors": [
+        "Hector O. Silva",
+        "Abhirup Ghosh",
+        "Alessandra Buonanno"
+      ],
+      "journal_reference": "Phys. Rev. D 107, 044030 (2023)",
+      "theory_family": "quartic_order_effective_field_theory_of_general_relativity",
+      "method_summary": "Effective-one-body IMR waveform augmented with a parametrized ringdown expansion in final black-hole spin, with theory-by-theory quasinormal-mode frequency inputs.",
+      "source_ringdown_model_available": true,
+      "source_owned_full_imr_sampler_export_available": false,
+      "public_code_or_samples_found": false,
+      "quartic_eft_bound_available": true,
+      "bounds_90_credible_km": {
+        "quartic_eft_length_scale": 51.3,
+        "cubic_eft_length_scale": 38.2,
+        "dynamical_chern_simons_length_scale": 38.7
+      },
+      "events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "source_claim_scope": "Ringdown constraints on higher-curvature length scales for selected loud events; not an engine-normalized Bresciani R4-axis posterior."
+    },
+    "axis_map_to_engine_r4": {
+      "status": "missing",
+      "needed": "Map the ParSpec quartic-EFT length-scale posterior or likelihood onto engine-normalized Bresciani axes g_R4_c1, g_R4_c2, g_R4_c3.",
+      "engine_axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "source_axis": "ell_qEFT_km"
+    },
+    "source_likelihood_or_posterior": {
+      "status": "missing_public_export",
+      "available_in_source": "published_bound_only",
+      "needed": "Public likelihood samples, log-likelihood grid, or covariance for the quartic-EFT ringdown parameter, with event metadata."
+    },
+    "systematics": {
+      "status": "source_mentions_eft_and_waveform_systematics_but_no_engine_export",
+      "needed": [
+        "waveform_systematics_budget",
+        "calibration_prior",
+        "event_selection_policy",
+        "glitch_and_data_quality_policy",
+        "eft_validity_domain"
+      ]
+    },
+    "event_bridge": {
+      "source_events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "current_engine_event": "GW170608",
+      "same_event_set": false
+    },
+    "claim_controls": {
+      "claim_use_allowed": false,
+      "framework_claim_allowed": false,
+      "source_bridge_only_not_claim_evidence": true
+    }
+  },
+  "evaluation": {
+    "packet_id": "parspec_quartic_eft_ringdown_to_engine_r4_bridge_v1",
+    "source_bridge_ready": true,
+    "source_owned_full_imr_sampler_ready": false,
+    "ready_for_framework_claim": false,
+    "bridge_blockers": [
+      "calibration_and_waveform_systematics_not_exported",
+      "engine_r4_axes_to_parspec_qeft_length_map_missing",
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ],
+    "claim_blockers": [
+      "calibration_and_waveform_systematics_not_exported",
+      "engine_r4_axes_to_parspec_qeft_length_map_missing",
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "external_adversarial_review_missing",
+      "full_source_owned_r4_imr_sampler_not_integrated",
+      "parspec_bridge_not_claim_ready",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ],
+    "parspec_bound_imported": {
+      "quartic_eft_length_scale_90_credible_km": 51.3,
+      "events": [
+        "GW150914",
+        "GW200129"
+      ]
+    },
+    "split_v2_187_blocker": {
+      "previous": "full_r4_modified_imr_merger_ringdown_completion_missing",
+      "now_resolved_subpiece": "primary_parspec_quartic_eft_ringdown_source_identified",
+      "remaining_subpieces": [
+        "engine_r4_axes_to_parspec_qeft_length_map_missing",
+        "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+        "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+        "full_source_owned_r4_imr_sampler_not_integrated"
+      ]
+    },
+    "route_status": "parspec_r4_ringdown_source_bridge_ready_nonclaiming"
+  },
+  "malformed_control_evaluation": {
+    "packet_id": "parspec_quartic_eft_ringdown_to_engine_r4_bridge_v1",
+    "source_bridge_ready": false,
+    "source_owned_full_imr_sampler_ready": false,
+    "ready_for_framework_claim": false,
+    "bridge_blockers": [
+      "calibration_and_waveform_systematics_not_exported",
+      "claim_use_not_disabled",
+      "engine_r4_axes_mismatch",
+      "engine_r4_axes_to_parspec_qeft_length_map_missing",
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "parspec_primary_source_url_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "quartic_eft_bound_not_available"
+    ],
+    "claim_blockers": [
+      "calibration_and_waveform_systematics_not_exported",
+      "engine_r4_axes_to_parspec_qeft_length_map_missing",
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "external_adversarial_review_missing",
+      "full_source_owned_r4_imr_sampler_not_integrated",
+      "parspec_bridge_not_claim_ready",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ],
+    "parspec_bound_imported": {
+      "quartic_eft_length_scale_90_credible_km": 51.3,
+      "events": [
+        "GW150914",
+        "GW200129"
+      ]
+    },
+    "split_v2_187_blocker": {
+      "previous": "full_r4_modified_imr_merger_ringdown_completion_missing",
+      "now_resolved_subpiece": "primary_parspec_quartic_eft_ringdown_source_identified",
+      "remaining_subpieces": [
+        "engine_r4_axes_to_parspec_qeft_length_map_missing",
+        "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+        "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+        "full_source_owned_r4_imr_sampler_not_integrated"
+      ]
+    },
+    "route_status": "parspec_r4_ringdown_source_bridge_blocked"
+  },
+  "source_bridge_ready": true,
+  "source_owned_full_imr_sampler_ready": false,
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "route_status": "parspec_r4_ringdown_source_bridge_ready_nonclaiming",
+  "selected_next_build_action": "map_parspec_qeft_length_likelihood_to_engine_r4_axes_or_find_public_samples",
+  "best_next_artifact": "A ParSpec/qEFT source packet with public posterior samples or a likelihood grid, plus a source-backed map from ell_qEFT to the engine R4 axes g_R4_c1, g_R4_c2, and g_R4_c3.",
+  "interpretation": "The v2.187 source-owned IMR blocker has been split. A primary ParSpec higher-curvature ringdown source exists for quartic EFT and provides a published length-scale bound, but it is not yet an engine-normalized R4 posterior or sampler. This is a concrete source bridge, not claim evidence."
+}
