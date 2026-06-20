@@ -1,0 +1,156 @@
+{
+  "version": "v2.104",
+  "basis": [
+    "v2.103_gw_alpha_interval_surrogate",
+    "GWOSC_GWTC_1_public_strain",
+    "gwastro_o2_bbh_pe_public_gr_validation_posteriors",
+    "arXiv_2407.08929_alpha_bar_target"
+  ],
+  "route": "gw170608_source_native_alpha_bar_reanalysis",
+  "required_manifest_fields": [
+    "label",
+    "event",
+    "route",
+    "public_inputs",
+    "waveform_model",
+    "likelihood_engine",
+    "sampler_config",
+    "systematics_plan",
+    "output_contract",
+    "adapter_target",
+    "validation_plan",
+    "synthetic_fixture"
+  ],
+  "sample_manifest_count": 2,
+  "manifest_ready_sample_manifests": [
+    "synthetic_ready_alpha_reanalysis_manifest"
+  ],
+  "claim_ready_sample_manifests": [],
+  "claimable_discriminator_now": false,
+  "evaluations": [
+    {
+      "label": "synthetic_ready_alpha_reanalysis_manifest",
+      "event": "GW170608",
+      "route": "gw170608_source_native_alpha_bar_reanalysis",
+      "synthetic_fixture": true,
+      "missing_fields": [],
+      "input_summary": {
+        "present": [
+          "gwosc_gwtc1_strain",
+          "o2_bbh_pe_gr_validation_posterior",
+          "liu_yunes_source_paper"
+        ],
+        "missing": [],
+        "not_ready": [],
+        "ready": true
+      },
+      "systematics_summary": {
+        "status": "closed",
+        "missing": [],
+        "not_closed": [],
+        "closed": true
+      },
+      "output_summary": {
+        "status": "ready",
+        "present": [
+          "alpha_bar_samples_or_likelihood",
+          "alpha_bar_covariance",
+          "alpha_bar_marginal_intervals",
+          "systematics_budget",
+          "v2_102_source_native_adapter_packet"
+        ],
+        "missing": [],
+        "not_ready": [],
+        "ready": true
+      },
+      "manifest_ready": true,
+      "claim_ready": false,
+      "manifest_blockers": [],
+      "claim_blockers": [
+        "g8_joint_component_missing",
+        "synthetic_fixture_not_real_reanalysis"
+      ],
+      "status": "gw170608_alpha_reanalysis_rejected_or_nonpromoting"
+    },
+    {
+      "label": "current_public_alpha_reanalysis_manifest",
+      "event": "GW170608",
+      "route": "gw170608_source_native_alpha_bar_reanalysis",
+      "synthetic_fixture": false,
+      "missing_fields": [],
+      "input_summary": {
+        "present": [
+          "gwosc_gwtc1_strain",
+          "o2_bbh_pe_gr_validation_posterior",
+          "liu_yunes_source_paper"
+        ],
+        "missing": [],
+        "not_ready": [],
+        "ready": true
+      },
+      "systematics_summary": {
+        "status": "not_closed",
+        "missing": [],
+        "not_closed": [
+          "waveform_systematics",
+          "detector_calibration",
+          "prior_sensitivity",
+          "eft_truncation",
+          "sampler_convergence",
+          "public_data_reproducibility"
+        ],
+        "closed": false
+      },
+      "output_summary": {
+        "status": "defined_not_ready",
+        "present": [
+          "alpha_bar_samples_or_likelihood",
+          "alpha_bar_covariance",
+          "alpha_bar_marginal_intervals",
+          "systematics_budget",
+          "v2_102_source_native_adapter_packet"
+        ],
+        "missing": [],
+        "not_ready": [
+          "alpha_bar_samples_or_likelihood",
+          "alpha_bar_covariance",
+          "alpha_bar_marginal_intervals",
+          "systematics_budget",
+          "v2_102_source_native_adapter_packet"
+        ],
+        "ready": false
+      },
+      "manifest_ready": false,
+      "claim_ready": false,
+      "manifest_blockers": [
+        "likelihood_engine_not_ready",
+        "output_contract_not_ready",
+        "sampler_config_not_ready",
+        "systematics_plan_not_closed",
+        "validation_plan_not_ready",
+        "waveform_model_not_ready"
+      ],
+      "claim_blockers": [
+        "g8_joint_component_missing",
+        "likelihood_engine_not_ready",
+        "output_contract_not_ready",
+        "sampler_config_not_ready",
+        "systematics_plan_not_closed",
+        "validation_plan_not_ready",
+        "waveform_model_not_ready"
+      ],
+      "status": "gw170608_alpha_reanalysis_rejected_or_nonpromoting"
+    }
+  ],
+  "current_public_manifest_action_queue": [
+    "implement_minimal_alpha_waveform_likelihood_stub",
+    "connect_public_strain_to_alpha_waveform_likelihood",
+    "define_priors_sampler_and_convergence_export",
+    "close_alpha_reanalysis_systematics_plan",
+    "produce_v2_102_source_native_adapter_packet"
+  ],
+  "route_status": "public_alpha_reanalysis_manifest_defined_waveform_likelihood_missing",
+  "selected_next_build_action": "implement_minimal_alpha_waveform_likelihood_stub",
+  "best_next_artifact": "A minimal alpha_bar likelihood stub with the correct parameter surface and output contract, wired to public-input placeholders before attempting an expensive full GW170608 run.",
+  "interpretation": "The route is now an implementation manifest. Public inputs are identified, but the cubic waveform likelihood, sampler, systematics closure, and output packet still need to be built before the v2.102 source-native gate can accept a real packet."
+}
