@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (256 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (257 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -305,3 +305,4 @@ Auto-generated front door to the full research program (256 notes). Regenerate w
 | v2.143 | [v2.143 - Bresciani K monomial projector](2026-06-20-v2.143-bresciani-k-monomial-projector.md) | v2.142 specified the source-backed K-factor rederivation route, but a future |
 | v2.144 | [v2.144 - Supersymmetric R4 shape projection: K plus fixed, normalizati](2026-06-20-v2.144-supersymmetric-r4-shape-projection.md) | v2.143 made the Bresciani monomial projector executable, but only a synthetic |
 | v2.145 | [v2.145 - String R4 normalization bridge: equation ready, bridge missin](2026-06-20-v2.145-string-r4-normalization-bridge.md) | v2.144 fixed the source-backed supersymmetric R4 helicity shape: |
+| v2.146 | [v2.146 - K-convention bridge audit: pole match exposes kappa conventio](2026-06-20-v2.146-k-convention-bridge-audit.md) | v2.145 reduced the string R4 normalization problem to: |

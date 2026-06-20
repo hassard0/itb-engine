@@ -1,0 +1,182 @@
+{
+  "version": "v2.146",
+  "basis": [
+    "v2.145_string_r4_normalization_bridge",
+    "v2.144_supersymmetric_r4_shape_projection",
+    "Russo_arXiv_hep-th_9707241_A4_expansion",
+    "Kallosh_Lee_Rube_arXiv_0811_3417_tree_and_R4_helicity_amplitudes"
+  ],
+  "k_bridge_acceptance_criteria": [
+    "source_backed_primary_or_rederived",
+    "dimensionless_against_v2_144_shape",
+    "independent_of_gravitational_coupling_convention",
+    "compatible_with_russo_barred_mandelstam_definition",
+    "compatible_with_kallosh_bresciani_bracket_bridge"
+  ],
+  "candidate_k_bridges": [
+    {
+      "candidate": "match_supergravity_pole_raw",
+      "source_inputs": [
+        "Russo: A4 = kappa^2 K A4^0",
+        "Russo: A4^0 = 1/(sbar*tbar*ubar) + 2*zeta(3) + ...",
+        "Russo: sbar = alpha_prime*s/4",
+        "Kallosh: M_tree(1-,2-,3+,4+) = shape/(kappa^2*s*t*u)"
+      ],
+      "assumptions": [
+        "alpha_prime = 1",
+        "Russo and Kallosh amplitude normalizations are directly comparable"
+      ],
+      "candidate_expression": "K_Russo / shape = 1/(64*kappa^4)",
+      "source_backed_primary_or_rederived": true,
+      "dimensionless_against_v2_144_shape": false,
+      "independent_of_gravitational_coupling_convention": false,
+      "compatible_with_russo_barred_mandelstam_definition": true,
+      "compatible_with_kallosh_bresciani_bracket_bridge": true,
+      "blockers": [
+        "bridge_depends_on_kappa_convention",
+        "bridge_not_dimensionless_against_shape",
+        "amplitude_normalization_conventions_not_unified"
+      ],
+      "interpretation": "Matching the pole identifies the convention problem but does not produce a usable dimensionless K bridge."
+    },
+    {
+      "candidate": "unit_shape_bridge",
+      "source_inputs": [
+        "v2.144: Kallosh/Bresciani shape has K_plus=1 and K_minus=0"
+      ],
+      "assumptions": [
+        "Define K_Russo equal to the v2.144 shape by convention"
+      ],
+      "candidate_expression": "K_Russo / shape = 1",
+      "source_backed_primary_or_rederived": false,
+      "dimensionless_against_v2_144_shape": true,
+      "independent_of_gravitational_coupling_convention": true,
+      "compatible_with_russo_barred_mandelstam_definition": false,
+      "compatible_with_kallosh_bresciani_bracket_bridge": true,
+      "blockers": [
+        "bridge_is_engine_convention_not_source_backed",
+        "russo_k_formula_not_ingested"
+      ],
+      "interpretation": "This is useful as an internal convention control but cannot stand in for a source-backed K bridge."
+    },
+    {
+      "candidate": "gross_witten_primary_k_formula",
+      "source_inputs": [
+        "Gross-Witten DOI/CERN record identified in v2.141"
+      ],
+      "assumptions": [
+        "The primary article contains an explicit K formula",
+        "The formula can be OCR/library-ingested without ambiguity"
+      ],
+      "candidate_expression": null,
+      "source_backed_primary_or_rederived": false,
+      "dimensionless_against_v2_144_shape": false,
+      "independent_of_gravitational_coupling_convention": false,
+      "compatible_with_russo_barred_mandelstam_definition": false,
+      "compatible_with_kallosh_bresciani_bracket_bridge": false,
+      "blockers": [
+        "primary_k_formula_not_ingested",
+        "gross_witten_pdf_or_ocr_still_required"
+      ],
+      "interpretation": "This remains the cleanest route if a machine-checkable primary K expression can be obtained."
+    }
+  ],
+  "evaluations": {
+    "match_supergravity_pole_raw": {
+      "candidate": "match_supergravity_pole_raw",
+      "candidate_expression": "K_Russo / shape = 1/(64*kappa^4)",
+      "criteria": {
+        "source_backed_primary_or_rederived": true,
+        "dimensionless_against_v2_144_shape": false,
+        "independent_of_gravitational_coupling_convention": false,
+        "compatible_with_russo_barred_mandelstam_definition": true,
+        "compatible_with_kallosh_bresciani_bracket_bridge": true
+      },
+      "failed_criteria": [
+        "dimensionless_against_v2_144_shape",
+        "independent_of_gravitational_coupling_convention"
+      ],
+      "acceptable_k_bridge": false,
+      "blockers": [
+        "amplitude_normalization_conventions_not_unified",
+        "bridge_depends_on_kappa_convention",
+        "bridge_not_dimensionless_against_shape",
+        "dimensionless_against_v2_144_shape_failed",
+        "independent_of_gravitational_coupling_convention_failed"
+      ],
+      "interpretation": "Matching the pole identifies the convention problem but does not produce a usable dimensionless K bridge."
+    },
+    "unit_shape_bridge": {
+      "candidate": "unit_shape_bridge",
+      "candidate_expression": "K_Russo / shape = 1",
+      "criteria": {
+        "source_backed_primary_or_rederived": false,
+        "dimensionless_against_v2_144_shape": true,
+        "independent_of_gravitational_coupling_convention": true,
+        "compatible_with_russo_barred_mandelstam_definition": false,
+        "compatible_with_kallosh_bresciani_bracket_bridge": true
+      },
+      "failed_criteria": [
+        "source_backed_primary_or_rederived",
+        "compatible_with_russo_barred_mandelstam_definition"
+      ],
+      "acceptable_k_bridge": false,
+      "blockers": [
+        "bridge_is_engine_convention_not_source_backed",
+        "compatible_with_russo_barred_mandelstam_definition_failed",
+        "russo_k_formula_not_ingested",
+        "source_backed_primary_or_rederived_failed"
+      ],
+      "interpretation": "This is useful as an internal convention control but cannot stand in for a source-backed K bridge."
+    },
+    "gross_witten_primary_k_formula": {
+      "candidate": "gross_witten_primary_k_formula",
+      "candidate_expression": null,
+      "criteria": {
+        "source_backed_primary_or_rederived": false,
+        "dimensionless_against_v2_144_shape": false,
+        "independent_of_gravitational_coupling_convention": false,
+        "compatible_with_russo_barred_mandelstam_definition": false,
+        "compatible_with_kallosh_bresciani_bracket_bridge": false
+      },
+      "failed_criteria": [
+        "source_backed_primary_or_rederived",
+        "dimensionless_against_v2_144_shape",
+        "independent_of_gravitational_coupling_convention",
+        "compatible_with_russo_barred_mandelstam_definition",
+        "compatible_with_kallosh_bresciani_bracket_bridge"
+      ],
+      "acceptable_k_bridge": false,
+      "blockers": [
+        "compatible_with_kallosh_bresciani_bracket_bridge_failed",
+        "compatible_with_russo_barred_mandelstam_definition_failed",
+        "dimensionless_against_v2_144_shape_failed",
+        "gross_witten_pdf_or_ocr_still_required",
+        "independent_of_gravitational_coupling_convention_failed",
+        "primary_k_formula_not_ingested",
+        "source_backed_primary_or_rederived_failed"
+      ],
+      "interpretation": "This remains the cleanest route if a machine-checkable primary K expression can be obtained."
+    }
+  },
+  "acceptable_k_bridge_candidates": [],
+  "current_blockers": [
+    "amplitude_normalization_conventions_not_unified",
+    "bridge_depends_on_kappa_convention",
+    "bridge_is_engine_convention_not_source_backed",
+    "bridge_not_dimensionless_against_shape",
+    "compatible_with_kallosh_bresciani_bracket_bridge_failed",
+    "compatible_with_russo_barred_mandelstam_definition_failed",
+    "dimensionless_against_v2_144_shape_failed",
+    "gross_witten_pdf_or_ocr_still_required",
+    "independent_of_gravitational_coupling_convention_failed",
+    "primary_k_formula_not_ingested",
+    "russo_k_formula_not_ingested",
+    "source_backed_primary_or_rederived_failed"
+  ],
+  "claimable_framework_exclusions_now": [],
+  "route_status": "k_convention_bridge_candidates_audited_no_acceptable_bridge",
+  "selected_next_build_action": "ingest_primary_k_formula_or_define_engine_shape_normalization_convention",
+  "best_next_artifact": "Either a machine-checkable Gross-Witten K expression, or an explicit engine policy that intentionally treats the v2.144 Kallosh/Bresciani shape as the normalized K unit while keeping absolute string-scale claims disabled.",
+  "interpretation": "The supergravity-pole comparison is not enough: it produces a bridge proportional to kappa^-4, so it has not unified the source amplitude conventions into the dimensionless K bridge required by v2.145. The repo therefore still must ingest the primary K formula or add an explicit non-claiming engine convention."
+}
