@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (217 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (218 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -266,3 +266,4 @@ Auto-generated front door to the full research program (217 notes). Regenerate w
 | v2.104 | [v2.104 - GW170608 alpha reanalysis manifest: public inputs, missing likelihood](2026-06-20-v2.104-gw170608-alpha-reanalysis-manifest.md) | v2.104 defines the public GW170608 alpha reanalysis manifest, confirms public inputs are identified, and selects a minimal alpha waveform-likelihood stub next. |
 | v2.105 | [v2.105 - GW alpha likelihood stub: source-native packet harness](2026-06-20-v2.105-gw-alpha-likelihood-stub.md) | v2.105 implements an executable synthetic alpha_bar likelihood harness that satisfies the v2.102 source-native packet shape and selects public-strain integration next. |
 | v2.106 | [v2.106 - GW public strain connector: URLs connected, bytes not ingested](2026-06-20-v2.106-gw-public-strain-connector.md) | v2.106 connects GW170608-v3 H1/L1 public strain URLs and segment metadata, then selects an HDF5 loader smoke test before alpha residual integration. |
+| v2.107 | [v2.107 - GW public strain loader: HDF5 bytes verified, residual missing](2026-06-20-v2.107-gw-public-strain-loader.md) | v2.107 downloads/reads the 32-second H1/L1 GW170608 HDF5 files, verifies hashes, metadata, and sample counts, then selects strain conditioning and alpha residual projection next. |

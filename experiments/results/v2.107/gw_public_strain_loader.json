@@ -1,0 +1,124 @@
+{
+  "version": "v2.107",
+  "basis": [
+    "v2.106_gw_public_strain_connector",
+    "GWOSC_GW170608_v3_H1_L1_32s_HDF5"
+  ],
+  "cache_dir": "data\\runs\\gwosc_cache",
+  "required_datasets": [
+    "/strain/Strain",
+    "/meta/GPSstart",
+    "/meta/Duration",
+    "/meta/Detector"
+  ],
+  "loads": [
+    {
+      "record": {
+        "detector": "H1",
+        "duration": 32,
+        "sample_rate_hz": 4096,
+        "gps_start": 1180922479,
+        "file_format": "HDF",
+        "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/H-H1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+        "expected_sample_count": 131072,
+        "event_offset_seconds": 15.5,
+        "event_inside_segment": true,
+        "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=H1&sample-rate=4&duration=32&file-format=hdf5"
+      },
+      "metadata": {
+        "path": "data\\runs\\gwosc_cache\\H-H1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+        "file_size_bytes": 1034918,
+        "sha256": "c1d3e5d3365977012b0380c4e5064cab4b0761d0d928b98bbe402245ca177a27",
+        "datasets_present": [
+          "/strain/Strain",
+          "/meta/GPSstart",
+          "/meta/Duration",
+          "/meta/Detector"
+        ],
+        "datasets_missing": [],
+        "detector": "H1",
+        "gps_start": 1180922479,
+        "duration": 32,
+        "sample_count": 131072,
+        "sample_rate_hz": 4096,
+        "strain_finite": true,
+        "strain_mean": -5.032210117199121e-22,
+        "strain_rms": 5.266751799150589e-19,
+        "strain_min": -1.1789199036219745e-18,
+        "strain_max": 1.1972584439139083e-18
+      },
+      "sample_count_matches": true,
+      "duration_matches": true,
+      "detector_matches": true,
+      "gps_start_matches": true,
+      "sample_rate_matches": true,
+      "event_offset_seconds_from_metadata": 15.5,
+      "event_inside_segment_from_metadata": true,
+      "loader_ready": true
+    },
+    {
+      "record": {
+        "detector": "L1",
+        "duration": 32,
+        "sample_rate_hz": 4096,
+        "gps_start": 1180922479,
+        "file_format": "HDF",
+        "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW170608/v3/L-L1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+        "expected_sample_count": 131072,
+        "event_offset_seconds": 15.5,
+        "event_inside_segment": true,
+        "query_url": "https://gwosc.org/api/v2/event-versions/GW170608-v3/strain-files?detector=L1&sample-rate=4&duration=32&file-format=hdf5"
+      },
+      "metadata": {
+        "path": "data\\runs\\gwosc_cache\\L-L1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+        "file_size_bytes": 1036678,
+        "sha256": "eb680f2fa9fc5a4223c697e17351d5c5d8f45f05623ee3a6a55cf67f55586a81",
+        "datasets_present": [
+          "/strain/Strain",
+          "/meta/GPSstart",
+          "/meta/Duration",
+          "/meta/Detector"
+        ],
+        "datasets_missing": [],
+        "detector": "L1",
+        "gps_start": 1180922479,
+        "duration": 32,
+        "sample_count": 131072,
+        "sample_rate_hz": 4096,
+        "strain_finite": true,
+        "strain_mean": -3.4188662145618e-21,
+        "strain_rms": 4.488067719733123e-19,
+        "strain_min": -1.3788136772649736e-18,
+        "strain_max": 1.3141319303616288e-18
+      },
+      "sample_count_matches": true,
+      "duration_matches": true,
+      "detector_matches": true,
+      "gps_start_matches": true,
+      "sample_rate_matches": true,
+      "event_offset_seconds_from_metadata": 15.5,
+      "event_inside_segment_from_metadata": true,
+      "loader_ready": true
+    }
+  ],
+  "evaluation": {
+    "load_count": 2,
+    "ready_load_count": 2,
+    "detectors_loaded": [
+      "H1",
+      "L1"
+    ],
+    "hdf5_loader_ready": true,
+    "claim_ready": false,
+    "loader_blockers": [],
+    "claim_blockers": [
+      "alpha_waveform_residual_not_connected",
+      "g8_joint_component_missing"
+    ]
+  },
+  "claimable_discriminator_now": false,
+  "route_status": "public_hdf5_strain_loader_ready_alpha_residual_missing",
+  "selected_next_build_action": "implement_strain_conditioning_and_alpha_residual_projection",
+  "best_next_artifact": "A deterministic strain-conditioning and residual-projection layer that consumes the verified H1/L1 arrays and replaces the v2.105 quadratic alpha stub residual.",
+  "interpretation": "The 32-second public GWOSC HDF5 files can now be downloaded, hashed, opened, and checked for strain sample counts and metadata. This is still not an alpha-bar likelihood until waveform residuals are computed from the loaded strain."
+}
