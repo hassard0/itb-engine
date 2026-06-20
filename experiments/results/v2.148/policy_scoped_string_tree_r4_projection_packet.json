@@ -1,0 +1,343 @@
+{
+  "version": "v2.148",
+  "basis": [
+    "v2.147_r4_shape_normalization_policy",
+    "v2.144_supersymmetric_r4_shape_projection",
+    "v2.137_gravity_r4_source_provenance_guard",
+    "v2.133_gravity_r4_projection_guard_schema"
+  ],
+  "projection_packet": {
+    "framework": "string_tree_eft",
+    "axis_family": "gravity_R4_Riemann4",
+    "source_url": "https://arxiv.org/abs/0811.3417",
+    "source_type": "computed_framework_projection",
+    "source_version": "engine_r4_shape_unit_v1_policy_scoped",
+    "adapter_kind": "framework_native_r4_projection",
+    "basis": "Bresciani_c_i_spin2_Riemann4",
+    "coefficients": {
+      "g_R4_c1": 0.5,
+      "g_R4_c2": 0.5,
+      "g_R4_c3": 0.0
+    },
+    "derived": {
+      "g_R4_plus": 1.0,
+      "g_R4_minus_abs": 0.0
+    },
+    "normalization": {
+      "status": "engine_lambda_r4_defined",
+      "policy_id": "engine_r4_shape_unit_v1",
+      "policy_version": "v2.147",
+      "allowed_policy_use": "internal_bresciani_basis_projection",
+      "overall_R4_factor": 8.0,
+      "absolute_string_alpha_prime_normalization_backed": false,
+      "engine_lambda_r4_unit_conversion_source_backed": false,
+      "k_convention_bridge_source_backed": false,
+      "claim_use_allowed": false
+    },
+    "operator_projection_matrix": {
+      "status": "source_backed",
+      "source_basis": "Kallosh/Bresciani R4 helicity shape",
+      "target_basis": "Bresciani c_i spin-2 Riemann4",
+      "rows": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "columns": [
+        "K_plus",
+        "Re(K_minus)",
+        "Im(K_minus)"
+      ],
+      "matrix": [
+        [
+          0.5,
+          0.5,
+          0.0
+        ],
+        [
+          0.5,
+          -0.5,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "matching_equation": "With overall_R4_factor=8, Bresciani c_plus=K_plus and c_minus=K_minus, then c1=(c_plus+Re(c_minus))/2, c2=(c_plus-Re(c_minus))/2, c3=Im(c_minus)."
+    },
+    "valid_energy_domain": {
+      "status": "bounded_for_qg_eft",
+      "domain_scope": "dimensionless R4 shape algebra only",
+      "physical_scale_claim_allowed": false
+    },
+    "uncertainty_or_covariance": {
+      "status": "bounded_systematic_envelope",
+      "axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "relative_envelope": 0.0,
+      "scope": "source-backed shape reanalysis under the v2.147 unit policy; absolute coefficient uncertainty is represented by claim blockers, not by a measurement covariance."
+    },
+    "ownership_metadata": {
+      "framework_owned_derivation": "policy-scoped string_tree_eft R4 adapter shape derived from the maximally supersymmetric R4 source family",
+      "source_owned_by_framework": true,
+      "policy_scoped_not_absolute_framework_coefficient": true
+    },
+    "source_provenance": {
+      "source_backed_derivation": true,
+      "derivation_kind": "validated_public_reanalysis",
+      "primary_source_urls": [
+        "https://arxiv.org/abs/0811.3417",
+        "https://arxiv.org/abs/2504.12855",
+        "https://arxiv.org/abs/hep-th/9707241"
+      ],
+      "synthetic_fixture": false,
+      "derivation_scope": "Internal R4 helicity-shape projection only. This packet does not provide the absolute type-II string alpha-prime normalization or an engine Lambda_R4 conversion.",
+      "source_equation_refs": {
+        "kallosh_lee_rube_2008": [
+          "Omega4",
+          "P3-loop_UV",
+          "M_UV_3-loop"
+        ],
+        "bresciani_levati_paradisi_2025": [
+          "eq:amplitude",
+          "c_plus_c_minus_definitions"
+        ],
+        "russo_1997": [
+          "A4",
+          "A4^0",
+          "2*zeta(3)_contact_scalar"
+        ]
+      }
+    },
+    "unitarity_bound": {
+      "status": "source_backed",
+      "uses_bresciani_spin2_bound": true,
+      "source_url": "https://arxiv.org/abs/2504.12855"
+    },
+    "positivity_status": "checked",
+    "discriminator_math": "projection_only"
+  },
+  "policy_scope_evaluation": {
+    "policy_id": "engine_r4_shape_unit_v1",
+    "policy_status": "engine_convention_nonclaiming",
+    "ready_for_policy_scoped_projection": true,
+    "ready_for_absolute_normalized_projection": false,
+    "ready_for_framework_claim": false,
+    "blockers": [],
+    "remaining_absolute_normalization_gaps": [
+      "absolute_type_II_string_alpha_prime_R4_coefficient",
+      "engine_Lambda_R4_unit_conversion",
+      "source_backed_K_Russo_to_Kallosh_shape_bridge"
+    ],
+    "allowed_policy_use": "internal_bresciani_basis_projection"
+  },
+  "base_guard_result": {
+    "framework": "string_tree_eft",
+    "framework_registered": true,
+    "engine_scope": {
+      "in_scope": true,
+      "violations": [],
+      "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+    },
+    "missing_required_fields": [],
+    "source_url_valid": true,
+    "source_type_valid": true,
+    "coefficient_summary": {
+      "coefficient_values": {
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.0
+      },
+      "missing_or_nonnumeric": [],
+      "positivity_passed": true,
+      "positivity_residual": 1.0
+    },
+    "derived_summary": {
+      "missing_or_nonnumeric": [],
+      "expected": {
+        "g_R4_plus": 1.0,
+        "g_R4_minus_abs": 0.0
+      },
+      "provided": {
+        "g_R4_plus": 1.0,
+        "g_R4_minus_abs": 0.0
+      },
+      "consistent": true
+    },
+    "normalization_summary": {
+      "present": true,
+      "status": "engine_lambda_r4_defined",
+      "status_valid": true
+    },
+    "operator_projection_summary": {
+      "present": true,
+      "status": "source_backed",
+      "status_valid": true
+    },
+    "energy_domain_summary": {
+      "present": true,
+      "status": "bounded_for_qg_eft",
+      "status_valid": true
+    },
+    "uncertainty_summary": {
+      "present": true,
+      "status": "bounded_systematic_envelope",
+      "status_valid": true,
+      "axes_cover_required": true
+    },
+    "ownership_summary": {
+      "framework_source_owned": true
+    },
+    "unitarity_summary": {
+      "present": true,
+      "status": "source_backed",
+      "status_valid": true,
+      "uses_bresciani_spin2_bound": true
+    },
+    "likelihood_summary": {
+      "present": false,
+      "status": "",
+      "status_valid": false,
+      "axes_cover_required": false
+    },
+    "ready_for_framework_projection": true,
+    "ready_for_framework_claim": false,
+    "projection_blockers": [],
+    "claim_blockers": [
+      "discriminator_math_not_excluding",
+      "measurement_likelihood_missing_or_incomplete"
+    ]
+  },
+  "strict_source_guard_result": {
+    "framework": "string_tree_eft",
+    "base_ready_for_framework_projection": true,
+    "ready_for_source_backed_framework_projection": true,
+    "ready_for_framework_claim": false,
+    "base_guard": {
+      "framework": "string_tree_eft",
+      "framework_registered": true,
+      "engine_scope": {
+        "in_scope": true,
+        "violations": [],
+        "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+      },
+      "missing_required_fields": [],
+      "source_url_valid": true,
+      "source_type_valid": true,
+      "coefficient_summary": {
+        "coefficient_values": {
+          "g_R4_c1": 0.5,
+          "g_R4_c2": 0.5,
+          "g_R4_c3": 0.0
+        },
+        "missing_or_nonnumeric": [],
+        "positivity_passed": true,
+        "positivity_residual": 1.0
+      },
+      "derived_summary": {
+        "missing_or_nonnumeric": [],
+        "expected": {
+          "g_R4_plus": 1.0,
+          "g_R4_minus_abs": 0.0
+        },
+        "provided": {
+          "g_R4_plus": 1.0,
+          "g_R4_minus_abs": 0.0
+        },
+        "consistent": true
+      },
+      "normalization_summary": {
+        "present": true,
+        "status": "engine_lambda_r4_defined",
+        "status_valid": true
+      },
+      "operator_projection_summary": {
+        "present": true,
+        "status": "source_backed",
+        "status_valid": true
+      },
+      "energy_domain_summary": {
+        "present": true,
+        "status": "bounded_for_qg_eft",
+        "status_valid": true
+      },
+      "uncertainty_summary": {
+        "present": true,
+        "status": "bounded_systematic_envelope",
+        "status_valid": true,
+        "axes_cover_required": true
+      },
+      "ownership_summary": {
+        "framework_source_owned": true
+      },
+      "unitarity_summary": {
+        "present": true,
+        "status": "source_backed",
+        "status_valid": true,
+        "uses_bresciani_spin2_bound": true
+      },
+      "likelihood_summary": {
+        "present": false,
+        "status": "",
+        "status_valid": false,
+        "axes_cover_required": false
+      },
+      "ready_for_framework_projection": true,
+      "ready_for_framework_claim": false,
+      "projection_blockers": [],
+      "claim_blockers": [
+        "discriminator_math_not_excluding",
+        "measurement_likelihood_missing_or_incomplete"
+      ]
+    },
+    "source_provenance_summary": {
+      "source_provenance_present": true,
+      "missing_source_provenance_fields": [],
+      "source_backed_derivation": true,
+      "derivation_kind": "validated_public_reanalysis",
+      "derivation_kind_valid": true,
+      "primary_source_urls": [
+        "https://arxiv.org/abs/0811.3417",
+        "https://arxiv.org/abs/2504.12855",
+        "https://arxiv.org/abs/hep-th/9707241"
+      ],
+      "primary_source_urls_valid": true,
+      "packet_source_url": "https://arxiv.org/abs/0811.3417",
+      "source_url_is_listed": true,
+      "synthetic_fixture_declared_false": true,
+      "truthy_synthetic_fixture_paths": [],
+      "fixture_text_paths": [
+        "$.source_provenance.synthetic_fixture"
+      ],
+      "source_provenance_complete": true,
+      "source_provenance_blockers": []
+    },
+    "strict_projection_blockers": [],
+    "strict_claim_blockers": [
+      "discriminator_math_not_excluding",
+      "measurement_likelihood_missing_or_incomplete"
+    ]
+  },
+  "ready_for_policy_scoped_projection": true,
+  "ready_for_absolute_normalized_projection": false,
+  "ready_for_framework_claim": false,
+  "claimable_framework_exclusions_now": [],
+  "current_claim_blockers": [
+    "discriminator_math_not_excluding",
+    "measurement_likelihood_missing_or_incomplete"
+  ],
+  "remaining_absolute_normalization_gaps": [
+    "absolute_type_II_string_alpha_prime_R4_coefficient",
+    "engine_Lambda_R4_unit_conversion",
+    "source_backed_K_Russo_to_Kallosh_shape_bridge"
+  ],
+  "route_status": "policy_scoped_string_tree_r4_projection_packet_ready_nonclaiming",
+  "selected_next_build_action": "register_policy_scoped_r4_adapter_without_claim_promotion",
+  "best_next_artifact": "A registry-side adapter hook that exposes this string_tree_eft R4 shape packet for internal projection algebra while retaining the v2.133/v2.137 claim blockers.",
+  "interpretation": "The engine can now build a source-provenance-clean string_tree_eft R4 projection packet under the v2.147 shape policy. It is useful for internal Bresciani-basis projection and positivity algebra, but it is still not an absolute string-scale prediction or a framework exclusion because the measurement likelihood and absolute normalization bridge remain absent."
+}
