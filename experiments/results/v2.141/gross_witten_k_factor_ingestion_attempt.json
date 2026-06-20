@@ -1,0 +1,129 @@
+{
+  "version": "v2.141",
+  "basis": [
+    "v2.140_source_k_factor_helicity_decomposition_audit",
+    "CERN_record_166499",
+    "DOI_10.1016_0550-3213_86_90429-3"
+  ],
+  "source_record_attempts": [
+    {
+      "attempt_id": "cern_record_170189_pdf",
+      "url": "https://cds.cern.ch/record/170189/files/198608288.pdf",
+      "retrieval_status": "downloaded_rendered_not_target_source",
+      "downloaded_bytes": 473146,
+      "local_pypdf_text_chars": 13,
+      "vulcan_pdftotext_bytes": 14,
+      "rendered_title": "Higher Curvature Supergravity and Superstrings",
+      "rendered_authors": [
+        "S. Ferrara"
+      ],
+      "target_title": "Superstring modifications of Einstein's equations",
+      "is_gross_witten_target": false,
+      "provides_machine_checkable_k_formula": false,
+      "blocker": "wrong_cern_pdf_record_for_gross_witten",
+      "interpretation": "The previously downloaded CERN PDF is a Ferrara invited talk, not Gross-Witten. It cannot be used as the primary K-factor source."
+    },
+    {
+      "attempt_id": "cern_record_166499_actual_gross_witten",
+      "url": "https://cds.cern.ch/record/166499",
+      "files_url": "https://cds.cern.ch/record/166499/files/",
+      "retrieval_status": "metadata_record_found_no_file_link_exposed",
+      "metadata_title": "Superstring modifications of Einstein's equations",
+      "metadata_authors": [
+        "David J. Gross",
+        "Edward Witten"
+      ],
+      "metadata_pages": 18,
+      "files_endpoint_content_type": "text/html; charset=utf-8",
+      "files_endpoint_bytes": 15578,
+      "file_list_entries_found": 0,
+      "is_gross_witten_target": true,
+      "provides_machine_checkable_k_formula": false,
+      "blocker": "gross_witten_cern_record_has_no_exposed_file",
+      "interpretation": "The real CERN record exists, but the public file tab did not expose a downloadable source/PDF file during this run."
+    },
+    {
+      "attempt_id": "doi_record",
+      "url": "https://doi.org/10.1016/0550-3213(86)90429-3",
+      "retrieval_status": "bibliographic_primary_record_only",
+      "metadata_title": "Superstring modifications of Einstein's equations",
+      "metadata_authors": [
+        "David J. Gross",
+        "Edward Witten"
+      ],
+      "is_gross_witten_target": true,
+      "provides_machine_checkable_k_formula": false,
+      "blocker": "doi_record_not_machine_formula_ingestion",
+      "interpretation": "The DOI identifies the primary article, but does not by itself supply a machine-checkable K expression."
+    }
+  ],
+  "verified_gross_witten_records": [
+    "cern_record_166499_actual_gross_witten",
+    "doi_record"
+  ],
+  "machine_checkable_k_formula_sources": [],
+  "requirements": [
+    {
+      "requirement": "target_source_identity_verified",
+      "status": "satisfied",
+      "evidence": "CERN record 166499 and DOI identify Gross-Witten.",
+      "blocker": null
+    },
+    {
+      "requirement": "wrong_source_removed_from_route",
+      "status": "satisfied",
+      "evidence": "CERN record 170189 PDF rendered as Ferrara, not Gross-Witten.",
+      "blocker": null
+    },
+    {
+      "requirement": "machine_checkable_k_formula",
+      "status": "missing",
+      "evidence": "No exposed Gross-Witten source/PDF text was ingested.",
+      "blocker": "gross_witten_k_formula_not_ingested"
+    },
+    {
+      "requirement": "k_plus_k_minus_projection",
+      "status": "missing",
+      "evidence": "Requires K formula or independent rederivation.",
+      "blocker": "source_K_plus_K_minus_components_missing"
+    }
+  ],
+  "satisfied_requirements": [
+    "target_source_identity_verified",
+    "wrong_source_removed_from_route"
+  ],
+  "missing_requirements": [
+    "machine_checkable_k_formula",
+    "k_plus_k_minus_projection"
+  ],
+  "next_ingestion_routes": [
+    {
+      "route": "obtain_gross_witten_article_pdf_from_library_or_elsevier",
+      "status": "preferred_if_accessible",
+      "acceptance_test": "pdftotext or OCR yields enough text/formula content to locate the four-graviton K expression with page metadata."
+    },
+    {
+      "route": "ocr_physical_scan_of_gross_witten_article",
+      "status": "parallel_route",
+      "acceptance_test": "OCR output plus rendered page image identifies K without ambiguous manual transcription."
+    },
+    {
+      "route": "rederive_k_from_string_polarization_tensors",
+      "status": "fallback_route",
+      "acceptance_test": "Symbolic derivation projects a source-backed R4 tensor or kinematic factor into Bresciani K_plus/K_minus channels."
+    }
+  ],
+  "can_ingest_k_formula_now": false,
+  "current_blockers": [
+    "doi_record_not_machine_formula_ingestion",
+    "gross_witten_cern_record_has_no_exposed_file",
+    "gross_witten_k_formula_not_ingested",
+    "source_K_plus_K_minus_components_missing",
+    "wrong_cern_pdf_record_for_gross_witten"
+  ],
+  "claimable_framework_exclusions_now": [],
+  "route_status": "gross_witten_record_corrected_k_formula_not_ingested",
+  "selected_next_build_action": "ocr_or_library_ingest_gross_witten_k_formula_or_rederive_k",
+  "best_next_artifact": "A page-anchored, machine-checkable K-factor expression from Gross-Witten, or a source-backed independent derivation that does not depend on the inaccessible scan.",
+  "interpretation": "This iteration corrects the source trail: the accessible CERN PDF previously tried was the wrong paper. The real Gross-Witten record is identified, but no public file was exposed from CERN and no K formula has been ingested. The route remains active through OCR/library access or an independent derivation."
+}
