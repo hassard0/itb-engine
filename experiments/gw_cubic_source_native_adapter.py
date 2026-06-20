@@ -280,6 +280,7 @@ def evaluate_gw_cubic_source_native_packet(
     if not engine_projection_ready:
         claim_blockers.add("engine_projection_not_ready")
     claim_blockers.add("g8_joint_component_missing")
+    claim_ready = not claim_blockers
 
     return {
         "label": packet.get("label", "unnamed_gw_cubic_source_native_packet"),
@@ -294,14 +295,12 @@ def evaluate_gw_cubic_source_native_packet(
         "systematics_summary": systematics,
         "engine_projection_summary": projection,
         "native_adapter_ready": native_adapter_ready,
-        "claim_ready": (
-            native_adapter_ready and engine_projection_ready and not synthetic_fixture
-        ),
+        "claim_ready": claim_ready,
         "adapter_blockers": sorted(blockers),
         "claim_blockers": sorted(claim_blockers),
         "status": (
             "gw_cubic_source_native_packet_claim_ready"
-            if native_adapter_ready and engine_projection_ready and not synthetic_fixture
+            if claim_ready
             else "gw_cubic_source_native_packet_rejected_or_nonpromoting"
         ),
     }

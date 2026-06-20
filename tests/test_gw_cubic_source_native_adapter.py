@@ -72,6 +72,26 @@ def test_only_synthetic_packet_satisfies_source_native_shape():
     assert result["blocker_counts"]["g8_joint_component_missing"] == 3
 
 
+def test_g8_claim_blocker_prevents_claim_even_when_alpha_packet_is_ready():
+    packet = synthetic_ready_gw_cubic_source_native_packet()
+    packet["synthetic_fixture"] = False
+    packet["source_url"] = "https://arxiv.org/abs/2407.08929"
+    packet["engine_axis_strategy"] = {
+        "status": "explicit_engine_projection",
+        "target_axis": "gw_cubic_alpha",
+        "source_to_engine_jacobian": [[1.0, 0.0], [0.0, 1.0]],
+    }
+    packet["framework_projection_strategy"] = "framework_alpha_response_defined"
+
+    result = evaluate_gw_cubic_source_native_packet(packet)
+
+    assert result["native_adapter_ready"] is True
+    assert result["engine_projection_summary"]["engine_projection_ready"] is True
+    assert result["adapter_blockers"] == []
+    assert result["claim_ready"] is False
+    assert result["claim_blockers"] == ["g8_joint_component_missing"]
+
+
 def test_required_fields_include_likelihood_covariance_and_projection_strategy():
     result = diagnose_gw_cubic_source_native_adapter()
     fields = result["required_source_native_packet_fields"]
