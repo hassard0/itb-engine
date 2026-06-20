@@ -1,0 +1,283 @@
+{
+  "version": "v2.98",
+  "basis": [
+    "v2.97_g8_secondary_axis_targets",
+    "v2.96_g8_measurement_sensitivity_targets",
+    "v2.93_external_evidence_intake_gate"
+  ],
+  "route": "g8_joint_secondary_axis_measurement_design",
+  "required_joint_packet_fields": [
+    "label",
+    "route",
+    "source_url",
+    "source_type",
+    "axes",
+    "framework_pair",
+    "central_values",
+    "statistical_uncertainties",
+    "systematic_uncertainties",
+    "axis_normalizations",
+    "axis_projections",
+    "covariance_or_likelihood",
+    "systematics_budget",
+    "shared_eft_domain",
+    "secondary_axis",
+    "discriminator_math",
+    "synthetic_fixture"
+  ],
+  "sample_packet_count": 4,
+  "acceptance_ready_sample_packets": [
+    "synthetic_ready_joint_g8_g_c_packet",
+    "synthetic_ready_joint_g8_g_r2_packet"
+  ],
+  "claim_ready_sample_packets": [],
+  "claimable_discriminator_now": false,
+  "blocker_counts": {
+    "axes_missing_secondary_axis": 1,
+    "cross_axis_mixing_not_controlled": 1,
+    "discriminator_math_not_pair_excluding": 1,
+    "framework_pair_not_targeted": 1,
+    "g8_normalization_not_engine": 1,
+    "g8_projection_missing": 1,
+    "g8_uncertainty_missing_or_unusable": 1,
+    "g8_uncertainty_not_below_target": 1,
+    "missing_joint_likelihood_or_covariance": 1,
+    "missing_joint_numeric_measurement": 1,
+    "missing_required_fields": 1,
+    "secondary_axis_normalization_not_engine": 1,
+    "secondary_axis_projection_missing": 1,
+    "secondary_axis_uncertainty_missing_or_unusable": 1,
+    "secondary_axis_uncertainty_not_below_target": 1,
+    "shared_eft_domain_not_bounded": 1,
+    "synthetic_fixture_not_real_source": 2,
+    "systematics_not_closed": 1
+  },
+  "evaluations": [
+    {
+      "label": "synthetic_ready_joint_g8_g_c_packet",
+      "route": "g8_joint_secondary_axis_measurement_design",
+      "synthetic_fixture": true,
+      "secondary_axis": "g_C",
+      "framework_pair": [
+        "discovered_data_driven",
+        "string_tree_eft"
+      ],
+      "expected_framework_pair": [
+        "discovered_data_driven",
+        "string_tree_eft"
+      ],
+      "missing_fields": [],
+      "missing_numeric_axes": [],
+      "required_axes": [
+        "g_8",
+        "g_C"
+      ],
+      "g8_total_uncertainty": 0.001118033988749895,
+      "g8_required_total_sigma": 0.0020000000000000018,
+      "secondary_axis_total_uncertainty": 0.03162277660168379,
+      "secondary_axis_required_total_sigma": 0.0508369565217391,
+      "likelihood_summary": {
+        "status": "public_engine_usable",
+        "contains_required_axes": true,
+        "engine_usable": true,
+        "kind": "joint_gaussian_likelihood"
+      },
+      "systematics_summary": {
+        "status": "bounded",
+        "missing_components": [],
+        "components_closed": true,
+        "budget_closed": true
+      },
+      "acceptance_ready": true,
+      "claim_ready": false,
+      "acceptance_blockers": [],
+      "claim_blockers": [
+        "synthetic_fixture_not_real_source"
+      ],
+      "status": "g8_joint_packet_rejected_or_nonpromoting"
+    },
+    {
+      "label": "synthetic_ready_joint_g8_g_r2_packet",
+      "route": "g8_joint_secondary_axis_measurement_design",
+      "synthetic_fixture": true,
+      "secondary_axis": "g_R2",
+      "framework_pair": [
+        "discovered_data_driven",
+        "string_tree_eft"
+      ],
+      "expected_framework_pair": [
+        "discovered_data_driven",
+        "string_tree_eft"
+      ],
+      "missing_fields": [],
+      "missing_numeric_axes": [],
+      "required_axes": [
+        "g_8",
+        "g_R2"
+      ],
+      "g8_total_uncertainty": 0.001118033988749895,
+      "g8_required_total_sigma": 0.0020000000000000018,
+      "secondary_axis_total_uncertainty": 0.03807886552931954,
+      "secondary_axis_required_total_sigma": 0.06289999999999998,
+      "likelihood_summary": {
+        "status": "public_engine_usable",
+        "contains_required_axes": true,
+        "engine_usable": true,
+        "kind": "joint_gaussian_likelihood"
+      },
+      "systematics_summary": {
+        "status": "bounded",
+        "missing_components": [],
+        "components_closed": true,
+        "budget_closed": true
+      },
+      "acceptance_ready": true,
+      "claim_ready": false,
+      "acceptance_blockers": [],
+      "claim_blockers": [
+        "synthetic_fixture_not_real_source"
+      ],
+      "status": "g8_joint_packet_rejected_or_nonpromoting"
+    },
+    {
+      "label": "incomplete_joint_packet",
+      "route": "g8_joint_secondary_axis_measurement_design",
+      "synthetic_fixture": false,
+      "secondary_axis": "g_C",
+      "framework_pair": [],
+      "expected_framework_pair": [
+        "discovered_data_driven",
+        "string_tree_eft"
+      ],
+      "missing_fields": [
+        "framework_pair",
+        "central_values",
+        "statistical_uncertainties",
+        "systematic_uncertainties",
+        "axis_normalizations",
+        "axis_projections",
+        "covariance_or_likelihood",
+        "systematics_budget",
+        "shared_eft_domain",
+        "discriminator_math"
+      ],
+      "missing_numeric_axes": [
+        "g_8",
+        "g_C"
+      ],
+      "required_axes": [
+        "g_8",
+        "g_C"
+      ],
+      "g8_total_uncertainty": null,
+      "g8_required_total_sigma": 0.0020000000000000018,
+      "secondary_axis_total_uncertainty": null,
+      "secondary_axis_required_total_sigma": 0.0508369565217391,
+      "likelihood_summary": {
+        "status": "",
+        "contains_required_axes": false,
+        "engine_usable": false
+      },
+      "systematics_summary": {
+        "status": "",
+        "missing_components": [
+          "g8_adapter",
+          "secondary_axis_adapter",
+          "cross_covariance",
+          "eft_truncation",
+          "calibration",
+          "background_model"
+        ],
+        "components_closed": false,
+        "budget_closed": false
+      },
+      "acceptance_ready": false,
+      "claim_ready": false,
+      "acceptance_blockers": [
+        "axes_missing_secondary_axis",
+        "cross_axis_mixing_not_controlled",
+        "discriminator_math_not_pair_excluding",
+        "framework_pair_not_targeted",
+        "g8_normalization_not_engine",
+        "g8_projection_missing",
+        "g8_uncertainty_missing_or_unusable",
+        "missing_joint_likelihood_or_covariance",
+        "missing_joint_numeric_measurement",
+        "missing_required_fields",
+        "secondary_axis_normalization_not_engine",
+        "secondary_axis_projection_missing",
+        "secondary_axis_uncertainty_missing_or_unusable",
+        "shared_eft_domain_not_bounded",
+        "systematics_not_closed"
+      ],
+      "claim_blockers": [
+        "axes_missing_secondary_axis",
+        "cross_axis_mixing_not_controlled",
+        "discriminator_math_not_pair_excluding",
+        "framework_pair_not_targeted",
+        "g8_normalization_not_engine",
+        "g8_projection_missing",
+        "g8_uncertainty_missing_or_unusable",
+        "missing_joint_likelihood_or_covariance",
+        "missing_joint_numeric_measurement",
+        "missing_required_fields",
+        "secondary_axis_normalization_not_engine",
+        "secondary_axis_projection_missing",
+        "secondary_axis_uncertainty_missing_or_unusable",
+        "shared_eft_domain_not_bounded",
+        "systematics_not_closed"
+      ],
+      "status": "g8_joint_packet_rejected_or_nonpromoting"
+    },
+    {
+      "label": "imprecise_joint_packet",
+      "route": "g8_joint_secondary_axis_measurement_design",
+      "synthetic_fixture": false,
+      "secondary_axis": "g_C",
+      "framework_pair": [
+        "discovered_data_driven",
+        "string_tree_eft"
+      ],
+      "expected_framework_pair": [
+        "discovered_data_driven",
+        "string_tree_eft"
+      ],
+      "missing_fields": [],
+      "missing_numeric_axes": [],
+      "required_axes": [
+        "g_8",
+        "g_C"
+      ],
+      "g8_total_uncertainty": 0.0031622776601683794,
+      "g8_required_total_sigma": 0.0020000000000000018,
+      "secondary_axis_total_uncertainty": 0.07280109889280519,
+      "secondary_axis_required_total_sigma": 0.0508369565217391,
+      "likelihood_summary": {
+        "status": "public_engine_usable",
+        "contains_required_axes": true,
+        "engine_usable": true,
+        "kind": "joint_gaussian_likelihood"
+      },
+      "systematics_summary": {
+        "status": "bounded",
+        "missing_components": [],
+        "components_closed": true,
+        "budget_closed": true
+      },
+      "acceptance_ready": false,
+      "claim_ready": false,
+      "acceptance_blockers": [
+        "g8_uncertainty_not_below_target",
+        "secondary_axis_uncertainty_not_below_target"
+      ],
+      "claim_blockers": [
+        "g8_uncertainty_not_below_target",
+        "secondary_axis_uncertainty_not_below_target"
+      ],
+      "status": "g8_joint_packet_rejected_or_nonpromoting"
+    }
+  ],
+  "route_status": "g8_joint_packet_gate_ready_no_real_packet",
+  "best_next_artifact": "Run this gate on a real joint g_8 plus secondary-axis packet. Synthetic fixtures and precision-incomplete packets remain non-promoting.",
+  "interpretation": "The joint route now has an executable acceptance gate. It can accept correctly shaped future g_8+g_C or g_8+g_R2 packets, but no current sample is a real claim-ready source."
+}

@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (208 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (209 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -257,3 +257,4 @@ Auto-generated front door to the full research program (208 notes). Regenerate w
 | v2.95 | [v2.95 - External dependency blocker synthesis: current run cannot promote](2026-06-19-v2.95-external-dependency-blocker-synthesis.md) | v2.95 synthesizes the repeated external-packet blocker and records the exact unblock conditions required before any defensible discriminator promotion. |
 | v2.96 | [v2.96 - g8 measurement sensitivity targets: precision floor defined](2026-06-20-v2.96-g8-measurement-sensitivity-targets.md) | v2.96 converts the external g8-packet blocker into numeric 2-sigma precision targets for eligible registered frameworks while remaining non-claimable without a real packet. |
 | v2.97 | [v2.97 - g8 secondary-axis targets: near-degeneracy has a joint route](2026-06-20-v2.97-g8-secondary-axis-targets.md) | v2.97 maps the tightest eligible g8 near-degeneracy to secondary-axis targets, showing g_R2 and g_C joint packets could relax the single-axis precision requirement. |
+| v2.98 | [v2.98 - g8 joint-packet acceptance gate: executable route, no real packet](2026-06-20-v2.98-g8-joint-packet-acceptance-gate.md) | v2.98 adds an executable gate for future g8+g_C or g8+g_R2 packets, accepting only schema- and precision-complete packets while keeping synthetic fixtures non-claimable. |
