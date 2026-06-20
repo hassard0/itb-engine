@@ -1,0 +1,301 @@
+{
+  "version": "v2.119",
+  "basis": [
+    "v2.118_alpha_systematics_budget_gate",
+    "v2.113_lalsuite_imr_projection",
+    "v2.112_leading_order_gr_projection",
+    "v2.115_marginal_alpha_likelihood"
+  ],
+  "packet": {
+    "label": "v2_119_quantified_systematics_alpha_packet",
+    "source_url": "https://arxiv.org/abs/2407.08929",
+    "source_model": "cubic_parity_preserving_higher_curvature_eft",
+    "event": "GW170608",
+    "source_parameters": [
+      "alpha_bar_1",
+      "alpha_bar_2"
+    ],
+    "parameter_constraints": {
+      "alpha_bar_1": {
+        "central": 0.0010027012478329624,
+        "lower_90": -1.8,
+        "upper_90": 1.8000000000000003
+      },
+      "alpha_bar_2": {
+        "central": 0.0007886614846891616,
+        "lower_90": -1.8,
+        "upper_90": 1.8000000000000003
+      }
+    },
+    "posterior_or_likelihood_export": {
+      "status": "reproduced_source_native_likelihood",
+      "kind": "coarse_nuisance_marginal_lalsuite_imrphenomd_grid",
+      "parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "grid_points": 441,
+      "detectors": [
+        "H1",
+        "L1"
+      ],
+      "nuisance_points_per_detector": 81,
+      "best_marginal_grid_point": {
+        "alpha_bar_1": 0.0,
+        "alpha_bar_2": 0.0,
+        "log_marginal_likelihood": -1.0,
+        "profile_log_likelihood": -1.0
+      },
+      "best_profile_grid_point": {
+        "alpha_bar_1": 0.6000000000000001,
+        "alpha_bar_2": 0.6000000000000001,
+        "log_marginal_likelihood": -1.0041946503118435,
+        "profile_log_likelihood": -0.9939598599646702
+      },
+      "weight_summary": {
+        "grid_points": 441,
+        "max_weight": 0.006283482645669498,
+        "effective_sample_size": 218.798942192739
+      }
+    },
+    "source_parameter_covariance": {
+      "parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "matrix": [
+        [
+          1.2363777063497354,
+          1.0239118591532115
+        ],
+        [
+          1.0239118591532115,
+          1.2364116958793123
+        ]
+      ]
+    },
+    "waveform_model_reference": "LALSuite_IMRPhenomD_linearized_cubic_EFT_response",
+    "normalization_convention": "paper_native_dimensionless_alpha_bar",
+    "engine_axis_strategy": {
+      "status": "explicit_engine_projection",
+      "target_axis": "gw_cubic_alpha",
+      "source_parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "engine_parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "source_to_engine_jacobian": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "normalization": "identity_in_paper_native_dimensionless_alpha_bar_basis",
+      "projection_scope": "source_native_cubic_alpha_axis_not_quadratic_curvature_or_g8"
+    },
+    "framework_projection_strategy": "framework_alpha_response_defined",
+    "systematics_budget": {
+      "status": "open",
+      "components": {
+        "waveform_systematics": "open",
+        "detector_calibration": "open",
+        "prior_sensitivity": "open",
+        "eft_truncation": "open",
+        "sampler_convergence": "bounded",
+        "public_data_reproducibility": "bounded"
+      },
+      "evidence": {
+        "waveform_systematics": {
+          "status": "open",
+          "proxy_kind": "leading_order_gr_vs_lalsuite_imrphenomd_projection_delta",
+          "parameters": {
+            "alpha_bar_1": {
+              "leading_order_gr_abs_mean": 0.03542031712253359,
+              "imrphenomd_abs_mean": 0.025788256709295503,
+              "abs_mean_delta": -0.009632060413238084,
+              "real_mean_delta": -0.031203424882713368,
+              "imag_mean_delta": 0.003275552160712368
+            },
+            "alpha_bar_2": {
+              "leading_order_gr_abs_mean": 0.033746416713831634,
+              "imrphenomd_abs_mean": 0.031185715449305734,
+              "abs_mean_delta": -0.0025607012645258997,
+              "real_mean_delta": 0.03606218685398721,
+              "imag_mean_delta": -0.0021976005791185943
+            }
+          },
+          "max_network_projection_component_delta": 0.03606218685398721,
+          "closure_target": "Replace this proxy with source-backed cubic-EFT IMR waveform uncertainty, not just GR-baseline comparison."
+        },
+        "detector_calibration": {
+          "status": "open",
+          "proxy_kind": "h1_l1_projection_spread_not_calibration_model",
+          "detector_spreads": {
+            "alpha_bar_1_abs_detector_spread": 0.013731331249366048,
+            "alpha_bar_2_abs_detector_spread": 0.002095528279368316
+          },
+          "max_abs_detector_spread": 0.013731331249366048,
+          "closure_target": "Propagate H1/L1 calibration amplitude-phase uncertainty envelopes through the alpha likelihood."
+        },
+        "prior_sensitivity": {
+          "status": "open",
+          "proxy_kind": "marginal_vs_profile_best_point_shift",
+          "best_marginal_grid_point": {
+            "alpha_bar_1": 0.0,
+            "alpha_bar_2": 0.0,
+            "log_marginal_likelihood": -1.0,
+            "profile_log_likelihood": -1.0
+          },
+          "best_profile_grid_point": {
+            "alpha_bar_1": 0.6000000000000001,
+            "alpha_bar_2": 0.6000000000000001,
+            "log_marginal_likelihood": -1.0041946503118435,
+            "profile_log_likelihood": -0.9939598599646702
+          },
+          "alpha_best_point_euclidean_shift": 0.8485281374238571,
+          "profile_minus_marginal_log_likelihood_gap": 0.006040140035329822,
+          "closure_target": "Run a posterior sampler or prior-weight sweep that demonstrates stable alpha constraints under justified nuisance priors."
+        },
+        "eft_truncation": {
+          "status": "open",
+          "proxy_kind": "dimensionless_next_pn_power_v_f_squared",
+          "v_f_max": 0.319804329926307,
+          "next_order_power_suppression_proxy": 0.1022748094396142,
+          "closure_target": "Attach source-backed higher-order cubic-EFT coefficient or remainder bound over the alpha confidence domain."
+        },
+        "sampler_convergence": {
+          "status": "bounded",
+          "basis": "deterministic_grid_enumeration_no_stochastic_sampler",
+          "alpha_grid_points": 441,
+          "expected_alpha_grid_points": 441,
+          "nuisance_points_per_detector": [
+            81,
+            81
+          ],
+          "detectors": [
+            "H1",
+            "L1"
+          ],
+          "best_marginal_grid_point": {
+            "alpha_bar_1": 0.0,
+            "alpha_bar_2": 0.0,
+            "log_marginal_likelihood": -1.0,
+            "profile_log_likelihood": -1.0
+          },
+          "best_profile_grid_point": {
+            "alpha_bar_1": 0.6000000000000001,
+            "alpha_bar_2": 0.6000000000000001,
+            "log_marginal_likelihood": -1.0041946503118435,
+            "profile_log_likelihood": -0.9939598599646702
+          },
+          "deterministic_ready": true
+        },
+        "public_data_reproducibility": {
+          "status": "bounded",
+          "basis": "v2.107_hash_metadata_and_vulcan_reproduction",
+          "required_detectors": [
+            "H1",
+            "L1"
+          ],
+          "public_strain_artifact": "experiments/results/v2.107/gw_public_strain_loader.json",
+          "cache_rehydration_supported": true
+        }
+      }
+    },
+    "shared_eft_domain": "bounded_for_source_native_cubic_gw",
+    "validation_reference": "v2.119_alpha_systematics_envelope_audit",
+    "synthetic_fixture": false,
+    "projection_caveat": "This is an identity projection from the source-native alpha_bar basis to an engine gw_cubic_alpha axis. It is not a projection to g8, g_C, or quadratic curvature axes."
+  },
+  "evaluation": {
+    "quantitative_envelopes_ready": true,
+    "quantified_open_components": [
+      "waveform_systematics",
+      "detector_calibration",
+      "prior_sensitivity",
+      "eft_truncation"
+    ],
+    "bounded_components": [
+      "sampler_convergence",
+      "public_data_reproducibility"
+    ],
+    "adapter_evaluation": {
+      "label": "v2_119_quantified_systematics_alpha_packet",
+      "source_url": "https://arxiv.org/abs/2407.08929",
+      "event": "GW170608",
+      "source_model": "cubic_parity_preserving_higher_curvature_eft",
+      "synthetic_fixture": false,
+      "missing_fields": [],
+      "constraints_summary": {
+        "parameters_present": [
+          "alpha_bar_1",
+          "alpha_bar_2"
+        ],
+        "parameters_missing": [],
+        "all_source_parameters_numeric": true
+      },
+      "likelihood_summary": {
+        "status": "reproduced_source_native_likelihood",
+        "contains_source_parameters": true,
+        "source_native_usable": true,
+        "kind": "coarse_nuisance_marginal_lalsuite_imrphenomd_grid"
+      },
+      "covariance_summary": {
+        "present": true,
+        "parameters_covered": [
+          "alpha_bar_1",
+          "alpha_bar_2"
+        ],
+        "parameters_missing": [],
+        "numeric": true
+      },
+      "systematics_summary": {
+        "status": "open",
+        "missing_components": [],
+        "components_closed": false,
+        "budget_closed": false
+      },
+      "engine_projection_summary": {
+        "status": "explicit_engine_projection",
+        "source_native_only": false,
+        "engine_projection_ready": true,
+        "target_axis": "gw_cubic_alpha"
+      },
+      "native_adapter_ready": false,
+      "claim_ready": false,
+      "adapter_blockers": [
+        "systematics_not_closed"
+      ],
+      "claim_blockers": [
+        "g8_joint_component_missing",
+        "systematics_not_closed"
+      ],
+      "status": "gw_cubic_source_native_packet_rejected_or_nonpromoting"
+    },
+    "claim_ready": false,
+    "removed_v2_118_subblockers": [
+      "unquantified_waveform_systematics_proxy",
+      "unquantified_detector_spread_proxy",
+      "unquantified_prior_sensitivity_proxy",
+      "unquantified_eft_truncation_proxy"
+    ],
+    "remaining_nonclaiming_reasons": [
+      "g8_joint_component_missing",
+      "likelihood_scale_not_calibrated_to_noise_evidence",
+      "proxy_envelopes_not_calibrated_systematics_bounds",
+      "systematics_not_closed"
+    ]
+  },
+  "claimable_discriminator_now": false,
+  "route_status": "alpha_systematics_proxies_quantified_nonclaiming",
+  "selected_next_build_action": "replace_proxy_envelopes_with_calibrated_systematics_bounds",
+  "best_next_artifact": "Replace each proxy envelope with a calibrated source-backed systematics bound that can change component status from open to bounded under the v2.102 adapter.",
+  "interpretation": "The four remaining open systematics are now quantified by explicit proxy envelopes. This improves the audit surface but does not close the systematics budget because proxy envelopes are not calibrated waveform, calibration, prior, or EFT-truncation bounds."
+}
