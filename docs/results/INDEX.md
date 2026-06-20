@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (275 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (276 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -324,3 +324,4 @@ Auto-generated front door to the full research program (275 notes). Regenerate w
 | v2.162 | [v2.162 - R4 shape likelihood ingestion adapter: implementation-ready, ](2026-06-20-v2.162-r4-shape-likelihood-ingestion-adapter.md) | v2.161 made future public R4 shape-likelihood ingestion the top frontier route. |
 | v2.163 | [v2.163 - Native tower live-source triage: active sources, no registere](2026-06-20-v2.163-native-tower-live-source-triage.md) | After R4 and g_8 remained external-packet blocked, can the native tower route |
 | v2.164 | [v2.164 - Native tower adapter requirement sheet: per-framework contrac](2026-06-20-v2.164-native-tower-adapter-requirement-sheet.md) | v2.163 found live native-tower-adjacent sources but no registered adapter. Can |
+| v2.165 | [v2.165 - Post-adapter frontier refresh: infrastructure improved, no cl](2026-06-20-v2.165-post-adapter-frontier-refresh.md) | After v2.162 added the R4 likelihood ingester and v2.164 defined native tower |
