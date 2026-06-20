@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (286 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (287 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -335,3 +335,4 @@ Auto-generated front door to the full research program (286 notes). Regenerate w
 | v2.173 | [v2.173 - Post-Weyl/G8-contract frontier](2026-06-20-v2.173-post-weyl-g8-contract-frontier.md) | After v2.172 made the Weyl/G8 dual likelihood an executable packet contract, |
 | v2.174 | [v2.174 - R4 live-source acquisition queue](2026-06-20-v2.174-r4-live-source-acquisition-queue.md) | After v2.173 made every active frontier route diagnostic-ready, can the top |
 | v2.175 | [v2.175 - Bresciani R4 axis dictionary](2026-06-20-v2.175-bresciani-r4-axis-dictionary.md) | Can the v2.174 selected route move from a source-acquisition queue to a |
+| v2.176 | [v2.176 - Public-GW R4 reanalysis fixture](2026-06-20-v2.176-public-gw-r4-reanalysis-fixture.md) | Can the v2.175 Bresciani axis dictionary be wired into a GW170608 public-data |
