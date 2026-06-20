@@ -1,0 +1,1747 @@
+{
+  "version": "v2.96",
+  "basis": [
+    "itb.predict.FRAMEWORKS",
+    "itb.scope.engine_validity",
+    "experiments.tower_framework_scenarios._framework_reference_verdicts",
+    "v2.93_external_evidence_intake_gate",
+    "v2.95_external_dependency_blocker_synthesis"
+  ],
+  "route": "future_public_g8_measurement_ingestion",
+  "route_status": "g8_sensitivity_targets_defined_no_external_packet",
+  "claimable_discriminator_now": false,
+  "external_packet_present": false,
+  "uncertainty_model": "One-dimensional Gaussian proxy on engine-normalized g_8. A real packet must still pass the v2.93 intake gate with public likelihood, covariance, closed systematics, and EFT-domain bounds.",
+  "z_score": 2.0,
+  "registered_framework_count": 13,
+  "eligible_framework_count": 8,
+  "ineligible_frameworks": [
+    {
+      "framework": "emergent_gravity",
+      "g8": 0.15,
+      "engine_in_scope": false,
+      "scope_violations": [
+        "locality (assumed by the swampland/positivity program)",
+        "a fundamental UV graviton field (the bounds expand the graviton amplitude; emergent gravity has no such UV expansion)"
+      ],
+      "reference_feasible": true,
+      "reference_binding": null,
+      "eligible_for_current_g8_target": false,
+      "ineligible_reasons": [
+        "engine_scope_excluded"
+      ]
+    },
+    {
+      "framework": "causal_set",
+      "g8": 0.3,
+      "engine_in_scope": false,
+      "scope_violations": [
+        "locality (assumed by the swampland/positivity program)"
+      ],
+      "reference_feasible": true,
+      "reference_binding": null,
+      "eligible_for_current_g8_target": false,
+      "ineligible_reasons": [
+        "engine_scope_excluded"
+      ]
+    },
+    {
+      "framework": "group_field_theory",
+      "g8": 0.4,
+      "engine_in_scope": true,
+      "scope_violations": [],
+      "reference_feasible": false,
+      "reference_binding": "graviton_forward_positivity",
+      "eligible_for_current_g8_target": false,
+      "ineligible_reasons": [
+        "reference_stack_infeasible"
+      ]
+    },
+    {
+      "framework": "lqg_induced",
+      "g8": 0.4,
+      "engine_in_scope": true,
+      "scope_violations": [],
+      "reference_feasible": false,
+      "reference_binding": "cft_flat_space_bound",
+      "eligible_for_current_g8_target": false,
+      "ineligible_reasons": [
+        "reference_stack_infeasible"
+      ]
+    },
+    {
+      "framework": "horava_lifshitz",
+      "g8": 0.45,
+      "engine_in_scope": false,
+      "scope_violations": [
+        "Lorentz invariance (assumed by amplitude-positivity bounds)"
+      ],
+      "reference_feasible": false,
+      "reference_binding": "cft_flat_space_bound",
+      "eligible_for_current_g8_target": false,
+      "ineligible_reasons": [
+        "engine_scope_excluded",
+        "reference_stack_infeasible"
+      ]
+    }
+  ],
+  "framework_g8_rows": [
+    {
+      "framework": "pure_gr",
+      "g8": 0.0,
+      "engine_in_scope": true,
+      "scope_violations": [],
+      "reference_feasible": true,
+      "reference_binding": null,
+      "eligible_for_current_g8_target": true,
+      "ineligible_reasons": []
+    },
+    {
+      "framework": "discovered_novel",
+      "g8": 0.045,
+      "engine_in_scope": true,
+      "scope_violations": [],
+      "reference_feasible": true,
+      "reference_binding": null,
+      "eligible_for_current_g8_target": true,
+      "ineligible_reasons": []
+    },
+    {
+      "framework": "emergent_gravity",
+      "g8": 0.15,
+      "engine_in_scope": false,
+      "scope_violations": [
+        "locality (assumed by the swampland/positivity program)",
+        "a fundamental UV graviton field (the bounds expand the graviton amplitude; emergent gravity has no such UV expansion)"
+      ],
+      "reference_feasible": true,
+      "reference_binding": null,
+      "eligible_for_current_g8_target": false,
+      "ineligible_reasons": [
+        "engine_scope_excluded"
+      ]
+    },
+    {
+      "framework": "asymptotic_safety",
+      "g8": 0.3,
+      "engine_in_scope": true,
+      "scope_violations": [],
+      "reference_feasible": true,
+      "reference_binding": null,
+      "eligible_for_current_g8_target": true,
+      "ineligible_reasons": []
+    },
+    {
+      "framework": "causal_set",
+      "g8": 0.3,
+      "engine_in_scope": false,
+      "scope_violations": [
+        "locality (assumed by the swampland/positivity program)"
+      ],
+      "reference_feasible": true,
+      "reference_binding": null,
+      "eligible_for_current_g8_target": false,
+      "ineligible_reasons": [
+        "engine_scope_excluded"
+      ]
+    },
+    {
+      "framework": "cdt",
+      "g8": 0.35,
+      "engine_in_scope": true,
+      "scope_violations": [],
+      "reference_feasible": true,
+      "reference_binding": null,
+      "eligible_for_current_g8_target": true,
+      "ineligible_reasons": []
+    },
+    {
+      "framework": "discovered_parity_violating",
+      "g8": 0.376,
+      "engine_in_scope": true,
+      "scope_violations": [],
+      "reference_feasible": true,
+      "reference_binding": null,
+      "eligible_for_current_g8_target": true,
+      "ineligible_reasons": []
+    },
+    {
+      "framework": "group_field_theory",
+      "g8": 0.4,
+      "engine_in_scope": true,
+      "scope_violations": [],
+      "reference_feasible": false,
+      "reference_binding": "graviton_forward_positivity",
+      "eligible_for_current_g8_target": false,
+      "ineligible_reasons": [
+        "reference_stack_infeasible"
+      ]
+    },
+    {
+      "framework": "lqg_induced",
+      "g8": 0.4,
+      "engine_in_scope": true,
+      "scope_violations": [],
+      "reference_feasible": false,
+      "reference_binding": "cft_flat_space_bound",
+      "eligible_for_current_g8_target": false,
+      "ineligible_reasons": [
+        "reference_stack_infeasible"
+      ]
+    },
+    {
+      "framework": "string_tree_eft",
+      "g8": 0.4,
+      "engine_in_scope": true,
+      "scope_violations": [],
+      "reference_feasible": true,
+      "reference_binding": null,
+      "eligible_for_current_g8_target": true,
+      "ineligible_reasons": []
+    },
+    {
+      "framework": "discovered_data_driven",
+      "g8": 0.404,
+      "engine_in_scope": true,
+      "scope_violations": [],
+      "reference_feasible": true,
+      "reference_binding": null,
+      "eligible_for_current_g8_target": true,
+      "ineligible_reasons": []
+    },
+    {
+      "framework": "horava_lifshitz",
+      "g8": 0.45,
+      "engine_in_scope": false,
+      "scope_violations": [
+        "Lorentz invariance (assumed by amplitude-positivity bounds)"
+      ],
+      "reference_feasible": false,
+      "reference_binding": "cft_flat_space_bound",
+      "eligible_for_current_g8_target": false,
+      "ineligible_reasons": [
+        "engine_scope_excluded",
+        "reference_stack_infeasible"
+      ]
+    },
+    {
+      "framework": "discovered_high_g8",
+      "g8": 0.552,
+      "engine_in_scope": true,
+      "scope_violations": [],
+      "reference_feasible": true,
+      "reference_binding": null,
+      "eligible_for_current_g8_target": true,
+      "ineligible_reasons": []
+    }
+  ],
+  "all_registered_clusters": [
+    {
+      "g8": 0.0,
+      "frameworks": [
+        "pure_gr"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    {
+      "g8": 0.045,
+      "frameworks": [
+        "discovered_novel"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    {
+      "g8": 0.15,
+      "frameworks": [
+        "emergent_gravity"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    {
+      "g8": 0.3,
+      "frameworks": [
+        "asymptotic_safety",
+        "causal_set"
+      ],
+      "cluster_size": 2,
+      "exact_degeneracy": true
+    },
+    {
+      "g8": 0.35,
+      "frameworks": [
+        "cdt"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    {
+      "g8": 0.376,
+      "frameworks": [
+        "discovered_parity_violating"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    {
+      "g8": 0.4,
+      "frameworks": [
+        "group_field_theory",
+        "lqg_induced",
+        "string_tree_eft"
+      ],
+      "cluster_size": 3,
+      "exact_degeneracy": true
+    },
+    {
+      "g8": 0.404,
+      "frameworks": [
+        "discovered_data_driven"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    {
+      "g8": 0.45,
+      "frameworks": [
+        "horava_lifshitz"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    {
+      "g8": 0.552,
+      "frameworks": [
+        "discovered_high_g8"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    }
+  ],
+  "eligible_clusters": [
+    {
+      "g8": 0.0,
+      "frameworks": [
+        "pure_gr"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    {
+      "g8": 0.045,
+      "frameworks": [
+        "discovered_novel"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    {
+      "g8": 0.3,
+      "frameworks": [
+        "asymptotic_safety"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    {
+      "g8": 0.35,
+      "frameworks": [
+        "cdt"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    {
+      "g8": 0.376,
+      "frameworks": [
+        "discovered_parity_violating"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    {
+      "g8": 0.4,
+      "frameworks": [
+        "string_tree_eft"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    {
+      "g8": 0.404,
+      "frameworks": [
+        "discovered_data_driven"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    {
+      "g8": 0.552,
+      "frameworks": [
+        "discovered_high_g8"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    }
+  ],
+  "all_registered_exact_degenerate_clusters": [
+    {
+      "g8": 0.3,
+      "frameworks": [
+        "asymptotic_safety",
+        "causal_set"
+      ],
+      "cluster_size": 2,
+      "exact_degeneracy": true
+    },
+    {
+      "g8": 0.4,
+      "frameworks": [
+        "group_field_theory",
+        "lqg_induced",
+        "string_tree_eft"
+      ],
+      "cluster_size": 3,
+      "exact_degeneracy": true
+    }
+  ],
+  "eligible_exact_degenerate_clusters": [],
+  "all_registered_pairwise_separations": [
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "causal_set",
+      "g8_a": 0.3,
+      "g8_b": 0.3,
+      "separation": 0.0,
+      "exact_degenerate": true,
+      "required_total_sigma_for_2sigma_distinguishability": null
+    },
+    {
+      "framework_a": "group_field_theory",
+      "framework_b": "lqg_induced",
+      "g8_a": 0.4,
+      "g8_b": 0.4,
+      "separation": 0.0,
+      "exact_degenerate": true,
+      "required_total_sigma_for_2sigma_distinguishability": null
+    },
+    {
+      "framework_a": "group_field_theory",
+      "framework_b": "string_tree_eft",
+      "g8_a": 0.4,
+      "g8_b": 0.4,
+      "separation": 0.0,
+      "exact_degenerate": true,
+      "required_total_sigma_for_2sigma_distinguishability": null
+    },
+    {
+      "framework_a": "lqg_induced",
+      "framework_b": "string_tree_eft",
+      "g8_a": 0.4,
+      "g8_b": 0.4,
+      "separation": 0.0,
+      "exact_degenerate": true,
+      "required_total_sigma_for_2sigma_distinguishability": null
+    },
+    {
+      "framework_a": "group_field_theory",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.4,
+      "g8_b": 0.404,
+      "separation": 0.0040000000000000036,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.0020000000000000018
+    },
+    {
+      "framework_a": "lqg_induced",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.4,
+      "g8_b": 0.404,
+      "separation": 0.0040000000000000036,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.0020000000000000018
+    },
+    {
+      "framework_a": "string_tree_eft",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.4,
+      "g8_b": 0.404,
+      "separation": 0.0040000000000000036,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.0020000000000000018
+    },
+    {
+      "framework_a": "discovered_parity_violating",
+      "framework_b": "group_field_theory",
+      "g8_a": 0.376,
+      "g8_b": 0.4,
+      "separation": 0.02400000000000002,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.01200000000000001
+    },
+    {
+      "framework_a": "discovered_parity_violating",
+      "framework_b": "lqg_induced",
+      "g8_a": 0.376,
+      "g8_b": 0.4,
+      "separation": 0.02400000000000002,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.01200000000000001
+    },
+    {
+      "framework_a": "discovered_parity_violating",
+      "framework_b": "string_tree_eft",
+      "g8_a": 0.376,
+      "g8_b": 0.4,
+      "separation": 0.02400000000000002,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.01200000000000001
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "discovered_parity_violating",
+      "g8_a": 0.35,
+      "g8_b": 0.376,
+      "separation": 0.026000000000000023,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.013000000000000012
+    },
+    {
+      "framework_a": "discovered_parity_violating",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.376,
+      "g8_b": 0.404,
+      "separation": 0.028000000000000025,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.014000000000000012
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "discovered_novel",
+      "g8_a": 0.0,
+      "g8_b": 0.045,
+      "separation": 0.045,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.0225
+    },
+    {
+      "framework_a": "discovered_data_driven",
+      "framework_b": "horava_lifshitz",
+      "g8_a": 0.404,
+      "g8_b": 0.45,
+      "separation": 0.045999999999999985,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.022999999999999993
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "cdt",
+      "g8_a": 0.3,
+      "g8_b": 0.35,
+      "separation": 0.04999999999999999,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.024999999999999994
+    },
+    {
+      "framework_a": "causal_set",
+      "framework_b": "cdt",
+      "g8_a": 0.3,
+      "g8_b": 0.35,
+      "separation": 0.04999999999999999,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.024999999999999994
+    },
+    {
+      "framework_a": "group_field_theory",
+      "framework_b": "horava_lifshitz",
+      "g8_a": 0.4,
+      "g8_b": 0.45,
+      "separation": 0.04999999999999999,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.024999999999999994
+    },
+    {
+      "framework_a": "lqg_induced",
+      "framework_b": "horava_lifshitz",
+      "g8_a": 0.4,
+      "g8_b": 0.45,
+      "separation": 0.04999999999999999,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.024999999999999994
+    },
+    {
+      "framework_a": "string_tree_eft",
+      "framework_b": "horava_lifshitz",
+      "g8_a": 0.4,
+      "g8_b": 0.45,
+      "separation": 0.04999999999999999,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.024999999999999994
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "group_field_theory",
+      "g8_a": 0.35,
+      "g8_b": 0.4,
+      "separation": 0.050000000000000044,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.025000000000000022
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "lqg_induced",
+      "g8_a": 0.35,
+      "g8_b": 0.4,
+      "separation": 0.050000000000000044,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.025000000000000022
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "string_tree_eft",
+      "g8_a": 0.35,
+      "g8_b": 0.4,
+      "separation": 0.050000000000000044,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.025000000000000022
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.35,
+      "g8_b": 0.404,
+      "separation": 0.05400000000000005,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.027000000000000024
+    },
+    {
+      "framework_a": "discovered_parity_violating",
+      "framework_b": "horava_lifshitz",
+      "g8_a": 0.376,
+      "g8_b": 0.45,
+      "separation": 0.07400000000000001,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.037000000000000005
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "discovered_parity_violating",
+      "g8_a": 0.3,
+      "g8_b": 0.376,
+      "separation": 0.07600000000000001,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.038000000000000006
+    },
+    {
+      "framework_a": "causal_set",
+      "framework_b": "discovered_parity_violating",
+      "g8_a": 0.3,
+      "g8_b": 0.376,
+      "separation": 0.07600000000000001,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.038000000000000006
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "group_field_theory",
+      "g8_a": 0.3,
+      "g8_b": 0.4,
+      "separation": 0.10000000000000003,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.05000000000000002
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "lqg_induced",
+      "g8_a": 0.3,
+      "g8_b": 0.4,
+      "separation": 0.10000000000000003,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.05000000000000002
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "string_tree_eft",
+      "g8_a": 0.3,
+      "g8_b": 0.4,
+      "separation": 0.10000000000000003,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.05000000000000002
+    },
+    {
+      "framework_a": "causal_set",
+      "framework_b": "group_field_theory",
+      "g8_a": 0.3,
+      "g8_b": 0.4,
+      "separation": 0.10000000000000003,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.05000000000000002
+    },
+    {
+      "framework_a": "causal_set",
+      "framework_b": "lqg_induced",
+      "g8_a": 0.3,
+      "g8_b": 0.4,
+      "separation": 0.10000000000000003,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.05000000000000002
+    },
+    {
+      "framework_a": "causal_set",
+      "framework_b": "string_tree_eft",
+      "g8_a": 0.3,
+      "g8_b": 0.4,
+      "separation": 0.10000000000000003,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.05000000000000002
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "horava_lifshitz",
+      "g8_a": 0.35,
+      "g8_b": 0.45,
+      "separation": 0.10000000000000003,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.05000000000000002
+    },
+    {
+      "framework_a": "horava_lifshitz",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.45,
+      "g8_b": 0.552,
+      "separation": 0.10200000000000004,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.05100000000000002
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.3,
+      "g8_b": 0.404,
+      "separation": 0.10400000000000004,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.05200000000000002
+    },
+    {
+      "framework_a": "causal_set",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.3,
+      "g8_b": 0.404,
+      "separation": 0.10400000000000004,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.05200000000000002
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "emergent_gravity",
+      "g8_a": 0.045,
+      "g8_b": 0.15,
+      "separation": 0.105,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.0525
+    },
+    {
+      "framework_a": "discovered_data_driven",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.404,
+      "g8_b": 0.552,
+      "separation": 0.14800000000000002,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.07400000000000001
+    },
+    {
+      "framework_a": "emergent_gravity",
+      "framework_b": "asymptotic_safety",
+      "g8_a": 0.15,
+      "g8_b": 0.3,
+      "separation": 0.15,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.075
+    },
+    {
+      "framework_a": "emergent_gravity",
+      "framework_b": "causal_set",
+      "g8_a": 0.15,
+      "g8_b": 0.3,
+      "separation": 0.15,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.075
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "emergent_gravity",
+      "g8_a": 0.0,
+      "g8_b": 0.15,
+      "separation": 0.15,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.075
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "horava_lifshitz",
+      "g8_a": 0.3,
+      "g8_b": 0.45,
+      "separation": 0.15000000000000002,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.07500000000000001
+    },
+    {
+      "framework_a": "causal_set",
+      "framework_b": "horava_lifshitz",
+      "g8_a": 0.3,
+      "g8_b": 0.45,
+      "separation": 0.15000000000000002,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.07500000000000001
+    },
+    {
+      "framework_a": "group_field_theory",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.4,
+      "g8_b": 0.552,
+      "separation": 0.15200000000000002,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.07600000000000001
+    },
+    {
+      "framework_a": "lqg_induced",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.4,
+      "g8_b": 0.552,
+      "separation": 0.15200000000000002,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.07600000000000001
+    },
+    {
+      "framework_a": "string_tree_eft",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.4,
+      "g8_b": 0.552,
+      "separation": 0.15200000000000002,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.07600000000000001
+    },
+    {
+      "framework_a": "discovered_parity_violating",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.376,
+      "g8_b": 0.552,
+      "separation": 0.17600000000000005,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.08800000000000002
+    },
+    {
+      "framework_a": "emergent_gravity",
+      "framework_b": "cdt",
+      "g8_a": 0.15,
+      "g8_b": 0.35,
+      "separation": 0.19999999999999998,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.09999999999999999
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.35,
+      "g8_b": 0.552,
+      "separation": 0.20200000000000007,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.10100000000000003
+    },
+    {
+      "framework_a": "emergent_gravity",
+      "framework_b": "discovered_parity_violating",
+      "g8_a": 0.15,
+      "g8_b": 0.376,
+      "separation": 0.226,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.113
+    },
+    {
+      "framework_a": "emergent_gravity",
+      "framework_b": "group_field_theory",
+      "g8_a": 0.15,
+      "g8_b": 0.4,
+      "separation": 0.25,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.125
+    },
+    {
+      "framework_a": "emergent_gravity",
+      "framework_b": "lqg_induced",
+      "g8_a": 0.15,
+      "g8_b": 0.4,
+      "separation": 0.25,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.125
+    },
+    {
+      "framework_a": "emergent_gravity",
+      "framework_b": "string_tree_eft",
+      "g8_a": 0.15,
+      "g8_b": 0.4,
+      "separation": 0.25,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.125
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.3,
+      "g8_b": 0.552,
+      "separation": 0.25200000000000006,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.12600000000000003
+    },
+    {
+      "framework_a": "causal_set",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.3,
+      "g8_b": 0.552,
+      "separation": 0.25200000000000006,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.12600000000000003
+    },
+    {
+      "framework_a": "emergent_gravity",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.15,
+      "g8_b": 0.404,
+      "separation": 0.254,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.127
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "asymptotic_safety",
+      "g8_a": 0.045,
+      "g8_b": 0.3,
+      "separation": 0.255,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.1275
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "causal_set",
+      "g8_a": 0.045,
+      "g8_b": 0.3,
+      "separation": 0.255,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.1275
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "asymptotic_safety",
+      "g8_a": 0.0,
+      "g8_b": 0.3,
+      "separation": 0.3,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.15
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "causal_set",
+      "g8_a": 0.0,
+      "g8_b": 0.3,
+      "separation": 0.3,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.15
+    },
+    {
+      "framework_a": "emergent_gravity",
+      "framework_b": "horava_lifshitz",
+      "g8_a": 0.15,
+      "g8_b": 0.45,
+      "separation": 0.30000000000000004,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.15000000000000002
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "cdt",
+      "g8_a": 0.045,
+      "g8_b": 0.35,
+      "separation": 0.305,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.1525
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "discovered_parity_violating",
+      "g8_a": 0.045,
+      "g8_b": 0.376,
+      "separation": 0.331,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.1655
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "cdt",
+      "g8_a": 0.0,
+      "g8_b": 0.35,
+      "separation": 0.35,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.175
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "group_field_theory",
+      "g8_a": 0.045,
+      "g8_b": 0.4,
+      "separation": 0.35500000000000004,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.17750000000000002
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "lqg_induced",
+      "g8_a": 0.045,
+      "g8_b": 0.4,
+      "separation": 0.35500000000000004,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.17750000000000002
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "string_tree_eft",
+      "g8_a": 0.045,
+      "g8_b": 0.4,
+      "separation": 0.35500000000000004,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.17750000000000002
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.045,
+      "g8_b": 0.404,
+      "separation": 0.35900000000000004,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.17950000000000002
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "discovered_parity_violating",
+      "g8_a": 0.0,
+      "g8_b": 0.376,
+      "separation": 0.376,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.188
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "group_field_theory",
+      "g8_a": 0.0,
+      "g8_b": 0.4,
+      "separation": 0.4,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.2
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "lqg_induced",
+      "g8_a": 0.0,
+      "g8_b": 0.4,
+      "separation": 0.4,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.2
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "string_tree_eft",
+      "g8_a": 0.0,
+      "g8_b": 0.4,
+      "separation": 0.4,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.2
+    },
+    {
+      "framework_a": "emergent_gravity",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.15,
+      "g8_b": 0.552,
+      "separation": 0.402,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.201
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.0,
+      "g8_b": 0.404,
+      "separation": 0.404,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.202
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "horava_lifshitz",
+      "g8_a": 0.045,
+      "g8_b": 0.45,
+      "separation": 0.405,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.2025
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "horava_lifshitz",
+      "g8_a": 0.0,
+      "g8_b": 0.45,
+      "separation": 0.45,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.225
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.045,
+      "g8_b": 0.552,
+      "separation": 0.507,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.2535
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.0,
+      "g8_b": 0.552,
+      "separation": 0.552,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.276
+    }
+  ],
+  "eligible_pairwise_separations": [
+    {
+      "framework_a": "string_tree_eft",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.4,
+      "g8_b": 0.404,
+      "separation": 0.0040000000000000036,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.0020000000000000018
+    },
+    {
+      "framework_a": "discovered_parity_violating",
+      "framework_b": "string_tree_eft",
+      "g8_a": 0.376,
+      "g8_b": 0.4,
+      "separation": 0.02400000000000002,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.01200000000000001
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "discovered_parity_violating",
+      "g8_a": 0.35,
+      "g8_b": 0.376,
+      "separation": 0.026000000000000023,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.013000000000000012
+    },
+    {
+      "framework_a": "discovered_parity_violating",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.376,
+      "g8_b": 0.404,
+      "separation": 0.028000000000000025,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.014000000000000012
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "discovered_novel",
+      "g8_a": 0.0,
+      "g8_b": 0.045,
+      "separation": 0.045,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.0225
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "cdt",
+      "g8_a": 0.3,
+      "g8_b": 0.35,
+      "separation": 0.04999999999999999,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.024999999999999994
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "string_tree_eft",
+      "g8_a": 0.35,
+      "g8_b": 0.4,
+      "separation": 0.050000000000000044,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.025000000000000022
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.35,
+      "g8_b": 0.404,
+      "separation": 0.05400000000000005,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.027000000000000024
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "discovered_parity_violating",
+      "g8_a": 0.3,
+      "g8_b": 0.376,
+      "separation": 0.07600000000000001,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.038000000000000006
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "string_tree_eft",
+      "g8_a": 0.3,
+      "g8_b": 0.4,
+      "separation": 0.10000000000000003,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.05000000000000002
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.3,
+      "g8_b": 0.404,
+      "separation": 0.10400000000000004,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.05200000000000002
+    },
+    {
+      "framework_a": "discovered_data_driven",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.404,
+      "g8_b": 0.552,
+      "separation": 0.14800000000000002,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.07400000000000001
+    },
+    {
+      "framework_a": "string_tree_eft",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.4,
+      "g8_b": 0.552,
+      "separation": 0.15200000000000002,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.07600000000000001
+    },
+    {
+      "framework_a": "discovered_parity_violating",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.376,
+      "g8_b": 0.552,
+      "separation": 0.17600000000000005,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.08800000000000002
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.35,
+      "g8_b": 0.552,
+      "separation": 0.20200000000000007,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.10100000000000003
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.3,
+      "g8_b": 0.552,
+      "separation": 0.25200000000000006,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.12600000000000003
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "asymptotic_safety",
+      "g8_a": 0.045,
+      "g8_b": 0.3,
+      "separation": 0.255,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.1275
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "asymptotic_safety",
+      "g8_a": 0.0,
+      "g8_b": 0.3,
+      "separation": 0.3,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.15
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "cdt",
+      "g8_a": 0.045,
+      "g8_b": 0.35,
+      "separation": 0.305,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.1525
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "discovered_parity_violating",
+      "g8_a": 0.045,
+      "g8_b": 0.376,
+      "separation": 0.331,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.1655
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "cdt",
+      "g8_a": 0.0,
+      "g8_b": 0.35,
+      "separation": 0.35,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.175
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "string_tree_eft",
+      "g8_a": 0.045,
+      "g8_b": 0.4,
+      "separation": 0.35500000000000004,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.17750000000000002
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.045,
+      "g8_b": 0.404,
+      "separation": 0.35900000000000004,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.17950000000000002
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "discovered_parity_violating",
+      "g8_a": 0.0,
+      "g8_b": 0.376,
+      "separation": 0.376,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.188
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "string_tree_eft",
+      "g8_a": 0.0,
+      "g8_b": 0.4,
+      "separation": 0.4,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.2
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "discovered_data_driven",
+      "g8_a": 0.0,
+      "g8_b": 0.404,
+      "separation": 0.404,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.202
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.045,
+      "g8_b": 0.552,
+      "separation": 0.507,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.2535
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "discovered_high_g8",
+      "g8_a": 0.0,
+      "g8_b": 0.552,
+      "separation": 0.552,
+      "exact_degenerate": false,
+      "required_total_sigma_for_2sigma_distinguishability": 0.276
+    }
+  ],
+  "all_registered_cluster_targets": [
+    {
+      "g8": 0.4,
+      "frameworks": [
+        "group_field_theory",
+        "lqg_induced",
+        "string_tree_eft"
+      ],
+      "target_status": "single_axis_g8_degenerate_requires_additional_axis",
+      "unresolvable_same_g8_frameworks": [
+        "group_field_theory",
+        "lqg_induced",
+        "string_tree_eft"
+      ],
+      "nearest_distinct_cluster": {
+        "g8": 0.404,
+        "frameworks": [
+          "discovered_data_driven"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.0040000000000000036,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.0020000000000000018
+    },
+    {
+      "g8": 0.404,
+      "frameworks": [
+        "discovered_data_driven"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.4,
+        "frameworks": [
+          "group_field_theory",
+          "lqg_induced",
+          "string_tree_eft"
+        ],
+        "cluster_size": 3,
+        "exact_degeneracy": true
+      },
+      "nearest_distinct_gap": 0.0040000000000000036,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.0020000000000000018
+    },
+    {
+      "g8": 0.376,
+      "frameworks": [
+        "discovered_parity_violating"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.4,
+        "frameworks": [
+          "group_field_theory",
+          "lqg_induced",
+          "string_tree_eft"
+        ],
+        "cluster_size": 3,
+        "exact_degeneracy": true
+      },
+      "nearest_distinct_gap": 0.02400000000000002,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.01200000000000001
+    },
+    {
+      "g8": 0.35,
+      "frameworks": [
+        "cdt"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.376,
+        "frameworks": [
+          "discovered_parity_violating"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.026000000000000023,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.013000000000000012
+    },
+    {
+      "g8": 0.0,
+      "frameworks": [
+        "pure_gr"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.045,
+        "frameworks": [
+          "discovered_novel"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.045,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.0225
+    },
+    {
+      "g8": 0.045,
+      "frameworks": [
+        "discovered_novel"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.0,
+        "frameworks": [
+          "pure_gr"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.045,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.0225
+    },
+    {
+      "g8": 0.45,
+      "frameworks": [
+        "horava_lifshitz"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.404,
+        "frameworks": [
+          "discovered_data_driven"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.045999999999999985,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.022999999999999993
+    },
+    {
+      "g8": 0.3,
+      "frameworks": [
+        "asymptotic_safety",
+        "causal_set"
+      ],
+      "target_status": "single_axis_g8_degenerate_requires_additional_axis",
+      "unresolvable_same_g8_frameworks": [
+        "asymptotic_safety",
+        "causal_set"
+      ],
+      "nearest_distinct_cluster": {
+        "g8": 0.35,
+        "frameworks": [
+          "cdt"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.04999999999999999,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.024999999999999994
+    },
+    {
+      "g8": 0.552,
+      "frameworks": [
+        "discovered_high_g8"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.45,
+        "frameworks": [
+          "horava_lifshitz"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.10200000000000004,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.05100000000000002
+    },
+    {
+      "g8": 0.15,
+      "frameworks": [
+        "emergent_gravity"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.045,
+        "frameworks": [
+          "discovered_novel"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.105,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.0525
+    }
+  ],
+  "eligible_cluster_targets": [
+    {
+      "g8": 0.4,
+      "frameworks": [
+        "string_tree_eft"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.404,
+        "frameworks": [
+          "discovered_data_driven"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.0040000000000000036,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.0020000000000000018
+    },
+    {
+      "g8": 0.404,
+      "frameworks": [
+        "discovered_data_driven"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.4,
+        "frameworks": [
+          "string_tree_eft"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.0040000000000000036,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.0020000000000000018
+    },
+    {
+      "g8": 0.376,
+      "frameworks": [
+        "discovered_parity_violating"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.4,
+        "frameworks": [
+          "string_tree_eft"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.02400000000000002,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.01200000000000001
+    },
+    {
+      "g8": 0.35,
+      "frameworks": [
+        "cdt"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.376,
+        "frameworks": [
+          "discovered_parity_violating"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.026000000000000023,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.013000000000000012
+    },
+    {
+      "g8": 0.0,
+      "frameworks": [
+        "pure_gr"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.045,
+        "frameworks": [
+          "discovered_novel"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.045,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.0225
+    },
+    {
+      "g8": 0.045,
+      "frameworks": [
+        "discovered_novel"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.0,
+        "frameworks": [
+          "pure_gr"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.045,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.0225
+    },
+    {
+      "g8": 0.3,
+      "frameworks": [
+        "asymptotic_safety"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.35,
+        "frameworks": [
+          "cdt"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.04999999999999999,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.024999999999999994
+    },
+    {
+      "g8": 0.552,
+      "frameworks": [
+        "discovered_high_g8"
+      ],
+      "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+      "unresolvable_same_g8_frameworks": [],
+      "nearest_distinct_cluster": {
+        "g8": 0.404,
+        "frameworks": [
+          "discovered_data_driven"
+        ],
+        "cluster_size": 1,
+        "exact_degeneracy": false
+      },
+      "nearest_distinct_gap": 0.14800000000000002,
+      "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.07400000000000001
+    }
+  ],
+  "tightest_eligible_pair": {
+    "framework_a": "string_tree_eft",
+    "framework_b": "discovered_data_driven",
+    "g8_a": 0.4,
+    "g8_b": 0.404,
+    "separation": 0.0040000000000000036,
+    "exact_degenerate": false,
+    "required_total_sigma_for_2sigma_distinguishability": 0.0020000000000000018
+  },
+  "widest_eligible_single_axis_target": {
+    "g8": 0.552,
+    "frameworks": [
+      "discovered_high_g8"
+    ],
+    "target_status": "single_axis_g8_target_viable_if_external_packet_precision_met",
+    "unresolvable_same_g8_frameworks": [],
+    "nearest_distinct_cluster": {
+      "g8": 0.404,
+      "frameworks": [
+        "discovered_data_driven"
+      ],
+      "cluster_size": 1,
+      "exact_degeneracy": false
+    },
+    "nearest_distinct_gap": 0.14800000000000002,
+    "required_total_sigma_to_exclude_nearest_distinct_at_2sigma": 0.07400000000000001
+  },
+  "minimum_total_sigma_to_resolve_all_eligible_g8_targets_at_2sigma": 0.0020000000000000018,
+  "claim_blockers": [
+    "real_engine_normalized_g8_packet_missing",
+    "public_likelihood_and_covariance_missing",
+    "closed_systematics_budget_missing",
+    "eft_domain_bounds_missing"
+  ],
+  "best_next_artifact": "A real engine-normalized g_8 measurement packet with total sigma below 0.002 to resolve the tightest eligible pair or, for a narrower target, below the target-specific threshold in eligible_cluster_targets.",
+  "interpretation": "This converts the v2.95 external-packet blocker into numeric precision targets. It is not a discriminator claim: without a real packet, the thresholds only define what future evidence must beat."
+}
