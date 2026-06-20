@@ -1,0 +1,261 @@
+{
+  "version": "v2.154",
+  "basis": [
+    "v2.153_virasoro_shapiro_k_bridge_rederivation",
+    "v2.148_policy_scoped_string_tree_r4_projection_packet",
+    "v2.147_r4_shape_normalization_policy"
+  ],
+  "policy": {
+    "policy_id": "engine_r4_lambda_symbolic_alpha_prime_policy_v1",
+    "version": "v2.154",
+    "status": "engine_convention_symbolic_nonclaiming",
+    "depends_on_shape_policy": {
+      "policy_id": "engine_r4_shape_unit_v1",
+      "status": "engine_convention_nonclaiming",
+      "engine_unit_definition": {
+        "overall_R4_factor": 8.0,
+        "c_plus": 1.0,
+        "c_minus_real": 0.0,
+        "c_minus_imag": 0.0,
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.0,
+        "definition": "One engine R4 shape unit equals the v2.144 Kallosh/Bresciani maximally supersymmetric R4 helicity shape."
+      }
+    },
+    "source_formula_inputs": [
+      {
+        "source_id": "russo_1997_type_iib_four_graviton",
+        "url": "https://arxiv.org/abs/hep-th/9707241",
+        "formula_role": "open Virasoro-Shapiro scalar expansion",
+        "statements": [
+          "A4 = kappa^2 * K * A4^0",
+          "sbar = alpha_prime * s / 4",
+          "A4^0 = 1/(sbar*tbar*ubar) + 2*zeta(3) + ..."
+        ],
+        "machine_usable": true
+      },
+      {
+        "source_id": "kallosh_lee_rube_2008_tree_gravity_shape",
+        "url": "https://arxiv.org/abs/0811.3417",
+        "formula_role": "tree helicity pole normalization comparator",
+        "statements": [
+          "M_tree(1-,2-,3+,4+) = shape/(kappa^2*s*t*u)",
+          "v2.144 maps the R4 shape to K_plus=1 and K_minus=0"
+        ],
+        "machine_usable": true
+      },
+      {
+        "source_id": "bresciani_levati_paradisi_2025_target_basis",
+        "url": "https://arxiv.org/abs/2504.12855",
+        "formula_role": "target R4 coordinate basis",
+        "statements": [
+          "S=2 target amplitude has 8*c_plus and 8*c_minus channels",
+          "v2.144 source shape gives c_plus=1 and c_minus=0 under the engine unit policy"
+        ],
+        "machine_usable": true
+      }
+    ],
+    "source_bridge": {
+      "source_backed_open_rederivation": true,
+      "contact_scalar_expression": "2*zeta(3)",
+      "contact_scalar_value": 2.404113806319,
+      "pole_match_equation": "kappa^2*K_Russo*64/alpha_prime^3 = shape/kappa^2",
+      "k_russo_over_shape": "alpha_prime^3/(64*kappa^4)",
+      "symbolic_r4_contact_after_pole_match": "2*zeta(3)*alpha_prime^3*shape/(64*kappa^2)",
+      "symbolic_factor_without_shape": "2*zeta(3)*alpha_prime^3/(64*kappa^2)",
+      "alpha_prime_set_to_one_control": "1/(64*kappa^4)"
+    },
+    "engine_axis_contract": {
+      "source_formula": "g_R4_ci = Lambda_R4^8 * c_i^(2)",
+      "lambda_power": 8,
+      "numeric_lambda_r4_value": null,
+      "lambda_r4_value_source_backed": false,
+      "normalizes_dimensionful_contact": true
+    },
+    "symbolic_scale": {
+      "id": "xi_R4_string_tree_symbolic",
+      "expression": "Lambda_R4^8*alpha_prime^3/kappa^2",
+      "numeric_value": null,
+      "source_backed_numeric_value": false
+    },
+    "symbolic_projection": {
+      "K_plus": "1",
+      "K_minus": "0",
+      "overall_R4_factor_symbolic": "2*zeta(3)*Lambda_R4^8*alpha_prime^3/(64*kappa^2)",
+      "coefficients_symbolic": {
+        "g_R4_c1": "zeta(3)*Lambda_R4^8*alpha_prime^3/(512*kappa^2)",
+        "g_R4_c2": "zeta(3)*Lambda_R4^8*alpha_prime^3/(512*kappa^2)",
+        "g_R4_c3": "0"
+      },
+      "derived_symbolic": {
+        "g_R4_plus": "zeta(3)*Lambda_R4^8*alpha_prime^3/(256*kappa^2)",
+        "g_R4_minus_abs": "0"
+      },
+      "matching_equation": "c_plus=overall_R4_factor*K_plus/8 and g_R4_c1=g_R4_c2=c_plus/2 for K_minus=0"
+    },
+    "engine_axis_policy": {
+      "axis_family": "gravity_R4_Riemann4",
+      "engine_axis": "Lambda_R4",
+      "unit_status": "symbolic_only",
+      "numeric_lambda_r4_value": null,
+      "numeric_alpha_prime_value": null,
+      "numeric_kappa_value": null,
+      "frame_choice": null,
+      "symbolic_scale_token": "Lambda_R4^8*alpha_prime^3/kappa^2",
+      "numeric_coefficient_export_allowed": false,
+      "symbolic_sidecar_export_allowed": true
+    },
+    "allowed_uses": [
+      "symbolic_absolute_factor_inspection",
+      "normalization_blocker_accounting",
+      "internal_scale_sensitivity_sweep",
+      "adapter_metadata_sidecar"
+    ],
+    "disallowed_uses": [
+      "numeric_wilson_coefficient_export",
+      "framework_exclusion_claim",
+      "measurement_likelihood_claim",
+      "collapse_symbolic_alpha_prime_or_kappa_to_one"
+    ],
+    "framework_claim_allowed": false,
+    "measurement_claim_allowed": false,
+    "wilson_coefficient_magnitude_claim_allowed": false
+  },
+  "policy_evaluation": {
+    "policy_id": "engine_r4_lambda_symbolic_alpha_prime_policy_v1",
+    "ready_for_symbolic_engine_lambda_policy": true,
+    "ready_for_numeric_engine_lambda_r4": false,
+    "ready_for_framework_claim": false,
+    "symbolic_policy_blockers": [],
+    "numeric_claim_blockers": [
+      "amplitude_normalization_conventions_not_unified",
+      "bridge_depends_on_alpha_prime_units",
+      "bridge_depends_on_kappa_convention",
+      "discriminator_math_not_excluding",
+      "engine_lambda_r4_numeric_unit_not_defined",
+      "four_dimensional_frame_and_field_redefinition_policy_missing",
+      "measurement_likelihood_missing_or_incomplete",
+      "numeric_alpha_prime_to_lambda_r4_value_missing",
+      "source_backed_absolute_normalization_missing",
+      "string_vs_einstein_frame_not_fixed"
+    ],
+    "warnings": [
+      "amplitude_normalization_conventions_not_unified",
+      "bridge_depends_on_alpha_prime_units",
+      "bridge_depends_on_kappa_convention",
+      "discriminator_math_not_excluding",
+      "engine_lambda_r4_numeric_unit_not_defined",
+      "four_dimensional_frame_and_field_redefinition_policy_missing",
+      "measurement_likelihood_missing_or_incomplete",
+      "numeric_alpha_prime_to_lambda_r4_value_missing",
+      "source_backed_absolute_normalization_missing",
+      "string_vs_einstein_frame_not_fixed"
+    ],
+    "allowed_uses": [
+      "adapter_metadata_sidecar",
+      "internal_scale_sensitivity_sweep",
+      "normalization_blocker_accounting",
+      "symbolic_absolute_factor_inspection"
+    ],
+    "disallowed_uses": [
+      "collapse_symbolic_alpha_prime_or_kappa_to_one",
+      "framework_exclusion_claim",
+      "measurement_likelihood_claim",
+      "numeric_wilson_coefficient_export"
+    ]
+  },
+  "symbolic_sidecar": {
+    "sidecar_id": "string_tree_eft_r4_symbolic_lambda_policy_sidecar_v1",
+    "policy_id": "engine_r4_lambda_symbolic_alpha_prime_policy_v1",
+    "framework": "string_tree_eft",
+    "axis_family": "gravity_R4_Riemann4",
+    "source_version": "engine_r4_shape_unit_v1_policy_scoped",
+    "numeric_shape_coefficients": {
+      "g_R4_c1": 0.5,
+      "g_R4_c2": 0.5,
+      "g_R4_c3": 0.0
+    },
+    "symbolic_raw_contact_factor": "2*zeta(3)*alpha_prime^3/(64*kappa^2)",
+    "symbolic_scale": {
+      "id": "xi_R4_string_tree_symbolic",
+      "expression": "Lambda_R4^8*alpha_prime^3/kappa^2",
+      "numeric_value": null,
+      "source_backed_numeric_value": false
+    },
+    "engine_axis_contract": {
+      "source_formula": "g_R4_ci = Lambda_R4^8 * c_i^(2)",
+      "lambda_power": 8,
+      "numeric_lambda_r4_value": null,
+      "lambda_r4_value_source_backed": false,
+      "normalizes_dimensionful_contact": true
+    },
+    "symbolic_absolute_factor": "2*zeta(3)*Lambda_R4^8*alpha_prime^3/(64*kappa^2)",
+    "symbolic_coefficients": {
+      "g_R4_c1": "zeta(3)*Lambda_R4^8*alpha_prime^3/(512*kappa^2)",
+      "g_R4_c2": "zeta(3)*Lambda_R4^8*alpha_prime^3/(512*kappa^2)",
+      "g_R4_c3": "0"
+    },
+    "symbolic_derived": {
+      "g_R4_plus": "zeta(3)*Lambda_R4^8*alpha_prime^3/(256*kappa^2)",
+      "g_R4_minus_abs": "0"
+    },
+    "matching_equation": "c_plus=overall_R4_factor*K_plus/8 and g_R4_c1=g_R4_c2=c_plus/2 for K_minus=0",
+    "numeric_values_exported": false,
+    "claim_use_allowed": false,
+    "measurement_likelihood_attached": false,
+    "discriminator_math": "symbolic_policy_sidecar_only",
+    "remaining_numeric_claim_blockers": [
+      "amplitude_normalization_conventions_not_unified",
+      "bridge_depends_on_alpha_prime_units",
+      "bridge_depends_on_kappa_convention",
+      "discriminator_math_not_excluding",
+      "engine_lambda_r4_numeric_unit_not_defined",
+      "four_dimensional_frame_and_field_redefinition_policy_missing",
+      "numeric_alpha_prime_to_lambda_r4_value_missing",
+      "measurement_likelihood_missing_or_incomplete",
+      "source_backed_absolute_normalization_missing",
+      "string_vs_einstein_frame_not_fixed"
+    ]
+  },
+  "sidecar_evaluation": {
+    "sidecar_id": "string_tree_eft_r4_symbolic_lambda_policy_sidecar_v1",
+    "ready_for_internal_symbolic_query": true,
+    "ready_for_numeric_wilson_export": false,
+    "ready_for_framework_claim": false,
+    "blockers": [],
+    "numeric_claim_blockers": [
+      "amplitude_normalization_conventions_not_unified",
+      "bridge_depends_on_alpha_prime_units",
+      "bridge_depends_on_kappa_convention",
+      "discriminator_math_not_excluding",
+      "engine_lambda_r4_numeric_unit_not_defined",
+      "four_dimensional_frame_and_field_redefinition_policy_missing",
+      "measurement_likelihood_missing_or_incomplete",
+      "numeric_alpha_prime_to_lambda_r4_value_missing",
+      "source_backed_absolute_normalization_missing",
+      "string_vs_einstein_frame_not_fixed"
+    ]
+  },
+  "ready_for_symbolic_engine_lambda_policy": true,
+  "ready_for_internal_symbolic_query": true,
+  "ready_for_numeric_engine_lambda_r4": false,
+  "ready_for_framework_claim": false,
+  "claimable_framework_exclusions_now": [],
+  "current_claim_blockers": [
+    "amplitude_normalization_conventions_not_unified",
+    "bridge_depends_on_alpha_prime_units",
+    "bridge_depends_on_kappa_convention",
+    "discriminator_math_not_excluding",
+    "engine_lambda_r4_numeric_unit_not_defined",
+    "four_dimensional_frame_and_field_redefinition_policy_missing",
+    "measurement_likelihood_missing_or_incomplete",
+    "numeric_alpha_prime_to_lambda_r4_value_missing",
+    "source_backed_absolute_normalization_missing",
+    "string_vs_einstein_frame_not_fixed"
+  ],
+  "route_status": "symbolic_lambda_r4_alpha_prime_policy_ready_nonclaiming",
+  "selected_next_build_action": "attach_symbolic_lambda_policy_to_r4_query_surface",
+  "best_next_artifact": "Expose the symbolic Lambda_R4 sidecar through the R4 query surface so internal tools can inspect the alpha-prime/kappa normalization ledger while numeric Wilson exports and framework claims remain blocked.",
+  "interpretation": "The engine now has an explicit symbolic policy for the alpha_prime^3/kappa^2 factor found by v2.153. This advances the normalization work without collapsing alpha_prime or kappa to unit values or claiming an absolute string-scale Wilson coefficient."
+}

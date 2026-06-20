@@ -1,11 +1,15 @@
 """Tests for the v2.133 gravity R4 projection guard/schema."""
 
+from copy import deepcopy
 import math
 
 from experiments.gravity_r4_projection_guard_schema import (
     REQUIRED_R4_PROJECTION_FIELDS,
     diagnose_gravity_r4_projection_guard_schema,
     evaluate_r4_projection_packet,
+)
+from experiments.policy_scoped_string_tree_r4_projection_packet import (
+    policy_scoped_string_tree_r4_projection_packet,
 )
 
 
@@ -87,6 +91,25 @@ def test_complete_excluding_packet_can_pass_full_claim_guard():
     assert result["ready_for_framework_projection"] is True
     assert result["ready_for_framework_claim"] is True
     assert result["claim_blockers"] == []
+
+
+def test_policy_scoped_packet_cannot_be_promoted_by_likelihood_decoration():
+    packet = deepcopy(policy_scoped_string_tree_r4_projection_packet())
+    packet["measurement_likelihood"] = {
+        "status": "public_covariance_matrix",
+        "axes": ["g_R4_c1", "g_R4_c2", "g_R4_c3"],
+    }
+    packet["discriminator_math"] = "excludes_registered_framework"
+
+    result = evaluate_r4_projection_packet(packet)
+
+    assert result["ready_for_framework_projection"] is True
+    assert result["ready_for_framework_claim"] is False
+    assert "measurement_likelihood_missing_or_incomplete" not in result["claim_blockers"]
+    assert "discriminator_math_not_excluding" not in result["claim_blockers"]
+    assert "policy_scoped_normalization_not_claimable" in result["claim_blockers"]
+    assert "claim_use_not_allowed" in result["claim_blockers"]
+    assert "engine_lambda_r4_unit_conversion_missing" in result["claim_blockers"]
 
 
 def test_guard_rejects_missing_current_framework_packet_fields():

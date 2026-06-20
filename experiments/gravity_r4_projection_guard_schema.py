@@ -91,6 +91,28 @@ def _float_or_none(value: Any) -> float | None:
     return None
 
 
+def _normalization_claim_blockers(normalization: Any) -> list[str]:
+    if not isinstance(normalization, dict):
+        return []
+
+    blockers: set[str] = set()
+    if normalization.get("claim_use_allowed") is False:
+        blockers.add("claim_use_not_allowed")
+    if normalization.get("absolute_string_alpha_prime_normalization_backed") is False:
+        blockers.add("absolute_string_alpha_prime_normalization_missing")
+    if normalization.get("engine_lambda_r4_unit_conversion_source_backed") is False:
+        blockers.add("engine_lambda_r4_unit_conversion_missing")
+    if normalization.get("k_convention_bridge_source_backed") is False:
+        blockers.add("k_convention_bridge_missing")
+    if (
+        "policy_scoped" in str(normalization.get("source_version", "")).lower()
+        or normalization.get("allowed_policy_use") is not None
+        or normalization.get("policy_id") == "engine_r4_shape_unit_v1"
+    ):
+        blockers.add("policy_scoped_normalization_not_claimable")
+    return sorted(blockers)
+
+
 def _truthy_marker_present(value: Any, markers: tuple[str, ...]) -> bool:
     if isinstance(value, dict):
         for key, item in value.items():
@@ -333,6 +355,9 @@ def evaluate_r4_projection_packet(packet: dict[str, Any]) -> dict[str, Any]:
         claim_blockers.add("measurement_likelihood_missing_or_incomplete")
     if packet.get("discriminator_math") != "excludes_registered_framework":
         claim_blockers.add("discriminator_math_not_excluding")
+    claim_blockers.update(
+        _normalization_claim_blockers(packet.get("normalization"))
+    )
 
     claim_blockers.update(projection_blockers)
     return canonicalize_json_floats({

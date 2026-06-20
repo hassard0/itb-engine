@@ -69,8 +69,13 @@ def test_base_guard_accepts_projection_but_not_claim():
     assert result["projection_blockers"] == []
     assert result["ready_for_framework_claim"] is False
     assert result["claim_blockers"] == [
+        "absolute_string_alpha_prime_normalization_missing",
+        "claim_use_not_allowed",
         "discriminator_math_not_excluding",
+        "engine_lambda_r4_unit_conversion_missing",
+        "k_convention_bridge_missing",
         "measurement_likelihood_missing_or_incomplete",
+        "policy_scoped_normalization_not_claimable",
     ]
 
 
@@ -84,8 +89,13 @@ def test_strict_source_guard_accepts_nonfixture_projection_but_not_claim():
     assert result["ready_for_framework_claim"] is False
     assert result["strict_projection_blockers"] == []
     assert result["strict_claim_blockers"] == [
+        "absolute_string_alpha_prime_normalization_missing",
+        "claim_use_not_allowed",
         "discriminator_math_not_excluding",
+        "engine_lambda_r4_unit_conversion_missing",
+        "k_convention_bridge_missing",
         "measurement_likelihood_missing_or_incomplete",
+        "policy_scoped_normalization_not_claimable",
     ]
     assert provenance["truthy_synthetic_fixture_paths"] == []
     assert provenance["source_backed_derivation"] is True

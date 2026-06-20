@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (264 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (265 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -313,3 +313,4 @@ Auto-generated front door to the full research program (264 notes). Regenerate w
 | v2.151 | [v2.151 - R4 claim-blocker attack plan: normalization route first](2026-06-20-v2.151-r4-claim-blocker-attack-plan.md) | v2.150 made the R4 projection queryable as internal diagnostics. Which remaining |
 | v2.152 | [v2.152 - Gross-Witten source access probe: metadata confirmed, file bl](2026-06-20-v2.152-gross-witten-source-access-probe.md) | v2.151 selected the Gross-Witten primary source as the next absolute |
 | v2.153 | [v2.153 - Virasoro-Shapiro K bridge rederivation rejects absolute R4 br](2026-06-20-v2.153-virasoro-shapiro-k-bridge-rederivation.md) | v2.152 confirmed Gross-Witten metadata but could not ingest a machine-readable |
+| v2.154 | [v2.154 - Symbolic Lambda_R4 policy: alpha-prime tracked, claims blocke](2026-06-20-v2.154-r4-lambda-unit-policy.md) | v2.153 rederived the open Virasoro-Shapiro/Russo bridge and showed that the |
