@@ -1,0 +1,173 @@
+{
+  "version": "v2.112",
+  "basis": [
+    "v2.111_psd_whitened_complex_source_projection",
+    "v2.109_source_backed_cubic_inspiral_response",
+    "leading_order_GR_stationary_phase_inspiral_reference"
+  ],
+  "source_reference": "https://arxiv.org/abs/2407.08929",
+  "cache_dir": "data\\runs\\gwosc_cache",
+  "loader_evaluation": {
+    "load_count": 2,
+    "all_loader_ready": true
+  },
+  "detector_projections": [
+    {
+      "detector": "H1",
+      "path": "data\\runs\\gwosc_cache\\H-H1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+      "gr_inspiral_projection": {
+        "source_reference": "https://arxiv.org/abs/2407.08929",
+        "projection_kind": "psd_whitened_leading_order_gr_inspiral_response",
+        "reference_waveform": {
+          "kind": "leading_order_stationary_phase_gr_inspiral",
+          "total_mass_solar": 19.0,
+          "eta": 0.22,
+          "chirp_mass_solar": 7.65961973514338,
+          "tc_phic_fixed_to_zero": true
+        },
+        "frequency_window": {
+          "bin_count": 366,
+          "frequency_min_hz": 20.0,
+          "frequency_max_hz": 111.25,
+          "v_f_min": 0.18049326377900485,
+          "v_f_max": 0.319804329926307,
+          "frequency_resolution_hz": 0.25,
+          "total_mass_solar": 19.0,
+          "eta_reference": 0.22
+        },
+        "event_summary": {
+          "start_index": 55296,
+          "stop_index": 71680,
+          "sample_count": 16384,
+          "raw_mean": 1.802446338451568e-21,
+          "raw_rms": 4.946099266004207e-19,
+          "tapered_rms": 2.9109989306960634e-19
+        },
+        "psd_summary": {
+          "segment_count": 11,
+          "segment_length": 16384,
+          "segment_seconds": 4.0,
+          "overlap_fraction": 0.5,
+          "psd_min": 1.9045631473232048e-51,
+          "psd_max": 6.2345402611496715e-37
+        },
+        "projections": {
+          "alpha_bar_1": {
+            "real": 0.015229725001762288,
+            "imag": -0.03023780406618061,
+            "abs": 0.03385659933268597
+          },
+          "alpha_bar_2": {
+            "real": -0.014951180263144903,
+            "imag": 0.029056329699208724,
+            "abs": 0.03267733292131065
+          }
+        },
+        "template_norms": {
+          "alpha_bar_1": 1.0,
+          "alpha_bar_2": 1.0
+        },
+        "normalized_data_norm": 1.0,
+        "projection_ready": true
+      },
+      "projection_ready": true
+    },
+    {
+      "detector": "L1",
+      "path": "data\\runs\\gwosc_cache\\L-L1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+      "gr_inspiral_projection": {
+        "source_reference": "https://arxiv.org/abs/2407.08929",
+        "projection_kind": "psd_whitened_leading_order_gr_inspiral_response",
+        "reference_waveform": {
+          "kind": "leading_order_stationary_phase_gr_inspiral",
+          "total_mass_solar": 19.0,
+          "eta": 0.22,
+          "chirp_mass_solar": 7.65961973514338,
+          "tc_phic_fixed_to_zero": true
+        },
+        "frequency_window": {
+          "bin_count": 366,
+          "frequency_min_hz": 20.0,
+          "frequency_max_hz": 111.25,
+          "v_f_min": 0.18049326377900485,
+          "v_f_max": 0.319804329926307,
+          "frequency_resolution_hz": 0.25,
+          "total_mass_solar": 19.0,
+          "eta_reference": 0.22
+        },
+        "event_summary": {
+          "start_index": 55296,
+          "stop_index": 71680,
+          "sample_count": 16384,
+          "raw_mean": -6.586659050042447e-21,
+          "raw_rms": 4.199796541491431e-19,
+          "tapered_rms": 2.7993609811439087e-19
+        },
+        "psd_summary": {
+          "segment_count": 11,
+          "segment_length": 16384,
+          "segment_seconds": 4.0,
+          "overlap_fraction": 0.5,
+          "psd_min": 2.003354020944345e-51,
+          "psd_max": 1.0347778469342635e-37
+        },
+        "projections": {
+          "alpha_bar_1": {
+            "real": 0.036025375043346075,
+            "imag": -0.008366073833435217,
+            "abs": 0.036984034912381204
+          },
+          "alpha_bar_2": {
+            "real": -0.03433232798021105,
+            "imag": 0.005780167036259214,
+            "abs": 0.034815500506352626
+          }
+        },
+        "template_norms": {
+          "alpha_bar_1": 0.9999999999999999,
+          "alpha_bar_2": 1.0
+        },
+        "normalized_data_norm": 1.0,
+        "projection_ready": true
+      },
+      "projection_ready": true
+    }
+  ],
+  "network_projection": {
+    "detectors": [
+      "H1",
+      "L1"
+    ],
+    "parameters": [
+      "alpha_bar_1",
+      "alpha_bar_2"
+    ],
+    "alpha_bar_1_abs_mean": 0.03542031712253359,
+    "alpha_bar_1_abs_detector_spread": 0.003127435579695234,
+    "alpha_bar_1_real_mean": 0.02562755002255418,
+    "alpha_bar_1_imag_mean": -0.019301938949807914,
+    "alpha_bar_2_abs_mean": 0.033746416713831634,
+    "alpha_bar_2_abs_detector_spread": 0.0021381675850419765,
+    "alpha_bar_2_real_mean": -0.024641754121677975,
+    "alpha_bar_2_imag_mean": 0.01741824836773397
+  },
+  "evaluation": {
+    "gr_inspiral_reference_projection_ready": true,
+    "claim_ready": false,
+    "projection_blockers": [],
+    "claim_blockers": [
+      "detector_calibration_uncertainty_missing",
+      "event_mass_eta_posterior_sampling_missing",
+      "g8_joint_component_missing",
+      "leading_order_gr_reference_not_full_imr",
+      "posterior_sampler_and_systematics_budget_missing",
+      "tc_phic_not_sampled"
+    ],
+    "removed_v2_111_blocker": "unit_gr_reference_not_physical_waveform"
+  },
+  "claimable_discriminator_now": false,
+  "route_status": "leading_order_gr_inspiral_reference_projection_ready_nonclaiming",
+  "selected_next_build_action": "replace_leading_order_reference_with_lalsuite_imr_waveform",
+  "best_next_artifact": "Use an IMR waveform implementation or source release waveform code for the GR baseline, then sample tc, phic, mass, eta, and alpha_bar to export a source-native likelihood packet.",
+  "interpretation": "The v2.111 unit complex reference is replaced with a physical leading-order GR stationary-phase inspiral reference. This is still not a claim-ready likelihood because it is not a calibrated full IMR waveform and does not sample event parameters or systematics."
+}
