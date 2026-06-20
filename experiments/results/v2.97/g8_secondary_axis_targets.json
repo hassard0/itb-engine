@@ -1,0 +1,3212 @@
+{
+  "version": "v2.97",
+  "basis": [
+    "v2.96_g8_measurement_sensitivity_targets",
+    "itb.predict.FRAMEWORKS",
+    "itb.holographic_ac.gC_from_gR2",
+    "v2.50_weyl_g8_discriminator_frontier"
+  ],
+  "route": "g8_joint_secondary_axis_measurement_design",
+  "route_status": "secondary_axis_targets_defined_no_joint_packet",
+  "claimable_discriminator_now": false,
+  "external_joint_packet_present": false,
+  "z_score": 2.0,
+  "near_g8_separation_threshold": 0.01,
+  "coefficient_axes": [
+    "g_4",
+    "g_6",
+    "g_8",
+    "g_R2",
+    "g_R3",
+    "g_C",
+    "g_R2_parity",
+    "g_R3_parity"
+  ],
+  "secondary_axes": [
+    "g_4",
+    "g_6",
+    "g_R2",
+    "g_R3",
+    "g_C",
+    "g_R2_parity",
+    "g_R3_parity"
+  ],
+  "pair_count": 28,
+  "near_g8_pair_count": 1,
+  "near_g8_pair_targets": [
+    {
+      "framework_a": "string_tree_eft",
+      "framework_b": "discovered_data_driven",
+      "g8_separation": 0.0040000000000000036,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.0020000000000000018,
+      "near_g8_degenerate": true,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_R2",
+          "value_a": 0.2,
+          "value_b": 0.3258,
+          "separation": 0.12579999999999997,
+          "required_total_sigma_for_2sigma_distinguishability": 0.06289999999999998,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.24782608695652178,
+          "value_b": 0.3495,
+          "separation": 0.1016739130434782,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0508369565217391,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.0937,
+          "separation": 0.0937,
+          "required_total_sigma_for_2sigma_distinguishability": 0.04685,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.5,
+          "value_b": 0.5668,
+          "separation": 0.06679999999999997,
+          "required_total_sigma_for_2sigma_distinguishability": 0.033399999999999985,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.4,
+          "value_b": 0.4504,
+          "separation": 0.0504,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0252,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.0311,
+          "separation": 0.0311,
+          "required_total_sigma_for_2sigma_distinguishability": 0.01555,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.15,
+          "value_b": 0.1437,
+          "separation": 0.0063,
+          "required_total_sigma_for_2sigma_distinguishability": 0.00315,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_R2",
+        "value_a": 0.2,
+        "value_b": 0.3258,
+        "separation": 0.12579999999999997,
+        "required_total_sigma_for_2sigma_distinguishability": 0.06289999999999998,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.24782608695652178,
+        "value_b": 0.3495,
+        "separation": 0.1016739130434782,
+        "required_total_sigma_for_2sigma_distinguishability": 0.0508369565217391,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    }
+  ],
+  "all_eligible_pair_targets": [
+    {
+      "framework_a": "string_tree_eft",
+      "framework_b": "discovered_data_driven",
+      "g8_separation": 0.0040000000000000036,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.0020000000000000018,
+      "near_g8_degenerate": true,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_R2",
+          "value_a": 0.2,
+          "value_b": 0.3258,
+          "separation": 0.12579999999999997,
+          "required_total_sigma_for_2sigma_distinguishability": 0.06289999999999998,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.24782608695652178,
+          "value_b": 0.3495,
+          "separation": 0.1016739130434782,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0508369565217391,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.0937,
+          "separation": 0.0937,
+          "required_total_sigma_for_2sigma_distinguishability": 0.04685,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.5,
+          "value_b": 0.5668,
+          "separation": 0.06679999999999997,
+          "required_total_sigma_for_2sigma_distinguishability": 0.033399999999999985,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.4,
+          "value_b": 0.4504,
+          "separation": 0.0504,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0252,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.0311,
+          "separation": 0.0311,
+          "required_total_sigma_for_2sigma_distinguishability": 0.01555,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.15,
+          "value_b": 0.1437,
+          "separation": 0.0063,
+          "required_total_sigma_for_2sigma_distinguishability": 0.00315,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_R2",
+        "value_a": 0.2,
+        "value_b": 0.3258,
+        "separation": 0.12579999999999997,
+        "required_total_sigma_for_2sigma_distinguishability": 0.06289999999999998,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.24782608695652178,
+        "value_b": 0.3495,
+        "separation": 0.1016739130434782,
+        "required_total_sigma_for_2sigma_distinguishability": 0.0508369565217391,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "discovered_parity_violating",
+      "framework_b": "string_tree_eft",
+      "g8_separation": 0.02400000000000002,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.01200000000000001,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_C",
+          "value_a": 0.6818825741746763,
+          "value_b": 0.24782608695652178,
+          "separation": 0.4340564872181546,
+          "required_total_sigma_for_2sigma_distinguishability": 0.2170282436090773,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.395,
+          "value_b": 0.2,
+          "separation": 0.195,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0975,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.647,
+          "value_b": 0.5,
+          "separation": 0.14700000000000002,
+          "required_total_sigma_for_2sigma_distinguishability": 0.07350000000000001,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.05,
+          "value_b": 0.15,
+          "separation": 0.09999999999999999,
+          "required_total_sigma_for_2sigma_distinguishability": 0.049999999999999996,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": -0.092,
+          "value_b": 0.0,
+          "separation": 0.092,
+          "required_total_sigma_for_2sigma_distinguishability": 0.046,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.49,
+          "value_b": 0.4,
+          "separation": 0.08999999999999997,
+          "required_total_sigma_for_2sigma_distinguishability": 0.044999999999999984,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.044,
+          "value_b": 0.0,
+          "separation": 0.044,
+          "required_total_sigma_for_2sigma_distinguishability": 0.022,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_C",
+        "value_a": 0.6818825741746763,
+        "value_b": 0.24782608695652178,
+        "separation": 0.4340564872181546,
+        "required_total_sigma_for_2sigma_distinguishability": 0.2170282436090773,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.6818825741746763,
+        "value_b": 0.24782608695652178,
+        "separation": 0.4340564872181546,
+        "required_total_sigma_for_2sigma_distinguishability": 0.2170282436090773,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "discovered_parity_violating",
+      "g8_separation": 0.026000000000000023,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.013000000000000012,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_C",
+          "value_a": 0.2800225479143179,
+          "value_b": 0.6818825741746763,
+          "separation": 0.40186002626035844,
+          "required_total_sigma_for_2sigma_distinguishability": 0.20093001313017922,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.22,
+          "value_b": 0.395,
+          "separation": 0.17500000000000002,
+          "required_total_sigma_for_2sigma_distinguishability": 0.08750000000000001,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.15,
+          "value_b": 0.05,
+          "separation": 0.09999999999999999,
+          "required_total_sigma_for_2sigma_distinguishability": 0.049999999999999996,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.55,
+          "value_b": 0.647,
+          "separation": 0.09699999999999998,
+          "required_total_sigma_for_2sigma_distinguishability": 0.04849999999999999,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": -0.092,
+          "separation": 0.092,
+          "required_total_sigma_for_2sigma_distinguishability": 0.046,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.4,
+          "value_b": 0.49,
+          "separation": 0.08999999999999997,
+          "required_total_sigma_for_2sigma_distinguishability": 0.044999999999999984,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.044,
+          "separation": 0.044,
+          "required_total_sigma_for_2sigma_distinguishability": 0.022,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_C",
+        "value_a": 0.2800225479143179,
+        "value_b": 0.6818825741746763,
+        "separation": 0.40186002626035844,
+        "required_total_sigma_for_2sigma_distinguishability": 0.20093001313017922,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.2800225479143179,
+        "value_b": 0.6818825741746763,
+        "separation": 0.40186002626035844,
+        "required_total_sigma_for_2sigma_distinguishability": 0.20093001313017922,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "discovered_parity_violating",
+      "framework_b": "discovered_data_driven",
+      "g8_separation": 0.028000000000000025,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.014000000000000012,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_C",
+          "value_a": 0.6818825741746763,
+          "value_b": 0.3495,
+          "separation": 0.33238257417467637,
+          "required_total_sigma_for_2sigma_distinguishability": 0.16619128708733819,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": -0.092,
+          "value_b": 0.0937,
+          "separation": 0.1857,
+          "required_total_sigma_for_2sigma_distinguishability": 0.09285,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.05,
+          "value_b": 0.1437,
+          "separation": 0.09369999999999999,
+          "required_total_sigma_for_2sigma_distinguishability": 0.046849999999999996,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.647,
+          "value_b": 0.5668,
+          "separation": 0.08020000000000005,
+          "required_total_sigma_for_2sigma_distinguishability": 0.040100000000000025,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.395,
+          "value_b": 0.3258,
+          "separation": 0.06920000000000004,
+          "required_total_sigma_for_2sigma_distinguishability": 0.03460000000000002,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.49,
+          "value_b": 0.4504,
+          "separation": 0.03959999999999997,
+          "required_total_sigma_for_2sigma_distinguishability": 0.019799999999999984,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.044,
+          "value_b": 0.0311,
+          "separation": 0.012899999999999998,
+          "required_total_sigma_for_2sigma_distinguishability": 0.006449999999999999,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_C",
+        "value_a": 0.6818825741746763,
+        "value_b": 0.3495,
+        "separation": 0.33238257417467637,
+        "required_total_sigma_for_2sigma_distinguishability": 0.16619128708733819,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.6818825741746763,
+        "value_b": 0.3495,
+        "separation": 0.33238257417467637,
+        "required_total_sigma_for_2sigma_distinguishability": 0.16619128708733819,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "discovered_novel",
+      "g8_separation": 0.045,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.0225,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_4",
+          "value_a": 0.0,
+          "value_b": 0.34,
+          "separation": 0.34,
+          "required_total_sigma_for_2sigma_distinguishability": 0.17,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.0,
+          "value_b": 0.1558377535101404,
+          "separation": 0.1558377535101404,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0779188767550702,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.0,
+          "value_b": 0.136,
+          "separation": 0.136,
+          "required_total_sigma_for_2sigma_distinguishability": 0.068,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.0,
+          "value_b": 0.117,
+          "separation": 0.117,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0585,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.021,
+          "separation": 0.021,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0105,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.0,
+          "value_b": 0.017,
+          "separation": 0.017,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0085,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.017,
+          "separation": 0.017,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0085,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_4",
+        "value_a": 0.0,
+        "value_b": 0.34,
+        "separation": 0.34,
+        "required_total_sigma_for_2sigma_distinguishability": 0.17,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.0,
+        "value_b": 0.1558377535101404,
+        "separation": 0.1558377535101404,
+        "required_total_sigma_for_2sigma_distinguishability": 0.0779188767550702,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "cdt",
+      "g8_separation": 0.04999999999999999,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.024999999999999994,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_4",
+          "value_a": 0.4,
+          "value_b": 0.55,
+          "separation": 0.15000000000000002,
+          "required_total_sigma_for_2sigma_distinguishability": 0.07500000000000001,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.1746882793017456,
+          "value_b": 0.2800225479143179,
+          "separation": 0.10533426861257231,
+          "required_total_sigma_for_2sigma_distinguishability": 0.052667134306286154,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.3,
+          "value_b": 0.4,
+          "separation": 0.10000000000000003,
+          "required_total_sigma_for_2sigma_distinguishability": 0.05000000000000002,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.15,
+          "value_b": 0.22,
+          "separation": 0.07,
+          "required_total_sigma_for_2sigma_distinguishability": 0.035,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.1,
+          "value_b": 0.15,
+          "separation": 0.04999999999999999,
+          "required_total_sigma_for_2sigma_distinguishability": 0.024999999999999994,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.0,
+          "separation": 0.0,
+          "required_total_sigma_for_2sigma_distinguishability": null,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.0,
+          "separation": 0.0,
+          "required_total_sigma_for_2sigma_distinguishability": null,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_4",
+        "value_a": 0.4,
+        "value_b": 0.55,
+        "separation": 0.15000000000000002,
+        "required_total_sigma_for_2sigma_distinguishability": 0.07500000000000001,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.1746882793017456,
+        "value_b": 0.2800225479143179,
+        "separation": 0.10533426861257231,
+        "required_total_sigma_for_2sigma_distinguishability": 0.052667134306286154,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "string_tree_eft",
+      "g8_separation": 0.050000000000000044,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.025000000000000022,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_4",
+          "value_a": 0.55,
+          "value_b": 0.5,
+          "separation": 0.050000000000000044,
+          "required_total_sigma_for_2sigma_distinguishability": 0.025000000000000022,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.2800225479143179,
+          "value_b": 0.24782608695652178,
+          "separation": 0.03219646095779613,
+          "required_total_sigma_for_2sigma_distinguishability": 0.016098230478898065,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.22,
+          "value_b": 0.2,
+          "separation": 0.01999999999999999,
+          "required_total_sigma_for_2sigma_distinguishability": 0.009999999999999995,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.4,
+          "value_b": 0.4,
+          "separation": 0.0,
+          "required_total_sigma_for_2sigma_distinguishability": null,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.0,
+          "separation": 0.0,
+          "required_total_sigma_for_2sigma_distinguishability": null,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.15,
+          "value_b": 0.15,
+          "separation": 0.0,
+          "required_total_sigma_for_2sigma_distinguishability": null,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.0,
+          "separation": 0.0,
+          "required_total_sigma_for_2sigma_distinguishability": null,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_4",
+        "value_a": 0.55,
+        "value_b": 0.5,
+        "separation": 0.050000000000000044,
+        "required_total_sigma_for_2sigma_distinguishability": 0.025000000000000022,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.2800225479143179,
+        "value_b": 0.24782608695652178,
+        "separation": 0.03219646095779613,
+        "required_total_sigma_for_2sigma_distinguishability": 0.016098230478898065,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "discovered_data_driven",
+      "g8_separation": 0.05400000000000005,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.027000000000000024,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_R2",
+          "value_a": 0.22,
+          "value_b": 0.3258,
+          "separation": 0.10579999999999998,
+          "required_total_sigma_for_2sigma_distinguishability": 0.05289999999999999,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.0937,
+          "separation": 0.0937,
+          "required_total_sigma_for_2sigma_distinguishability": 0.04685,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.2800225479143179,
+          "value_b": 0.3495,
+          "separation": 0.06947745208568207,
+          "required_total_sigma_for_2sigma_distinguishability": 0.034738726042841034,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.4,
+          "value_b": 0.4504,
+          "separation": 0.0504,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0252,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.0311,
+          "separation": 0.0311,
+          "required_total_sigma_for_2sigma_distinguishability": 0.01555,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.55,
+          "value_b": 0.5668,
+          "separation": 0.016799999999999926,
+          "required_total_sigma_for_2sigma_distinguishability": 0.008399999999999963,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.15,
+          "value_b": 0.1437,
+          "separation": 0.0063,
+          "required_total_sigma_for_2sigma_distinguishability": 0.00315,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_R2",
+        "value_a": 0.22,
+        "value_b": 0.3258,
+        "separation": 0.10579999999999998,
+        "required_total_sigma_for_2sigma_distinguishability": 0.05289999999999999,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.2800225479143179,
+        "value_b": 0.3495,
+        "separation": 0.06947745208568207,
+        "required_total_sigma_for_2sigma_distinguishability": 0.034738726042841034,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "discovered_parity_violating",
+      "g8_separation": 0.07600000000000001,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.038000000000000006,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_C",
+          "value_a": 0.1746882793017456,
+          "value_b": 0.6818825741746763,
+          "separation": 0.5071942948729308,
+          "required_total_sigma_for_2sigma_distinguishability": 0.2535971474364654,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.4,
+          "value_b": 0.647,
+          "separation": 0.247,
+          "required_total_sigma_for_2sigma_distinguishability": 0.1235,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.15,
+          "value_b": 0.395,
+          "separation": 0.24500000000000002,
+          "required_total_sigma_for_2sigma_distinguishability": 0.12250000000000001,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.3,
+          "value_b": 0.49,
+          "separation": 0.19,
+          "required_total_sigma_for_2sigma_distinguishability": 0.095,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": -0.092,
+          "separation": 0.092,
+          "required_total_sigma_for_2sigma_distinguishability": 0.046,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.1,
+          "value_b": 0.05,
+          "separation": 0.05,
+          "required_total_sigma_for_2sigma_distinguishability": 0.025,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.044,
+          "separation": 0.044,
+          "required_total_sigma_for_2sigma_distinguishability": 0.022,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_C",
+        "value_a": 0.1746882793017456,
+        "value_b": 0.6818825741746763,
+        "separation": 0.5071942948729308,
+        "required_total_sigma_for_2sigma_distinguishability": 0.2535971474364654,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.1746882793017456,
+        "value_b": 0.6818825741746763,
+        "separation": 0.5071942948729308,
+        "required_total_sigma_for_2sigma_distinguishability": 0.2535971474364654,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "string_tree_eft",
+      "g8_separation": 0.10000000000000003,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.05000000000000002,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_6",
+          "value_a": 0.3,
+          "value_b": 0.4,
+          "separation": 0.10000000000000003,
+          "required_total_sigma_for_2sigma_distinguishability": 0.05000000000000002,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.4,
+          "value_b": 0.5,
+          "separation": 0.09999999999999998,
+          "required_total_sigma_for_2sigma_distinguishability": 0.04999999999999999,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.1746882793017456,
+          "value_b": 0.24782608695652178,
+          "separation": 0.07313780765477618,
+          "required_total_sigma_for_2sigma_distinguishability": 0.03656890382738809,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.15,
+          "value_b": 0.2,
+          "separation": 0.05000000000000002,
+          "required_total_sigma_for_2sigma_distinguishability": 0.02500000000000001,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.1,
+          "value_b": 0.15,
+          "separation": 0.04999999999999999,
+          "required_total_sigma_for_2sigma_distinguishability": 0.024999999999999994,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.0,
+          "separation": 0.0,
+          "required_total_sigma_for_2sigma_distinguishability": null,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.0,
+          "separation": 0.0,
+          "required_total_sigma_for_2sigma_distinguishability": null,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_6",
+        "value_a": 0.3,
+        "value_b": 0.4,
+        "separation": 0.10000000000000003,
+        "required_total_sigma_for_2sigma_distinguishability": 0.05000000000000002,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.1746882793017456,
+        "value_b": 0.24782608695652178,
+        "separation": 0.07313780765477618,
+        "required_total_sigma_for_2sigma_distinguishability": 0.03656890382738809,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "discovered_data_driven",
+      "g8_separation": 0.10400000000000004,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.05200000000000002,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_R2",
+          "value_a": 0.15,
+          "value_b": 0.3258,
+          "separation": 0.17579999999999998,
+          "required_total_sigma_for_2sigma_distinguishability": 0.08789999999999999,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.1746882793017456,
+          "value_b": 0.3495,
+          "separation": 0.17481172069825437,
+          "required_total_sigma_for_2sigma_distinguishability": 0.08740586034912719,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.4,
+          "value_b": 0.5668,
+          "separation": 0.16679999999999995,
+          "required_total_sigma_for_2sigma_distinguishability": 0.08339999999999997,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.3,
+          "value_b": 0.4504,
+          "separation": 0.15040000000000003,
+          "required_total_sigma_for_2sigma_distinguishability": 0.07520000000000002,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.0937,
+          "separation": 0.0937,
+          "required_total_sigma_for_2sigma_distinguishability": 0.04685,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.1,
+          "value_b": 0.1437,
+          "separation": 0.04369999999999999,
+          "required_total_sigma_for_2sigma_distinguishability": 0.021849999999999994,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.0311,
+          "separation": 0.0311,
+          "required_total_sigma_for_2sigma_distinguishability": 0.01555,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_R2",
+        "value_a": 0.15,
+        "value_b": 0.3258,
+        "separation": 0.17579999999999998,
+        "required_total_sigma_for_2sigma_distinguishability": 0.08789999999999999,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.1746882793017456,
+        "value_b": 0.3495,
+        "separation": 0.17481172069825437,
+        "required_total_sigma_for_2sigma_distinguishability": 0.08740586034912719,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "discovered_data_driven",
+      "framework_b": "discovered_high_g8",
+      "g8_separation": 0.14800000000000002,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.07400000000000001,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_6",
+          "value_a": 0.4504,
+          "value_b": 0.208,
+          "separation": 0.24240000000000003,
+          "required_total_sigma_for_2sigma_distinguishability": 0.12120000000000002,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.3258,
+          "value_b": 0.21,
+          "separation": 0.11579999999999999,
+          "required_total_sigma_for_2sigma_distinguishability": 0.05789999999999999,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.5668,
+          "value_b": 0.453,
+          "separation": 0.11379999999999996,
+          "required_total_sigma_for_2sigma_distinguishability": 0.05689999999999998,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.1437,
+          "value_b": 0.036,
+          "separation": 0.10769999999999999,
+          "required_total_sigma_for_2sigma_distinguishability": 0.053849999999999995,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.3495,
+          "value_b": 0.26369120088544545,
+          "separation": 0.08580879911455452,
+          "required_total_sigma_for_2sigma_distinguishability": 0.04290439955727726,
+          "provenance_a": "native",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0937,
+          "value_b": 0.033,
+          "separation": 0.060700000000000004,
+          "required_total_sigma_for_2sigma_distinguishability": 0.030350000000000002,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0311,
+          "value_b": -0.028,
+          "separation": 0.0591,
+          "required_total_sigma_for_2sigma_distinguishability": 0.02955,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_6",
+        "value_a": 0.4504,
+        "value_b": 0.208,
+        "separation": 0.24240000000000003,
+        "required_total_sigma_for_2sigma_distinguishability": 0.12120000000000002,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.3495,
+        "value_b": 0.26369120088544545,
+        "separation": 0.08580879911455452,
+        "required_total_sigma_for_2sigma_distinguishability": 0.04290439955727726,
+        "provenance_a": "native",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "string_tree_eft",
+      "framework_b": "discovered_high_g8",
+      "g8_separation": 0.15200000000000002,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.07600000000000001,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_6",
+          "value_a": 0.4,
+          "value_b": 0.208,
+          "separation": 0.19200000000000003,
+          "required_total_sigma_for_2sigma_distinguishability": 0.09600000000000002,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.15,
+          "value_b": 0.036,
+          "separation": 0.11399999999999999,
+          "required_total_sigma_for_2sigma_distinguishability": 0.056999999999999995,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.5,
+          "value_b": 0.453,
+          "separation": 0.046999999999999986,
+          "required_total_sigma_for_2sigma_distinguishability": 0.023499999999999993,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.033,
+          "separation": 0.033,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0165,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": -0.028,
+          "separation": 0.028,
+          "required_total_sigma_for_2sigma_distinguishability": 0.014,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.24782608695652178,
+          "value_b": 0.26369120088544545,
+          "separation": 0.015865113928923674,
+          "required_total_sigma_for_2sigma_distinguishability": 0.007932556964461837,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.2,
+          "value_b": 0.21,
+          "separation": 0.009999999999999981,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0049999999999999906,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_6",
+        "value_a": 0.4,
+        "value_b": 0.208,
+        "separation": 0.19200000000000003,
+        "required_total_sigma_for_2sigma_distinguishability": 0.09600000000000002,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.24782608695652178,
+        "value_b": 0.26369120088544545,
+        "separation": 0.015865113928923674,
+        "required_total_sigma_for_2sigma_distinguishability": 0.007932556964461837,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "discovered_parity_violating",
+      "framework_b": "discovered_high_g8",
+      "g8_separation": 0.17600000000000005,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.08800000000000002,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_C",
+          "value_a": 0.6818825741746763,
+          "value_b": 0.26369120088544545,
+          "separation": 0.4181913732892309,
+          "required_total_sigma_for_2sigma_distinguishability": 0.20909568664461545,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.49,
+          "value_b": 0.208,
+          "separation": 0.28200000000000003,
+          "required_total_sigma_for_2sigma_distinguishability": 0.14100000000000001,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.647,
+          "value_b": 0.453,
+          "separation": 0.194,
+          "required_total_sigma_for_2sigma_distinguishability": 0.097,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.395,
+          "value_b": 0.21,
+          "separation": 0.18500000000000003,
+          "required_total_sigma_for_2sigma_distinguishability": 0.09250000000000001,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": -0.092,
+          "value_b": 0.033,
+          "separation": 0.125,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0625,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.044,
+          "value_b": -0.028,
+          "separation": 0.072,
+          "required_total_sigma_for_2sigma_distinguishability": 0.036,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.05,
+          "value_b": 0.036,
+          "separation": 0.014000000000000005,
+          "required_total_sigma_for_2sigma_distinguishability": 0.007000000000000003,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_C",
+        "value_a": 0.6818825741746763,
+        "value_b": 0.26369120088544545,
+        "separation": 0.4181913732892309,
+        "required_total_sigma_for_2sigma_distinguishability": 0.20909568664461545,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.6818825741746763,
+        "value_b": 0.26369120088544545,
+        "separation": 0.4181913732892309,
+        "required_total_sigma_for_2sigma_distinguishability": 0.20909568664461545,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "cdt",
+      "framework_b": "discovered_high_g8",
+      "g8_separation": 0.20200000000000007,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.10100000000000003,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_6",
+          "value_a": 0.4,
+          "value_b": 0.208,
+          "separation": 0.19200000000000003,
+          "required_total_sigma_for_2sigma_distinguishability": 0.09600000000000002,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.15,
+          "value_b": 0.036,
+          "separation": 0.11399999999999999,
+          "required_total_sigma_for_2sigma_distinguishability": 0.056999999999999995,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.55,
+          "value_b": 0.453,
+          "separation": 0.09700000000000003,
+          "required_total_sigma_for_2sigma_distinguishability": 0.048500000000000015,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.033,
+          "separation": 0.033,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0165,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": -0.028,
+          "separation": 0.028,
+          "required_total_sigma_for_2sigma_distinguishability": 0.014,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.2800225479143179,
+          "value_b": 0.26369120088544545,
+          "separation": 0.016331347028872456,
+          "required_total_sigma_for_2sigma_distinguishability": 0.008165673514436228,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.22,
+          "value_b": 0.21,
+          "separation": 0.010000000000000009,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0050000000000000044,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_6",
+        "value_a": 0.4,
+        "value_b": 0.208,
+        "separation": 0.19200000000000003,
+        "required_total_sigma_for_2sigma_distinguishability": 0.09600000000000002,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.2800225479143179,
+        "value_b": 0.26369120088544545,
+        "separation": 0.016331347028872456,
+        "required_total_sigma_for_2sigma_distinguishability": 0.008165673514436228,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "asymptotic_safety",
+      "framework_b": "discovered_high_g8",
+      "g8_separation": 0.25200000000000006,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.12600000000000003,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_6",
+          "value_a": 0.3,
+          "value_b": 0.208,
+          "separation": 0.092,
+          "required_total_sigma_for_2sigma_distinguishability": 0.046,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.1746882793017456,
+          "value_b": 0.26369120088544545,
+          "separation": 0.08900292158369985,
+          "required_total_sigma_for_2sigma_distinguishability": 0.044501460791849926,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.1,
+          "value_b": 0.036,
+          "separation": 0.064,
+          "required_total_sigma_for_2sigma_distinguishability": 0.032,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.15,
+          "value_b": 0.21,
+          "separation": 0.06,
+          "required_total_sigma_for_2sigma_distinguishability": 0.03,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.4,
+          "value_b": 0.453,
+          "separation": 0.05299999999999999,
+          "required_total_sigma_for_2sigma_distinguishability": 0.026499999999999996,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.033,
+          "separation": 0.033,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0165,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": -0.028,
+          "separation": 0.028,
+          "required_total_sigma_for_2sigma_distinguishability": 0.014,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_6",
+        "value_a": 0.3,
+        "value_b": 0.208,
+        "separation": 0.092,
+        "required_total_sigma_for_2sigma_distinguishability": 0.046,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.1746882793017456,
+        "value_b": 0.26369120088544545,
+        "separation": 0.08900292158369985,
+        "required_total_sigma_for_2sigma_distinguishability": 0.044501460791849926,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "asymptotic_safety",
+      "g8_separation": 0.255,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.1275,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_6",
+          "value_a": 0.117,
+          "value_b": 0.3,
+          "separation": 0.183,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0915,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.017,
+          "value_b": 0.1,
+          "separation": 0.083,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0415,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.34,
+          "value_b": 0.4,
+          "separation": 0.06,
+          "required_total_sigma_for_2sigma_distinguishability": 0.03,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.021,
+          "value_b": 0.0,
+          "separation": 0.021,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0105,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.1558377535101404,
+          "value_b": 0.1746882793017456,
+          "separation": 0.018850525791605205,
+          "required_total_sigma_for_2sigma_distinguishability": 0.009425262895802602,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.017,
+          "value_b": 0.0,
+          "separation": 0.017,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0085,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.136,
+          "value_b": 0.15,
+          "separation": 0.013999999999999985,
+          "required_total_sigma_for_2sigma_distinguishability": 0.006999999999999992,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_6",
+        "value_a": 0.117,
+        "value_b": 0.3,
+        "separation": 0.183,
+        "required_total_sigma_for_2sigma_distinguishability": 0.0915,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.1558377535101404,
+        "value_b": 0.1746882793017456,
+        "separation": 0.018850525791605205,
+        "required_total_sigma_for_2sigma_distinguishability": 0.009425262895802602,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "asymptotic_safety",
+      "g8_separation": 0.3,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.15,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_4",
+          "value_a": 0.0,
+          "value_b": 0.4,
+          "separation": 0.4,
+          "required_total_sigma_for_2sigma_distinguishability": 0.2,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.0,
+          "value_b": 0.3,
+          "separation": 0.3,
+          "required_total_sigma_for_2sigma_distinguishability": 0.15,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.0,
+          "value_b": 0.1746882793017456,
+          "separation": 0.1746882793017456,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0873441396508728,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.0,
+          "value_b": 0.15,
+          "separation": 0.15,
+          "required_total_sigma_for_2sigma_distinguishability": 0.075,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.0,
+          "value_b": 0.1,
+          "separation": 0.1,
+          "required_total_sigma_for_2sigma_distinguishability": 0.05,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.0,
+          "separation": 0.0,
+          "required_total_sigma_for_2sigma_distinguishability": null,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.0,
+          "separation": 0.0,
+          "required_total_sigma_for_2sigma_distinguishability": null,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_4",
+        "value_a": 0.0,
+        "value_b": 0.4,
+        "separation": 0.4,
+        "required_total_sigma_for_2sigma_distinguishability": 0.2,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.0,
+        "value_b": 0.1746882793017456,
+        "separation": 0.1746882793017456,
+        "required_total_sigma_for_2sigma_distinguishability": 0.0873441396508728,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "cdt",
+      "g8_separation": 0.305,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.1525,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_6",
+          "value_a": 0.117,
+          "value_b": 0.4,
+          "separation": 0.28300000000000003,
+          "required_total_sigma_for_2sigma_distinguishability": 0.14150000000000001,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.34,
+          "value_b": 0.55,
+          "separation": 0.21000000000000002,
+          "required_total_sigma_for_2sigma_distinguishability": 0.10500000000000001,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.017,
+          "value_b": 0.15,
+          "separation": 0.133,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0665,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.1558377535101404,
+          "value_b": 0.2800225479143179,
+          "separation": 0.12418479440417751,
+          "required_total_sigma_for_2sigma_distinguishability": 0.062092397202088756,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.136,
+          "value_b": 0.22,
+          "separation": 0.08399999999999999,
+          "required_total_sigma_for_2sigma_distinguishability": 0.041999999999999996,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.021,
+          "value_b": 0.0,
+          "separation": 0.021,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0105,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.017,
+          "value_b": 0.0,
+          "separation": 0.017,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0085,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_6",
+        "value_a": 0.117,
+        "value_b": 0.4,
+        "separation": 0.28300000000000003,
+        "required_total_sigma_for_2sigma_distinguishability": 0.14150000000000001,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.1558377535101404,
+        "value_b": 0.2800225479143179,
+        "separation": 0.12418479440417751,
+        "required_total_sigma_for_2sigma_distinguishability": 0.062092397202088756,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "discovered_parity_violating",
+      "g8_separation": 0.331,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.1655,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_C",
+          "value_a": 0.1558377535101404,
+          "value_b": 0.6818825741746763,
+          "separation": 0.526044820664536,
+          "required_total_sigma_for_2sigma_distinguishability": 0.263022410332268,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.117,
+          "value_b": 0.49,
+          "separation": 0.373,
+          "required_total_sigma_for_2sigma_distinguishability": 0.1865,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.34,
+          "value_b": 0.647,
+          "separation": 0.307,
+          "required_total_sigma_for_2sigma_distinguishability": 0.1535,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.136,
+          "value_b": 0.395,
+          "separation": 0.259,
+          "required_total_sigma_for_2sigma_distinguishability": 0.1295,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.021,
+          "value_b": -0.092,
+          "separation": 0.113,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0565,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.017,
+          "value_b": 0.05,
+          "separation": 0.033,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0165,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.017,
+          "value_b": 0.044,
+          "separation": 0.026999999999999996,
+          "required_total_sigma_for_2sigma_distinguishability": 0.013499999999999998,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_C",
+        "value_a": 0.1558377535101404,
+        "value_b": 0.6818825741746763,
+        "separation": 0.526044820664536,
+        "required_total_sigma_for_2sigma_distinguishability": 0.263022410332268,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.1558377535101404,
+        "value_b": 0.6818825741746763,
+        "separation": 0.526044820664536,
+        "required_total_sigma_for_2sigma_distinguishability": 0.263022410332268,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "cdt",
+      "g8_separation": 0.35,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.175,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_4",
+          "value_a": 0.0,
+          "value_b": 0.55,
+          "separation": 0.55,
+          "required_total_sigma_for_2sigma_distinguishability": 0.275,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.0,
+          "value_b": 0.4,
+          "separation": 0.4,
+          "required_total_sigma_for_2sigma_distinguishability": 0.2,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.0,
+          "value_b": 0.2800225479143179,
+          "separation": 0.2800225479143179,
+          "required_total_sigma_for_2sigma_distinguishability": 0.14001127395715895,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.0,
+          "value_b": 0.22,
+          "separation": 0.22,
+          "required_total_sigma_for_2sigma_distinguishability": 0.11,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.0,
+          "value_b": 0.15,
+          "separation": 0.15,
+          "required_total_sigma_for_2sigma_distinguishability": 0.075,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.0,
+          "separation": 0.0,
+          "required_total_sigma_for_2sigma_distinguishability": null,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.0,
+          "separation": 0.0,
+          "required_total_sigma_for_2sigma_distinguishability": null,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_4",
+        "value_a": 0.0,
+        "value_b": 0.55,
+        "separation": 0.55,
+        "required_total_sigma_for_2sigma_distinguishability": 0.275,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.0,
+        "value_b": 0.2800225479143179,
+        "separation": 0.2800225479143179,
+        "required_total_sigma_for_2sigma_distinguishability": 0.14001127395715895,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "string_tree_eft",
+      "g8_separation": 0.35500000000000004,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.17750000000000002,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_6",
+          "value_a": 0.117,
+          "value_b": 0.4,
+          "separation": 0.28300000000000003,
+          "required_total_sigma_for_2sigma_distinguishability": 0.14150000000000001,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.34,
+          "value_b": 0.5,
+          "separation": 0.15999999999999998,
+          "required_total_sigma_for_2sigma_distinguishability": 0.07999999999999999,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.017,
+          "value_b": 0.15,
+          "separation": 0.133,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0665,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.1558377535101404,
+          "value_b": 0.24782608695652178,
+          "separation": 0.09198833344638138,
+          "required_total_sigma_for_2sigma_distinguishability": 0.04599416672319069,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.136,
+          "value_b": 0.2,
+          "separation": 0.064,
+          "required_total_sigma_for_2sigma_distinguishability": 0.032,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.021,
+          "value_b": 0.0,
+          "separation": 0.021,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0105,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.017,
+          "value_b": 0.0,
+          "separation": 0.017,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0085,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_6",
+        "value_a": 0.117,
+        "value_b": 0.4,
+        "separation": 0.28300000000000003,
+        "required_total_sigma_for_2sigma_distinguishability": 0.14150000000000001,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.1558377535101404,
+        "value_b": 0.24782608695652178,
+        "separation": 0.09198833344638138,
+        "required_total_sigma_for_2sigma_distinguishability": 0.04599416672319069,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "discovered_data_driven",
+      "g8_separation": 0.35900000000000004,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.17950000000000002,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_6",
+          "value_a": 0.117,
+          "value_b": 0.4504,
+          "separation": 0.33340000000000003,
+          "required_total_sigma_for_2sigma_distinguishability": 0.16670000000000001,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.34,
+          "value_b": 0.5668,
+          "separation": 0.22679999999999995,
+          "required_total_sigma_for_2sigma_distinguishability": 0.11339999999999997,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.1558377535101404,
+          "value_b": 0.3495,
+          "separation": 0.19366224648985958,
+          "required_total_sigma_for_2sigma_distinguishability": 0.09683112324492979,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.136,
+          "value_b": 0.3258,
+          "separation": 0.18979999999999997,
+          "required_total_sigma_for_2sigma_distinguishability": 0.09489999999999998,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.017,
+          "value_b": 0.1437,
+          "separation": 0.12669999999999998,
+          "required_total_sigma_for_2sigma_distinguishability": 0.06334999999999999,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.021,
+          "value_b": 0.0937,
+          "separation": 0.0727,
+          "required_total_sigma_for_2sigma_distinguishability": 0.03635,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.017,
+          "value_b": 0.0311,
+          "separation": 0.014099999999999998,
+          "required_total_sigma_for_2sigma_distinguishability": 0.007049999999999999,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_6",
+        "value_a": 0.117,
+        "value_b": 0.4504,
+        "separation": 0.33340000000000003,
+        "required_total_sigma_for_2sigma_distinguishability": 0.16670000000000001,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.1558377535101404,
+        "value_b": 0.3495,
+        "separation": 0.19366224648985958,
+        "required_total_sigma_for_2sigma_distinguishability": 0.09683112324492979,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "discovered_parity_violating",
+      "g8_separation": 0.376,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.188,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_C",
+          "value_a": 0.0,
+          "value_b": 0.6818825741746763,
+          "separation": 0.6818825741746763,
+          "required_total_sigma_for_2sigma_distinguishability": 0.3409412870873382,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_4",
+          "value_a": 0.0,
+          "value_b": 0.647,
+          "separation": 0.647,
+          "required_total_sigma_for_2sigma_distinguishability": 0.3235,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.0,
+          "value_b": 0.49,
+          "separation": 0.49,
+          "required_total_sigma_for_2sigma_distinguishability": 0.245,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.0,
+          "value_b": 0.395,
+          "separation": 0.395,
+          "required_total_sigma_for_2sigma_distinguishability": 0.1975,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": -0.092,
+          "separation": 0.092,
+          "required_total_sigma_for_2sigma_distinguishability": 0.046,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.0,
+          "value_b": 0.05,
+          "separation": 0.05,
+          "required_total_sigma_for_2sigma_distinguishability": 0.025,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.044,
+          "separation": 0.044,
+          "required_total_sigma_for_2sigma_distinguishability": 0.022,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_C",
+        "value_a": 0.0,
+        "value_b": 0.6818825741746763,
+        "separation": 0.6818825741746763,
+        "required_total_sigma_for_2sigma_distinguishability": 0.3409412870873382,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.0,
+        "value_b": 0.6818825741746763,
+        "separation": 0.6818825741746763,
+        "required_total_sigma_for_2sigma_distinguishability": 0.3409412870873382,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "string_tree_eft",
+      "g8_separation": 0.4,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.2,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_4",
+          "value_a": 0.0,
+          "value_b": 0.5,
+          "separation": 0.5,
+          "required_total_sigma_for_2sigma_distinguishability": 0.25,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.0,
+          "value_b": 0.4,
+          "separation": 0.4,
+          "required_total_sigma_for_2sigma_distinguishability": 0.2,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.0,
+          "value_b": 0.24782608695652178,
+          "separation": 0.24782608695652178,
+          "required_total_sigma_for_2sigma_distinguishability": 0.12391304347826089,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.0,
+          "value_b": 0.2,
+          "separation": 0.2,
+          "required_total_sigma_for_2sigma_distinguishability": 0.1,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.0,
+          "value_b": 0.15,
+          "separation": 0.15,
+          "required_total_sigma_for_2sigma_distinguishability": 0.075,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.0,
+          "separation": 0.0,
+          "required_total_sigma_for_2sigma_distinguishability": null,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.0,
+          "separation": 0.0,
+          "required_total_sigma_for_2sigma_distinguishability": null,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_4",
+        "value_a": 0.0,
+        "value_b": 0.5,
+        "separation": 0.5,
+        "required_total_sigma_for_2sigma_distinguishability": 0.25,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.0,
+        "value_b": 0.24782608695652178,
+        "separation": 0.24782608695652178,
+        "required_total_sigma_for_2sigma_distinguishability": 0.12391304347826089,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "discovered_data_driven",
+      "g8_separation": 0.404,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.202,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_4",
+          "value_a": 0.0,
+          "value_b": 0.5668,
+          "separation": 0.5668,
+          "required_total_sigma_for_2sigma_distinguishability": 0.2834,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.0,
+          "value_b": 0.4504,
+          "separation": 0.4504,
+          "required_total_sigma_for_2sigma_distinguishability": 0.2252,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.0,
+          "value_b": 0.3495,
+          "separation": 0.3495,
+          "required_total_sigma_for_2sigma_distinguishability": 0.17475,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.0,
+          "value_b": 0.3258,
+          "separation": 0.3258,
+          "required_total_sigma_for_2sigma_distinguishability": 0.1629,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.0,
+          "value_b": 0.1437,
+          "separation": 0.1437,
+          "required_total_sigma_for_2sigma_distinguishability": 0.07185,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.0937,
+          "separation": 0.0937,
+          "required_total_sigma_for_2sigma_distinguishability": 0.04685,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": 0.0311,
+          "separation": 0.0311,
+          "required_total_sigma_for_2sigma_distinguishability": 0.01555,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_4",
+        "value_a": 0.0,
+        "value_b": 0.5668,
+        "separation": 0.5668,
+        "required_total_sigma_for_2sigma_distinguishability": 0.2834,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.0,
+        "value_b": 0.3495,
+        "separation": 0.3495,
+        "required_total_sigma_for_2sigma_distinguishability": 0.17475,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "discovered_novel",
+      "framework_b": "discovered_high_g8",
+      "g8_separation": 0.507,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.2535,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_4",
+          "value_a": 0.34,
+          "value_b": 0.453,
+          "separation": 0.11299999999999999,
+          "required_total_sigma_for_2sigma_distinguishability": 0.056499999999999995,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.1558377535101404,
+          "value_b": 0.26369120088544545,
+          "separation": 0.10785344737530506,
+          "required_total_sigma_for_2sigma_distinguishability": 0.05392672368765253,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.117,
+          "value_b": 0.208,
+          "separation": 0.09099999999999998,
+          "required_total_sigma_for_2sigma_distinguishability": 0.04549999999999999,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.136,
+          "value_b": 0.21,
+          "separation": 0.07399999999999998,
+          "required_total_sigma_for_2sigma_distinguishability": 0.03699999999999999,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.017,
+          "value_b": -0.028,
+          "separation": 0.045,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0225,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.017,
+          "value_b": 0.036,
+          "separation": 0.018999999999999996,
+          "required_total_sigma_for_2sigma_distinguishability": 0.009499999999999998,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.021,
+          "value_b": 0.033,
+          "separation": 0.012,
+          "required_total_sigma_for_2sigma_distinguishability": 0.006,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_4",
+        "value_a": 0.34,
+        "value_b": 0.453,
+        "separation": 0.11299999999999999,
+        "required_total_sigma_for_2sigma_distinguishability": 0.056499999999999995,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.1558377535101404,
+        "value_b": 0.26369120088544545,
+        "separation": 0.10785344737530506,
+        "required_total_sigma_for_2sigma_distinguishability": 0.05392672368765253,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    },
+    {
+      "framework_a": "pure_gr",
+      "framework_b": "discovered_high_g8",
+      "g8_separation": 0.552,
+      "g8_required_total_sigma_for_2sigma_distinguishability": 0.276,
+      "near_g8_degenerate": false,
+      "secondary_axes_ranked_by_tolerance": [
+        {
+          "axis": "g_4",
+          "value_a": 0.0,
+          "value_b": 0.453,
+          "separation": 0.453,
+          "required_total_sigma_for_2sigma_distinguishability": 0.2265,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_C",
+          "value_a": 0.0,
+          "value_b": 0.26369120088544545,
+          "separation": 0.26369120088544545,
+          "required_total_sigma_for_2sigma_distinguishability": 0.13184560044272273,
+          "provenance_a": "portrait_derived_from_g_R2",
+          "provenance_b": "portrait_derived_from_g_R2",
+          "is_weyl_g8_frontier_secondary_axis": true,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2",
+          "value_a": 0.0,
+          "value_b": 0.21,
+          "separation": 0.21,
+          "required_total_sigma_for_2sigma_distinguishability": 0.105,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_6",
+          "value_a": 0.0,
+          "value_b": 0.208,
+          "separation": 0.208,
+          "required_total_sigma_for_2sigma_distinguishability": 0.104,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R3",
+          "value_a": 0.0,
+          "value_b": 0.036,
+          "separation": 0.036,
+          "required_total_sigma_for_2sigma_distinguishability": 0.018,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": false
+        },
+        {
+          "axis": "g_R2_parity",
+          "value_a": 0.0,
+          "value_b": 0.033,
+          "separation": 0.033,
+          "required_total_sigma_for_2sigma_distinguishability": 0.0165,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        },
+        {
+          "axis": "g_R3_parity",
+          "value_a": 0.0,
+          "value_b": -0.028,
+          "separation": 0.028,
+          "required_total_sigma_for_2sigma_distinguishability": 0.014,
+          "provenance_a": "native",
+          "provenance_b": "native",
+          "is_weyl_g8_frontier_secondary_axis": false,
+          "is_parity_axis": true
+        }
+      ],
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_4",
+        "value_a": 0.0,
+        "value_b": 0.453,
+        "separation": 0.453,
+        "required_total_sigma_for_2sigma_distinguishability": 0.2265,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.0,
+        "value_b": 0.26369120088544545,
+        "separation": 0.26369120088544545,
+        "required_total_sigma_for_2sigma_distinguishability": 0.13184560044272273,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "portrait_derived_from_g_R2",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    }
+  ],
+  "recommended_joint_targets": [
+    {
+      "frameworks": [
+        "string_tree_eft",
+        "discovered_data_driven"
+      ],
+      "g8_required_total_sigma": 0.0020000000000000018,
+      "best_secondary_axis_by_tolerance": {
+        "axis": "g_R2",
+        "value_a": 0.2,
+        "value_b": 0.3258,
+        "separation": 0.12579999999999997,
+        "required_total_sigma_for_2sigma_distinguishability": 0.06289999999999998,
+        "provenance_a": "native",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": false,
+        "is_parity_axis": false
+      },
+      "weyl_g8_frontier_secondary_axis": {
+        "axis": "g_C",
+        "value_a": 0.24782608695652178,
+        "value_b": 0.3495,
+        "separation": 0.1016739130434782,
+        "required_total_sigma_for_2sigma_distinguishability": 0.0508369565217391,
+        "provenance_a": "portrait_derived_from_g_R2",
+        "provenance_b": "native",
+        "is_weyl_g8_frontier_secondary_axis": true,
+        "is_parity_axis": false
+      }
+    }
+  ],
+  "claim_blockers": [
+    "real_engine_normalized_g8_packet_missing",
+    "source_backed_secondary_axis_packet_missing",
+    "joint_likelihood_and_covariance_missing",
+    "shared_eft_domain_bounds_missing",
+    "secondary_axis_observable_normalization_missing"
+  ],
+  "best_next_artifact": "A real joint packet for g_8 plus one source-backed secondary axis. For the tightest eligible pair, g_R2 gives the widest numeric tolerance, while g_C aligns with the existing Weyl/g8 frontier.",
+  "interpretation": "The tightest eligible g_8 pair does not require giving up on the route. It requires either a very precise one-axis g_8 packet or a joint packet with a secondary axis such as g_R2 or g_C. This is still only a design target until those external measurements exist."
+}

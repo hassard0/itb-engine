@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (207 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (208 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -256,3 +256,4 @@ Auto-generated front door to the full research program (207 notes). Regenerate w
 | v2.94 | [v2.94 - Current external packet probe: no source satisfies the gate](2026-06-19-v2.94-current-external-packet-probe.md) | v2.94 checks current public source candidates against the v2.93 intake gate and finds useful material but no schema-ready or claim-ready packet. |
 | v2.95 | [v2.95 - External dependency blocker synthesis: current run cannot promote](2026-06-19-v2.95-external-dependency-blocker-synthesis.md) | v2.95 synthesizes the repeated external-packet blocker and records the exact unblock conditions required before any defensible discriminator promotion. |
 | v2.96 | [v2.96 - g8 measurement sensitivity targets: precision floor defined](2026-06-20-v2.96-g8-measurement-sensitivity-targets.md) | v2.96 converts the external g8-packet blocker into numeric 2-sigma precision targets for eligible registered frameworks while remaining non-claimable without a real packet. |
+| v2.97 | [v2.97 - g8 secondary-axis targets: near-degeneracy has a joint route](2026-06-20-v2.97-g8-secondary-axis-targets.md) | v2.97 maps the tightest eligible g8 near-degeneracy to secondary-axis targets, showing g_R2 and g_C joint packets could relax the single-axis precision requirement. |
