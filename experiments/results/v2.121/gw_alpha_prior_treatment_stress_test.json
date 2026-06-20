@@ -1,0 +1,404 @@
+{
+  "version": "v2.121",
+  "basis": [
+    "v2.120_alpha_detector_calibration_bound",
+    "v2.115_lalsuite_marginal_alpha_likelihood"
+  ],
+  "packet": {
+    "label": "v2_121_prior_treatment_stress_test_alpha_packet",
+    "source_url": "https://arxiv.org/abs/2407.08929",
+    "source_model": "cubic_parity_preserving_higher_curvature_eft",
+    "event": "GW170608",
+    "source_parameters": [
+      "alpha_bar_1",
+      "alpha_bar_2"
+    ],
+    "parameter_constraints": {
+      "alpha_bar_1": {
+        "central": 0.0010027012478329624,
+        "lower_90": -1.8,
+        "upper_90": 1.8000000000000003
+      },
+      "alpha_bar_2": {
+        "central": 0.0007886614846891616,
+        "lower_90": -1.8,
+        "upper_90": 1.8000000000000003
+      }
+    },
+    "posterior_or_likelihood_export": {
+      "status": "reproduced_source_native_likelihood",
+      "kind": "coarse_nuisance_marginal_lalsuite_imrphenomd_grid",
+      "parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "grid_points": 441,
+      "detectors": [
+        "H1",
+        "L1"
+      ],
+      "nuisance_points_per_detector": 81,
+      "best_marginal_grid_point": {
+        "alpha_bar_1": 0.0,
+        "alpha_bar_2": 0.0,
+        "log_marginal_likelihood": -1.0,
+        "profile_log_likelihood": -1.0
+      },
+      "best_profile_grid_point": {
+        "alpha_bar_1": 0.6000000000000001,
+        "alpha_bar_2": 0.6000000000000001,
+        "log_marginal_likelihood": -1.0041946503118435,
+        "profile_log_likelihood": -0.9939598599646702
+      },
+      "weight_summary": {
+        "grid_points": 441,
+        "max_weight": 0.006283482645669498,
+        "effective_sample_size": 218.798942192739
+      }
+    },
+    "source_parameter_covariance": {
+      "parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "matrix": [
+        [
+          1.2363777063497354,
+          1.0239118591532115
+        ],
+        [
+          1.0239118591532115,
+          1.2364116958793123
+        ]
+      ]
+    },
+    "waveform_model_reference": "LALSuite_IMRPhenomD_linearized_cubic_EFT_response",
+    "normalization_convention": "paper_native_dimensionless_alpha_bar",
+    "engine_axis_strategy": {
+      "status": "explicit_engine_projection",
+      "target_axis": "gw_cubic_alpha",
+      "source_parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "engine_parameters": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "source_to_engine_jacobian": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "normalization": "identity_in_paper_native_dimensionless_alpha_bar_basis",
+      "projection_scope": "source_native_cubic_alpha_axis_not_quadratic_curvature_or_g8"
+    },
+    "framework_projection_strategy": "framework_alpha_response_defined",
+    "systematics_budget": {
+      "status": "open",
+      "components": {
+        "waveform_systematics": "open",
+        "detector_calibration": "bounded",
+        "prior_sensitivity": "open",
+        "eft_truncation": "open",
+        "sampler_convergence": "bounded",
+        "public_data_reproducibility": "bounded"
+      },
+      "evidence": {
+        "waveform_systematics": {
+          "status": "open",
+          "proxy_kind": "leading_order_gr_vs_lalsuite_imrphenomd_projection_delta",
+          "parameters": {
+            "alpha_bar_1": {
+              "leading_order_gr_abs_mean": 0.03542031712253359,
+              "imrphenomd_abs_mean": 0.025788256709295503,
+              "abs_mean_delta": -0.009632060413238084,
+              "real_mean_delta": -0.031203424882713368,
+              "imag_mean_delta": 0.003275552160712368
+            },
+            "alpha_bar_2": {
+              "leading_order_gr_abs_mean": 0.033746416713831634,
+              "imrphenomd_abs_mean": 0.031185715449305734,
+              "abs_mean_delta": -0.0025607012645258997,
+              "real_mean_delta": 0.03606218685398721,
+              "imag_mean_delta": -0.0021976005791185943
+            }
+          },
+          "max_network_projection_component_delta": 0.03606218685398721,
+          "closure_target": "Replace this proxy with source-backed cubic-EFT IMR waveform uncertainty, not just GR-baseline comparison."
+        },
+        "detector_calibration": {
+          "status": "bounded",
+          "basis": "gw170608_published_calibration_uncertainty_2sigma_corner_propagation",
+          "calibration_source": {
+            "title": "GW170608: Observation of a 19-solar-mass Binary Black Hole Coalescence",
+            "url": "https://arxiv.org/abs/1711.05578",
+            "reported_max_1sigma_amplitude_fraction": 0.05,
+            "reported_max_1sigma_phase_degrees": 3.0,
+            "frequency_band_hz": [
+              20.0,
+              111.25
+            ]
+          },
+          "applied_envelope": {
+            "sigma_multiplier": 2.0,
+            "amplitude_fraction": 0.1,
+            "phase_degrees": 6.0,
+            "detectors": [
+              "H1",
+              "L1"
+            ]
+          },
+          "parameters": {
+            "alpha_bar_1": {
+              "base_complex_mean_real": -0.005575874860159188,
+              "base_complex_mean_imag": -0.016026386789095546,
+              "base_abs_detector_mean": 0.025788256709295503,
+              "max_real_mean_shift": 0.003196828643288932,
+              "max_imag_mean_shift": 0.003101297823836639,
+              "max_abs_detector_mean_shift": 0.0025788256709295514,
+              "max_complex_mean_shift": 0.003829303983895962,
+              "calibration_corner_count": 16
+            },
+            "alpha_bar_2": {
+              "base_complex_mean_real": 0.011420432732309239,
+              "base_complex_mean_imag": 0.015220647788615375,
+              "base_abs_detector_mean": 0.031185715449305734,
+              "max_real_mean_shift": 0.0037728652569349883,
+              "max_imag_mean_shift": 0.0037667661537108595,
+              "max_abs_detector_mean_shift": 0.0031185715449305804,
+              "max_complex_mean_shift": 0.004629001310274662,
+              "calibration_corner_count": 16
+            }
+          },
+          "max_network_projection_shift": 0.004629001310274662,
+          "bounded_ready": true,
+          "scope": "Bounds detector calibration propagation for the v2.113 H1/L1 complex alpha projections. It does not close waveform, prior, or EFT-truncation systematics."
+        },
+        "prior_sensitivity": {
+          "status": "open",
+          "stress_test_kind": "marginal_to_profile_temperature_path_from_saved_grid",
+          "alpha_axis_step": 0.19999999999999996,
+          "baseline_best_grid_point": {
+            "alpha_bar_1": 0.0,
+            "alpha_bar_2": 0.0,
+            "tempered_log_likelihood": -1.0,
+            "log_marginal_likelihood": -1.0,
+            "profile_log_likelihood": -1.0
+          },
+          "temperature_rows": [
+            {
+              "profile_temperature": 0.0,
+              "best_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "tempered_log_likelihood": -1.0,
+                "log_marginal_likelihood": -1.0,
+                "profile_log_likelihood": -1.0
+              },
+              "best_point_shift_from_marginal": 0.0,
+              "exceeds_one_axis_grid_step": false
+            },
+            {
+              "profile_temperature": 0.1,
+              "best_grid_point": {
+                "alpha_bar_1": 0.0,
+                "alpha_bar_2": 0.0,
+                "tempered_log_likelihood": -1.0,
+                "log_marginal_likelihood": -1.0,
+                "profile_log_likelihood": -1.0
+              },
+              "best_point_shift_from_marginal": 0.0,
+              "exceeds_one_axis_grid_step": false
+            },
+            {
+              "profile_temperature": 0.25,
+              "best_grid_point": {
+                "alpha_bar_1": 0.20000000000000018,
+                "alpha_bar_2": 0.20000000000000018,
+                "tempered_log_likelihood": -0.9995027055271408,
+                "log_marginal_likelihood": -1.0003604311346725,
+                "profile_log_likelihood": -0.9969295287045458
+              },
+              "best_point_shift_from_marginal": 0.2828427124746193,
+              "exceeds_one_axis_grid_step": true
+            },
+            {
+              "profile_temperature": 0.5,
+              "best_grid_point": {
+                "alpha_bar_1": 0.40000000000000036,
+                "alpha_bar_2": 0.40000000000000036,
+                "tempered_log_likelihood": -0.9983373995437936,
+                "log_marginal_likelihood": -1.0017586503948182,
+                "profile_log_likelihood": -0.9949161486927692
+              },
+              "best_point_shift_from_marginal": 0.5656854249492386,
+              "exceeds_one_axis_grid_step": true
+            },
+            {
+              "profile_temperature": 0.75,
+              "best_grid_point": {
+                "alpha_bar_1": 0.6000000000000001,
+                "alpha_bar_2": 0.6000000000000001,
+                "tempered_log_likelihood": -0.9965185575514635,
+                "log_marginal_likelihood": -1.0041946503118435,
+                "profile_log_likelihood": -0.9939598599646702
+              },
+              "best_point_shift_from_marginal": 0.8485281374238571,
+              "exceeds_one_axis_grid_step": true
+            },
+            {
+              "profile_temperature": 1.0,
+              "best_grid_point": {
+                "alpha_bar_1": 0.6000000000000001,
+                "alpha_bar_2": 0.6000000000000001,
+                "tempered_log_likelihood": -0.9939598599646702,
+                "log_marginal_likelihood": -1.0041946503118435,
+                "profile_log_likelihood": -0.9939598599646702
+              },
+              "best_point_shift_from_marginal": 0.8485281374238571,
+              "exceeds_one_axis_grid_step": true
+            }
+          ],
+          "max_best_point_shift": 0.8485281374238571,
+          "first_temperature_exceeding_one_axis_grid_step": 0.25,
+          "stable_under_profile_stress": false,
+          "closure_target": "Export the per-nuisance likelihood cube so physically justified mass, eta, coalescence-time, and phase priors can be reweighted directly instead of using marginal/profile endpoints."
+        },
+        "eft_truncation": {
+          "status": "open",
+          "proxy_kind": "dimensionless_next_pn_power_v_f_squared",
+          "v_f_max": 0.319804329926307,
+          "next_order_power_suppression_proxy": 0.1022748094396142,
+          "closure_target": "Attach source-backed higher-order cubic-EFT coefficient or remainder bound over the alpha confidence domain."
+        },
+        "sampler_convergence": {
+          "status": "bounded",
+          "basis": "deterministic_grid_enumeration_no_stochastic_sampler",
+          "alpha_grid_points": 441,
+          "expected_alpha_grid_points": 441,
+          "nuisance_points_per_detector": [
+            81,
+            81
+          ],
+          "detectors": [
+            "H1",
+            "L1"
+          ],
+          "best_marginal_grid_point": {
+            "alpha_bar_1": 0.0,
+            "alpha_bar_2": 0.0,
+            "log_marginal_likelihood": -1.0,
+            "profile_log_likelihood": -1.0
+          },
+          "best_profile_grid_point": {
+            "alpha_bar_1": 0.6000000000000001,
+            "alpha_bar_2": 0.6000000000000001,
+            "log_marginal_likelihood": -1.0041946503118435,
+            "profile_log_likelihood": -0.9939598599646702
+          },
+          "deterministic_ready": true
+        },
+        "public_data_reproducibility": {
+          "status": "bounded",
+          "basis": "v2.107_hash_metadata_and_vulcan_reproduction",
+          "required_detectors": [
+            "H1",
+            "L1"
+          ],
+          "public_strain_artifact": "experiments/results/v2.107/gw_public_strain_loader.json",
+          "cache_rehydration_supported": true
+        }
+      }
+    },
+    "shared_eft_domain": "bounded_for_source_native_cubic_gw",
+    "validation_reference": "v2.121_alpha_prior_treatment_stress_test",
+    "synthetic_fixture": false,
+    "projection_caveat": "This is an identity projection from the source-native alpha_bar basis to an engine gw_cubic_alpha axis. It is not a projection to g8, g_C, or quadratic curvature axes."
+  },
+  "evaluation": {
+    "prior_sensitivity_bounded": false,
+    "prior_stress_max_best_point_shift": 0.8485281374238571,
+    "bounded_components": [
+      "detector_calibration",
+      "sampler_convergence",
+      "public_data_reproducibility"
+    ],
+    "open_components": [
+      "waveform_systematics",
+      "prior_sensitivity",
+      "eft_truncation"
+    ],
+    "adapter_evaluation": {
+      "label": "v2_121_prior_treatment_stress_test_alpha_packet",
+      "source_url": "https://arxiv.org/abs/2407.08929",
+      "event": "GW170608",
+      "source_model": "cubic_parity_preserving_higher_curvature_eft",
+      "synthetic_fixture": false,
+      "missing_fields": [],
+      "constraints_summary": {
+        "parameters_present": [
+          "alpha_bar_1",
+          "alpha_bar_2"
+        ],
+        "parameters_missing": [],
+        "all_source_parameters_numeric": true
+      },
+      "likelihood_summary": {
+        "status": "reproduced_source_native_likelihood",
+        "contains_source_parameters": true,
+        "source_native_usable": true,
+        "kind": "coarse_nuisance_marginal_lalsuite_imrphenomd_grid"
+      },
+      "covariance_summary": {
+        "present": true,
+        "parameters_covered": [
+          "alpha_bar_1",
+          "alpha_bar_2"
+        ],
+        "parameters_missing": [],
+        "numeric": true
+      },
+      "systematics_summary": {
+        "status": "open",
+        "missing_components": [],
+        "components_closed": false,
+        "budget_closed": false
+      },
+      "engine_projection_summary": {
+        "status": "explicit_engine_projection",
+        "source_native_only": false,
+        "engine_projection_ready": true,
+        "target_axis": "gw_cubic_alpha"
+      },
+      "native_adapter_ready": false,
+      "claim_ready": false,
+      "adapter_blockers": [
+        "systematics_not_closed"
+      ],
+      "claim_blockers": [
+        "g8_joint_component_missing",
+        "systematics_not_closed"
+      ],
+      "status": "gw_cubic_source_native_packet_rejected_or_nonpromoting"
+    },
+    "claim_ready": false,
+    "remaining_nonclaiming_reasons": [
+      "g8_joint_component_missing",
+      "likelihood_scale_not_calibrated_to_noise_evidence",
+      "prior_nuisance_cube_missing",
+      "systematics_not_closed",
+      "waveform_and_eft_systematics_still_open"
+    ]
+  },
+  "claimable_discriminator_now": false,
+  "route_status": "prior_treatment_stress_test_nonclaiming",
+  "selected_next_build_action": "export_per_nuisance_likelihood_cube",
+  "best_next_artifact": "Persist the detector-by-detector alpha/nuisance likelihood cube before marginalization so nuisance priors can be swept directly.",
+  "interpretation": "The saved marginal/profile surfaces are enough to prove the current prior treatment is not bounded: the best alpha point shifts by more than one alpha-axis grid step as profile weighting is introduced. The next fix is not another summary proxy; it is a persisted per-nuisance likelihood cube."
+}
