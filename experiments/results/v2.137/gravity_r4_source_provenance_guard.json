@@ -1,0 +1,269 @@
+{
+  "version": "v2.137",
+  "basis": [
+    "v2.133_gravity_r4_projection_guard_schema",
+    "v2.136_symbolic_helicity_projection_fixture",
+    "strict_source_provenance_overlay"
+  ],
+  "required_source_provenance_fields": [
+    "source_backed_derivation",
+    "derivation_kind",
+    "primary_source_urls",
+    "synthetic_fixture"
+  ],
+  "valid_derivation_kinds": [
+    "primary_source_derivation",
+    "published_framework_projection",
+    "validated_public_reanalysis"
+  ],
+  "evaluations": {
+    "source_backed_control": {
+      "framework": "string_tree_eft",
+      "base_ready_for_framework_projection": true,
+      "ready_for_source_backed_framework_projection": true,
+      "ready_for_framework_claim": false,
+      "base_guard": {
+        "framework": "string_tree_eft",
+        "framework_registered": true,
+        "engine_scope": {
+          "in_scope": true,
+          "violations": [],
+          "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+        },
+        "missing_required_fields": [],
+        "source_url_valid": true,
+        "source_type_valid": true,
+        "coefficient_summary": {
+          "coefficient_values": {
+            "g_R4_c1": 0.2,
+            "g_R4_c2": 0.1,
+            "g_R4_c3": 0.05
+          },
+          "missing_or_nonnumeric": [],
+          "positivity_passed": true,
+          "positivity_residual": 0.0775
+        },
+        "derived_summary": {
+          "missing_or_nonnumeric": [],
+          "expected": {
+            "g_R4_plus": 0.3,
+            "g_R4_minus_abs": 0.111803398875
+          },
+          "provided": {
+            "g_R4_plus": 0.3,
+            "g_R4_minus_abs": 0.111803398875
+          },
+          "consistent": true
+        },
+        "normalization_summary": {
+          "present": true,
+          "status": "engine_lambda_r4_defined",
+          "status_valid": true
+        },
+        "operator_projection_summary": {
+          "present": true,
+          "status": "source_backed",
+          "status_valid": true
+        },
+        "energy_domain_summary": {
+          "present": true,
+          "status": "bounded_for_qg_eft",
+          "status_valid": true
+        },
+        "uncertainty_summary": {
+          "present": true,
+          "status": "bounded_systematic_envelope",
+          "status_valid": true,
+          "axes_cover_required": true
+        },
+        "ownership_summary": {
+          "framework_source_owned": true
+        },
+        "unitarity_summary": {
+          "present": true,
+          "status": "source_backed",
+          "status_valid": true,
+          "uses_bresciani_spin2_bound": true
+        },
+        "likelihood_summary": {
+          "present": false,
+          "status": "",
+          "status_valid": false,
+          "axes_cover_required": false
+        },
+        "ready_for_framework_projection": true,
+        "ready_for_framework_claim": false,
+        "projection_blockers": [],
+        "claim_blockers": [
+          "discriminator_math_not_excluding",
+          "measurement_likelihood_missing_or_incomplete"
+        ]
+      },
+      "source_provenance_summary": {
+        "source_provenance_present": true,
+        "missing_source_provenance_fields": [],
+        "source_backed_derivation": true,
+        "derivation_kind": "published_framework_projection",
+        "derivation_kind_valid": true,
+        "primary_source_urls": [
+          "https://arxiv.org/abs/2504.12855"
+        ],
+        "primary_source_urls_valid": true,
+        "packet_source_url": "https://arxiv.org/abs/2504.12855",
+        "source_url_is_listed": true,
+        "synthetic_fixture_declared_false": true,
+        "truthy_synthetic_fixture_paths": [],
+        "fixture_text_paths": [
+          "$.source_provenance.synthetic_fixture"
+        ],
+        "source_provenance_complete": true,
+        "source_provenance_blockers": []
+      },
+      "strict_projection_blockers": [],
+      "strict_claim_blockers": [
+        "discriminator_math_not_excluding",
+        "measurement_likelihood_missing_or_incomplete"
+      ]
+    },
+    "v2.136_symbolic_fixture_replay": {
+      "framework": "string_tree_eft",
+      "base_ready_for_framework_projection": true,
+      "ready_for_source_backed_framework_projection": false,
+      "ready_for_framework_claim": false,
+      "base_guard": {
+        "framework": "string_tree_eft",
+        "framework_registered": true,
+        "engine_scope": {
+          "in_scope": true,
+          "violations": [],
+          "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+        },
+        "missing_required_fields": [],
+        "source_url_valid": true,
+        "source_type_valid": true,
+        "coefficient_summary": {
+          "coefficient_values": {
+            "g_R4_c1": 0.2,
+            "g_R4_c2": 0.1,
+            "g_R4_c3": 0.05
+          },
+          "missing_or_nonnumeric": [],
+          "positivity_passed": true,
+          "positivity_residual": 0.0775
+        },
+        "derived_summary": {
+          "missing_or_nonnumeric": [],
+          "expected": {
+            "g_R4_plus": 0.3,
+            "g_R4_minus_abs": 0.111803398875
+          },
+          "provided": {
+            "g_R4_plus": 0.3,
+            "g_R4_minus_abs": 0.111803398875
+          },
+          "consistent": true
+        },
+        "normalization_summary": {
+          "present": true,
+          "status": "engine_lambda_r4_defined",
+          "status_valid": true
+        },
+        "operator_projection_summary": {
+          "present": true,
+          "status": "source_backed",
+          "status_valid": true
+        },
+        "energy_domain_summary": {
+          "present": true,
+          "status": "bounded_for_qg_eft",
+          "status_valid": true
+        },
+        "uncertainty_summary": {
+          "present": true,
+          "status": "bounded_systematic_envelope",
+          "status_valid": true,
+          "axes_cover_required": true
+        },
+        "ownership_summary": {
+          "framework_source_owned": true
+        },
+        "unitarity_summary": {
+          "present": true,
+          "status": "source_backed",
+          "status_valid": true,
+          "uses_bresciani_spin2_bound": true
+        },
+        "likelihood_summary": {
+          "present": false,
+          "status": "",
+          "status_valid": false,
+          "axes_cover_required": false
+        },
+        "ready_for_framework_projection": true,
+        "ready_for_framework_claim": false,
+        "projection_blockers": [],
+        "claim_blockers": [
+          "discriminator_math_not_excluding",
+          "measurement_likelihood_missing_or_incomplete"
+        ]
+      },
+      "source_provenance_summary": {
+        "source_provenance_present": false,
+        "missing_source_provenance_fields": [
+          "source_backed_derivation",
+          "derivation_kind",
+          "primary_source_urls",
+          "synthetic_fixture"
+        ],
+        "source_backed_derivation": false,
+        "derivation_kind": "",
+        "derivation_kind_valid": false,
+        "primary_source_urls": [],
+        "primary_source_urls_valid": false,
+        "packet_source_url": "https://arxiv.org/abs/2504.12855",
+        "source_url_is_listed": false,
+        "synthetic_fixture_declared_false": false,
+        "truthy_synthetic_fixture_paths": [
+          "$.ownership_metadata.synthetic_fixture"
+        ],
+        "fixture_text_paths": [
+          "$.source_version",
+          "$.normalization.note",
+          "$.uncertainty_or_covariance.note",
+          "$.ownership_metadata.framework_owned_derivation",
+          "$.ownership_metadata.synthetic_fixture"
+        ],
+        "source_provenance_complete": false,
+        "source_provenance_blockers": [
+          "source_provenance_missing_or_incomplete",
+          "synthetic_fixture_not_real_source"
+        ]
+      },
+      "strict_projection_blockers": [
+        "source_provenance_missing_or_incomplete",
+        "synthetic_fixture_not_real_source"
+      ],
+      "strict_claim_blockers": [
+        "discriminator_math_not_excluding",
+        "measurement_likelihood_missing_or_incomplete",
+        "source_provenance_missing_or_incomplete",
+        "synthetic_fixture_not_real_source"
+      ]
+    }
+  },
+  "source_backed_ready_projection_packets": [
+    "source_backed_control"
+  ],
+  "fixture_blocked_packets": [
+    "v2.136_symbolic_fixture_replay"
+  ],
+  "blocker_counts": {
+    "source_provenance_missing_or_incomplete": 1,
+    "synthetic_fixture_not_real_source": 1
+  },
+  "claimable_framework_exclusions_now": [],
+  "route_status": "r4_source_provenance_guard_blocks_nested_fixture",
+  "selected_next_build_action": "replace_fixture_with_source_backed_string_r4_helicity_evaluation",
+  "best_next_artifact": "A string R4 helicity/tensor evaluation that supplies c_plus, c_minus, and source_provenance, then passes the strict R4 source-provenance guard without fixture markers.",
+  "interpretation": "The algebraic R4 guard remains usable for packet shape, but future adapters must also pass an explicit source-provenance overlay. The v2.136 symbolic fixture is a useful contract control and is correctly blocked from source-backed projection readiness by nested synthetic-fixture metadata."
+}

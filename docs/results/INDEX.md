@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (247 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (248 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -296,3 +296,4 @@ Auto-generated front door to the full research program (247 notes). Regenerate w
 | v2.134 | [v2.134 - String R4 basis translation source audit: sources found, no a](2026-06-20-v2.134-string-r4-basis-translation-source-audit.md) | v2.133 selected the next implementation step: |
 | v2.135 | [v2.135 - Symbolic string R4 to Bresciani projection plan](2026-06-20-v2.135-symbolic-string-r4-to-bresciani-projection-plan.md) | v2.134 selected the next implementation step: |
 | v2.136 | [v2.136 - Symbolic helicity projection fixture: guard plumbing works](2026-06-20-v2.136-symbolic-helicity-projection-fixture.md) | v2.135 selected the next implementation step: |
+| v2.137 | [v2.137 - R4 source-provenance guard blocks nested fixtures](2026-06-20-v2.137-r4-source-provenance-guard.md) | v2.136 proved that `c_plus/c_minus` coordinates can be inverted into |
