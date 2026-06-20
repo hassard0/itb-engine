@@ -1,0 +1,151 @@
+{
+  "version": "v2.135",
+  "basis": [
+    "v2.134_string_r4_basis_translation_source_audit",
+    "v2.133_gravity_r4_projection_guard_schema",
+    "Bresciani_c_plus_c_minus_coordinate_contract"
+  ],
+  "source_audit_route_status": "string_r4_sources_found_no_bresciani_projection_adapter",
+  "useful_string_r4_sources": [
+    "gross_witten_1986",
+    "gross_sloan_1987",
+    "peeters_vanhove_westerberg_2001",
+    "russo_1997",
+    "basu_2016_heterotic_one_loop"
+  ],
+  "can_build_guard_passing_string_r4_adapter_now": false,
+  "coordinate_solver": {
+    "target_source_coordinates": {
+      "c_plus": "c_1^(2) + c_2^(2)",
+      "c_minus": "c_1^(2) - c_2^(2) + i*c_3^(2)"
+    },
+    "engine_axes": {
+      "g_R4_c1": "c_1^(2)",
+      "g_R4_c2": "c_2^(2)",
+      "g_R4_c3": "c_3^(2)"
+    },
+    "inversion_if_c_plus_and_c_minus_known": {
+      "g_R4_c1": "(c_plus + Re(c_minus)) / 2",
+      "g_R4_c2": "(c_plus - Re(c_minus)) / 2",
+      "g_R4_c3": "Im(c_minus)"
+    },
+    "derived_coordinates": {
+      "g_R4_plus": "g_R4_c1 + g_R4_c2",
+      "g_R4_minus_abs": "sqrt((g_R4_c1 - g_R4_c2)^2 + g_R4_c3^2)"
+    },
+    "positivity_guard": [
+      "g_R4_c1 >= 0",
+      "g_R4_c2 >= 0",
+      "g_R4_c3^2 <= 4*g_R4_c1*g_R4_c2"
+    ]
+  },
+  "symbolic_projection_stages": [
+    {
+      "stage": "fix_source_family",
+      "status": "ready",
+      "required_input": "Choose one string R4 source family, starting with type II tree-level R4.",
+      "output": "source_family_id",
+      "failure_mode": null
+    },
+    {
+      "stage": "fix_four_dimensional_frame",
+      "status": "needed",
+      "required_input": "Compactification or truncation statement, Einstein-frame normalization, and field-redefinition policy.",
+      "output": "four_dimensional_on_shell_Riemann4_basis",
+      "failure_mode": "frame_choice_or_field_redefinition_ambiguity"
+    },
+    {
+      "stage": "construct_string_tensor_basis",
+      "status": "needed",
+      "required_input": "t8t8R4, epsilon-epsilon R4, and any parity-odd tensor structures retained.",
+      "output": "symbolic_tensor_basis",
+      "failure_mode": "string_tensor_basis_incomplete"
+    },
+    {
+      "stage": "evaluate_independent_helicity_amplitudes",
+      "status": "needed",
+      "required_input": "Four-graviton on-shell helicity amplitudes sufficient to identify c_plus and complex c_minus.",
+      "output": "source_c_plus_and_c_minus",
+      "failure_mode": "helicity_projection_underconstrained"
+    },
+    {
+      "stage": "invert_to_bresciani_coordinates",
+      "status": "ready_once_stage_4_done",
+      "required_input": "c_plus and c_minus from the source helicity amplitudes.",
+      "output": "g_R4_c1, g_R4_c2, g_R4_c3",
+      "failure_mode": "c_plus_c_minus_not_source_backed"
+    },
+    {
+      "stage": "normalize_to_engine_axis",
+      "status": "needed",
+      "required_input": "Lambda_R4 or source-backed energy/cutoff convention.",
+      "output": "dimensionless g_R4 axes and valid energy domain",
+      "failure_mode": "engine_lambda_r4_normalization_missing"
+    },
+    {
+      "stage": "package_guard_packet",
+      "status": "needed",
+      "required_input": "Projection matrix, derived axes, positivity check, covariance, ownership metadata.",
+      "output": "v2.133 guard-compatible R4 projection packet",
+      "failure_mode": "guard_packet_missing_required_fields"
+    }
+  ],
+  "acceptance_tests": [
+    {
+      "test": "three_axis_solution",
+      "criterion": "g_R4_c1, g_R4_c2, and g_R4_c3 are all numeric symbolic expressions."
+    },
+    {
+      "test": "derived_coordinate_consistency",
+      "criterion": "g_R4_plus and g_R4_minus_abs match the v2.133 guard formulas."
+    },
+    {
+      "test": "source_ownership",
+      "criterion": "Every tensor and normalization choice has a primary source or declared derivation."
+    },
+    {
+      "test": "positivity_bound_check",
+      "criterion": "c1 >= 0, c2 >= 0, and c3^2 <= 4*c1*c2 are evaluated."
+    },
+    {
+      "test": "guard_packet_validation",
+      "criterion": "evaluate_r4_projection_packet returns ready_for_framework_projection=true."
+    },
+    {
+      "test": "nonclaiming_without_measurement",
+      "criterion": "The packet remains non-claiming unless a measurement likelihood and excluding discriminator math are supplied."
+    }
+  ],
+  "required_guard_packet_fields": [
+    "framework",
+    "axis_family",
+    "source_url",
+    "source_type",
+    "source_version",
+    "adapter_kind",
+    "basis",
+    "coefficients",
+    "derived",
+    "normalization",
+    "operator_projection_matrix",
+    "valid_energy_domain",
+    "uncertainty_or_covariance",
+    "ownership_metadata",
+    "unitarity_bound",
+    "positivity_status",
+    "discriminator_math"
+  ],
+  "current_projection_blockers": [
+    "c_plus_c_minus_not_source_backed",
+    "engine_lambda_r4_normalization_missing",
+    "frame_choice_or_field_redefinition_ambiguity",
+    "guard_packet_missing_required_fields",
+    "helicity_projection_underconstrained",
+    "string_tensor_basis_incomplete"
+  ],
+  "claimable_framework_exclusions_now": [],
+  "route_status": "symbolic_string_r4_projection_plan_ready_nonclaiming",
+  "selected_next_build_action": "implement_symbolic_helicity_projection_fixture",
+  "best_next_artifact": "A symbolic fixture that accepts source-level c_plus/c_minus inputs, inverts them into g_R4_c1/c2/c3, and sends the result through the v2.133 guard without claiming a framework exclusion.",
+  "interpretation": "The route is now reduced to a concrete derivation problem. If a source-backed string R4 helicity projection supplies c_plus and c_minus in a fixed four-dimensional frame, the Bresciani axes are algebraically recoverable. The missing work is the source-backed helicity/tensor evaluation, not the downstream guard logic."
+}

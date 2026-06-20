@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (245 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (246 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -294,3 +294,4 @@ Auto-generated front door to the full research program (245 notes). Regenerate w
 | v2.132 | [v2.132 - Gravity R4 framework projection requirements: no adapter read](2026-06-20-v2.132-gravity-r4-framework-projection-requirements.md) | v2.131 selected the next implementation step: |
 | v2.133 | [v2.133 - Gravity R4 projection guard schema: executable, no adapter re](2026-06-20-v2.133-gravity-r4-projection-guard-schema.md) | v2.132 selected the next implementation step: |
 | v2.134 | [v2.134 - String R4 basis translation source audit: sources found, no a](2026-06-20-v2.134-string-r4-basis-translation-source-audit.md) | v2.133 selected the next implementation step: |
+| v2.135 | [v2.135 - Symbolic string R4 to Bresciani projection plan](2026-06-20-v2.135-symbolic-string-r4-to-bresciani-projection-plan.md) | v2.134 selected the next implementation step: |
