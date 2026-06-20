@@ -1,0 +1,53 @@
+{
+  "version": "v2.149",
+  "basis": [
+    "v2.148_policy_scoped_string_tree_r4_projection_packet",
+    "v2.147_r4_shape_normalization_policy",
+    "non_promoting_adapter_registry_hook"
+  ],
+  "registry_entry_count": 1,
+  "internal_projection_ready_adapters": [
+    "string_tree_eft_r4_shape_policy_unit_v1"
+  ],
+  "claim_promotion_ready_adapters": [],
+  "claimable_framework_exclusions_now": [],
+  "framework_registry_mutated": false,
+  "lookup_control_found": true,
+  "evaluations": [
+    {
+      "adapter_id": "string_tree_eft_r4_shape_policy_unit_v1",
+      "framework": "string_tree_eft",
+      "axis_family": "gravity_R4_Riemann4",
+      "registration_scope": "internal_projection_algebra",
+      "adapter_exposed_for_internal_use": true,
+      "claim_promotion_allowed": false,
+      "claimable_framework_exclusion_now": false,
+      "framework_registry_mutation": false,
+      "policy_scope_ready": true,
+      "base_projection_ready": true,
+      "strict_source_projection_ready": true,
+      "guard_ready_for_framework_claim": false,
+      "exposure_blockers": [],
+      "claim_blockers": [
+        "absolute_type_II_string_alpha_prime_R4_coefficient",
+        "discriminator_math_not_excluding",
+        "engine_Lambda_R4_unit_conversion",
+        "measurement_likelihood_missing_or_incomplete",
+        "registry_claim_path_disabled",
+        "source_backed_K_Russo_to_Kallosh_shape_bridge"
+      ]
+    }
+  ],
+  "claim_blocker_counts": {
+    "absolute_type_II_string_alpha_prime_R4_coefficient": 1,
+    "discriminator_math_not_excluding": 1,
+    "engine_Lambda_R4_unit_conversion": 1,
+    "measurement_likelihood_missing_or_incomplete": 1,
+    "registry_claim_path_disabled": 1,
+    "source_backed_K_Russo_to_Kallosh_shape_bridge": 1
+  },
+  "route_status": "r4_adapter_registry_hook_ready_nonpromoting",
+  "selected_next_build_action": "wire_r4_registry_hook_into_projection_query_surface",
+  "best_next_artifact": "A query-surface or frontier-side reader that can consume the registered R4 projection packet for internal diagnostics while preserving the measurement-likelihood and absolute-normalization claim blockers.",
+  "interpretation": "The policy-scoped string_tree_eft R4 packet is now exposed through a non-promoting adapter registry hook. This makes the projection queryable by future internal tooling without mutating the live framework registry or creating a framework exclusion."
+}

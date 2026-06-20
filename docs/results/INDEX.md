@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (259 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (260 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -308,3 +308,4 @@ Auto-generated front door to the full research program (259 notes). Regenerate w
 | v2.146 | [v2.146 - K-convention bridge audit: pole match exposes kappa conventio](2026-06-20-v2.146-k-convention-bridge-audit.md) | v2.145 reduced the string R4 normalization problem to: |
 | v2.147 | [v2.147 - R4 shape normalization policy: internal unit, no claims](2026-06-20-v2.147-r4-shape-normalization-policy.md) | v2.146 showed that the Russo/Gross-Witten K-convention bridge is still not |
 | v2.148 | [v2.148 - Policy-scoped string_tree_eft R4 projection packet](2026-06-20-v2.148-policy-scoped-string-tree-r4-projection-packet.md) | v2.147 defined a non-claiming engine R4 shape unit. Can that policy be used to |
+| v2.149 | [v2.149 - R4 adapter registry hook: internal projection, no promotion](2026-06-20-v2.149-r4-adapter-registry-hook.md) | v2.148 built a policy-scoped `string_tree_eft` R4 projection packet. Can that |
