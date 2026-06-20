@@ -1,0 +1,533 @@
+{
+  "version": "v2.166",
+  "basis": [
+    "v2.54_g8_high_moment_measurement_specification",
+    "v2.79_g8_adapter_acceptance_harness",
+    "v2.98_g8_joint_packet_acceptance_gate",
+    "v2.126_gw_alpha_g8_joint_component_audit"
+  ],
+  "route": "external_spin4_or_detector_g8_measurement_packet_spec",
+  "contract": {
+    "version": "v2.166",
+    "route": "external_spin4_or_detector_g8_measurement_packet_spec",
+    "base_g8_adapter_fields": [
+      "axis",
+      "route",
+      "source_url",
+      "source_type",
+      "measurement_kind",
+      "central_value_or_bound",
+      "statistical_uncertainty",
+      "systematic_uncertainty",
+      "observable_basis",
+      "wilson_coefficient_normalization",
+      "cutoff_or_energy_domain",
+      "jacobian_or_projection_to_g_8",
+      "mixing_with_g_4_g_6",
+      "covariance_or_likelihood",
+      "systematics_budget",
+      "framework_applicability_domain",
+      "discriminator_math"
+    ],
+    "alpha_join_extension_fields": [
+      "join_target",
+      "join_axes",
+      "alpha_packet_reference",
+      "joint_covariance_export",
+      "cross_covariance_with_alpha",
+      "shared_likelihood_domain",
+      "source_reanalysis_package",
+      "claim_controls"
+    ],
+    "source_reanalysis_required_fields": [
+      "public_data_or_samples",
+      "analysis_code_or_likelihood_sampler",
+      "waveform_or_observable_model",
+      "nuisance_parameter_policy",
+      "reproducibility_instructions"
+    ],
+    "claim_control_fields": [
+      "claim_use_allowed",
+      "framework_claim_allowed",
+      "external_adversarial_review_complete"
+    ],
+    "target_joint_gate_fields": [
+      "label",
+      "route",
+      "source_url",
+      "source_type",
+      "axes",
+      "framework_pair",
+      "central_values",
+      "statistical_uncertainties",
+      "systematic_uncertainties",
+      "axis_normalizations",
+      "axis_projections",
+      "covariance_or_likelihood",
+      "systematics_budget",
+      "shared_eft_domain",
+      "secondary_axis",
+      "discriminator_math",
+      "synthetic_fixture"
+    ],
+    "required_capabilities_for_alpha_join": [
+      "external_numeric_measurement",
+      "engine_g8_normalization",
+      "joint_likelihood_or_covariance",
+      "closed_systematics_budget",
+      "framework_pair_exclusion_math"
+    ],
+    "source_url_policy": "https://arxiv.org/ or https://doi.org/",
+    "claim_rule": "A packet may become engine-join-ready only after the base g_8 adapter gate and alpha-join extension pass. Framework claims remain disabled unless external adversarial review is complete."
+  },
+  "alpha_packet_ready_for_g8_join": true,
+  "synthetic_control_evaluation": {
+    "label": "synthetic_alpha_join_ready_g8_packet",
+    "base_g8_adapter_evaluation": {
+      "label": "synthetic_alpha_join_ready_g8_packet",
+      "axis": "g_8",
+      "route": "spin_4_partial_wave_or_detector_high_moment",
+      "synthetic_fixture": true,
+      "missing_fields": [],
+      "projection_summary": {
+        "projection_present": true,
+        "g8_component": 1.0,
+        "lower_moment_l1": 0.0,
+        "pure_g8_projection": true,
+        "lower_moment_mixing_controlled": true,
+        "mixing_status": "pure_g8_projection"
+      },
+      "likelihood_summary": {
+        "likelihood_status": "public_engine_usable",
+        "engine_usable": true,
+        "contains_g8": true,
+        "kind": "gaussian_likelihood"
+      },
+      "systematics_summary": {
+        "systematics_status": "bounded",
+        "missing_components": [],
+        "components_closed": true,
+        "budget_closed": true
+      },
+      "evidence": {
+        "axis": "g_8",
+        "route": "spin_4_partial_wave_or_detector_high_moment",
+        "source_url": "https://doi.org/10.0000/synthetic-g8-adapter-fixture",
+        "source_type": "validated_measurement",
+        "measurement_kind": "external_numeric_measurement",
+        "numerical_value": 0.552,
+        "uncertainty": 0.02109502311,
+        "axis_mapping_kind": "validated_framework_adapter",
+        "systematics_status": "bounded",
+        "metadata": {
+          "observable_basis": "spin_4_partial_wave",
+          "wilson_coefficient_normalization": "engine_low_energy_g8",
+          "cutoff_or_energy_domain": "bounded_for_qg_eft",
+          "projection_summary": {
+            "projection_present": true,
+            "g8_component": 1.0,
+            "lower_moment_l1": 0.0,
+            "pure_g8_projection": true,
+            "lower_moment_mixing_controlled": true,
+            "mixing_status": "pure_g8_projection"
+          },
+          "likelihood_summary": {
+            "likelihood_status": "public_engine_usable",
+            "engine_usable": true,
+            "contains_g8": true,
+            "kind": "gaussian_likelihood"
+          },
+          "systematics_summary": {
+            "systematics_status": "bounded",
+            "missing_components": [],
+            "components_closed": true,
+            "budget_closed": true
+          },
+          "synthetic_fixture": true
+        }
+      },
+      "promotion_guard": {
+        "ready_for_promotion": true,
+        "discriminator_claimable_by_math": true,
+        "evidence_ready": true,
+        "validation": {
+          "ready_for_discriminator_claim": true,
+          "missing_fields": [],
+          "source_url_valid": true,
+          "source_type_valid": true,
+          "measurement_kind_valid": true,
+          "axis_mapping_valid": true,
+          "systematics_closed": true,
+          "numerical_value_present": true,
+          "uncertainty_valid": true,
+          "blockers": []
+        },
+        "blockers": []
+      },
+      "adapter_acceptance_ready": true,
+      "ready_for_g8_claim": false,
+      "acceptance_blockers": [],
+      "claim_blockers": [
+        "synthetic_fixture_not_real_source"
+      ],
+      "frontier_status": "g8_adapter_packet_acceptance_ready"
+    },
+    "alpha_join_extension_evaluation": {
+      "ready_for_alpha_join_extension": true,
+      "missing_join_extension_fields": [],
+      "missing_source_reanalysis_fields": [],
+      "blockers": []
+    },
+    "synthetic_control": true,
+    "ready_for_engine_g8_join_packet": true,
+    "ready_for_framework_claim": false,
+    "claimable_framework_exclusions": [],
+    "packet_blockers": [],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "synthetic_control_not_claim_evidence"
+    ],
+    "route_status": "external_g8_measurement_packet_engine_join_ready_nonclaiming"
+  },
+  "current_missing_packet_slot_evaluation": {
+    "label": "current_missing_external_g8_measurement_packet_slot",
+    "base_g8_adapter_evaluation": {
+      "label": "current_missing_external_g8_measurement_packet_slot",
+      "axis": "g_8",
+      "route": "spin_4_partial_wave_or_detector_high_moment",
+      "synthetic_fixture": false,
+      "missing_fields": [
+        "source_url",
+        "source_type",
+        "measurement_kind",
+        "central_value_or_bound",
+        "statistical_uncertainty",
+        "systematic_uncertainty",
+        "observable_basis",
+        "wilson_coefficient_normalization",
+        "cutoff_or_energy_domain",
+        "jacobian_or_projection_to_g_8",
+        "mixing_with_g_4_g_6",
+        "covariance_or_likelihood",
+        "systematics_budget",
+        "framework_applicability_domain",
+        "discriminator_math"
+      ],
+      "projection_summary": {
+        "projection_present": false,
+        "g8_component": null,
+        "lower_moment_l1": null,
+        "pure_g8_projection": false,
+        "lower_moment_mixing_controlled": false
+      },
+      "likelihood_summary": {
+        "likelihood_status": "",
+        "engine_usable": false,
+        "contains_g8": false
+      },
+      "systematics_summary": {
+        "systematics_status": "",
+        "missing_components": [
+          "angular_acceptance",
+          "calibration",
+          "background_model",
+          "eft_truncation",
+          "renormalization_or_running"
+        ],
+        "components_closed": false,
+        "budget_closed": false
+      },
+      "evidence": {
+        "axis": "g_8",
+        "route": "spin_4_partial_wave_or_detector_high_moment",
+        "source_url": "",
+        "source_type": "",
+        "measurement_kind": "",
+        "numerical_value": null,
+        "uncertainty": null,
+        "axis_mapping_kind": "adapter_incomplete",
+        "systematics_status": "",
+        "metadata": {
+          "observable_basis": null,
+          "wilson_coefficient_normalization": null,
+          "cutoff_or_energy_domain": null,
+          "projection_summary": {
+            "projection_present": false,
+            "g8_component": null,
+            "lower_moment_l1": null,
+            "pure_g8_projection": false,
+            "lower_moment_mixing_controlled": false
+          },
+          "likelihood_summary": {
+            "likelihood_status": "",
+            "engine_usable": false,
+            "contains_g8": false
+          },
+          "systematics_summary": {
+            "systematics_status": "",
+            "missing_components": [
+              "angular_acceptance",
+              "calibration",
+              "background_model",
+              "eft_truncation",
+              "renormalization_or_running"
+            ],
+            "components_closed": false,
+            "budget_closed": false
+          },
+          "synthetic_fixture": false
+        }
+      },
+      "promotion_guard": {
+        "ready_for_promotion": false,
+        "discriminator_claimable_by_math": false,
+        "evidence_ready": false,
+        "validation": {
+          "ready_for_discriminator_claim": false,
+          "missing_fields": [
+            "measurement_kind",
+            "source_type",
+            "source_url",
+            "systematics_status"
+          ],
+          "source_url_valid": false,
+          "source_type_valid": false,
+          "measurement_kind_valid": false,
+          "axis_mapping_valid": false,
+          "systematics_closed": false,
+          "numerical_value_present": false,
+          "uncertainty_valid": false,
+          "blockers": [
+            "axis_mapping_not_source_backed",
+            "missing_external_numeric_measurement",
+            "missing_required_fields"
+          ]
+        },
+        "blockers": [
+          "axis_mapping_not_source_backed",
+          "discriminator_math_not_excluding",
+          "external_measurement_evidence_not_ready",
+          "missing_external_numeric_measurement",
+          "missing_required_fields"
+        ]
+      },
+      "adapter_acceptance_ready": false,
+      "ready_for_g8_claim": false,
+      "acceptance_blockers": [
+        "axis_mapping_not_source_backed",
+        "discriminator_math_not_excluding",
+        "eft_validity_not_bounded",
+        "external_measurement_evidence_not_ready",
+        "framework_domain_not_validated",
+        "g8_not_isolated_from_lower_matter_moments",
+        "missing_external_numeric_measurement",
+        "missing_jacobian_or_projection_to_g8",
+        "missing_public_likelihood_or_covariance",
+        "missing_required_fields",
+        "observable_basis_not_adapter_supported",
+        "systematics_not_closed",
+        "wilson_coefficient_normalization_not_engine_g8"
+      ],
+      "claim_blockers": [
+        "axis_mapping_not_source_backed",
+        "discriminator_math_not_excluding",
+        "eft_validity_not_bounded",
+        "external_measurement_evidence_not_ready",
+        "framework_domain_not_validated",
+        "g8_not_isolated_from_lower_matter_moments",
+        "missing_external_numeric_measurement",
+        "missing_jacobian_or_projection_to_g8",
+        "missing_public_likelihood_or_covariance",
+        "missing_required_fields",
+        "observable_basis_not_adapter_supported",
+        "systematics_not_closed",
+        "wilson_coefficient_normalization_not_engine_g8"
+      ],
+      "frontier_status": "g8_adapter_packet_blocked"
+    },
+    "alpha_join_extension_evaluation": {
+      "ready_for_alpha_join_extension": false,
+      "missing_join_extension_fields": [
+        "alpha_packet_reference",
+        "claim_controls",
+        "cross_covariance_with_alpha",
+        "join_axes",
+        "join_target",
+        "joint_covariance_export",
+        "shared_likelihood_domain",
+        "source_reanalysis_package"
+      ],
+      "missing_source_reanalysis_fields": [
+        "analysis_code_or_likelihood_sampler",
+        "nuisance_parameter_policy",
+        "public_data_or_samples",
+        "reproducibility_instructions",
+        "waveform_or_observable_model"
+      ],
+      "blockers": [
+        "alpha_packet_reference",
+        "claim_controls",
+        "claim_controls_missing",
+        "cross_covariance_with_alpha",
+        "cross_covariance_with_alpha_missing",
+        "join_axes",
+        "join_axes_missing_alpha_parameters",
+        "join_axes_missing_g8",
+        "join_target",
+        "join_target_not_calibrated_alpha_packet",
+        "joint_covariance_export",
+        "joint_covariance_export_missing",
+        "shared_likelihood_domain",
+        "shared_likelihood_domain_not_bounded",
+        "source_reanalysis_package",
+        "source_reanalysis_package_missing"
+      ]
+    },
+    "synthetic_control": false,
+    "ready_for_engine_g8_join_packet": false,
+    "ready_for_framework_claim": false,
+    "claimable_framework_exclusions": [],
+    "packet_blockers": [
+      "alpha_join_extension_gate_failed",
+      "base_g8_adapter_gate_failed"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "external_g8_join_packet_not_ready",
+      "framework_claim_controls_disabled"
+    ],
+    "route_status": "external_g8_measurement_packet_blocked"
+  },
+  "current_source_gap_rows": [
+    {
+      "label": "bernard_eft_gravitational_wave_dictionary_2025",
+      "source_url": "https://arxiv.org/abs/2507.17143",
+      "potential_axes": [
+        "g_C",
+        "g_R2"
+      ],
+      "g8_axis_candidate": false,
+      "missing_gate_capabilities": [
+        "numeric_event_likelihood",
+        "engine_axis_jacobian",
+        "g8_axis_component",
+        "closed_systematics_budget"
+      ],
+      "fills_external_g8_packet_contract_now": false,
+      "contract_gap_count": 4
+    },
+    {
+      "label": "gwastro_o2_bbh_posterior_release",
+      "source_url": "https://github.com/gwastro/o2-bbh-pe",
+      "potential_axes": [
+        "g_C",
+        "g_R2"
+      ],
+      "g8_axis_candidate": false,
+      "missing_gate_capabilities": [
+        "modified_gravity_engine_axis_samples",
+        "g8_axis_component",
+        "joint_engine_covariance",
+        "framework_pair_exclusion_math"
+      ],
+      "fills_external_g8_packet_contract_now": false,
+      "contract_gap_count": 4
+    },
+    {
+      "label": "bresciani_partial_wave_unitarity_bounds_2025",
+      "source_url": "https://arxiv.org/abs/2504.12855",
+      "potential_axes": [
+        "g_8"
+      ],
+      "g8_axis_candidate": true,
+      "missing_gate_capabilities": [
+        "external_numeric_measurement",
+        "engine_g8_normalization",
+        "joint_likelihood_or_covariance",
+        "secondary_axis_measurement",
+        "framework_pair_exclusion_math"
+      ],
+      "fills_external_g8_packet_contract_now": false,
+      "contract_gap_count": 5
+    },
+    {
+      "label": "gwosc_gw170608_open_data_release",
+      "source_url": "https://gwosc.org/GWTC-1/",
+      "potential_axes": [
+        "g_C",
+        "g_R2",
+        "g_8"
+      ],
+      "g8_axis_candidate": true,
+      "missing_gate_capabilities": [
+        "modified_gravity_waveform_adapter",
+        "engine_axis_normalization",
+        "public_joint_likelihood",
+        "closed_systematics_budget",
+        "framework_pair_exclusion_math"
+      ],
+      "fills_external_g8_packet_contract_now": false,
+      "contract_gap_count": 5
+    },
+    {
+      "label": "liu_yunes_gw170608_higher_curvature_eft_2024",
+      "source_url": "https://arxiv.org/abs/2407.08929",
+      "potential_axes": [
+        "g_C",
+        "g_R2"
+      ],
+      "g8_axis_candidate": false,
+      "missing_gate_capabilities": [
+        "engine_axis_normalization_to_g_C_or_g_R2",
+        "joint_g8_component",
+        "public_engine_joint_covariance",
+        "shared_g8_secondary_eft_domain",
+        "framework_pair_exclusion_math"
+      ],
+      "fills_external_g8_packet_contract_now": false,
+      "contract_gap_count": 5
+    },
+    {
+      "label": "murata_short_range_inverse_square_review_2026",
+      "source_url": "https://arxiv.org/abs/2605.18212",
+      "potential_axes": [
+        "g_R2"
+      ],
+      "g8_axis_candidate": false,
+      "missing_gate_capabilities": [
+        "engine_gR2_normalization",
+        "g8_axis_component",
+        "joint_likelihood_with_g8",
+        "shared_eft_domain",
+        "framework_pair_exclusion_math"
+      ],
+      "fills_external_g8_packet_contract_now": false,
+      "contract_gap_count": 5
+    },
+    {
+      "label": "sutton_quadratic_weyl_constraints_2025",
+      "source_url": "https://arxiv.org/abs/2504.15005",
+      "potential_axes": [
+        "g_C"
+      ],
+      "g8_axis_candidate": false,
+      "missing_gate_capabilities": [
+        "public_measurement_likelihood",
+        "engine_gC_normalization",
+        "g8_axis_component",
+        "joint_covariance",
+        "framework_pair_exclusion_math"
+      ],
+      "fills_external_g8_packet_contract_now": false,
+      "contract_gap_count": 5
+    }
+  ],
+  "ready_current_external_g8_packets": [],
+  "claimable_framework_exclusions_now": [],
+  "claimable_discriminator_now": false,
+  "route_status": "external_g8_packet_spec_ready_no_real_packet",
+  "selected_next_build_action": "search_or_request_real_external_g8_packet_that_fills_v2_166_contract",
+  "best_next_artifact": "A public spin-4 partial-wave, detector-moment, or source-projected high-moment g_8 packet with covariance to the calibrated alpha likelihood and closed systematics.",
+  "interpretation": "The alpha side can already accept a G8 join. v2.166 defines the missing external G8 packet contract and proves the evaluator accepts a complete synthetic control, while current source candidates still leave the real packet slot empty."
+}
