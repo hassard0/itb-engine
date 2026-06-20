@@ -1,0 +1,159 @@
+{
+  "version": "v2.111",
+  "basis": [
+    "v2.110_source_backed_frequency_domain_strain_projection",
+    "v2.109_source_backed_cubic_inspiral_response",
+    "GWOSC_GW170608_v3_H1_L1_32s_HDF5"
+  ],
+  "source_reference": "https://arxiv.org/abs/2407.08929",
+  "cache_dir": "data\\runs\\gwosc_cache",
+  "loader_evaluation": {
+    "load_count": 2,
+    "all_loader_ready": true
+  },
+  "detector_projections": [
+    {
+      "detector": "H1",
+      "path": "data\\runs\\gwosc_cache\\H-H1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+      "psd_whitened_projection": {
+        "source_reference": "https://arxiv.org/abs/2407.08929",
+        "projection_kind": "psd_whitened_complex_source_response_with_unit_gr_reference",
+        "frequency_window": {
+          "bin_count": 366,
+          "frequency_min_hz": 20.0,
+          "frequency_max_hz": 111.25,
+          "v_f_min": 0.18049326377900485,
+          "v_f_max": 0.319804329926307,
+          "frequency_resolution_hz": 0.25,
+          "total_mass_solar": 19.0,
+          "eta_reference": 0.22
+        },
+        "event_summary": {
+          "start_index": 55296,
+          "stop_index": 71680,
+          "sample_count": 16384,
+          "raw_mean": 1.802446338451568e-21,
+          "raw_rms": 4.946099266004207e-19,
+          "tapered_rms": 2.9109989306960634e-19
+        },
+        "psd_summary": {
+          "segment_count": 11,
+          "segment_length": 16384,
+          "segment_seconds": 4.0,
+          "overlap_fraction": 0.5,
+          "psd_min": 1.9045631473232048e-51,
+          "psd_max": 6.2345402611496715e-37
+        },
+        "projections": {
+          "alpha_bar_1": {
+            "real": 0.02085819764950024,
+            "imag": -0.01047603288821106,
+            "abs": 0.02334120121717169
+          },
+          "alpha_bar_2": {
+            "real": -0.021435112070638033,
+            "imag": 0.010943529492933684,
+            "abs": 0.024067090959306273
+          }
+        },
+        "template_norms": {
+          "alpha_bar_1": 0.9999999999999999,
+          "alpha_bar_2": 1.0
+        },
+        "normalized_whitened_norm": 1.0,
+        "projection_ready": true
+      },
+      "projection_ready": true
+    },
+    {
+      "detector": "L1",
+      "path": "data\\runs\\gwosc_cache\\L-L1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+      "psd_whitened_projection": {
+        "source_reference": "https://arxiv.org/abs/2407.08929",
+        "projection_kind": "psd_whitened_complex_source_response_with_unit_gr_reference",
+        "frequency_window": {
+          "bin_count": 366,
+          "frequency_min_hz": 20.0,
+          "frequency_max_hz": 111.25,
+          "v_f_min": 0.18049326377900485,
+          "v_f_max": 0.319804329926307,
+          "frequency_resolution_hz": 0.25,
+          "total_mass_solar": 19.0,
+          "eta_reference": 0.22
+        },
+        "event_summary": {
+          "start_index": 55296,
+          "stop_index": 71680,
+          "sample_count": 16384,
+          "raw_mean": -6.586659050042447e-21,
+          "raw_rms": 4.199796541491431e-19,
+          "tapered_rms": 2.7993609811439087e-19
+        },
+        "psd_summary": {
+          "segment_count": 11,
+          "segment_length": 16384,
+          "segment_seconds": 4.0,
+          "overlap_fraction": 0.5,
+          "psd_min": 2.003354020944345e-51,
+          "psd_max": 1.0347778469342635e-37
+        },
+        "projections": {
+          "alpha_bar_1": {
+            "real": -0.011841404288716557,
+            "imag": -0.004492482465955019,
+            "abs": 0.012664961675257772
+          },
+          "alpha_bar_2": {
+            "real": 0.012433981542363456,
+            "imag": 0.004300655797670593,
+            "abs": 0.013156729733709393
+          }
+        },
+        "template_norms": {
+          "alpha_bar_1": 0.9999999999999999,
+          "alpha_bar_2": 1.0
+        },
+        "normalized_whitened_norm": 1.0,
+        "projection_ready": true
+      },
+      "projection_ready": true
+    }
+  ],
+  "network_projection": {
+    "detectors": [
+      "H1",
+      "L1"
+    ],
+    "parameters": [
+      "alpha_bar_1",
+      "alpha_bar_2"
+    ],
+    "alpha_bar_1_abs_mean": 0.01800308144621473,
+    "alpha_bar_1_abs_detector_spread": 0.010676239541913917,
+    "alpha_bar_1_real_mean": 0.004508396680391841,
+    "alpha_bar_1_imag_mean": -0.00748425767708304,
+    "alpha_bar_2_abs_mean": 0.01861191034650783,
+    "alpha_bar_2_abs_detector_spread": 0.01091036122559688,
+    "alpha_bar_2_real_mean": -0.004500565264137288,
+    "alpha_bar_2_imag_mean": 0.0076220926453021386
+  },
+  "evaluation": {
+    "psd_whitened_complex_projection_ready": true,
+    "claim_ready": false,
+    "projection_blockers": [],
+    "claim_blockers": [
+      "detector_calibration_uncertainty_missing",
+      "event_mass_eta_posterior_sampling_missing",
+      "full_imr_merger_ringdown_response_missing",
+      "g8_joint_component_missing",
+      "posterior_sampler_and_systematics_budget_missing",
+      "unit_gr_reference_not_physical_waveform"
+    ],
+    "removed_v2_110_blocker": "psd_whitening_and_calibration_likelihood_missing"
+  },
+  "claimable_discriminator_now": false,
+  "route_status": "psd_whitened_complex_source_projection_ready_nonclaiming",
+  "selected_next_build_action": "replace_unit_reference_with_physical_gr_waveform_phase",
+  "best_next_artifact": "Swap the unit complex reference for a physical GR inspiral/IMR frequency-domain waveform and export a posterior-sampled alpha_bar likelihood packet.",
+  "interpretation": "The source-backed alpha response is now projected against a PSD-whitened complex event spectrum estimated from public off-source strain. This is stricter than a spectral-shape diagnostic, but it still is not a likelihood because the complex reference is unit-normalized rather than a physical GR waveform, and event-parameter/posterior systematics are not sampled."
+}
