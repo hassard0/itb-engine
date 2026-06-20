@@ -1,0 +1,127 @@
+{
+  "version": "v2.103",
+  "basis": [
+    "v2.102_gw_cubic_source_native_adapter",
+    "arXiv_2407.08929_alpha_bar_marginal_intervals"
+  ],
+  "surrogate_scope": "development_covariance_fixture_from_paper_intervals_only",
+  "z_score_90_central": 1.6448536269514722,
+  "asymmetry_warning_ratio": 1.25,
+  "parameter_surrogates": {
+    "alpha_bar_1": {
+      "central": 0.87,
+      "lower_90": -0.16,
+      "upper_90": 2.82,
+      "sigma_minus_from_90": 0.6261955368691222,
+      "sigma_plus_from_90": 1.1855158222279496,
+      "sigma_average": 0.905855679548536,
+      "variance_average": 0.8205745121703398,
+      "asymmetry_ratio": 1.8932038834951452,
+      "asymmetric_interval": true
+    },
+    "alpha_bar_2": {
+      "central": -0.35,
+      "lower_90": -3.27,
+      "upper_90": 3.77,
+      "sigma_minus_from_90": 1.7752339491823659,
+      "sigma_plus_from_90": 2.504782147476489,
+      "sigma_average": 2.1400080483294275,
+      "variance_average": 4.579634446914725,
+      "asymmetry_ratio": 1.4109589041095891,
+      "asymmetric_interval": true
+    }
+  },
+  "surrogate_packet_label": "liu_yunes_interval_gaussian_surrogate_nonclaiming",
+  "surrogate_covariance": {
+    "parameters": [
+      "alpha_bar_1",
+      "alpha_bar_2"
+    ],
+    "matrix": [
+      [
+        0.8205745121703398,
+        0.0
+      ],
+      [
+        0.0,
+        4.579634446914725
+      ]
+    ],
+    "correlation_status": "unknown_forced_zero_nonclaiming"
+  },
+  "adapter_evaluation": {
+    "label": "liu_yunes_interval_gaussian_surrogate_nonclaiming",
+    "source_url": "https://arxiv.org/abs/2407.08929",
+    "event": "GW170608",
+    "source_model": "cubic_parity_preserving_higher_curvature_eft",
+    "synthetic_fixture": false,
+    "missing_fields": [],
+    "constraints_summary": {
+      "parameters_present": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "parameters_missing": [],
+      "all_source_parameters_numeric": true
+    },
+    "likelihood_summary": {
+      "status": "paper_interval_gaussian_surrogate_not_likelihood",
+      "contains_source_parameters": true,
+      "source_native_usable": false,
+      "kind": "diagonal_gaussian_from_marginal_90_intervals"
+    },
+    "covariance_summary": {
+      "present": true,
+      "parameters_covered": [
+        "alpha_bar_1",
+        "alpha_bar_2"
+      ],
+      "parameters_missing": [],
+      "numeric": true
+    },
+    "systematics_summary": {
+      "status": "summary_interval_surrogate_not_adapter_budget",
+      "missing_components": [
+        "waveform_systematics",
+        "detector_calibration",
+        "prior_sensitivity",
+        "eft_truncation",
+        "sampler_convergence",
+        "public_data_reproducibility"
+      ],
+      "components_closed": false,
+      "budget_closed": false
+    },
+    "engine_projection_summary": {
+      "status": "source_native_alpha_space_only",
+      "source_native_only": true,
+      "engine_projection_ready": false,
+      "target_axis": null
+    },
+    "native_adapter_ready": false,
+    "claim_ready": false,
+    "adapter_blockers": [
+      "shared_eft_domain_not_bounded",
+      "source_native_likelihood_export_missing",
+      "systematics_not_closed"
+    ],
+    "claim_blockers": [
+      "engine_projection_not_ready",
+      "g8_joint_component_missing",
+      "shared_eft_domain_not_bounded",
+      "source_native_likelihood_export_missing",
+      "systematics_not_closed"
+    ],
+    "status": "gw_cubic_source_native_packet_rejected_or_nonpromoting"
+  },
+  "asymmetric_parameters": [
+    "alpha_bar_1",
+    "alpha_bar_2"
+  ],
+  "interval_asymmetry_exceeds_gaussian_limit": true,
+  "claimable_discriminator_now": false,
+  "route_status": "alpha_interval_surrogate_built_nonclaiming_reanalysis_required",
+  "selected_next_build_action": "build_public_gw170608_reanalysis_run_manifest",
+  "best_next_artifact": "A run manifest that lists public strain inputs, O2 posterior validation inputs, waveform implementation requirements, sampler settings, and output files needed to reproduce the alpha_bar likelihood instead of using this interval-only surrogate.",
+  "interpretation": "The paper intervals can seed a diagonal Gaussian development fixture, but the intervals are asymmetric and provide no correlation. The v2.102 gate correctly rejects the surrogate as a claim source, so the next concrete step is a reproducible public GW170608 reanalysis manifest."
+}

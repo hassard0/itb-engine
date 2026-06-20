@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (213 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (214 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -262,3 +262,4 @@ Auto-generated front door to the full research program (213 notes). Regenerate w
 | v2.100 | [v2.100 - GW secondary-axis adapter blueprint: real constraints, no engine Jacobian](2026-06-20-v2.100-gw-secondary-axis-adapter-blueprint.md) | v2.100 builds the selected public-GW secondary-axis adapter interface, accepting synthetic complete packets while rejecting current GW170608 constraints until a source-to-engine Jacobian and engine likelihood export exist. |
 | v2.101 | [v2.101 - GW alpha engine Jacobian audit: preserve cubic source basis](2026-06-20-v2.101-gw-alpha-engine-jacobian-audit.md) | v2.101 rejects direct alpha_bar promotion into quadratic g_C/g_R2 axes and selects a source-native cubic GW adapter path before any g8 joint-gate use. |
 | v2.102 | [v2.102 - GW cubic source-native adapter: alpha packet gate is explicit](2026-06-20-v2.102-gw-cubic-source-native-adapter.md) | v2.102 adds a source-native alpha_bar packet gate, rejects current paper-summary and GR-posterior material, and selects reproducible GW170608 alpha likelihood production next. |
+| v2.103 | [v2.103 - GW alpha interval surrogate: covariance fixture, not evidence](2026-06-20-v2.103-gw-alpha-interval-surrogate.md) | v2.103 builds a nonclaiming alpha_bar covariance surrogate from published intervals, proves the v2.102 gate rejects it as evidence, and selects a public reanalysis run manifest next. |
