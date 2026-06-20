@@ -1,0 +1,392 @@
+{
+  "version": "v2.143",
+  "basis": [
+    "v2.142_polarization_k_factor_rederivation_route",
+    "v2.139_four_dimensional_r4_projection_derivation_workbench",
+    "Bresciani_eq_amplitude_monomial_families"
+  ],
+  "tolerance": 1e-12,
+  "bresciani_monomial_families": {
+    "K_plus": [
+      "angle12^4_square34^4",
+      "angle14^4_square23^4",
+      "angle34^4_square12^4"
+    ],
+    "K_minus": [
+      "angle12^4_angle34^4",
+      "angle13^4_angle24^4",
+      "angle14^4_angle23^4"
+    ],
+    "K_minus_conjugate": [
+      "square12^4_square34^4",
+      "square13^4_square24^4",
+      "square14^4_square23^4"
+    ]
+  },
+  "evaluations": {
+    "synthetic_control": {
+      "label": "synthetic_bresciani_k_monomial_control",
+      "families": {
+        "K_plus": {
+          "monomials": [
+            "angle12^4_square34^4",
+            "angle14^4_square23^4",
+            "angle34^4_square12^4"
+          ],
+          "missing": [],
+          "nonnumeric": [],
+          "values": [
+            {
+              "real": 0.3,
+              "imag": 0.0
+            },
+            {
+              "real": 0.3,
+              "imag": 0.0
+            },
+            {
+              "real": 0.3,
+              "imag": 0.0
+            }
+          ],
+          "common_coefficient": {
+            "real": 0.3,
+            "imag": 0.0
+          },
+          "equal_within_tolerance": true
+        },
+        "K_minus": {
+          "monomials": [
+            "angle12^4_angle34^4",
+            "angle13^4_angle24^4",
+            "angle14^4_angle23^4"
+          ],
+          "missing": [],
+          "nonnumeric": [],
+          "values": [
+            {
+              "real": 0.1,
+              "imag": 0.05
+            },
+            {
+              "real": 0.1,
+              "imag": 0.05
+            },
+            {
+              "real": 0.1,
+              "imag": 0.05
+            }
+          ],
+          "common_coefficient": {
+            "real": 0.1,
+            "imag": 0.05
+          },
+          "equal_within_tolerance": true
+        },
+        "K_minus_conjugate": {
+          "monomials": [
+            "square12^4_square34^4",
+            "square13^4_square24^4",
+            "square14^4_square23^4"
+          ],
+          "missing": [],
+          "nonnumeric": [],
+          "values": [
+            {
+              "real": 0.1,
+              "imag": -0.05
+            },
+            {
+              "real": 0.1,
+              "imag": -0.05
+            },
+            {
+              "real": 0.1,
+              "imag": -0.05
+            }
+          ],
+          "common_coefficient": {
+            "real": 0.1,
+            "imag": -0.05
+          },
+          "equal_within_tolerance": true
+        }
+      },
+      "projected_components": {
+        "K_plus": {
+          "real": 0.3,
+          "imag": 0.0
+        },
+        "K_minus": {
+          "real": 0.1,
+          "imag": 0.05
+        },
+        "K_minus_conjugate": {
+          "real": 0.1,
+          "imag": -0.05
+        },
+        "overall_R4_factor": 8.0
+      },
+      "derived_bresciani_projection": null,
+      "ready_for_k_factor_projection": false,
+      "blockers": [
+        "source_backed_derivation_missing"
+      ]
+    },
+    "source_backed_shape_control": {
+      "label": "synthetic_bresciani_k_monomial_control",
+      "families": {
+        "K_plus": {
+          "monomials": [
+            "angle12^4_square34^4",
+            "angle14^4_square23^4",
+            "angle34^4_square12^4"
+          ],
+          "missing": [],
+          "nonnumeric": [],
+          "values": [
+            {
+              "real": 0.3,
+              "imag": 0.0
+            },
+            {
+              "real": 0.3,
+              "imag": 0.0
+            },
+            {
+              "real": 0.3,
+              "imag": 0.0
+            }
+          ],
+          "common_coefficient": {
+            "real": 0.3,
+            "imag": 0.0
+          },
+          "equal_within_tolerance": true
+        },
+        "K_minus": {
+          "monomials": [
+            "angle12^4_angle34^4",
+            "angle13^4_angle24^4",
+            "angle14^4_angle23^4"
+          ],
+          "missing": [],
+          "nonnumeric": [],
+          "values": [
+            {
+              "real": 0.1,
+              "imag": 0.05
+            },
+            {
+              "real": 0.1,
+              "imag": 0.05
+            },
+            {
+              "real": 0.1,
+              "imag": 0.05
+            }
+          ],
+          "common_coefficient": {
+            "real": 0.1,
+            "imag": 0.05
+          },
+          "equal_within_tolerance": true
+        },
+        "K_minus_conjugate": {
+          "monomials": [
+            "square12^4_square34^4",
+            "square13^4_square24^4",
+            "square14^4_square23^4"
+          ],
+          "missing": [],
+          "nonnumeric": [],
+          "values": [
+            {
+              "real": 0.1,
+              "imag": -0.05
+            },
+            {
+              "real": 0.1,
+              "imag": -0.05
+            },
+            {
+              "real": 0.1,
+              "imag": -0.05
+            }
+          ],
+          "common_coefficient": {
+            "real": 0.1,
+            "imag": -0.05
+          },
+          "equal_within_tolerance": true
+        }
+      },
+      "projected_components": {
+        "K_plus": {
+          "real": 0.3,
+          "imag": 0.0
+        },
+        "K_minus": {
+          "real": 0.1,
+          "imag": 0.05
+        },
+        "K_minus_conjugate": {
+          "real": 0.1,
+          "imag": -0.05
+        },
+        "overall_R4_factor": 8.0
+      },
+      "derived_bresciani_projection": {
+        "helicity_coordinates": {
+          "c_plus": 0.3,
+          "c_minus": {
+            "real": 0.1,
+            "imag": 0.05
+          }
+        },
+        "inverted_coefficients": {
+          "g_R4_c1": 0.2,
+          "g_R4_c2": 0.1,
+          "g_R4_c3": 0.05
+        },
+        "derived_coordinates": {
+          "g_R4_plus": 0.3,
+          "g_R4_minus_abs": 0.111803398875
+        },
+        "positivity_summary": {
+          "c1_nonnegative": true,
+          "c2_nonnegative": true,
+          "c3_square_bound_residual": 0.0775,
+          "passed": true
+        }
+      },
+      "ready_for_k_factor_projection": true,
+      "blockers": []
+    },
+    "malformed_shape_control": {
+      "label": "malformed_bresciani_k_monomial_packet",
+      "families": {
+        "K_plus": {
+          "monomials": [
+            "angle12^4_square34^4",
+            "angle14^4_square23^4",
+            "angle34^4_square12^4"
+          ],
+          "missing": [],
+          "nonnumeric": [],
+          "values": [
+            {
+              "real": 0.3,
+              "imag": 0.0
+            },
+            {
+              "real": 0.3,
+              "imag": 0.0
+            },
+            {
+              "real": 0.3,
+              "imag": 0.0
+            }
+          ],
+          "common_coefficient": {
+            "real": 0.3,
+            "imag": 0.0
+          },
+          "equal_within_tolerance": true
+        },
+        "K_minus": {
+          "monomials": [
+            "angle12^4_angle34^4",
+            "angle13^4_angle24^4",
+            "angle14^4_angle23^4"
+          ],
+          "missing": [],
+          "nonnumeric": [],
+          "values": [
+            {
+              "real": 0.1,
+              "imag": 0.05
+            },
+            {
+              "real": 0.2,
+              "imag": 0.05
+            },
+            {
+              "real": 0.1,
+              "imag": 0.05
+            }
+          ],
+          "common_coefficient": {
+            "real": 0.133333333333,
+            "imag": 0.05
+          },
+          "equal_within_tolerance": false
+        },
+        "K_minus_conjugate": {
+          "monomials": [
+            "square12^4_square34^4",
+            "square13^4_square24^4",
+            "square14^4_square23^4"
+          ],
+          "missing": [],
+          "nonnumeric": [],
+          "values": [
+            {
+              "real": 0.1,
+              "imag": -0.05
+            },
+            {
+              "real": 0.1,
+              "imag": -0.05
+            },
+            {
+              "real": 0.1,
+              "imag": 0.05
+            }
+          ],
+          "common_coefficient": {
+            "real": 0.1,
+            "imag": -0.016666666667
+          },
+          "equal_within_tolerance": false
+        }
+      },
+      "projected_components": {
+        "K_plus": {
+          "real": 0.3,
+          "imag": 0.0
+        },
+        "K_minus": {
+          "real": 0.133333333333,
+          "imag": 0.05
+        },
+        "K_minus_conjugate": {
+          "real": 0.1,
+          "imag": -0.016666666667
+        },
+        "overall_R4_factor": 8.0
+      },
+      "derived_bresciani_projection": null,
+      "ready_for_k_factor_projection": false,
+      "blockers": [
+        "K_minus_coefficients_not_family_symmetric",
+        "K_minus_conjugate_coefficients_not_family_symmetric",
+        "K_minus_conjugate_inconsistent"
+      ]
+    }
+  },
+  "ready_k_factor_projection_packets": [
+    "source_backed_shape_control"
+  ],
+  "blocker_counts": {
+    "K_minus_coefficients_not_family_symmetric": 1,
+    "K_minus_conjugate_coefficients_not_family_symmetric": 1,
+    "K_minus_conjugate_inconsistent": 1,
+    "source_backed_derivation_missing": 1
+  },
+  "claimable_framework_exclusions_now": [],
+  "route_status": "bresciani_k_monomial_projector_ready_no_source_formula",
+  "selected_next_build_action": "fill_projector_with_source_backed_k_monomial_coefficients",
+  "best_next_artifact": "A source-backed monomial coefficient packet from Gross-Witten OCR/library access or an independent polarization derivation.",
+  "interpretation": "The mechanical K projection is now implemented. Given source-backed coefficients for the Bresciani monomial families, it extracts K_plus and complex K_minus, checks symmetry and conjugacy, then feeds the v2.139 Bresciani inversion. The only ready packet is a source-backed shape control, not a physics claim."
+}
