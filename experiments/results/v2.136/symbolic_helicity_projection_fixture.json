@@ -1,0 +1,284 @@
+{
+  "version": "v2.136",
+  "basis": [
+    "v2.135_symbolic_string_r4_to_bresciani_projection_plan",
+    "v2.133_gravity_r4_projection_guard_schema",
+    "Bresciani_c_plus_c_minus_coordinate_contract"
+  ],
+  "fixture_is_source_backed_string_derivation": false,
+  "source_gap": "Replace the fixture c_plus/c_minus values with a source-backed string R4 helicity/tensor evaluation in a fixed four-dimensional frame.",
+  "coordinate_solver": {
+    "target_source_coordinates": {
+      "c_plus": "c_1^(2) + c_2^(2)",
+      "c_minus": "c_1^(2) - c_2^(2) + i*c_3^(2)"
+    },
+    "engine_axes": {
+      "g_R4_c1": "c_1^(2)",
+      "g_R4_c2": "c_2^(2)",
+      "g_R4_c3": "c_3^(2)"
+    },
+    "inversion_if_c_plus_and_c_minus_known": {
+      "g_R4_c1": "(c_plus + Re(c_minus)) / 2",
+      "g_R4_c2": "(c_plus - Re(c_minus)) / 2",
+      "g_R4_c3": "Im(c_minus)"
+    },
+    "derived_coordinates": {
+      "g_R4_plus": "g_R4_c1 + g_R4_c2",
+      "g_R4_minus_abs": "sqrt((g_R4_c1 - g_R4_c2)^2 + g_R4_c3^2)"
+    },
+    "positivity_guard": [
+      "g_R4_c1 >= 0",
+      "g_R4_c2 >= 0",
+      "g_R4_c3^2 <= 4*g_R4_c1*g_R4_c2"
+    ]
+  },
+  "helicity_input": {
+    "framework": "string_tree_eft",
+    "source_family": "symbolic_fixture_not_string_derivation",
+    "source_url": "https://arxiv.org/abs/2504.12855",
+    "source_type": "computed_framework_projection",
+    "source_version": "v2.136-symbolic-fixture",
+    "basis": "Bresciani_c_i_spin2_Riemann4",
+    "c_plus": 0.3,
+    "c_minus": {
+      "real": 0.1,
+      "imag": 0.05
+    },
+    "normalization": {
+      "status": "engine_lambda_r4_defined",
+      "lambda_r4": 1.0,
+      "note": "symbolic unit-normalization fixture"
+    },
+    "operator_projection_matrix": {
+      "status": "source_backed",
+      "rows": [
+        "c_plus",
+        "Re(c_minus)",
+        "Im(c_minus)"
+      ],
+      "columns": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "matrix": [
+        [
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "note": "Bresciani coordinate inversion matrix, not a string tensor projection"
+    },
+    "valid_energy_domain": {
+      "status": "bounded_for_qg_eft",
+      "s_over_lambda_r4_max": 0.25
+    },
+    "uncertainty_or_covariance": {
+      "status": "bounded_systematic_envelope",
+      "axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "relative_envelope": 0.0,
+      "note": "zero-width symbolic fixture, not a measured covariance"
+    },
+    "ownership_metadata": {
+      "framework_owned_derivation": "symbolic fixture for string_tree_eft adapter contract",
+      "synthetic_fixture": true
+    },
+    "unitarity_bound": {
+      "status": "source_backed",
+      "uses_bresciani_spin2_bound": true
+    },
+    "discriminator_math": "projection_only"
+  },
+  "inverted_coefficients": {
+    "g_R4_c1": 0.2,
+    "g_R4_c2": 0.1,
+    "g_R4_c3": 0.05
+  },
+  "derived_coordinates": {
+    "g_R4_plus": 0.3,
+    "g_R4_minus_abs": 0.111803398875
+  },
+  "positivity_summary": {
+    "c1_nonnegative": true,
+    "c2_nonnegative": true,
+    "c3_square_bound_residual": 0.0775,
+    "passed": true
+  },
+  "projection_packet": {
+    "framework": "string_tree_eft",
+    "axis_family": "gravity_R4_Riemann4",
+    "source_url": "https://arxiv.org/abs/2504.12855",
+    "source_type": "computed_framework_projection",
+    "source_version": "v2.136-symbolic-fixture",
+    "adapter_kind": "framework_native_r4_projection",
+    "basis": "Bresciani_c_i_spin2_Riemann4",
+    "coefficients": {
+      "g_R4_c1": 0.2,
+      "g_R4_c2": 0.1,
+      "g_R4_c3": 0.05
+    },
+    "derived": {
+      "g_R4_plus": 0.3,
+      "g_R4_minus_abs": 0.111803398875
+    },
+    "normalization": {
+      "status": "engine_lambda_r4_defined",
+      "lambda_r4": 1.0,
+      "note": "symbolic unit-normalization fixture"
+    },
+    "operator_projection_matrix": {
+      "status": "source_backed",
+      "rows": [
+        "c_plus",
+        "Re(c_minus)",
+        "Im(c_minus)"
+      ],
+      "columns": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "matrix": [
+        [
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          -1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "note": "Bresciani coordinate inversion matrix, not a string tensor projection"
+    },
+    "valid_energy_domain": {
+      "status": "bounded_for_qg_eft",
+      "s_over_lambda_r4_max": 0.25
+    },
+    "uncertainty_or_covariance": {
+      "status": "bounded_systematic_envelope",
+      "axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "relative_envelope": 0.0,
+      "note": "zero-width symbolic fixture, not a measured covariance"
+    },
+    "ownership_metadata": {
+      "framework_owned_derivation": "symbolic fixture for string_tree_eft adapter contract",
+      "synthetic_fixture": true
+    },
+    "unitarity_bound": {
+      "status": "source_backed",
+      "uses_bresciani_spin2_bound": true
+    },
+    "positivity_status": "checked",
+    "discriminator_math": "projection_only"
+  },
+  "guard_result": {
+    "framework": "string_tree_eft",
+    "framework_registered": true,
+    "engine_scope": {
+      "in_scope": true,
+      "violations": [],
+      "note": "in scope: local, Lorentz-invariant \u2014 engine verdict is meaningful."
+    },
+    "missing_required_fields": [],
+    "source_url_valid": true,
+    "source_type_valid": true,
+    "coefficient_summary": {
+      "coefficient_values": {
+        "g_R4_c1": 0.2,
+        "g_R4_c2": 0.1,
+        "g_R4_c3": 0.05
+      },
+      "missing_or_nonnumeric": [],
+      "positivity_passed": true,
+      "positivity_residual": 0.0775
+    },
+    "derived_summary": {
+      "missing_or_nonnumeric": [],
+      "expected": {
+        "g_R4_plus": 0.3,
+        "g_R4_minus_abs": 0.111803398875
+      },
+      "provided": {
+        "g_R4_plus": 0.3,
+        "g_R4_minus_abs": 0.111803398875
+      },
+      "consistent": true
+    },
+    "normalization_summary": {
+      "present": true,
+      "status": "engine_lambda_r4_defined",
+      "status_valid": true
+    },
+    "operator_projection_summary": {
+      "present": true,
+      "status": "source_backed",
+      "status_valid": true
+    },
+    "energy_domain_summary": {
+      "present": true,
+      "status": "bounded_for_qg_eft",
+      "status_valid": true
+    },
+    "uncertainty_summary": {
+      "present": true,
+      "status": "bounded_systematic_envelope",
+      "status_valid": true,
+      "axes_cover_required": true
+    },
+    "ownership_summary": {
+      "framework_source_owned": true
+    },
+    "unitarity_summary": {
+      "present": true,
+      "status": "source_backed",
+      "status_valid": true,
+      "uses_bresciani_spin2_bound": true
+    },
+    "likelihood_summary": {
+      "present": false,
+      "status": "",
+      "status_valid": false,
+      "axes_cover_required": false
+    },
+    "ready_for_framework_projection": true,
+    "ready_for_framework_claim": false,
+    "projection_blockers": [],
+    "claim_blockers": [
+      "discriminator_math_not_excluding",
+      "measurement_likelihood_missing_or_incomplete"
+    ]
+  },
+  "ready_for_framework_projection_fixture": true,
+  "ready_for_framework_claim": false,
+  "claimable_framework_exclusions_now": [],
+  "route_status": "symbolic_helicity_fixture_passes_projection_guard_nonclaiming",
+  "selected_next_build_action": "replace_fixture_with_source_backed_string_r4_helicity_evaluation",
+  "best_next_artifact": "A source-backed helicity/tensor evaluation that supplies c_plus and c_minus for the chosen string R4 source family, using the same v2.136 inversion and v2.133 guard.",
+  "interpretation": "The algebraic and guard plumbing works: c_plus/c_minus can be inverted into g_R4_c1/c2/c3 and accepted as a projection packet. The result remains non-claiming because the helicity input is a fixture and no measurement likelihood or excluding discriminator math is present."
+}
