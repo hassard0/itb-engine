@@ -1,0 +1,239 @@
+{
+  "version": "v2.158",
+  "basis": [
+    "v2.157_r4_compactification_agnostic_observable_routes",
+    "v2.155_r4_symbolic_lambda_query_attachment",
+    "Bresciani_Levati_Paradisi_arXiv_2504_12855"
+  ],
+  "query_row": {
+    "query_key": "string_tree_eft:gravity_R4_Riemann4",
+    "adapter_id": "string_tree_eft_r4_shape_policy_unit_v1",
+    "framework": "string_tree_eft",
+    "axis_family": "gravity_R4_Riemann4",
+    "projection_status": "internal_projection_ready_nonclaiming",
+    "claim_status": "claim_blocked",
+    "coefficients": {
+      "g_R4_c1": 0.5,
+      "g_R4_c2": 0.5,
+      "g_R4_c3": 0.0
+    },
+    "derived": {
+      "g_R4_plus": 1.0,
+      "g_R4_minus_abs": 0.0
+    },
+    "normalization": {
+      "status": "engine_lambda_r4_defined",
+      "policy_id": "engine_r4_shape_unit_v1",
+      "policy_version": "v2.147",
+      "allowed_policy_use": "internal_bresciani_basis_projection",
+      "overall_R4_factor": 8.0,
+      "absolute_string_alpha_prime_normalization_backed": false,
+      "engine_lambda_r4_unit_conversion_source_backed": false,
+      "k_convention_bridge_source_backed": false,
+      "claim_use_allowed": false
+    },
+    "source_url": "https://arxiv.org/abs/0811.3417",
+    "source_version": "engine_r4_shape_unit_v1_policy_scoped",
+    "allowed_internal_actions": [
+      "compare_relative_r4_shapes",
+      "inspect_bresciani_coefficients",
+      "inspect_symbolic_lambda_r4_alpha_prime_policy",
+      "run_positivity_diagnostics"
+    ],
+    "blocked_claim_actions": [
+      "attach_measurement_likelihood_without_gate",
+      "make_framework_exclusion",
+      "report_absolute_type_II_string_scale",
+      "use_symbolic_alpha_prime_policy_for_framework_claim"
+    ],
+    "claim_blockers": [
+      "absolute_string_alpha_prime_normalization_missing",
+      "absolute_type_II_string_alpha_prime_R4_coefficient",
+      "amplitude_normalization_conventions_not_unified",
+      "bridge_depends_on_alpha_prime_units",
+      "bridge_depends_on_kappa_convention",
+      "claim_use_not_allowed",
+      "discriminator_math_not_excluding",
+      "engine_Lambda_R4_unit_conversion",
+      "engine_lambda_r4_numeric_unit_not_defined",
+      "engine_lambda_r4_unit_conversion_missing",
+      "four_dimensional_frame_and_field_redefinition_policy_missing",
+      "k_convention_bridge_missing",
+      "measurement_likelihood_missing_or_incomplete",
+      "numeric_alpha_prime_to_lambda_r4_value_missing",
+      "policy_scoped_normalization_not_claimable",
+      "registry_claim_path_disabled",
+      "source_backed_K_Russo_to_Kallosh_shape_bridge",
+      "source_backed_absolute_normalization_missing",
+      "string_vs_einstein_frame_not_fixed",
+      "symbolic_lambda_policy_nonclaiming"
+    ],
+    "exposure_blockers": [],
+    "ready_for_internal_query": true,
+    "ready_for_framework_claim": false,
+    "symbolic_lambda_r4_policy_status": "internal_symbolic_query_ready_nonclaiming",
+    "symbolic_lambda_r4_sidecar": {
+      "sidecar_id": "string_tree_eft_r4_symbolic_lambda_policy_sidecar_v1",
+      "policy_id": "engine_r4_lambda_symbolic_alpha_prime_policy_v1",
+      "framework": "string_tree_eft",
+      "axis_family": "gravity_R4_Riemann4",
+      "source_version": "engine_r4_shape_unit_v1_policy_scoped",
+      "numeric_shape_coefficients": {
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.0
+      },
+      "symbolic_raw_contact_factor": "2*zeta(3)*alpha_prime^3/(64*kappa^2)",
+      "symbolic_scale": {
+        "id": "xi_R4_string_tree_symbolic",
+        "expression": "Lambda_R4^8*alpha_prime^3/kappa^2",
+        "numeric_value": null,
+        "source_backed_numeric_value": false
+      },
+      "engine_axis_contract": {
+        "source_formula": "g_R4_ci = Lambda_R4^8 * c_i^(2)",
+        "lambda_power": 8,
+        "numeric_lambda_r4_value": null,
+        "lambda_r4_value_source_backed": false,
+        "normalizes_dimensionful_contact": true
+      },
+      "symbolic_absolute_factor": "2*zeta(3)*Lambda_R4^8*alpha_prime^3/(64*kappa^2)",
+      "symbolic_coefficients": {
+        "g_R4_c1": "zeta(3)*Lambda_R4^8*alpha_prime^3/(512*kappa^2)",
+        "g_R4_c2": "zeta(3)*Lambda_R4^8*alpha_prime^3/(512*kappa^2)",
+        "g_R4_c3": "0"
+      },
+      "symbolic_derived": {
+        "g_R4_plus": "zeta(3)*Lambda_R4^8*alpha_prime^3/(256*kappa^2)",
+        "g_R4_minus_abs": "0"
+      },
+      "matching_equation": "c_plus=overall_R4_factor*K_plus/8 and g_R4_c1=g_R4_c2=c_plus/2 for K_minus=0",
+      "numeric_values_exported": false,
+      "claim_use_allowed": false,
+      "measurement_likelihood_attached": false,
+      "discriminator_math": "symbolic_policy_sidecar_only",
+      "remaining_numeric_claim_blockers": [
+        "amplitude_normalization_conventions_not_unified",
+        "bridge_depends_on_alpha_prime_units",
+        "bridge_depends_on_kappa_convention",
+        "discriminator_math_not_excluding",
+        "engine_lambda_r4_numeric_unit_not_defined",
+        "four_dimensional_frame_and_field_redefinition_policy_missing",
+        "numeric_alpha_prime_to_lambda_r4_value_missing",
+        "measurement_likelihood_missing_or_incomplete",
+        "source_backed_absolute_normalization_missing",
+        "string_vs_einstein_frame_not_fixed"
+      ]
+    },
+    "symbolic_lambda_r4_sidecar_evaluation": {
+      "sidecar_id": "string_tree_eft_r4_symbolic_lambda_policy_sidecar_v1",
+      "ready_for_internal_symbolic_query": true,
+      "ready_for_numeric_wilson_export": false,
+      "ready_for_framework_claim": false,
+      "blockers": [],
+      "numeric_claim_blockers": [
+        "amplitude_normalization_conventions_not_unified",
+        "bridge_depends_on_alpha_prime_units",
+        "bridge_depends_on_kappa_convention",
+        "discriminator_math_not_excluding",
+        "engine_lambda_r4_numeric_unit_not_defined",
+        "four_dimensional_frame_and_field_redefinition_policy_missing",
+        "measurement_likelihood_missing_or_incomplete",
+        "numeric_alpha_prime_to_lambda_r4_value_missing",
+        "source_backed_absolute_normalization_missing",
+        "string_vs_einstein_frame_not_fixed"
+      ]
+    },
+    "symbolic_normalization_claim_blockers": [
+      "amplitude_normalization_conventions_not_unified",
+      "bridge_depends_on_alpha_prime_units",
+      "bridge_depends_on_kappa_convention",
+      "discriminator_math_not_excluding",
+      "engine_lambda_r4_numeric_unit_not_defined",
+      "four_dimensional_frame_and_field_redefinition_policy_missing",
+      "measurement_likelihood_missing_or_incomplete",
+      "numeric_alpha_prime_to_lambda_r4_value_missing",
+      "source_backed_absolute_normalization_missing",
+      "string_vs_einstein_frame_not_fixed"
+    ],
+    "ready_for_internal_symbolic_query": true,
+    "ready_for_numeric_wilson_export": false
+  },
+  "evaluation": {
+    "query_key": "string_tree_eft:gravity_R4_Riemann4",
+    "requirements": [
+      "registered_r4_query_row",
+      "numeric_shape_coefficients_available",
+      "derived_shape_coordinates_available",
+      "symbolic_lambda_sidecar_attached",
+      "claim_blocker_ledger_preserved"
+    ],
+    "diagnostics": {
+      "coefficients": {
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.0
+      },
+      "derived": {
+        "g_R4_plus": 1.0,
+        "g_R4_minus_abs": 0.0
+      },
+      "positivity": {
+        "residual_4_c1_c2_minus_c3_squared": 1.0,
+        "c1_nonnegative": true,
+        "c2_nonnegative": true,
+        "residual_nonnegative": true,
+        "passed": true
+      },
+      "shape_ratio_summary": {
+        "g_R4_minus_abs_over_g_R4_plus": 0.0,
+        "g_R4_plus_positive": true,
+        "same_helicity_dominant": true,
+        "source_family": "supersymmetric_same_helicity_R4_shape"
+      },
+      "unitarity_shape_family": {
+        "source_url": "https://arxiv.org/abs/2504.12855",
+        "status": "shape_diagnostic_only",
+        "uses_absolute_lambda_scale": false,
+        "measurement_likelihood_attached": false
+      }
+    },
+    "ready_for_internal_shape_unitarity_diagnostic": true,
+    "ready_for_measurement_likelihood_claim": false,
+    "ready_for_numeric_wilson_export": false,
+    "ready_for_framework_claim": false,
+    "diagnostic_blockers": [],
+    "claim_blockers": [
+      "absolute_string_alpha_prime_normalization_missing",
+      "absolute_type_II_string_alpha_prime_R4_coefficient",
+      "amplitude_normalization_conventions_not_unified",
+      "bridge_depends_on_alpha_prime_units",
+      "bridge_depends_on_kappa_convention",
+      "claim_use_not_allowed",
+      "discriminator_math_not_excluding",
+      "engine_Lambda_R4_unit_conversion",
+      "engine_lambda_r4_numeric_unit_not_defined",
+      "engine_lambda_r4_unit_conversion_missing",
+      "four_dimensional_frame_and_field_redefinition_policy_missing",
+      "k_convention_bridge_missing",
+      "measurement_likelihood_missing_or_incomplete",
+      "numeric_alpha_prime_to_lambda_r4_value_missing",
+      "policy_scoped_normalization_not_claimable",
+      "registry_claim_path_disabled",
+      "source_backed_K_Russo_to_Kallosh_shape_bridge",
+      "source_backed_absolute_normalization_missing",
+      "string_vs_einstein_frame_not_fixed",
+      "symbolic_lambda_policy_nonclaiming"
+    ],
+    "interpretation": "The registered string_tree_eft R4 row passes the Bresciani shape-level positivity diagnostic in the supersymmetric same-helicity family. This is a theory diagnostic, not a measurement likelihood or framework exclusion."
+  },
+  "ready_for_internal_shape_unitarity_diagnostic": true,
+  "ready_for_measurement_likelihood_claim": false,
+  "ready_for_numeric_wilson_export": false,
+  "ready_for_framework_claim": false,
+  "claimable_framework_exclusions_now": [],
+  "route_status": "bresciani_r4_shape_unitarity_diagnostic_ready_nonclaiming",
+  "selected_next_build_action": "search_public_r4_shape_likelihood_packet",
+  "best_next_artifact": "A public likelihood/covariance packet over R4-sensitive axes, or a proof that available GW/GREFT observables cannot yet be mapped to the Bresciani R4 query surface.",
+  "interpretation": "The engine now has an executable compactification-agnostic R4 shape diagnostic. It adds useful theory information but still does not claim a framework exclusion because no public likelihood or numeric Lambda_R4 scale is attached."
+}
