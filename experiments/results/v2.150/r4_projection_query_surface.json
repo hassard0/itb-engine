@@ -1,0 +1,146 @@
+{
+  "version": "v2.150",
+  "basis": [
+    "v2.149_r4_adapter_registry_hook",
+    "v2.148_policy_scoped_string_tree_r4_projection_packet",
+    "projection_query_surface"
+  ],
+  "query_row_count": 1,
+  "ready_internal_query_keys": [
+    "string_tree_eft:gravity_R4_Riemann4"
+  ],
+  "claim_ready_query_keys": [],
+  "claimable_framework_exclusions_now": [],
+  "rows": [
+    {
+      "query_key": "string_tree_eft:gravity_R4_Riemann4",
+      "adapter_id": "string_tree_eft_r4_shape_policy_unit_v1",
+      "framework": "string_tree_eft",
+      "axis_family": "gravity_R4_Riemann4",
+      "projection_status": "internal_projection_ready_nonclaiming",
+      "claim_status": "claim_blocked",
+      "coefficients": {
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.0
+      },
+      "derived": {
+        "g_R4_plus": 1.0,
+        "g_R4_minus_abs": 0.0
+      },
+      "normalization": {
+        "status": "engine_lambda_r4_defined",
+        "policy_id": "engine_r4_shape_unit_v1",
+        "policy_version": "v2.147",
+        "allowed_policy_use": "internal_bresciani_basis_projection",
+        "overall_R4_factor": 8.0,
+        "absolute_string_alpha_prime_normalization_backed": false,
+        "engine_lambda_r4_unit_conversion_source_backed": false,
+        "k_convention_bridge_source_backed": false,
+        "claim_use_allowed": false
+      },
+      "source_url": "https://arxiv.org/abs/0811.3417",
+      "source_version": "engine_r4_shape_unit_v1_policy_scoped",
+      "allowed_internal_actions": [
+        "inspect_bresciani_coefficients",
+        "run_positivity_diagnostics",
+        "compare_relative_r4_shapes"
+      ],
+      "blocked_claim_actions": [
+        "make_framework_exclusion",
+        "report_absolute_type_II_string_scale",
+        "attach_measurement_likelihood_without_gate"
+      ],
+      "claim_blockers": [
+        "absolute_type_II_string_alpha_prime_R4_coefficient",
+        "discriminator_math_not_excluding",
+        "engine_Lambda_R4_unit_conversion",
+        "measurement_likelihood_missing_or_incomplete",
+        "registry_claim_path_disabled",
+        "source_backed_K_Russo_to_Kallosh_shape_bridge"
+      ],
+      "exposure_blockers": [],
+      "ready_for_internal_query": true,
+      "ready_for_framework_claim": false
+    }
+  ],
+  "lookup_examples": {
+    "registered_string_tree_eft": {
+      "query_key": "string_tree_eft:gravity_R4_Riemann4",
+      "adapter_id": "string_tree_eft_r4_shape_policy_unit_v1",
+      "framework": "string_tree_eft",
+      "axis_family": "gravity_R4_Riemann4",
+      "projection_status": "internal_projection_ready_nonclaiming",
+      "claim_status": "claim_blocked",
+      "coefficients": {
+        "g_R4_c1": 0.5,
+        "g_R4_c2": 0.5,
+        "g_R4_c3": 0.0
+      },
+      "derived": {
+        "g_R4_plus": 1.0,
+        "g_R4_minus_abs": 0.0
+      },
+      "normalization": {
+        "status": "engine_lambda_r4_defined",
+        "policy_id": "engine_r4_shape_unit_v1",
+        "policy_version": "v2.147",
+        "allowed_policy_use": "internal_bresciani_basis_projection",
+        "overall_R4_factor": 8.0,
+        "absolute_string_alpha_prime_normalization_backed": false,
+        "engine_lambda_r4_unit_conversion_source_backed": false,
+        "k_convention_bridge_source_backed": false,
+        "claim_use_allowed": false
+      },
+      "source_url": "https://arxiv.org/abs/0811.3417",
+      "source_version": "engine_r4_shape_unit_v1_policy_scoped",
+      "allowed_internal_actions": [
+        "inspect_bresciani_coefficients",
+        "run_positivity_diagnostics",
+        "compare_relative_r4_shapes"
+      ],
+      "blocked_claim_actions": [
+        "make_framework_exclusion",
+        "report_absolute_type_II_string_scale",
+        "attach_measurement_likelihood_without_gate"
+      ],
+      "claim_blockers": [
+        "absolute_type_II_string_alpha_prime_R4_coefficient",
+        "discriminator_math_not_excluding",
+        "engine_Lambda_R4_unit_conversion",
+        "measurement_likelihood_missing_or_incomplete",
+        "registry_claim_path_disabled",
+        "source_backed_K_Russo_to_Kallosh_shape_bridge"
+      ],
+      "exposure_blockers": [],
+      "ready_for_internal_query": true,
+      "ready_for_framework_claim": false
+    },
+    "unregistered_pure_gr": {
+      "query_key": "pure_gr:gravity_R4_Riemann4",
+      "projection_status": "adapter_not_registered",
+      "claim_status": "claim_blocked",
+      "ready_for_internal_query": false,
+      "ready_for_framework_claim": false,
+      "not_found_blocker": "r4_adapter_not_registered",
+      "allowed_internal_actions": [],
+      "blocked_claim_actions": [
+        "make_framework_exclusion",
+        "report_absolute_type_II_string_scale",
+        "attach_measurement_likelihood_without_gate"
+      ]
+    }
+  },
+  "claim_blocker_counts": {
+    "absolute_type_II_string_alpha_prime_R4_coefficient": 1,
+    "discriminator_math_not_excluding": 1,
+    "engine_Lambda_R4_unit_conversion": 1,
+    "measurement_likelihood_missing_or_incomplete": 1,
+    "registry_claim_path_disabled": 1,
+    "source_backed_K_Russo_to_Kallosh_shape_bridge": 1
+  },
+  "route_status": "r4_projection_query_surface_ready_nonclaiming",
+  "selected_next_build_action": "attack_r4_claim_blockers_absolute_normalization_or_likelihood",
+  "best_next_artifact": "A source-backed absolute R4 normalization bridge or public R4-axis measurement likelihood. The query surface is ready; the remaining work is claim evidence, not adapter plumbing.",
+  "interpretation": "The R4 projection can now be queried as internal diagnostics: coefficients, derived Bresciani coordinates, source URL, normalization policy, and claim blockers are all exposed in a machine-readable row. It remains non-claiming by construction."
+}
