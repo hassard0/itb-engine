@@ -1,0 +1,214 @@
+{
+  "version": "v2.159",
+  "basis": [
+    "v2.158_bresciani_r4_shape_unitarity_diagnostic",
+    "public_r4_shape_likelihood_search",
+    "GWOSC_and_GREFT_candidate_sources"
+  ],
+  "acceptance_contract": {
+    "target_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3",
+      "g_R4_plus",
+      "g_R4_minus_abs"
+    ],
+    "required_fields": [
+      "public_likelihood_or_covariance",
+      "maps_to_bresciani_r4_axes",
+      "axis_normalization_declared",
+      "reproducible_data_or_code",
+      "systematics_or_domain_declared",
+      "excluding_discriminator_math"
+    ],
+    "claim_rule": "A candidate may become claim evidence only if all required fields are true and the R4 query row remains source-provenance clean."
+  },
+  "candidate_likelihood_sources": [
+    {
+      "candidate_id": "gwtc_public_catalog_data",
+      "url": "https://gwosc.org/eventapi/html/GWTC/",
+      "evidence_family": "public_gravitational_wave_catalog",
+      "public_likelihood_or_covariance": false,
+      "maps_to_bresciani_r4_axes": false,
+      "axis_normalization_declared": false,
+      "reproducible_data_or_code": true,
+      "systematics_or_domain_declared": true,
+      "excluding_discriminator_math": false,
+      "interpretation": "GWOSC provides public event data/catalogs, but not a ready R4-shape likelihood over Bresciani axes."
+    },
+    {
+      "candidate_id": "higher_curvature_gw_constraints_prd_111_084049",
+      "url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.111.084049",
+      "evidence_family": "higher_curvature_gw_bounds",
+      "public_likelihood_or_covariance": false,
+      "maps_to_bresciani_r4_axes": false,
+      "axis_normalization_declared": false,
+      "reproducible_data_or_code": false,
+      "systematics_or_domain_declared": true,
+      "excluding_discriminator_math": false,
+      "interpretation": "Relevant higher-curvature GW constraints, but not a public machine-usable likelihood mapped to the engine R4 axes."
+    },
+    {
+      "candidate_id": "greft_qnm_causality_observability",
+      "url": "https://arxiv.org/abs/2401.05524",
+      "evidence_family": "GREFT_QNM_observability_and_causality",
+      "public_likelihood_or_covariance": false,
+      "maps_to_bresciani_r4_axes": false,
+      "axis_normalization_declared": false,
+      "reproducible_data_or_code": false,
+      "systematics_or_domain_declared": true,
+      "excluding_discriminator_math": false,
+      "interpretation": "Useful for prospective observability and causality, but not a released R4 shape likelihood packet."
+    },
+    {
+      "candidate_id": "generic_eft_beyond_gr_gw_dictionary",
+      "url": "https://link.aps.org/doi/10.1103/bl9q-1q3r",
+      "evidence_family": "EFT_waveform_scaling_dictionary",
+      "public_likelihood_or_covariance": false,
+      "maps_to_bresciani_r4_axes": false,
+      "axis_normalization_declared": false,
+      "reproducible_data_or_code": false,
+      "systematics_or_domain_declared": true,
+      "excluding_discriminator_math": false,
+      "interpretation": "Provides a waveform-scaling dictionary, but not a public likelihood or direct Bresciani R4-axis projection."
+    },
+    {
+      "candidate_id": "improved_higher_order_curvature_gw_constraints",
+      "url": "https://pure.mpg.de/rest/items/item_3318951_3/component/file_3318952/content",
+      "evidence_family": "higher_order_curvature_gw_constraints",
+      "public_likelihood_or_covariance": false,
+      "maps_to_bresciani_r4_axes": false,
+      "axis_normalization_declared": false,
+      "reproducible_data_or_code": false,
+      "systematics_or_domain_declared": true,
+      "excluding_discriminator_math": false,
+      "interpretation": "Relevant constraints on higher-curvature models, but not a public covariance packet over the engine R4 shape coordinates."
+    }
+  ],
+  "evaluations": {
+    "gwtc_public_catalog_data": {
+      "candidate_id": "gwtc_public_catalog_data",
+      "evidence_family": "public_gravitational_wave_catalog",
+      "criteria": {
+        "public_likelihood_or_covariance": false,
+        "maps_to_bresciani_r4_axes": false,
+        "axis_normalization_declared": false,
+        "reproducible_data_or_code": true,
+        "systematics_or_domain_declared": true,
+        "excluding_discriminator_math": false
+      },
+      "failed_criteria": [
+        "public_likelihood_or_covariance",
+        "maps_to_bresciani_r4_axes",
+        "axis_normalization_declared",
+        "excluding_discriminator_math"
+      ],
+      "ready_for_likelihood_packet": false,
+      "ready_for_framework_claim": false,
+      "interpretation": "GWOSC provides public event data/catalogs, but not a ready R4-shape likelihood over Bresciani axes."
+    },
+    "higher_curvature_gw_constraints_prd_111_084049": {
+      "candidate_id": "higher_curvature_gw_constraints_prd_111_084049",
+      "evidence_family": "higher_curvature_gw_bounds",
+      "criteria": {
+        "public_likelihood_or_covariance": false,
+        "maps_to_bresciani_r4_axes": false,
+        "axis_normalization_declared": false,
+        "reproducible_data_or_code": false,
+        "systematics_or_domain_declared": true,
+        "excluding_discriminator_math": false
+      },
+      "failed_criteria": [
+        "public_likelihood_or_covariance",
+        "maps_to_bresciani_r4_axes",
+        "axis_normalization_declared",
+        "reproducible_data_or_code",
+        "excluding_discriminator_math"
+      ],
+      "ready_for_likelihood_packet": false,
+      "ready_for_framework_claim": false,
+      "interpretation": "Relevant higher-curvature GW constraints, but not a public machine-usable likelihood mapped to the engine R4 axes."
+    },
+    "greft_qnm_causality_observability": {
+      "candidate_id": "greft_qnm_causality_observability",
+      "evidence_family": "GREFT_QNM_observability_and_causality",
+      "criteria": {
+        "public_likelihood_or_covariance": false,
+        "maps_to_bresciani_r4_axes": false,
+        "axis_normalization_declared": false,
+        "reproducible_data_or_code": false,
+        "systematics_or_domain_declared": true,
+        "excluding_discriminator_math": false
+      },
+      "failed_criteria": [
+        "public_likelihood_or_covariance",
+        "maps_to_bresciani_r4_axes",
+        "axis_normalization_declared",
+        "reproducible_data_or_code",
+        "excluding_discriminator_math"
+      ],
+      "ready_for_likelihood_packet": false,
+      "ready_for_framework_claim": false,
+      "interpretation": "Useful for prospective observability and causality, but not a released R4 shape likelihood packet."
+    },
+    "generic_eft_beyond_gr_gw_dictionary": {
+      "candidate_id": "generic_eft_beyond_gr_gw_dictionary",
+      "evidence_family": "EFT_waveform_scaling_dictionary",
+      "criteria": {
+        "public_likelihood_or_covariance": false,
+        "maps_to_bresciani_r4_axes": false,
+        "axis_normalization_declared": false,
+        "reproducible_data_or_code": false,
+        "systematics_or_domain_declared": true,
+        "excluding_discriminator_math": false
+      },
+      "failed_criteria": [
+        "public_likelihood_or_covariance",
+        "maps_to_bresciani_r4_axes",
+        "axis_normalization_declared",
+        "reproducible_data_or_code",
+        "excluding_discriminator_math"
+      ],
+      "ready_for_likelihood_packet": false,
+      "ready_for_framework_claim": false,
+      "interpretation": "Provides a waveform-scaling dictionary, but not a public likelihood or direct Bresciani R4-axis projection."
+    },
+    "improved_higher_order_curvature_gw_constraints": {
+      "candidate_id": "improved_higher_order_curvature_gw_constraints",
+      "evidence_family": "higher_order_curvature_gw_constraints",
+      "criteria": {
+        "public_likelihood_or_covariance": false,
+        "maps_to_bresciani_r4_axes": false,
+        "axis_normalization_declared": false,
+        "reproducible_data_or_code": false,
+        "systematics_or_domain_declared": true,
+        "excluding_discriminator_math": false
+      },
+      "failed_criteria": [
+        "public_likelihood_or_covariance",
+        "maps_to_bresciani_r4_axes",
+        "axis_normalization_declared",
+        "reproducible_data_or_code",
+        "excluding_discriminator_math"
+      ],
+      "ready_for_likelihood_packet": false,
+      "ready_for_framework_claim": false,
+      "interpretation": "Relevant constraints on higher-curvature models, but not a public covariance packet over the engine R4 shape coordinates."
+    }
+  },
+  "ready_likelihood_packets": [],
+  "claimable_framework_exclusions_now": [],
+  "ready_for_measurement_likelihood_claim": false,
+  "ready_for_framework_claim": false,
+  "failure_counts": {
+    "axis_normalization_declared": 5,
+    "excluding_discriminator_math": 5,
+    "maps_to_bresciani_r4_axes": 5,
+    "public_likelihood_or_covariance": 5,
+    "reproducible_data_or_code": 4
+  },
+  "route_status": "r4_public_shape_likelihood_search_no_ready_packet",
+  "selected_next_build_action": "build_r4_shape_likelihood_packet_requirements_manifest",
+  "best_next_artifact": "A reusable R4 likelihood-packet manifest/schema that can be used to ingest future GW/GREFT evidence without weakening the existing claim guards.",
+  "interpretation": "Public GW and GREFT sources are relevant, but none currently meets the engine's packet contract for a Bresciani R4 shape likelihood."
+}
