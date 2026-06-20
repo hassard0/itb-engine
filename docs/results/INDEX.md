@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (284 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (285 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -333,3 +333,4 @@ Auto-generated front door to the full research program (284 notes). Regenerate w
 | v2.171 | [v2.171 - Post-R4-scale-contract frontier](2026-06-20-v2.171-post-r4-scale-contract-frontier.md) | After v2.170 made the R4 numeric `Lambda_R4` scale policy an executable |
 | v2.172 | [v2.172 - Weyl/G8 dual-likelihood contract](2026-06-20-v2.172-weyl-g8-dual-likelihood-contract.md) | Can the `weyl_g8_joint_frontier` route be converted from a generic external |
 | v2.173 | [v2.173 - Post-Weyl/G8-contract frontier](2026-06-20-v2.173-post-weyl-g8-contract-frontier.md) | After v2.172 made the Weyl/G8 dual likelihood an executable packet contract, |
+| v2.174 | [v2.174 - R4 live-source acquisition queue](2026-06-20-v2.174-r4-live-source-acquisition-queue.md) | After v2.173 made every active frontier route diagnostic-ready, can the top |

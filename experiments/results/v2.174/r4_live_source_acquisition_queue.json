@@ -1,0 +1,509 @@
+{
+  "version": "v2.174",
+  "scan_date": "2026-06-20",
+  "basis": [
+    "v2.173_post_weyl_g8_contract_frontier",
+    "v2.162_r4_shape_likelihood_ingestion_adapter",
+    "v2.160_r4_shape_likelihood_packet_manifest",
+    "live_primary_or_public_source_sweep_2026_06_20"
+  ],
+  "route": "future_public_r4_shape_likelihood_ingestion",
+  "target_axes": [
+    "g_R4_c1",
+    "g_R4_c2",
+    "g_R4_c3",
+    "g_R4_plus",
+    "g_R4_minus_abs"
+  ],
+  "adapter_route_status": "r4_shape_likelihood_ingestion_adapter_ready_no_public_packet",
+  "ready_public_r4_likelihood_packets_now": [],
+  "required_packet_fields": [
+    "packet_id",
+    "source_url",
+    "source_type",
+    "target_axes",
+    "likelihood",
+    "axis_mapping",
+    "normalization",
+    "domain",
+    "systematics",
+    "provenance",
+    "discriminator_math",
+    "claim_controls"
+  ],
+  "acceptance_fields": [
+    "public_likelihood_or_covariance",
+    "maps_to_bresciani_r4_axes",
+    "axis_normalization_declared",
+    "reproducible_data_or_code",
+    "systematics_or_domain_declared",
+    "excluding_discriminator_math"
+  ],
+  "candidate_count": 6,
+  "manifest_ready_candidates": [],
+  "ingestion_ready_candidates": [],
+  "claim_ready_candidates": [],
+  "claimable_discriminator_now": false,
+  "source_urls_checked": [
+    "https://arxiv.org/abs/2504.12855",
+    "https://gwosc.org/eventapi/html/GWTC/",
+    "https://arxiv.org/abs/2407.08929",
+    "https://arxiv.org/abs/2604.04259",
+    "https://arxiv.org/abs/2112.05054",
+    "https://arxiv.org/abs/2407.07043"
+  ],
+  "candidates_ranked": [
+    {
+      "label": "bresciani_partial_wave_unitarity_bounds_2025",
+      "source_url": "https://arxiv.org/abs/2504.12855",
+      "source_type": "primary_theory_formalism",
+      "candidate_role": "r4_shape_axis_formalism",
+      "potential_axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3",
+        "g_R4_plus",
+        "g_R4_minus_abs"
+      ],
+      "supplies": [
+        "spin2_partial_wave_formalism",
+        "amplitude_operator_basis_seed",
+        "bresciani_r4_axis_context"
+      ],
+      "missing_packet_capabilities": [
+        "public_likelihood_or_covariance",
+        "central_values_over_engine_r4_axes",
+        "covariance_over_g_R4_c1_c2_c3",
+        "experimental_or_reanalysis_data",
+        "framework_exclusion_math"
+      ],
+      "adapter_work_items": [
+        "derive_machine_axis_dictionary_from_bresciani_basis",
+        "pair_with_public_reanalysis_or_likelihood_source",
+        "export_v2_160_shape_likelihood_packet"
+      ],
+      "citation": "Bresciani, Levati, and Paradisi, Amplitudes and partial wave unitarity bounds",
+      "readiness_score": 10,
+      "acceptance_criteria_status": {
+        "public_likelihood_or_covariance": false,
+        "maps_to_bresciani_r4_axes": true,
+        "axis_normalization_declared": false,
+        "reproducible_data_or_code": false,
+        "systematics_or_domain_declared": false,
+        "excluding_discriminator_math": false
+      },
+      "required_manifest_fields": [
+        "packet_id",
+        "source_url",
+        "source_type",
+        "target_axes",
+        "likelihood",
+        "axis_mapping",
+        "normalization",
+        "domain",
+        "systematics",
+        "provenance",
+        "discriminator_math",
+        "claim_controls"
+      ],
+      "claim_ready_now": false,
+      "manifest_ready_now": false,
+      "ingestion_ready_now": false,
+      "missing_packet_capability_count": 5,
+      "adapter_work_item_count": 3,
+      "next_build_action": "derive_machine_axis_dictionary_from_bresciani_basis"
+    },
+    {
+      "label": "gwosc_public_catalog_and_event_data",
+      "source_url": "https://gwosc.org/eventapi/html/GWTC/",
+      "source_type": "public_data_product",
+      "candidate_role": "public_reanalysis_input",
+      "potential_axes": [],
+      "supplies": [
+        "public_event_catalog",
+        "public_strain_data_entry_points",
+        "reanalysis_input"
+      ],
+      "missing_packet_capabilities": [
+        "modified_gravity_r4_waveform_adapter",
+        "maps_to_bresciani_r4_axes",
+        "public_r4_shape_likelihood",
+        "closed_systematics_budget",
+        "framework_exclusion_math"
+      ],
+      "adapter_work_items": [
+        "build_public_gw_reanalysis_fixture_for_r4_waveform_model",
+        "attach_r4_shape_axis_projection",
+        "export_covariance_over_engine_r4_axes"
+      ],
+      "citation": "Gravitational Wave Open Science Center public event data",
+      "readiness_score": 10,
+      "acceptance_criteria_status": {
+        "public_likelihood_or_covariance": false,
+        "maps_to_bresciani_r4_axes": false,
+        "axis_normalization_declared": false,
+        "reproducible_data_or_code": true,
+        "systematics_or_domain_declared": true,
+        "excluding_discriminator_math": false
+      },
+      "required_manifest_fields": [
+        "packet_id",
+        "source_url",
+        "source_type",
+        "target_axes",
+        "likelihood",
+        "axis_mapping",
+        "normalization",
+        "domain",
+        "systematics",
+        "provenance",
+        "discriminator_math",
+        "claim_controls"
+      ],
+      "claim_ready_now": false,
+      "manifest_ready_now": false,
+      "ingestion_ready_now": false,
+      "missing_packet_capability_count": 5,
+      "adapter_work_item_count": 3,
+      "next_build_action": "build_public_gw_reanalysis_fixture_for_r4_waveform_model"
+    },
+    {
+      "label": "liu_yunes_higher_curvature_gw_constraints_2025",
+      "source_url": "https://arxiv.org/abs/2407.08929",
+      "source_type": "primary_measurement_analysis",
+      "candidate_role": "higher_curvature_gw_constraint_seed",
+      "potential_axes": [
+        "higher_curvature_eft_alpha"
+      ],
+      "supplies": [
+        "bayesian_higher_curvature_gw_analysis",
+        "strong_field_constraint_context",
+        "event_reanalysis_design_target"
+      ],
+      "missing_packet_capabilities": [
+        "r4_shape_axis_decomposition",
+        "maps_to_bresciani_r4_axes",
+        "public_covariance_over_engine_r4_axes",
+        "target_axes_complete",
+        "framework_exclusion_math"
+      ],
+      "adapter_work_items": [
+        "map_higher_curvature_alpha_to_engine_r4_shape_axes",
+        "check_public_samples_or_reproduce_likelihood",
+        "test_v2_160_manifest_export"
+      ],
+      "citation": "Liu and Yunes, Robust and improved constraints on higher-curvature gravitational effective-field-theory",
+      "readiness_score": 8,
+      "acceptance_criteria_status": {
+        "public_likelihood_or_covariance": false,
+        "maps_to_bresciani_r4_axes": false,
+        "axis_normalization_declared": false,
+        "reproducible_data_or_code": false,
+        "systematics_or_domain_declared": false,
+        "excluding_discriminator_math": false
+      },
+      "required_manifest_fields": [
+        "packet_id",
+        "source_url",
+        "source_type",
+        "target_axes",
+        "likelihood",
+        "axis_mapping",
+        "normalization",
+        "domain",
+        "systematics",
+        "provenance",
+        "discriminator_math",
+        "claim_controls"
+      ],
+      "claim_ready_now": false,
+      "manifest_ready_now": false,
+      "ingestion_ready_now": false,
+      "missing_packet_capability_count": 5,
+      "adapter_work_item_count": 3,
+      "next_build_action": "map_higher_curvature_alpha_to_engine_r4_shape_axes"
+    },
+    {
+      "label": "matching_tidal_deformability_wilson_coefficients_2026",
+      "source_url": "https://arxiv.org/abs/2604.04259",
+      "source_type": "primary_theory_mapping",
+      "candidate_role": "wilson_matching_method_seed",
+      "potential_axes": [
+        "tidal_wilson_coefficients",
+        "cubic_curvature"
+      ],
+      "supplies": [
+        "wilson_coefficient_matching_method",
+        "tidal_love_number_mapping_controls",
+        "higher_curvature_matching_caveats"
+      ],
+      "missing_packet_capabilities": [
+        "quartic_r4_shape_axes",
+        "public_likelihood_or_covariance",
+        "maps_to_bresciani_r4_axes",
+        "central_values_over_engine_r4_axes",
+        "framework_exclusion_math"
+      ],
+      "adapter_work_items": [
+        "audit_whether_matching_method_extends_to_quartic_r4",
+        "derive_required_extra_terms_for_r4_shape_packet",
+        "pair_with_public_gw_likelihood_only_after_axis_map_exists"
+      ],
+      "citation": "Matching tidal deformability coefficients to black-hole Wilson coefficients in higher-curvature EFT",
+      "readiness_score": 8,
+      "acceptance_criteria_status": {
+        "public_likelihood_or_covariance": false,
+        "maps_to_bresciani_r4_axes": false,
+        "axis_normalization_declared": false,
+        "reproducible_data_or_code": false,
+        "systematics_or_domain_declared": false,
+        "excluding_discriminator_math": false
+      },
+      "required_manifest_fields": [
+        "packet_id",
+        "source_url",
+        "source_type",
+        "target_axes",
+        "likelihood",
+        "axis_mapping",
+        "normalization",
+        "domain",
+        "systematics",
+        "provenance",
+        "discriminator_math",
+        "claim_controls"
+      ],
+      "claim_ready_now": false,
+      "manifest_ready_now": false,
+      "ingestion_ready_now": false,
+      "missing_packet_capability_count": 5,
+      "adapter_work_item_count": 3,
+      "next_build_action": "audit_whether_matching_method_extends_to_quartic_r4"
+    },
+    {
+      "label": "causality_constraints_gravitational_efts_2021",
+      "source_url": "https://arxiv.org/abs/2112.05054",
+      "source_type": "primary_theory_constraint",
+      "candidate_role": "dimension8_causality_bound_seed",
+      "potential_axes": [
+        "dimension8_gravity_operators"
+      ],
+      "supplies": [
+        "causality_constraints_on_gravity_eft",
+        "black_hole_background_consistency_context"
+      ],
+      "missing_packet_capabilities": [
+        "external_numeric_measurement",
+        "public_likelihood_or_covariance",
+        "maps_to_bresciani_r4_axes",
+        "r4_shape_covariance",
+        "framework_exclusion_math"
+      ],
+      "adapter_work_items": [
+        "compare_dimension8_operator_basis_to_engine_r4_axes",
+        "mark_as_theory_constraint_not_likelihood_packet",
+        "use_only_as_claim_guard_context"
+      ],
+      "citation": "Causality Constraints on Gravitational Effective Field Theories",
+      "readiness_score": 7,
+      "acceptance_criteria_status": {
+        "public_likelihood_or_covariance": false,
+        "maps_to_bresciani_r4_axes": false,
+        "axis_normalization_declared": false,
+        "reproducible_data_or_code": false,
+        "systematics_or_domain_declared": false,
+        "excluding_discriminator_math": false
+      },
+      "required_manifest_fields": [
+        "packet_id",
+        "source_url",
+        "source_type",
+        "target_axes",
+        "likelihood",
+        "axis_mapping",
+        "normalization",
+        "domain",
+        "systematics",
+        "provenance",
+        "discriminator_math",
+        "claim_controls"
+      ],
+      "claim_ready_now": false,
+      "manifest_ready_now": false,
+      "ingestion_ready_now": false,
+      "missing_packet_capability_count": 5,
+      "adapter_work_item_count": 3,
+      "next_build_action": "compare_dimension8_operator_basis_to_engine_r4_axes"
+    },
+    {
+      "label": "curvature_dependence_gw_tests_dictionary_2024",
+      "source_url": "https://arxiv.org/abs/2407.07043",
+      "source_type": "primary_theory_dictionary",
+      "candidate_role": "gw_observation_to_eft_dictionary",
+      "potential_axes": [
+        "higher_curvature_gw_deviation_scaling"
+      ],
+      "supplies": [
+        "curvature_scaling_argument",
+        "gw_test_dictionary_context"
+      ],
+      "missing_packet_capabilities": [
+        "numeric_r4_shape_likelihood",
+        "maps_to_bresciani_r4_axes",
+        "public_covariance_over_engine_r4_axes",
+        "closed_systematics_budget",
+        "framework_exclusion_math"
+      ],
+      "adapter_work_items": [
+        "translate_dictionary_terms_to_r4_shape_requirements",
+        "pair_with_event_reanalysis_after_waveform_adapter_exists",
+        "test_against_v2_160_manifest"
+      ],
+      "citation": "Curvature dependence of gravitational-wave tests of GR",
+      "readiness_score": 7,
+      "acceptance_criteria_status": {
+        "public_likelihood_or_covariance": false,
+        "maps_to_bresciani_r4_axes": false,
+        "axis_normalization_declared": false,
+        "reproducible_data_or_code": false,
+        "systematics_or_domain_declared": false,
+        "excluding_discriminator_math": false
+      },
+      "required_manifest_fields": [
+        "packet_id",
+        "source_url",
+        "source_type",
+        "target_axes",
+        "likelihood",
+        "axis_mapping",
+        "normalization",
+        "domain",
+        "systematics",
+        "provenance",
+        "discriminator_math",
+        "claim_controls"
+      ],
+      "claim_ready_now": false,
+      "manifest_ready_now": false,
+      "ingestion_ready_now": false,
+      "missing_packet_capability_count": 5,
+      "adapter_work_item_count": 3,
+      "next_build_action": "translate_dictionary_terms_to_r4_shape_requirements"
+    }
+  ],
+  "composite_build_routes_ranked": [
+    {
+      "route": "bresciani_axis_dictionary_plus_public_gw_reanalysis",
+      "status": "buildable_but_not_packet_ready",
+      "inputs": [
+        "bresciani_partial_wave_unitarity_bounds_2025",
+        "gwosc_public_catalog_and_event_data",
+        "liu_yunes_higher_curvature_gw_constraints_2025"
+      ],
+      "target_gate": "v2.162_r4_shape_likelihood_ingestion_adapter",
+      "can_attack": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3",
+        "g_R4_plus",
+        "g_R4_minus_abs"
+      ],
+      "still_missing": [
+        "modified_gravity_r4_waveform_adapter",
+        "public_covariance_over_engine_r4_axes",
+        "framework_exclusion_math",
+        "external_adversarial_review"
+      ],
+      "next_build_action": "derive_machine_axis_dictionary_from_bresciani_basis",
+      "aggregate_readiness_score": 28
+    },
+    {
+      "route": "wilson_matching_method_to_r4_shape_requirements",
+      "status": "theory_mapping_audit_needed",
+      "inputs": [
+        "matching_tidal_deformability_wilson_coefficients_2026",
+        "causality_constraints_gravitational_efts_2021"
+      ],
+      "target_gate": "v2.160_r4_shape_likelihood_packet_manifest",
+      "can_attack": [
+        "axis_mapping",
+        "normalization",
+        "domain"
+      ],
+      "still_missing": [
+        "quartic_r4_shape_extension",
+        "public_likelihood_or_covariance",
+        "central_values_over_engine_r4_axes"
+      ],
+      "next_build_action": "audit_whether_matching_method_extends_to_quartic_r4",
+      "aggregate_readiness_score": 15
+    },
+    {
+      "route": "gw_dictionary_to_r4_waveform_adapter_requirements",
+      "status": "design_route_not_packet_ready",
+      "inputs": [
+        "curvature_dependence_gw_tests_dictionary_2024"
+      ],
+      "target_gate": "v2.160_r4_shape_likelihood_packet_manifest",
+      "can_attack": [
+        "waveform_model",
+        "domain",
+        "systematics"
+      ],
+      "still_missing": [
+        "numeric_r4_shape_likelihood",
+        "maps_to_bresciani_r4_axes",
+        "public_covariance_over_engine_r4_axes"
+      ],
+      "next_build_action": "translate_dictionary_terms_to_r4_shape_requirements",
+      "aggregate_readiness_score": 7
+    }
+  ],
+  "selected_next_build_route": {
+    "route": "bresciani_axis_dictionary_plus_public_gw_reanalysis",
+    "status": "buildable_but_not_packet_ready",
+    "inputs": [
+      "bresciani_partial_wave_unitarity_bounds_2025",
+      "gwosc_public_catalog_and_event_data",
+      "liu_yunes_higher_curvature_gw_constraints_2025"
+    ],
+    "target_gate": "v2.162_r4_shape_likelihood_ingestion_adapter",
+    "can_attack": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3",
+      "g_R4_plus",
+      "g_R4_minus_abs"
+    ],
+    "still_missing": [
+      "modified_gravity_r4_waveform_adapter",
+      "public_covariance_over_engine_r4_axes",
+      "framework_exclusion_math",
+      "external_adversarial_review"
+    ],
+    "next_build_action": "derive_machine_axis_dictionary_from_bresciani_basis",
+    "aggregate_readiness_score": 28
+  },
+  "selected_next_build_action": "derive_machine_axis_dictionary_from_bresciani_basis",
+  "failure_counts": {
+    "central_values_over_engine_r4_axes": 2,
+    "closed_systematics_budget": 2,
+    "covariance_over_g_R4_c1_c2_c3": 1,
+    "experimental_or_reanalysis_data": 1,
+    "external_numeric_measurement": 1,
+    "framework_exclusion_math": 6,
+    "maps_to_bresciani_r4_axes": 5,
+    "modified_gravity_r4_waveform_adapter": 1,
+    "numeric_r4_shape_likelihood": 1,
+    "public_covariance_over_engine_r4_axes": 2,
+    "public_likelihood_or_covariance": 3,
+    "public_r4_shape_likelihood": 1,
+    "quartic_r4_shape_axes": 1,
+    "r4_shape_axis_decomposition": 1,
+    "r4_shape_covariance": 1,
+    "target_axes_complete": 1
+  },
+  "route_status": "r4_live_source_queue_ready_no_packet",
+  "best_next_artifact": "A Bresciani-axis dictionary plus public GW reanalysis fixture that can attempt a v2.160 R4 shape likelihood packet export. Until that export exists, the route stays diagnostic-only.",
+  "interpretation": "The live source sweep found useful formalism, data, and adjacent higher-curvature analyses, but no current source supplies a public likelihood or covariance over the engine R4 shape axes. The next action is an adapter build, not a claim."
+}
