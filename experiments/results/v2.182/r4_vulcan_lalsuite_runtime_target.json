@@ -1,0 +1,107 @@
+{
+  "version": "v2.182",
+  "basis": [
+    "v2.181_r4_source_backed_gwosc_projection",
+    "v2.113_lalsuite_imrphenomd_projection",
+    "vulcan_lalsuite_7_7_1_runtime_probe"
+  ],
+  "runtime_evidence": {
+    "target_alias": "vulcan",
+    "target_host": "192.168.4.178",
+    "workdir": "/home/admin/itb-engine-main-v2181-20260620183054",
+    "python": ".venv/bin/python",
+    "install_command": ".venv/bin/python -m pip install lalsuite",
+    "import_probe": {
+      "available": true,
+      "lal_version": "7.7.1",
+      "has_imrphenomd": true
+    },
+    "imrphenomd_reference_probe": {
+      "approximant": "IMRPhenomD",
+      "lal_version": "7.7.1",
+      "delta_f_hz": 0.25,
+      "frequency_min_hz": 20.0,
+      "frequency_max_hz": 111.25,
+      "distance_mpc": 400.0,
+      "mass_1_solar": 12.790896534381,
+      "mass_2_solar": 6.209103465619,
+      "total_mass_solar": 19.0,
+      "eta": 0.22,
+      "nonzero_bins": 366,
+      "max_abs_h_plus": "3.1266052249299665e-23",
+      "max_abs_h_plus_x1e23": 3.12660522493
+    },
+    "runtime_scope": "Target runtime can import lal/lalsimulation and generate an IMRPhenomD reference over the v2.181 GW170608 frequency window.",
+    "not_covered_by_runtime_probe": [
+      "r4_modified_waveform_plugin",
+      "calibrated_r4_detector_channel_response",
+      "nuisance_marginalized_r4_covariance",
+      "external_adversarial_review"
+    ]
+  },
+  "evaluation": {
+    "target_alias": "vulcan",
+    "target_host": "192.168.4.178",
+    "lalsuite_runtime_target_ready": true,
+    "ready_to_clear_runtime_availability_gate_on_vulcan": true,
+    "ready_for_real_public_r4_reanalysis": false,
+    "ready_for_framework_claim": false,
+    "runtime_blockers": [],
+    "removed_v2_181_blocker": "lalsuite_r4_runtime_projection_not_run",
+    "remaining_real_reanalysis_blockers": [
+      "detector_antenna_r4_channel_response_not_calibrated",
+      "external_adversarial_review_missing",
+      "full_imr_r4_merger_ringdown_completion_missing",
+      "nuisance_marginalized_covariance_not_exported",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "claim_blockers": [
+      "detector_antenna_r4_channel_response_not_calibrated",
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "full_imr_r4_merger_ringdown_completion_missing",
+      "nuisance_marginalized_covariance_not_exported",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "route_status": "r4_vulcan_lalsuite_runtime_target_ready_nonclaiming"
+  },
+  "malformed_control_evaluation": {
+    "target_alias": "vulcan",
+    "target_host": "localhost",
+    "lalsuite_runtime_target_ready": false,
+    "ready_to_clear_runtime_availability_gate_on_vulcan": false,
+    "ready_for_real_public_r4_reanalysis": false,
+    "ready_for_framework_claim": false,
+    "runtime_blockers": [
+      "imrphenomd_not_available",
+      "reference_nonzero_bin_count_unexpected",
+      "reference_waveform_zero_or_invalid",
+      "target_host_not_vulcan"
+    ],
+    "removed_v2_181_blocker": null,
+    "remaining_real_reanalysis_blockers": [
+      "detector_antenna_r4_channel_response_not_calibrated",
+      "external_adversarial_review_missing",
+      "full_imr_r4_merger_ringdown_completion_missing",
+      "nuisance_marginalized_covariance_not_exported",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "claim_blockers": [
+      "detector_antenna_r4_channel_response_not_calibrated",
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "full_imr_r4_merger_ringdown_completion_missing",
+      "nuisance_marginalized_covariance_not_exported",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "route_status": "r4_vulcan_lalsuite_runtime_target_blocked"
+  },
+  "lalsuite_runtime_target_ready": true,
+  "ready_real_public_r4_reanalysis_packets_now": [],
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "route_status": "r4_vulcan_lalsuite_runtime_target_ready_nonclaiming",
+  "selected_next_build_action": "derive_calibrated_r4_detector_channel_response",
+  "best_next_artifact": "Use the Vulcan LALSuite runtime to replace the v2.181 deterministic detector-channel proxy with calibrated R4 channel response and then export nuisance-marginalized covariance.",
+  "interpretation": "The target Vulcan runtime now clears the basic LALSuite/IMRPhenomD availability gate for the R4 route. This is not yet a real R4 reanalysis because no R4-modified waveform plugin, calibrated detector channel response, or covariance export has been run."
+}

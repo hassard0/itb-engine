@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (292 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (293 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -341,3 +341,4 @@ Auto-generated front door to the full research program (292 notes). Regenerate w
 | v2.179 | [v2.179 - R4 response GWOSC HDF5 projection](2026-06-20-v2.179-r4-response-gwosc-hdf5-projection.md) | Can the v2.178 synthetic strain rows be replaced by real GWOSC H1/L1 HDF5 |
 | v2.180 | [v2.180 - R4 source-backed PN/IMR derivation](2026-06-20-v2.180-r4-source-backed-pn-imr-derivation.md) | Can the v2.177/v2.179 R4 response-shape ansatz be replaced with a |
 | v2.181 | [v2.181 - R4 source-backed GWOSC projection](2026-06-20-v2.181-r4-source-backed-gwosc-projection.md) | Can the v2.180 source-backed R4 PN channel kernels be wired into the real |
+| v2.182 | [v2.182 - R4 Vulcan LALSuite runtime target](2026-06-20-v2.182-r4-vulcan-lalsuite-runtime-target.md) | Can the v2.181 R4 route clear the LALSuite/IMRPhenomD runtime availability |
