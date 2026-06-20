@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (295 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (296 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -344,3 +344,4 @@ Auto-generated front door to the full research program (295 notes). Regenerate w
 | v2.182 | [v2.182 - R4 Vulcan LALSuite runtime target](2026-06-20-v2.182-r4-vulcan-lalsuite-runtime-target.md) | Can the v2.181 R4 route clear the LALSuite/IMRPhenomD runtime availability |
 | v2.183 | [v2.183 - R4 LALSuite detector-channel response](2026-06-20-v2.183-r4-lalsuite-detector-channel-response.md) | Can the v2.181 deterministic detector-channel proxy be replaced by a calibrated |
 | v2.184 | [v2.184 - R4/GWOSC/LALSuite research report refresh](2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md) | The June 20 research loop moved the compactification-agnostic R4 route from a |
+| v2.185 | [v2.185 - R4 LALSuite-calibrated GWOSC projection](2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md) | Can the v2.181 deterministic detector-channel proxy be replaced inside the real |

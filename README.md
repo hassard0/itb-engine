@@ -2,11 +2,11 @@
 
 **A research platform that constrains the space of possible quantum-gravity theories by imposing every consistency condition we can encode — amplitude positivity, causality, holographic-information bounds, the swampland, anomaly flow, black-hole thermodynamics — then confronts the survivors with *real experimental data* and asks what's left.**
 
-> **Status:** v2.184 research loop · **1377 local tests, 7 skipped** · **1384 Vulcan tests with LALSuite installed** · **38 theoretical constraints (+4 ingested-data)** · **14 framework encoders** · **8 Wilson coefficients** · **9 observables** · **295 indexed result notes**
+> **Status:** v2.185 research loop · **1384 local tests, 7 skipped** · **1391 Vulcan tests with LALSuite installed** · **38 theoretical constraints (+4 ingested-data)** · **14 framework encoders** · **8 Wilson coefficients** · **9 observables** · **296 indexed result notes**
 >
 > Honest by construction: most constraint prefactors are O(1) placeholders ("the right streets, the wrong house numbers"). A dedicated **realism program** stress-tests every headline claim against that toy-prefactor uncertainty, so the repo distinguishes *robust conclusions* from *artifacts*. Read every claim below with that in mind — and see [Honest limitations](#honest-limitations).
 
-📍 **Start here:** [**v2.184 R4/GWOSC/LALSuite report**](docs/results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md) (current live-data frontier) · [**v2.10 capstone**](docs/results/2026-06-09-v2.10-capstone.md) (the program in one page) · [**v2.0 research report**](docs/results/2026-06-09-v2.0-RESEARCH-REPORT.md) (full overview) · [**FINDINGS.md**](docs/FINDINGS.md) (what the engine discovered, in one page) · [**TAXONOMY.md**](docs/results/TAXONOMY.md) (all notes grouped by theme) · [**Predictions scorecard**](docs/results/2026-06-08-v1.83-master-scorecard.md) · [**Results index**](docs/results/INDEX.md) (chronological)
+📍 **Start here:** [**v2.185 R4 LALSuite-calibrated GWOSC projection**](docs/results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md) (latest live-data artifact) · [**v2.184 R4/GWOSC/LALSuite report**](docs/results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md) (frontier summary) · [**v2.10 capstone**](docs/results/2026-06-09-v2.10-capstone.md) (the program in one page) · [**v2.0 research report**](docs/results/2026-06-09-v2.0-RESEARCH-REPORT.md) (full overview) · [**FINDINGS.md**](docs/FINDINGS.md) (what the engine discovered, in one page) · [**TAXONOMY.md**](docs/results/TAXONOMY.md) (all notes grouped by theme) · [**Predictions scorecard**](docs/results/2026-06-08-v1.83-master-scorecard.md) · [**Results index**](docs/results/INDEX.md) (chronological)
 
 ---
 
@@ -52,8 +52,9 @@ The latest loop, v2.170-v2.184, turns the most promising gravitational-wave rout
 - **v2.174:** the engine selected the Bresciani-axis plus public-GWOSC reanalysis path after checking source/public candidates.
 - **v2.175-v2.181:** the route gained a Bresciani R4 axis dictionary, public GW170608 H1/L1 HDF5 ingestion, source-backed 5PN/7PN R4 PN kernels, and a source-backed GWOSC projection seed.
 - **v2.182-v2.183:** Vulcan runs LALSuite 7.7.1/IMRPhenomD, and the H1/L1 detector response now has a LALSuite-calibrated target.
+- **v2.185:** the real GWOSC projection now uses that calibrated H1/L1 response instead of the v2.181 deterministic detector proxy; the next blocker is nuisance-marginalized covariance plus full R4 IMR completion.
 
-The current report is [v2.184 R4/GWOSC/LALSuite](docs/results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md). It is progress toward a live gravitational-wave discriminator, not a framework exclusion or discovery claim.
+The latest artifact is [v2.185 R4 LALSuite-calibrated GWOSC projection](docs/results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md), with the [v2.184 R4/GWOSC/LALSuite report](docs/results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md) as the frontier summary. This is progress toward a live gravitational-wave discriminator, not a framework exclusion or discovery claim.
 
 ### The "data-driven EFT"
 Folding consistency + the two ingested experiments points to a specific, registered theory — `discovered_data_driven` — a **screened-scalaron, positive-handed-parity EFT** that matches cosmic birefringence and predicts GW/PTA parity signals just below current reach. It sits where *none* of the 13 textbook frameworks do. `itb predict discovered_data_driven`. *(v1.79)*
@@ -73,7 +74,7 @@ A full, navigable account of every cycle is in [docs/FINDINGS.md](docs/FINDINGS.
 git clone https://github.com/hassard0/itb-engine && cd itb-engine
 python -m venv .venv && . .venv/bin/activate     # (Windows: .venv\Scripts\activate)
 pip install -e ".[dev]"
-pytest -q                                         # current full suite: 1377 passed, 7 skipped locally
+pytest -q                                         # current full suite: 1384 passed, 7 skipped locally
 
 # the affirmative answer: what a consistent QG EFT looks like + its full fingerprint
 itb predict discovered_data_driven
@@ -156,11 +157,11 @@ itb-engine/
 ├── experiments/              253 cycle scripts (island census, center, data ingestion,
 │                              meta-experiments) + stack.py (the constraint assembler)
 ├── tools/                    vulcan.py (remote compute), consult_drm.py, build_index.py
-├── tests/                    295 test files (1377 local passing tests, 7 skipped)
+├── tests/                    296 test files (1384 local passing tests, 7 skipped)
 ├── docs/
 │   ├── FINDINGS.md           ← curated findings (read this)
 │   ├── CONSTRAINTS.md        ← the constraint stack, by class
-│   └── results/              295 indexed result notes + INDEX.md (grouped by arc)
+│   └── results/              296 indexed result notes + INDEX.md (grouped by arc)
 └── legacy/                   early-program report generators (v1.0–v1.19)
 ```
 
