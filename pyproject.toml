@@ -34,6 +34,9 @@ agent = [
 remote = [
     "paramiko>=3.4",
 ]
+gw = [
+    "lalsuite>=7.7",
+]
 
 [project.scripts]
 itb = "itb.cli:main"

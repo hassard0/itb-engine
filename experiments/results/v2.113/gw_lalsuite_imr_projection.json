@@ -1,0 +1,191 @@
+{
+  "version": "v2.113",
+  "basis": [
+    "v2.112_gr_inspiral_reference_projection",
+    "LALSuite_IMRPhenomD_frequency_domain_waveform",
+    "v2.109_source_backed_cubic_inspiral_response"
+  ],
+  "source_reference": "https://arxiv.org/abs/2407.08929",
+  "cache_dir": "data/runs/gwosc_cache",
+  "loader_evaluation": {
+    "load_count": 2,
+    "all_loader_ready": true
+  },
+  "detector_projections": [
+    {
+      "detector": "H1",
+      "path": "data/runs/gwosc_cache/H-H1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+      "lalsuite_imr_projection": {
+        "source_reference": "https://arxiv.org/abs/2407.08929",
+        "projection_kind": "lalsuite_imrphenomd_psd_whitened_source_response",
+        "reference_waveform": {
+          "approximant": "IMRPhenomD",
+          "lal_version": "7.7.1",
+          "delta_f_hz": 0.25,
+          "frequency_min_hz": 20.0,
+          "frequency_max_hz": 111.25,
+          "distance_mpc": 400.0,
+          "mass_1_solar": 12.790896534380867,
+          "mass_2_solar": 6.209103465619133,
+          "total_mass_solar": 19.0,
+          "eta": 0.22,
+          "nonzero_bins": 366,
+          "max_abs_h_plus": 3.1266052249299665e-23
+        },
+        "frequency_window": {
+          "bin_count": 366,
+          "frequency_min_hz": 20.0,
+          "frequency_max_hz": 111.25,
+          "v_f_min": 0.18049326377900485,
+          "v_f_max": 0.319804329926307,
+          "frequency_resolution_hz": 0.25,
+          "total_mass_solar": 19.0,
+          "eta_reference": 0.22
+        },
+        "event_summary": {
+          "start_index": 55296,
+          "stop_index": 71680,
+          "sample_count": 16384,
+          "raw_mean": 1.802446338451568e-21,
+          "raw_rms": 4.946099266004207e-19,
+          "tapered_rms": 2.9109989306960634e-19
+        },
+        "psd_summary": {
+          "segment_count": 11,
+          "segment_length": 16384,
+          "segment_seconds": 4.0,
+          "overlap_fraction": 0.5,
+          "psd_min": 1.904563147376821e-51,
+          "psd_max": 6.2345402611496715e-37
+        },
+        "projections": {
+          "alpha_bar_1": {
+            "real": 0.007767853928805066,
+            "imag": -0.03171654283074133,
+            "abs": 0.03265392233397853
+          },
+          "alpha_bar_2": {
+            "real": -0.007281827352276005,
+            "imag": 0.031400194216365494,
+            "abs": 0.032233479588989894
+          }
+        },
+        "template_norms": {
+          "alpha_bar_1": 1.0,
+          "alpha_bar_2": 0.9999999999999999
+        },
+        "normalized_data_norm": 1.0,
+        "projection_ready": true
+      },
+      "projection_ready": true
+    },
+    {
+      "detector": "L1",
+      "path": "data/runs/gwosc_cache/L-L1_GWOSC_4KHZ_R1-1180922479-32.hdf5",
+      "lalsuite_imr_projection": {
+        "source_reference": "https://arxiv.org/abs/2407.08929",
+        "projection_kind": "lalsuite_imrphenomd_psd_whitened_source_response",
+        "reference_waveform": {
+          "approximant": "IMRPhenomD",
+          "lal_version": "7.7.1",
+          "delta_f_hz": 0.25,
+          "frequency_min_hz": 20.0,
+          "frequency_max_hz": 111.25,
+          "distance_mpc": 400.0,
+          "mass_1_solar": 12.790896534380867,
+          "mass_2_solar": 6.209103465619133,
+          "total_mass_solar": 19.0,
+          "eta": 0.22,
+          "nonzero_bins": 366,
+          "max_abs_h_plus": 3.1266052249299665e-23
+        },
+        "frequency_window": {
+          "bin_count": 366,
+          "frequency_min_hz": 20.0,
+          "frequency_max_hz": 111.25,
+          "v_f_min": 0.18049326377900485,
+          "v_f_max": 0.319804329926307,
+          "frequency_resolution_hz": 0.25,
+          "total_mass_solar": 19.0,
+          "eta_reference": 0.22
+        },
+        "event_summary": {
+          "start_index": 55296,
+          "stop_index": 71680,
+          "sample_count": 16384,
+          "raw_mean": -6.586659050042447e-21,
+          "raw_rms": 4.199796541491431e-19,
+          "tapered_rms": 2.7993609811439087e-19
+        },
+        "psd_summary": {
+          "segment_count": 11,
+          "segment_length": 16384,
+          "segment_seconds": 4.0,
+          "overlap_fraction": 0.5,
+          "psd_min": 2.0033540208618615e-51,
+          "psd_max": 1.0347778469342627e-37
+        },
+        "projections": {
+          "alpha_bar_1": {
+            "real": -0.018919603649123443,
+            "imag": -0.00033623074744976254,
+            "abs": 0.01892259108461248
+          },
+          "alpha_bar_2": {
+            "real": 0.030122692816894482,
+            "imag": -0.0009588986391347466,
+            "abs": 0.030137951309621578
+          }
+        },
+        "template_norms": {
+          "alpha_bar_1": 1.0,
+          "alpha_bar_2": 1.0
+        },
+        "normalized_data_norm": 1.0,
+        "projection_ready": true
+      },
+      "projection_ready": true
+    }
+  ],
+  "network_projection": {
+    "detectors": [
+      "H1",
+      "L1"
+    ],
+    "parameters": [
+      "alpha_bar_1",
+      "alpha_bar_2"
+    ],
+    "alpha_bar_1_abs_mean": 0.025788256709295503,
+    "alpha_bar_1_abs_detector_spread": 0.013731331249366048,
+    "alpha_bar_1_real_mean": -0.005575874860159188,
+    "alpha_bar_1_imag_mean": -0.016026386789095546,
+    "alpha_bar_2_abs_mean": 0.031185715449305734,
+    "alpha_bar_2_abs_detector_spread": 0.002095528279368316,
+    "alpha_bar_2_real_mean": 0.011420432732309239,
+    "alpha_bar_2_imag_mean": 0.015220647788615375
+  },
+  "evaluation": {
+    "lalsuite_imr_projection_ready": true,
+    "claim_ready": false,
+    "projection_blockers": [],
+    "claim_blockers": [
+      "alpha_likelihood_grid_not_sampled",
+      "detector_calibration_uncertainty_missing",
+      "event_mass_eta_tc_phic_not_sampled",
+      "g8_joint_component_missing",
+      "posterior_sampler_and_systematics_budget_missing"
+    ],
+    "lalsuite_status": {
+      "available": true,
+      "lal_version": "7.7.1",
+      "has_imrphenomd": true
+    },
+    "removed_v2_112_blocker": "leading_order_gr_reference_not_full_imr"
+  },
+  "claimable_discriminator_now": false,
+  "route_status": "lalsuite_imrphenomd_source_projection_ready_nonclaiming",
+  "selected_next_build_action": "sample_alpha_bar_likelihood_grid_with_imr_templates",
+  "best_next_artifact": "Promote the IMRPhenomD projection into a small alpha_bar grid likelihood over mass, eta, tc, and phic, then export a v2.102 source-native packet.",
+  "interpretation": "The leading-order GR reference is replaced by a LALSuite IMRPhenomD baseline. This removes the full-IMR reference blocker for the projection layer, but the result is still not a likelihood because event parameters and alpha_bar are not sampled."
+}
