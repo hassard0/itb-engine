@@ -1,0 +1,317 @@
+{
+  "version": "v2.192",
+  "basis": [
+    "v2.187_r4_lalsuite_waveform_likelihood_posterior",
+    "v2.188_r4_parspec_ringdown_source_bridge",
+    "v2.191_r4_parspec_qeft_source_asset_audit",
+    "GWOSC_api_event_versions_GW150914_v3",
+    "GWOSC_api_event_versions_GW200129_065458_v1"
+  ],
+  "required_paper_source_events": [
+    "GW150914",
+    "GW200129"
+  ],
+  "current_engine_events": [
+    "GW170608"
+  ],
+  "source_event_manifest_summary": {
+    "events": [
+      {
+        "paper_event": "GW150914",
+        "gwosc_event_name": "GW150914",
+        "event_version": "GW150914-v3",
+        "version": 3,
+        "catalog": "GWTC-1-confident",
+        "run": "O1",
+        "gps": 1126259462.4,
+        "grace_id": "G184098",
+        "doi": "https://doi.org/10.7935/82H3-HH23",
+        "detectors": [
+          "H1",
+          "L1"
+        ],
+        "event_version_url": "https://gwosc.org/api/v2/event-versions/GW150914-v3",
+        "strain_files_url": "https://gwosc.org/api/v2/event-versions/GW150914-v3/strain-files",
+        "source_catalog_url": "https://gwosc.org/eventapi/html/GWTC/"
+      },
+      {
+        "paper_event": "GW200129",
+        "gwosc_event_name": "GW200129_065458",
+        "event_version": "GW200129_065458-v1",
+        "version": 1,
+        "catalog": "GWTC-3-confident",
+        "run": "O3b",
+        "gps": 1264316116.4,
+        "grace_id": "S200129m",
+        "doi": "https://doi.org/10.7935/b024-1886",
+        "detectors": [
+          "H1",
+          "L1",
+          "V1"
+        ],
+        "event_version_url": "https://gwosc.org/api/v2/event-versions/GW200129_065458-v1",
+        "strain_files_url": "https://gwosc.org/api/v2/event-versions/GW200129_065458-v1/strain-files",
+        "source_catalog_url": "https://gwosc.org/eventapi/html/GWTC/"
+      }
+    ],
+    "strain_records": [
+      {
+        "paper_event": "GW150914",
+        "gwosc_event_name": "GW150914",
+        "event_version": "GW150914-v3",
+        "detector": "H1",
+        "duration": 32,
+        "sample_rate_hz": 4096,
+        "file_format": "HDF",
+        "gps_start": 1126259447,
+        "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/H-H1_GWOSC_4KHZ_R1-1126259447-32.hdf5",
+        "query_url": "https://gwosc.org/api/v2/event-versions/GW150914-v3/strain-files?detector=H1&sample-rate=4&duration=32&file-format=hdf5",
+        "expected_sample_count": 131072,
+        "event_offset_seconds": 15.400000095367,
+        "event_inside_segment": true,
+        "download_url_is_hdf5": true,
+        "query_url_uses_hdf5_filter": true
+      },
+      {
+        "paper_event": "GW150914",
+        "gwosc_event_name": "GW150914",
+        "event_version": "GW150914-v3",
+        "detector": "H1",
+        "duration": 4096,
+        "sample_rate_hz": 4096,
+        "file_format": "HDF",
+        "gps_start": 1126257415,
+        "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/H-H1_GWOSC_4KHZ_R1-1126257415-4096.hdf5",
+        "query_url": "https://gwosc.org/api/v2/event-versions/GW150914-v3/strain-files?detector=H1&sample-rate=4&duration=4096&file-format=hdf5",
+        "expected_sample_count": 16777216,
+        "event_offset_seconds": 2047.400000095367,
+        "event_inside_segment": true,
+        "download_url_is_hdf5": true,
+        "query_url_uses_hdf5_filter": true
+      },
+      {
+        "paper_event": "GW150914",
+        "gwosc_event_name": "GW150914",
+        "event_version": "GW150914-v3",
+        "detector": "L1",
+        "duration": 32,
+        "sample_rate_hz": 4096,
+        "file_format": "HDF",
+        "gps_start": 1126259447,
+        "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/L-L1_GWOSC_4KHZ_R1-1126259447-32.hdf5",
+        "query_url": "https://gwosc.org/api/v2/event-versions/GW150914-v3/strain-files?detector=L1&sample-rate=4&duration=32&file-format=hdf5",
+        "expected_sample_count": 131072,
+        "event_offset_seconds": 15.400000095367,
+        "event_inside_segment": true,
+        "download_url_is_hdf5": true,
+        "query_url_uses_hdf5_filter": true
+      },
+      {
+        "paper_event": "GW150914",
+        "gwosc_event_name": "GW150914",
+        "event_version": "GW150914-v3",
+        "detector": "L1",
+        "duration": 4096,
+        "sample_rate_hz": 4096,
+        "file_format": "HDF",
+        "gps_start": 1126257415,
+        "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/L-L1_GWOSC_4KHZ_R1-1126257415-4096.hdf5",
+        "query_url": "https://gwosc.org/api/v2/event-versions/GW150914-v3/strain-files?detector=L1&sample-rate=4&duration=4096&file-format=hdf5",
+        "expected_sample_count": 16777216,
+        "event_offset_seconds": 2047.400000095367,
+        "event_inside_segment": true,
+        "download_url_is_hdf5": true,
+        "query_url_uses_hdf5_filter": true
+      },
+      {
+        "paper_event": "GW200129",
+        "gwosc_event_name": "GW200129_065458",
+        "event_version": "GW200129_065458-v1",
+        "detector": "H1",
+        "duration": 32,
+        "sample_rate_hz": 4096,
+        "file_format": "HDF",
+        "gps_start": 1264316101,
+        "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/H-H1_GWOSC_4KHZ_R1-1264316101-32.hdf5",
+        "query_url": "https://gwosc.org/api/v2/event-versions/GW200129_065458-v1/strain-files?detector=H1&sample-rate=4&duration=32&file-format=hdf5",
+        "expected_sample_count": 131072,
+        "event_offset_seconds": 15.400000095367,
+        "event_inside_segment": true,
+        "download_url_is_hdf5": true,
+        "query_url_uses_hdf5_filter": true
+      },
+      {
+        "paper_event": "GW200129",
+        "gwosc_event_name": "GW200129_065458",
+        "event_version": "GW200129_065458-v1",
+        "detector": "L1",
+        "duration": 32,
+        "sample_rate_hz": 4096,
+        "file_format": "HDF",
+        "gps_start": 1264316101,
+        "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/L-L1_GWOSC_4KHZ_R1-1264316101-32.hdf5",
+        "query_url": "https://gwosc.org/api/v2/event-versions/GW200129_065458-v1/strain-files?detector=L1&sample-rate=4&duration=32&file-format=hdf5",
+        "expected_sample_count": 131072,
+        "event_offset_seconds": 15.400000095367,
+        "event_inside_segment": true,
+        "download_url_is_hdf5": true,
+        "query_url_uses_hdf5_filter": true
+      },
+      {
+        "paper_event": "GW200129",
+        "gwosc_event_name": "GW200129_065458",
+        "event_version": "GW200129_065458-v1",
+        "detector": "V1",
+        "duration": 32,
+        "sample_rate_hz": 4096,
+        "file_format": "HDF",
+        "gps_start": 1264316101,
+        "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/V-V1_GWOSC_4KHZ_R1-1264316101-32.hdf5",
+        "query_url": "https://gwosc.org/api/v2/event-versions/GW200129_065458-v1/strain-files?detector=V1&sample-rate=4&duration=32&file-format=hdf5",
+        "expected_sample_count": 131072,
+        "event_offset_seconds": 15.400000095367,
+        "event_inside_segment": true,
+        "download_url_is_hdf5": true,
+        "query_url_uses_hdf5_filter": true
+      },
+      {
+        "paper_event": "GW200129",
+        "gwosc_event_name": "GW200129_065458",
+        "event_version": "GW200129_065458-v1",
+        "detector": "H1",
+        "duration": 4096,
+        "sample_rate_hz": 4096,
+        "file_format": "HDF",
+        "gps_start": 1264314069,
+        "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/H-H1_GWOSC_4KHZ_R1-1264314069-4096.hdf5",
+        "query_url": "https://gwosc.org/api/v2/event-versions/GW200129_065458-v1/strain-files?detector=H1&sample-rate=4&duration=4096&file-format=hdf5",
+        "expected_sample_count": 16777216,
+        "event_offset_seconds": 2047.400000095367,
+        "event_inside_segment": true,
+        "download_url_is_hdf5": true,
+        "query_url_uses_hdf5_filter": true
+      },
+      {
+        "paper_event": "GW200129",
+        "gwosc_event_name": "GW200129_065458",
+        "event_version": "GW200129_065458-v1",
+        "detector": "L1",
+        "duration": 4096,
+        "sample_rate_hz": 4096,
+        "file_format": "HDF",
+        "gps_start": 1264314069,
+        "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/L-L1_GWOSC_4KHZ_R1-1264314069-4096.hdf5",
+        "query_url": "https://gwosc.org/api/v2/event-versions/GW200129_065458-v1/strain-files?detector=L1&sample-rate=4&duration=4096&file-format=hdf5",
+        "expected_sample_count": 16777216,
+        "event_offset_seconds": 2047.400000095367,
+        "event_inside_segment": true,
+        "download_url_is_hdf5": true,
+        "query_url_uses_hdf5_filter": true
+      },
+      {
+        "paper_event": "GW200129",
+        "gwosc_event_name": "GW200129_065458",
+        "event_version": "GW200129_065458-v1",
+        "detector": "V1",
+        "duration": 4096,
+        "sample_rate_hz": 4096,
+        "file_format": "HDF",
+        "gps_start": 1264314069,
+        "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/V-V1_GWOSC_4KHZ_R1-1264314069-4096.hdf5",
+        "query_url": "https://gwosc.org/api/v2/event-versions/GW200129_065458-v1/strain-files?detector=V1&sample-rate=4&duration=4096&file-format=hdf5",
+        "expected_sample_count": 16777216,
+        "event_offset_seconds": 2047.400000095367,
+        "event_inside_segment": true,
+        "download_url_is_hdf5": true,
+        "query_url_uses_hdf5_filter": true
+      }
+    ],
+    "source_event_labels": [
+      "GW150914",
+      "GW200129"
+    ],
+    "gwosc_event_names": {
+      "GW150914": "GW150914",
+      "GW200129": "GW200129_065458"
+    },
+    "missing_source_events": [],
+    "minimal_h1_l1_records_missing": [],
+    "malformed_records": [],
+    "detector_topology_by_event": {
+      "GW150914": [
+        "H1",
+        "L1"
+      ],
+      "GW200129": [
+        "H1",
+        "L1",
+        "V1"
+      ]
+    },
+    "gw200129_requires_v1_policy": true,
+    "source_event_public_strain_urls_ready": true
+  },
+  "v2191_remaining_state": {
+    "route_status": "parspec_qeft_source_asset_audit_ready_nonclaiming",
+    "remaining_contract_blockers_after_asset_audit": [
+      "axis_normalization",
+      "axis_normalization_missing",
+      "calibration_and_waveform_systematics_not_exported",
+      "engine_axis_map_covariance_pushforward_missing",
+      "engine_axis_map_jacobian_missing",
+      "engine_axis_map_not_ready",
+      "engine_axis_map_target_axes_mismatch",
+      "engine_axis_orientation_missing",
+      "engine_axis_vector_missing",
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "operator_basis_map",
+      "operator_basis_map_missing",
+      "parspec_likelihood_export_not_confirmed",
+      "parspec_likelihood_source_axis_mismatch",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ]
+  },
+  "alignment_contract": {
+    "required_minimal_engine_run": "Run the R4 LALSuite/GWOSC likelihood path on GW150914 and GW200129_065458, using at least H1/L1 4 kHz 32 s HDF5 strain.",
+    "detector_topology_policy_needed": "GW200129_065458-v1 has H1/L1/V1 strain. A claim-grade rerun must either include V1 or justify an H1/L1-only projection against the ParSpec source analysis.",
+    "nonclaiming_until": [
+      "same_event_likelihood_rerun_complete",
+      "public_parspec_qeft_likelihood_or_covariance_attached",
+      "engine_axis_map_ready",
+      "systematics_export_ready",
+      "external_adversarial_review_complete"
+    ]
+  },
+  "evaluation": {
+    "event_set_manifest_ready": true,
+    "event_set_alignment_ready": false,
+    "source_event_public_strain_urls_ready": true,
+    "claimable_framework_exclusions_now": [],
+    "ready_for_framework_claim": false,
+    "alignment_blockers": [
+      "axis_normalization_missing",
+      "current_engine_event_set_not_parspec_source_events",
+      "engine_axis_orientation_missing",
+      "gw200129_v1_detector_topology_policy_missing",
+      "operator_basis_map_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ],
+    "split_v2191_event_blocker": {
+      "previous": "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "now_resolved_subpiece": "gwosc_source_event_versions_and_hdf5_urls_identified",
+      "remaining_subpieces": [
+        "rerun_engine_likelihood_on_gw150914_and_gw200129",
+        "gw200129_v1_detector_topology_policy",
+        "public_parspec_qeft_likelihood_or_posterior_samples"
+      ]
+    },
+    "route_status": "parspec_source_event_gwosc_manifest_ready_alignment_not_run"
+  },
+  "event_set_manifest_ready": true,
+  "event_set_alignment_ready": false,
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "route_status": "parspec_source_event_gwosc_manifest_ready_alignment_not_run",
+  "selected_next_build_action": "rerun_r4_lalsuite_likelihood_on_gw150914_gw200129_with_v1_policy",
+  "interpretation": "The ParSpec source events are now mapped to exact GWOSC event versions and public 4 kHz HDF5 strain URLs. This resolves the event-discovery subpiece, but not the event-set mismatch itself: the engine still has to rerun the R4 likelihood on GW150914 and GW200129_065458, decide the V1 policy for GW200129, and attach a public qEFT likelihood or covariance before any claim is allowed."
+}

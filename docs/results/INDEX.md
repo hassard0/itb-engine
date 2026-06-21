@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (302 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (303 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -351,3 +351,4 @@ Auto-generated front door to the full research program (302 notes). Regenerate w
 | v2.189 | [v2.189 - R4 research continuity ledger](2026-06-20-v2.189-r4-research-continuity-ledger.md) | There were many runs between the current README summary and the latest source |
 | v2.190 | [v2.190 - R4 ParSpec engine-axis map contract](2026-06-20-v2.190-r4-parspec-engine-axis-map-contract.md) | Can the v2.188 `ell_qEFT -> engine R4 axes` blocker be turned into an |
 | v2.191 | [v2.191 - R4 ParSpec qEFT source-asset audit](2026-06-20-v2.191-r4-parspec-qeft-source-asset-audit.md) | Can the public arXiv source package for the ParSpec higher-curvature ringdown |
+| v2.192 | [v2.192 - R4 ParSpec source-event alignment manifest](2026-06-20-v2.192-r4-parspec-source-event-alignment-manifest.md) | Can the v2.191 event-set blocker be split by mapping the ParSpec/qEFT source |
