@@ -1,0 +1,930 @@
+{
+  "version": "v2.198",
+  "purpose": "Preserve the details from the v2.190-v2.197 R4/ParSpec source event, published-bound, and qNM-deformation loop so top-level writeups, findings, and reports do not flatten the run history.",
+  "covered_versions": [
+    "v2.190",
+    "v2.191",
+    "v2.192",
+    "v2.193",
+    "v2.194",
+    "v2.195",
+    "v2.196",
+    "v2.197"
+  ],
+  "expected_versions": [
+    "v2.190",
+    "v2.191",
+    "v2.192",
+    "v2.193",
+    "v2.194",
+    "v2.195",
+    "v2.196",
+    "v2.197"
+  ],
+  "run_count": 8,
+  "runs": [
+    {
+      "version": "v2.190",
+      "short_title": "R4 ParSpec engine-axis map contract",
+      "note_path": "docs/results/2026-06-20-v2.190-r4-parspec-engine-axis-map-contract.md",
+      "artifact_path": "experiments/results/v2.190/r4_parspec_engine_axis_map_contract.json",
+      "retained_details": [
+        "source axis ell_qEFT_km is separated from engine R4 axes",
+        "target engine axes are g_R4_c1, g_R4_c2, and g_R4_c3",
+        "required packet fields include source-axis power, basis map, engine-axis orientation, normalization, public likelihood, event policy, systematics, and claim controls",
+        "current v2.188 bridge fails the map and likelihood attachment",
+        "claim controls remain disabled"
+      ],
+      "frontier_change": "Converted the missing ell_qEFT-to-engine-axis map into an executable contract.",
+      "remaining_blocker": "source_backed_qeft_to_engine_r4_axis_map_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.190",
+        "route_status": "parspec_engine_axis_map_contract_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "derive_source_backed_parspec_qeft_axis_map_or_acquire_public_likelihood",
+        "contract_id": "parspec_qeft_to_engine_r4_axis_map_contract_v1",
+        "source_axis": "ell_qEFT_km",
+        "target_engine_axes": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "required_packet_fields": [
+          "packet_id",
+          "source_url",
+          "source_doi",
+          "source_type",
+          "source_theory_family",
+          "source_axis",
+          "source_axis_units",
+          "target_engine_axes",
+          "source_axis_power_policy",
+          "operator_basis_map",
+          "engine_axis_map",
+          "axis_normalization",
+          "likelihood_reference",
+          "event_set_policy",
+          "systematics",
+          "claim_controls"
+        ],
+        "current_missing_required_fields": [
+          "axis_normalization",
+          "operator_basis_map",
+          "source_axis_power_policy"
+        ],
+        "current_map_blockers": [
+          "axis_normalization_missing",
+          "engine_axis_orientation_missing",
+          "operator_basis_map_missing",
+          "source_axis_power_policy_missing"
+        ],
+        "current_attachment_blockers": [
+          "calibration_and_waveform_systematics_not_exported",
+          "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+          "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+        ],
+        "split_v2_188_axis_map_blocker": {
+          "previous": "engine_r4_axes_to_parspec_qeft_length_map_missing",
+          "contract_subpieces": [
+            "source_axis_power_policy",
+            "operator_basis_map",
+            "engine_axis_orientation",
+            "axis_normalization",
+            "covariance_pushforward"
+          ]
+        }
+      }
+    },
+    {
+      "version": "v2.191",
+      "short_title": "R4 ParSpec qEFT source-asset audit",
+      "note_path": "docs/results/2026-06-20-v2.191-r4-parspec-qeft-source-asset-audit.md",
+      "artifact_path": "experiments/results/v2.191/r4_parspec_qeft_source_asset_audit.json",
+      "retained_details": [
+        "arXiv source package hash is preserved",
+        "paper_alt_theory_bounds.tex hash is preserved",
+        "qEFT source-axis power is p_qEFT = 6",
+        "qNM deformation coefficients are preserved for nmax 0 and 1",
+        "GW150914, GW200129, and combined qEFT bounds are preserved",
+        "no machine-readable qEFT likelihood asset is present"
+      ],
+      "frontier_change": "Resolved the source-axis power subpiece while leaving the operator-basis and public-likelihood blockers active.",
+      "remaining_blocker": "operator_basis_map_and_public_likelihood_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.191",
+        "route_status": "parspec_qeft_source_asset_audit_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "derive_qeft_to_bresciani_engine_axis_map_or_acquire_public_likelihood_grid",
+        "source_package_sha256": "11b568f5107b4e31a7efd83b704178e7a9e938467fcd36a4856f53a208b05da2",
+        "audited_assets": [
+          {
+            "path": "paper_alt_theory_bounds.tex",
+            "kind": "latex_source",
+            "size_bytes": 101949,
+            "sha256": "e204f46bc95bdbbfaf4ea3fc13675f188d33a70b58363f605f40fd228da7dc0b",
+            "preserved_facts": [
+              "ParSpec gamma relation",
+              "qEFT power p_qEFT = 6",
+              "qEFT QNM deformation coefficients",
+              "GW150914/GW200129/combined qEFT bounds"
+            ]
+          },
+          {
+            "path": "qeft_posteriors_combined.pdf",
+            "kind": "posterior_figure",
+            "size_bytes": 28505,
+            "sha256": "b41b2847087581da0d7b00ef947f59dfed369a503e512f45a8361e6596cb18b3",
+            "machine_readable_likelihood": false
+          },
+          {
+            "path": "qeft_cdf_varying_threshold.pdf",
+            "kind": "cdf_figure",
+            "size_bytes": 201759,
+            "sha256": "e71d3f19b28558bf0b52d43def1ca5390e1cfcb0fdd482fc556b8ead010f601c",
+            "machine_readable_likelihood": false
+          }
+        ],
+        "machine_readable_likelihood_ready": false,
+        "qeft_power": 6,
+        "qnm_deformation_coefficients": {
+          "nmax_0": {
+            "delta_omega_qeft_0": -0.2114,
+            "delta_tau_qeft_0": -0.607
+          },
+          "nmax_1": {
+            "delta_omega_qeft_1": -1.5263,
+            "delta_tau_qeft_1": 171.35
+          }
+        },
+        "event_bounds_90_credible_km": {
+          "GW150914": 51.7,
+          "GW200129": 54.8,
+          "combined": 51.3
+        },
+        "source_asset_readiness": {
+          "source_package_assets_ready": true,
+          "source_axis_power_policy_ready": true,
+          "ringdown_qnm_deformation_coefficients_ready": true,
+          "published_bound_and_figure_assets_ready": true,
+          "machine_readable_likelihood_ready": false,
+          "operator_basis_map_ready": false,
+          "engine_bresciani_axis_orientation_ready": false,
+          "event_set_aligned_with_current_engine_run": false,
+          "claim_grade_systematics_export_ready": false
+        },
+        "remaining_contract_blockers": [
+          "axis_normalization",
+          "axis_normalization_missing",
+          "calibration_and_waveform_systematics_not_exported",
+          "engine_axis_map_covariance_pushforward_missing",
+          "engine_axis_map_jacobian_missing",
+          "engine_axis_map_not_ready",
+          "engine_axis_map_target_axes_mismatch",
+          "engine_axis_orientation_missing",
+          "engine_axis_vector_missing",
+          "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+          "operator_basis_map",
+          "operator_basis_map_missing",
+          "parspec_likelihood_export_not_confirmed",
+          "parspec_likelihood_source_axis_mismatch",
+          "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+        ]
+      }
+    },
+    {
+      "version": "v2.192",
+      "short_title": "R4 ParSpec source-event alignment manifest",
+      "note_path": "docs/results/2026-06-20-v2.192-r4-parspec-source-event-alignment-manifest.md",
+      "artifact_path": "experiments/results/v2.192/r4_parspec_source_event_alignment_manifest.json",
+      "retained_details": [
+        "GW150914 maps to GW150914-v3 in GWTC-1-confident",
+        "GW200129 maps to GW200129_065458-v1 in GWTC-3-confident",
+        "public HDF5 strain URLs are recorded for 32 s and 4096 s data",
+        "GW150914 uses H1/L1 topology",
+        "GW200129 requires H1/L1/V1 topology",
+        "event discovery is resolved but the likelihood rerun is not yet"
+      ],
+      "frontier_change": "Resolved public GWOSC event-version and strain-handle discovery for the ParSpec source events.",
+      "remaining_blocker": "same_event_likelihood_and_v1_policy_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.192",
+        "route_status": "parspec_source_event_gwosc_manifest_ready_alignment_not_run",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "rerun_r4_lalsuite_likelihood_on_gw150914_gw200129_with_v1_policy",
+        "events": [
+          {
+            "paper_event": "GW150914",
+            "event_version": "GW150914-v3",
+            "catalog": "GWTC-1-confident",
+            "run": "O1",
+            "gps": 1126259462.4,
+            "doi": "https://doi.org/10.7935/82H3-HH23",
+            "detectors": [
+              "H1",
+              "L1"
+            ],
+            "event_version_url": "https://gwosc.org/api/v2/event-versions/GW150914-v3"
+          },
+          {
+            "paper_event": "GW200129",
+            "event_version": "GW200129_065458-v1",
+            "catalog": "GWTC-3-confident",
+            "run": "O3b",
+            "gps": 1264316116.4,
+            "doi": "https://doi.org/10.7935/b024-1886",
+            "detectors": [
+              "H1",
+              "L1",
+              "V1"
+            ],
+            "event_version_url": "https://gwosc.org/api/v2/event-versions/GW200129_065458-v1"
+          }
+        ],
+        "strain_record_count": 10,
+        "detector_topology_by_event": {
+          "GW150914": [
+            "H1",
+            "L1"
+          ],
+          "GW200129": [
+            "H1",
+            "L1",
+            "V1"
+          ]
+        },
+        "gw200129_requires_v1_policy": true,
+        "source_event_public_strain_urls_ready": true,
+        "alignment_blockers": [
+          "axis_normalization_missing",
+          "current_engine_event_set_not_parspec_source_events",
+          "engine_axis_orientation_missing",
+          "gw200129_v1_detector_topology_policy_missing",
+          "operator_basis_map_missing",
+          "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+        ]
+      }
+    },
+    {
+      "version": "v2.193",
+      "short_title": "R4 ParSpec same-event H1/L1 likelihood",
+      "note_path": "docs/results/2026-06-20-v2.193-r4-parspec-same-event-h1l1-likelihood.md",
+      "artifact_path": "experiments/results/v2.193/r4_parspec_same_event_h1l1_likelihood.json",
+      "retained_details": [
+        "GW150914 and GW200129 are rerun on public source-event strain",
+        "the rerun uses H1/L1 only for both events",
+        "the coefficient grid has 125 points",
+        "event slicing is event-GPS-aware",
+        "posterior means are preserved per source event",
+        "GW200129 V1 remains outside this artifact"
+      ],
+      "frontier_change": "Closed the H1/L1 same-event rerun subpiece.",
+      "remaining_blocker": "gw200129_v1_detector_response_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.193",
+        "route_status": "parspec_source_events_h1l1_likelihood_ready_v1_policy_missing",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "add_v1_detector_response_and_source_event_nuisance_covariance",
+        "central_values": {
+          "g_R4_c1": 0.495629103212,
+          "g_R4_c2": 0.495614794648,
+          "g_R4_c3": -0.003513023764
+        },
+        "coefficient_grid": {
+          "axes": [
+            "g_R4_c1",
+            "g_R4_c2",
+            "g_R4_c3"
+          ],
+          "offsets": [
+            -0.04,
+            -0.02,
+            0.0,
+            0.02,
+            0.04
+          ],
+          "grid_points": 125
+        },
+        "event_networks": [
+          {
+            "paper_event": "GW150914",
+            "event_version": "GW150914-v3",
+            "detectors": [
+              "H1",
+              "L1"
+            ],
+            "grid_points": 125,
+            "nuisance_points_per_detector": [
+              81,
+              81
+            ],
+            "posterior_mean": {
+              "g_R4_c1": 0.495626108425,
+              "g_R4_c2": 0.495611815175,
+              "g_R4_c3": -0.003517066352
+            },
+            "posterior_covariance_eigenvalues": [
+              0.000797054279,
+              0.000800776816,
+              0.000800829697
+            ],
+            "maximum_posterior_grid_point": {
+              "g_R4_c1": 0.535629103212,
+              "g_R4_c2": 0.475614794648,
+              "g_R4_c3": -0.023513023764,
+              "delta_g_R4_c1": 0.04,
+              "delta_g_R4_c2": -0.02,
+              "delta_g_R4_c3": -0.02,
+              "log_marginal_likelihood": -0.99999804109,
+              "profile_log_likelihood": -0.999474143593,
+              "posterior_weight": 0.008019195377
+            }
+          },
+          {
+            "paper_event": "GW200129",
+            "event_version": "GW200129_065458-v1",
+            "detectors": [
+              "H1",
+              "L1"
+            ],
+            "grid_points": 125,
+            "nuisance_points_per_detector": [
+              81,
+              81
+            ],
+            "posterior_mean": {
+              "g_R4_c1": 0.495627254935,
+              "g_R4_c2": 0.495612936959,
+              "g_R4_c3": -0.003514104996
+            },
+            "posterior_covariance_eigenvalues": [
+              0.000797057999,
+              0.0008007725,
+              0.000800829932
+            ],
+            "maximum_posterior_grid_point": {
+              "g_R4_c1": 0.535629103212,
+              "g_R4_c2": 0.455614794648,
+              "g_R4_c3": -0.003513023764,
+              "delta_g_R4_c1": 0.04,
+              "delta_g_R4_c2": -0.04,
+              "delta_g_R4_c3": 0.0,
+              "log_marginal_likelihood": -0.999999548153,
+              "profile_log_likelihood": -0.999987169264,
+              "posterior_weight": 0.008019188729
+            }
+          }
+        ],
+        "claim_blockers": [
+          "axis_normalization_missing",
+          "engine_axis_orientation_missing",
+          "external_adversarial_review_missing",
+          "gw200129_v1_detector_channel_response_missing",
+          "operator_basis_map_missing",
+          "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+          "source_event_specific_nuisance_covariance_export_missing",
+          "waveform_calibration_prior_and_eft_systematics_not_closed"
+        ]
+      }
+    },
+    {
+      "version": "v2.194",
+      "short_title": "R4 ParSpec event-topology likelihood",
+      "note_path": "docs/results/2026-06-20-v2.194-r4-parspec-event-topology-likelihood.md",
+      "artifact_path": "experiments/results/v2.194/r4_parspec_event_topology_likelihood.json",
+      "retained_details": [
+        "GW150914 uses H1/L1",
+        "GW200129 uses H1/L1/V1",
+        "event-time LALSuite antenna response moments are exported",
+        "V1 detector response is included for GW200129",
+        "source-event network likelihoods are preserved",
+        "source-event covariance is still not exported here"
+      ],
+      "frontier_change": "Closed the public detector-topology subpiece.",
+      "remaining_blocker": "source_event_specific_nuisance_covariance_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.194",
+        "route_status": "parspec_source_event_topology_likelihood_ready_covariance_missing",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "export_source_event_specific_nuisance_covariance",
+        "central_values": {
+          "g_R4_c1": 0.495629103212,
+          "g_R4_c2": 0.495614794648,
+          "g_R4_c3": -0.003513023764
+        },
+        "coefficient_grid": {
+          "axes": [
+            "g_R4_c1",
+            "g_R4_c2",
+            "g_R4_c3"
+          ],
+          "offsets": [
+            -0.04,
+            -0.02,
+            0.0,
+            0.02,
+            0.04
+          ],
+          "grid_points": 125
+        },
+        "event_networks": [
+          {
+            "paper_event": "GW150914",
+            "event_version": "GW150914-v3",
+            "detectors": [
+              "H1",
+              "L1"
+            ],
+            "grid_points": 125,
+            "nuisance_points_per_detector": [
+              81,
+              81
+            ],
+            "posterior_mean": {
+              "g_R4_c1": 0.49562610844,
+              "g_R4_c2": 0.49561181516,
+              "g_R4_c3": -0.003517066352
+            },
+            "posterior_covariance_eigenvalues": [
+              0.000797054279,
+              0.000800776816,
+              0.000800829697
+            ],
+            "maximum_posterior_grid_point": {
+              "g_R4_c1": 0.535629103212,
+              "g_R4_c2": 0.475614794648,
+              "g_R4_c3": -0.023513023764,
+              "delta_g_R4_c1": 0.04,
+              "delta_g_R4_c2": -0.02,
+              "delta_g_R4_c3": -0.02,
+              "log_marginal_likelihood": -0.99999803885,
+              "profile_log_likelihood": -0.999474151397,
+              "posterior_weight": 0.008019195395
+            }
+          },
+          {
+            "paper_event": "GW200129",
+            "event_version": "GW200129_065458-v1",
+            "detectors": [
+              "H1",
+              "L1",
+              "V1"
+            ],
+            "grid_points": 125,
+            "nuisance_points_per_detector": [
+              81,
+              81,
+              81
+            ],
+            "posterior_mean": {
+              "g_R4_c1": 0.495625793532,
+              "g_R4_c2": 0.495611465963,
+              "g_R4_c3": -0.003514819799
+            },
+            "posterior_covariance_eigenvalues": [
+              0.000795585861,
+              0.000801164616,
+              0.000801243401
+            ],
+            "maximum_posterior_grid_point": {
+              "g_R4_c1": 0.455629103212,
+              "g_R4_c2": 0.515614794648,
+              "g_R4_c3": 0.016486976236,
+              "delta_g_R4_c1": -0.04,
+              "delta_g_R4_c2": 0.02,
+              "delta_g_R4_c3": 0.02,
+              "log_marginal_likelihood": -1.499998219437,
+              "profile_log_likelihood": -1.499384678185,
+              "posterior_weight": 0.008028782087
+            }
+          }
+        ],
+        "claim_blockers": [
+          "axis_normalization_missing",
+          "engine_axis_orientation_missing",
+          "external_adversarial_review_missing",
+          "nuisance_grid_is_coarse_not_posterior_sampler",
+          "operator_basis_map_missing",
+          "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+          "source_event_specific_nuisance_covariance_export_missing",
+          "waveform_calibration_prior_and_eft_systematics_not_closed"
+        ],
+        "detector_channel_responses": {
+          "GW150914": {
+            "H1": {
+              "K_plus": 0.606542357542,
+              "Re_K_minus": 0.521438124918,
+              "Im_K_minus": 0.521438124918,
+              "event_gmst": 36137.05523464343,
+              "sample_count": 336
+            },
+            "L1": {
+              "K_plus": 0.642279966479,
+              "Re_K_minus": 0.544467021839,
+              "Im_K_minus": 0.544467021839,
+              "event_gmst": 36137.05523464343,
+              "sample_count": 336
+            }
+          },
+          "GW200129": {
+            "H1": {
+              "K_plus": 0.606542357541,
+              "Re_K_minus": 0.521229972334,
+              "Im_K_minus": 0.521229972334,
+              "event_gmst": 46204.306317467686,
+              "sample_count": 336
+            },
+            "L1": {
+              "K_plus": 0.642279966479,
+              "Re_K_minus": 0.544444621359,
+              "Im_K_minus": 0.544444621359,
+              "event_gmst": 46204.306317467686,
+              "sample_count": 336
+            },
+            "V1": {
+              "K_plus": 0.612319828248,
+              "Re_K_minus": 0.529486176877,
+              "Im_K_minus": 0.529486176877,
+              "event_gmst": 46204.306317467686,
+              "sample_count": 336
+            }
+          }
+        },
+        "split_v2193_v1_blocker": {
+          "previous": "gw200129_v1_detector_channel_response",
+          "now_resolved_subpiece": "gw200129_v1_detector_response_and_hlv_likelihood",
+          "remaining_subpieces": [
+            "source_event_specific_nuisance_covariance_export",
+            "public_parspec_qeft_likelihood_or_posterior_samples",
+            "engine_axis_map_ready",
+            "claim_grade_waveform_systematics_and_review"
+          ]
+        }
+      }
+    },
+    {
+      "version": "v2.195",
+      "short_title": "R4 ParSpec source-event covariance export",
+      "note_path": "docs/results/2026-06-20-v2.195-r4-parspec-source-event-covariance-export.md",
+      "artifact_path": "experiments/results/v2.195/r4_parspec_source_event_covariance_export.json",
+      "retained_details": [
+        "event-specific covariance is exported for GW150914",
+        "event-specific covariance is exported for GW200129",
+        "combined GW150914/GW200129 covariance is exported",
+        "nuisance parameters remain total mass, eta, tc shift, and phase",
+        "the grid is coarse and not a posterior sampler",
+        "public ParSpec likelihood and engine-axis map remain missing"
+      ],
+      "frontier_change": "Closed the source-event covariance export subpiece.",
+      "remaining_blocker": "parspec_public_likelihood_or_axis_map_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.195",
+        "route_status": "parspec_source_event_covariance_export_ready_axis_map_missing",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "attach_public_parspec_qeft_likelihood_or_axis_map",
+        "event_covariances": [
+          {
+            "paper_event": "GW150914",
+            "event_version": "GW150914-v3",
+            "detectors": [
+              "H1",
+              "L1"
+            ],
+            "grid_points": 125,
+            "nuisance_points_per_detector": [
+              81,
+              81
+            ],
+            "posterior_mean": {
+              "g_R4_c1": 0.49562610844,
+              "g_R4_c2": 0.49561181516,
+              "g_R4_c3": -0.003517066352
+            },
+            "posterior_covariance_eigenvalues": [
+              0.00079705428,
+              0.000800776816,
+              0.000800829697
+            ],
+            "best_marginal_grid_point": {
+              "g_R4_c1": 0.535629103212,
+              "g_R4_c2": 0.475614794648,
+              "g_R4_c3": -0.023513023764,
+              "delta_g_R4_c1": 0.04,
+              "delta_g_R4_c2": -0.02,
+              "delta_g_R4_c3": -0.02,
+              "log_marginal_likelihood": -0.99999803885,
+              "profile_log_likelihood": -0.999474151397
+            }
+          },
+          {
+            "paper_event": "GW200129",
+            "event_version": "GW200129_065458-v1",
+            "detectors": [
+              "H1",
+              "L1",
+              "V1"
+            ],
+            "grid_points": 125,
+            "nuisance_points_per_detector": [
+              81,
+              81,
+              81
+            ],
+            "posterior_mean": {
+              "g_R4_c1": 0.495625793532,
+              "g_R4_c2": 0.495611465963,
+              "g_R4_c3": -0.003514819799
+            },
+            "posterior_covariance_eigenvalues": [
+              0.000795585861,
+              0.000801164617,
+              0.000801243402
+            ],
+            "best_marginal_grid_point": {
+              "g_R4_c1": 0.455629103212,
+              "g_R4_c2": 0.515614794648,
+              "g_R4_c3": 0.016486976236,
+              "delta_g_R4_c1": -0.04,
+              "delta_g_R4_c2": 0.02,
+              "delta_g_R4_c3": 0.02,
+              "log_marginal_likelihood": -1.499998219437,
+              "profile_log_likelihood": -1.499384678185
+            }
+          }
+        ],
+        "combined_event_set_covariance": {
+          "source_events": [
+            "GW150914",
+            "GW200129"
+          ],
+          "detectors_by_event": {
+            "GW150914": [
+              "H1",
+              "L1"
+            ],
+            "GW200129": [
+              "H1",
+              "L1",
+              "V1"
+            ]
+          },
+          "grid_points": 125,
+          "posterior_mean": {
+            "g_R4_c1": 0.495622827625,
+            "g_R4_c2": 0.495608515333,
+            "g_R4_c3": -0.003518833974
+          },
+          "posterior_covariance_eigenvalues": [
+            0.000792664397,
+            0.000801935517,
+            0.000802067334
+          ],
+          "best_marginal_grid_point": {
+            "g_R4_c1": 0.535629103212,
+            "g_R4_c2": 0.455614794648,
+            "g_R4_c3": -0.003513023764,
+            "delta_g_R4_c1": 0.04,
+            "delta_g_R4_c2": -0.04,
+            "delta_g_R4_c3": 0.0,
+            "log_marginal_likelihood": -2.499999858545,
+            "profile_log_likelihood": -2.499972766474
+          }
+        },
+        "remaining_claim_blockers": [
+          "axis_normalization_missing",
+          "engine_axis_orientation_missing",
+          "external_adversarial_review_missing",
+          "nuisance_grid_is_coarse_not_posterior_sampler",
+          "operator_basis_map_missing",
+          "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+          "waveform_calibration_prior_and_eft_systematics_not_closed"
+        ]
+      }
+    },
+    {
+      "version": "v2.196",
+      "short_title": "R4 ParSpec published-bound surrogate",
+      "note_path": "docs/results/2026-06-20-v2.196-r4-parspec-published-bound-surrogate.md",
+      "artifact_path": "experiments/results/v2.196/r4_parspec_published_bound_surrogate.json",
+      "retained_details": [
+        "GW150914 qEFT bound is 51.7 km at 90 percent",
+        "GW200129 qEFT bound is 54.8 km at 90 percent",
+        "combined qEFT bound is 51.3 km at 90 percent",
+        "half-normal surrogate parameters are exported",
+        "event-set mismatch and source-axis mismatch are removed",
+        "the surrogate is not a public posterior or likelihood object"
+      ],
+      "frontier_change": "Attached published qEFT bounds as a nonclaiming event-aligned source-axis surrogate.",
+      "remaining_blocker": "public_likelihood_and_engine_axis_map_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.196",
+        "route_status": "parspec_published_bound_surrogate_ready_axis_map_and_public_likelihood_missing",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "derive_source_backed_axis_map_or_acquire_machine_readable_qeft_likelihood",
+        "surrogates": [
+          {
+            "label": "GW150914",
+            "upper_bound_km_90": 51.7,
+            "half_normal_sigma_km": 31.431368209838,
+            "variance_km2": 987.930907542444,
+            "claim_use_allowed": false
+          },
+          {
+            "label": "GW200129",
+            "upper_bound_km_90": 54.8,
+            "half_normal_sigma_km": 33.316034388765,
+            "variance_km2": 1109.958147393369,
+            "claim_use_allowed": false
+          },
+          {
+            "label": "combined",
+            "upper_bound_km_90": 51.3,
+            "half_normal_sigma_km": 31.188185477074,
+            "variance_km2": 972.702913352354,
+            "claim_use_allowed": false
+          }
+        ],
+        "machine_readable_public_likelihood_ready": false,
+        "resolved_v2191_attachment_blockers": [
+          "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+          "parspec_likelihood_source_axis_mismatch"
+        ],
+        "remaining_packet_blockers": [
+          "axis_normalization",
+          "axis_normalization_missing",
+          "calibration_and_waveform_systematics_not_exported",
+          "engine_axis_map_covariance_pushforward_missing",
+          "engine_axis_map_jacobian_missing",
+          "engine_axis_map_not_ready",
+          "engine_axis_map_target_axes_mismatch",
+          "engine_axis_orientation_missing",
+          "engine_axis_vector_missing",
+          "operator_basis_map",
+          "operator_basis_map_missing",
+          "parspec_likelihood_export_not_confirmed",
+          "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+        ]
+      }
+    },
+    {
+      "version": "v2.197",
+      "short_title": "R4 ParSpec qNM deformation Jacobian",
+      "note_path": "docs/results/2026-06-20-v2.197-r4-parspec-qnm-deformation-jacobian.md",
+      "artifact_path": "experiments/results/v2.197/r4_parspec_qnm_deformation_jacobian.json",
+      "retained_details": [
+        "ell_qEFT is pushed into source-space qNM deformation coordinates",
+        "normalized gamma uses the sixth power of ell_qEFT over bound",
+        "qEFT qNM coefficients from v2.191 are preserved",
+        "Jacobian rows are exported for GW150914, GW200129, and combined",
+        "absolute gamma normalization still needs remnant mass and redshift",
+        "qNM-to-Bresciani R4 operator map remains the decisive blocker"
+      ],
+      "frontier_change": "Closed the source-space qNM deformation subpiece.",
+      "remaining_blocker": "qnm_to_bresciani_engine_r4_operator_map_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.197",
+        "route_status": "parspec_qnm_deformation_jacobian_ready_engine_axis_map_missing",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "derive_qnm_deformation_to_bresciani_engine_r4_operator_basis_map",
+        "qeft_power": 6,
+        "qnm_axes": [
+          "delta_omega_qeft_0",
+          "delta_tau_qeft_0",
+          "delta_omega_qeft_1",
+          "delta_tau_qeft_1"
+        ],
+        "engine_axes": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "qnm_coefficient_vector": {
+          "delta_omega_qeft_0": -0.2114,
+          "delta_tau_qeft_0": -0.607,
+          "delta_omega_qeft_1": -1.5263,
+          "delta_tau_qeft_1": 171.35
+        },
+        "event_deformation_rows": [
+          {
+            "label": "GW150914",
+            "upper_bound_km_90": 51.7,
+            "normalization": "normalized_gamma=(ell_qEFT_km/upper_bound_km_90)^6; source absolute gamma still requires remnant mass and redshift.",
+            "dqnm_deformation_d_ell_at_published_bound": {
+              "delta_omega_qeft_0": -0.02453384913,
+              "delta_tau_qeft_0": -0.070444874275,
+              "delta_omega_qeft_1": -0.177133462282,
+              "delta_tau_qeft_1": 19.885880077369
+            },
+            "engine_axis_map_ready": false
+          },
+          {
+            "label": "GW200129",
+            "upper_bound_km_90": 54.8,
+            "normalization": "normalized_gamma=(ell_qEFT_km/upper_bound_km_90)^6; source absolute gamma still requires remnant mass and redshift.",
+            "dqnm_deformation_d_ell_at_published_bound": {
+              "delta_omega_qeft_0": -0.023145985401,
+              "delta_tau_qeft_0": -0.066459854015,
+              "delta_omega_qeft_1": -0.167113138686,
+              "delta_tau_qeft_1": 18.760948905109
+            },
+            "engine_axis_map_ready": false
+          },
+          {
+            "label": "combined",
+            "upper_bound_km_90": 51.3,
+            "normalization": "normalized_gamma=(ell_qEFT_km/upper_bound_km_90)^6; source absolute gamma still requires remnant mass and redshift.",
+            "dqnm_deformation_d_ell_at_published_bound": {
+              "delta_omega_qeft_0": -0.024725146199,
+              "delta_tau_qeft_0": -0.070994152047,
+              "delta_omega_qeft_1": -0.178514619883,
+              "delta_tau_qeft_1": 20.040935672515
+            },
+            "engine_axis_map_ready": false
+          }
+        ],
+        "source_space_jacobian_ready": true,
+        "engine_axis_map_ready": false,
+        "remaining_claim_blockers": [
+          "axis_normalization_missing",
+          "claim_grade_systematics_export_missing",
+          "engine_axis_orientation_missing",
+          "external_adversarial_review_missing",
+          "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+          "qnm_deformation_to_bresciani_engine_r4_operator_basis_map_missing"
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "continuity_ledger_ready": true,
+    "version_sequence_complete": true,
+    "missing_note_versions": [],
+    "missing_artifact_versions": [],
+    "missing_detail_versions": [],
+    "claim_gate_violations": [],
+    "retained_detail_count": 47,
+    "claim_boundary_preserved": true
+  },
+  "latest_preserved_route_status": "parspec_qnm_deformation_jacobian_ready_engine_axis_map_missing",
+  "latest_remaining_claim_blockers": [
+    "axis_normalization_missing",
+    "claim_grade_systematics_export_missing",
+    "engine_axis_orientation_missing",
+    "external_adversarial_review_missing",
+    "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+    "qnm_deformation_to_bresciani_engine_r4_operator_basis_map_missing"
+  ],
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "route_status": "r4_parspec_continuity_ledger_ready_nonclaiming",
+  "selected_next_build_action": "continue_with_qnm_to_bresciani_operator_map_or_public_likelihood",
+  "best_next_artifact": "A source-backed qNM-deformation to Bresciani R4 operator-basis map, a machine-readable public ParSpec/qEFT likelihood packet, or absolute gamma normalization metadata.",
+  "interpretation": "This is a documentation and reproducibility artifact. It adds no new physics claim; it protects the precise ParSpec route state for future writeups and keeps the claim boundary closed."
+}

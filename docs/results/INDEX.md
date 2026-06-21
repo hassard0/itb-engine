@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (308 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (309 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -357,3 +357,4 @@ Auto-generated front door to the full research program (308 notes). Regenerate w
 | v2.195 | [v2.195 - R4 ParSpec source-event covariance export](2026-06-20-v2.195-r4-parspec-source-event-covariance-export.md) | Can the v2.194 source-event topology likelihood export event-specific and |
 | v2.196 | [v2.196 - R4 ParSpec published-bound surrogate](2026-06-20-v2.196-r4-parspec-published-bound-surrogate.md) | If no public machine-readable ParSpec/qEFT likelihood object is available, can |
 | v2.197 | [v2.197 - R4 ParSpec qNM deformation Jacobian](2026-06-20-v2.197-r4-parspec-qnm-deformation-jacobian.md) | Can the v2.196 `ell_qEFT_km` published-bound surrogate be pushed into the |
+| v2.198 | [v2.198 - R4 ParSpec continuity ledger](2026-06-20-v2.198-r4-parspec-continuity-ledger.md) | There were many runs between the current README and the latest ParSpec/qNM |
