@@ -1,6 +1,6 @@
 # ITB Engine Research Roadmap
 
-This roadmap starts from the v2.207 state. It is a research plan, not a solved
+This roadmap starts from the v2.208 state. It is a research plan, not a solved
 quantum-gravity claim.
 
 ## Current State
@@ -22,7 +22,11 @@ The strongest live-data route is the R4/GWOSC/ParSpec path. The repo can now:
   runtime Berti-GR rows are allowed for internal pyRing reruns while ParSpec
   high-spin rows remain comparison-only;
 - complete the pyRing-to-Bresciani orientation audit as a no-map ledger that
-  forbids synthetic branch-to-operator projections.
+  forbids synthetic branch-to-operator projections;
+- specify a reproducible pyRing EFT likelihood-rerun packet with public input
+  pins, the paper-named pyRing execution commit, a 12-row event/direction config
+  grid, runtime-coordinate policy, and an output contract for posterior samples
+  or a log-likelihood grid.
 
 The decisive current blocker is still unresolved:
 
@@ -88,6 +92,15 @@ deformation coordinates to Bresciani K coordinates. The best executable next
 route is a pyRing EFT likelihood-rerun packet in runtime coordinates, with the
 Bresciani map gate still closed.
 
+v2.208 makes that rerun packet concrete. It pins the public pyRing `EFT_QNMs`
+branch probe, the fixed pyRing commit named by the public EFT ringdown analysis,
+public GWOSC event and strain handles for GW150914 and GW200129, source-event
+remnant spins, the pyRing runtime coordinate scope, paper-faithful priors and
+runtime settings where available, and the exact output contract needed for a
+reproducible likelihood export. It does not execute the sampler, export
+posterior samples, export a log-likelihood grid, close systematics, or provide
+the qNM-to-Bresciani operator map.
+
 ## Roadmap
 
 1. Acquire a real qNM-to-Bresciani sensitivity source.
@@ -105,12 +118,13 @@ Bresciani map gate still closed.
    `g_R4_c1/c2/c3`. If no source supplies that, preserve the negative result
    rather than manufacturing a projection.
 
-3. Build a reproducible pyRing EFT likelihood-rerun packet.
-   v2.206 did not find a public posterior sample file, covariance matrix, or
-   log-likelihood grid, and v2.207 did not find a public qNM-to-Bresciani
-   operator edge. The practical next build is a nonclaiming pyRing runtime
-   likelihood packet with event metadata, priors, waveform/sampler versions,
-   hashes, license/access policy, and calibration/systematics policy.
+3. Execute the reproducible pyRing EFT likelihood-rerun packet.
+   v2.208 defines the packet shape. The practical next build is an executable
+   config exporter that writes pyRing runtime configs for the 12 event/direction
+   rows, hashes those configs, locks the environment, runs the sampler, and
+   exports either posterior samples or a log-likelihood grid with diagnostics.
+   The export must preserve whether each row is paper-reported `quartic_1/2` or
+   a `quartic_3` branch-extension control.
 
 4. Attach claim-grade systematics.
    The current route has deterministic controls and coarse likelihood grids. A
@@ -133,8 +147,10 @@ Bresciani map gate still closed.
 
 The next best artifact is one of:
 
-- `r4_parspec_pyring_likelihood_rerun_packet.py`, if pyRing remains the most
-  practical route to a reproducible likelihood export in runtime coordinates;
+- `r4_parspec_pyring_runtime_config_exporter.py`, to materialize and hash the
+  v2.208 pyRing runtime rerun configs before sampler execution;
+- `r4_parspec_pyring_runtime_likelihood_export.py`, after the sampler can
+  produce posterior samples or a log-likelihood grid in runtime coordinates;
 - `r4_parspec_qnm_to_bresciani_sensitivity.py`, if a source-backed 3x4
   sensitivity relation can be derived or imported;
 - `r4_parspec_qeft_likelihood_rerun_packet.py`, if a source-backed ParSpec/qEFT

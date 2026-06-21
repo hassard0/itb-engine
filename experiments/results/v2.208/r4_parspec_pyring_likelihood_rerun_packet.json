@@ -1,0 +1,1305 @@
+{
+  "version": "v2.208",
+  "basis": [
+    "v2.192_source_event_alignment_manifest",
+    "v2.203_pyring_event_spin_jacobian",
+    "v2.204_runtime_normalization_policy",
+    "v2.207_qnm_bresciani_source_route_graph",
+    "public_pyring_paper_commit",
+    "public_pyring_EFT_QNMs_branch",
+    "public_GWOSC_event_versions"
+  ],
+  "rerun_packet": {
+    "packet_id": "r4_parspec_pyring_likelihood_rerun_packet_v1",
+    "version": "v2.208",
+    "source_manifest": {
+      "pyring_repo_url": "https://git.ligo.org/lscsoft/pyring",
+      "pyring_branch": "EFT_QNMs",
+      "pyring_branch_probe_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+      "pyring_execution_commit_sha": "6553253b4521d4bd2e82f5b86769373850b8b10c",
+      "pyring_execution_commit_url": "https://git.ligo.org/lscsoft/pyring/-/commit/6553253b4521d4bd2e82f5b86769373850b8b10c",
+      "pyring_install_doc_url": "https://git.ligo.org/lscsoft/pyring/-/blob/6553253b4521d4bd2e82f5b86769373850b8b10c/docs/install_and_run.rst",
+      "pyring_io_doc_url": "https://git.ligo.org/lscsoft/pyring/-/blob/6553253b4521d4bd2e82f5b86769373850b8b10c/docs/basic_usage.rst",
+      "pyring_tree_url": "https://git.ligo.org/lscsoft/pyring/-/tree/EFT_QNMs/pyRing/data/NR_data",
+      "pyring_waveform_source_url": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/waveform.pyx",
+      "pyring_initialise_source_url": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/initialise.py",
+      "pyring_eft_ringdown_analysis_url": "https://arxiv.org/abs/2411.17893",
+      "normalization_policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+      "previous_route_graph_artifact": "experiments\\results\\v2.207\\r4_parspec_qnm_bresciani_source_route_graph.json",
+      "source_scope": "public pyRing EFT_QNMs branch plus public GWOSC strain/event metadata; no private likelihood or unpublished posterior is used",
+      "execution_pin_policy": "Use the pyRing commit named by the public EFT ringdown analysis for executable reruns; retain the moving EFT_QNMs branch probe head only as coefficient-table provenance from v2.201."
+    },
+    "event_manifest": {
+      "source_events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "detector_topology_by_event": {
+        "GW150914": [
+          "H1",
+          "L1"
+        ],
+        "GW200129": [
+          "H1",
+          "L1",
+          "V1"
+        ]
+      },
+      "public_strain_by_event": {
+        "GW150914": {
+          "event_version": "GW150914-v3",
+          "event_version_url": "https://gwosc.org/api/v2/event-versions/GW150914-v3",
+          "doi": "https://doi.org/10.7935/82H3-HH23",
+          "gps": 1126259462.4,
+          "detectors": [
+            "H1",
+            "L1"
+          ],
+          "strain_records_32s_4khz_hdf5": [
+            {
+              "detector": "H1",
+              "duration": 32,
+              "sample_rate_hz": 4096,
+              "gps_start": 1126259447,
+              "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/H-H1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+            },
+            {
+              "detector": "L1",
+              "duration": 32,
+              "sample_rate_hz": 4096,
+              "gps_start": 1126259447,
+              "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/L-L1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+            }
+          ],
+          "strain_records_4096s_4khz_hdf5": [
+            {
+              "detector": "H1",
+              "duration": 4096,
+              "sample_rate_hz": 4096,
+              "gps_start": 1126257415,
+              "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/H-H1_GWOSC_4KHZ_R1-1126257415-4096.hdf5"
+            },
+            {
+              "detector": "L1",
+              "duration": 4096,
+              "sample_rate_hz": 4096,
+              "gps_start": 1126257415,
+              "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/L-L1_GWOSC_4KHZ_R1-1126257415-4096.hdf5"
+            }
+          ]
+        },
+        "GW200129": {
+          "event_version": "GW200129_065458-v1",
+          "event_version_url": "https://gwosc.org/api/v2/event-versions/GW200129_065458-v1",
+          "doi": "https://doi.org/10.7935/b024-1886",
+          "gps": 1264316116.4,
+          "detectors": [
+            "H1",
+            "L1",
+            "V1"
+          ],
+          "strain_records_32s_4khz_hdf5": [
+            {
+              "detector": "H1",
+              "duration": 32,
+              "sample_rate_hz": 4096,
+              "gps_start": 1264316101,
+              "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/H-H1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+            },
+            {
+              "detector": "L1",
+              "duration": 32,
+              "sample_rate_hz": 4096,
+              "gps_start": 1264316101,
+              "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/L-L1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+            },
+            {
+              "detector": "V1",
+              "duration": 32,
+              "sample_rate_hz": 4096,
+              "gps_start": 1264316101,
+              "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/V-V1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+            }
+          ],
+          "strain_records_4096s_4khz_hdf5": [
+            {
+              "detector": "H1",
+              "duration": 4096,
+              "sample_rate_hz": 4096,
+              "gps_start": 1264314069,
+              "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/H-H1_GWOSC_4KHZ_R1-1264314069-4096.hdf5"
+            },
+            {
+              "detector": "L1",
+              "duration": 4096,
+              "sample_rate_hz": 4096,
+              "gps_start": 1264314069,
+              "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/L-L1_GWOSC_4KHZ_R1-1264314069-4096.hdf5"
+            },
+            {
+              "detector": "V1",
+              "duration": 4096,
+              "sample_rate_hz": 4096,
+              "gps_start": 1264314069,
+              "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/V-V1_GWOSC_4KHZ_R1-1264314069-4096.hdf5"
+            }
+          ]
+        }
+      },
+      "sample_rate_hz": 4096,
+      "remnant_spin_policy": {
+        "GW150914": {
+          "spin": 0.66695269067,
+          "source": "pyRing bundled GW150914_LAL_IMRPhenomP_O1_GWOSC_Mf_af_samples.txt",
+          "sample_count": 17070,
+          "sample_sha256": "af11e39da06ee5ad9addbc15b7dc2fb4ef5c778ff87826225f2879753be49916",
+          "summary": {
+            "af_mean": 0.665174370082,
+            "af_median": 0.66695269067,
+            "af_p05": 0.61940334427,
+            "af_p95": 0.705021230794
+          }
+        },
+        "GW200129": {
+          "spin": 0.73,
+          "source": "v2.199 GWOSC preferred parameter snapshot",
+          "event_version": "GW200129_065458-v1",
+          "selected_pe_record": "GWTC-3-confident_GW200129_065458_R2_pe_combined",
+          "summary": {
+            "af_best": 0.73,
+            "af_lower": 0.68,
+            "af_upper": 0.79
+          }
+        }
+      },
+      "event_records": [
+        {
+          "paper_event": "GW150914",
+          "gwosc_event_name": "GW150914",
+          "event_version": "GW150914-v3",
+          "gps": 1126259462.4,
+          "detectors": [
+            "H1",
+            "L1"
+          ]
+        },
+        {
+          "paper_event": "GW200129",
+          "gwosc_event_name": "GW200129_065458",
+          "event_version": "GW200129_065458-v1",
+          "gps": 1264316116.4,
+          "detectors": [
+            "H1",
+            "L1",
+            "V1"
+          ]
+        }
+      ]
+    },
+    "runtime_coordinate_policy": {
+      "coordinate_scope": "pyring_runtime_branch_coordinates",
+      "source_directions": [
+        "quartic_1_minus",
+        "quartic_1_plus",
+        "quartic_2_minus",
+        "quartic_2_plus",
+        "quartic_3_minus",
+        "quartic_3_plus"
+      ],
+      "modes": [
+        "220",
+        "221"
+      ],
+      "paper_reported_theories": [
+        "quartic_1",
+        "quartic_2"
+      ],
+      "branch_extension_control_theories": [
+        "quartic_3"
+      ],
+      "sampled_unit": "signed ell_km prior transformed by pyRing to gamma_EFT_runtime for one fixed EFT theory and branch direction per rerun row",
+      "paper_prior_policy": {
+        "Mf_Msun": [
+          10.0,
+          500.0
+        ],
+        "af": [
+          0.0,
+          0.93
+        ],
+        "amplitude": [
+          0.0,
+          50.0
+        ],
+        "phase": [
+          0.0,
+          "2*pi"
+        ],
+        "ell_km": [
+          -740.0,
+          740.0
+        ],
+        "luminosity_distance": "uniform_within_event_95_percent_bounds",
+        "dist_flat_prior": true
+      },
+      "paper_runtime_settings": {
+        "template": "Kerr",
+        "kerr_modes": [
+          "(2,2,2,0)",
+          "(2,2,2,1)"
+        ],
+        "domega_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "dtau_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "analysis_segment_seconds": 0.2,
+        "event_peak_time_policy": "fixed_to_reconstructed_peak",
+        "sky_position_policy": "fixed_from_full_signal_maximum_likelihood"
+      },
+      "normalization_policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+      "columns_are_branch_splitting_directions": true,
+      "columns_are_independent_operator_axes": false,
+      "columns_are_bresciani_axes": false,
+      "allowed_interpretation": "Use these coordinates for a reproducible pyRing runtime likelihood export only. They are not Bresciani K coordinates and are not claim-grade framework-exclusion axes."
+    },
+    "minimum_rerun_config_grid": [
+      {
+        "run_id": "v2208_gw150914_quartic_1_minus_runtime",
+        "paper_event": "GW150914",
+        "event_version": "GW150914-v3",
+        "detectors": [
+          "H1",
+          "L1"
+        ],
+        "strain_duration_seconds": 32,
+        "sample_rate_hz": 4096,
+        "strain_records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1126259447,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/H-H1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1126259447,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/L-L1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+          }
+        ],
+        "pyring_repo_url": "https://git.ligo.org/lscsoft/pyring",
+        "pyring_branch": "EFT_QNMs",
+        "pyring_branch_probe_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+        "pyring_execution_commit_sha": "6553253b4521d4bd2e82f5b86769373850b8b10c",
+        "waveform_family": "pyRing_QNM_EFT",
+        "pyring_template": "Kerr",
+        "eft_theory": "quartic_1",
+        "eft_branch": "minus",
+        "eft_direction": "quartic_1_minus",
+        "paper_reported_theory": true,
+        "branch_extension_control": false,
+        "coordinate_scope": "pyring_runtime_branch_coordinates",
+        "modes": [
+          "220",
+          "221"
+        ],
+        "kerr_modes": [
+          "(2,2,2,0)",
+          "(2,2,2,1)"
+        ],
+        "domega_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "dtau_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "analysis_segment_seconds": 0.2,
+        "normalization_policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+        "prior_policy": "fixed event and direction; signed ell_km uniform prior [-740,740] with paper mass, spin, amplitude, phase, and distance priors exported in the executable pyRing config",
+        "sampler_status": "not_executed_in_this_packet",
+        "required_outputs": [
+          "pyring_run_config",
+          "posterior_samples_or_log_likelihood_grid",
+          "prior_specification",
+          "sampler_diagnostics",
+          "environment_lock",
+          "config_hash",
+          "output_hash_manifest",
+          "nonclaiming_coordinate_label",
+          "event_detector_strain_manifest",
+          "waveform_systematics_statement"
+        ]
+      },
+      {
+        "run_id": "v2208_gw150914_quartic_1_plus_runtime",
+        "paper_event": "GW150914",
+        "event_version": "GW150914-v3",
+        "detectors": [
+          "H1",
+          "L1"
+        ],
+        "strain_duration_seconds": 32,
+        "sample_rate_hz": 4096,
+        "strain_records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1126259447,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/H-H1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1126259447,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/L-L1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+          }
+        ],
+        "pyring_repo_url": "https://git.ligo.org/lscsoft/pyring",
+        "pyring_branch": "EFT_QNMs",
+        "pyring_branch_probe_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+        "pyring_execution_commit_sha": "6553253b4521d4bd2e82f5b86769373850b8b10c",
+        "waveform_family": "pyRing_QNM_EFT",
+        "pyring_template": "Kerr",
+        "eft_theory": "quartic_1",
+        "eft_branch": "plus",
+        "eft_direction": "quartic_1_plus",
+        "paper_reported_theory": true,
+        "branch_extension_control": false,
+        "coordinate_scope": "pyring_runtime_branch_coordinates",
+        "modes": [
+          "220",
+          "221"
+        ],
+        "kerr_modes": [
+          "(2,2,2,0)",
+          "(2,2,2,1)"
+        ],
+        "domega_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "dtau_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "analysis_segment_seconds": 0.2,
+        "normalization_policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+        "prior_policy": "fixed event and direction; signed ell_km uniform prior [-740,740] with paper mass, spin, amplitude, phase, and distance priors exported in the executable pyRing config",
+        "sampler_status": "not_executed_in_this_packet",
+        "required_outputs": [
+          "pyring_run_config",
+          "posterior_samples_or_log_likelihood_grid",
+          "prior_specification",
+          "sampler_diagnostics",
+          "environment_lock",
+          "config_hash",
+          "output_hash_manifest",
+          "nonclaiming_coordinate_label",
+          "event_detector_strain_manifest",
+          "waveform_systematics_statement"
+        ]
+      },
+      {
+        "run_id": "v2208_gw150914_quartic_2_minus_runtime",
+        "paper_event": "GW150914",
+        "event_version": "GW150914-v3",
+        "detectors": [
+          "H1",
+          "L1"
+        ],
+        "strain_duration_seconds": 32,
+        "sample_rate_hz": 4096,
+        "strain_records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1126259447,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/H-H1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1126259447,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/L-L1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+          }
+        ],
+        "pyring_repo_url": "https://git.ligo.org/lscsoft/pyring",
+        "pyring_branch": "EFT_QNMs",
+        "pyring_branch_probe_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+        "pyring_execution_commit_sha": "6553253b4521d4bd2e82f5b86769373850b8b10c",
+        "waveform_family": "pyRing_QNM_EFT",
+        "pyring_template": "Kerr",
+        "eft_theory": "quartic_2",
+        "eft_branch": "minus",
+        "eft_direction": "quartic_2_minus",
+        "paper_reported_theory": true,
+        "branch_extension_control": false,
+        "coordinate_scope": "pyring_runtime_branch_coordinates",
+        "modes": [
+          "220",
+          "221"
+        ],
+        "kerr_modes": [
+          "(2,2,2,0)",
+          "(2,2,2,1)"
+        ],
+        "domega_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "dtau_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "analysis_segment_seconds": 0.2,
+        "normalization_policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+        "prior_policy": "fixed event and direction; signed ell_km uniform prior [-740,740] with paper mass, spin, amplitude, phase, and distance priors exported in the executable pyRing config",
+        "sampler_status": "not_executed_in_this_packet",
+        "required_outputs": [
+          "pyring_run_config",
+          "posterior_samples_or_log_likelihood_grid",
+          "prior_specification",
+          "sampler_diagnostics",
+          "environment_lock",
+          "config_hash",
+          "output_hash_manifest",
+          "nonclaiming_coordinate_label",
+          "event_detector_strain_manifest",
+          "waveform_systematics_statement"
+        ]
+      },
+      {
+        "run_id": "v2208_gw150914_quartic_2_plus_runtime",
+        "paper_event": "GW150914",
+        "event_version": "GW150914-v3",
+        "detectors": [
+          "H1",
+          "L1"
+        ],
+        "strain_duration_seconds": 32,
+        "sample_rate_hz": 4096,
+        "strain_records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1126259447,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/H-H1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1126259447,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/L-L1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+          }
+        ],
+        "pyring_repo_url": "https://git.ligo.org/lscsoft/pyring",
+        "pyring_branch": "EFT_QNMs",
+        "pyring_branch_probe_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+        "pyring_execution_commit_sha": "6553253b4521d4bd2e82f5b86769373850b8b10c",
+        "waveform_family": "pyRing_QNM_EFT",
+        "pyring_template": "Kerr",
+        "eft_theory": "quartic_2",
+        "eft_branch": "plus",
+        "eft_direction": "quartic_2_plus",
+        "paper_reported_theory": true,
+        "branch_extension_control": false,
+        "coordinate_scope": "pyring_runtime_branch_coordinates",
+        "modes": [
+          "220",
+          "221"
+        ],
+        "kerr_modes": [
+          "(2,2,2,0)",
+          "(2,2,2,1)"
+        ],
+        "domega_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "dtau_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "analysis_segment_seconds": 0.2,
+        "normalization_policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+        "prior_policy": "fixed event and direction; signed ell_km uniform prior [-740,740] with paper mass, spin, amplitude, phase, and distance priors exported in the executable pyRing config",
+        "sampler_status": "not_executed_in_this_packet",
+        "required_outputs": [
+          "pyring_run_config",
+          "posterior_samples_or_log_likelihood_grid",
+          "prior_specification",
+          "sampler_diagnostics",
+          "environment_lock",
+          "config_hash",
+          "output_hash_manifest",
+          "nonclaiming_coordinate_label",
+          "event_detector_strain_manifest",
+          "waveform_systematics_statement"
+        ]
+      },
+      {
+        "run_id": "v2208_gw150914_quartic_3_minus_runtime",
+        "paper_event": "GW150914",
+        "event_version": "GW150914-v3",
+        "detectors": [
+          "H1",
+          "L1"
+        ],
+        "strain_duration_seconds": 32,
+        "sample_rate_hz": 4096,
+        "strain_records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1126259447,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/H-H1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1126259447,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/L-L1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+          }
+        ],
+        "pyring_repo_url": "https://git.ligo.org/lscsoft/pyring",
+        "pyring_branch": "EFT_QNMs",
+        "pyring_branch_probe_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+        "pyring_execution_commit_sha": "6553253b4521d4bd2e82f5b86769373850b8b10c",
+        "waveform_family": "pyRing_QNM_EFT",
+        "pyring_template": "Kerr",
+        "eft_theory": "quartic_3",
+        "eft_branch": "minus",
+        "eft_direction": "quartic_3_minus",
+        "paper_reported_theory": false,
+        "branch_extension_control": true,
+        "coordinate_scope": "pyring_runtime_branch_coordinates",
+        "modes": [
+          "220",
+          "221"
+        ],
+        "kerr_modes": [
+          "(2,2,2,0)",
+          "(2,2,2,1)"
+        ],
+        "domega_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "dtau_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "analysis_segment_seconds": 0.2,
+        "normalization_policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+        "prior_policy": "fixed event and direction; signed ell_km uniform prior [-740,740] with paper mass, spin, amplitude, phase, and distance priors exported in the executable pyRing config",
+        "sampler_status": "not_executed_in_this_packet",
+        "required_outputs": [
+          "pyring_run_config",
+          "posterior_samples_or_log_likelihood_grid",
+          "prior_specification",
+          "sampler_diagnostics",
+          "environment_lock",
+          "config_hash",
+          "output_hash_manifest",
+          "nonclaiming_coordinate_label",
+          "event_detector_strain_manifest",
+          "waveform_systematics_statement"
+        ]
+      },
+      {
+        "run_id": "v2208_gw150914_quartic_3_plus_runtime",
+        "paper_event": "GW150914",
+        "event_version": "GW150914-v3",
+        "detectors": [
+          "H1",
+          "L1"
+        ],
+        "strain_duration_seconds": 32,
+        "sample_rate_hz": 4096,
+        "strain_records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1126259447,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/H-H1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1126259447,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/L-L1_GWOSC_4KHZ_R1-1126259447-32.hdf5"
+          }
+        ],
+        "pyring_repo_url": "https://git.ligo.org/lscsoft/pyring",
+        "pyring_branch": "EFT_QNMs",
+        "pyring_branch_probe_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+        "pyring_execution_commit_sha": "6553253b4521d4bd2e82f5b86769373850b8b10c",
+        "waveform_family": "pyRing_QNM_EFT",
+        "pyring_template": "Kerr",
+        "eft_theory": "quartic_3",
+        "eft_branch": "plus",
+        "eft_direction": "quartic_3_plus",
+        "paper_reported_theory": false,
+        "branch_extension_control": true,
+        "coordinate_scope": "pyring_runtime_branch_coordinates",
+        "modes": [
+          "220",
+          "221"
+        ],
+        "kerr_modes": [
+          "(2,2,2,0)",
+          "(2,2,2,1)"
+        ],
+        "domega_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "dtau_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "analysis_segment_seconds": 0.2,
+        "normalization_policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+        "prior_policy": "fixed event and direction; signed ell_km uniform prior [-740,740] with paper mass, spin, amplitude, phase, and distance priors exported in the executable pyRing config",
+        "sampler_status": "not_executed_in_this_packet",
+        "required_outputs": [
+          "pyring_run_config",
+          "posterior_samples_or_log_likelihood_grid",
+          "prior_specification",
+          "sampler_diagnostics",
+          "environment_lock",
+          "config_hash",
+          "output_hash_manifest",
+          "nonclaiming_coordinate_label",
+          "event_detector_strain_manifest",
+          "waveform_systematics_statement"
+        ]
+      },
+      {
+        "run_id": "v2208_gw200129_quartic_1_minus_runtime",
+        "paper_event": "GW200129",
+        "event_version": "GW200129_065458-v1",
+        "detectors": [
+          "H1",
+          "L1",
+          "V1"
+        ],
+        "strain_duration_seconds": 32,
+        "sample_rate_hz": 4096,
+        "strain_records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/H-H1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/L-L1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          },
+          {
+            "detector": "V1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/V-V1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          }
+        ],
+        "pyring_repo_url": "https://git.ligo.org/lscsoft/pyring",
+        "pyring_branch": "EFT_QNMs",
+        "pyring_branch_probe_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+        "pyring_execution_commit_sha": "6553253b4521d4bd2e82f5b86769373850b8b10c",
+        "waveform_family": "pyRing_QNM_EFT",
+        "pyring_template": "Kerr",
+        "eft_theory": "quartic_1",
+        "eft_branch": "minus",
+        "eft_direction": "quartic_1_minus",
+        "paper_reported_theory": true,
+        "branch_extension_control": false,
+        "coordinate_scope": "pyring_runtime_branch_coordinates",
+        "modes": [
+          "220",
+          "221"
+        ],
+        "kerr_modes": [
+          "(2,2,2,0)",
+          "(2,2,2,1)"
+        ],
+        "domega_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "dtau_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "analysis_segment_seconds": 0.2,
+        "normalization_policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+        "prior_policy": "fixed event and direction; signed ell_km uniform prior [-740,740] with paper mass, spin, amplitude, phase, and distance priors exported in the executable pyRing config",
+        "sampler_status": "not_executed_in_this_packet",
+        "required_outputs": [
+          "pyring_run_config",
+          "posterior_samples_or_log_likelihood_grid",
+          "prior_specification",
+          "sampler_diagnostics",
+          "environment_lock",
+          "config_hash",
+          "output_hash_manifest",
+          "nonclaiming_coordinate_label",
+          "event_detector_strain_manifest",
+          "waveform_systematics_statement"
+        ]
+      },
+      {
+        "run_id": "v2208_gw200129_quartic_1_plus_runtime",
+        "paper_event": "GW200129",
+        "event_version": "GW200129_065458-v1",
+        "detectors": [
+          "H1",
+          "L1",
+          "V1"
+        ],
+        "strain_duration_seconds": 32,
+        "sample_rate_hz": 4096,
+        "strain_records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/H-H1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/L-L1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          },
+          {
+            "detector": "V1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/V-V1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          }
+        ],
+        "pyring_repo_url": "https://git.ligo.org/lscsoft/pyring",
+        "pyring_branch": "EFT_QNMs",
+        "pyring_branch_probe_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+        "pyring_execution_commit_sha": "6553253b4521d4bd2e82f5b86769373850b8b10c",
+        "waveform_family": "pyRing_QNM_EFT",
+        "pyring_template": "Kerr",
+        "eft_theory": "quartic_1",
+        "eft_branch": "plus",
+        "eft_direction": "quartic_1_plus",
+        "paper_reported_theory": true,
+        "branch_extension_control": false,
+        "coordinate_scope": "pyring_runtime_branch_coordinates",
+        "modes": [
+          "220",
+          "221"
+        ],
+        "kerr_modes": [
+          "(2,2,2,0)",
+          "(2,2,2,1)"
+        ],
+        "domega_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "dtau_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "analysis_segment_seconds": 0.2,
+        "normalization_policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+        "prior_policy": "fixed event and direction; signed ell_km uniform prior [-740,740] with paper mass, spin, amplitude, phase, and distance priors exported in the executable pyRing config",
+        "sampler_status": "not_executed_in_this_packet",
+        "required_outputs": [
+          "pyring_run_config",
+          "posterior_samples_or_log_likelihood_grid",
+          "prior_specification",
+          "sampler_diagnostics",
+          "environment_lock",
+          "config_hash",
+          "output_hash_manifest",
+          "nonclaiming_coordinate_label",
+          "event_detector_strain_manifest",
+          "waveform_systematics_statement"
+        ]
+      },
+      {
+        "run_id": "v2208_gw200129_quartic_2_minus_runtime",
+        "paper_event": "GW200129",
+        "event_version": "GW200129_065458-v1",
+        "detectors": [
+          "H1",
+          "L1",
+          "V1"
+        ],
+        "strain_duration_seconds": 32,
+        "sample_rate_hz": 4096,
+        "strain_records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/H-H1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/L-L1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          },
+          {
+            "detector": "V1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/V-V1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          }
+        ],
+        "pyring_repo_url": "https://git.ligo.org/lscsoft/pyring",
+        "pyring_branch": "EFT_QNMs",
+        "pyring_branch_probe_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+        "pyring_execution_commit_sha": "6553253b4521d4bd2e82f5b86769373850b8b10c",
+        "waveform_family": "pyRing_QNM_EFT",
+        "pyring_template": "Kerr",
+        "eft_theory": "quartic_2",
+        "eft_branch": "minus",
+        "eft_direction": "quartic_2_minus",
+        "paper_reported_theory": true,
+        "branch_extension_control": false,
+        "coordinate_scope": "pyring_runtime_branch_coordinates",
+        "modes": [
+          "220",
+          "221"
+        ],
+        "kerr_modes": [
+          "(2,2,2,0)",
+          "(2,2,2,1)"
+        ],
+        "domega_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "dtau_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "analysis_segment_seconds": 0.2,
+        "normalization_policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+        "prior_policy": "fixed event and direction; signed ell_km uniform prior [-740,740] with paper mass, spin, amplitude, phase, and distance priors exported in the executable pyRing config",
+        "sampler_status": "not_executed_in_this_packet",
+        "required_outputs": [
+          "pyring_run_config",
+          "posterior_samples_or_log_likelihood_grid",
+          "prior_specification",
+          "sampler_diagnostics",
+          "environment_lock",
+          "config_hash",
+          "output_hash_manifest",
+          "nonclaiming_coordinate_label",
+          "event_detector_strain_manifest",
+          "waveform_systematics_statement"
+        ]
+      },
+      {
+        "run_id": "v2208_gw200129_quartic_2_plus_runtime",
+        "paper_event": "GW200129",
+        "event_version": "GW200129_065458-v1",
+        "detectors": [
+          "H1",
+          "L1",
+          "V1"
+        ],
+        "strain_duration_seconds": 32,
+        "sample_rate_hz": 4096,
+        "strain_records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/H-H1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/L-L1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          },
+          {
+            "detector": "V1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/V-V1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          }
+        ],
+        "pyring_repo_url": "https://git.ligo.org/lscsoft/pyring",
+        "pyring_branch": "EFT_QNMs",
+        "pyring_branch_probe_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+        "pyring_execution_commit_sha": "6553253b4521d4bd2e82f5b86769373850b8b10c",
+        "waveform_family": "pyRing_QNM_EFT",
+        "pyring_template": "Kerr",
+        "eft_theory": "quartic_2",
+        "eft_branch": "plus",
+        "eft_direction": "quartic_2_plus",
+        "paper_reported_theory": true,
+        "branch_extension_control": false,
+        "coordinate_scope": "pyring_runtime_branch_coordinates",
+        "modes": [
+          "220",
+          "221"
+        ],
+        "kerr_modes": [
+          "(2,2,2,0)",
+          "(2,2,2,1)"
+        ],
+        "domega_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "dtau_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "analysis_segment_seconds": 0.2,
+        "normalization_policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+        "prior_policy": "fixed event and direction; signed ell_km uniform prior [-740,740] with paper mass, spin, amplitude, phase, and distance priors exported in the executable pyRing config",
+        "sampler_status": "not_executed_in_this_packet",
+        "required_outputs": [
+          "pyring_run_config",
+          "posterior_samples_or_log_likelihood_grid",
+          "prior_specification",
+          "sampler_diagnostics",
+          "environment_lock",
+          "config_hash",
+          "output_hash_manifest",
+          "nonclaiming_coordinate_label",
+          "event_detector_strain_manifest",
+          "waveform_systematics_statement"
+        ]
+      },
+      {
+        "run_id": "v2208_gw200129_quartic_3_minus_runtime",
+        "paper_event": "GW200129",
+        "event_version": "GW200129_065458-v1",
+        "detectors": [
+          "H1",
+          "L1",
+          "V1"
+        ],
+        "strain_duration_seconds": 32,
+        "sample_rate_hz": 4096,
+        "strain_records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/H-H1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/L-L1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          },
+          {
+            "detector": "V1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/V-V1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          }
+        ],
+        "pyring_repo_url": "https://git.ligo.org/lscsoft/pyring",
+        "pyring_branch": "EFT_QNMs",
+        "pyring_branch_probe_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+        "pyring_execution_commit_sha": "6553253b4521d4bd2e82f5b86769373850b8b10c",
+        "waveform_family": "pyRing_QNM_EFT",
+        "pyring_template": "Kerr",
+        "eft_theory": "quartic_3",
+        "eft_branch": "minus",
+        "eft_direction": "quartic_3_minus",
+        "paper_reported_theory": false,
+        "branch_extension_control": true,
+        "coordinate_scope": "pyring_runtime_branch_coordinates",
+        "modes": [
+          "220",
+          "221"
+        ],
+        "kerr_modes": [
+          "(2,2,2,0)",
+          "(2,2,2,1)"
+        ],
+        "domega_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "dtau_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "analysis_segment_seconds": 0.2,
+        "normalization_policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+        "prior_policy": "fixed event and direction; signed ell_km uniform prior [-740,740] with paper mass, spin, amplitude, phase, and distance priors exported in the executable pyRing config",
+        "sampler_status": "not_executed_in_this_packet",
+        "required_outputs": [
+          "pyring_run_config",
+          "posterior_samples_or_log_likelihood_grid",
+          "prior_specification",
+          "sampler_diagnostics",
+          "environment_lock",
+          "config_hash",
+          "output_hash_manifest",
+          "nonclaiming_coordinate_label",
+          "event_detector_strain_manifest",
+          "waveform_systematics_statement"
+        ]
+      },
+      {
+        "run_id": "v2208_gw200129_quartic_3_plus_runtime",
+        "paper_event": "GW200129",
+        "event_version": "GW200129_065458-v1",
+        "detectors": [
+          "H1",
+          "L1",
+          "V1"
+        ],
+        "strain_duration_seconds": 32,
+        "sample_rate_hz": 4096,
+        "strain_records": [
+          {
+            "detector": "H1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/H-H1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          },
+          {
+            "detector": "L1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/L-L1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          },
+          {
+            "detector": "V1",
+            "duration": 32,
+            "sample_rate_hz": 4096,
+            "gps_start": 1264316101,
+            "download_url": "https://gwosc.org/eventapi/json/GWTC-3-confident/GW200129_065458/v1/V-V1_GWOSC_4KHZ_R1-1264316101-32.hdf5"
+          }
+        ],
+        "pyring_repo_url": "https://git.ligo.org/lscsoft/pyring",
+        "pyring_branch": "EFT_QNMs",
+        "pyring_branch_probe_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+        "pyring_execution_commit_sha": "6553253b4521d4bd2e82f5b86769373850b8b10c",
+        "waveform_family": "pyRing_QNM_EFT",
+        "pyring_template": "Kerr",
+        "eft_theory": "quartic_3",
+        "eft_branch": "plus",
+        "eft_direction": "quartic_3_plus",
+        "paper_reported_theory": false,
+        "branch_extension_control": true,
+        "coordinate_scope": "pyring_runtime_branch_coordinates",
+        "modes": [
+          "220",
+          "221"
+        ],
+        "kerr_modes": [
+          "(2,2,2,0)",
+          "(2,2,2,1)"
+        ],
+        "domega_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "dtau_tgr_modes": [
+          "(2,2,0)",
+          "(2,2,1)"
+        ],
+        "analysis_segment_seconds": 0.2,
+        "normalization_policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+        "prior_policy": "fixed event and direction; signed ell_km uniform prior [-740,740] with paper mass, spin, amplitude, phase, and distance priors exported in the executable pyRing config",
+        "sampler_status": "not_executed_in_this_packet",
+        "required_outputs": [
+          "pyring_run_config",
+          "posterior_samples_or_log_likelihood_grid",
+          "prior_specification",
+          "sampler_diagnostics",
+          "environment_lock",
+          "config_hash",
+          "output_hash_manifest",
+          "nonclaiming_coordinate_label",
+          "event_detector_strain_manifest",
+          "waveform_systematics_statement"
+        ]
+      }
+    ],
+    "output_contract": {
+      "contract_id": "pyring_runtime_likelihood_export_contract_v1",
+      "required_artifacts": [
+        "pyring_run_config",
+        "posterior_samples_or_log_likelihood_grid",
+        "prior_specification",
+        "sampler_diagnostics",
+        "environment_lock",
+        "config_hash",
+        "output_hash_manifest",
+        "nonclaiming_coordinate_label",
+        "event_detector_strain_manifest",
+        "waveform_systematics_statement"
+      ],
+      "minimum_export_schema": {
+        "samples": [
+          "paper_event",
+          "event_version",
+          "eft_direction",
+          "coordinate_scope",
+          "gamma_EFT_runtime",
+          "log_likelihood",
+          "log_prior"
+        ],
+        "grid": [
+          "paper_event",
+          "eft_direction",
+          "gamma_EFT_runtime_grid",
+          "log_likelihood_grid"
+        ],
+        "diagnostics": [
+          "sampler_name",
+          "sampler_settings",
+          "convergence_summary",
+          "config_sha256",
+          "environment_lock_sha256",
+          "output_sha256"
+        ]
+      },
+      "accepts_samples_or_grid": true,
+      "requires_output_hashes": true,
+      "requires_config_hash": true,
+      "requires_environment_lock": true,
+      "requires_nonclaiming_coordinate_label": true,
+      "requires_systematics_statement": true,
+      "documented_pyring_outputs": {
+        "posterior_samples": "Nested_sampler/posterior.dat",
+        "evidence_summary": "Nested_sampler/Evidence.txt",
+        "stdout_log": "stdout_pyRing.txt",
+        "stderr_log": "stderr_pyRing.txt",
+        "sampler_log": "Nested_sampler/cpnest.log",
+        "noise_directory": "Noise",
+        "plots_directory": "Plots"
+      },
+      "log_likelihood_grid_status": "not a documented pyRing CLI mode; requires a driver that constructs full runtime sample dictionaries and calls log_likelihood/log_prior with explicit nuisance treatment"
+    },
+    "execution_status": {
+      "public_strain_inputs_ready": true,
+      "pyring_source_pinned": true,
+      "runtime_normalization_policy_ready": true,
+      "rerun_config_grid_ready": true,
+      "pyring_config_export_ready": false,
+      "sampler_execution_ready": false,
+      "posterior_samples_exported": false,
+      "log_likelihood_grid_exported": false,
+      "convergence_diagnostics_exported": false,
+      "calibration_systematics_closed": false,
+      "runtime_coordinate_likelihood_packet_ready": false
+    },
+    "claim_controls": {
+      "claim_use_allowed": false,
+      "framework_claim_allowed": false,
+      "bresciani_axis_claim_allowed": false,
+      "runtime_coordinates_may_be_promoted_to_bresciani_axes": false
+    }
+  },
+  "evaluation": {
+    "rerun_packet_spec_ready": true,
+    "runtime_likelihood_export_ready": false,
+    "ready_for_bresciani_claim": false,
+    "ready_for_framework_claim": false,
+    "claimable_framework_exclusions_now": [],
+    "blockers": [],
+    "warnings": [],
+    "remaining_execution_blockers": [
+      "pyring_sampler_execution_not_run",
+      "runtime_likelihood_export_missing",
+      "posterior_samples_or_loglikelihood_grid_missing",
+      "calibration_and_waveform_systematics_missing",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing",
+      "paper_production_ini_files_missing",
+      "exact_event_runtime_settings_missing",
+      "dependency_lock_missing",
+      "external_adversarial_review_missing"
+    ],
+    "route_status": "pyring_likelihood_rerun_packet_spec_ready_execution_missing"
+  },
+  "malformed_control_evaluation": {
+    "rerun_packet_spec_ready": false,
+    "runtime_likelihood_export_ready": false,
+    "ready_for_bresciani_claim": false,
+    "ready_for_framework_claim": false,
+    "claimable_framework_exclusions_now": [],
+    "blockers": [
+      "framework_claim_not_disabled",
+      "output_hashes_missing",
+      "pyring_execution_source_not_pinned",
+      "required_output_artifacts_missing",
+      "runtime_coordinates_promoted_to_bresciani_axes",
+      "runtime_coordinates_promoted_to_operator_axes"
+    ],
+    "warnings": [],
+    "remaining_execution_blockers": [
+      "pyring_sampler_execution_not_run",
+      "runtime_likelihood_export_missing",
+      "posterior_samples_or_loglikelihood_grid_missing",
+      "calibration_and_waveform_systematics_missing",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing",
+      "paper_production_ini_files_missing",
+      "exact_event_runtime_settings_missing",
+      "dependency_lock_missing",
+      "external_adversarial_review_missing"
+    ],
+    "route_status": "pyring_likelihood_rerun_packet_not_ready"
+  },
+  "v2207_route_status": "source_route_graph_ready_sensitivity_missing",
+  "rerun_packet_spec_ready": true,
+  "runtime_likelihood_export_ready": false,
+  "ready_for_bresciani_claim": false,
+  "ready_for_framework_claim": false,
+  "claimable_framework_exclusions_now": [],
+  "route_status": "pyring_likelihood_rerun_packet_spec_ready_execution_missing",
+  "selected_next_build_action": "export_executable_pyring_runtime_configs_and_run_sampler",
+  "interpretation": "v2.208 turns the v2.207 next-likelihood route into a concrete rerun packet: public event strain inputs, pyRing source pins, runtime coordinate policy, minimum event-direction config grid, and the required output contract. The executable rerun target is the pyRing commit named by the public EFT ringdown analysis, not a moving branch head. It still has no executed sampler, no posterior samples or log-likelihood grid, no claim-grade systematics, and no qNM-to-Bresciani operator map."
+}

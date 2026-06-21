@@ -32,33 +32,34 @@ Start with the generated [`results/INDEX.md`](results/INDEX.md) for the full cur
 
 ## Highlights
 
-If you only read twenty-eight documents, read these:
+If you only read twenty-nine documents, read these:
 
-1. **[`results/2026-06-21-v2.207-r4-parspec-qnm-bresciani-source-route-graph.md`](results/2026-06-21-v2.207-r4-parspec-qnm-bresciani-source-route-graph.md)** — public-source route graph for the qNM-to-Bresciani bridge
-2. **[`results/2026-06-21-v2.206-r4-parspec-public-likelihood-packet.md`](results/2026-06-21-v2.206-r4-parspec-public-likelihood-packet.md)** — public ParSpec/qEFT likelihood acceptance gate
-3. **[`results/2026-06-21-v2.205-r4-parspec-pyring-to-bresciani-orientation.md`](results/2026-06-21-v2.205-r4-parspec-pyring-to-bresciani-orientation.md)** — pyRing-to-Bresciani orientation no-map ledger
-4. **[`results/2026-06-21-v2.204-r4-parspec-pyring-runtime-to-parspec-normalization-policy.md`](results/2026-06-21-v2.204-r4-parspec-pyring-runtime-to-parspec-normalization-policy.md)** — pyRing runtime-to-ParSpec high-spin normalization policy
-5. **[`results/2026-06-21-v2.203-r4-parspec-pyring-event-spin-jacobian.md`](results/2026-06-21-v2.203-r4-parspec-pyring-event-spin-jacobian.md)** — pyRing event-spin frequency/tau Jacobian and normalization audit
-6. **[`results/2026-06-21-v2.202-r4-parspec-pyring-tau-axis-jacobian.md`](results/2026-06-21-v2.202-r4-parspec-pyring-tau-axis-jacobian.md)** — pyRing imaginary-frequency to damping-time Jacobian
-7. **[`results/2026-06-20-v2.201-r4-parspec-pyring-source-probe.md`](results/2026-06-20-v2.201-r4-parspec-pyring-source-probe.md)** — public pyRing quartic QNM table source probe
-8. **[`results/2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md`](results/2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md)** — executable 3x4 qNM-to-Bresciani sensitivity-matrix gate
-9. **[`ROADMAP.md`](ROADMAP.md)** — next research path after v2.207
-10. **[`results/2026-06-20-v2.199-r4-parspec-absolute-gamma-metadata.md`](results/2026-06-20-v2.199-r4-parspec-absolute-gamma-metadata.md)** — GWOSC final-mass/redshift metadata for absolute ParSpec gamma
-11. **[`results/2026-06-20-v2.198-r4-parspec-continuity-ledger.md`](results/2026-06-20-v2.198-r4-parspec-continuity-ledger.md)** — preservation ledger for the v2.190-v2.197 ParSpec run details
-12. **[`results/2026-06-20-v2.197-r4-parspec-qnm-deformation-jacobian.md`](results/2026-06-20-v2.197-r4-parspec-qnm-deformation-jacobian.md)** — source-space `ell_qEFT -> qNM deformation` Jacobian, engine-axis map still blocked
-13. **[`results/2026-06-20-v2.196-r4-parspec-published-bound-surrogate.md`](results/2026-06-20-v2.196-r4-parspec-published-bound-surrogate.md)** — event-aligned published qEFT bound surrogate, explicitly not a public posterior
-14. **[`results/2026-06-20-v2.195-r4-parspec-source-event-covariance-export.md`](results/2026-06-20-v2.195-r4-parspec-source-event-covariance-export.md)** — source-event and combined covariance export from the ParSpec event-topology likelihood
-15. **[`results/2026-06-20-v2.194-r4-parspec-event-topology-likelihood.md`](results/2026-06-20-v2.194-r4-parspec-event-topology-likelihood.md)** — event-topology R4 likelihood with GW200129 V1 included
-16. **[`results/2026-06-20-v2.193-r4-parspec-same-event-h1l1-likelihood.md`](results/2026-06-20-v2.193-r4-parspec-same-event-h1l1-likelihood.md)** — same-event H1/L1 R4 likelihood rerun on the ParSpec source events
-17. **[`results/2026-06-20-v2.192-r4-parspec-source-event-alignment-manifest.md`](results/2026-06-20-v2.192-r4-parspec-source-event-alignment-manifest.md)** — public GWOSC event-version and strain-URL manifest for the ParSpec source events
-18. **[`results/2026-06-20-v2.191-r4-parspec-qeft-source-asset-audit.md`](results/2026-06-20-v2.191-r4-parspec-qeft-source-asset-audit.md)** — source-package audit that preserves `p_qEFT = 6`, qEFT coefficients, event bounds, and the no-public-likelihood finding
-19. **[`results/2026-06-20-v2.190-r4-parspec-engine-axis-map-contract.md`](results/2026-06-20-v2.190-r4-parspec-engine-axis-map-contract.md)** — executable contract for the missing ParSpec `ell_qEFT -> g_R4_*` map
-20. **[`results/2026-06-20-v2.189-r4-research-continuity-ledger.md`](results/2026-06-20-v2.189-r4-research-continuity-ledger.md)** — preservation ledger for the v2.170-v2.188 run details
-21. **[`results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md`](results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md)** — ParSpec/quartic-EFT ringdown source bridge
-22. **[`results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md`](results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md)** — R4/GWOSC waveform-likelihood posterior bridge
-23. **[`results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md`](results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md)** — R4/GWOSC/LALSuite frontier summary and claim boundary
-24. **[`FINDINGS.md`](FINDINGS.md)** — curated one-page findings, now including the v2.170-v2.207 frontier
-25. **[`results/2026-06-09-v2.10-capstone.md`](results/2026-06-09-v2.10-capstone.md)** — the program in one page
-26. **[`results/2026-06-09-v2.0-RESEARCH-REPORT.md`](results/2026-06-09-v2.0-RESEARCH-REPORT.md)** — publication-style overview of the core engine
-27. **[`results/TAXONOMY.md`](results/TAXONOMY.md)** — thematic index
-28. **[`results/INDEX.md`](results/INDEX.md)** — generated chronological index for the full research loop
+1. **[`results/2026-06-21-v2.208-r4-parspec-pyring-likelihood-rerun-packet.md`](results/2026-06-21-v2.208-r4-parspec-pyring-likelihood-rerun-packet.md)** — reproducible pyRing EFT runtime-coordinate rerun packet
+2. **[`results/2026-06-21-v2.207-r4-parspec-qnm-bresciani-source-route-graph.md`](results/2026-06-21-v2.207-r4-parspec-qnm-bresciani-source-route-graph.md)** — public-source route graph for the qNM-to-Bresciani bridge
+3. **[`results/2026-06-21-v2.206-r4-parspec-public-likelihood-packet.md`](results/2026-06-21-v2.206-r4-parspec-public-likelihood-packet.md)** — public ParSpec/qEFT likelihood acceptance gate
+4. **[`results/2026-06-21-v2.205-r4-parspec-pyring-to-bresciani-orientation.md`](results/2026-06-21-v2.205-r4-parspec-pyring-to-bresciani-orientation.md)** — pyRing-to-Bresciani orientation no-map ledger
+5. **[`results/2026-06-21-v2.204-r4-parspec-pyring-runtime-to-parspec-normalization-policy.md`](results/2026-06-21-v2.204-r4-parspec-pyring-runtime-to-parspec-normalization-policy.md)** — pyRing runtime-to-ParSpec high-spin normalization policy
+6. **[`results/2026-06-21-v2.203-r4-parspec-pyring-event-spin-jacobian.md`](results/2026-06-21-v2.203-r4-parspec-pyring-event-spin-jacobian.md)** — pyRing event-spin frequency/tau Jacobian and normalization audit
+7. **[`results/2026-06-21-v2.202-r4-parspec-pyring-tau-axis-jacobian.md`](results/2026-06-21-v2.202-r4-parspec-pyring-tau-axis-jacobian.md)** — pyRing imaginary-frequency to damping-time Jacobian
+8. **[`results/2026-06-20-v2.201-r4-parspec-pyring-source-probe.md`](results/2026-06-20-v2.201-r4-parspec-pyring-source-probe.md)** — public pyRing quartic QNM table source probe
+9. **[`results/2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md`](results/2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md)** — executable 3x4 qNM-to-Bresciani sensitivity-matrix gate
+10. **[`ROADMAP.md`](ROADMAP.md)** — next research path after v2.208
+11. **[`results/2026-06-20-v2.199-r4-parspec-absolute-gamma-metadata.md`](results/2026-06-20-v2.199-r4-parspec-absolute-gamma-metadata.md)** — GWOSC final-mass/redshift metadata for absolute ParSpec gamma
+12. **[`results/2026-06-20-v2.198-r4-parspec-continuity-ledger.md`](results/2026-06-20-v2.198-r4-parspec-continuity-ledger.md)** — preservation ledger for the v2.190-v2.197 ParSpec run details
+13. **[`results/2026-06-20-v2.197-r4-parspec-qnm-deformation-jacobian.md`](results/2026-06-20-v2.197-r4-parspec-qnm-deformation-jacobian.md)** — source-space `ell_qEFT -> qNM deformation` Jacobian, engine-axis map still blocked
+14. **[`results/2026-06-20-v2.196-r4-parspec-published-bound-surrogate.md`](results/2026-06-20-v2.196-r4-parspec-published-bound-surrogate.md)** — event-aligned published qEFT bound surrogate, explicitly not a public posterior
+15. **[`results/2026-06-20-v2.195-r4-parspec-source-event-covariance-export.md`](results/2026-06-20-v2.195-r4-parspec-source-event-covariance-export.md)** — source-event and combined covariance export from the ParSpec event-topology likelihood
+16. **[`results/2026-06-20-v2.194-r4-parspec-event-topology-likelihood.md`](results/2026-06-20-v2.194-r4-parspec-event-topology-likelihood.md)** — event-topology R4 likelihood with GW200129 V1 included
+17. **[`results/2026-06-20-v2.193-r4-parspec-same-event-h1l1-likelihood.md`](results/2026-06-20-v2.193-r4-parspec-same-event-h1l1-likelihood.md)** — same-event H1/L1 R4 likelihood rerun on the ParSpec source events
+18. **[`results/2026-06-20-v2.192-r4-parspec-source-event-alignment-manifest.md`](results/2026-06-20-v2.192-r4-parspec-source-event-alignment-manifest.md)** — public GWOSC event-version and strain-URL manifest for the ParSpec source events
+19. **[`results/2026-06-20-v2.191-r4-parspec-qeft-source-asset-audit.md`](results/2026-06-20-v2.191-r4-parspec-qeft-source-asset-audit.md)** — source-package audit that preserves `p_qEFT = 6`, qEFT coefficients, event bounds, and the no-public-likelihood finding
+20. **[`results/2026-06-20-v2.190-r4-parspec-engine-axis-map-contract.md`](results/2026-06-20-v2.190-r4-parspec-engine-axis-map-contract.md)** — executable contract for the missing ParSpec `ell_qEFT -> g_R4_*` map
+21. **[`results/2026-06-20-v2.189-r4-research-continuity-ledger.md`](results/2026-06-20-v2.189-r4-research-continuity-ledger.md)** — preservation ledger for the v2.170-v2.188 run details
+22. **[`results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md`](results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md)** — ParSpec/quartic-EFT ringdown source bridge
+23. **[`results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md`](results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md)** — R4/GWOSC waveform-likelihood posterior bridge
+24. **[`results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md`](results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md)** — R4/GWOSC/LALSuite frontier summary and claim boundary
+25. **[`FINDINGS.md`](FINDINGS.md)** — curated one-page findings, now including the v2.170-v2.208 frontier
+26. **[`results/2026-06-09-v2.10-capstone.md`](results/2026-06-09-v2.10-capstone.md)** — the program in one page
+27. **[`results/2026-06-09-v2.0-RESEARCH-REPORT.md`](results/2026-06-09-v2.0-RESEARCH-REPORT.md)** — publication-style overview of the core engine
+28. **[`results/TAXONOMY.md`](results/TAXONOMY.md)** — thematic index
+29. **[`results/INDEX.md`](results/INDEX.md)** — generated chronological index for the full research loop
