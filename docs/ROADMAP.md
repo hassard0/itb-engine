@@ -1,6 +1,6 @@
 # ITB Engine Research Roadmap
 
-This roadmap starts from the v2.201 state. It is a research plan, not a solved
+This roadmap starts from the v2.202 state. It is a research plan, not a solved
 quantum-gravity claim.
 
 ## Current State
@@ -11,8 +11,10 @@ The strongest live-data route is the R4/GWOSC/ParSpec path. The repo can now:
 - align the ParSpec qEFT source events with public GWOSC event versions;
 - attach published qEFT bounds as nonclaiming surrogates;
 - compute source-event absolute ParSpec gamma from final-mass/redshift metadata;
-- define an executable acceptance gate for the missing qNM-to-Bresciani map.
-- hash-pin and parse the public pyRing quartic EFT QNM coefficient tables.
+- define an executable acceptance gate for the missing qNM-to-Bresciani map;
+- hash-pin and parse the public pyRing quartic EFT QNM coefficient tables;
+- convert pyRing imaginary-frequency coefficients into linearized fractional
+  damping-time axes for the checked spin-zero table slice.
 
 The decisive current blocker is still unresolved:
 
@@ -35,12 +37,19 @@ be inverted into the three Bresciani engine axes.
 v2.201 shows that public pyRing is useful but not sufficient by itself. It
 provides three quartic EFT theory labels with plus/minus QNM mode-splitting
 branches, not independent Bresciani operator axes. The checked table slice has
-full rank in local branch-column QNM coordinates, but still lacks:
+full rank in local branch-column QNM coordinates.
+
+v2.202 resolves the narrow imaginary-frequency-to-damping-time conversion by
+deriving the source-backed pyRing `tau_EFT` linearization and exporting a rank-2
+spin-zero tau-axis matrix for `(2,2,0)` and `(2,2,1)`. That still does not make
+the pyRing branch columns Bresciani operator axes. The route still lacks:
 
 ```text
 pyring_quartic_direction_to_bresciani_axis_orientation_missing
 pyring_plus_minus_branches_not_independent_operator_axes
-pyring_imaginary_frequency_to_parspec_tau_jacobian_missing
+public_parspec_qeft_likelihood_or_posterior_samples_missing
+claim_grade_systematics_export_missing
+external_adversarial_review_missing
 ```
 
 ## Roadmap
@@ -60,11 +69,11 @@ pyring_imaginary_frequency_to_parspec_tau_jacobian_missing
    field-redefinition policy. If not, the result should be a negative theorem
    or source-backed no-map ledger, not a synthetic map.
 
-3. Build the imaginary-frequency to ParSpec-tau Jacobian.
-   pyRing supplies `domi` coefficients after a sign-convention flip, while the
-   v2.200 gate is expressed in ParSpec-style frequency and damping-time
-   deformation axes. A source-backed tau-axis conversion is required before any
-   pyRing table can be interpreted as a ParSpec qNM-axis packet.
+3. Attach event-spin tau/frequency Jacobians inside a reproducible rerun.
+   v2.202 covers the spin-zero tau-axis slice. A claim-grade bridge still needs
+   the frequency and damping-time Jacobians evaluated at event-relevant remnant
+   spins, with the same priors, waveform version, and table provenance used by
+   the likelihood export.
 
 4. Acquire a machine-readable qEFT likelihood.
    A public posterior sample file, covariance matrix, or log-likelihood grid
@@ -96,8 +105,8 @@ The next best artifact is one of:
 
 - `r4_parspec_pyring_to_bresciani_orientation.py`, if the pyRing quartic
   theory labels can be source-mapped to Bresciani coordinates;
-- `r4_parspec_pyring_tau_axis_jacobian.py`, if the pyRing `domi` convention can
-  be converted into ParSpec damping-time deformation axes;
+- `r4_parspec_pyring_event_spin_jacobian.py`, if the v2.202 tau conversion can
+  be extended to event-spin frequency and damping-time rows;
 - `r4_parspec_public_likelihood_packet.py`, if public or reproducible qEFT
   samples/log-likelihood data can be obtained;
 - `r4_parspec_qnm_to_bresciani_sensitivity.py`, if a source-backed 3x4

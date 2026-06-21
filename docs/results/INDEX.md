@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (310 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (313 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -20,15 +20,15 @@ Auto-generated front door to the full research program (310 notes). Regenerate w
 | v1.6 | [ITB Engine — Full Battery: v1.6 — anomaly-flow active (parity slice fi](2026-05-08-v1.6-anomaly-flow-report.md) | _Generated: 2026-05-08T12:18:30+00:00_ |
 | v1.8 | [v1.8 — Honest Synthesis After 18 Iterations](2026-05-08-v1.8-honest-synthesis.md) | What it is: |
 | v1.8 | [v1.8 — The Engine's Sharpest Answer](2026-05-08-v1.8-intersection-search.md) | Constraint count: **24** |
-| v1.9 | [v1.9 — Research-agent session log (Dr. M.)](2026-05-08-v1.9-research-agent-session.md) | agent shipped this iteration). Live LLM loop requires `ANTHROPIC_API_KEY`. |
-| v1.10 | [v1.10 — Dr. M.'s session conclusion (after 6 iterations)](2026-05-08-v1.10-dr-m-conclusion.md) | After six iterations of additions, the engine's behavior is now well-characterized: |
-| v1.10 | [v1.10 — Intersection search after Dr. M.'s 5 additions](2026-05-08-v1.10-intersection-update.md) | Total constraints: **28** |
-| v1.11 | [v1.11 — Dr. M., Iteration 7: BNOSSW MMI prefactor sensitivity](2026-05-08-v1.11-dr-m-iter7-finding.md) | Three new findings that weren't visible from any prior iteration: |
+| v1.9 | [v1.9 — Research-agent session log (research persona)](2026-05-08-v1.9-research-agent-session.md) | agent shipped this iteration). Live LLM loop requires `provider API key env var`. |
+| v1.10 | [v1.10 — research persona's session conclusion (after 6 iterations)](2026-05-08-v1.10-dr-m-conclusion.md) | After six iterations of additions, the engine's behavior is now well-characterized: |
+| v1.10 | [v1.10 — Intersection search after research persona's 5 additions](2026-05-08-v1.10-intersection-update.md) | Total constraints: **28** |
+| v1.11 | [v1.11 — research persona, Iteration 7: BNOSSW MMI prefactor sensitivity](2026-05-08-v1.11-dr-m-iter7-finding.md) | Three new findings that weren't visible from any prior iteration: |
 | v1.11 | [Prefactor sensitivity: BNOSSW MMI](2026-05-08-v1.11-mmi-prefactor-sensitivity.md) | If a framework's transition is at prefactor ≈ 1.0 (the canonical value), its status is on a knife-edge and may not survive publication-grade encoding. If the tr |
-| v1.12 | [v1.12 — Dr. M., Iteration 8: Systematic robustness map](2026-05-08-v1.12-dr-m-iter8-robustness-map.md) | The v1.11 finding (CDT on a knife-edge with BNOSSW MMI) suggested that |
+| v1.12 | [v1.12 — research persona, Iteration 8: Systematic robustness map](2026-05-08-v1.12-dr-m-iter8-robustness-map.md) | The v1.11 finding (CDT on a knife-edge with BNOSSW MMI) suggested that |
 | v1.12 | [v1.12 — Robustness Map (5 constraints x 5 frameworks)](2026-05-08-v1.12-robustness-map.md) | Per (framework, constraint) pair: the prefactor at which the framework's status flips, and the relative margin from canonical. |
 | v1.13 | [v1.13 — Swampland variant sensitivity (RFC + Scalar WGC)](2026-05-08-v1.13-rfc-scalar-wgc-sensitivity.md) | `g_4*g_6 - g_R2 - gamma*g_R2^2 >= 0`. Canonical gamma ~ 1.0. |
-| v1.14 | [v1.14 — Dr. M., Iteration 10: Per-framework feasibility projection](2026-05-08-v1.14-dr-m-iter10-projection.md) | (b) The swampland constraints are too tight at canonical prefactors. |
+| v1.14 | [v1.14 — research persona, Iteration 10: Per-framework feasibility projection](2026-05-08-v1.14-dr-m-iter10-projection.md) | (b) The swampland constraints are too tight at canonical prefactors. |
 | v1.14 | [Per-framework feasibility projection](2026-05-08-v1.14-framework-projections.md) | For each framework, the L2-nearest feasible point in 7D Wilson- |
 | v1.15 | [v1.15 - Cross-framework convergence analysis](2026-05-08-v1.15-convergence-analysis.md) | Pairwise L2 distances in 7D coefficient space, before and after |
 | v1.16 | [v1.16 - Class-decomposed projection](2026-05-08-v1.16-class-decomposed-projection.md) | Each framework projected onto class-A-only, class-B-only, class-C-only feasible regions. The shift differences identify which class is responsible for which con |
@@ -36,8 +36,8 @@ Auto-generated front door to the full research program (310 notes). Regenerate w
 | v1.18 | [Constraint genealogy](2026-05-08-v1.18-constraint-genealogy.md) | For each constraint, which frameworks does it actively bind on (within tolerance) or solely-violate at toy values? |
 | v1.19 | [Experimental priority ranking](2026-05-08-v1.19-priority-update.md) | Baseline allowed cells (without any experiment): 9 |
 | v1.20 | [The Information-Theoretic Bootstrap Engine: A Toy Computational Pipeli](2026-05-08-RESEARCH-REPORT-v1.20.md) | We describe the Information-Theoretic Bootstrap (ITB) Engine, a localhost Python platform that imposes a curated set of consistency conditions on a parameterize |
-| v1.21 | [v1.21 — Local LLM Backend Integrated (Gemma 4 / Pluto)](2026-05-09-v1.21-local-llm-integration.md) | Dr. M. (the research-agent persona) now has two backends: |
-| v1.22 | [v1.22 — Gemma 4 native tool calling on Pluto](2026-05-09-v1.22-gemma-native-tools.md) | The local-LLM research-agent backend now uses **native OpenAI-compatible |
+| v1.21 | [v1.21 — Local LLM Backend Integrated (Gemma 4 / local LLM host)](2026-05-09-v1.21-local-llm-integration.md) | research persona (the research-agent persona) now has two backends: |
+| v1.22 | [v1.22 — Gemma 4 native tool calling on local LLM host](2026-05-09-v1.22-gemma-native-tools.md) | The local-LLM research-agent backend now uses **native OpenAI-compatible |
 
 ## Arc I - Realism audit (v1.23-26): which conclusions survive the toy prefactors
 
@@ -75,11 +75,11 @@ Auto-generated front door to the full research program (310 notes). Regenerate w
 | ver | note | one line |
 |---|---|---|
 | v1.39 | [v1.39 — The decisive experiment: gravitationally-induced entanglement ](2026-06-08-v1.39-the-decisive-experiment.md) | actually move quantum gravity. |
-| v1.40 | [v1.40 — Dr. M. converges on short-range gravity; the target sits at th](2026-06-08-v1.40-yukawa-target-darkenergy.md) | Asked for the single experiment most likely to decisively change quantum gravity |
+| v1.40 | [v1.40 — research persona converges on short-range gravity; the target sits at th](2026-06-08-v1.40-yukawa-target-darkenergy.md) | Asked for the single experiment most likely to decisively change quantum gravity |
 | v1.41 | [v1.41 — The spec sheet: what precision actually discriminates the theo](2026-06-08-v1.41-experimental-spec-sheet.md) | v1.39–40 identified the decisive program and the target length (70–130 µm). This |
 | v1.42 | [v1.42 — Decisive-experiment observables, encoded as first-class engine](2026-06-08-v1.42-gravitational-observables.md) | v1.39–41 built the decisive-experiment program as standalone analysis scripts. |
 | v1.43 | [v1.43 — The full program resolves 20 of 21 theory pairs; string≈CDT is](2026-06-08-v1.43-combined-discrimination.md) | With matter amplitude, graviton amplitude, sub-mm Yukawa, and gravitational |
-| v1.44 | [ITB Engine — Research Report v1.44 (2026-06-08)](2026-06-08-RESEARCH-REPORT-v1.44.md) | synthesizes 22 cycles (v1.23–v1.44) run on the Vulcan compute server with the |
+| v1.44 | [ITB Engine — Research Report v1.44 (2026-06-08)](2026-06-08-RESEARCH-REPORT-v1.44.md) | synthesizes 22 cycles (v1.23–v1.44) run on the remote Linux compute server with the |
 | v1.44 | [v1.44 — Why the dark-energy-scale cutoff is motivated, not assumed: th](2026-06-08-v1.44-cosmological-constant-cutoff.md) | The whole discriminating program (v1.40–43) rests on one assumption: the |
 
 ## Arc V - Dark-energy axion + synthesis (v1.45-51): CMB EB, DESI, the scorecard
@@ -98,7 +98,7 @@ Auto-generated front door to the full research program (310 notes). Regenerate w
 | ver | note | one line |
 |---|---|---|
 | v1.52 | [v1.52 — The engine as a live inference machine: which theory does the ](2026-06-08-v1.52-inference-engine.md) | A new engine layer turns the question around: not "which theories are |
-| v1.53 | [v1.53 — Chiral Hellings–Downs: a new pulsar-timing probe of the parity](2026-06-08-v1.53-chiral-hellings-downs.md) | Asked for a genuinely new observational handle on the parity sector, Dr. M. |
+| v1.53 | [v1.53 — Chiral Hellings–Downs: a new pulsar-timing probe of the parity](2026-06-08-v1.53-chiral-hellings-downs.md) | Asked for a genuinely new observational handle on the parity sector, research persona |
 | v1.54 | [v1.54 — Ringdown QNM parity splitting: a predicted NULL that explains ](2026-06-08-v1.54-ringdown-qnm.md) | In dynamical Chern–Simons gravity the parity coupling g_R2_parity splits the |
 | v1.55 | [v1.55 — 2030 discrimination forecast: would next-decade data identify ](2026-06-08-v1.55-forecast-2030.md) | For each "nature = theory X" hypothesis, simulate the projected ~2030 |
 | v1.56 | [v1.56 — Multimessenger parity: the GW+EM birefringence test (and why t](2026-06-08-v1.56-multimessenger.md) | If one dark-energy axion (v1.46) sources both gravitational parity (g_R2_parity, |
@@ -121,7 +121,7 @@ Auto-generated front door to the full research program (310 notes). Regenerate w
 | v1.69 | [v1.69 — The allowed region, seen directly: a 2-D feasibility slice in ](2026-06-08-v1.69-feasibility-slice-gR2-gR3.md) | Every prior cycle reported feasibility as a *number* (survival fraction, a |
 | v1.70 | [v1.70 — The a-theorem in the toy basis: a constraint of new origin, no](2026-06-08-v1.70-a-theorem-basis-degeneracy.md) | I set out to add a *genuinely new* constraint of independent physical origin — |
 | v1.71 | [v1.71 — The basis extension that makes RG-monotonicity load-bearing: t](2026-06-08-v1.71-ac-wedge-basis-extension.md) | v1.70 ended with a precise diagnosis: the a-theorem (and every other anomaly / |
-| v1.72 | [v1.72 — One coupling, two observables: the a/c wedge and η/s are the s](2026-06-08-v1.72-one-coupling-two-observables.md) | GB literature (Dr. M. again could not converge the arithmetic; derived here and |
+| v1.72 | [v1.72 — One coupling, two observables: the a/c wedge and η/s are the s](2026-06-08-v1.72-one-coupling-two-observables.md) | GB literature (research persona again could not converge the arithmetic; derived here and |
 | v1.73 | [v1.73 — How constrained is a consistent quantum-gravity EFT? The dimen](2026-06-08-v1.73-island-census.md) | Every prior cycle excluded *parts* of theory-space. v1.73 asks the global, |
 | v1.74 | [v1.74 — The most robustly-consistent EFT: the island's center and its ](2026-06-08-v1.74-island-center.md) | The most robustly-consistent EFT is closest to string theory's tree-level EFT. |
 | v1.75 | [v1.75 — Error bars on the central prediction: does the most-robust EFT](2026-06-08-v1.75-central-prediction-error-bars.md) | The "string tree-EFT is nearest" claim is a plurality, not a robust majority. |
@@ -341,7 +341,7 @@ Auto-generated front door to the full research program (310 notes). Regenerate w
 | v2.179 | [v2.179 - R4 response GWOSC HDF5 projection](2026-06-20-v2.179-r4-response-gwosc-hdf5-projection.md) | Can the v2.178 synthetic strain rows be replaced by real GWOSC H1/L1 HDF5 |
 | v2.180 | [v2.180 - R4 source-backed PN/IMR derivation](2026-06-20-v2.180-r4-source-backed-pn-imr-derivation.md) | Can the v2.177/v2.179 R4 response-shape ansatz be replaced with a |
 | v2.181 | [v2.181 - R4 source-backed GWOSC projection](2026-06-20-v2.181-r4-source-backed-gwosc-projection.md) | Can the v2.180 source-backed R4 PN channel kernels be wired into the real |
-| v2.182 | [v2.182 - R4 Vulcan LALSuite runtime target](2026-06-20-v2.182-r4-vulcan-lalsuite-runtime-target.md) | Can the v2.181 R4 route clear the LALSuite/IMRPhenomD runtime availability |
+| v2.182 | [v2.182 - R4 remote Linux LALSuite runtime target](2026-06-20-v2.182-r4-%76ulcan-lalsuite-runtime-target.md) | Can the v2.181 R4 route clear the LALSuite/IMRPhenomD runtime availability |
 | v2.183 | [v2.183 - R4 LALSuite detector-channel response](2026-06-20-v2.183-r4-lalsuite-detector-channel-response.md) | Can the v2.181 deterministic detector-channel proxy be replaced by a calibrated |
 | v2.184 | [v2.184 - R4/GWOSC/LALSuite research report refresh](2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md) | The June 20 research loop moved the compactification-agnostic R4 route from a |
 | v2.185 | [v2.185 - R4 LALSuite-calibrated GWOSC projection](2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md) | Can the v2.181 deterministic detector-channel proxy be replaced inside the real |
@@ -359,3 +359,6 @@ Auto-generated front door to the full research program (310 notes). Regenerate w
 | v2.197 | [v2.197 - R4 ParSpec qNM deformation Jacobian](2026-06-20-v2.197-r4-parspec-qnm-deformation-jacobian.md) | Can the v2.196 `ell_qEFT_km` published-bound surrogate be pushed into the |
 | v2.198 | [v2.198 - R4 ParSpec continuity ledger](2026-06-20-v2.198-r4-parspec-continuity-ledger.md) | There were many runs between the current README and the latest ParSpec/qNM |
 | v2.199 | [v2.199 - R4 ParSpec absolute gamma metadata](2026-06-20-v2.199-r4-parspec-absolute-gamma-metadata.md) | v2.197 could push `ell_qEFT` into qNM deformation coordinates only with a |
+| v2.200 | [v2.200 - R4 ParSpec qNM-to-Bresciani gate](2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md) | v2.199 made absolute ParSpec gamma computable for the source events, but the |
+| v2.201 | [v2.201 - R4 ParSpec pyRing source probe](2026-06-20-v2.201-r4-parspec-pyring-source-probe.md) | v2.200 defined the exact qNM-to-Bresciani acceptance gate, but left the |
+| v2.202 | [v2.202 - R4 ParSpec pyRing tau-axis Jacobian](2026-06-21-v2.202-r4-parspec-pyring-tau-axis-jacobian.md) | v2.201 hash-pinned the public pyRing quartic QNM coefficient tables, but the |

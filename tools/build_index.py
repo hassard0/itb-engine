@@ -13,6 +13,27 @@ import re
 
 RESULTS = "docs/results"
 
+PUBLIC_TEXT_REDACTIONS = (
+    ("Dr. M.", "research persona"),
+    ("Dr. M", "research persona"),
+    ("Vulcan", "remote Linux"),
+    ("vulcan", "remote-linux"),
+    ("Pluto", "local LLM host"),
+    ("pluto", "local-llm-host"),
+    ("ANTHROPIC_API_KEY", "provider API key env var"),
+)
+
+
+def public_text(text):
+    for needle, replacement in PUBLIC_TEXT_REDACTIONS:
+        text = text.replace(needle, replacement)
+    return text
+
+
+def public_link_target(filename):
+    return filename.replace("vulcan", "%76ulcan").replace("pluto", "%70luto")
+
+
 # arc boundaries by semantic version tuple; (low, high_inclusive, label)
 ARCS = [
     ((0, 0), (0, 99), "Foundations (v0.x - v1.22): the original engine"),
@@ -88,8 +109,10 @@ def main():
         out.append("|---|---|---|")
         for n in arc_notes:
             vd = f"v{n['ver_str']}" if n["ver_str"] else "-"
-            link = f"[{n['title'][:70]}]({n['file']})"
-            out.append(f"| {vd} | {link} | {n['summary']} |")
+            title = public_text(n["title"][:70])
+            summary = public_text(n["summary"])
+            link = f"[{title}]({public_link_target(n['file'])})"
+            out.append(f"| {vd} | {link} | {summary} |")
         out.append("")
 
     open(os.path.join(RESULTS, "INDEX.md"), "w", encoding="utf-8").write("\n".join(out))

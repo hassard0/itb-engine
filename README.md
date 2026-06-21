@@ -2,11 +2,11 @@
 
 **A research platform that constrains the space of possible quantum-gravity theories by imposing every consistency condition we can encode — amplitude positivity, causality, holographic-information bounds, the swampland, anomaly flow, black-hole thermodynamics — then confronts the survivors with *real experimental data* and asks what's left.**
 
-> **Status:** v2.201 research loop · **local and remote Linux validation current** · **38 theoretical constraints (+4 ingested-data)** · **14 framework encoders** · **8 Wilson coefficients** · **9 observables** · **310 indexed result notes + v2.200-v2.201 reports**
+> **Status:** v2.202 research loop · **local and remote Linux validation current** · **38 theoretical constraints (+4 ingested-data)** · **14 framework encoders** · **8 Wilson coefficients** · **9 observables** · **313 indexed result notes**
 >
 > Honest by construction: most constraint prefactors are O(1) placeholders ("the right streets, the wrong house numbers"). A dedicated **realism program** stress-tests every headline claim against that toy-prefactor uncertainty, so the repo distinguishes *robust conclusions* from *artifacts*. Read every claim below with that in mind — and see [Honest limitations](#honest-limitations).
 
-**Start here:** [**v2.201 R4 ParSpec pyRing source probe**](docs/results/2026-06-20-v2.201-r4-parspec-pyring-source-probe.md) (hash-pins public pyRing quartic QNM coefficient tables and preserves the map blocker) · [**v2.200 R4 ParSpec qNM-to-Bresciani gate**](docs/results/2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md) (defines the missing 3x4 qNM-to-engine sensitivity-matrix gate) · [**v2.199 R4 ParSpec absolute gamma metadata**](docs/results/2026-06-20-v2.199-r4-parspec-absolute-gamma-metadata.md) (attaches GWOSC final-mass/redshift metadata and computes absolute source gamma) · [**FINDINGS.md**](docs/FINDINGS.md) (curated findings) · [**ROADMAP.md**](docs/ROADMAP.md) (where the research should go next) · [**Results index**](docs/results/INDEX.md) (chronological)
+**Start here:** [**v2.202 R4 ParSpec pyRing tau-axis Jacobian**](docs/results/2026-06-21-v2.202-r4-parspec-pyring-tau-axis-jacobian.md) (converts pyRing imaginary-frequency coefficients into fractional damping-time axes) · [**v2.201 R4 ParSpec pyRing source probe**](docs/results/2026-06-20-v2.201-r4-parspec-pyring-source-probe.md) (hash-pins public pyRing quartic QNM coefficient tables and preserves the map blocker) · [**v2.200 R4 ParSpec qNM-to-Bresciani gate**](docs/results/2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md) (defines the missing 3x4 qNM-to-engine sensitivity-matrix gate) · [**FINDINGS.md**](docs/FINDINGS.md) (curated findings) · [**ROADMAP.md**](docs/ROADMAP.md) (where the research should go next) · [**Results index**](docs/results/INDEX.md) (chronological)
 
 ---
 
@@ -30,7 +30,7 @@ It then asks three questions, in order:
 
 ## The big picture — what the engine found
 
-The program ran ~90 research cycles. The throughline:
+The program has generated 300+ indexed research notes. The throughline:
 
 ### A consistent quantum-gravity EFT is rare and low-dimensional
 The consistent "island" is **~0.6% of a comparable-magnitude coefficient box** and **~3.4 effective dimensions** — one stiff collective-scale mode with several sloppy directions (the swampland's "thin landscape," made quantitative). The most-robustly-consistent point (the island's Chebyshev center) predicts a near-holographic `a/c ≈ 0.92`, a KSS-violating `η/s ≈ 0.81`, and a **sub-mm fifth force at ~93 µm** that independently reproduces a dark-energy-scale scenario. *(v1.73–75)*
@@ -46,7 +46,7 @@ The engine is one of few QG-phenomenology tools that **folds in real experiments
 - **GW170817 speed** is *blind* to higher-derivative gravity (frequency-suppressed), but **LIGO's GW dispersion test** reaches the dark-energy cutoff — *which observable* matters as much as which sector. *(v1.84–85)*
 
 ### Current live-data frontier: R4 through GWOSC and LALSuite
-The latest loop, v2.170-v2.201, turns the most promising gravitational-wave route into an executable nonclaiming pipeline:
+The latest loop, v2.170-v2.202, turns the most promising gravitational-wave route into an executable nonclaiming pipeline:
 - **v2.170-v2.171:** the symbolic R4 scale route now has a strict packet contract for a future source-backed `Lambda_R4` policy; no numeric policy is present yet.
 - **v2.172-v2.173:** the parallel Weyl/G8 route now has a joint-likelihood packet contract; it remains blocked on a real `g_C+g_8` likelihood.
 - **v2.174:** the engine selected the Bresciani-axis plus public-GWOSC reanalysis path after checking source/public candidates.
@@ -69,8 +69,9 @@ The latest loop, v2.170-v2.201, turns the most promising gravitational-wave rout
 - **v2.199:** the source-event absolute gamma metadata is now attached from GWOSC preferred PE rows: `M_f,z = 63.1,0.09` for GW150914 and `60.2,0.18` for GW200129; absolute gamma is computable for the source events while the qNM-to-Bresciani operator map and public likelihood remain blockers.
 - **v2.200:** the qNM-to-Bresciani gate now defines the exact source-backed packet shape needed next: a finite 3x4 matrix from qNM deformation axes into `g_R4_c1/c2/c3`, with row rank 3. The current qEFT source object is only a rank-1 gamma-to-qNM ray, so the engine blocks any map or claim promotion.
 - **v2.201:** the public pyRing `EFT_QNMs` branch is now a hash-pinned source probe. It confirms six quartic plus/minus branch tables and a rank-4 local branch-column QNM matrix, while preserving the decisive blockers because plus/minus are mode-splitting branches, not independent Bresciani operator axes.
+- **v2.202:** pyRing's imaginary-frequency convention now has a source-backed linearized conversion into fractional damping-time axes. The exported spin-zero tau matrix is rank 2, while the route remains blocked on pyRing-to-Bresciani orientation, independent operator-axis interpretation, public likelihood, systematics, and adversarial review.
 
-The latest source-probe artifact is [v2.201 R4 ParSpec pyRing source probe](docs/results/2026-06-20-v2.201-r4-parspec-pyring-source-probe.md). The latest operator-map artifact is [v2.200 R4 ParSpec qNM-to-Bresciani gate](docs/results/2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md). The current roadmap is [docs/ROADMAP.md](docs/ROADMAP.md). This is progress toward a live gravitational-wave discriminator, not a framework exclusion or discovery claim.
+The latest source-conversion artifact is [v2.202 R4 ParSpec pyRing tau-axis Jacobian](docs/results/2026-06-21-v2.202-r4-parspec-pyring-tau-axis-jacobian.md). The latest operator-map artifact is [v2.200 R4 ParSpec qNM-to-Bresciani gate](docs/results/2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md). The current roadmap is [docs/ROADMAP.md](docs/ROADMAP.md). This is progress toward a live gravitational-wave discriminator, not a framework exclusion or discovery claim.
 
 ### The "data-driven EFT"
 Folding consistency + the two ingested experiments points to a specific, registered theory — `discovered_data_driven` — a **screened-scalaron, positive-handed-parity EFT** that matches cosmic birefringence and predicts GW/PTA parity signals just below current reach. It sits where *none* of the 13 textbook frameworks do. `itb predict discovered_data_driven`. *(v1.79)*
@@ -166,14 +167,14 @@ itb-engine/
 │   ├── scope.py               engine-validity (local / Lorentz / fundamental flags)
 │   ├── cli.py                 `itb` command
 │   └── api/server.py          FastAPI web app
-├── experiments/              268 cycle scripts (island census, center, data ingestion,
+├── experiments/              271 cycle scripts (island census, center, data ingestion,
 │                              meta-experiments) + stack.py (the constraint assembler)
 ├── tools/                    reproduction helpers, consult_drm.py, build_index.py
-├── tests/                    312 test files (latest full-suite count is in the v2.201 report)
+├── tests/                    313 test files (latest full-suite count is in the v2.202 report)
 ├── docs/
 │   ├── FINDINGS.md           ← curated findings (read this)
 │   ├── CONSTRAINTS.md        ← the constraint stack, by class
-│   └── results/              310 indexed result notes + latest v2.201 report
+│   └── results/              313 indexed result notes
 └── legacy/                   early-program report generators (v1.0–v1.19)
 ```
 

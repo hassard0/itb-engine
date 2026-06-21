@@ -1,0 +1,277 @@
+{
+  "version": "v2.202",
+  "basis": [
+    "v2.200_parspec_qnm_to_bresciani_gate",
+    "v2.201_pyring_source_probe",
+    "public_pyring_EFT_QNMs_branch"
+  ],
+  "source_manifest": {
+    "branch": "EFT_QNMs",
+    "branch_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+    "tree_url": "https://git.ligo.org/lscsoft/pyring/-/tree/EFT_QNMs/pyRing/data/NR_data",
+    "waveform_source_url": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/waveform.pyx",
+    "initialise_source_url": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/initialise.py",
+    "parspec_high_spin_table": {
+      "filename": "ParSpec_coefficients_high_spin.txt",
+      "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/ParSpec_coefficients_high_spin.txt",
+      "sha256": "2948a4ea440b48f29e4abafb5be5e997c1ab120eb1ad5be666c8fdc93cadd256",
+      "git_lfs_pointer_blob_sha1": "cea6a57e90acbd608269fa609092384ce1e9d743",
+      "data_rows": 4,
+      "columns": 19
+    },
+    "source_line_refs": {
+      "pyring_domi_sign_flip": "waveform.pyx:78-80",
+      "pyring_tau_eft_formula": "waveform.pyx:534-540",
+      "parspec_tau_fractional_form": "waveform.pyx:342-355",
+      "tgr_dtau_fractional_use": "initialise.py:994-995"
+    }
+  },
+  "engine_target_axes": [
+    "g_R4_c1",
+    "g_R4_c2",
+    "g_R4_c3"
+  ],
+  "parspec_qnm_axes": [
+    "delta_omega_qeft_0",
+    "delta_tau_qeft_0",
+    "delta_omega_qeft_1",
+    "delta_tau_qeft_1"
+  ],
+  "parspec_target_tau_axes": [
+    "delta_tau_qeft_0",
+    "delta_tau_qeft_1"
+  ],
+  "pyring_tau_axes": [
+    "delta_tau_220_n0_spin0",
+    "delta_tau_221_n1_spin0"
+  ],
+  "pyring_quartic_theories": [
+    "quartic_1",
+    "quartic_2",
+    "quartic_3"
+  ],
+  "pyring_source_directions": [
+    "quartic_1_minus",
+    "quartic_1_plus",
+    "quartic_2_minus",
+    "quartic_2_plus",
+    "quartic_3_minus",
+    "quartic_3_plus"
+  ],
+  "parspec_tau0_by_mode": {
+    "220": 11.240715,
+    "221": 3.650769
+  },
+  "domi_coefficients_by_direction": {
+    "quartic_1_minus": {
+      "domi_220_n0_spin0_pyring_sign": 0.057608,
+      "domi_221_n1_spin0_pyring_sign": -0.473316
+    },
+    "quartic_1_plus": {
+      "domi_220_n0_spin0_pyring_sign": 0.244369,
+      "domi_221_n1_spin0_pyring_sign": 1.23114
+    },
+    "quartic_2_minus": {
+      "domi_220_n0_spin0_pyring_sign": 0.35232,
+      "domi_221_n1_spin0_pyring_sign": 1.258555
+    },
+    "quartic_2_plus": {
+      "domi_220_n0_spin0_pyring_sign": 0.0,
+      "domi_221_n1_spin0_pyring_sign": 0.0
+    },
+    "quartic_3_minus": {
+      "domi_220_n0_spin0_pyring_sign": 0.136392,
+      "domi_221_n1_spin0_pyring_sign": 0.741556
+    },
+    "quartic_3_plus": {
+      "domi_220_n0_spin0_pyring_sign": -0.136392,
+      "domi_221_n1_spin0_pyring_sign": -0.741556
+    }
+  },
+  "tau_axis_jacobian": {
+    "matrix_id": "pyring_domi_to_fractional_tau_spin_zero_jacobian_v1",
+    "rows": [
+      "delta_tau_220_n0_spin0",
+      "delta_tau_221_n1_spin0"
+    ],
+    "columns": [
+      "quartic_1_minus",
+      "quartic_1_plus",
+      "quartic_2_minus",
+      "quartic_2_plus",
+      "quartic_3_minus",
+      "quartic_3_plus"
+    ],
+    "columns_are_branch_splitting_directions": true,
+    "columns_are_independent_operator_axes": false,
+    "matrix_kind": "d_fractional_tau_axis_d_pyring_branch_gamma",
+    "matrix": [
+      [
+        -0.64755510972,
+        -2.746882283835,
+        -3.9603287088,
+        -0.0,
+        -1.53314360028,
+        1.53314360028
+      ],
+      [
+        1.727967380004,
+        -4.49460774666,
+        -4.594693578795,
+        -0.0,
+        -2.707249656564,
+        2.707249656564
+      ]
+    ],
+    "rank": 2,
+    "required_rank_for_exported_tau_axes": 2,
+    "source_formula": "pyRing tau_EFT: tau = 1/(1/tau_GR + gamma*domi_EFT); therefore d((tau-tau_GR)/tau_GR)/d gamma at gamma=0 = -tau_GR_dimensionless*domi_fit.",
+    "source_scope": "Spin-zero slice for modes (2,2,0) and (2,2,1), using pyRing EFT_QNMs quartic branch coefficients and ParSpec high-spin tau table t0 entries.",
+    "derivative_checks": [
+      {
+        "axis": "delta_tau_220_n0_spin0",
+        "source_direction": "quartic_1_minus",
+        "tau_gr_dimensionless_spin0": 11.240715,
+        "domi_coefficient": 0.057608,
+        "linearized_derivative": -0.64755510972,
+        "finite_difference_derivative": -0.647555109534
+      },
+      {
+        "axis": "delta_tau_220_n0_spin0",
+        "source_direction": "quartic_1_plus",
+        "tau_gr_dimensionless_spin0": 11.240715,
+        "domi_coefficient": 0.244369,
+        "linearized_derivative": -2.746882283835,
+        "finite_difference_derivative": -2.746882283855
+      },
+      {
+        "axis": "delta_tau_220_n0_spin0",
+        "source_direction": "quartic_2_minus",
+        "tau_gr_dimensionless_spin0": 11.240715,
+        "domi_coefficient": 0.35232,
+        "linearized_derivative": -3.9603287088,
+        "finite_difference_derivative": -3.960328708863
+      },
+      {
+        "axis": "delta_tau_220_n0_spin0",
+        "source_direction": "quartic_2_plus",
+        "tau_gr_dimensionless_spin0": 11.240715,
+        "domi_coefficient": 0.0,
+        "linearized_derivative": -0.0,
+        "finite_difference_derivative": 0.0
+      },
+      {
+        "axis": "delta_tau_220_n0_spin0",
+        "source_direction": "quartic_3_minus",
+        "tau_gr_dimensionless_spin0": 11.240715,
+        "domi_coefficient": 0.136392,
+        "linearized_derivative": -1.53314360028,
+        "finite_difference_derivative": -1.533143599852
+      },
+      {
+        "axis": "delta_tau_220_n0_spin0",
+        "source_direction": "quartic_3_plus",
+        "tau_gr_dimensionless_spin0": 11.240715,
+        "domi_coefficient": -0.136392,
+        "linearized_derivative": 1.53314360028,
+        "finite_difference_derivative": 1.533143599852
+      },
+      {
+        "axis": "delta_tau_221_n1_spin0",
+        "source_direction": "quartic_1_minus",
+        "tau_gr_dimensionless_spin0": 3.650769,
+        "domi_coefficient": -0.473316,
+        "linearized_derivative": 1.727967380004,
+        "finite_difference_derivative": 1.727967379739
+      },
+      {
+        "axis": "delta_tau_221_n1_spin0",
+        "source_direction": "quartic_1_plus",
+        "tau_gr_dimensionless_spin0": 3.650769,
+        "domi_coefficient": 1.23114,
+        "linearized_derivative": -4.49460774666,
+        "finite_difference_derivative": -4.494607745986
+      },
+      {
+        "axis": "delta_tau_221_n1_spin0",
+        "source_direction": "quartic_2_minus",
+        "tau_gr_dimensionless_spin0": 3.650769,
+        "domi_coefficient": 1.258555,
+        "linearized_derivative": -4.594693578795,
+        "finite_difference_derivative": -4.594693578941
+      },
+      {
+        "axis": "delta_tau_221_n1_spin0",
+        "source_direction": "quartic_2_plus",
+        "tau_gr_dimensionless_spin0": 3.650769,
+        "domi_coefficient": 0.0,
+        "linearized_derivative": -0.0,
+        "finite_difference_derivative": 0.0
+      },
+      {
+        "axis": "delta_tau_221_n1_spin0",
+        "source_direction": "quartic_3_minus",
+        "tau_gr_dimensionless_spin0": 3.650769,
+        "domi_coefficient": 0.741556,
+        "linearized_derivative": -2.707249656564,
+        "finite_difference_derivative": -2.707249656675
+      },
+      {
+        "axis": "delta_tau_221_n1_spin0",
+        "source_direction": "quartic_3_plus",
+        "tau_gr_dimensionless_spin0": 3.650769,
+        "domi_coefficient": -0.741556,
+        "linearized_derivative": 2.707249656564,
+        "finite_difference_derivative": 2.707249656675
+      }
+    ]
+  },
+  "evaluation": {
+    "pyring_imaginary_frequency_to_parspec_tau_jacobian_ready": true,
+    "spin_zero_tau_axis_matrix_ready": true,
+    "qnm_to_bresciani_sensitivity_ready": false,
+    "public_likelihood_ready": false,
+    "ready_for_framework_claim": false,
+    "source_intake_blockers": [],
+    "resolved_v2201_subpieces": [
+      "pyring_imaginary_frequency_to_parspec_tau_jacobian_defined"
+    ],
+    "remaining_claim_blockers": [
+      "claim_grade_systematics_export_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "pyring_plus_minus_branches_not_independent_operator_axes",
+      "pyring_quartic_direction_to_bresciani_axis_orientation_missing",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing"
+    ],
+    "route_status": "pyring_tau_axis_jacobian_ready_bresciani_map_missing"
+  },
+  "malformed_control_evaluation": {
+    "pyring_imaginary_frequency_to_parspec_tau_jacobian_ready": false,
+    "spin_zero_tau_axis_matrix_ready": false,
+    "qnm_to_bresciani_sensitivity_ready": false,
+    "public_likelihood_ready": false,
+    "ready_for_framework_claim": false,
+    "source_intake_blockers": [
+      "tau_axis_jacobian_rank_deficient"
+    ],
+    "resolved_v2201_subpieces": [],
+    "remaining_claim_blockers": [
+      "claim_grade_systematics_export_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "pyring_plus_minus_branches_not_independent_operator_axes",
+      "pyring_quartic_direction_to_bresciani_axis_orientation_missing",
+      "pyring_tau_axis_jacobian_not_ready",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing"
+    ],
+    "route_status": "pyring_tau_axis_jacobian_not_ready"
+  },
+  "pyring_imaginary_frequency_to_parspec_tau_jacobian_ready": true,
+  "qnm_to_bresciani_sensitivity_ready": false,
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "selected_next_build_action": "derive_pyring_quartic_direction_to_bresciani_axis_orientation_or_obtain_public_parspec_likelihood",
+  "route_status": "pyring_tau_axis_jacobian_ready_bresciani_map_missing",
+  "interpretation": "v2.202 converts pyRing's imaginary-frequency coefficients into fractional damping-time deformation axes at the linearized source level. The formula is source-backed by pyRing's tau_EFT implementation and the ParSpec fractional dtau convention. The route remains nonclaiming because plus/minus are branch-splitting columns, not independent Bresciani operator axes, and no qNM-to-Bresciani map or public likelihood is attached."
+}
