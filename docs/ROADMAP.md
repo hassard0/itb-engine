@@ -1,6 +1,6 @@
 # ITB Engine Research Roadmap
 
-This roadmap starts from the v2.204 state. It is a research plan, not a solved
+This roadmap starts from the v2.205 state. It is a research plan, not a solved
 quantum-gravity claim.
 
 ## Current State
@@ -20,7 +20,9 @@ The strongest live-data route is the R4/GWOSC/ParSpec path. The repo can now:
   boundary;
 - formally isolate the pyRing runtime-to-ParSpec high-spin normalizer gap so
   runtime Berti-GR rows are allowed for internal pyRing reruns while ParSpec
-  high-spin rows remain comparison-only.
+  high-spin rows remain comparison-only;
+- complete the pyRing-to-Bresciani orientation audit as a no-map ledger that
+  forbids synthetic branch-to-operator projections.
 
 The decisive current blocker is still unresolved:
 
@@ -57,11 +59,15 @@ rows.
 
 v2.204 resolves that normalization-policy ambiguity by selecting pyRing runtime
 Berti-GR normalization for internal pyRing reruns and making ParSpec high-spin
-rows comparison-only. That still does not make the pyRing branch columns
-Bresciani operator axes. The route still lacks:
+rows comparison-only.
+
+v2.205 audits the pyRing-to-Bresciani orientation route and records that the
+current public pyRing tables do not supply a source-backed map from
+`quartic_1/2/3` plus/minus branch-splitting directions to
+`K_plus/Re(K_minus)/Im(K_minus)` or `g_R4_c1/c2/c3`. Synthetic branch-to-operator
+maps are forbidden. The route still lacks:
 
 ```text
-pyring_quartic_direction_to_bresciani_axis_orientation_missing
 pyring_plus_minus_branches_not_independent_operator_axes
 public_parspec_qeft_likelihood_or_posterior_samples_missing
 claim_grade_systematics_export_missing
@@ -78,12 +84,12 @@ external_adversarial_review_missing
    rotating-EFT ringdown, pyRing EFT QNM coefficient tables, and the Bresciani
    spin-2 R4 amplitude basis.
 
-2. Derive the pyRing-to-Bresciani orientation if it exists.
-   The immediate route is to identify whether pyRing `quartic_1/2/3` and the
-   plus/minus branch splitting can be mapped into the Bresciani
-   `K_plus/Re(K_minus)/Im(K_minus)` basis with a closed normalization and
-   field-redefinition policy. If not, the result should be a negative theorem
-   or source-backed no-map ledger, not a synthetic map.
+2. Search for a different source-backed sensitivity route.
+   v2.205 closes the current pyRing-orientation attempt as a no-map ledger, so
+   the next route should use another source that directly relates QNM
+   deformation axes to `K_plus/Re(K_minus)/Im(K_minus)` or to
+   `g_R4_c1/c2/c3`. If no source supplies that, preserve the negative result
+   rather than manufacturing a projection.
 
 3. Acquire a machine-readable qEFT likelihood.
    A public posterior sample file, covariance matrix, or log-likelihood grid
@@ -113,8 +119,6 @@ external_adversarial_review_missing
 
 The next best artifact is one of:
 
-- `r4_parspec_pyring_to_bresciani_orientation.py`, if the pyRing quartic
-  theory labels can be source-mapped to Bresciani coordinates;
 - `r4_parspec_public_likelihood_packet.py`, if public or reproducible qEFT
   samples/log-likelihood data can be obtained;
 - `r4_parspec_qnm_to_bresciani_sensitivity.py`, if a source-backed 3x4

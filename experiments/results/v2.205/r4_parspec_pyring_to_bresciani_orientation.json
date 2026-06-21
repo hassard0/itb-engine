@@ -1,0 +1,407 @@
+{
+  "version": "v2.205",
+  "basis": [
+    "v2.175_bresciani_r4_axis_dictionary",
+    "v2.200_qnm_to_bresciani_gate",
+    "v2.201_pyring_source_probe",
+    "v2.204_pyring_runtime_to_parspec_normalization_policy",
+    "public_pyring_EFT_QNMs_branch"
+  ],
+  "orientation_audit": {
+    "packet_id": "pyring_to_bresciani_orientation_audit_v1",
+    "version": "v2.205",
+    "source_manifest": {
+      "pyring": {
+        "branch": "EFT_QNMs",
+        "branch_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+        "tree_url": "https://git.ligo.org/lscsoft/pyring/-/tree/EFT_QNMs/pyRing/data/NR_data",
+        "waveform_source_url": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/waveform.pyx",
+        "initialise_source_url": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/initialise.py",
+        "rotating_qnm_source_url": "https://arxiv.org/abs/2307.07431",
+        "quartic_tables": [
+          {
+            "source_direction": "quartic_1_minus",
+            "filename": "EFT_coefficients_quartic_1_minus.txt",
+            "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_1_minus.txt",
+            "sha256": "595040fc50a87b31b766105c84856600c36fa1f6ec3ce2130efe46e5c18f96ab",
+            "git_lfs_pointer_blob_sha1": "02fd720330226d5a08c45484e228eac027547972",
+            "data_rows": 3,
+            "columns": 29,
+            "required_modes_present": [
+              [
+                2,
+                2,
+                0
+              ],
+              [
+                2,
+                2,
+                1
+              ],
+              [
+                3,
+                3,
+                0
+              ]
+            ]
+          },
+          {
+            "source_direction": "quartic_1_plus",
+            "filename": "EFT_coefficients_quartic_1_plus.txt",
+            "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_1_plus.txt",
+            "sha256": "5f81fb7dd2839846b474a5fedc4aa02f5e927b1f8c9eabb91cebe5ebc3c33a86",
+            "git_lfs_pointer_blob_sha1": "2983d46acb02bd9f9cdc2c215fe71a1c7f09ef13",
+            "data_rows": 3,
+            "columns": 29,
+            "required_modes_present": [
+              [
+                2,
+                2,
+                0
+              ],
+              [
+                2,
+                2,
+                1
+              ],
+              [
+                3,
+                3,
+                0
+              ]
+            ]
+          },
+          {
+            "source_direction": "quartic_2_minus",
+            "filename": "EFT_coefficients_quartic_2_minus.txt",
+            "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_2_minus.txt",
+            "sha256": "751f35d10bed3db75fbb321548f611483e785853e50b2d29d5add972abe2fbdd",
+            "git_lfs_pointer_blob_sha1": "a03c0d55b7f068e8a002140cffe13f8c2739edcf",
+            "data_rows": 3,
+            "columns": 29,
+            "required_modes_present": [
+              [
+                2,
+                2,
+                0
+              ],
+              [
+                2,
+                2,
+                1
+              ],
+              [
+                3,
+                3,
+                0
+              ]
+            ]
+          },
+          {
+            "source_direction": "quartic_2_plus",
+            "filename": "EFT_coefficients_quartic_2_plus.txt",
+            "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_2_plus.txt",
+            "sha256": "a31664948aa56f77604c1d7f457cc874e95cfc9d832f6d107bf13688ac27f00c",
+            "git_lfs_pointer_blob_sha1": "05e0c4a2203bebc7f7ea3f74b9deff3ce6faf5ec",
+            "data_rows": 3,
+            "columns": 29,
+            "required_modes_present": [
+              [
+                2,
+                2,
+                0
+              ],
+              [
+                2,
+                2,
+                1
+              ],
+              [
+                3,
+                3,
+                0
+              ]
+            ]
+          },
+          {
+            "source_direction": "quartic_3_minus",
+            "filename": "EFT_coefficients_quartic_3_minus.txt",
+            "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_3_minus.txt",
+            "sha256": "b878ef82bbf5ec6584942fc75ef305aabeacaf627d2bf3fe1cc28d15d1e13575",
+            "git_lfs_pointer_blob_sha1": "6ad6f01b10c682f39e90d2994194cebfb2a90625",
+            "data_rows": 3,
+            "columns": 29,
+            "required_modes_present": [
+              [
+                2,
+                2,
+                0
+              ],
+              [
+                2,
+                2,
+                1
+              ],
+              [
+                3,
+                3,
+                0
+              ]
+            ]
+          },
+          {
+            "source_direction": "quartic_3_plus",
+            "filename": "EFT_coefficients_quartic_3_plus.txt",
+            "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_3_plus.txt",
+            "sha256": "f94c81dc0dfc6b265b0b2638199499d0fb0a1d457c5b295b77f8088c28a716c9",
+            "git_lfs_pointer_blob_sha1": "659adcb51d9b5ff53ee7a81e2f4e05ab0c92b112",
+            "data_rows": 3,
+            "columns": 29,
+            "required_modes_present": [
+              [
+                2,
+                2,
+                0
+              ],
+              [
+                2,
+                2,
+                1
+              ],
+              [
+                3,
+                3,
+                0
+              ]
+            ]
+          }
+        ],
+        "quartic_theories": [
+          "quartic_1",
+          "quartic_2",
+          "quartic_3"
+        ],
+        "source_directions": [
+          "quartic_1_minus",
+          "quartic_1_plus",
+          "quartic_2_minus",
+          "quartic_2_plus",
+          "quartic_3_minus",
+          "quartic_3_plus"
+        ],
+        "source_line_refs": {
+          "table_ingest": "waveform.pyx:72-80",
+          "runtime_quartic_options": "initialise.py:1000-1007",
+          "runtime_frequency_formula": "waveform.pyx:526-532",
+          "runtime_tau_formula": "waveform.pyx:534-540"
+        }
+      },
+      "bresciani": {
+        "source_url": "https://arxiv.org/abs/2504.12855",
+        "dictionary_id": "bresciani_r4_axis_dictionary_v1",
+        "source_coordinates": [
+          "K_plus",
+          "Re(K_minus)",
+          "Im(K_minus)"
+        ],
+        "engine_projection_axes": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "engine_axis_equations": {
+          "g_R4_c1": "overall_R4_factor*(K_plus + Re(K_minus))/16",
+          "g_R4_c2": "overall_R4_factor*(K_plus - Re(K_minus))/16",
+          "g_R4_c3": "overall_R4_factor*Im(K_minus)/8",
+          "g_R4_plus": "overall_R4_factor*K_plus/8",
+          "g_R4_minus_abs": "overall_R4_factor*sqrt(Re(K_minus)^2 + Im(K_minus)^2)/8"
+        },
+        "projection_matrix": [
+          [
+            0.5,
+            0.5,
+            0.0
+          ],
+          [
+            0.5,
+            -0.5,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "normalization_policy": {
+        "policy_id": "pyring_runtime_to_parspec_high_spin_normalization_policy_v1",
+        "ready_for_internal_pyring_runtime_rerun": true,
+        "parspec_high_spin_may_replace_pyring_runtime_normalizer": false
+      }
+    },
+    "public_primary_source_findings": [
+      {
+        "source": "pyRing initialise.py",
+        "url": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/initialise.py",
+        "location": "initialise.py:1003-1005",
+        "finding": "pyRing exposes EFT options cubic_even, cubic_odd, quartic_1, quartic_2, and quartic_3; it does not identify these labels with Bresciani K coordinates."
+      },
+      {
+        "source": "pyRing waveform.pyx",
+        "url": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/waveform.pyx",
+        "location": "waveform.pyx:71-82",
+        "finding": "pyRing loads plus/minus QNM coefficient files for quartic_1/2/3 and cites the rotating higher-derivative QNM source; this is table provenance, not a Bresciani operator-axis map."
+      },
+      {
+        "source": "pyRing waveform.pyx",
+        "url": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/waveform.pyx",
+        "location": "waveform.pyx:1166-1168,1274-1286",
+        "finding": "pyRing treats plus/minus as EFT QNM branches or eigenmodes, not as independent Wilson or Bresciani coupling directions."
+      },
+      {
+        "source": "Cano-Fransen-Hertog-Maenaut rotating higher-derivative QNMs",
+        "url": "https://arxiv.org/abs/2307.07431",
+        "location": "Effective field theory of gravity, eqs. (1)-(2)",
+        "finding": "The QNM source defines quartic EFT couplings in its own epsilon_i or alpha_i basis; no Bresciani K_plus/Re(K_minus)/Im(K_minus) orientation is stated."
+      },
+      {
+        "source": "Cano-Fransen-Hertog-Maenaut rotating higher-derivative QNMs",
+        "url": "https://arxiv.org/abs/2307.07431",
+        "location": "Quasinormal modes, around eqs. (8)-(10)",
+        "finding": "For parity-preserving terms plus/minus distinguish polar and axial branches; for parity-breaking terms they are mixed polarization branches with opposite shifts. They are not declared as Bresciani K coordinates."
+      },
+      {
+        "source": "Bresciani-Levati-Paradisi amplitudes and unitarity bounds",
+        "url": "https://arxiv.org/abs/2504.12855",
+        "location": "EFT of gravity and light-by-light scattering, eqs. (13)-(16)",
+        "finding": "The Bresciani source defines its own c_plus/c_minus or K basis for spin-2 R4 amplitudes. It does not tie those coordinates to pyRing quartic filenames or QNM plus/minus branches."
+      }
+    ],
+    "required_orientation_evidence": [
+      "quartic_label_to_bresciani_coordinate_identity",
+      "plus_minus_branch_to_operator_axis_semantics",
+      "field_redefinition_policy",
+      "normalization_policy",
+      "finite_orientation_matrix",
+      "source_line_refs"
+    ],
+    "current_evidence": {
+      "pyring_has_hash_pinned_qnm_branch_tables": true,
+      "pyring_has_bresciani_K_coordinate_labels": false,
+      "pyring_has_field_redefinition_policy_to_bresciani_basis": false,
+      "pyring_plus_minus_are_independent_operator_axes": false,
+      "bresciani_dictionary_maps_K_to_engine_axes": true,
+      "normalization_policy_isolated": true,
+      "public_likelihood_attached": false
+    },
+    "label_intersection": {
+      "pyring_direction_labels": [
+        "quartic_1_minus",
+        "quartic_1_plus",
+        "quartic_2_minus",
+        "quartic_2_plus",
+        "quartic_3_minus",
+        "quartic_3_plus"
+      ],
+      "bresciani_coordinate_labels": [
+        "K_plus",
+        "Re(K_minus)",
+        "Im(K_minus)"
+      ],
+      "shared_tokens": [
+        "minus",
+        "plus"
+      ],
+      "shared_tokens_are_orientation_evidence": false
+    },
+    "candidate_orientation_map": {
+      "status": "absent",
+      "reason": "No source-backed map from pyRing quartic_1/2/3 plus/minus branch-splitting directions to Bresciani K coordinates is present in the current source set."
+    },
+    "candidate_orientation_rank": 0,
+    "no_map_ledger": {
+      "status": "source_audit_complete_map_absent",
+      "synthetic_orientation_allowed": false,
+      "rank_only_orientation_allowed": false,
+      "reason": "The pyRing tables give local QNM branch-splitting directions. The Bresciani dictionary requires coordinates in K_plus/Re(K_minus)/Im(K_minus). No source currently supplies the operator identity, field-redefinition policy, or finite orientation matrix connecting these coordinate systems."
+    },
+    "disallowed_uses": [
+      "synthetic_branch_to_operator_map",
+      "rank_only_orientation_claim",
+      "pyring_plus_minus_as_independent_wilson_axes",
+      "framework_exclusion_claim",
+      "measurement_likelihood_claim"
+    ],
+    "claim_controls": {
+      "claim_use_allowed": false,
+      "framework_claim_allowed": false,
+      "orientation_map_source_backed": false,
+      "qnm_to_bresciani_sensitivity_ready": false,
+      "public_likelihood_ready": false
+    }
+  },
+  "evaluation": {
+    "pyring_to_bresciani_orientation_audit_ready": true,
+    "pyring_to_bresciani_orientation_source_backed": false,
+    "no_map_ledger_ready": true,
+    "synthetic_orientation_allowed": false,
+    "rank_only_orientation_allowed": false,
+    "qnm_to_bresciani_sensitivity_ready": false,
+    "public_likelihood_ready": false,
+    "ready_for_framework_claim": false,
+    "resolved_v2204_subpieces": [
+      "pyring_to_bresciani_orientation_audit_complete",
+      "synthetic_orientation_map_forbidden"
+    ],
+    "blockers": [],
+    "warnings": [],
+    "remaining_claim_blockers": [
+      "claim_grade_systematics_export_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "pyring_plus_minus_branches_not_independent_operator_axes",
+      "pyring_quartic_direction_to_bresciani_axis_orientation_missing",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing"
+    ],
+    "route_status": "pyring_to_bresciani_no_map_ledger_ready_claim_gate_blocked"
+  },
+  "malformed_control_evaluation": {
+    "pyring_to_bresciani_orientation_audit_ready": false,
+    "pyring_to_bresciani_orientation_source_backed": false,
+    "no_map_ledger_ready": false,
+    "synthetic_orientation_allowed": false,
+    "rank_only_orientation_allowed": false,
+    "qnm_to_bresciani_sensitivity_ready": false,
+    "public_likelihood_ready": false,
+    "ready_for_framework_claim": false,
+    "resolved_v2204_subpieces": [],
+    "blockers": [
+      "claim_use_not_disabled",
+      "orientation_claim_not_disabled",
+      "source_backed_orientation_field_policy_missing",
+      "source_backed_orientation_line_refs_missing",
+      "synthetic_orientation_not_forbidden",
+      "unexpected_source_backed_orientation_claim"
+    ],
+    "warnings": [],
+    "remaining_claim_blockers": [
+      "claim_grade_systematics_export_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "pyring_plus_minus_branches_not_independent_operator_axes",
+      "pyring_quartic_direction_to_bresciani_axis_orientation_missing",
+      "pyring_to_bresciani_no_map_ledger_not_ready",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing"
+    ],
+    "route_status": "pyring_to_bresciani_orientation_audit_not_ready"
+  },
+  "pyring_to_bresciani_orientation_audit_ready": true,
+  "pyring_to_bresciani_orientation_source_backed": false,
+  "qnm_to_bresciani_sensitivity_ready": false,
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "selected_next_build_action": "derive_qnm_to_bresciani_sensitivity_source_or_public_parspec_qeft_likelihood",
+  "route_status": "pyring_to_bresciani_no_map_ledger_ready_claim_gate_blocked",
+  "interpretation": "v2.205 completes the source audit for pyRing-to-Bresciani orientation and records a no-map ledger. pyRing quartic tables are source-backed QNM branch-splitting directions, while the Bresciani dictionary requires K_plus/Re(K_minus)/Im(K_minus) operator coordinates. No current source supplies the orientation identity or field-redefinition policy connecting them, so a synthetic branch-to-operator map is explicitly forbidden."
+}
