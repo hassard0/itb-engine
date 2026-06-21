@@ -1,0 +1,653 @@
+{
+  "version": "v2.196",
+  "basis": [
+    "v2.191_r4_parspec_qeft_source_asset_audit",
+    "v2.195_r4_parspec_source_event_covariance_export",
+    "published_qeft_90_credible_upper_bounds"
+  ],
+  "source_event_covariance_export": {
+    "version": "v2.195",
+    "route_status": "parspec_source_event_covariance_export_ready_axis_map_missing",
+    "source_event_specific_nuisance_covariance_export_ready": true
+  },
+  "public_likelihood_acquisition_snapshot": {
+    "snapshot_id": "parspec_qeft_public_likelihood_acquisition_snapshot_v1",
+    "source_url": "https://arxiv.org/abs/2205.05132",
+    "source_doi": "https://doi.org/10.1103/PhysRevD.107.044030",
+    "arxiv_eprint_url": "https://arxiv.org/e-print/2205.05132",
+    "source_package_top_level_files": [
+      "GW150914_intrinsic_params.pdf",
+      "GW150914_intrinsic_params_remnant.pdf",
+      "ceft_cdf_varying_threshold.pdf",
+      "ceft_posteriors_combined.pdf",
+      "dcs_cdf_varying_threshold.pdf",
+      "dcs_posteriors_combined.pdf",
+      "edgb_cdf_varying_threshold.pdf",
+      "edgb_gamma.pdf",
+      "edgb_posteriors_combined.pdf",
+      "example_waveform_cubicEFT.pdf",
+      "paper_alt_theory_bounds.bbl",
+      "paper_alt_theory_bounds.bib",
+      "paper_alt_theory_bounds.tex",
+      "qeft_cdf_varying_threshold.pdf",
+      "qeft_posteriors_combined.pdf"
+    ],
+    "detected_machine_readable_likelihood_assets": [],
+    "audited_public_surfaces": [
+      {
+        "surface": "arxiv_abs",
+        "url": "https://arxiv.org/abs/2205.05132",
+        "result": "abstract_and_tex_source_available"
+      },
+      {
+        "surface": "arxiv_eprint_source_package",
+        "url": "https://arxiv.org/e-print/2205.05132",
+        "result": "tex_and_pdf_figures_only"
+      },
+      {
+        "surface": "published_article",
+        "url": "https://doi.org/10.1103/PhysRevD.107.044030",
+        "result": "published_bounds_and_figures_only"
+      },
+      {
+        "surface": "public_web_search",
+        "queries": [
+          "2205.05132 ParSpec qEFT posterior samples likelihood GitHub",
+          "Silva Ghosh Buonanno ParSpec qEFT data release likelihood samples",
+          "\"qeft_posteriors_combined\" \"paper_alt_theory_bounds\""
+        ],
+        "result": "no_public_machine_readable_samples_or_likelihood_found"
+      }
+    ],
+    "machine_readable_public_likelihood_ready": false,
+    "published_bound_surrogate_available": true
+  },
+  "published_bound_surrogate": {
+    "surrogate_id": "parspec_qeft_published_bound_surrogate_v1",
+    "source_axis": "ell_qEFT_km",
+    "source_axis_power": 6,
+    "source_url": "https://arxiv.org/abs/2205.05132",
+    "source_doi": "https://doi.org/10.1103/PhysRevD.107.044030",
+    "arxiv_doi": "https://doi.org/10.48550/arXiv.2205.05132",
+    "source_eprint_url": "https://arxiv.org/e-print/2205.05132",
+    "source_refs": {
+      "parspec_frequency_expansion": "paper_alt_theory_bounds.tex:639",
+      "gamma_definition": "paper_alt_theory_bounds.tex:658-661",
+      "qeft_posteriors": "paper_alt_theory_bounds.tex:1673-1685",
+      "qeft_event_bounds": "paper_alt_theory_bounds.tex:1697-1702",
+      "qeft_figure_caption": "paper_alt_theory_bounds.tex:1728-1738",
+      "qeft_coefficients": "paper_alt_theory_bounds.tex:2040-2045"
+    },
+    "surrogates": [
+      {
+        "label": "GW150914",
+        "surrogate_type": "half_normal_upper_limit_from_90_credible_bound",
+        "source_axis": "ell_qEFT_km",
+        "upper_bound_km_90": 51.7,
+        "half_normal_sigma_km": 31.431368209838,
+        "variance_km2": 987.930907542444,
+        "normal_equivalent_quantile": 1.644853626951,
+        "cdf_at_published_bound": 0.9,
+        "grid": [
+          {
+            "ell_qEFT_km": 0.0,
+            "fraction_of_published_bound": 0.0,
+            "log_relative_surrogate_likelihood": -0.0
+          },
+          {
+            "ell_qEFT_km": 12.925,
+            "fraction_of_published_bound": 0.25,
+            "log_relative_surrogate_likelihood": -0.08454823294
+          },
+          {
+            "ell_qEFT_km": 25.85,
+            "fraction_of_published_bound": 0.5,
+            "log_relative_surrogate_likelihood": -0.338192931762
+          },
+          {
+            "ell_qEFT_km": 38.775,
+            "fraction_of_published_bound": 0.75,
+            "log_relative_surrogate_likelihood": -0.760934096464
+          },
+          {
+            "ell_qEFT_km": 51.7,
+            "fraction_of_published_bound": 1.0,
+            "log_relative_surrogate_likelihood": -1.352771727048
+          },
+          {
+            "ell_qEFT_km": 64.625,
+            "fraction_of_published_bound": 1.25,
+            "log_relative_surrogate_likelihood": -2.113705823512
+          }
+        ],
+        "is_public_likelihood_or_posterior_sample": false,
+        "claim_use_allowed": false
+      },
+      {
+        "label": "GW200129",
+        "surrogate_type": "half_normal_upper_limit_from_90_credible_bound",
+        "source_axis": "ell_qEFT_km",
+        "upper_bound_km_90": 54.8,
+        "half_normal_sigma_km": 33.316034388765,
+        "variance_km2": 1109.958147393369,
+        "normal_equivalent_quantile": 1.644853626951,
+        "cdf_at_published_bound": 0.9,
+        "grid": [
+          {
+            "ell_qEFT_km": 0.0,
+            "fraction_of_published_bound": 0.0,
+            "log_relative_surrogate_likelihood": -0.0
+          },
+          {
+            "ell_qEFT_km": 13.7,
+            "fraction_of_published_bound": 0.25,
+            "log_relative_surrogate_likelihood": -0.08454823294
+          },
+          {
+            "ell_qEFT_km": 27.4,
+            "fraction_of_published_bound": 0.5,
+            "log_relative_surrogate_likelihood": -0.338192931762
+          },
+          {
+            "ell_qEFT_km": 41.1,
+            "fraction_of_published_bound": 0.75,
+            "log_relative_surrogate_likelihood": -0.760934096464
+          },
+          {
+            "ell_qEFT_km": 54.8,
+            "fraction_of_published_bound": 1.0,
+            "log_relative_surrogate_likelihood": -1.352771727048
+          },
+          {
+            "ell_qEFT_km": 68.5,
+            "fraction_of_published_bound": 1.25,
+            "log_relative_surrogate_likelihood": -2.113705823512
+          }
+        ],
+        "is_public_likelihood_or_posterior_sample": false,
+        "claim_use_allowed": false
+      },
+      {
+        "label": "combined",
+        "surrogate_type": "half_normal_upper_limit_from_90_credible_bound",
+        "source_axis": "ell_qEFT_km",
+        "upper_bound_km_90": 51.3,
+        "half_normal_sigma_km": 31.188185477074,
+        "variance_km2": 972.702913352354,
+        "normal_equivalent_quantile": 1.644853626951,
+        "cdf_at_published_bound": 0.9,
+        "grid": [
+          {
+            "ell_qEFT_km": 0.0,
+            "fraction_of_published_bound": 0.0,
+            "log_relative_surrogate_likelihood": -0.0
+          },
+          {
+            "ell_qEFT_km": 12.825,
+            "fraction_of_published_bound": 0.25,
+            "log_relative_surrogate_likelihood": -0.08454823294
+          },
+          {
+            "ell_qEFT_km": 25.65,
+            "fraction_of_published_bound": 0.5,
+            "log_relative_surrogate_likelihood": -0.338192931762
+          },
+          {
+            "ell_qEFT_km": 38.475,
+            "fraction_of_published_bound": 0.75,
+            "log_relative_surrogate_likelihood": -0.760934096464
+          },
+          {
+            "ell_qEFT_km": 51.3,
+            "fraction_of_published_bound": 1.0,
+            "log_relative_surrogate_likelihood": -1.352771727048
+          },
+          {
+            "ell_qEFT_km": 64.125,
+            "fraction_of_published_bound": 1.25,
+            "log_relative_surrogate_likelihood": -2.113705823512
+          }
+        ],
+        "is_public_likelihood_or_posterior_sample": false,
+        "claim_use_allowed": false
+      }
+    ],
+    "machine_readable_public_likelihood_ready": false,
+    "surrogate_ready_for_nonclaiming_attachment": true,
+    "surrogate_scope": "One-dimensional ell_qEFT source-axis upper-bound surrogate derived from the published 90% credible bounds only. It is not a public posterior-sample file, covariance object, or log-likelihood grid."
+  },
+  "event_aligned_published_bound_packet": {
+    "packet_id": "v2196_event_aligned_published_bound_surrogate_slot",
+    "source_url": "https://arxiv.org/abs/2205.05132",
+    "source_doi": "https://doi.org/10.1103/PhysRevD.107.044030",
+    "source_type": "source_backed_parspec_qeft_axis_map",
+    "source_theory_family": "quartic_order_effective_field_theory_of_general_relativity",
+    "source_axis": "ell_qEFT",
+    "source_axis_units": "km",
+    "target_engine_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3"
+    ],
+    "source_axis_power_policy": {
+      "status": "source_backed",
+      "length_axis": "ell_qEFT_km",
+      "length_power_declared": true,
+      "length_power": 6,
+      "power_scope": "ParSpec qEFT ringdown deformation power only; not a completed Bresciani engine R4-axis operator map.",
+      "gamma_relation": "(ell_th c^2 (1 + z) / (G M_f))^p",
+      "source_refs": [
+        "paper_alt_theory_bounds.tex:658-661",
+        "paper_alt_theory_bounds.tex:2040-2045"
+      ]
+    },
+    "operator_basis_map": {},
+    "engine_axis_map": {
+      "status": "missing",
+      "needed": "Map the ParSpec quartic-EFT length-scale posterior or likelihood onto engine-normalized Bresciani axes g_R4_c1, g_R4_c2, g_R4_c3.",
+      "engine_axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "source_axis": "ell_qEFT_km"
+    },
+    "axis_normalization": {},
+    "likelihood_reference": {
+      "status": "published_bound_surrogate",
+      "source_axis": "ell_qEFT_km",
+      "events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "posterior_or_likelihood_exported": false,
+      "available_in_source": "published_90_credible_upper_bounds_only",
+      "published_bound_surrogate": {
+        "surrogate_id": "parspec_qeft_published_bound_surrogate_v1",
+        "source_axis": "ell_qEFT_km",
+        "source_axis_power": 6,
+        "source_url": "https://arxiv.org/abs/2205.05132",
+        "source_doi": "https://doi.org/10.1103/PhysRevD.107.044030",
+        "arxiv_doi": "https://doi.org/10.48550/arXiv.2205.05132",
+        "source_eprint_url": "https://arxiv.org/e-print/2205.05132",
+        "source_refs": {
+          "parspec_frequency_expansion": "paper_alt_theory_bounds.tex:639",
+          "gamma_definition": "paper_alt_theory_bounds.tex:658-661",
+          "qeft_posteriors": "paper_alt_theory_bounds.tex:1673-1685",
+          "qeft_event_bounds": "paper_alt_theory_bounds.tex:1697-1702",
+          "qeft_figure_caption": "paper_alt_theory_bounds.tex:1728-1738",
+          "qeft_coefficients": "paper_alt_theory_bounds.tex:2040-2045"
+        },
+        "surrogates": [
+          {
+            "label": "GW150914",
+            "surrogate_type": "half_normal_upper_limit_from_90_credible_bound",
+            "source_axis": "ell_qEFT_km",
+            "upper_bound_km_90": 51.7,
+            "half_normal_sigma_km": 31.431368209838,
+            "variance_km2": 987.930907542444,
+            "normal_equivalent_quantile": 1.644853626951,
+            "cdf_at_published_bound": 0.9,
+            "grid": [
+              {
+                "ell_qEFT_km": 0.0,
+                "fraction_of_published_bound": 0.0,
+                "log_relative_surrogate_likelihood": -0.0
+              },
+              {
+                "ell_qEFT_km": 12.925,
+                "fraction_of_published_bound": 0.25,
+                "log_relative_surrogate_likelihood": -0.08454823294
+              },
+              {
+                "ell_qEFT_km": 25.85,
+                "fraction_of_published_bound": 0.5,
+                "log_relative_surrogate_likelihood": -0.338192931762
+              },
+              {
+                "ell_qEFT_km": 38.775,
+                "fraction_of_published_bound": 0.75,
+                "log_relative_surrogate_likelihood": -0.760934096464
+              },
+              {
+                "ell_qEFT_km": 51.7,
+                "fraction_of_published_bound": 1.0,
+                "log_relative_surrogate_likelihood": -1.352771727048
+              },
+              {
+                "ell_qEFT_km": 64.625,
+                "fraction_of_published_bound": 1.25,
+                "log_relative_surrogate_likelihood": -2.113705823512
+              }
+            ],
+            "is_public_likelihood_or_posterior_sample": false,
+            "claim_use_allowed": false
+          },
+          {
+            "label": "GW200129",
+            "surrogate_type": "half_normal_upper_limit_from_90_credible_bound",
+            "source_axis": "ell_qEFT_km",
+            "upper_bound_km_90": 54.8,
+            "half_normal_sigma_km": 33.316034388765,
+            "variance_km2": 1109.958147393369,
+            "normal_equivalent_quantile": 1.644853626951,
+            "cdf_at_published_bound": 0.9,
+            "grid": [
+              {
+                "ell_qEFT_km": 0.0,
+                "fraction_of_published_bound": 0.0,
+                "log_relative_surrogate_likelihood": -0.0
+              },
+              {
+                "ell_qEFT_km": 13.7,
+                "fraction_of_published_bound": 0.25,
+                "log_relative_surrogate_likelihood": -0.08454823294
+              },
+              {
+                "ell_qEFT_km": 27.4,
+                "fraction_of_published_bound": 0.5,
+                "log_relative_surrogate_likelihood": -0.338192931762
+              },
+              {
+                "ell_qEFT_km": 41.1,
+                "fraction_of_published_bound": 0.75,
+                "log_relative_surrogate_likelihood": -0.760934096464
+              },
+              {
+                "ell_qEFT_km": 54.8,
+                "fraction_of_published_bound": 1.0,
+                "log_relative_surrogate_likelihood": -1.352771727048
+              },
+              {
+                "ell_qEFT_km": 68.5,
+                "fraction_of_published_bound": 1.25,
+                "log_relative_surrogate_likelihood": -2.113705823512
+              }
+            ],
+            "is_public_likelihood_or_posterior_sample": false,
+            "claim_use_allowed": false
+          },
+          {
+            "label": "combined",
+            "surrogate_type": "half_normal_upper_limit_from_90_credible_bound",
+            "source_axis": "ell_qEFT_km",
+            "upper_bound_km_90": 51.3,
+            "half_normal_sigma_km": 31.188185477074,
+            "variance_km2": 972.702913352354,
+            "normal_equivalent_quantile": 1.644853626951,
+            "cdf_at_published_bound": 0.9,
+            "grid": [
+              {
+                "ell_qEFT_km": 0.0,
+                "fraction_of_published_bound": 0.0,
+                "log_relative_surrogate_likelihood": -0.0
+              },
+              {
+                "ell_qEFT_km": 12.825,
+                "fraction_of_published_bound": 0.25,
+                "log_relative_surrogate_likelihood": -0.08454823294
+              },
+              {
+                "ell_qEFT_km": 25.65,
+                "fraction_of_published_bound": 0.5,
+                "log_relative_surrogate_likelihood": -0.338192931762
+              },
+              {
+                "ell_qEFT_km": 38.475,
+                "fraction_of_published_bound": 0.75,
+                "log_relative_surrogate_likelihood": -0.760934096464
+              },
+              {
+                "ell_qEFT_km": 51.3,
+                "fraction_of_published_bound": 1.0,
+                "log_relative_surrogate_likelihood": -1.352771727048
+              },
+              {
+                "ell_qEFT_km": 64.125,
+                "fraction_of_published_bound": 1.25,
+                "log_relative_surrogate_likelihood": -2.113705823512
+              }
+            ],
+            "is_public_likelihood_or_posterior_sample": false,
+            "claim_use_allowed": false
+          }
+        ],
+        "machine_readable_public_likelihood_ready": false,
+        "surrogate_ready_for_nonclaiming_attachment": true,
+        "surrogate_scope": "One-dimensional ell_qEFT source-axis upper-bound surrogate derived from the published 90% credible bounds only. It is not a public posterior-sample file, covariance object, or log-likelihood grid."
+      },
+      "needed": "A public posterior-sample file, covariance matrix, or log-likelihood grid on ell_qEFT_km."
+    },
+    "event_set_policy": {
+      "status": "aligned",
+      "source_events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "engine_events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "same_event_set": true,
+      "engine_event_covariance_artifact": "experiments/results/v2.195/r4_parspec_source_event_covariance_export.json"
+    },
+    "systematics": {
+      "status": "source_mentions_eft_and_waveform_systematics_but_no_engine_export",
+      "needed": [
+        "waveform_systematics_budget",
+        "calibration_prior",
+        "event_selection_policy",
+        "glitch_and_data_quality_policy",
+        "eft_validity_domain"
+      ]
+    },
+    "claim_controls": {
+      "claim_use_allowed": false,
+      "framework_claim_allowed": false,
+      "source_bridge_only_not_claim_evidence": true,
+      "published_bound_surrogate_not_claim_evidence": true
+    },
+    "source_asset_audit": {
+      "status": "primary_source_package_audited",
+      "source_package_sha256": "11b568f5107b4e31a7efd83b704178e7a9e938467fcd36a4856f53a208b05da2",
+      "qeft_tex_sha256": "e204f46bc95bdbbfaf4ea3fc13675f188d33a70b58363f605f40fd228da7dc0b",
+      "qeft_posterior_figure_sha256": "b41b2847087581da0d7b00ef947f59dfed369a503e512f45a8361e6596cb18b3"
+    }
+  },
+  "v2191_asset_enriched_evaluation": {
+    "packet_id": "v2191_asset_enriched_parspec_qeft_axis_map_slot",
+    "source_bridge_ready": true,
+    "axis_map_ready": false,
+    "likelihood_attachment_ready": false,
+    "ready_for_framework_claim": false,
+    "synthetic_control": false,
+    "missing_required_fields": [
+      "axis_normalization",
+      "operator_basis_map"
+    ],
+    "map_blockers": [
+      "axis_normalization_missing",
+      "engine_axis_orientation_missing",
+      "operator_basis_map_missing"
+    ],
+    "attachment_blockers": [
+      "calibration_and_waveform_systematics_not_exported",
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ],
+    "all_blockers": [
+      "axis_normalization",
+      "axis_normalization_missing",
+      "calibration_and_waveform_systematics_not_exported",
+      "engine_axis_map_covariance_pushforward_missing",
+      "engine_axis_map_jacobian_missing",
+      "engine_axis_map_not_ready",
+      "engine_axis_map_target_axes_mismatch",
+      "engine_axis_orientation_missing",
+      "engine_axis_vector_missing",
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "operator_basis_map",
+      "operator_basis_map_missing",
+      "parspec_likelihood_export_not_confirmed",
+      "parspec_likelihood_source_axis_mismatch",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "parspec_engine_axis_likelihood_attachment_not_ready"
+    ],
+    "split_v2_188_axis_map_blocker": {
+      "previous": "engine_r4_axes_to_parspec_qeft_length_map_missing",
+      "contract_subpieces": [
+        "source_axis_power_policy",
+        "operator_basis_map",
+        "engine_axis_orientation",
+        "axis_normalization",
+        "covariance_pushforward"
+      ]
+    },
+    "route_status": "parspec_engine_axis_map_packet_blocked"
+  },
+  "event_aligned_packet_evaluation": {
+    "packet_id": "v2196_event_aligned_published_bound_surrogate_slot",
+    "source_bridge_ready": true,
+    "axis_map_ready": false,
+    "likelihood_attachment_ready": false,
+    "ready_for_framework_claim": false,
+    "synthetic_control": false,
+    "missing_required_fields": [
+      "axis_normalization",
+      "operator_basis_map"
+    ],
+    "map_blockers": [
+      "axis_normalization_missing",
+      "engine_axis_orientation_missing",
+      "operator_basis_map_missing"
+    ],
+    "attachment_blockers": [
+      "calibration_and_waveform_systematics_not_exported",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ],
+    "all_blockers": [
+      "axis_normalization",
+      "axis_normalization_missing",
+      "calibration_and_waveform_systematics_not_exported",
+      "engine_axis_map_covariance_pushforward_missing",
+      "engine_axis_map_jacobian_missing",
+      "engine_axis_map_not_ready",
+      "engine_axis_map_target_axes_mismatch",
+      "engine_axis_orientation_missing",
+      "engine_axis_vector_missing",
+      "operator_basis_map",
+      "operator_basis_map_missing",
+      "parspec_likelihood_export_not_confirmed",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "parspec_engine_axis_likelihood_attachment_not_ready"
+    ],
+    "split_v2_188_axis_map_blocker": {
+      "previous": "engine_r4_axes_to_parspec_qeft_length_map_missing",
+      "contract_subpieces": [
+        "source_axis_power_policy",
+        "operator_basis_map",
+        "engine_axis_orientation",
+        "axis_normalization",
+        "covariance_pushforward"
+      ]
+    },
+    "route_status": "parspec_engine_axis_map_packet_blocked"
+  },
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "selected_next_build_action": "derive_source_backed_axis_map_or_acquire_machine_readable_qeft_likelihood",
+  "interpretation": "The ParSpec route now has an event-aligned source-axis surrogate derived from the published qEFT 90% credible bounds. This removes the stale event-set mismatch and source-axis-likelihood mismatch subpieces, but it is not a public posterior sample, covariance, or log-likelihood grid and therefore cannot close the claim-grade public-likelihood blocker.",
+  "evaluation": {
+    "published_bound_surrogate_ready": true,
+    "event_set_alignment_ready": true,
+    "machine_readable_public_likelihood_ready": false,
+    "ready_for_framework_claim": false,
+    "surrogate_blockers": [],
+    "resolved_v2191_attachment_blockers": [
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "parspec_likelihood_source_axis_mismatch"
+    ],
+    "remaining_packet_blockers": [
+      "axis_normalization",
+      "axis_normalization_missing",
+      "calibration_and_waveform_systematics_not_exported",
+      "engine_axis_map_covariance_pushforward_missing",
+      "engine_axis_map_jacobian_missing",
+      "engine_axis_map_not_ready",
+      "engine_axis_map_target_axes_mismatch",
+      "engine_axis_orientation_missing",
+      "engine_axis_vector_missing",
+      "operator_basis_map",
+      "operator_basis_map_missing",
+      "parspec_likelihood_export_not_confirmed",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ],
+    "claim_blockers": [
+      "axis_normalization_missing",
+      "claim_grade_systematics_export_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "operator_basis_map_missing",
+      "parspec_engine_axis_likelihood_attachment_not_ready",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "published_bound_surrogate_not_public_likelihood"
+    ],
+    "claimable_framework_exclusions_now": [],
+    "route_status": "parspec_published_bound_surrogate_ready_axis_map_and_public_likelihood_missing"
+  },
+  "malformed_control_evaluation": {
+    "published_bound_surrogate_ready": false,
+    "event_set_alignment_ready": true,
+    "machine_readable_public_likelihood_ready": false,
+    "ready_for_framework_claim": false,
+    "surrogate_blockers": [
+      "GW150914_surrogate_quantile_mismatch",
+      "GW200129_public_likelihood_flag_unexpected",
+      "published_bound_surrogate_labels_mismatch"
+    ],
+    "resolved_v2191_attachment_blockers": [
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "parspec_likelihood_source_axis_mismatch"
+    ],
+    "remaining_packet_blockers": [
+      "axis_normalization",
+      "axis_normalization_missing",
+      "calibration_and_waveform_systematics_not_exported",
+      "engine_axis_map_covariance_pushforward_missing",
+      "engine_axis_map_jacobian_missing",
+      "engine_axis_map_not_ready",
+      "engine_axis_map_target_axes_mismatch",
+      "engine_axis_orientation_missing",
+      "engine_axis_vector_missing",
+      "operator_basis_map",
+      "operator_basis_map_missing",
+      "parspec_likelihood_export_not_confirmed",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ],
+    "claim_blockers": [
+      "axis_normalization_missing",
+      "claim_grade_systematics_export_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "operator_basis_map_missing",
+      "parspec_engine_axis_likelihood_attachment_not_ready",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "published_bound_surrogate_not_public_likelihood",
+      "published_bound_surrogate_not_ready"
+    ],
+    "claimable_framework_exclusions_now": [],
+    "route_status": "parspec_published_bound_surrogate_not_ready"
+  },
+  "published_bound_surrogate_ready": true,
+  "route_status": "parspec_published_bound_surrogate_ready_axis_map_and_public_likelihood_missing"
+}
