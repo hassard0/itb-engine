@@ -1,0 +1,330 @@
+{
+  "version": "v2.199",
+  "basis": [
+    "v2.196_published_bound_surrogate",
+    "v2.197_qnm_deformation_jacobian",
+    "GWOSC_preferred_parameter_api_snapshots"
+  ],
+  "v2196_route_status": "parspec_published_bound_surrogate_ready_axis_map_and_public_likelihood_missing",
+  "v2197_route_status": "parspec_qnm_deformation_jacobian_ready_engine_axis_map_missing",
+  "absolute_gamma_metadata_packet": {
+    "packet_id": "parspec_qeft_absolute_gamma_metadata_v1",
+    "basis_versions": {
+      "published_bound_surrogate": "v2.196",
+      "qnm_deformation_jacobian": "v2.197"
+    },
+    "source_events": [
+      "GW150914",
+      "GW200129"
+    ],
+    "source_axis": "ell_qEFT_km",
+    "qeft_power": 6,
+    "metadata_sources": {
+      "GW150914": {
+        "event_version": "GW150914-v3",
+        "parameter_endpoint": "https://gwosc.org/api/v2/event-versions/GW150914-v3/parameters",
+        "selected_pe_record": "gwtc1_pe_GW150914",
+        "pipeline": "lalinference",
+        "waveform_family": "Overall_posterior",
+        "is_preferred": true,
+        "data_url": "https://dcc.ligo.org/public/0157/P1800370/005/GW150914_GWTC-1.hdf5",
+        "posterior_sample_reference": "https://dcc.ligo.org/LIGO-P1800370/public",
+        "parameters": {
+          "final_mass_source": {
+            "unit": "M_sun",
+            "best": 63.1,
+            "upper_error": 3.4,
+            "lower_error": -3.0
+          },
+          "redshift": {
+            "unit": "",
+            "best": 0.09,
+            "upper_error": 0.03,
+            "lower_error": -0.03
+          },
+          "luminosity_distance": {
+            "unit": "Mpc",
+            "best": 440.0,
+            "upper_error": 150.0,
+            "lower_error": -170.0
+          }
+        }
+      },
+      "GW200129": {
+        "event_version": "GW200129_065458-v1",
+        "parameter_endpoint": "https://gwosc.org/api/v2/event-versions/GW200129_065458-v1/parameters",
+        "selected_pe_record": "GWTC-3-confident_GW200129_065458_R2_pe_combined",
+        "pipeline": "bilby",
+        "waveform_family": "C01:Mixed",
+        "is_preferred": true,
+        "data_url": "https://zenodo.org/api/records/8177023/files/IGWN-GWTC3p0-v2-GW200129_065458_PEDataRelease_mixed_cosmo.h5/content",
+        "posterior_sample_reference": "https://doi.org/10.5281/zenodo.5546662",
+        "parameters": {
+          "final_mass_source": {
+            "unit": "M_sun",
+            "best": 60.2,
+            "upper_error": 4.1,
+            "lower_error": -3.2
+          },
+          "redshift": {
+            "unit": "",
+            "best": 0.18,
+            "upper_error": 0.05,
+            "lower_error": -0.07
+          },
+          "luminosity_distance": {
+            "unit": "Mpc",
+            "best": 890.0,
+            "upper_error": 260.0,
+            "lower_error": -370.0
+          },
+          "final_spin": {
+            "unit": "",
+            "best": 0.73,
+            "upper_error": 0.06,
+            "lower_error": -0.05
+          },
+          "total_mass_source": {
+            "unit": "M_sun",
+            "best": 63.3,
+            "upper_error": 4.5,
+            "lower_error": -3.4
+          }
+        }
+      }
+    },
+    "normalization_constants": {
+      "solar_mass_geometric_radius_km": 1.4766250385
+    },
+    "event_bound_absolute_gamma_rows": [
+      {
+        "label": "GW150914",
+        "event_version": "GW150914-v3",
+        "selected_pe_record": "gwtc1_pe_GW150914",
+        "parameter_endpoint": "https://gwosc.org/api/v2/event-versions/GW150914-v3/parameters",
+        "source_axis": "ell_qEFT_km",
+        "ell_qEFT_km": 51.7,
+        "final_mass_source_solar": {
+          "best": 63.1,
+          "lower": 60.1,
+          "upper": 66.5
+        },
+        "redshift": {
+          "best": 0.09,
+          "lower": 0.06,
+          "upper": 0.12
+        },
+        "luminosity_distance_mpc": {
+          "best": 440.0,
+          "lower": 270.0,
+          "upper": 590.0
+        },
+        "solar_mass_geometric_radius_km": 1.4766250385,
+        "absolute_gamma_relation": "gamma=(ell_qEFT_km*(1+z)/(M_f_source_solar*GMsun_cminus2_km))^6",
+        "absolute_gamma_ratio_central": 0.604807897509,
+        "absolute_gamma_central": 0.048944592944,
+        "d_absolute_gamma_d_ell_km": 0.005680223552,
+        "absolute_gamma_metadata_range": {
+          "lower": 0.03021532073,
+          "upper": 0.077158396359
+        },
+        "qnm_deformation_at_absolute_gamma": {
+          "delta_omega_qeft_0": -0.010346886948,
+          "delta_tau_qeft_0": -0.029709367917,
+          "delta_omega_qeft_1": -0.07470413221,
+          "delta_tau_qeft_1": 8.386656000922
+        },
+        "metadata_only_not_public_likelihood": true
+      },
+      {
+        "label": "GW200129",
+        "event_version": "GW200129_065458-v1",
+        "selected_pe_record": "GWTC-3-confident_GW200129_065458_R2_pe_combined",
+        "parameter_endpoint": "https://gwosc.org/api/v2/event-versions/GW200129_065458-v1/parameters",
+        "source_axis": "ell_qEFT_km",
+        "ell_qEFT_km": 54.8,
+        "final_mass_source_solar": {
+          "best": 60.2,
+          "lower": 57.0,
+          "upper": 64.3
+        },
+        "redshift": {
+          "best": 0.18,
+          "lower": 0.11,
+          "upper": 0.23
+        },
+        "luminosity_distance_mpc": {
+          "best": 890.0,
+          "lower": 520.0,
+          "upper": 1150.0
+        },
+        "solar_mass_geometric_radius_km": 1.4766250385,
+        "absolute_gamma_relation": "gamma=(ell_qEFT_km*(1+z)/(M_f_source_solar*GMsun_cminus2_km))^6",
+        "absolute_gamma_ratio_central": 0.727437769179,
+        "absolute_gamma_central": 0.148175048283,
+        "d_absolute_gamma_d_ell_km": 0.016223545432,
+        "absolute_gamma_metadata_range": {
+          "lower": 0.069140738871,
+          "upper": 0.263781003276
+        },
+        "qnm_deformation_at_absolute_gamma": {
+          "delta_omega_qeft_0": -0.031324205207,
+          "delta_tau_qeft_0": -0.089942254308,
+          "delta_omega_qeft_1": -0.226159576194,
+          "delta_tau_qeft_1": 25.389794523307
+        },
+        "metadata_only_not_public_likelihood": true
+      }
+    ],
+    "combined_bound_km_90": 51.3,
+    "combined_bound_projected_per_event": [
+      {
+        "label": "GW150914",
+        "event_version": "GW150914-v3",
+        "selected_pe_record": "gwtc1_pe_GW150914",
+        "parameter_endpoint": "https://gwosc.org/api/v2/event-versions/GW150914-v3/parameters",
+        "source_axis": "ell_qEFT_km",
+        "ell_qEFT_km": 51.3,
+        "final_mass_source_solar": {
+          "best": 63.1,
+          "lower": 60.1,
+          "upper": 66.5
+        },
+        "redshift": {
+          "best": 0.09,
+          "lower": 0.06,
+          "upper": 0.12
+        },
+        "luminosity_distance_mpc": {
+          "best": 440.0,
+          "lower": 270.0,
+          "upper": 590.0
+        },
+        "solar_mass_geometric_radius_km": 1.4766250385,
+        "absolute_gamma_relation": "gamma=(ell_qEFT_km*(1+z)/(M_f_source_solar*GMsun_cminus2_km))^6",
+        "absolute_gamma_ratio_central": 0.600128532732,
+        "absolute_gamma_central": 0.046716000357,
+        "d_absolute_gamma_d_ell_km": 0.005463859691,
+        "absolute_gamma_metadata_range": {
+          "lower": 0.028839527496,
+          "upper": 0.073645145562
+        },
+        "qnm_deformation_at_absolute_gamma": {
+          "delta_omega_qeft_0": -0.009875762475,
+          "delta_tau_qeft_0": -0.028356612216,
+          "delta_omega_qeft_1": -0.071302631344,
+          "delta_tau_qeft_1": 8.004786661095
+        },
+        "metadata_only_not_public_likelihood": true
+      },
+      {
+        "label": "GW200129",
+        "event_version": "GW200129_065458-v1",
+        "selected_pe_record": "GWTC-3-confident_GW200129_065458_R2_pe_combined",
+        "parameter_endpoint": "https://gwosc.org/api/v2/event-versions/GW200129_065458-v1/parameters",
+        "source_axis": "ell_qEFT_km",
+        "ell_qEFT_km": 51.3,
+        "final_mass_source_solar": {
+          "best": 60.2,
+          "lower": 57.0,
+          "upper": 64.3
+        },
+        "redshift": {
+          "best": 0.18,
+          "lower": 0.11,
+          "upper": 0.23
+        },
+        "luminosity_distance_mpc": {
+          "best": 890.0,
+          "lower": 520.0,
+          "upper": 1150.0
+        },
+        "solar_mass_geometric_radius_km": 1.4766250385,
+        "absolute_gamma_relation": "gamma=(ell_qEFT_km*(1+z)/(M_f_source_solar*GMsun_cminus2_km))^6",
+        "absolute_gamma_ratio_central": 0.680977327717,
+        "absolute_gamma_central": 0.099723133671,
+        "d_absolute_gamma_d_ell_km": 0.011663524406,
+        "absolute_gamma_metadata_range": {
+          "lower": 0.046532336075,
+          "upper": 0.177526976062
+        },
+        "qnm_deformation_at_absolute_gamma": {
+          "delta_omega_qeft_0": -0.021081470458,
+          "delta_tau_qeft_0": -0.060531942138,
+          "delta_omega_qeft_1": -0.152207418922,
+          "delta_tau_qeft_1": 17.08755895455
+        },
+        "metadata_only_not_public_likelihood": true
+      }
+    ],
+    "combined_bound_single_remnant_metadata_ready": false,
+    "combined_bound_single_remnant_metadata_note": "The published combined ell_qEFT bound is a joint event result; there is no single remnant mass/redshift pair for the combined row, so v2.199 projects the combined bound through each source event's own GWOSC metadata instead.",
+    "absolute_gamma_metadata_ready": true,
+    "public_likelihood_ready": false,
+    "engine_axis_map_ready": false,
+    "claim_use_allowed": false
+  },
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "selected_next_build_action": "derive_qnm_deformation_to_bresciani_engine_r4_operator_basis_map",
+  "interpretation": "The ParSpec qEFT source-axis route now has event-level final remnant mass and redshift metadata from GWOSC preferred PE rows, so absolute gamma can be computed for the source events. This is still not a public qEFT likelihood or an engine-axis map.",
+  "evaluation": {
+    "absolute_gamma_metadata_ready": true,
+    "public_likelihood_ready": false,
+    "engine_axis_map_ready": false,
+    "ready_for_framework_claim": false,
+    "metadata_blockers": [],
+    "resolved_v2197_subpiece": "source_event_absolute_gamma_metadata",
+    "remaining_claim_blockers": [
+      "claim_grade_systematics_export_missing",
+      "engine_axis_normalization_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "qnm_deformation_to_bresciani_engine_r4_operator_basis_map_missing"
+    ],
+    "claim_blockers": [
+      "claim_grade_systematics_export_missing",
+      "engine_axis_normalization_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "qnm_deformation_to_bresciani_engine_r4_operator_basis_map_missing"
+    ],
+    "claimable_framework_exclusions_now": [],
+    "route_status": "parspec_absolute_gamma_metadata_ready_engine_axis_map_missing"
+  },
+  "malformed_control_evaluation": {
+    "absolute_gamma_metadata_ready": false,
+    "public_likelihood_ready": false,
+    "engine_axis_map_ready": false,
+    "ready_for_framework_claim": false,
+    "metadata_blockers": [
+      "GW150914_absolute_gamma_not_positive",
+      "claim_use_not_disabled"
+    ],
+    "resolved_v2197_subpiece": null,
+    "remaining_claim_blockers": [
+      "absolute_gamma_metadata_not_ready",
+      "claim_grade_systematics_export_missing",
+      "engine_axis_normalization_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "qnm_deformation_to_bresciani_engine_r4_operator_basis_map_missing"
+    ],
+    "claim_blockers": [
+      "absolute_gamma_metadata_not_ready",
+      "claim_grade_systematics_export_missing",
+      "engine_axis_normalization_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "qnm_deformation_to_bresciani_engine_r4_operator_basis_map_missing"
+    ],
+    "claimable_framework_exclusions_now": [],
+    "route_status": "parspec_absolute_gamma_metadata_blocked"
+  },
+  "absolute_gamma_metadata_ready": true,
+  "route_status": "parspec_absolute_gamma_metadata_ready_engine_axis_map_missing"
+}
