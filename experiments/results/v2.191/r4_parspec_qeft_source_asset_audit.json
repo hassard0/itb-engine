@@ -1,0 +1,337 @@
+{
+  "version": "v2.191",
+  "basis": [
+    "v2.188_r4_parspec_ringdown_source_bridge",
+    "v2.189_r4_research_continuity_ledger",
+    "v2.190_r4_parspec_engine_axis_map_contract",
+    "Silva_Ghosh_Buonanno_2023_arxiv_source_package"
+  ],
+  "source_package_assets": {
+    "source_url": "https://arxiv.org/abs/2205.05132",
+    "source_doi": "https://doi.org/10.1103/PhysRevD.107.044030",
+    "arxiv_doi": "https://doi.org/10.48550/arXiv.2205.05132",
+    "source_eprint_url": "https://arxiv.org/e-print/2205.05132",
+    "source_package_tarball": {
+      "sha256": "11b568f5107b4e31a7efd83b704178e7a9e938467fcd36a4856f53a208b05da2",
+      "size_bytes": 778370
+    },
+    "top_level_files": [
+      "GW150914_intrinsic_params.pdf",
+      "GW150914_intrinsic_params_remnant.pdf",
+      "ceft_cdf_varying_threshold.pdf",
+      "ceft_posteriors_combined.pdf",
+      "dcs_cdf_varying_threshold.pdf",
+      "dcs_posteriors_combined.pdf",
+      "edgb_cdf_varying_threshold.pdf",
+      "edgb_gamma.pdf",
+      "edgb_posteriors_combined.pdf",
+      "example_waveform_cubicEFT.pdf",
+      "paper_alt_theory_bounds.bbl",
+      "paper_alt_theory_bounds.bib",
+      "paper_alt_theory_bounds.tex",
+      "qeft_cdf_varying_threshold.pdf",
+      "qeft_posteriors_combined.pdf"
+    ],
+    "audited_assets": [
+      {
+        "path": "paper_alt_theory_bounds.tex",
+        "kind": "latex_source",
+        "size_bytes": 101949,
+        "sha256": "e204f46bc95bdbbfaf4ea3fc13675f188d33a70b58363f605f40fd228da7dc0b",
+        "preserved_facts": [
+          "ParSpec gamma relation",
+          "qEFT power p_qEFT = 6",
+          "qEFT QNM deformation coefficients",
+          "GW150914/GW200129/combined qEFT bounds"
+        ]
+      },
+      {
+        "path": "qeft_posteriors_combined.pdf",
+        "kind": "posterior_figure",
+        "size_bytes": 28505,
+        "sha256": "b41b2847087581da0d7b00ef947f59dfed369a503e512f45a8361e6596cb18b3",
+        "machine_readable_likelihood": false
+      },
+      {
+        "path": "qeft_cdf_varying_threshold.pdf",
+        "kind": "cdf_figure",
+        "size_bytes": 201759,
+        "sha256": "e71d3f19b28558bf0b52d43def1ca5390e1cfcb0fdd482fc556b8ead010f601c",
+        "machine_readable_likelihood": false
+      }
+    ],
+    "detected_machine_readable_likelihood_assets": [],
+    "machine_readable_likelihood_ready": false,
+    "audit_note": "The arXiv source package contains TeX and figures sufficient to preserve the qEFT ParSpec power and published bounds, but not a public posterior-sample file, covariance object, or log-likelihood grid that can be attached to the engine."
+  },
+  "source_equation_facts": {
+    "source_refs": {
+      "parspec_frequency_expansion": "paper_alt_theory_bounds.tex:639",
+      "gamma_definition": "paper_alt_theory_bounds.tex:658-661",
+      "qeft_posteriors": "paper_alt_theory_bounds.tex:1673-1685",
+      "qeft_event_bounds": "paper_alt_theory_bounds.tex:1697-1702",
+      "qeft_figure_caption": "paper_alt_theory_bounds.tex:1728-1738",
+      "qeft_coefficients": "paper_alt_theory_bounds.tex:2040-2045"
+    },
+    "source_axis": "ell_qEFT_km",
+    "source_axis_units": "km",
+    "parspec_gamma_relation": {
+      "symbol": "gamma",
+      "relation": "(ell_th c^2 (1 + z) / (G M_f))^p",
+      "qeft_power": 6,
+      "status": "source_backed_for_parspec_deformation",
+      "engine_r4_axis_normalization_ready": false
+    },
+    "qnm_deformation_coefficients": {
+      "nmax_0": {
+        "delta_omega_qeft_0": -0.2114,
+        "delta_tau_qeft_0": -0.607
+      },
+      "nmax_1": {
+        "delta_omega_qeft_1": -1.5263,
+        "delta_tau_qeft_1": 171.35
+      }
+    },
+    "event_bounds_90_credible_km": {
+      "GW150914": 51.7,
+      "GW200129": 54.8,
+      "combined": 51.3
+    },
+    "parspec_epsilon_thresholds": {
+      "GW150914": 0.58,
+      "GW200129": 0.64
+    },
+    "event_set": [
+      "GW150914",
+      "GW200129"
+    ],
+    "source_axis_power_policy_ready": true,
+    "ringdown_qnm_deformation_coefficients_ready": true
+  },
+  "v2191_asset_enriched_packet": {
+    "packet_id": "v2191_asset_enriched_parspec_qeft_axis_map_slot",
+    "source_url": "https://arxiv.org/abs/2205.05132",
+    "source_doi": "https://doi.org/10.1103/PhysRevD.107.044030",
+    "source_type": "source_backed_parspec_qeft_axis_map",
+    "source_theory_family": "quartic_order_effective_field_theory_of_general_relativity",
+    "source_axis": "ell_qEFT",
+    "source_axis_units": "km",
+    "target_engine_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3"
+    ],
+    "source_axis_power_policy": {
+      "status": "source_backed",
+      "length_axis": "ell_qEFT_km",
+      "length_power_declared": true,
+      "length_power": 6,
+      "power_scope": "ParSpec qEFT ringdown deformation power only; not a completed Bresciani engine R4-axis operator map.",
+      "gamma_relation": "(ell_th c^2 (1 + z) / (G M_f))^p",
+      "source_refs": [
+        "paper_alt_theory_bounds.tex:658-661",
+        "paper_alt_theory_bounds.tex:2040-2045"
+      ]
+    },
+    "operator_basis_map": {},
+    "engine_axis_map": {
+      "status": "missing",
+      "needed": "Map the ParSpec quartic-EFT length-scale posterior or likelihood onto engine-normalized Bresciani axes g_R4_c1, g_R4_c2, g_R4_c3.",
+      "engine_axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "source_axis": "ell_qEFT_km"
+    },
+    "axis_normalization": {},
+    "likelihood_reference": {
+      "status": "missing_public_export",
+      "available_in_source": "published_bound_only",
+      "needed": "Public likelihood samples, log-likelihood grid, or covariance for the quartic-EFT ringdown parameter, with event metadata."
+    },
+    "event_set_policy": {
+      "status": "mismatch",
+      "source_events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "engine_events": [
+        "GW170608"
+      ],
+      "same_event_set": false
+    },
+    "systematics": {
+      "status": "source_mentions_eft_and_waveform_systematics_but_no_engine_export",
+      "needed": [
+        "waveform_systematics_budget",
+        "calibration_prior",
+        "event_selection_policy",
+        "glitch_and_data_quality_policy",
+        "eft_validity_domain"
+      ]
+    },
+    "claim_controls": {
+      "claim_use_allowed": false,
+      "framework_claim_allowed": false,
+      "source_bridge_only_not_claim_evidence": true
+    },
+    "source_asset_audit": {
+      "status": "primary_source_package_audited",
+      "source_package_sha256": "11b568f5107b4e31a7efd83b704178e7a9e938467fcd36a4856f53a208b05da2",
+      "qeft_tex_sha256": "e204f46bc95bdbbfaf4ea3fc13675f188d33a70b58363f605f40fd228da7dc0b",
+      "qeft_posterior_figure_sha256": "b41b2847087581da0d7b00ef947f59dfed369a503e512f45a8361e6596cb18b3"
+    }
+  },
+  "baseline_v2188_evaluation": {
+    "packet_id": "current_v2188_parspec_qeft_axis_map_slot",
+    "source_bridge_ready": true,
+    "axis_map_ready": false,
+    "likelihood_attachment_ready": false,
+    "ready_for_framework_claim": false,
+    "synthetic_control": false,
+    "missing_required_fields": [
+      "axis_normalization",
+      "operator_basis_map",
+      "source_axis_power_policy"
+    ],
+    "map_blockers": [
+      "axis_normalization_missing",
+      "engine_axis_orientation_missing",
+      "operator_basis_map_missing",
+      "source_axis_power_policy_missing"
+    ],
+    "attachment_blockers": [
+      "calibration_and_waveform_systematics_not_exported",
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ],
+    "all_blockers": [
+      "axis_normalization",
+      "axis_normalization_missing",
+      "calibration_and_waveform_systematics_not_exported",
+      "engine_axis_map_covariance_pushforward_missing",
+      "engine_axis_map_jacobian_missing",
+      "engine_axis_map_not_ready",
+      "engine_axis_map_target_axes_mismatch",
+      "engine_axis_orientation_missing",
+      "engine_axis_vector_missing",
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "operator_basis_map",
+      "operator_basis_map_missing",
+      "parspec_likelihood_export_not_confirmed",
+      "parspec_likelihood_source_axis_mismatch",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "source_axis_power_policy",
+      "source_axis_power_policy_missing"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "parspec_engine_axis_likelihood_attachment_not_ready"
+    ],
+    "split_v2_188_axis_map_blocker": {
+      "previous": "engine_r4_axes_to_parspec_qeft_length_map_missing",
+      "contract_subpieces": [
+        "source_axis_power_policy",
+        "operator_basis_map",
+        "engine_axis_orientation",
+        "axis_normalization",
+        "covariance_pushforward"
+      ]
+    },
+    "route_status": "parspec_engine_axis_map_packet_blocked"
+  },
+  "v2191_asset_enriched_evaluation": {
+    "packet_id": "v2191_asset_enriched_parspec_qeft_axis_map_slot",
+    "source_bridge_ready": true,
+    "axis_map_ready": false,
+    "likelihood_attachment_ready": false,
+    "ready_for_framework_claim": false,
+    "synthetic_control": false,
+    "missing_required_fields": [
+      "axis_normalization",
+      "operator_basis_map"
+    ],
+    "map_blockers": [
+      "axis_normalization_missing",
+      "engine_axis_orientation_missing",
+      "operator_basis_map_missing"
+    ],
+    "attachment_blockers": [
+      "calibration_and_waveform_systematics_not_exported",
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ],
+    "all_blockers": [
+      "axis_normalization",
+      "axis_normalization_missing",
+      "calibration_and_waveform_systematics_not_exported",
+      "engine_axis_map_covariance_pushforward_missing",
+      "engine_axis_map_jacobian_missing",
+      "engine_axis_map_not_ready",
+      "engine_axis_map_target_axes_mismatch",
+      "engine_axis_orientation_missing",
+      "engine_axis_vector_missing",
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "operator_basis_map",
+      "operator_basis_map_missing",
+      "parspec_likelihood_export_not_confirmed",
+      "parspec_likelihood_source_axis_mismatch",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "parspec_engine_axis_likelihood_attachment_not_ready"
+    ],
+    "split_v2_188_axis_map_blocker": {
+      "previous": "engine_r4_axes_to_parspec_qeft_length_map_missing",
+      "contract_subpieces": [
+        "source_axis_power_policy",
+        "operator_basis_map",
+        "engine_axis_orientation",
+        "axis_normalization",
+        "covariance_pushforward"
+      ]
+    },
+    "route_status": "parspec_engine_axis_map_packet_blocked"
+  },
+  "resolved_v2190_contract_blockers": [
+    "source_axis_power_policy",
+    "source_axis_power_policy_missing"
+  ],
+  "source_asset_readiness": {
+    "source_package_assets_ready": true,
+    "source_axis_power_policy_ready": true,
+    "ringdown_qnm_deformation_coefficients_ready": true,
+    "published_bound_and_figure_assets_ready": true,
+    "machine_readable_likelihood_ready": false,
+    "operator_basis_map_ready": false,
+    "engine_bresciani_axis_orientation_ready": false,
+    "event_set_aligned_with_current_engine_run": false,
+    "claim_grade_systematics_export_ready": false
+  },
+  "remaining_contract_blockers_after_asset_audit": [
+    "axis_normalization",
+    "axis_normalization_missing",
+    "calibration_and_waveform_systematics_not_exported",
+    "engine_axis_map_covariance_pushforward_missing",
+    "engine_axis_map_jacobian_missing",
+    "engine_axis_map_not_ready",
+    "engine_axis_map_target_axes_mismatch",
+    "engine_axis_orientation_missing",
+    "engine_axis_vector_missing",
+    "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+    "operator_basis_map",
+    "operator_basis_map_missing",
+    "parspec_likelihood_export_not_confirmed",
+    "parspec_likelihood_source_axis_mismatch",
+    "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+  ],
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "route_status": "parspec_qeft_source_asset_audit_ready_nonclaiming",
+  "selected_next_build_action": "derive_qeft_to_bresciani_engine_axis_map_or_acquire_public_likelihood_grid",
+  "interpretation": "The arXiv source package resolves the v2.190 source-axis power policy blocker by recording p_qEFT = 6 and the qEFT ringdown coefficients. It does not provide a machine-readable likelihood, does not align the current engine GW170608 run with GW150914/GW200129, and does not map the ParSpec qEFT length axis onto engine-normalized Bresciani R4 axes."
+}
