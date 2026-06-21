@@ -32,25 +32,26 @@ Start with the generated [`results/INDEX.md`](results/INDEX.md) for the full cur
 
 ## Highlights
 
-If you only read twenty documents, read these:
+If you only read twenty-one documents, read these:
 
-1. **[`results/2026-06-20-v2.199-r4-parspec-absolute-gamma-metadata.md`](results/2026-06-20-v2.199-r4-parspec-absolute-gamma-metadata.md)** — GWOSC final-mass/redshift metadata for absolute ParSpec gamma
-2. **[`results/2026-06-20-v2.198-r4-parspec-continuity-ledger.md`](results/2026-06-20-v2.198-r4-parspec-continuity-ledger.md)** — preservation ledger for the v2.190-v2.197 ParSpec run details
-3. **[`results/2026-06-20-v2.197-r4-parspec-qnm-deformation-jacobian.md`](results/2026-06-20-v2.197-r4-parspec-qnm-deformation-jacobian.md)** — source-space `ell_qEFT -> qNM deformation` Jacobian, engine-axis map still blocked
-4. **[`results/2026-06-20-v2.196-r4-parspec-published-bound-surrogate.md`](results/2026-06-20-v2.196-r4-parspec-published-bound-surrogate.md)** — event-aligned published qEFT bound surrogate, explicitly not a public posterior
-5. **[`results/2026-06-20-v2.195-r4-parspec-source-event-covariance-export.md`](results/2026-06-20-v2.195-r4-parspec-source-event-covariance-export.md)** — source-event and combined covariance export from the ParSpec event-topology likelihood
-6. **[`results/2026-06-20-v2.194-r4-parspec-event-topology-likelihood.md`](results/2026-06-20-v2.194-r4-parspec-event-topology-likelihood.md)** — event-topology R4 likelihood with GW200129 V1 included
-7. **[`results/2026-06-20-v2.193-r4-parspec-same-event-h1l1-likelihood.md`](results/2026-06-20-v2.193-r4-parspec-same-event-h1l1-likelihood.md)** — same-event H1/L1 R4 likelihood rerun on the ParSpec source events
-8. **[`results/2026-06-20-v2.192-r4-parspec-source-event-alignment-manifest.md`](results/2026-06-20-v2.192-r4-parspec-source-event-alignment-manifest.md)** — public GWOSC event-version and strain-URL manifest for the ParSpec source events
-9. **[`results/2026-06-20-v2.191-r4-parspec-qeft-source-asset-audit.md`](results/2026-06-20-v2.191-r4-parspec-qeft-source-asset-audit.md)** — source-package audit that preserves `p_qEFT = 6`, qEFT coefficients, event bounds, and the no-public-likelihood finding
-10. **[`results/2026-06-20-v2.190-r4-parspec-engine-axis-map-contract.md`](results/2026-06-20-v2.190-r4-parspec-engine-axis-map-contract.md)** — executable contract for the missing ParSpec `ell_qEFT -> g_R4_*` map
-11. **[`results/2026-06-20-v2.189-r4-research-continuity-ledger.md`](results/2026-06-20-v2.189-r4-research-continuity-ledger.md)** — preservation ledger for the v2.170-v2.188 run details
-12. **[`results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md`](results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md)** — ParSpec/quartic-EFT ringdown source bridge
-13. **[`results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md`](results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md)** — R4/GWOSC waveform-likelihood posterior bridge
-14. **[`results/2026-06-20-v2.186-r4-nuisance-covariance-export.md`](results/2026-06-20-v2.186-r4-nuisance-covariance-export.md)** — R4/GWOSC artifact exporting nuisance-grid covariance
-15. **[`results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md`](results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md)** — calibrated R4/GWOSC projection using the H1/L1 LALSuite response
+1. **[`results/2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md`](results/2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md)** — executable 3x4 qNM-to-Bresciani sensitivity-matrix gate
+2. **[`ROADMAP.md`](ROADMAP.md)** — next research path after v2.200
+3. **[`results/2026-06-20-v2.199-r4-parspec-absolute-gamma-metadata.md`](results/2026-06-20-v2.199-r4-parspec-absolute-gamma-metadata.md)** — GWOSC final-mass/redshift metadata for absolute ParSpec gamma
+4. **[`results/2026-06-20-v2.198-r4-parspec-continuity-ledger.md`](results/2026-06-20-v2.198-r4-parspec-continuity-ledger.md)** — preservation ledger for the v2.190-v2.197 ParSpec run details
+5. **[`results/2026-06-20-v2.197-r4-parspec-qnm-deformation-jacobian.md`](results/2026-06-20-v2.197-r4-parspec-qnm-deformation-jacobian.md)** — source-space `ell_qEFT -> qNM deformation` Jacobian, engine-axis map still blocked
+6. **[`results/2026-06-20-v2.196-r4-parspec-published-bound-surrogate.md`](results/2026-06-20-v2.196-r4-parspec-published-bound-surrogate.md)** — event-aligned published qEFT bound surrogate, explicitly not a public posterior
+7. **[`results/2026-06-20-v2.195-r4-parspec-source-event-covariance-export.md`](results/2026-06-20-v2.195-r4-parspec-source-event-covariance-export.md)** — source-event and combined covariance export from the ParSpec event-topology likelihood
+8. **[`results/2026-06-20-v2.194-r4-parspec-event-topology-likelihood.md`](results/2026-06-20-v2.194-r4-parspec-event-topology-likelihood.md)** — event-topology R4 likelihood with GW200129 V1 included
+9. **[`results/2026-06-20-v2.193-r4-parspec-same-event-h1l1-likelihood.md`](results/2026-06-20-v2.193-r4-parspec-same-event-h1l1-likelihood.md)** — same-event H1/L1 R4 likelihood rerun on the ParSpec source events
+10. **[`results/2026-06-20-v2.192-r4-parspec-source-event-alignment-manifest.md`](results/2026-06-20-v2.192-r4-parspec-source-event-alignment-manifest.md)** — public GWOSC event-version and strain-URL manifest for the ParSpec source events
+11. **[`results/2026-06-20-v2.191-r4-parspec-qeft-source-asset-audit.md`](results/2026-06-20-v2.191-r4-parspec-qeft-source-asset-audit.md)** — source-package audit that preserves `p_qEFT = 6`, qEFT coefficients, event bounds, and the no-public-likelihood finding
+12. **[`results/2026-06-20-v2.190-r4-parspec-engine-axis-map-contract.md`](results/2026-06-20-v2.190-r4-parspec-engine-axis-map-contract.md)** — executable contract for the missing ParSpec `ell_qEFT -> g_R4_*` map
+13. **[`results/2026-06-20-v2.189-r4-research-continuity-ledger.md`](results/2026-06-20-v2.189-r4-research-continuity-ledger.md)** — preservation ledger for the v2.170-v2.188 run details
+14. **[`results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md`](results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md)** — ParSpec/quartic-EFT ringdown source bridge
+15. **[`results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md`](results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md)** — R4/GWOSC waveform-likelihood posterior bridge
 16. **[`results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md`](results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md)** — R4/GWOSC/LALSuite frontier summary and claim boundary
-17. **[`FINDINGS.md`](FINDINGS.md)** — curated one-page findings, now including the v2.170-v2.199 frontier
+17. **[`FINDINGS.md`](FINDINGS.md)** — curated one-page findings, now including the v2.170-v2.200 frontier
 18. **[`results/2026-06-09-v2.10-capstone.md`](results/2026-06-09-v2.10-capstone.md)** — the program in one page
 19. **[`results/2026-06-09-v2.0-RESEARCH-REPORT.md`](results/2026-06-09-v2.0-RESEARCH-REPORT.md)** — publication-style overview of the core engine
-20. **[`results/INDEX.md`](results/INDEX.md)** — generated chronological index for the full research loop
+20. **[`results/TAXONOMY.md`](results/TAXONOMY.md)** — thematic index
+21. **[`results/INDEX.md`](results/INDEX.md)** — generated chronological index for the full research loop

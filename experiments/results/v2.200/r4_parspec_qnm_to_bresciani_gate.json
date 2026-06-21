@@ -1,0 +1,479 @@
+{
+  "version": "v2.200",
+  "basis": [
+    "v2.175_bresciani_r4_axis_dictionary",
+    "v2.190_parspec_engine_axis_map_contract",
+    "v2.197_parspec_qnm_deformation_jacobian",
+    "v2.199_parspec_absolute_gamma_metadata"
+  ],
+  "contract": {
+    "contract_id": "parspec_qnm_to_bresciani_gate_contract_v1",
+    "version": "v2.200",
+    "matrix_id": "parspec_qnm_to_bresciani_sensitivity_matrix_v1",
+    "qnm_axes": [
+      "delta_omega_qeft_0",
+      "delta_tau_qeft_0",
+      "delta_omega_qeft_1",
+      "delta_tau_qeft_1"
+    ],
+    "target_engine_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3"
+    ],
+    "required_packet_fields": [
+      "packet_id",
+      "source_urls",
+      "source_type",
+      "qnm_axes",
+      "target_engine_axes",
+      "sensitivity_matrix",
+      "bresciani_coordinate_orientation",
+      "axis_normalization",
+      "likelihood_reference",
+      "event_set_policy",
+      "systematics",
+      "claim_controls"
+    ],
+    "valid_source_types": [
+      "source_backed_parspec_qeft_qnm_ray",
+      "source_backed_qnm_to_bresciani_r4_sensitivity",
+      "unit_test_control"
+    ],
+    "minimum_sensitivity_matrix": {
+      "rows": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "columns": [
+        "delta_omega_qeft_0",
+        "delta_tau_qeft_0",
+        "delta_omega_qeft_1",
+        "delta_tau_qeft_1"
+      ],
+      "matrix_kind": "d_engine_axis_d_qnm_deformation_axis",
+      "required_rank": 3,
+      "reason": "A one-dimensional qEFT gamma ray is not enough to infer the three Bresciani R4 engine axes. A source-backed 3x4 sensitivity matrix or equivalent full-rank operator map is required."
+    },
+    "claim_rule": "Even a source-backed qNM-to-Bresciani map only enables a nonclaiming likelihood attachment. Framework claims still require public likelihood/posterior data, waveform systematics, and external adversarial review."
+  },
+  "sourceability_findings": {
+    "bresciani_dictionary_ready": true,
+    "bresciani_projection_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3"
+    ],
+    "parspec_qeft_qnm_ray_ready": true,
+    "full_rank_qnm_to_engine_sensitivity_ready": false,
+    "public_qeft_likelihood_ready": false,
+    "finding": "Current sources supply Bresciani K-to-engine axes and a ParSpec qEFT gamma-to-qNM ray. They do not supply the full-rank qNM-to-Bresciani sensitivity matrix needed to invert qNM deformation coordinates into g_R4_c1/c2/c3."
+  },
+  "qeft_qnm_ray_coefficients": {
+    "delta_omega_qeft_0": -0.2114,
+    "delta_tau_qeft_0": -0.607,
+    "delta_omega_qeft_1": -1.5263,
+    "delta_tau_qeft_1": 171.35
+  },
+  "current_qeft_qnm_ray_packet": {
+    "packet_id": "current_qeft_qnm_ray_not_bresciani_operator_map",
+    "source_urls": [
+      "https://arxiv.org/abs/2205.05132",
+      "https://arxiv.org/e-print/2205.05132",
+      "https://doi.org/10.1103/PhysRevD.107.044030",
+      "https://arxiv.org/abs/2504.12855"
+    ],
+    "source_type": "source_backed_parspec_qeft_qnm_ray",
+    "qnm_axes": [
+      "delta_omega_qeft_0",
+      "delta_tau_qeft_0",
+      "delta_omega_qeft_1",
+      "delta_tau_qeft_1"
+    ],
+    "target_engine_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3"
+    ],
+    "sensitivity_matrix": {
+      "status": "source_backed",
+      "matrix_id": "parspec_qeft_gamma_to_qnm_ray_v1",
+      "matrix_kind": "d_qnm_deformation_axis_d_absolute_gamma_qeft",
+      "rows": [
+        "delta_omega_qeft_0",
+        "delta_tau_qeft_0",
+        "delta_omega_qeft_1",
+        "delta_tau_qeft_1"
+      ],
+      "columns": [
+        "absolute_gamma_qeft"
+      ],
+      "matrix": [
+        [
+          -0.2114
+        ],
+        [
+          -0.607
+        ],
+        [
+          -1.5263
+        ],
+        [
+          171.35
+        ]
+      ],
+      "rank": 1,
+      "covariance_pushforward_available": false,
+      "source_scope": "ParSpec qEFT supplies one deformation ray in qNM space, not a three-axis Bresciani R4 operator basis."
+    },
+    "source_event_absolute_gamma_rows": [
+      {
+        "label": "GW150914",
+        "event_version": "GW150914-v3",
+        "selected_pe_record": "gwtc1_pe_GW150914",
+        "parameter_endpoint": "https://gwosc.org/api/v2/event-versions/GW150914-v3/parameters",
+        "source_axis": "ell_qEFT_km",
+        "ell_qEFT_km": 51.7,
+        "final_mass_source_solar": {
+          "best": 63.1,
+          "lower": 60.1,
+          "upper": 66.5
+        },
+        "redshift": {
+          "best": 0.09,
+          "lower": 0.06,
+          "upper": 0.12
+        },
+        "luminosity_distance_mpc": {
+          "best": 440.0,
+          "lower": 270.0,
+          "upper": 590.0
+        },
+        "solar_mass_geometric_radius_km": 1.4766250385,
+        "absolute_gamma_relation": "gamma=(ell_qEFT_km*(1+z)/(M_f_source_solar*GMsun_cminus2_km))^6",
+        "absolute_gamma_ratio_central": 0.604807897509,
+        "absolute_gamma_central": 0.048944592944,
+        "d_absolute_gamma_d_ell_km": 0.005680223552,
+        "absolute_gamma_metadata_range": {
+          "lower": 0.03021532073,
+          "upper": 0.077158396359
+        },
+        "qnm_deformation_at_absolute_gamma": {
+          "delta_omega_qeft_0": -0.010346886948,
+          "delta_tau_qeft_0": -0.029709367917,
+          "delta_omega_qeft_1": -0.07470413221,
+          "delta_tau_qeft_1": 8.386656000922
+        },
+        "metadata_only_not_public_likelihood": true
+      },
+      {
+        "label": "GW200129",
+        "event_version": "GW200129_065458-v1",
+        "selected_pe_record": "GWTC-3-confident_GW200129_065458_R2_pe_combined",
+        "parameter_endpoint": "https://gwosc.org/api/v2/event-versions/GW200129_065458-v1/parameters",
+        "source_axis": "ell_qEFT_km",
+        "ell_qEFT_km": 54.8,
+        "final_mass_source_solar": {
+          "best": 60.2,
+          "lower": 57.0,
+          "upper": 64.3
+        },
+        "redshift": {
+          "best": 0.18,
+          "lower": 0.11,
+          "upper": 0.23
+        },
+        "luminosity_distance_mpc": {
+          "best": 890.0,
+          "lower": 520.0,
+          "upper": 1150.0
+        },
+        "solar_mass_geometric_radius_km": 1.4766250385,
+        "absolute_gamma_relation": "gamma=(ell_qEFT_km*(1+z)/(M_f_source_solar*GMsun_cminus2_km))^6",
+        "absolute_gamma_ratio_central": 0.727437769179,
+        "absolute_gamma_central": 0.148175048283,
+        "d_absolute_gamma_d_ell_km": 0.016223545432,
+        "absolute_gamma_metadata_range": {
+          "lower": 0.069140738871,
+          "upper": 0.263781003276
+        },
+        "qnm_deformation_at_absolute_gamma": {
+          "delta_omega_qeft_0": -0.031324205207,
+          "delta_tau_qeft_0": -0.089942254308,
+          "delta_omega_qeft_1": -0.226159576194,
+          "delta_tau_qeft_1": 25.389794523307
+        },
+        "metadata_only_not_public_likelihood": true
+      }
+    ],
+    "bresciani_coordinate_orientation": {
+      "status": "missing",
+      "target_basis": "bresciani_r4_axis_dictionary_v1",
+      "available_dictionary_ready": true,
+      "missing_link": "No source-backed relation from qNM deformation axes to K_plus/Re(K_minus)/Im(K_minus) or g_R4_c1/c2/c3."
+    },
+    "axis_normalization": {
+      "status": "parspec_absolute_gamma_ready_only",
+      "uses_absolute_gamma_metadata": true,
+      "uses_numeric_lambda_r4_scale_or_equivalent": false,
+      "normalization_uncertainty_exported": true
+    },
+    "likelihood_reference": {
+      "status": "published_bound_and_metadata_only",
+      "source_axis": "ell_qEFT_km",
+      "events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "posterior_or_likelihood_exported": false
+    },
+    "event_set_policy": {
+      "status": "aligned",
+      "source_events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "engine_events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "same_event_set": true
+    },
+    "systematics": {
+      "status": "not_claim_grade",
+      "items": []
+    },
+    "claim_controls": {
+      "claim_use_allowed": false,
+      "framework_claim_allowed": false,
+      "external_adversarial_review_complete": false
+    }
+  },
+  "current_qeft_qnm_ray_evaluation": {
+    "packet_id": "current_qeft_qnm_ray_not_bresciani_operator_map",
+    "sensitivity_matrix_rank": 1,
+    "required_rank": 3,
+    "operator_map_ready": false,
+    "likelihood_attachment_ready": false,
+    "ready_for_framework_claim": false,
+    "map_blockers": [
+      "bresciani_coordinate_orientation_missing",
+      "covariance_pushforward_missing",
+      "engine_axis_normalization_missing",
+      "field_redefinition_policy_missing",
+      "numeric_lambda_r4_or_equivalent_normalization_missing",
+      "sensitivity_matrix_not_four_qnm_columns",
+      "sensitivity_matrix_not_three_engine_rows",
+      "sensitivity_matrix_rank_deficient",
+      "source_maps_only_one_qeft_ray"
+    ],
+    "all_blockers": [
+      "bresciani_coordinate_orientation_missing",
+      "claim_grade_systematics_export_missing",
+      "covariance_pushforward_missing",
+      "engine_axis_normalization_missing",
+      "field_redefinition_policy_missing",
+      "numeric_lambda_r4_or_equivalent_normalization_missing",
+      "parspec_likelihood_export_not_confirmed",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "sensitivity_matrix_not_four_qnm_columns",
+      "sensitivity_matrix_not_three_engine_rows",
+      "sensitivity_matrix_rank_deficient",
+      "source_maps_only_one_qeft_ray"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "parspec_engine_axis_likelihood_attachment_not_ready",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing"
+    ],
+    "route_status": "qnm_to_bresciani_operator_map_blocked"
+  },
+  "synthetic_ready_packet": {
+    "packet_id": "synthetic_qnm_to_bresciani_operator_map_v1",
+    "source_urls": [
+      "https://arxiv.org/abs/2205.05132",
+      "https://arxiv.org/abs/2504.12855"
+    ],
+    "source_type": "unit_test_control",
+    "qnm_axes": [
+      "delta_omega_qeft_0",
+      "delta_tau_qeft_0",
+      "delta_omega_qeft_1",
+      "delta_tau_qeft_1"
+    ],
+    "target_engine_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3"
+    ],
+    "sensitivity_matrix": {
+      "status": "source_backed",
+      "matrix_id": "parspec_qnm_to_bresciani_sensitivity_matrix_v1",
+      "matrix_kind": "d_engine_axis_d_qnm_deformation_axis",
+      "rows": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "columns": [
+        "delta_omega_qeft_0",
+        "delta_tau_qeft_0",
+        "delta_omega_qeft_1",
+        "delta_tau_qeft_1"
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.25
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.5
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.75
+        ]
+      ],
+      "rank": 3,
+      "covariance_pushforward_available": true
+    },
+    "bresciani_coordinate_orientation": {
+      "status": "source_backed",
+      "source_coordinates": [
+        "K_plus",
+        "Re(K_minus)",
+        "Im(K_minus)"
+      ],
+      "target_basis": "bresciani_r4_axis_dictionary_v1",
+      "field_redefinition_policy": "closed_for_packet"
+    },
+    "axis_normalization": {
+      "status": "source_backed_absolute_or_equivalent",
+      "uses_absolute_gamma_metadata": true,
+      "uses_numeric_lambda_r4_scale_or_equivalent": true,
+      "normalization_uncertainty_exported": true
+    },
+    "likelihood_reference": {
+      "status": "public_covariance_matrix",
+      "source_axis": "qnm_deformation_axes",
+      "events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "covariance": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "posterior_or_likelihood_exported": true
+    },
+    "event_set_policy": {
+      "status": "aligned",
+      "source_events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "engine_events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "same_event_set": true
+    },
+    "systematics": {
+      "status": "engine_export_ready",
+      "items": [
+        "waveform_systematics_budget",
+        "calibration_prior",
+        "eft_validity_domain"
+      ]
+    },
+    "claim_controls": {
+      "claim_use_allowed": false,
+      "framework_claim_allowed": false,
+      "external_adversarial_review_complete": false,
+      "synthetic_control_not_claim_evidence": true
+    }
+  },
+  "synthetic_ready_evaluation": {
+    "packet_id": "synthetic_qnm_to_bresciani_operator_map_v1",
+    "sensitivity_matrix_rank": 3,
+    "required_rank": 3,
+    "operator_map_ready": true,
+    "likelihood_attachment_ready": true,
+    "ready_for_framework_claim": false,
+    "map_blockers": [],
+    "all_blockers": [],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "synthetic_control_not_claim_evidence"
+    ],
+    "route_status": "qnm_to_bresciani_operator_map_ready_nonclaiming"
+  },
+  "malformed_control_evaluation": {
+    "packet_id": "synthetic_qnm_to_bresciani_operator_map_v1",
+    "sensitivity_matrix_rank": 1,
+    "required_rank": 3,
+    "operator_map_ready": false,
+    "likelihood_attachment_ready": false,
+    "ready_for_framework_claim": false,
+    "map_blockers": [
+      "bresciani_source_url_missing",
+      "sensitivity_matrix_not_three_engine_rows",
+      "sensitivity_matrix_rank_deficient",
+      "sensitivity_matrix_shape_mismatch"
+    ],
+    "all_blockers": [
+      "bresciani_source_url_missing",
+      "claim_use_not_disabled",
+      "parspec_source_url_missing",
+      "sensitivity_matrix_not_three_engine_rows",
+      "sensitivity_matrix_rank_deficient",
+      "sensitivity_matrix_shape_mismatch"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "parspec_engine_axis_likelihood_attachment_not_ready",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing",
+      "synthetic_control_not_claim_evidence"
+    ],
+    "route_status": "qnm_to_bresciani_operator_map_blocked"
+  },
+  "operator_map_gate_ready": true,
+  "current_operator_map_ready": false,
+  "current_likelihood_attachment_ready": false,
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "resolved_v2199_subpiece": "qnm_to_bresciani_sensitivity_gate_defined",
+  "remaining_claim_blockers": [
+    "claim_grade_systematics_export_missing",
+    "external_adversarial_review_missing",
+    "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+    "qnm_deformation_to_bresciani_engine_r4_map_missing"
+  ],
+  "route_status": "parspec_qnm_to_bresciani_gate_ready_map_missing",
+  "selected_next_build_action": "acquire_source_backed_qnm_to_bresciani_sensitivity_matrix_or_public_qeft_likelihood",
+  "interpretation": "v2.200 closes the ambiguity in the next blocker. The qEFT source ray is one-dimensional in qNM deformation space; the Bresciani engine basis is three-dimensional. A claim-grade bridge needs a source-backed 3x4 sensitivity matrix, or an equivalent full-rank operator map with normalization and public likelihood data."
+}

@@ -2,11 +2,11 @@
 
 **A research platform that constrains the space of possible quantum-gravity theories by imposing every consistency condition we can encode — amplitude positivity, causality, holographic-information bounds, the swampland, anomaly flow, black-hole thermodynamics — then confronts the survivors with *real experimental data* and asks what's left.**
 
-> **Status:** v2.199 research loop · **1475 local tests, 7 skipped** · **1482 Vulcan tests with LALSuite installed** · **38 theoretical constraints (+4 ingested-data)** · **14 framework encoders** · **8 Wilson coefficients** · **9 observables** · **310 indexed result notes**
+> **Status:** v2.200 research loop · **local and remote Linux validation current** · **38 theoretical constraints (+4 ingested-data)** · **14 framework encoders** · **8 Wilson coefficients** · **9 observables** · **310 indexed result notes + v2.200 report**
 >
 > Honest by construction: most constraint prefactors are O(1) placeholders ("the right streets, the wrong house numbers"). A dedicated **realism program** stress-tests every headline claim against that toy-prefactor uncertainty, so the repo distinguishes *robust conclusions* from *artifacts*. Read every claim below with that in mind — and see [Honest limitations](#honest-limitations).
 
-📍 **Start here:** [**v2.199 R4 ParSpec absolute gamma metadata**](docs/results/2026-06-20-v2.199-r4-parspec-absolute-gamma-metadata.md) (attaches GWOSC final-mass/redshift metadata and computes absolute source gamma) · [**v2.198 R4 ParSpec continuity ledger**](docs/results/2026-06-20-v2.198-r4-parspec-continuity-ledger.md) (preserves the v2.190-v2.197 ParSpec run details so writeups do not lose them) · [**v2.197 R4 ParSpec qNM deformation Jacobian**](docs/results/2026-06-20-v2.197-r4-parspec-qnm-deformation-jacobian.md) (pushes `ell_qEFT` into ParSpec qNM deformation coordinates while keeping the engine-axis map blocked) · [**v2.196 R4 ParSpec published-bound surrogate**](docs/results/2026-06-20-v2.196-r4-parspec-published-bound-surrogate.md) (aligns the published qEFT bounds with the v2.195 source-event packet without promoting them to a public posterior) · [**v2.195 R4 ParSpec source-event covariance export**](docs/results/2026-06-20-v2.195-r4-parspec-source-event-covariance-export.md) (exports event-specific and combined covariance from the v2.194 source-event topology likelihood) · [**v2.194 R4 ParSpec event-topology likelihood**](docs/results/2026-06-20-v2.194-r4-parspec-event-topology-likelihood.md) (reruns the source-event likelihood with GW150914 H1/L1 and GW200129 H1/L1/V1 topology) · [**v2.193 R4 ParSpec same-event H1/L1 likelihood**](docs/results/2026-06-20-v2.193-r4-parspec-same-event-h1l1-likelihood.md) (reruns the coarse R4 H1/L1 likelihood on GW150914/GW200129 public strain) · [**v2.192 R4 ParSpec source-event alignment manifest**](docs/results/2026-06-20-v2.192-r4-parspec-source-event-alignment-manifest.md) (maps GW150914/GW200129 to exact GWOSC event versions and HDF5 strain URLs) · [**v2.191 R4 ParSpec qEFT source-asset audit**](docs/results/2026-06-20-v2.191-r4-parspec-qeft-source-asset-audit.md) (preserves source-package qEFT facts and resolves the source-axis power subpiece) · [**v2.190 R4 ParSpec engine-axis map contract**](docs/results/2026-06-20-v2.190-r4-parspec-engine-axis-map-contract.md) (turns the missing `ell_qEFT -> g_R4_*` map into an executable packet contract) · [**v2.189 R4 continuity ledger**](docs/results/2026-06-20-v2.189-r4-research-continuity-ledger.md) (preserves the v2.170-v2.188 run details) · [**v2.188 R4 ParSpec ringdown bridge**](docs/results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md) (source bridge) · [**v2.187 R4 waveform-likelihood posterior**](docs/results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md) (GW170608 baseline) · [**v2.186 R4 nuisance covariance export**](docs/results/2026-06-20-v2.186-r4-nuisance-covariance-export.md) (covariance scaffold) · [**v2.185 R4 LALSuite-calibrated GWOSC projection**](docs/results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md) (calibrated projection) · [**v2.184 R4/GWOSC/LALSuite report**](docs/results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md) (frontier summary) · [**v2.10 capstone**](docs/results/2026-06-09-v2.10-capstone.md) (the program in one page) · [**v2.0 research report**](docs/results/2026-06-09-v2.0-RESEARCH-REPORT.md) (full overview) · [**FINDINGS.md**](docs/FINDINGS.md) (what the engine discovered, in one page) · [**TAXONOMY.md**](docs/results/TAXONOMY.md) (all notes grouped by theme) · [**Predictions scorecard**](docs/results/2026-06-08-v1.83-master-scorecard.md) · [**Results index**](docs/results/INDEX.md) (chronological)
+**Start here:** [**v2.200 R4 ParSpec qNM-to-Bresciani gate**](docs/results/2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md) (defines the missing 3x4 qNM-to-engine sensitivity-matrix gate) · [**v2.199 R4 ParSpec absolute gamma metadata**](docs/results/2026-06-20-v2.199-r4-parspec-absolute-gamma-metadata.md) (attaches GWOSC final-mass/redshift metadata and computes absolute source gamma) · [**v2.198 R4 ParSpec continuity ledger**](docs/results/2026-06-20-v2.198-r4-parspec-continuity-ledger.md) (preserves the v2.190-v2.197 ParSpec run details) · [**FINDINGS.md**](docs/FINDINGS.md) (curated findings) · [**ROADMAP.md**](docs/ROADMAP.md) (where the research should go next) · [**Results index**](docs/results/INDEX.md) (chronological)
 
 ---
 
@@ -46,29 +46,30 @@ The engine is one of few QG-phenomenology tools that **folds in real experiments
 - **GW170817 speed** is *blind* to higher-derivative gravity (frequency-suppressed), but **LIGO's GW dispersion test** reaches the dark-energy cutoff — *which observable* matters as much as which sector. *(v1.84–85)*
 
 ### Current live-data frontier: R4 through GWOSC and LALSuite
-The latest loop, v2.170-v2.199, turns the most promising gravitational-wave route into an executable nonclaiming pipeline:
+The latest loop, v2.170-v2.200, turns the most promising gravitational-wave route into an executable nonclaiming pipeline:
 - **v2.170-v2.171:** the symbolic R4 scale route now has a strict packet contract for a future source-backed `Lambda_R4` policy; no numeric policy is present yet.
 - **v2.172-v2.173:** the parallel Weyl/G8 route now has a joint-likelihood packet contract; it remains blocked on a real `g_C+g_8` likelihood.
 - **v2.174:** the engine selected the Bresciani-axis plus public-GWOSC reanalysis path after checking source/public candidates.
 - **v2.175-v2.181:** the route gained a Bresciani R4 axis dictionary, public GW170608 H1/L1 HDF5 ingestion, source-backed 5PN/7PN R4 PN kernels, and a source-backed GWOSC projection seed.
-- **v2.182-v2.183:** Vulcan runs LALSuite 7.7.1/IMRPhenomD, and the H1/L1 detector response now has a LALSuite-calibrated target.
+- **v2.182-v2.183:** remote Linux validation runs LALSuite 7.7.1/IMRPhenomD, and the H1/L1 detector response now has a LALSuite-calibrated target.
 - **v2.185:** the real GWOSC projection now uses that calibrated H1/L1 response instead of the v2.181 deterministic detector proxy.
 - **v2.186:** the projection now exports a deterministic 81-point nuisance-grid covariance contribution over event mass, symmetric mass ratio, coalescence time, and phase.
-- **v2.187:** Vulcan now builds a coarse network likelihood/posterior over the three R4 axes using real GWOSC strain, LALSuite IMRPhenomD baselines, calibrated H1/L1 channel response, and the established nuisance grid; the next blocker is replacing the linearized PN/IMR bridge with a source-owned full R4 IMR sampler.
+- **v2.187:** remote Linux validation builds a coarse network likelihood/posterior over the three R4 axes using real GWOSC strain, LALSuite IMRPhenomD baselines, calibrated H1/L1 channel response, and the established nuisance grid; the next blocker is replacing the linearized PN/IMR bridge with a source-owned full R4 IMR sampler.
 - **v2.188:** the source-owned sampler blocker is split by importing the ParSpec higher-curvature ringdown route as a primary-source bridge for quartic EFT, including the published `ell_qEFT <= 51.3 km` bound; the remaining blockers are the engine-axis map, public posterior samples, event-set alignment, and systematics export.
 - **v2.189:** the continuity ledger preserves every run from v2.170-v2.188 with note paths, artifact paths, retained details, numeric digests, frontier changes, and remaining blockers so top-level summaries do not drop intermediate results.
 - **v2.190:** the missing ParSpec `ell_qEFT -> (g_R4_c1,g_R4_c2,g_R4_c3)` map is now an executable packet contract with explicit subrequirements for source-axis power, Bresciani-basis orientation, normalization, covariance pushforward, likelihood export, event alignment, and systematics.
 - **v2.191:** the public arXiv source package is audited and hashed; it resolves the source-axis power subpiece with `p_qEFT = 6`, preserves the qEFT QNM deformation coefficients and event bounds, and confirms that no machine-readable qEFT likelihood object is present in the package.
 - **v2.192:** the ParSpec source events are mapped to exact GWOSC event versions (`GW150914-v3`, `GW200129_065458-v1`) and public 4 kHz HDF5 strain URLs; the remaining event blocker is the actual same-event R4 likelihood rerun plus the GW200129 V1 detector-policy choice.
-- **v2.193:** Vulcan reruns the coarse R4 likelihood on H1/L1 public strain for `GW150914-v3` and `GW200129_065458-v1`; the H1/L1 same-event subpiece is ready, while the GW200129 V1 response, source-event nuisance covariance, ParSpec likelihood, and qEFT axis map remain claim blockers.
-- **v2.194:** Vulcan reruns the source-event likelihood with event-specific detector topology: `GW150914` uses H1/L1 and `GW200129` uses H1/L1/V1 with event-time LALSuite antenna responses; the V1 detector-response blocker is removed, while source-event nuisance covariance, ParSpec likelihood, and the qEFT axis map remain claim blockers.
+- **v2.193:** remote Linux validation reruns the coarse R4 likelihood on H1/L1 public strain for `GW150914-v3` and `GW200129_065458-v1`; the H1/L1 same-event subpiece is ready, while the GW200129 V1 response, source-event nuisance covariance, ParSpec likelihood, and qEFT axis map remain claim blockers.
+- **v2.194:** remote Linux validation reruns the source-event likelihood with event-specific detector topology: `GW150914` uses H1/L1 and `GW200129` uses H1/L1/V1 with event-time LALSuite antenna responses; the V1 detector-response blocker is removed, while source-event nuisance covariance, ParSpec likelihood, and the qEFT axis map remain claim blockers.
 - **v2.195:** the v2.194 source-event likelihood now exports event-specific and combined nuisance-marginalized R4 covariance for GW150914 and GW200129; the source-event covariance blocker is removed, while the public ParSpec/qEFT likelihood, source-backed operator-basis/axis map, posterior sampler, systematics, and external review remain claim blockers.
 - **v2.196:** the published ParSpec qEFT 90% bounds are converted into an event-aligned, nonclaiming `ell_qEFT_km` surrogate attached to the v2.195 source-event packet; this removes the stale event-set mismatch and source-axis mismatch subpieces, while the machine-readable public likelihood and engine-axis map remain claim blockers.
 - **v2.197:** the qEFT source-axis route now has a checked `ell_qEFT -> qNM deformation` Jacobian using the source coefficients preserved in v2.191; the missing `qNM deformation -> Bresciani R4 engine axes` operator-basis map remains the decisive claim blocker.
 - **v2.198:** the ParSpec continuity ledger preserves the v2.190-v2.197 run chain with note paths, artifact paths, retained details, numeric digests, blocker changes, validation counts, and claim gates so README/FINDINGS/reports do not lose intermediate details.
 - **v2.199:** the source-event absolute gamma metadata is now attached from GWOSC preferred PE rows: `M_f,z = 63.1,0.09` for GW150914 and `60.2,0.18` for GW200129; absolute gamma is computable for the source events while the qNM-to-Bresciani operator map and public likelihood remain blockers.
+- **v2.200:** the qNM-to-Bresciani gate now defines the exact source-backed packet shape needed next: a finite 3x4 matrix from qNM deformation axes into `g_R4_c1/c2/c3`, with row rank 3. The current qEFT source object is only a rank-1 gamma-to-qNM ray, so the engine blocks any map or claim promotion.
 
-The latest metadata artifact is [v2.199 R4 ParSpec absolute gamma metadata](docs/results/2026-06-20-v2.199-r4-parspec-absolute-gamma-metadata.md). The latest run-detail preservation artifact is [v2.198 R4 ParSpec continuity ledger](docs/results/2026-06-20-v2.198-r4-parspec-continuity-ledger.md). The latest source-space Jacobian artifact is [v2.197 R4 ParSpec qNM deformation Jacobian](docs/results/2026-06-20-v2.197-r4-parspec-qnm-deformation-jacobian.md). The latest source-axis surrogate artifact is [v2.196 R4 ParSpec published-bound surrogate](docs/results/2026-06-20-v2.196-r4-parspec-published-bound-surrogate.md). The latest covariance artifact is [v2.195 R4 ParSpec source-event covariance export](docs/results/2026-06-20-v2.195-r4-parspec-source-event-covariance-export.md). The latest event-topology likelihood artifact is [v2.194 R4 ParSpec event-topology likelihood](docs/results/2026-06-20-v2.194-r4-parspec-event-topology-likelihood.md). The previous same-event H1/L1 artifact is [v2.193 R4 ParSpec same-event H1/L1 likelihood](docs/results/2026-06-20-v2.193-r4-parspec-same-event-h1l1-likelihood.md). The latest event-set manifest is [v2.192 R4 ParSpec source-event alignment manifest](docs/results/2026-06-20-v2.192-r4-parspec-source-event-alignment-manifest.md). The latest source-asset preservation artifact is [v2.191 R4 ParSpec qEFT source-asset audit](docs/results/2026-06-20-v2.191-r4-parspec-qeft-source-asset-audit.md). The latest executable blocker split is [v2.190 R4 ParSpec engine-axis map contract](docs/results/2026-06-20-v2.190-r4-parspec-engine-axis-map-contract.md). The prior run-detail preservation artifact is [v2.189 R4 research continuity ledger](docs/results/2026-06-20-v2.189-r4-research-continuity-ledger.md). The latest source bridge is [v2.188 R4 ParSpec ringdown source bridge](docs/results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md). The last GW170608-centered live-data baseline is [v2.187 R4 LALSuite waveform-likelihood posterior](docs/results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md), with [v2.186 R4 nuisance covariance export](docs/results/2026-06-20-v2.186-r4-nuisance-covariance-export.md) as the covariance bridge, [v2.185 R4 LALSuite-calibrated GWOSC projection](docs/results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md) as the calibrated projection, and the [v2.184 R4/GWOSC/LALSuite report](docs/results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md) as the frontier summary. This is progress toward a live gravitational-wave discriminator, not a framework exclusion or discovery claim.
+The latest operator-map artifact is [v2.200 R4 ParSpec qNM-to-Bresciani gate](docs/results/2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md). The latest metadata artifact is [v2.199 R4 ParSpec absolute gamma metadata](docs/results/2026-06-20-v2.199-r4-parspec-absolute-gamma-metadata.md). The current roadmap is [docs/ROADMAP.md](docs/ROADMAP.md). This is progress toward a live gravitational-wave discriminator, not a framework exclusion or discovery claim.
 
 ### The "data-driven EFT"
 Folding consistency + the two ingested experiments points to a specific, registered theory — `discovered_data_driven` — a **screened-scalaron, positive-handed-parity EFT** that matches cosmic birefringence and predicts GW/PTA parity signals just below current reach. It sits where *none* of the 13 textbook frameworks do. `itb predict discovered_data_driven`. *(v1.79)*
@@ -88,7 +89,7 @@ A full, navigable account of every cycle is in [docs/FINDINGS.md](docs/FINDINGS.
 git clone https://github.com/hassard0/itb-engine && cd itb-engine
 python -m venv .venv && . .venv/bin/activate     # (Windows: .venv\Scripts\activate)
 pip install -e ".[dev]"
-pytest -q                                         # current full suite: 1475 passed, 7 skipped locally
+pytest -q                                         # current full suite is recorded in the latest run note
 
 # the affirmative answer: what a consistent QG EFT looks like + its full fingerprint
 itb predict discovered_data_driven
@@ -105,14 +106,10 @@ python experiments/godel_test.py 1500000           # is the engine internally co
 
 Most experiments parallelize across cores; the heavy Monte-Carlo runs were done on a 16-core box.
 
-For remote research-agent and Vulcan compute helpers:
+Remote validation is intentionally configured outside committed documentation.
+Use your own SSH configuration or environment-specific wrapper when reproducing
+remote checks; do not commit private access details.
 
-```bash
-pip install -e ".[agent,remote]"
-python tools/vulcan.py run "hostname && python3 --version"
-```
-
-`tools/vulcan.py` defaults to `admin@192.168.4.178` and key auth through `~/.ssh/id_ed25519`; set `VULCAN_HOST`, `VULCAN_USER`, or `VULCAN_KEY` to override.
 
 ---
 
@@ -170,12 +167,12 @@ itb-engine/
 │   └── api/server.py          FastAPI web app
 ├── experiments/              268 cycle scripts (island census, center, data ingestion,
 │                              meta-experiments) + stack.py (the constraint assembler)
-├── tools/                    vulcan.py (remote compute), consult_drm.py, build_index.py
-├── tests/                    311 test files (1475 local passing tests, 7 skipped)
+├── tools/                    remote compute helpers, consult_drm.py, build_index.py
+├── tests/                    312 test files (latest full-suite count is in the v2.200 report)
 ├── docs/
 │   ├── FINDINGS.md           ← curated findings (read this)
 │   ├── CONSTRAINTS.md        ← the constraint stack, by class
-│   └── results/              310 indexed result notes + INDEX.md (grouped by arc)
+│   └── results/              310 indexed result notes + latest v2.200 report
 └── legacy/                   early-program report generators (v1.0–v1.19)
 ```
 
