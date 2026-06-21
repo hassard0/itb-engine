@@ -1,0 +1,1096 @@
+{
+  "version": "v2.203",
+  "basis": [
+    "v2.199_absolute_gamma_metadata",
+    "v2.201_pyring_source_probe",
+    "v2.202_pyring_tau_axis_jacobian",
+    "public_pyring_EFT_QNMs_branch"
+  ],
+  "source_manifest": {
+    "branch": "EFT_QNMs",
+    "branch_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+    "tree_url": "https://git.ligo.org/lscsoft/pyring/-/tree/EFT_QNMs/pyRing/data/NR_data",
+    "waveform_source_url": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/waveform.pyx",
+    "initialise_source_url": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/initialise.py",
+    "pyring_quartic_tables": [
+      {
+        "source_direction": "quartic_1_minus",
+        "filename": "EFT_coefficients_quartic_1_minus.txt",
+        "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_1_minus.txt",
+        "sha256": "595040fc50a87b31b766105c84856600c36fa1f6ec3ce2130efe46e5c18f96ab",
+        "git_lfs_pointer_blob_sha1": "02fd720330226d5a08c45484e228eac027547972",
+        "data_rows": 3,
+        "columns": 29,
+        "required_modes_present": [
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "source_direction": "quartic_1_plus",
+        "filename": "EFT_coefficients_quartic_1_plus.txt",
+        "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_1_plus.txt",
+        "sha256": "5f81fb7dd2839846b474a5fedc4aa02f5e927b1f8c9eabb91cebe5ebc3c33a86",
+        "git_lfs_pointer_blob_sha1": "2983d46acb02bd9f9cdc2c215fe71a1c7f09ef13",
+        "data_rows": 3,
+        "columns": 29,
+        "required_modes_present": [
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "source_direction": "quartic_2_minus",
+        "filename": "EFT_coefficients_quartic_2_minus.txt",
+        "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_2_minus.txt",
+        "sha256": "751f35d10bed3db75fbb321548f611483e785853e50b2d29d5add972abe2fbdd",
+        "git_lfs_pointer_blob_sha1": "a03c0d55b7f068e8a002140cffe13f8c2739edcf",
+        "data_rows": 3,
+        "columns": 29,
+        "required_modes_present": [
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "source_direction": "quartic_2_plus",
+        "filename": "EFT_coefficients_quartic_2_plus.txt",
+        "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_2_plus.txt",
+        "sha256": "a31664948aa56f77604c1d7f457cc874e95cfc9d832f6d107bf13688ac27f00c",
+        "git_lfs_pointer_blob_sha1": "05e0c4a2203bebc7f7ea3f74b9deff3ce6faf5ec",
+        "data_rows": 3,
+        "columns": 29,
+        "required_modes_present": [
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "source_direction": "quartic_3_minus",
+        "filename": "EFT_coefficients_quartic_3_minus.txt",
+        "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_3_minus.txt",
+        "sha256": "b878ef82bbf5ec6584942fc75ef305aabeacaf627d2bf3fe1cc28d15d1e13575",
+        "git_lfs_pointer_blob_sha1": "6ad6f01b10c682f39e90d2994194cebfb2a90625",
+        "data_rows": 3,
+        "columns": 29,
+        "required_modes_present": [
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "source_direction": "quartic_3_plus",
+        "filename": "EFT_coefficients_quartic_3_plus.txt",
+        "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_3_plus.txt",
+        "sha256": "f94c81dc0dfc6b265b0b2638199499d0fb0a1d457c5b295b77f8088c28a716c9",
+        "git_lfs_pointer_blob_sha1": "659adcb51d9b5ff53ee7a81e2f4e05ab0c92b112",
+        "data_rows": 3,
+        "columns": 29,
+        "required_modes_present": [
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            0
+          ]
+        ]
+      }
+    ],
+    "parspec_high_spin_table": {
+      "filename": "ParSpec_coefficients_high_spin.txt",
+      "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/ParSpec_coefficients_high_spin.txt",
+      "sha256": "2948a4ea440b48f29e4abafb5be5e997c1ab120eb1ad5be666c8fdc93cadd256",
+      "git_lfs_pointer_blob_sha1": "cea6a57e90acbd608269fa609092384ce1e9d743",
+      "data_rows": 4,
+      "columns": 19
+    },
+    "gw150914_spin_source": {
+      "spin": 0.66695269067,
+      "source": "pyRing bundled GW150914_LAL_IMRPhenomP_O1_GWOSC_Mf_af_samples.txt",
+      "sample_count": 17070,
+      "sample_sha256": "af11e39da06ee5ad9addbc15b7dc2fb4ef5c778ff87826225f2879753be49916",
+      "summary": {
+        "af_mean": 0.665174370082,
+        "af_median": 0.66695269067,
+        "af_p05": 0.61940334427,
+        "af_p95": 0.705021230794
+      }
+    },
+    "gw200129_spin_source": {
+      "spin": 0.73,
+      "source": "v2.199 GWOSC preferred parameter snapshot",
+      "event_version": "GW200129_065458-v1",
+      "selected_pe_record": "GWTC-3-confident_GW200129_065458_R2_pe_combined",
+      "summary": {
+        "af_best": 0.73,
+        "af_lower": 0.68,
+        "af_upper": 0.79
+      }
+    },
+    "source_line_refs": {
+      "pyring_table_ingest": "waveform.pyx:72-80",
+      "pyring_runtime_frequency_formula": "waveform.pyx:526-532",
+      "pyring_runtime_tau_formula": "waveform.pyx:534-540",
+      "pyring_berti_gr_fit": "waveform.pyx:34-39,252-254",
+      "parspec_high_spin_fit": "waveform.pyx:61-69"
+    }
+  },
+  "engine_target_axes": [
+    "g_R4_c1",
+    "g_R4_c2",
+    "g_R4_c3"
+  ],
+  "parspec_qnm_axes": [
+    "delta_omega_qeft_0",
+    "delta_tau_qeft_0",
+    "delta_omega_qeft_1",
+    "delta_tau_qeft_1"
+  ],
+  "pyring_probe_axes": [
+    "domega_220_n0_spin0",
+    "domi_220_n0_spin0_pyring_sign",
+    "domega_221_n1_spin0",
+    "domi_221_n1_spin0_pyring_sign"
+  ],
+  "pyring_quartic_theories": [
+    "quartic_1",
+    "quartic_2",
+    "quartic_3"
+  ],
+  "pyring_source_directions": [
+    "quartic_1_minus",
+    "quartic_1_plus",
+    "quartic_2_minus",
+    "quartic_2_plus",
+    "quartic_3_minus",
+    "quartic_3_plus"
+  ],
+  "event_spin_value_snapshot": {
+    "GW150914": {
+      "220": {
+        "spin": 0.66695269067,
+        "berti_frequency_F": 0.521487536494,
+        "berti_tau_dimensionless": 12.102356553156,
+        "parspec_frequency_F": 0.51787962421,
+        "parspec_tau_dimensionless": 12.438521962283,
+        "directions": {
+          "quartic_1_minus": {
+            "df_fit": -0.705728053235,
+            "domi_fit": 1.018263094319
+          },
+          "quartic_1_plus": {
+            "df_fit": -1.793270351434,
+            "domi_fit": -0.301933142045
+          },
+          "quartic_2_minus": {
+            "df_fit": -1.734656943549,
+            "domi_fit": 0.875930938489
+          },
+          "quartic_2_plus": {
+            "df_fit": -1.300375567157,
+            "domi_fit": 0.169574696679
+          },
+          "quartic_3_minus": {
+            "df_fit": -0.403656703839,
+            "domi_fit": -0.179380982909
+          },
+          "quartic_3_plus": {
+            "df_fit": 0.403656703839,
+            "domi_fit": 0.179380982909
+          }
+        }
+      },
+      "221": {
+        "spin": 0.66695269067,
+        "berti_frequency_F": 0.509450058321,
+        "berti_tau_dimensionless": 3.982710993908,
+        "parspec_frequency_F": 0.505474233408,
+        "parspec_tau_dimensionless": 4.125286220597,
+        "directions": {
+          "quartic_1_minus": {
+            "df_fit": -3.807161527957,
+            "domi_fit": 2.344735418659
+          },
+          "quartic_1_plus": {
+            "df_fit": -1.092712074657,
+            "domi_fit": -0.043234687055
+          },
+          "quartic_2_minus": {
+            "df_fit": -4.372876509564,
+            "domi_fit": 1.219548398583
+          },
+          "quartic_2_plus": {
+            "df_fit": -1.45680811301,
+            "domi_fit": 0.756413306793
+          },
+          "quartic_3_minus": {
+            "df_fit": -0.012403898373,
+            "domi_fit": -0.497139913315
+          },
+          "quartic_3_plus": {
+            "df_fit": 0.012403898373,
+            "domi_fit": 0.497139913315
+          }
+        }
+      }
+    },
+    "GW200129": {
+      "220": {
+        "spin": 0.73,
+        "berti_frequency_F": 0.548334125215,
+        "berti_tau_dimensionless": 12.498645427403,
+        "parspec_frequency_F": 0.543200867101,
+        "parspec_tau_dimensionless": 12.552164302987,
+        "directions": {
+          "quartic_1_minus": {
+            "df_fit": -1.267327518437,
+            "domi_fit": 1.400267985976
+          },
+          "quartic_1_plus": {
+            "df_fit": -2.367822126575,
+            "domi_fit": -0.387260175236
+          },
+          "quartic_2_minus": {
+            "df_fit": -2.097331851345,
+            "domi_fit": 1.060904183647
+          },
+          "quartic_2_plus": {
+            "df_fit": -2.139336114808,
+            "domi_fit": 0.04059154865
+          },
+          "quartic_3_minus": {
+            "df_fit": -0.280558151173,
+            "domi_fit": -0.223050932006
+          },
+          "quartic_3_plus": {
+            "df_fit": 0.280558151173,
+            "domi_fit": 0.223050932006
+          }
+        }
+      },
+      "221": {
+        "spin": 0.73,
+        "berti_frequency_F": 0.53826401556,
+        "berti_tau_dimensionless": 4.124196200319,
+        "parspec_frequency_F": 0.532744390865,
+        "parspec_tau_dimensionless": 4.231425155318,
+        "directions": {
+          "quartic_1_minus": {
+            "df_fit": -5.365721296816,
+            "domi_fit": 2.905673185816
+          },
+          "quartic_1_plus": {
+            "df_fit": -1.447910546844,
+            "domi_fit": 0.000165182591
+          },
+          "quartic_2_minus": {
+            "df_fit": -5.160279750114,
+            "domi_fit": 2.003479126453
+          },
+          "quartic_2_plus": {
+            "df_fit": -2.01253210024,
+            "domi_fit": 0.323122064169
+          },
+          "quartic_3_minus": {
+            "df_fit": 0.212660279807,
+            "domi_fit": -0.290752695063
+          },
+          "quartic_3_plus": {
+            "df_fit": -0.212660279807,
+            "domi_fit": 0.290752695063
+          }
+        }
+      }
+    }
+  },
+  "event_spin_jacobian": {
+    "packet_id": "pyring_event_spin_frequency_tau_jacobian_v1",
+    "events": [
+      "GW150914",
+      "GW200129"
+    ],
+    "modes": [
+      "220",
+      "221"
+    ],
+    "columns": [
+      "quartic_1_minus",
+      "quartic_1_plus",
+      "quartic_2_minus",
+      "quartic_2_plus",
+      "quartic_3_minus",
+      "quartic_3_plus"
+    ],
+    "columns_are_branch_splitting_directions": true,
+    "columns_are_independent_operator_axes": false,
+    "event_rows": [
+      {
+        "event": "GW150914",
+        "event_spin": {
+          "spin": 0.66695269067,
+          "source": "pyRing bundled GW150914_LAL_IMRPhenomP_O1_GWOSC_Mf_af_samples.txt",
+          "sample_count": 17070,
+          "sample_sha256": "af11e39da06ee5ad9addbc15b7dc2fb4ef5c778ff87826225f2879753be49916",
+          "summary": {
+            "af_mean": 0.665174370082,
+            "af_median": 0.66695269067,
+            "af_p05": 0.61940334427,
+            "af_p95": 0.705021230794
+          }
+        },
+        "rows": [
+          "GW150914_delta_omega_220_runtime_frac",
+          "GW150914_delta_tau_220_runtime_frac",
+          "GW150914_delta_omega_220_parspec_high_spin_frac",
+          "GW150914_delta_tau_220_parspec_high_spin_frac",
+          "GW150914_delta_omega_221_runtime_frac",
+          "GW150914_delta_tau_221_runtime_frac",
+          "GW150914_delta_omega_221_parspec_high_spin_frac",
+          "GW150914_delta_tau_221_parspec_high_spin_frac"
+        ],
+        "columns": [
+          "quartic_1_minus",
+          "quartic_1_plus",
+          "quartic_2_minus",
+          "quartic_2_plus",
+          "quartic_3_minus",
+          "quartic_3_plus"
+        ],
+        "matrix": [
+          [
+            -1.353298025068,
+            -3.438759751557,
+            -3.326363186378,
+            -2.493588966477,
+            -0.774048612077,
+            0.774048612077
+          ],
+          [
+            -12.323383032372,
+            3.654102540238,
+            -10.600828533532,
+            -2.052253441607,
+            2.170932614023,
+            -2.170932614023
+          ],
+          [
+            -1.362726047219,
+            -3.462716561151,
+            -3.349536962755,
+            -2.510961054204,
+            -0.779441177001,
+            0.779441177001
+          ],
+          [
+            -12.665687862073,
+            3.755602018463,
+            -10.895286215837,
+            -2.109258588894,
+            2.231234295533,
+            -2.231234295533
+          ],
+          [
+            -7.473080954202,
+            -2.144885562008,
+            -8.58352342519,
+            -2.859570019113,
+            -0.024347623817,
+            0.024347623817
+          ],
+          [
+            -9.3384035297,
+            0.172191263452,
+            -4.857108814642,
+            -3.012575592902,
+            1.979964598271,
+            -1.979964598271
+          ],
+          [
+            -7.531860728668,
+            -2.161756232935,
+            -8.651037422983,
+            -2.88206206514,
+            -0.024539130887,
+            0.024539130887
+          ],
+          [
+            -9.672704713541,
+            0.17835545876,
+            -5.030986204028,
+            -3.120421391589,
+            2.050844434108,
+            -2.050844434108
+          ]
+        ],
+        "row_metadata": [
+          {
+            "row": "GW150914_delta_omega_220_runtime_frac",
+            "mode": "220",
+            "normalization": "pyRing_QNM_EFT_runtime_Berti_frequency",
+            "values": [
+              -1.353298025068,
+              -3.438759751557,
+              -3.326363186378,
+              -2.493588966477,
+              -0.774048612077,
+              0.774048612077
+            ]
+          },
+          {
+            "row": "GW150914_delta_tau_220_runtime_frac",
+            "mode": "220",
+            "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+            "values": [
+              -12.323383032372,
+              3.654102540238,
+              -10.600828533532,
+              -2.052253441607,
+              2.170932614023,
+              -2.170932614023
+            ]
+          },
+          {
+            "row": "GW150914_delta_omega_220_parspec_high_spin_frac",
+            "mode": "220",
+            "normalization": "ParSpec_high_spin_frequency_polynomial",
+            "values": [
+              -1.362726047219,
+              -3.462716561151,
+              -3.349536962755,
+              -2.510961054204,
+              -0.779441177001,
+              0.779441177001
+            ]
+          },
+          {
+            "row": "GW150914_delta_tau_220_parspec_high_spin_frac",
+            "mode": "220",
+            "normalization": "ParSpec_high_spin_tau_polynomial",
+            "values": [
+              -12.665687862073,
+              3.755602018463,
+              -10.895286215837,
+              -2.109258588894,
+              2.231234295533,
+              -2.231234295533
+            ]
+          },
+          {
+            "row": "GW150914_delta_omega_221_runtime_frac",
+            "mode": "221",
+            "normalization": "pyRing_QNM_EFT_runtime_Berti_frequency",
+            "values": [
+              -7.473080954202,
+              -2.144885562008,
+              -8.58352342519,
+              -2.859570019113,
+              -0.024347623817,
+              0.024347623817
+            ]
+          },
+          {
+            "row": "GW150914_delta_tau_221_runtime_frac",
+            "mode": "221",
+            "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+            "values": [
+              -9.3384035297,
+              0.172191263452,
+              -4.857108814642,
+              -3.012575592902,
+              1.979964598271,
+              -1.979964598271
+            ]
+          },
+          {
+            "row": "GW150914_delta_omega_221_parspec_high_spin_frac",
+            "mode": "221",
+            "normalization": "ParSpec_high_spin_frequency_polynomial",
+            "values": [
+              -7.531860728668,
+              -2.161756232935,
+              -8.651037422983,
+              -2.88206206514,
+              -0.024539130887,
+              0.024539130887
+            ]
+          },
+          {
+            "row": "GW150914_delta_tau_221_parspec_high_spin_frac",
+            "mode": "221",
+            "normalization": "ParSpec_high_spin_tau_polynomial",
+            "values": [
+              -9.672704713541,
+              0.17835545876,
+              -5.030986204028,
+              -3.120421391589,
+              2.050844434108,
+              -2.050844434108
+            ]
+          }
+        ],
+        "rank": 4
+      },
+      {
+        "event": "GW200129",
+        "event_spin": {
+          "spin": 0.73,
+          "source": "v2.199 GWOSC preferred parameter snapshot",
+          "event_version": "GW200129_065458-v1",
+          "selected_pe_record": "GWTC-3-confident_GW200129_065458_R2_pe_combined",
+          "summary": {
+            "af_best": 0.73,
+            "af_lower": 0.68,
+            "af_upper": 0.79
+          }
+        },
+        "rows": [
+          "GW200129_delta_omega_220_runtime_frac",
+          "GW200129_delta_tau_220_runtime_frac",
+          "GW200129_delta_omega_220_parspec_high_spin_frac",
+          "GW200129_delta_tau_220_parspec_high_spin_frac",
+          "GW200129_delta_omega_221_runtime_frac",
+          "GW200129_delta_tau_221_runtime_frac",
+          "GW200129_delta_omega_221_parspec_high_spin_frac",
+          "GW200129_delta_tau_221_parspec_high_spin_frac"
+        ],
+        "columns": [
+          "quartic_1_minus",
+          "quartic_1_plus",
+          "quartic_2_minus",
+          "quartic_2_plus",
+          "quartic_3_minus",
+          "quartic_3_plus"
+        ],
+        "matrix": [
+          [
+            -2.311232258143,
+            -4.318210408019,
+            -3.824915785651,
+            -3.901519195016,
+            -0.511655463834,
+            0.511655463834
+          ],
+          [
+            -17.501453060054,
+            4.840227618431,
+            -13.259865223847,
+            -0.507339373921,
+            2.787834511389,
+            -2.787834511389
+          ],
+          [
+            -2.333073445188,
+            -4.35901757523,
+            -3.861061309672,
+            -3.938388622655,
+            -0.51649061731,
+            0.51649061731
+          ],
+          [
+            -17.576393828179,
+            4.860953347568,
+            -13.316643622858,
+            -0.509511787963,
+            2.799771946468,
+            -2.799771946468
+          ],
+          [
+            -9.968567732006,
+            -2.689963484437,
+            -9.586893422072,
+            -3.738931160287,
+            0.395085448143,
+            -0.395085448143
+          ],
+          [
+            -11.983566312312,
+            -0.000681245415,
+            -8.262741000735,
+            -1.332618789285,
+            1.199121160212,
+            -1.199121160212
+          ],
+          [
+            -10.071849443794,
+            -2.717833489516,
+            -9.68622070659,
+            -3.777669243918,
+            0.399178824693,
+            -0.399178824693
+          ],
+          [
+            -12.295138611594,
+            -0.000698957772,
+            -8.477571973826,
+            -1.367266830563,
+            1.230298267867,
+            -1.230298267867
+          ]
+        ],
+        "row_metadata": [
+          {
+            "row": "GW200129_delta_omega_220_runtime_frac",
+            "mode": "220",
+            "normalization": "pyRing_QNM_EFT_runtime_Berti_frequency",
+            "values": [
+              -2.311232258143,
+              -4.318210408019,
+              -3.824915785651,
+              -3.901519195016,
+              -0.511655463834,
+              0.511655463834
+            ]
+          },
+          {
+            "row": "GW200129_delta_tau_220_runtime_frac",
+            "mode": "220",
+            "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+            "values": [
+              -17.501453060054,
+              4.840227618431,
+              -13.259865223847,
+              -0.507339373921,
+              2.787834511389,
+              -2.787834511389
+            ]
+          },
+          {
+            "row": "GW200129_delta_omega_220_parspec_high_spin_frac",
+            "mode": "220",
+            "normalization": "ParSpec_high_spin_frequency_polynomial",
+            "values": [
+              -2.333073445188,
+              -4.35901757523,
+              -3.861061309672,
+              -3.938388622655,
+              -0.51649061731,
+              0.51649061731
+            ]
+          },
+          {
+            "row": "GW200129_delta_tau_220_parspec_high_spin_frac",
+            "mode": "220",
+            "normalization": "ParSpec_high_spin_tau_polynomial",
+            "values": [
+              -17.576393828179,
+              4.860953347568,
+              -13.316643622858,
+              -0.509511787963,
+              2.799771946468,
+              -2.799771946468
+            ]
+          },
+          {
+            "row": "GW200129_delta_omega_221_runtime_frac",
+            "mode": "221",
+            "normalization": "pyRing_QNM_EFT_runtime_Berti_frequency",
+            "values": [
+              -9.968567732006,
+              -2.689963484437,
+              -9.586893422072,
+              -3.738931160287,
+              0.395085448143,
+              -0.395085448143
+            ]
+          },
+          {
+            "row": "GW200129_delta_tau_221_runtime_frac",
+            "mode": "221",
+            "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+            "values": [
+              -11.983566312312,
+              -0.000681245415,
+              -8.262741000735,
+              -1.332618789285,
+              1.199121160212,
+              -1.199121160212
+            ]
+          },
+          {
+            "row": "GW200129_delta_omega_221_parspec_high_spin_frac",
+            "mode": "221",
+            "normalization": "ParSpec_high_spin_frequency_polynomial",
+            "values": [
+              -10.071849443794,
+              -2.717833489516,
+              -9.68622070659,
+              -3.777669243918,
+              0.399178824693,
+              -0.399178824693
+            ]
+          },
+          {
+            "row": "GW200129_delta_tau_221_parspec_high_spin_frac",
+            "mode": "221",
+            "normalization": "ParSpec_high_spin_tau_polynomial",
+            "values": [
+              -12.295138611594,
+              -0.000698957772,
+              -8.477571973826,
+              -1.367266830563,
+              1.230298267867,
+              -1.230298267867
+            ]
+          }
+        ],
+        "rank": 4
+      }
+    ],
+    "normalization_comparison": [
+      {
+        "event": "GW150914",
+        "mode": "220",
+        "frequency_parspec_vs_pyring_runtime_fractional_delta": -0.006918501463,
+        "tau_parspec_vs_pyring_runtime_fractional_delta": 0.027776855495
+      },
+      {
+        "event": "GW150914",
+        "mode": "221",
+        "frequency_parspec_vs_pyring_runtime_fractional_delta": -0.007804150473,
+        "tau_parspec_vs_pyring_runtime_fractional_delta": 0.035798536953
+      },
+      {
+        "event": "GW200129",
+        "mode": "220",
+        "frequency_parspec_vs_pyring_runtime_fractional_delta": -0.009361551429,
+        "tau_parspec_vs_pyring_runtime_fractional_delta": 0.004281974066
+      },
+      {
+        "event": "GW200129",
+        "mode": "221",
+        "frequency_parspec_vs_pyring_runtime_fractional_delta": -0.010254493215,
+        "tau_parspec_vs_pyring_runtime_fractional_delta": 0.025999964548
+      }
+    ],
+    "max_abs_frequency_normalization_delta": 0.010254493215,
+    "max_abs_tau_normalization_delta": 0.035798536953,
+    "derivative_checks": [
+      {
+        "event": "GW150914",
+        "mode": "220",
+        "source_direction": "quartic_1_minus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -12.323383032372,
+        "finite_difference_derivative": -12.323383032364
+      },
+      {
+        "event": "GW150914",
+        "mode": "220",
+        "source_direction": "quartic_1_plus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": 3.654102540238,
+        "finite_difference_derivative": 3.654102539996
+      },
+      {
+        "event": "GW150914",
+        "mode": "220",
+        "source_direction": "quartic_2_minus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -10.600828533532,
+        "finite_difference_derivative": -10.60082853388
+      },
+      {
+        "event": "GW150914",
+        "mode": "220",
+        "source_direction": "quartic_2_plus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -2.052253441607,
+        "finite_difference_derivative": -2.052253441076
+      },
+      {
+        "event": "GW150914",
+        "mode": "220",
+        "source_direction": "quartic_3_minus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": 2.170932614023,
+        "finite_difference_derivative": 2.170932613121
+      },
+      {
+        "event": "GW150914",
+        "mode": "220",
+        "source_direction": "quartic_3_plus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -2.170932614023,
+        "finite_difference_derivative": -2.170932613121
+      },
+      {
+        "event": "GW150914",
+        "mode": "221",
+        "source_direction": "quartic_1_minus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -9.3384035297,
+        "finite_difference_derivative": -9.338403529902
+      },
+      {
+        "event": "GW150914",
+        "mode": "221",
+        "source_direction": "quartic_1_plus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": 0.172191263452,
+        "finite_difference_derivative": 0.172191262915
+      },
+      {
+        "event": "GW150914",
+        "mode": "221",
+        "source_direction": "quartic_2_minus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -4.857108814642,
+        "finite_difference_derivative": -4.857108814593
+      },
+      {
+        "event": "GW150914",
+        "mode": "221",
+        "source_direction": "quartic_2_plus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -3.012575592902,
+        "finite_difference_derivative": -3.012575593986
+      },
+      {
+        "event": "GW150914",
+        "mode": "221",
+        "source_direction": "quartic_3_minus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": 1.979964598271,
+        "finite_difference_derivative": 1.979964598386
+      },
+      {
+        "event": "GW150914",
+        "mode": "221",
+        "source_direction": "quartic_3_plus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -1.979964598271,
+        "finite_difference_derivative": -1.979964598386
+      },
+      {
+        "event": "GW200129",
+        "mode": "220",
+        "source_direction": "quartic_1_minus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -17.501453060054,
+        "finite_difference_derivative": -17.501453060675
+      },
+      {
+        "event": "GW200129",
+        "mode": "220",
+        "source_direction": "quartic_1_plus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": 4.840227618431,
+        "finite_difference_derivative": 4.840227618708
+      },
+      {
+        "event": "GW200129",
+        "mode": "220",
+        "source_direction": "quartic_2_minus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -13.259865223847,
+        "finite_difference_derivative": -13.259865223048
+      },
+      {
+        "event": "GW200129",
+        "mode": "220",
+        "source_direction": "quartic_2_plus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -0.507339373921,
+        "finite_difference_derivative": -0.5073393744
+      },
+      {
+        "event": "GW200129",
+        "mode": "220",
+        "source_direction": "quartic_3_minus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": 2.787834511389,
+        "finite_difference_derivative": 2.78783451213
+      },
+      {
+        "event": "GW200129",
+        "mode": "220",
+        "source_direction": "quartic_3_plus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -2.787834511389,
+        "finite_difference_derivative": -2.78783451213
+      },
+      {
+        "event": "GW200129",
+        "mode": "221",
+        "source_direction": "quartic_1_minus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -11.983566312312,
+        "finite_difference_derivative": -11.983566312046
+      },
+      {
+        "event": "GW200129",
+        "mode": "221",
+        "source_direction": "quartic_1_plus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -0.000681245415,
+        "finite_difference_derivative": -0.000681246171
+      },
+      {
+        "event": "GW200129",
+        "mode": "221",
+        "source_direction": "quartic_2_minus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -8.262741000735,
+        "finite_difference_derivative": -8.262741000853
+      },
+      {
+        "event": "GW200129",
+        "mode": "221",
+        "source_direction": "quartic_2_plus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -1.332618789285,
+        "finite_difference_derivative": -1.332618788652
+      },
+      {
+        "event": "GW200129",
+        "mode": "221",
+        "source_direction": "quartic_3_minus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": 1.199121160212,
+        "finite_difference_derivative": 1.199121160145
+      },
+      {
+        "event": "GW200129",
+        "mode": "221",
+        "source_direction": "quartic_3_plus",
+        "normalization": "pyRing_QNM_EFT_runtime_Berti_tau",
+        "linearized_derivative": -1.199121160212,
+        "finite_difference_derivative": -1.199121160145
+      }
+    ],
+    "source_formulae": {
+      "runtime_fractional_frequency": "d(freq_EFT/freq_GR-1)/d gamma = df_EFT_fit/F_Berti(a)",
+      "runtime_fractional_tau": "d(tau_EFT/tau_GR-1)/d gamma = -tau_Berti_dimensionless(a)*domi_EFT_fit",
+      "parspec_high_spin_comparison": "The same pyRing df/domi fits are also divided by the ParSpec high-spin F(a) and tau(a) polynomials to expose the remaining normalization-policy difference."
+    }
+  },
+  "evaluation": {
+    "pyring_event_spin_jacobian_ready": true,
+    "pyring_runtime_fractional_axes_ready": true,
+    "parspec_high_spin_comparison_ready": true,
+    "parspec_axis_normalization_policy_ready": false,
+    "qnm_to_bresciani_sensitivity_ready": false,
+    "public_likelihood_ready": false,
+    "ready_for_framework_claim": false,
+    "source_intake_blockers": [],
+    "resolved_v2202_subpieces": [
+      "pyring_event_spin_runtime_frequency_tau_jacobian_defined",
+      "gw150914_final_spin_source_attached"
+    ],
+    "remaining_claim_blockers": [
+      "claim_grade_systematics_export_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "pyring_plus_minus_branches_not_independent_operator_axes",
+      "pyring_quartic_direction_to_bresciani_axis_orientation_missing",
+      "pyring_runtime_to_parspec_high_spin_normalization_policy_missing",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing"
+    ],
+    "route_status": "pyring_event_spin_jacobian_ready_normalization_policy_missing"
+  },
+  "malformed_control_evaluation": {
+    "pyring_event_spin_jacobian_ready": false,
+    "pyring_runtime_fractional_axes_ready": false,
+    "parspec_high_spin_comparison_ready": false,
+    "parspec_axis_normalization_policy_ready": false,
+    "qnm_to_bresciani_sensitivity_ready": false,
+    "public_likelihood_ready": false,
+    "ready_for_framework_claim": false,
+    "source_intake_blockers": [
+      "GW150914_event_spin_matrix_rank_deficient"
+    ],
+    "resolved_v2202_subpieces": [],
+    "remaining_claim_blockers": [
+      "claim_grade_systematics_export_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "pyring_event_spin_jacobian_not_ready",
+      "pyring_plus_minus_branches_not_independent_operator_axes",
+      "pyring_quartic_direction_to_bresciani_axis_orientation_missing",
+      "pyring_runtime_to_parspec_high_spin_normalization_policy_missing",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing"
+    ],
+    "route_status": "pyring_event_spin_jacobian_not_ready"
+  },
+  "pyring_event_spin_jacobian_ready": true,
+  "qnm_to_bresciani_sensitivity_ready": false,
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "selected_next_build_action": "derive_pyring_runtime_to_parspec_high_spin_normalization_policy_or_pyring_quartic_direction_to_bresciani_axis_orientation",
+  "route_status": "pyring_event_spin_jacobian_ready_normalization_policy_missing",
+  "interpretation": "v2.203 evaluates the pyRing quartic EFT frequency and damping-time rows at source-event remnant spins. The runtime pyRing QNM_EFT normalization uses Berti GR fits, while the ParSpec high-spin polynomial normalization differs at the few-percent level for the checked rows. This is a useful event-spin Jacobian, not a Bresciani operator-axis map or public likelihood."
+}

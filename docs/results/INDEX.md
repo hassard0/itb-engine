@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (313 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (314 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -362,3 +362,4 @@ Auto-generated front door to the full research program (313 notes). Regenerate w
 | v2.200 | [v2.200 - R4 ParSpec qNM-to-Bresciani gate](2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md) | v2.199 made absolute ParSpec gamma computable for the source events, but the |
 | v2.201 | [v2.201 - R4 ParSpec pyRing source probe](2026-06-20-v2.201-r4-parspec-pyring-source-probe.md) | v2.200 defined the exact qNM-to-Bresciani acceptance gate, but left the |
 | v2.202 | [v2.202 - R4 ParSpec pyRing tau-axis Jacobian](2026-06-21-v2.202-r4-parspec-pyring-tau-axis-jacobian.md) | v2.201 hash-pinned the public pyRing quartic QNM coefficient tables, but the |
+| v2.203 | [v2.203 - R4 ParSpec pyRing event-spin Jacobian](2026-06-21-v2.203-r4-parspec-pyring-event-spin-jacobian.md) | v2.202 converted pyRing imaginary-frequency coefficients into a spin-zero |
