@@ -1,0 +1,334 @@
+{
+  "version": "v2.190",
+  "basis": [
+    "v2.170_r4_symbolic_scale_resolution_contract",
+    "v2.175_bresciani_r4_axis_dictionary",
+    "v2.188_r4_parspec_ringdown_source_bridge",
+    "v2.189_r4_research_continuity_ledger"
+  ],
+  "contract": {
+    "version": "v2.190",
+    "contract_id": "parspec_qeft_to_engine_r4_axis_map_contract_v1",
+    "source_axis": "ell_qEFT_km",
+    "target_engine_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3"
+    ],
+    "required_packet_fields": [
+      "packet_id",
+      "source_url",
+      "source_doi",
+      "source_type",
+      "source_theory_family",
+      "source_axis",
+      "source_axis_units",
+      "target_engine_axes",
+      "source_axis_power_policy",
+      "operator_basis_map",
+      "engine_axis_map",
+      "axis_normalization",
+      "likelihood_reference",
+      "event_set_policy",
+      "systematics",
+      "claim_controls"
+    ],
+    "valid_source_types": [
+      "source_backed_parspec_qeft_axis_map",
+      "unit_test_control"
+    ],
+    "valid_likelihood_statuses": [
+      "public_covariance_matrix",
+      "public_likelihood_samples",
+      "public_log_likelihood_grid"
+    ],
+    "claim_rule": "A ParSpec qEFT length-scale posterior can touch engine R4 likelihood logic only after a source-backed length-power policy, operator-basis map, engine-axis orientation, absolute or equivalent normalization, public likelihood object, event-set policy, and systematics export are all present. Framework claims remain disabled until adversarial review."
+  },
+  "synthetic_ready_packet": {
+    "packet_id": "synthetic_parspec_qeft_to_engine_r4_axis_map_v1",
+    "source_url": "https://arxiv.org/abs/2205.05132",
+    "source_doi": "https://doi.org/10.1103/PhysRevD.107.044030",
+    "source_type": "unit_test_control",
+    "source_theory_family": "quartic_order_effective_field_theory_of_general_relativity",
+    "source_axis": "ell_qEFT",
+    "source_axis_units": "km",
+    "target_engine_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3"
+    ],
+    "source_axis_power_policy": {
+      "status": "source_backed",
+      "length_axis": "ell_qEFT_km",
+      "length_power_declared": true,
+      "length_power": 4,
+      "power_scope": "synthetic_contract_control_not_source_claim"
+    },
+    "operator_basis_map": {
+      "status": "source_backed",
+      "source_operator_family": "quartic_eft_ringdown",
+      "target_basis": "bresciani_r4_axis_dictionary_v1",
+      "field_redefinition_policy": "closed_for_packet",
+      "target_axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ]
+    },
+    "engine_axis_map": {
+      "status": "ready",
+      "map_kind": "length_power_to_engine_axis_vector",
+      "source_axis": "ell_qEFT_km",
+      "target_axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "axis_vector": {
+        "g_R4_c1": "A_qeft_c1 * ell_qEFT_km^4 / Lambda_R4^8",
+        "g_R4_c2": "A_qeft_c2 * ell_qEFT_km^4 / Lambda_R4^8",
+        "g_R4_c3": "A_qeft_c3 * ell_qEFT_km^4 / Lambda_R4^8"
+      },
+      "jacobian_available": true,
+      "covariance_pushforward_available": true
+    },
+    "axis_normalization": {
+      "status": "source_backed",
+      "normalization_scope": "absolute_length_to_engine_r4_axes",
+      "uses_numeric_lambda_r4_scale_or_equivalent": true,
+      "unit_conversion": "km_to_engine_R4_axis_units",
+      "normalization_uncertainty_exported": true
+    },
+    "likelihood_reference": {
+      "status": "public_covariance_matrix",
+      "source_axis": "ell_qEFT_km",
+      "events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "covariance": [
+        [
+          1.0
+        ]
+      ],
+      "posterior_or_likelihood_exported": true
+    },
+    "event_set_policy": {
+      "status": "aligned",
+      "source_events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "engine_events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "same_event_set": true
+    },
+    "systematics": {
+      "status": "engine_export_ready",
+      "items": [
+        "waveform_systematics_budget",
+        "calibration_prior",
+        "event_selection_policy",
+        "eft_validity_domain"
+      ]
+    },
+    "claim_controls": {
+      "claim_use_allowed": false,
+      "framework_claim_allowed": false,
+      "external_adversarial_review_complete": false,
+      "synthetic_control_not_claim_evidence": true
+    }
+  },
+  "current_v2188_packet": {
+    "packet_id": "current_v2188_parspec_qeft_axis_map_slot",
+    "source_url": "https://arxiv.org/abs/2205.05132",
+    "source_doi": "https://doi.org/10.1103/PhysRevD.107.044030",
+    "source_type": "source_backed_parspec_qeft_axis_map",
+    "source_theory_family": "quartic_order_effective_field_theory_of_general_relativity",
+    "source_axis": "ell_qEFT",
+    "source_axis_units": "km",
+    "target_engine_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3"
+    ],
+    "source_axis_power_policy": {},
+    "operator_basis_map": {},
+    "engine_axis_map": {
+      "status": "missing",
+      "needed": "Map the ParSpec quartic-EFT length-scale posterior or likelihood onto engine-normalized Bresciani axes g_R4_c1, g_R4_c2, g_R4_c3.",
+      "engine_axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "source_axis": "ell_qEFT_km"
+    },
+    "axis_normalization": {},
+    "likelihood_reference": {
+      "status": "missing_public_export",
+      "available_in_source": "published_bound_only",
+      "needed": "Public likelihood samples, log-likelihood grid, or covariance for the quartic-EFT ringdown parameter, with event metadata."
+    },
+    "event_set_policy": {
+      "status": "mismatch",
+      "source_events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "engine_events": [
+        "GW170608"
+      ],
+      "same_event_set": false
+    },
+    "systematics": {
+      "status": "source_mentions_eft_and_waveform_systematics_but_no_engine_export",
+      "needed": [
+        "waveform_systematics_budget",
+        "calibration_prior",
+        "event_selection_policy",
+        "glitch_and_data_quality_policy",
+        "eft_validity_domain"
+      ]
+    },
+    "claim_controls": {
+      "claim_use_allowed": false,
+      "framework_claim_allowed": false,
+      "source_bridge_only_not_claim_evidence": true
+    }
+  },
+  "synthetic_control_evaluation": {
+    "packet_id": "synthetic_parspec_qeft_to_engine_r4_axis_map_v1",
+    "source_bridge_ready": true,
+    "axis_map_ready": true,
+    "likelihood_attachment_ready": true,
+    "ready_for_framework_claim": false,
+    "synthetic_control": true,
+    "missing_required_fields": [],
+    "map_blockers": [],
+    "attachment_blockers": [],
+    "all_blockers": [],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "synthetic_control_not_claim_evidence"
+    ],
+    "split_v2_188_axis_map_blocker": {
+      "previous": "engine_r4_axes_to_parspec_qeft_length_map_missing",
+      "contract_subpieces": [
+        "source_axis_power_policy",
+        "operator_basis_map",
+        "engine_axis_orientation",
+        "axis_normalization",
+        "covariance_pushforward"
+      ]
+    },
+    "route_status": "parspec_engine_axis_map_packet_ready_nonclaiming"
+  },
+  "current_v2188_evaluation": {
+    "packet_id": "current_v2188_parspec_qeft_axis_map_slot",
+    "source_bridge_ready": true,
+    "axis_map_ready": false,
+    "likelihood_attachment_ready": false,
+    "ready_for_framework_claim": false,
+    "synthetic_control": false,
+    "missing_required_fields": [
+      "axis_normalization",
+      "operator_basis_map",
+      "source_axis_power_policy"
+    ],
+    "map_blockers": [
+      "axis_normalization_missing",
+      "engine_axis_orientation_missing",
+      "operator_basis_map_missing",
+      "source_axis_power_policy_missing"
+    ],
+    "attachment_blockers": [
+      "calibration_and_waveform_systematics_not_exported",
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ],
+    "all_blockers": [
+      "axis_normalization",
+      "axis_normalization_missing",
+      "calibration_and_waveform_systematics_not_exported",
+      "engine_axis_map_covariance_pushforward_missing",
+      "engine_axis_map_jacobian_missing",
+      "engine_axis_map_not_ready",
+      "engine_axis_map_target_axes_mismatch",
+      "engine_axis_orientation_missing",
+      "engine_axis_vector_missing",
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "operator_basis_map",
+      "operator_basis_map_missing",
+      "parspec_likelihood_export_not_confirmed",
+      "parspec_likelihood_source_axis_mismatch",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "source_axis_power_policy",
+      "source_axis_power_policy_missing"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "parspec_engine_axis_likelihood_attachment_not_ready"
+    ],
+    "split_v2_188_axis_map_blocker": {
+      "previous": "engine_r4_axes_to_parspec_qeft_length_map_missing",
+      "contract_subpieces": [
+        "source_axis_power_policy",
+        "operator_basis_map",
+        "engine_axis_orientation",
+        "axis_normalization",
+        "covariance_pushforward"
+      ]
+    },
+    "route_status": "parspec_engine_axis_map_packet_blocked"
+  },
+  "malformed_control_evaluation": {
+    "packet_id": "synthetic_parspec_qeft_to_engine_r4_axis_map_v1",
+    "source_bridge_ready": false,
+    "axis_map_ready": false,
+    "likelihood_attachment_ready": false,
+    "ready_for_framework_claim": false,
+    "synthetic_control": true,
+    "missing_required_fields": [],
+    "map_blockers": [],
+    "attachment_blockers": [],
+    "all_blockers": [
+      "claim_use_not_disabled",
+      "engine_axis_vector_components_not_ready",
+      "engine_axis_vector_incomplete",
+      "parspec_primary_source_url_missing",
+      "source_axis_units_not_km",
+      "target_engine_axes_mismatch"
+    ],
+    "claim_blockers": [
+      "external_adversarial_review_missing",
+      "framework_claim_controls_disabled",
+      "parspec_engine_axis_likelihood_attachment_not_ready",
+      "synthetic_control_not_claim_evidence"
+    ],
+    "split_v2_188_axis_map_blocker": {
+      "previous": "engine_r4_axes_to_parspec_qeft_length_map_missing",
+      "contract_subpieces": [
+        "source_axis_power_policy",
+        "operator_basis_map",
+        "engine_axis_orientation",
+        "axis_normalization",
+        "covariance_pushforward"
+      ]
+    },
+    "route_status": "parspec_engine_axis_map_packet_blocked"
+  },
+  "contract_ready": true,
+  "current_axis_map_ready": false,
+  "current_likelihood_attachment_ready": false,
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "route_status": "parspec_engine_axis_map_contract_ready_nonclaiming",
+  "selected_next_build_action": "derive_source_backed_parspec_qeft_axis_map_or_acquire_public_likelihood",
+  "best_next_artifact": "A real ParSpec/qEFT packet satisfying this contract: source-backed ell_qEFT length-power policy, Bresciani-axis orientation, normalization into engine R4 units, covariance pushforward, public likelihood object, event-set alignment, and systematics export.",
+  "interpretation": "v2.190 does not invent the missing qEFT map. It turns the v2.188 axis-map blocker into a concrete packet contract, proves the pass branch with a synthetic control, and records exactly why the current ParSpec bridge remains blocked."
+}

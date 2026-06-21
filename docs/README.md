@@ -32,15 +32,16 @@ Start with the generated [`results/INDEX.md`](results/INDEX.md) for the full cur
 
 ## Highlights
 
-If you only read ten documents, read these:
+If you only read eleven documents, read these:
 
-1. **[`results/2026-06-20-v2.189-r4-research-continuity-ledger.md`](results/2026-06-20-v2.189-r4-research-continuity-ledger.md)** — preservation ledger for the v2.170-v2.188 run details
-2. **[`results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md`](results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md)** — latest ParSpec/quartic-EFT ringdown source bridge
-3. **[`results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md`](results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md)** — R4/GWOSC waveform-likelihood posterior bridge
-4. **[`results/2026-06-20-v2.186-r4-nuisance-covariance-export.md`](results/2026-06-20-v2.186-r4-nuisance-covariance-export.md)** — R4/GWOSC artifact exporting nuisance-grid covariance
-5. **[`results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md`](results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md)** — calibrated R4/GWOSC projection using the H1/L1 LALSuite response
-6. **[`results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md`](results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md)** — R4/GWOSC/LALSuite frontier summary and claim boundary
-7. **[`FINDINGS.md`](FINDINGS.md)** — curated one-page findings, now including the v2.170-v2.189 frontier
-8. **[`results/2026-06-09-v2.10-capstone.md`](results/2026-06-09-v2.10-capstone.md)** — the program in one page
-9. **[`results/2026-06-09-v2.0-RESEARCH-REPORT.md`](results/2026-06-09-v2.0-RESEARCH-REPORT.md)** — publication-style overview of the core engine
-10. **[`results/INDEX.md`](results/INDEX.md)** — generated chronological index for the full research loop
+1. **[`results/2026-06-20-v2.190-r4-parspec-engine-axis-map-contract.md`](results/2026-06-20-v2.190-r4-parspec-engine-axis-map-contract.md)** — executable contract for the missing ParSpec `ell_qEFT -> g_R4_*` map
+2. **[`results/2026-06-20-v2.189-r4-research-continuity-ledger.md`](results/2026-06-20-v2.189-r4-research-continuity-ledger.md)** — preservation ledger for the v2.170-v2.188 run details
+3. **[`results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md`](results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md)** — latest ParSpec/quartic-EFT ringdown source bridge
+4. **[`results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md`](results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md)** — R4/GWOSC waveform-likelihood posterior bridge
+5. **[`results/2026-06-20-v2.186-r4-nuisance-covariance-export.md`](results/2026-06-20-v2.186-r4-nuisance-covariance-export.md)** — R4/GWOSC artifact exporting nuisance-grid covariance
+6. **[`results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md`](results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md)** — calibrated R4/GWOSC projection using the H1/L1 LALSuite response
+7. **[`results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md`](results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md)** — R4/GWOSC/LALSuite frontier summary and claim boundary
+8. **[`FINDINGS.md`](FINDINGS.md)** — curated one-page findings, now including the v2.170-v2.190 frontier
+9. **[`results/2026-06-09-v2.10-capstone.md`](results/2026-06-09-v2.10-capstone.md)** — the program in one page
+10. **[`results/2026-06-09-v2.0-RESEARCH-REPORT.md`](results/2026-06-09-v2.0-RESEARCH-REPORT.md)** — publication-style overview of the core engine
+11. **[`results/INDEX.md`](results/INDEX.md)** — generated chronological index for the full research loop
