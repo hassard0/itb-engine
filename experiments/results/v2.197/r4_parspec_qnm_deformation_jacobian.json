@@ -1,0 +1,549 @@
+{
+  "version": "v2.197",
+  "basis": [
+    "v2.191_qeft_qnm_deformation_coefficients",
+    "v2.196_published_bound_surrogate",
+    "normalized_ell_qeft_power_six_source_axis"
+  ],
+  "v2196_route_status": "parspec_published_bound_surrogate_ready_axis_map_and_public_likelihood_missing",
+  "published_bound_surrogate_ready": true,
+  "qnm_deformation_jacobian": {
+    "bridge_id": "parspec_qeft_qnm_source_axis_deformation_jacobian_v1",
+    "basis_surrogate_version": "v2.196",
+    "source_events": [
+      "GW150914",
+      "GW200129"
+    ],
+    "source_axis": "ell_qEFT_km",
+    "qeft_power": 6,
+    "qnm_axes": [
+      "delta_omega_qeft_0",
+      "delta_tau_qeft_0",
+      "delta_omega_qeft_1",
+      "delta_tau_qeft_1"
+    ],
+    "engine_axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3"
+    ],
+    "qnm_coefficient_vector": {
+      "delta_omega_qeft_0": -0.2114,
+      "delta_tau_qeft_0": -0.607,
+      "delta_omega_qeft_1": -1.5263,
+      "delta_tau_qeft_1": 171.35
+    },
+    "event_deformation_rows": [
+      {
+        "label": "GW150914",
+        "source_axis": "ell_qEFT_km",
+        "upper_bound_km_90": 51.7,
+        "qeft_power": 6,
+        "normalization": "normalized_gamma=(ell_qEFT_km/upper_bound_km_90)^6; source absolute gamma still requires remnant mass and redshift.",
+        "qnm_axes": [
+          "delta_omega_qeft_0",
+          "delta_tau_qeft_0",
+          "delta_omega_qeft_1",
+          "delta_tau_qeft_1"
+        ],
+        "coefficient_vector": {
+          "delta_omega_qeft_0": -0.2114,
+          "delta_tau_qeft_0": -0.607,
+          "delta_omega_qeft_1": -1.5263,
+          "delta_tau_qeft_1": 171.35
+        },
+        "grid": [
+          {
+            "ell_qEFT_km": 0.0,
+            "fraction_of_published_bound": 0.0,
+            "normalized_gamma": 0.0,
+            "d_normalized_gamma_d_ell_km": 0.0,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.0,
+              "delta_tau_qeft_0": -0.0,
+              "delta_omega_qeft_1": -0.0,
+              "delta_tau_qeft_1": 0.0
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.0,
+              "delta_tau_qeft_0": -0.0,
+              "delta_omega_qeft_1": -0.0,
+              "delta_tau_qeft_1": 0.0
+            },
+            "log_relative_surrogate_likelihood": -0.0
+          },
+          {
+            "ell_qEFT_km": 12.925,
+            "fraction_of_published_bound": 0.25,
+            "normalized_gamma": 0.000244140625,
+            "d_normalized_gamma_d_ell_km": 0.000113334139,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -5.1611328e-05,
+              "delta_tau_qeft_0": -0.000148193359,
+              "delta_omega_qeft_1": -0.000372631836,
+              "delta_tau_qeft_1": 0.041833496094
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -2.3958837e-05,
+              "delta_tau_qeft_0": -6.8793823e-05,
+              "delta_omega_qeft_1": -0.000172981897,
+              "delta_tau_qeft_1": 0.019419804763
+            },
+            "log_relative_surrogate_likelihood": -0.08454823294
+          },
+          {
+            "ell_qEFT_km": 25.85,
+            "fraction_of_published_bound": 0.5,
+            "normalized_gamma": 0.015625,
+            "d_normalized_gamma_d_ell_km": 0.003626692456,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.003303125,
+              "delta_tau_qeft_0": -0.009484375,
+              "delta_omega_qeft_1": -0.0238484375,
+              "delta_tau_qeft_1": 2.67734375
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.000766682785,
+              "delta_tau_qeft_0": -0.002201402321,
+              "delta_omega_qeft_1": -0.005535420696,
+              "delta_tau_qeft_1": 0.621433752418
+            },
+            "log_relative_surrogate_likelihood": -0.338192931762
+          },
+          {
+            "ell_qEFT_km": 38.775,
+            "fraction_of_published_bound": 0.75,
+            "normalized_gamma": 0.177978515625,
+            "d_normalized_gamma_d_ell_km": 0.027540195841,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.037624658203,
+              "delta_tau_qeft_0": -0.108032958984,
+              "delta_omega_qeft_1": -0.271648608398,
+              "delta_tau_qeft_1": 30.496618652344
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.005821997401,
+              "delta_tau_qeft_0": -0.016716898876,
+              "delta_omega_qeft_1": -0.042034600913,
+              "delta_tau_qeft_1": 4.719012557423
+            },
+            "log_relative_surrogate_likelihood": -0.760934096464
+          },
+          {
+            "ell_qEFT_km": 51.7,
+            "fraction_of_published_bound": 1.0,
+            "normalized_gamma": 1.0,
+            "d_normalized_gamma_d_ell_km": 0.116054158607,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.2114,
+              "delta_tau_qeft_0": -0.607,
+              "delta_omega_qeft_1": -1.5263,
+              "delta_tau_qeft_1": 171.35
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.02453384913,
+              "delta_tau_qeft_0": -0.070444874275,
+              "delta_omega_qeft_1": -0.177133462282,
+              "delta_tau_qeft_1": 19.885880077369
+            },
+            "log_relative_surrogate_likelihood": -1.352771727048
+          },
+          {
+            "ell_qEFT_km": 64.625,
+            "fraction_of_published_bound": 1.25,
+            "normalized_gamma": 3.814697265625,
+            "d_normalized_gamma_d_ell_km": 0.354169185203,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.806427001953,
+              "delta_tau_qeft_0": -2.315521240234,
+              "delta_omega_qeft_1": -5.822372436523,
+              "delta_tau_qeft_1": 653.648376464844
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.074871365752,
+              "delta_tau_qeft_0": -0.214980695418,
+              "delta_omega_qeft_1": -0.540568427375,
+              "delta_tau_qeft_1": 60.68688988455
+            },
+            "log_relative_surrogate_likelihood": -2.113705823512
+          }
+        ],
+        "qnm_deformation_at_published_bound": {
+          "delta_omega_qeft_0": -0.2114,
+          "delta_tau_qeft_0": -0.607,
+          "delta_omega_qeft_1": -1.5263,
+          "delta_tau_qeft_1": 171.35
+        },
+        "dqnm_deformation_d_ell_at_published_bound": {
+          "delta_omega_qeft_0": -0.02453384913,
+          "delta_tau_qeft_0": -0.070444874275,
+          "delta_omega_qeft_1": -0.177133462282,
+          "delta_tau_qeft_1": 19.885880077369
+        },
+        "engine_axis_map_ready": false
+      },
+      {
+        "label": "GW200129",
+        "source_axis": "ell_qEFT_km",
+        "upper_bound_km_90": 54.8,
+        "qeft_power": 6,
+        "normalization": "normalized_gamma=(ell_qEFT_km/upper_bound_km_90)^6; source absolute gamma still requires remnant mass and redshift.",
+        "qnm_axes": [
+          "delta_omega_qeft_0",
+          "delta_tau_qeft_0",
+          "delta_omega_qeft_1",
+          "delta_tau_qeft_1"
+        ],
+        "coefficient_vector": {
+          "delta_omega_qeft_0": -0.2114,
+          "delta_tau_qeft_0": -0.607,
+          "delta_omega_qeft_1": -1.5263,
+          "delta_tau_qeft_1": 171.35
+        },
+        "grid": [
+          {
+            "ell_qEFT_km": 0.0,
+            "fraction_of_published_bound": 0.0,
+            "normalized_gamma": 0.0,
+            "d_normalized_gamma_d_ell_km": 0.0,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.0,
+              "delta_tau_qeft_0": -0.0,
+              "delta_omega_qeft_1": -0.0,
+              "delta_tau_qeft_1": 0.0
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.0,
+              "delta_tau_qeft_0": -0.0,
+              "delta_omega_qeft_1": -0.0,
+              "delta_tau_qeft_1": 0.0
+            },
+            "log_relative_surrogate_likelihood": -0.0
+          },
+          {
+            "ell_qEFT_km": 13.7,
+            "fraction_of_published_bound": 0.25,
+            "normalized_gamma": 0.000244140625,
+            "d_normalized_gamma_d_ell_km": 0.000106922901,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -5.1611328e-05,
+              "delta_tau_qeft_0": -0.000148193359,
+              "delta_omega_qeft_1": -0.000372631836,
+              "delta_tau_qeft_1": 0.041833496094
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -2.2603501e-05,
+              "delta_tau_qeft_0": -6.4902201e-05,
+              "delta_omega_qeft_1": -0.000163196424,
+              "delta_tau_qeft_1": 0.018321239165
+            },
+            "log_relative_surrogate_likelihood": -0.08454823294
+          },
+          {
+            "ell_qEFT_km": 27.4,
+            "fraction_of_published_bound": 0.5,
+            "normalized_gamma": 0.015625,
+            "d_normalized_gamma_d_ell_km": 0.003421532847,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.003303125,
+              "delta_tau_qeft_0": -0.009484375,
+              "delta_omega_qeft_1": -0.0238484375,
+              "delta_tau_qeft_1": 2.67734375
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.000723312044,
+              "delta_tau_qeft_0": -0.002076870438,
+              "delta_omega_qeft_1": -0.005222285584,
+              "delta_tau_qeft_1": 0.586279653285
+            },
+            "log_relative_surrogate_likelihood": -0.338192931762
+          },
+          {
+            "ell_qEFT_km": 41.1,
+            "fraction_of_published_bound": 0.75,
+            "normalized_gamma": 0.177978515625,
+            "d_normalized_gamma_d_ell_km": 0.025982265055,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.037624658203,
+              "delta_tau_qeft_0": -0.108032958984,
+              "delta_omega_qeft_1": -0.271648608398,
+              "delta_tau_qeft_1": 30.496618652344
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.005492650833,
+              "delta_tau_qeft_0": -0.015771234888,
+              "delta_omega_qeft_1": -0.039656731153,
+              "delta_tau_qeft_1": 4.45206111713
+            },
+            "log_relative_surrogate_likelihood": -0.760934096464
+          },
+          {
+            "ell_qEFT_km": 54.8,
+            "fraction_of_published_bound": 1.0,
+            "normalized_gamma": 1.0,
+            "d_normalized_gamma_d_ell_km": 0.109489051095,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.2114,
+              "delta_tau_qeft_0": -0.607,
+              "delta_omega_qeft_1": -1.5263,
+              "delta_tau_qeft_1": 171.35
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.023145985401,
+              "delta_tau_qeft_0": -0.066459854015,
+              "delta_omega_qeft_1": -0.167113138686,
+              "delta_tau_qeft_1": 18.760948905109
+            },
+            "log_relative_surrogate_likelihood": -1.352771727048
+          },
+          {
+            "ell_qEFT_km": 68.5,
+            "fraction_of_published_bound": 1.25,
+            "normalized_gamma": 3.814697265625,
+            "d_normalized_gamma_d_ell_km": 0.334134067062,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.806427001953,
+              "delta_tau_qeft_0": -2.315521240234,
+              "delta_omega_qeft_1": -5.822372436523,
+              "delta_tau_qeft_1": 653.648376464844
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.070635941777,
+              "delta_tau_qeft_0": -0.202819378707,
+              "delta_omega_qeft_1": -0.509988826557,
+              "delta_tau_qeft_1": 57.253872391081
+            },
+            "log_relative_surrogate_likelihood": -2.113705823512
+          }
+        ],
+        "qnm_deformation_at_published_bound": {
+          "delta_omega_qeft_0": -0.2114,
+          "delta_tau_qeft_0": -0.607,
+          "delta_omega_qeft_1": -1.5263,
+          "delta_tau_qeft_1": 171.35
+        },
+        "dqnm_deformation_d_ell_at_published_bound": {
+          "delta_omega_qeft_0": -0.023145985401,
+          "delta_tau_qeft_0": -0.066459854015,
+          "delta_omega_qeft_1": -0.167113138686,
+          "delta_tau_qeft_1": 18.760948905109
+        },
+        "engine_axis_map_ready": false
+      },
+      {
+        "label": "combined",
+        "source_axis": "ell_qEFT_km",
+        "upper_bound_km_90": 51.3,
+        "qeft_power": 6,
+        "normalization": "normalized_gamma=(ell_qEFT_km/upper_bound_km_90)^6; source absolute gamma still requires remnant mass and redshift.",
+        "qnm_axes": [
+          "delta_omega_qeft_0",
+          "delta_tau_qeft_0",
+          "delta_omega_qeft_1",
+          "delta_tau_qeft_1"
+        ],
+        "coefficient_vector": {
+          "delta_omega_qeft_0": -0.2114,
+          "delta_tau_qeft_0": -0.607,
+          "delta_omega_qeft_1": -1.5263,
+          "delta_tau_qeft_1": 171.35
+        },
+        "grid": [
+          {
+            "ell_qEFT_km": 0.0,
+            "fraction_of_published_bound": 0.0,
+            "normalized_gamma": 0.0,
+            "d_normalized_gamma_d_ell_km": 0.0,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.0,
+              "delta_tau_qeft_0": -0.0,
+              "delta_omega_qeft_1": -0.0,
+              "delta_tau_qeft_1": 0.0
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.0,
+              "delta_tau_qeft_0": -0.0,
+              "delta_omega_qeft_1": -0.0,
+              "delta_tau_qeft_1": 0.0
+            },
+            "log_relative_surrogate_likelihood": -0.0
+          },
+          {
+            "ell_qEFT_km": 12.825,
+            "fraction_of_published_bound": 0.25,
+            "normalized_gamma": 0.000244140625,
+            "d_normalized_gamma_d_ell_km": 0.000114217836,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -5.1611328e-05,
+              "delta_tau_qeft_0": -0.000148193359,
+              "delta_omega_qeft_1": -0.000372631836,
+              "delta_tau_qeft_1": 0.041833496094
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -2.4145651e-05,
+              "delta_tau_qeft_0": -6.9330227e-05,
+              "delta_omega_qeft_1": -0.000174330683,
+              "delta_tau_qeft_1": 0.019571226243
+            },
+            "log_relative_surrogate_likelihood": -0.08454823294
+          },
+          {
+            "ell_qEFT_km": 25.65,
+            "fraction_of_published_bound": 0.5,
+            "normalized_gamma": 0.015625,
+            "d_normalized_gamma_d_ell_km": 0.00365497076,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.003303125,
+              "delta_tau_qeft_0": -0.009484375,
+              "delta_omega_qeft_1": -0.0238484375,
+              "delta_tau_qeft_1": 2.67734375
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.000772660819,
+              "delta_tau_qeft_0": -0.002218567251,
+              "delta_omega_qeft_1": -0.005578581871,
+              "delta_tau_qeft_1": 0.626279239766
+            },
+            "log_relative_surrogate_likelihood": -0.338192931762
+          },
+          {
+            "ell_qEFT_km": 38.475,
+            "fraction_of_published_bound": 0.75,
+            "normalized_gamma": 0.177978515625,
+            "d_normalized_gamma_d_ell_km": 0.027754934211,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.037624658203,
+              "delta_tau_qeft_0": -0.108032958984,
+              "delta_omega_qeft_1": -0.271648608398,
+              "delta_tau_qeft_1": 30.496618652344
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.005867393092,
+              "delta_tau_qeft_0": -0.016847245066,
+              "delta_omega_qeft_1": -0.042362356086,
+              "delta_tau_qeft_1": 4.755807976974
+            },
+            "log_relative_surrogate_likelihood": -0.760934096464
+          },
+          {
+            "ell_qEFT_km": 51.3,
+            "fraction_of_published_bound": 1.0,
+            "normalized_gamma": 1.0,
+            "d_normalized_gamma_d_ell_km": 0.116959064327,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.2114,
+              "delta_tau_qeft_0": -0.607,
+              "delta_omega_qeft_1": -1.5263,
+              "delta_tau_qeft_1": 171.35
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.024725146199,
+              "delta_tau_qeft_0": -0.070994152047,
+              "delta_omega_qeft_1": -0.178514619883,
+              "delta_tau_qeft_1": 20.040935672515
+            },
+            "log_relative_surrogate_likelihood": -1.352771727048
+          },
+          {
+            "ell_qEFT_km": 64.125,
+            "fraction_of_published_bound": 1.25,
+            "normalized_gamma": 3.814697265625,
+            "d_normalized_gamma_d_ell_km": 0.356930738304,
+            "qnm_deformation": {
+              "delta_omega_qeft_0": -0.806427001953,
+              "delta_tau_qeft_0": -2.315521240234,
+              "delta_omega_qeft_1": -5.822372436523,
+              "delta_tau_qeft_1": 653.648376464844
+            },
+            "dqnm_deformation_d_ell_km": {
+              "delta_omega_qeft_0": -0.075455158077,
+              "delta_tau_qeft_0": -0.216656958151,
+              "delta_omega_qeft_1": -0.544783385874,
+              "delta_tau_qeft_1": 61.160082008406
+            },
+            "log_relative_surrogate_likelihood": -2.113705823512
+          }
+        ],
+        "qnm_deformation_at_published_bound": {
+          "delta_omega_qeft_0": -0.2114,
+          "delta_tau_qeft_0": -0.607,
+          "delta_omega_qeft_1": -1.5263,
+          "delta_tau_qeft_1": 171.35
+        },
+        "dqnm_deformation_d_ell_at_published_bound": {
+          "delta_omega_qeft_0": -0.024725146199,
+          "delta_tau_qeft_0": -0.070994152047,
+          "delta_omega_qeft_1": -0.178514619883,
+          "delta_tau_qeft_1": 20.040935672515
+        },
+        "engine_axis_map_ready": false
+      }
+    ],
+    "source_space_jacobian_ready": true,
+    "engine_axis_map_ready": false,
+    "engine_axis_map_blocker": "qnm_deformation_to_bresciani_engine_r4_operator_basis_map_missing",
+    "claim_use_allowed": false
+  },
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "selected_next_build_action": "derive_qnm_deformation_to_bresciani_engine_r4_operator_basis_map",
+  "interpretation": "The qEFT source-axis route now has a checked pushforward from ell_qEFT into ParSpec qNM deformation coordinates. This is still not an engine-axis map: the missing operator-basis map from qNM deformations to Bresciani R4 axes remains the decisive blocker.",
+  "evaluation": {
+    "qnm_source_axis_jacobian_ready": true,
+    "engine_axis_map_ready": false,
+    "ready_for_framework_claim": false,
+    "jacobian_blockers": [],
+    "resolved_v2196_subpiece": "qeft_source_axis_to_qnm_deformation_jacobian",
+    "remaining_claim_blockers": [
+      "axis_normalization_missing",
+      "claim_grade_systematics_export_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "qnm_deformation_to_bresciani_engine_r4_operator_basis_map_missing"
+    ],
+    "claim_blockers": [
+      "axis_normalization_missing",
+      "claim_grade_systematics_export_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "qnm_deformation_to_bresciani_engine_r4_operator_basis_map_missing"
+    ],
+    "claimable_framework_exclusions_now": [],
+    "route_status": "parspec_qnm_deformation_jacobian_ready_engine_axis_map_missing"
+  },
+  "malformed_control_evaluation": {
+    "qnm_source_axis_jacobian_ready": false,
+    "engine_axis_map_ready": false,
+    "ready_for_framework_claim": false,
+    "jacobian_blockers": [
+      "GW150914_published_bound_gamma_not_one",
+      "claim_use_not_disabled",
+      "engine_axis_map_unexpectedly_ready"
+    ],
+    "resolved_v2196_subpiece": null,
+    "remaining_claim_blockers": [
+      "axis_normalization_missing",
+      "claim_grade_systematics_export_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "qnm_deformation_to_bresciani_engine_r4_operator_basis_map_missing",
+      "qnm_source_axis_jacobian_not_ready"
+    ],
+    "claim_blockers": [
+      "axis_normalization_missing",
+      "claim_grade_systematics_export_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "qnm_deformation_to_bresciani_engine_r4_operator_basis_map_missing",
+      "qnm_source_axis_jacobian_not_ready"
+    ],
+    "claimable_framework_exclusions_now": [],
+    "route_status": "parspec_qnm_deformation_jacobian_not_ready"
+  },
+  "qnm_source_axis_jacobian_ready": true,
+  "route_status": "parspec_qnm_deformation_jacobian_ready_engine_axis_map_missing"
+}
