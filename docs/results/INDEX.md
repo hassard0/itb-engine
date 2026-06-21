@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (305 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (306 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -354,3 +354,4 @@ Auto-generated front door to the full research program (305 notes). Regenerate w
 | v2.192 | [v2.192 - R4 ParSpec source-event alignment manifest](2026-06-20-v2.192-r4-parspec-source-event-alignment-manifest.md) | Can the v2.191 event-set blocker be split by mapping the ParSpec/qEFT source |
 | v2.193 | [v2.193 - R4 ParSpec same-event H1/L1 likelihood](2026-06-20-v2.193-r4-parspec-same-event-h1l1-likelihood.md) | Can the v2.192 source-event manifest be pushed through the existing R4 |
 | v2.194 | [v2.194 - R4 ParSpec event-topology likelihood](2026-06-20-v2.194-r4-parspec-event-topology-likelihood.md) | Can the v2.193 H1/L1 same-event bridge be extended to the actual public |
+| v2.195 | [v2.195 - R4 ParSpec source-event covariance export](2026-06-20-v2.195-r4-parspec-source-event-covariance-export.md) | Can the v2.194 source-event topology likelihood export event-specific and |

@@ -1,0 +1,676 @@
+{
+  "version": "v2.195",
+  "basis": [
+    "v2.194_r4_parspec_event_topology_likelihood",
+    "v2.191_r4_parspec_qeft_source_asset_audit",
+    "coarse_nuisance_marginalized_r4_likelihood_grid"
+  ],
+  "v2194_event_topology_likelihood_path": "experiments/results/v2.194/r4_parspec_event_topology_likelihood.json",
+  "source_event_topology_likelihood": {
+    "version": "v2.194",
+    "route_status": "parspec_source_event_topology_likelihood_ready_covariance_missing",
+    "source_event_detector_topology_likelihood_ready": true,
+    "event_set_alignment_ready": true,
+    "claim_blockers": [
+      "axis_normalization_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "nuisance_grid_is_coarse_not_posterior_sampler",
+      "operator_basis_map_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "source_event_specific_nuisance_covariance_export_missing",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ]
+  },
+  "source_event_covariance_export": {
+    "export_id": "r4_parspec_source_event_covariance_export_v1",
+    "covariance_kind": "source_event_nuisance_marginalized_r4_likelihood_covariance",
+    "basis_likelihood_version": "v2.194",
+    "source_events": [
+      "GW150914",
+      "GW200129"
+    ],
+    "axes": [
+      "g_R4_c1",
+      "g_R4_c2",
+      "g_R4_c3"
+    ],
+    "coefficient_grid": {
+      "offsets": [
+        -0.04,
+        -0.02,
+        0.0,
+        0.02,
+        0.04
+      ],
+      "grid_points": 125
+    },
+    "event_covariances": [
+      {
+        "paper_event": "GW150914",
+        "gwosc_event_name": "GW150914",
+        "event_version": "GW150914-v3",
+        "detectors": [
+          "H1",
+          "L1"
+        ],
+        "axes": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "grid_points": 125,
+        "nuisance_points_per_detector": [
+          81,
+          81
+        ],
+        "nuisance_grid": {
+          "parameters": [
+            "total_mass_solar",
+            "eta",
+            "tc_shift_seconds",
+            "phic_rad"
+          ],
+          "grid_is_posterior_sampler": false
+        },
+        "best_marginal_grid_point": {
+          "g_R4_c1": 0.535629103212,
+          "g_R4_c2": 0.475614794648,
+          "g_R4_c3": -0.023513023764,
+          "delta_g_R4_c1": 0.04,
+          "delta_g_R4_c2": -0.02,
+          "delta_g_R4_c3": -0.02,
+          "log_marginal_likelihood": -0.99999803885,
+          "profile_log_likelihood": -0.999474151397
+        },
+        "posterior_mean": {
+          "g_R4_c1": 0.49562610844,
+          "g_R4_c2": 0.49561181516,
+          "g_R4_c3": -0.003517066352
+        },
+        "posterior_covariance": [
+          [
+            0.00079955362,
+            -1.27607e-06,
+            -1.236917e-06
+          ],
+          [
+            -1.27607e-06,
+            0.000799553619,
+            -1.235849e-06
+          ],
+          [
+            -1.236917e-06,
+            -1.235849e-06,
+            0.000799553553
+          ]
+        ],
+        "posterior_covariance_eigenvalues": [
+          0.00079705428,
+          0.000800776816,
+          0.000800829697
+        ],
+        "posterior_positive_semidefinite": true,
+        "top_posterior_points": [
+          {
+            "g_R4_c1": 0.535629103212,
+            "g_R4_c2": 0.475614794648,
+            "g_R4_c3": -0.023513023764,
+            "delta_g_R4_c1": 0.04,
+            "delta_g_R4_c2": -0.02,
+            "delta_g_R4_c3": -0.02,
+            "log_marginal_likelihood": -0.99999803885,
+            "profile_log_likelihood": -0.999474151397,
+            "posterior_weight": 0.008019195395
+          },
+          {
+            "g_R4_c1": 0.515629103212,
+            "g_R4_c2": 0.495614794648,
+            "g_R4_c3": -0.023513023764,
+            "delta_g_R4_c1": 0.02,
+            "delta_g_R4_c2": 0.0,
+            "delta_g_R4_c3": -0.02,
+            "log_marginal_likelihood": -0.999998314978,
+            "profile_log_likelihood": -0.999467608615,
+            "posterior_weight": 0.008019193181
+          },
+          {
+            "g_R4_c1": 0.495629103212,
+            "g_R4_c2": 0.515614794648,
+            "g_R4_c3": -0.023513023764,
+            "delta_g_R4_c1": 0.0,
+            "delta_g_R4_c2": 0.02,
+            "delta_g_R4_c3": -0.02,
+            "log_marginal_likelihood": -0.999998600217,
+            "profile_log_likelihood": -0.999461074962,
+            "posterior_weight": 0.008019190893
+          },
+          {
+            "g_R4_c1": 0.475629103212,
+            "g_R4_c2": 0.535614794648,
+            "g_R4_c3": -0.023513023764,
+            "delta_g_R4_c1": -0.02,
+            "delta_g_R4_c2": 0.04,
+            "delta_g_R4_c3": -0.02,
+            "log_marginal_likelihood": -0.999998894564,
+            "profile_log_likelihood": -0.999454550439,
+            "posterior_weight": 0.008019188533
+          },
+          {
+            "g_R4_c1": 0.455629103212,
+            "g_R4_c2": 0.535614794648,
+            "g_R4_c3": -0.003513023764,
+            "delta_g_R4_c1": -0.04,
+            "delta_g_R4_c2": 0.04,
+            "delta_g_R4_c3": 0.0,
+            "log_marginal_likelihood": -0.999999254582,
+            "profile_log_likelihood": -0.999985619149,
+            "posterior_weight": 0.008019185646
+          },
+          {
+            "g_R4_c1": 0.475629103212,
+            "g_R4_c2": 0.515614794648,
+            "g_R4_c3": -0.003513023764,
+            "delta_g_R4_c1": -0.02,
+            "delta_g_R4_c2": 0.02,
+            "delta_g_R4_c3": 0.0,
+            "log_marginal_likelihood": -0.999999622736,
+            "profile_log_likelihood": -0.999992805009,
+            "posterior_weight": 0.008019182694
+          },
+          {
+            "g_R4_c1": 0.495629103212,
+            "g_R4_c2": 0.495614794648,
+            "g_R4_c3": -0.003513023764,
+            "delta_g_R4_c1": 0.0,
+            "delta_g_R4_c2": 0.0,
+            "delta_g_R4_c3": 0.0,
+            "log_marginal_likelihood": -1.0,
+            "profile_log_likelihood": -1.0,
+            "posterior_weight": 0.008019179668
+          },
+          {
+            "g_R4_c1": 0.515629103212,
+            "g_R4_c2": 0.475614794648,
+            "g_R4_c3": -0.003513023764,
+            "delta_g_R4_c1": 0.02,
+            "delta_g_R4_c2": -0.02,
+            "delta_g_R4_c3": 0.0,
+            "log_marginal_likelihood": -1.000000386373,
+            "profile_log_likelihood": -0.99999464137,
+            "posterior_weight": 0.00801917657
+          },
+          {
+            "g_R4_c1": 0.535629103212,
+            "g_R4_c2": 0.455614794648,
+            "g_R4_c3": -0.003513023764,
+            "delta_g_R4_c1": 0.04,
+            "delta_g_R4_c2": -0.04,
+            "delta_g_R4_c3": 0.0,
+            "log_marginal_likelihood": -1.000000781855,
+            "profile_log_likelihood": -0.999989292019,
+            "posterior_weight": 0.008019173398
+          },
+          {
+            "g_R4_c1": 0.535629103212,
+            "g_R4_c2": 0.495614794648,
+            "g_R4_c3": -0.043513023764,
+            "delta_g_R4_c1": 0.04,
+            "delta_g_R4_c2": 0.0,
+            "delta_g_R4_c3": -0.04,
+            "log_marginal_likelihood": -1.000045591514,
+            "profile_log_likelihood": -0.998983885996,
+            "posterior_weight": 0.00801881407
+          }
+        ]
+      },
+      {
+        "paper_event": "GW200129",
+        "gwosc_event_name": "GW200129_065458",
+        "event_version": "GW200129_065458-v1",
+        "detectors": [
+          "H1",
+          "L1",
+          "V1"
+        ],
+        "axes": [
+          "g_R4_c1",
+          "g_R4_c2",
+          "g_R4_c3"
+        ],
+        "grid_points": 125,
+        "nuisance_points_per_detector": [
+          81,
+          81,
+          81
+        ],
+        "nuisance_grid": {
+          "parameters": [
+            "total_mass_solar",
+            "eta",
+            "tc_shift_seconds",
+            "phic_rad"
+          ],
+          "grid_is_posterior_sampler": false
+        },
+        "best_marginal_grid_point": {
+          "g_R4_c1": 0.455629103212,
+          "g_R4_c2": 0.515614794648,
+          "g_R4_c3": 0.016486976236,
+          "delta_g_R4_c1": -0.04,
+          "delta_g_R4_c2": 0.02,
+          "delta_g_R4_c3": 0.02,
+          "log_marginal_likelihood": -1.499998219437,
+          "profile_log_likelihood": -1.499384678185
+        },
+        "posterior_mean": {
+          "g_R4_c1": 0.495625793532,
+          "g_R4_c2": 0.495611465963,
+          "g_R4_c3": -0.003514819799
+        },
+        "posterior_covariance": [
+          [
+            0.000799331338,
+            -1.912055e-06,
+            -1.853711e-06
+          ],
+          [
+            -1.912055e-06,
+            0.000799331336,
+            -1.852175e-06
+          ],
+          [
+            -1.853711e-06,
+            -1.852175e-06,
+            0.000799331206
+          ]
+        ],
+        "posterior_covariance_eigenvalues": [
+          0.000795585861,
+          0.000801164617,
+          0.000801243402
+        ],
+        "posterior_positive_semidefinite": true,
+        "top_posterior_points": [
+          {
+            "g_R4_c1": 0.455629103212,
+            "g_R4_c2": 0.515614794648,
+            "g_R4_c3": 0.016486976236,
+            "delta_g_R4_c1": -0.04,
+            "delta_g_R4_c2": 0.02,
+            "delta_g_R4_c3": 0.02,
+            "log_marginal_likelihood": -1.499998219437,
+            "profile_log_likelihood": -1.499384678185,
+            "posterior_weight": 0.008028782087
+          },
+          {
+            "g_R4_c1": 0.475629103212,
+            "g_R4_c2": 0.495614794648,
+            "g_R4_c3": 0.016486976236,
+            "delta_g_R4_c1": -0.02,
+            "delta_g_R4_c2": 0.0,
+            "delta_g_R4_c3": 0.02,
+            "log_marginal_likelihood": -1.499998691342,
+            "profile_log_likelihood": -1.499377290799,
+            "posterior_weight": 0.008028778298
+          },
+          {
+            "g_R4_c1": 0.535629103212,
+            "g_R4_c2": 0.455614794648,
+            "g_R4_c3": -0.003513023764,
+            "delta_g_R4_c1": 0.04,
+            "delta_g_R4_c2": -0.04,
+            "delta_g_R4_c3": 0.0,
+            "log_marginal_likelihood": -1.49999907669,
+            "profile_log_likelihood": -1.499983474455,
+            "posterior_weight": 0.008028775205
+          },
+          {
+            "g_R4_c1": 0.495629103212,
+            "g_R4_c2": 0.475614794648,
+            "g_R4_c3": 0.016486976236,
+            "delta_g_R4_c1": 0.0,
+            "delta_g_R4_c2": -0.02,
+            "delta_g_R4_c3": 0.02,
+            "log_marginal_likelihood": -1.499999175889,
+            "profile_log_likelihood": -1.499369915205,
+            "posterior_weight": 0.008028774408
+          },
+          {
+            "g_R4_c1": 0.515629103212,
+            "g_R4_c2": 0.475614794648,
+            "g_R4_c3": -0.003513023764,
+            "delta_g_R4_c1": 0.02,
+            "delta_g_R4_c2": -0.02,
+            "delta_g_R4_c3": 0.0,
+            "log_marginal_likelihood": -1.499999532023,
+            "profile_log_likelihood": -1.499991731139,
+            "posterior_weight": 0.008028771549
+          },
+          {
+            "g_R4_c1": 0.515629103212,
+            "g_R4_c2": 0.455614794648,
+            "g_R4_c3": 0.016486976236,
+            "delta_g_R4_c1": 0.02,
+            "delta_g_R4_c2": -0.04,
+            "delta_g_R4_c3": 0.02,
+            "log_marginal_likelihood": -1.499999673079,
+            "profile_log_likelihood": -1.499362551402,
+            "posterior_weight": 0.008028770416
+          },
+          {
+            "g_R4_c1": 0.495629103212,
+            "g_R4_c2": 0.495614794648,
+            "g_R4_c3": -0.003513023764,
+            "delta_g_R4_c1": 0.0,
+            "delta_g_R4_c2": 0.0,
+            "delta_g_R4_c3": 0.0,
+            "log_marginal_likelihood": -1.5,
+            "profile_log_likelihood": -1.5,
+            "posterior_weight": 0.008028767792
+          },
+          {
+            "g_R4_c1": 0.475629103212,
+            "g_R4_c2": 0.515614794648,
+            "g_R4_c3": -0.003513023764,
+            "delta_g_R4_c1": -0.02,
+            "delta_g_R4_c2": 0.02,
+            "delta_g_R4_c3": 0.0,
+            "log_marginal_likelihood": -1.500000480619,
+            "profile_log_likelihood": -1.499992477364,
+            "posterior_weight": 0.008028763933
+          },
+          {
+            "g_R4_c1": 0.455629103212,
+            "g_R4_c2": 0.535614794648,
+            "g_R4_c3": -0.003513023764,
+            "delta_g_R4_c1": -0.04,
+            "delta_g_R4_c2": 0.04,
+            "delta_g_R4_c3": 0.0,
+            "log_marginal_likelihood": -1.50000097388,
+            "profile_log_likelihood": -1.499984966895,
+            "posterior_weight": 0.008028759972
+          },
+          {
+            "g_R4_c1": 0.455629103212,
+            "g_R4_c2": 0.495614794648,
+            "g_R4_c3": 0.036486976236,
+            "delta_g_R4_c1": -0.04,
+            "delta_g_R4_c2": 0.0,
+            "delta_g_R4_c3": 0.04,
+            "log_marginal_likelihood": -1.500070347711,
+            "profile_log_likelihood": -1.498821449539,
+            "posterior_weight": 0.008028203006
+          }
+        ]
+      }
+    ],
+    "combined_event_set_covariance": {
+      "covariance_kind": "combined_source_event_nuisance_marginalized_r4_likelihood_covariance",
+      "source_events": [
+        "GW150914",
+        "GW200129"
+      ],
+      "detectors_by_event": {
+        "GW150914": [
+          "H1",
+          "L1"
+        ],
+        "GW200129": [
+          "H1",
+          "L1",
+          "V1"
+        ]
+      },
+      "axes": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "grid_points": 125,
+      "nuisance_grid": {
+        "parameters": [
+          "total_mass_solar",
+          "eta",
+          "tc_shift_seconds",
+          "phic_rad"
+        ],
+        "grid_is_posterior_sampler": false
+      },
+      "best_marginal_grid_point": {
+        "g_R4_c1": 0.535629103212,
+        "g_R4_c2": 0.455614794648,
+        "g_R4_c3": -0.003513023764,
+        "delta_g_R4_c1": 0.04,
+        "delta_g_R4_c2": -0.04,
+        "delta_g_R4_c3": 0.0,
+        "log_marginal_likelihood": -2.499999858545,
+        "profile_log_likelihood": -2.499972766474
+      },
+      "posterior_mean": {
+        "g_R4_c1": 0.495622827625,
+        "g_R4_c2": 0.495608515333,
+        "g_R4_c3": -0.003518833974
+      },
+      "posterior_covariance": [
+        [
+          0.000798889194,
+          -3.178126e-06,
+          -3.08058e-06
+        ],
+        [
+          -3.178126e-06,
+          0.000798889188,
+          -3.077974e-06
+        ],
+        [
+          -3.08058e-06,
+          -3.077974e-06,
+          0.000798888866
+        ]
+      ],
+      "posterior_covariance_eigenvalues": [
+        0.000792664397,
+        0.000801935517,
+        0.000802067334
+      ],
+      "posterior_positive_semidefinite": true,
+      "top_posterior_points": [
+        {
+          "g_R4_c1": 0.535629103212,
+          "g_R4_c2": 0.455614794648,
+          "g_R4_c3": -0.003513023764,
+          "delta_g_R4_c1": 0.04,
+          "delta_g_R4_c2": -0.04,
+          "delta_g_R4_c3": 0.0,
+          "log_marginal_likelihood": -2.499999858545,
+          "profile_log_likelihood": -2.499972766474,
+          "posterior_weight": 0.008047912911
+        },
+        {
+          "g_R4_c1": 0.515629103212,
+          "g_R4_c2": 0.475614794648,
+          "g_R4_c3": -0.003513023764,
+          "delta_g_R4_c1": 0.02,
+          "delta_g_R4_c2": -0.02,
+          "delta_g_R4_c3": 0.0,
+          "log_marginal_likelihood": -2.499999918396,
+          "profile_log_likelihood": -2.499986372509,
+          "posterior_weight": 0.008047912429
+        },
+        {
+          "g_R4_c1": 0.495629103212,
+          "g_R4_c2": 0.495614794648,
+          "g_R4_c3": -0.003513023764,
+          "delta_g_R4_c1": 0.0,
+          "delta_g_R4_c2": 0.0,
+          "delta_g_R4_c3": 0.0,
+          "log_marginal_likelihood": -2.5,
+          "profile_log_likelihood": -2.5,
+          "posterior_weight": 0.008047911772
+        },
+        {
+          "g_R4_c1": 0.475629103212,
+          "g_R4_c2": 0.515614794648,
+          "g_R4_c3": -0.003513023764,
+          "delta_g_R4_c1": -0.02,
+          "delta_g_R4_c2": 0.02,
+          "delta_g_R4_c3": 0.0,
+          "log_marginal_likelihood": -2.500000103355,
+          "profile_log_likelihood": -2.499985282373,
+          "posterior_weight": 0.00804791094
+        },
+        {
+          "g_R4_c1": 0.455629103212,
+          "g_R4_c2": 0.535614794648,
+          "g_R4_c3": -0.003513023764,
+          "delta_g_R4_c1": -0.04,
+          "delta_g_R4_c2": 0.04,
+          "delta_g_R4_c3": 0.0,
+          "log_marginal_likelihood": -2.500000228462,
+          "profile_log_likelihood": -2.499970586044,
+          "posterior_weight": 0.008047909933
+        },
+        {
+          "g_R4_c1": 0.455629103212,
+          "g_R4_c2": 0.515614794648,
+          "g_R4_c3": 0.016486976236,
+          "delta_g_R4_c1": -0.04,
+          "delta_g_R4_c2": 0.02,
+          "delta_g_R4_c3": 0.02,
+          "log_marginal_likelihood": -2.500047826238,
+          "profile_log_likelihood": -2.499007402161,
+          "posterior_weight": 0.00804752688
+        },
+        {
+          "g_R4_c1": 0.475629103212,
+          "g_R4_c2": 0.495614794648,
+          "g_R4_c3": 0.016486976236,
+          "delta_g_R4_c1": -0.02,
+          "delta_g_R4_c2": 0.0,
+          "delta_g_R4_c3": 0.02,
+          "log_marginal_likelihood": -2.500049337908,
+          "profile_log_likelihood": -2.498995312721,
+          "posterior_weight": 0.008047514715
+        },
+        {
+          "g_R4_c1": 0.495629103212,
+          "g_R4_c2": 0.475614794648,
+          "g_R4_c3": 0.016486976236,
+          "delta_g_R4_c1": 0.0,
+          "delta_g_R4_c2": -0.02,
+          "delta_g_R4_c3": 0.02,
+          "log_marginal_likelihood": -2.50005087133,
+          "profile_log_likelihood": -2.498983244354,
+          "posterior_weight": 0.008047502375
+        },
+        {
+          "g_R4_c1": 0.515629103212,
+          "g_R4_c2": 0.455614794648,
+          "g_R4_c3": 0.016486976236,
+          "delta_g_R4_c1": 0.02,
+          "delta_g_R4_c2": -0.04,
+          "delta_g_R4_c3": 0.02,
+          "log_marginal_likelihood": -2.500052426503,
+          "profile_log_likelihood": -2.498971197056,
+          "posterior_weight": 0.008047489859
+        },
+        {
+          "g_R4_c1": 0.535629103212,
+          "g_R4_c2": 0.475614794648,
+          "g_R4_c3": -0.023513023764,
+          "delta_g_R4_c1": 0.04,
+          "delta_g_R4_c2": -0.02,
+          "delta_g_R4_c3": -0.02,
+          "log_marginal_likelihood": -2.500070892209,
+          "profile_log_likelihood": -2.498928630852,
+          "posterior_weight": 0.008047341258
+        }
+      ]
+    }
+  },
+  "v2191_remaining_state": {
+    "route_status": "parspec_qeft_source_asset_audit_ready_nonclaiming",
+    "remaining_contract_blockers_after_asset_audit": [
+      "axis_normalization",
+      "axis_normalization_missing",
+      "calibration_and_waveform_systematics_not_exported",
+      "engine_axis_map_covariance_pushforward_missing",
+      "engine_axis_map_jacobian_missing",
+      "engine_axis_map_not_ready",
+      "engine_axis_map_target_axes_mismatch",
+      "engine_axis_orientation_missing",
+      "engine_axis_vector_missing",
+      "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+      "operator_basis_map",
+      "operator_basis_map_missing",
+      "parspec_likelihood_export_not_confirmed",
+      "parspec_likelihood_source_axis_mismatch",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+    ]
+  },
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "selected_next_build_action": "attach_public_parspec_qeft_likelihood_or_axis_map",
+  "interpretation": "The ParSpec source-event route now exports event-specific and combined R4 covariance from the actual v2.194 nuisance-marginalized likelihood grids. This removes the source-event covariance export subpiece, but it remains nonclaiming because the nuisance grid is coarse, no public ParSpec/qEFT likelihood samples are attached, and the source-backed qEFT-to-engine axis map is still missing.",
+  "evaluation": {
+    "source_event_specific_nuisance_covariance_export_ready": true,
+    "ready_for_framework_claim": false,
+    "claimable_framework_exclusions_now": [],
+    "export_blockers": [],
+    "removed_v2_194_blocker": "source_event_specific_nuisance_covariance_export_missing",
+    "remaining_claim_blockers": [
+      "axis_normalization_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "nuisance_grid_is_coarse_not_posterior_sampler",
+      "operator_basis_map_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "claim_blockers": [
+      "axis_normalization_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "nuisance_grid_is_coarse_not_posterior_sampler",
+      "operator_basis_map_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "route_status": "parspec_source_event_covariance_export_ready_axis_map_missing"
+  },
+  "malformed_control_evaluation": {
+    "source_event_specific_nuisance_covariance_export_ready": false,
+    "ready_for_framework_claim": false,
+    "claimable_framework_exclusions_now": [],
+    "export_blockers": [
+      "GW150914_covariance_not_psd",
+      "GW150914_covariance_shape_unexpected",
+      "combined_event_set_covariance_grid_missing"
+    ],
+    "removed_v2_194_blocker": null,
+    "remaining_claim_blockers": [
+      "axis_normalization_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "nuisance_grid_is_coarse_not_posterior_sampler",
+      "operator_basis_map_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "source_event_specific_nuisance_covariance_export_not_ready",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "claim_blockers": [
+      "axis_normalization_missing",
+      "engine_axis_orientation_missing",
+      "external_adversarial_review_missing",
+      "nuisance_grid_is_coarse_not_posterior_sampler",
+      "operator_basis_map_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "source_event_specific_nuisance_covariance_export_not_ready",
+      "waveform_calibration_prior_and_eft_systematics_not_closed"
+    ],
+    "route_status": "parspec_source_event_covariance_export_not_ready"
+  },
+  "source_event_specific_nuisance_covariance_export_ready": true,
+  "route_status": "parspec_source_event_covariance_export_ready_axis_map_missing"
+}
