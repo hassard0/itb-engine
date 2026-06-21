@@ -1,0 +1,667 @@
+{
+  "version": "v2.189",
+  "purpose": "Preserve the details from the v2.170-v2.188 R4/GWOSC/LALSuite research loop so top-level docs do not flatten intermediate runs.",
+  "covered_versions": [
+    "v2.170",
+    "v2.171",
+    "v2.172",
+    "v2.173",
+    "v2.174",
+    "v2.175",
+    "v2.176",
+    "v2.177",
+    "v2.178",
+    "v2.179",
+    "v2.180",
+    "v2.181",
+    "v2.182",
+    "v2.183",
+    "v2.184",
+    "v2.185",
+    "v2.186",
+    "v2.187",
+    "v2.188"
+  ],
+  "expected_versions": [
+    "v2.170",
+    "v2.171",
+    "v2.172",
+    "v2.173",
+    "v2.174",
+    "v2.175",
+    "v2.176",
+    "v2.177",
+    "v2.178",
+    "v2.179",
+    "v2.180",
+    "v2.181",
+    "v2.182",
+    "v2.183",
+    "v2.184",
+    "v2.185",
+    "v2.186",
+    "v2.187",
+    "v2.188"
+  ],
+  "run_count": 19,
+  "runs": [
+    {
+      "version": "v2.170",
+      "short_title": "R4 symbolic-scale resolution contract",
+      "note_path": "docs/results/2026-06-20-v2.170-r4-symbolic-scale-resolution-contract.md",
+      "artifact_path": "experiments/results/v2.170/r4_symbolic_scale_resolution_contract.json",
+      "retained_details": [
+        "strict source-backed numeric Lambda_R4 packet contract",
+        "symbolic-only current policy remains nonclaiming",
+        "claim controls must stay disabled until a real numeric scale exists"
+      ],
+      "frontier_change": "Converted the unresolved R4 scale into an executable packet gate.",
+      "remaining_blocker": "source_backed_numeric_lambda_r4_policy_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.170",
+        "route_status": "r4_scale_resolution_contract_ready_no_numeric_policy",
+        "ready_for_framework_claim": null,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "search_or_request_source_backed_four_dimensional_r4_scale_policy"
+      }
+    },
+    {
+      "version": "v2.171",
+      "short_title": "post R4-scale-contract frontier",
+      "note_path": "docs/results/2026-06-20-v2.171-post-r4-scale-contract-frontier.md",
+      "artifact_path": "experiments/results/v2.171/post_r4_scale_contract_frontier.json",
+      "retained_details": [
+        "R4 remains the top diagnostic route",
+        "numeric Lambda_R4 is still source-blocked",
+        "next useful work should attack an external likelihood packet"
+      ],
+      "frontier_change": "Ranked the post-contract R4 path against alternatives.",
+      "remaining_blocker": "external_source_packet_required",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.171",
+        "route_status": "post_r4_scale_contract_frontier_no_claim_route",
+        "ready_for_framework_claim": null,
+        "claimable_framework_exclusions_now": null,
+        "selected_next_build_action": null
+      }
+    },
+    {
+      "version": "v2.172",
+      "short_title": "Weyl/G8 dual-likelihood contract",
+      "note_path": "docs/results/2026-06-20-v2.172-weyl-g8-dual-likelihood-contract.md",
+      "artifact_path": "experiments/results/v2.172/weyl_g8_dual_likelihood_contract.json",
+      "retained_details": [
+        "joint g_C plus g_8 likelihood contract",
+        "cross-axis covariance is required",
+        "synthetic controls prove the gate but do not count as evidence"
+      ],
+      "frontier_change": "Made the parallel Weyl/G8 route a machine-checkable packet gate.",
+      "remaining_blocker": "real_joint_engine_gC_g8_likelihood_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.172",
+        "route_status": "weyl_g8_dual_likelihood_contract_ready_no_real_packet",
+        "ready_for_framework_claim": null,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "build_or_request_real_joint_engine_gC_g8_likelihood_packet"
+      }
+    },
+    {
+      "version": "v2.173",
+      "short_title": "post Weyl/G8-contract frontier",
+      "note_path": "docs/results/2026-06-20-v2.173-post-weyl-g8-contract-frontier.md",
+      "artifact_path": "experiments/results/v2.173/post_weyl_g8_contract_frontier.json",
+      "retained_details": [
+        "Weyl/G8 is diagnostic-ready but evidence-blocked",
+        "R4 remains the more actionable live-source route",
+        "claimable framework exclusions remain empty"
+      ],
+      "frontier_change": "Kept both active frontiers scoped without promotion.",
+      "remaining_blocker": "real_dual_likelihood_packet_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.173",
+        "route_status": "post_weyl_g8_contract_frontier_no_claim_route",
+        "ready_for_framework_claim": null,
+        "claimable_framework_exclusions_now": null,
+        "selected_next_build_action": null
+      }
+    },
+    {
+      "version": "v2.174",
+      "short_title": "R4 live-source acquisition queue",
+      "note_path": "docs/results/2026-06-20-v2.174-r4-live-source-acquisition-queue.md",
+      "artifact_path": "experiments/results/v2.174/r4_live_source_acquisition_queue.json",
+      "retained_details": [
+        "Bresciani-axis plus public-GWOSC reanalysis selected",
+        "source candidates checked before implementation",
+        "next action is a machine-readable Bresciani axis dictionary"
+      ],
+      "frontier_change": "Moved from abstract packet waiting to source acquisition.",
+      "remaining_blocker": "bresciani_axis_dictionary_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.174",
+        "route_status": "r4_live_source_queue_ready_no_packet",
+        "ready_for_framework_claim": null,
+        "claimable_framework_exclusions_now": null,
+        "selected_next_build_action": "derive_machine_axis_dictionary_from_bresciani_basis"
+      }
+    },
+    {
+      "version": "v2.175",
+      "short_title": "Bresciani R4 axis dictionary",
+      "note_path": "docs/results/2026-06-20-v2.175-bresciani-r4-axis-dictionary.md",
+      "artifact_path": "experiments/results/v2.175/bresciani_r4_axis_dictionary.json",
+      "retained_details": [
+        "K_plus maps into g_R4_c1",
+        "Re(K_minus) maps into g_R4_c2",
+        "Im(K_minus) maps into g_R4_c3",
+        "derived axes g_R4_plus and g_R4_minus_abs are recorded"
+      ],
+      "frontier_change": "Made the R4 shape-axis map machine-readable.",
+      "remaining_blocker": "public_likelihood_or_covariance_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.175",
+        "route_status": "bresciani_r4_axis_dictionary_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "build_public_gw_reanalysis_fixture_for_r4_waveform_model"
+      }
+    },
+    {
+      "version": "v2.176",
+      "short_title": "public-GW R4 reanalysis fixture",
+      "note_path": "docs/results/2026-06-20-v2.176-public-gw-r4-reanalysis-fixture.md",
+      "artifact_path": "experiments/results/v2.176/public_gw_r4_reanalysis_fixture.json",
+      "retained_details": [
+        "GW170608-v3 selected",
+        "H1 and L1 public strain declarations recorded",
+        "committed artifacts keep metadata while cache bytes stay ignored"
+      ],
+      "frontier_change": "Bound the R4 route to a public GWOSC event fixture.",
+      "remaining_blocker": "real_hdf5_strain_loading_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.176",
+        "route_status": "public_gw_r4_reanalysis_fixture_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "replace_fixture_response_with_lalsuite_r4_waveform_reanalysis"
+      }
+    },
+    {
+      "version": "v2.177",
+      "short_title": "R4 LALSuite waveform response contract",
+      "note_path": "docs/results/2026-06-20-v2.177-r4-lalsuite-waveform-response-contract.md",
+      "artifact_path": "experiments/results/v2.177/r4_lalsuite_waveform_response_contract.json",
+      "retained_details": [
+        "waveform response fields required for LALSuite replacement",
+        "synthetic response is explicitly nonclaiming",
+        "merger-ringdown completion remains open"
+      ],
+      "frontier_change": "Specified the waveform-response gate before ingestion.",
+      "remaining_blocker": "source_owned_r4_waveform_response_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.177",
+        "route_status": "lalsuite_r4_waveform_response_contract_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "project_r4_response_contract_onto_public_strain_harness"
+      }
+    },
+    {
+      "version": "v2.178",
+      "short_title": "R4 response public-strain projection",
+      "note_path": "docs/results/2026-06-20-v2.178-r4-response-public-strain-projection.md",
+      "artifact_path": "experiments/results/v2.178/r4_response_public_strain_projection.json",
+      "retained_details": [
+        "public-strain projection path exercised",
+        "synthetic rows remain separate from claim evidence",
+        "HDF5 byte ingestion is the next required replacement"
+      ],
+      "frontier_change": "Connected the response contract to public strain rows.",
+      "remaining_blocker": "real_hdf5_bytes_not_loaded",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.178",
+        "route_status": "r4_response_public_strain_projection_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "replace_synthetic_strain_rows_with_gwosc_hdf5_r4_projection"
+      }
+    },
+    {
+      "version": "v2.179",
+      "short_title": "R4 response GWOSC HDF5 projection",
+      "note_path": "docs/results/2026-06-20-v2.179-r4-response-gwosc-hdf5-projection.md",
+      "artifact_path": "experiments/results/v2.179/r4_response_gwosc_hdf5_projection.json",
+      "retained_details": [
+        "real GWOSC H1 and L1 32-second HDF5 files loaded",
+        "GW170608 cache bytes are not committed",
+        "metadata, hashes, and projections are committed"
+      ],
+      "frontier_change": "Replaced declared strain rows with real HDF5 ingestion.",
+      "remaining_blocker": "source_backed_r4_response_shape_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.179",
+        "route_status": "r4_response_gwosc_hdf5_projection_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "replace_ansatz_r4_kernels_with_source_backed_pn_imr_derivation"
+      }
+    },
+    {
+      "version": "v2.180",
+      "short_title": "R4 source-backed PN/IMR derivation",
+      "note_path": "docs/results/2026-06-20-v2.180-r4-source-backed-pn-imr-derivation.md",
+      "artifact_path": "experiments/results/v2.180/r4_source_backed_pn_imr_derivation.json",
+      "retained_details": [
+        "5PN tidal phase scales as v_f^5",
+        "7PN direct-bulk phase scales as v_f^9",
+        "5PN tidal amplitude scales as v_f^10",
+        "7PN direct-bulk amplitude scales as v_f^14",
+        "flattened Bresciani channel basis has rank three"
+      ],
+      "frontier_change": "Replaced the response-shape ansatz with source-backed kernels.",
+      "remaining_blocker": "detector_channel_response_not_calibrated",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.180",
+        "route_status": "r4_source_backed_pn_imr_derivation_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "wire_source_backed_r4_pn_kernels_into_gwosc_hdf5_projection"
+      }
+    },
+    {
+      "version": "v2.181",
+      "short_title": "R4 source-backed GWOSC projection",
+      "note_path": "docs/results/2026-06-20-v2.181-r4-source-backed-gwosc-projection.md",
+      "artifact_path": "experiments/results/v2.181/r4_source_backed_gwosc_projection.json",
+      "retained_details": [
+        "v2.180 source-backed kernels pushed through real GWOSC HDF5 data",
+        "projection axes are g_R4_c1, g_R4_c2, and g_R4_c3",
+        "detector channel is still a deterministic proxy"
+      ],
+      "frontier_change": "Produced the first source-backed GWOSC projection seed.",
+      "remaining_blocker": "deterministic_detector_channel_proxy_used",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.181",
+        "route_status": "r4_source_backed_gwosc_projection_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "calibrate_r4_detector_channel_response_and_lalsuite_runtime"
+      }
+    },
+    {
+      "version": "v2.182",
+      "short_title": "R4 Vulcan LALSuite runtime target",
+      "note_path": "docs/results/2026-06-20-v2.182-r4-vulcan-lalsuite-runtime-target.md",
+      "artifact_path": "experiments/results/v2.182/r4_vulcan_lalsuite_runtime_target.json",
+      "retained_details": [
+        "Vulcan imports LALSuite 7.7.1",
+        "IMRPhenomD availability is true",
+        "reference waveform covers 20.0 Hz to 111.25 Hz",
+        "366 nonzero bins are generated"
+      ],
+      "frontier_change": "Cleared the remote runtime availability gate on Vulcan.",
+      "remaining_blocker": "r4_modified_waveform_likelihood_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.182",
+        "route_status": "r4_vulcan_lalsuite_runtime_target_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "derive_calibrated_r4_detector_channel_response"
+      }
+    },
+    {
+      "version": "v2.183",
+      "short_title": "R4 LALSuite detector-channel response",
+      "note_path": "docs/results/2026-06-20-v2.183-r4-lalsuite-detector-channel-response.md",
+      "artifact_path": "experiments/results/v2.183/r4_lalsuite_detector_channel_response.json",
+      "retained_details": [
+        "H1 K_plus=0.606542357541",
+        "L1 K_plus=0.642279966479",
+        "H1 and L1 Re/Im K_minus RMS targets are recorded",
+        "sky-posterior marginalization is not yet performed"
+      ],
+      "frontier_change": "Replaced the immediate detector proxy target.",
+      "remaining_blocker": "sky_posterior_marginalization_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.183",
+        "route_status": "r4_lalsuite_detector_channel_response_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "replace_v2_181_detector_proxy_with_lalsuite_channel_response"
+      }
+    },
+    {
+      "version": "v2.184",
+      "short_title": "R4/GWOSC/LALSuite research report refresh",
+      "note_path": "docs/results/2026-06-20-v2.184-r4-gwosc-lalsuite-research-report.md",
+      "artifact_path": null,
+      "retained_details": [
+        "v2.170-v2.183 narrative consolidated",
+        "local validation reached 1377 passed and 7 skipped",
+        "Vulcan validation reached 1384 passed with LALSuite installed",
+        "claim boundary explicitly rejects framework exclusions"
+      ],
+      "frontier_change": "Created the first live-data frontier synthesis report.",
+      "remaining_blocker": "calibrated_projection_and_covariance_followups_open",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": false,
+        "artifact_exists": true
+      },
+      "artifact_digest": {}
+    },
+    {
+      "version": "v2.185",
+      "short_title": "R4 LALSuite-calibrated GWOSC projection",
+      "note_path": "docs/results/2026-06-20-v2.185-r4-lalsuite-calibrated-gwosc-projection.md",
+      "artifact_path": "experiments/results/v2.185/r4_lalsuite_calibrated_gwosc_projection.json",
+      "retained_details": [
+        "calibrated central g_R4_c1=0.495629103212",
+        "calibrated central g_R4_c2=0.495614794648",
+        "calibrated central g_R4_c3=-0.003513023764",
+        "JSON hash matched across Windows and Vulcan"
+      ],
+      "frontier_change": "Replaced the v2.181 detector proxy in the real projection.",
+      "remaining_blocker": "nuisance_marginalized_covariance_not_exported",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.185",
+        "route_status": "r4_lalsuite_calibrated_gwosc_projection_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "export_nuisance_marginalized_r4_covariance",
+        "central_values": {
+          "g_R4_c1": 0.495629103212,
+          "g_R4_c2": 0.495614794648,
+          "g_R4_c3": -0.003513023764
+        },
+        "covariance_diagonal": [
+          0.250002916972,
+          0.250002919277,
+          0.250002659652
+        ]
+      }
+    },
+    {
+      "version": "v2.186",
+      "short_title": "R4 nuisance covariance export",
+      "note_path": "docs/results/2026-06-20-v2.186-r4-nuisance-covariance-export.md",
+      "artifact_path": "experiments/results/v2.186/r4_nuisance_covariance_export.json",
+      "retained_details": [
+        "81 uniformly weighted nuisance points",
+        "nuisance axes: total_mass_solar, eta, tc_shift_seconds, phic_rad",
+        "exported covariance is positive definite",
+        "JSON hash matched across Windows and Vulcan"
+      ],
+      "frontier_change": "Removed the covariance-export blocker.",
+      "remaining_blocker": "nuisance_grid_is_coarse_not_posterior_sampler",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.186",
+        "route_status": "r4_nuisance_covariance_export_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "replace_coarse_nuisance_covariance_with_r4_waveform_likelihood",
+        "nuisance_points": 81,
+        "nuisance_parameters": [
+          "total_mass_solar",
+          "eta",
+          "tc_shift_seconds",
+          "phic_rad"
+        ],
+        "exported_covariance": [
+          [
+            0.250002974172,
+            0.019999954333,
+            6.3667e-08
+          ],
+          [
+            0.019999954333,
+            0.250002965877,
+            -5.2e-08
+          ],
+          [
+            6.3667e-08,
+            -5.2e-08,
+            0.250002889652
+          ]
+        ],
+        "exported_covariance_eigenvalues": [
+          0.230003015691,
+          0.250002889652,
+          0.270002924358
+        ]
+      }
+    },
+    {
+      "version": "v2.187",
+      "short_title": "R4 LALSuite waveform-likelihood posterior",
+      "note_path": "docs/results/2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md",
+      "artifact_path": "experiments/results/v2.187/r4_lalsuite_waveform_likelihood_posterior.json",
+      "retained_details": [
+        "125 coefficient grid points",
+        "81 nuisance points per detector",
+        "posterior mean g_R4_c1=0.495635486753",
+        "posterior mean g_R4_c2=0.495621203259",
+        "posterior mean g_R4_c3=-0.003508798916",
+        "JSON hash matched across Windows and Vulcan"
+      ],
+      "frontier_change": "Replaced the covariance scaffold with a coarse posterior.",
+      "remaining_blocker": "source_owned_full_r4_imr_sampler_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.187",
+        "route_status": "r4_lalsuite_waveform_likelihood_posterior_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "replace_linearized_r4_template_grid_with_source_owned_r4_imr_sampler",
+        "coefficient_grid": {
+          "axes": [
+            "g_R4_c1",
+            "g_R4_c2",
+            "g_R4_c3"
+          ],
+          "grid_kind": "five_point_axis_offsets_around_v2_186_nuisance_mean",
+          "offsets": [
+            -0.04,
+            -0.02,
+            0.0,
+            0.02,
+            0.04
+          ],
+          "grid_points": 125
+        },
+        "nuisance_points_per_detector": [
+          81,
+          81
+        ],
+        "posterior_mean": {
+          "g_R4_c1": 0.495635486753,
+          "g_R4_c2": 0.495621203259,
+          "g_R4_c3": -0.003508798916
+        },
+        "posterior_covariance": [
+          [
+            0.000799553501,
+            -1.27635e-06,
+            -1.230669e-06
+          ],
+          [
+            -1.27635e-06,
+            0.0007995535,
+            -1.229478e-06
+          ],
+          [
+            -1.230669e-06,
+            -1.229478e-06,
+            0.000799553445
+          ]
+        ],
+        "maximum_posterior_grid_point": {
+          "g_R4_c1": 0.535629103212,
+          "g_R4_c2": 0.475614794648,
+          "g_R4_c3": -0.023513023764,
+          "delta_g_R4_c1": 0.04,
+          "delta_g_R4_c2": -0.02,
+          "delta_g_R4_c3": -0.02,
+          "log_marginal_likelihood": -0.999974529968,
+          "profile_log_likelihood": -0.999294175037,
+          "posterior_weight": 0.008019387736
+        }
+      }
+    },
+    {
+      "version": "v2.188",
+      "short_title": "R4 ParSpec ringdown source bridge",
+      "note_path": "docs/results/2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md",
+      "artifact_path": "experiments/results/v2.188/r4_parspec_ringdown_source_bridge.json",
+      "retained_details": [
+        "primary source arXiv:2205.05132",
+        "PhysRevD 107, 044030 source DOI recorded",
+        "quartic EFT ell_qEFT <= 51.3 km at 90% credible level",
+        "source events are GW150914 and GW200129",
+        "current engine event remains GW170608",
+        "JSON hash matched across Windows and Vulcan"
+      ],
+      "frontier_change": "Split the source-owned IMR blocker via ParSpec.",
+      "remaining_blocker": "ell_qEFT_to_engine_r4_axis_map_missing",
+      "path_status": {
+        "note_exists": true,
+        "artifact_expected": true,
+        "artifact_exists": true
+      },
+      "artifact_digest": {
+        "version": "v2.188",
+        "route_status": "parspec_r4_ringdown_source_bridge_ready_nonclaiming",
+        "ready_for_framework_claim": false,
+        "claimable_framework_exclusions_now": [],
+        "selected_next_build_action": "map_parspec_qeft_length_likelihood_to_engine_r4_axes_or_find_public_samples",
+        "parspec_bound_imported": {
+          "quartic_eft_length_scale_90_credible_km": 51.3,
+          "events": [
+            "GW150914",
+            "GW200129"
+          ]
+        },
+        "source_events": [
+          "GW150914",
+          "GW200129"
+        ],
+        "current_engine_event": "GW170608",
+        "bridge_blockers": [
+          "calibration_and_waveform_systematics_not_exported",
+          "engine_r4_axes_to_parspec_qeft_length_map_missing",
+          "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+          "public_parspec_qeft_likelihood_or_posterior_samples_missing"
+        ],
+        "split_v2_187_blocker": {
+          "previous": "full_r4_modified_imr_merger_ringdown_completion_missing",
+          "now_resolved_subpiece": "primary_parspec_quartic_eft_ringdown_source_identified",
+          "remaining_subpieces": [
+            "engine_r4_axes_to_parspec_qeft_length_map_missing",
+            "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+            "event_set_mismatch_gw170608_vs_gw150914_gw200129",
+            "full_source_owned_r4_imr_sampler_not_integrated"
+          ]
+        }
+      }
+    }
+  ],
+  "evaluation": {
+    "continuity_ledger_ready": true,
+    "version_sequence_complete": true,
+    "missing_note_versions": [],
+    "missing_artifact_versions": [],
+    "missing_detail_versions": [],
+    "retained_detail_count": 71,
+    "claim_boundary_preserved": true
+  },
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "route_status": "r4_research_continuity_ledger_ready_nonclaiming",
+  "selected_next_build_action": "continue_with_parspec_qeft_axis_map_or_public_likelihood_packet",
+  "best_next_artifact": "A source-backed ParSpec ell_qEFT to engine R4-axis map, or a public ParSpec/qEFT posterior sample or likelihood grid.",
+  "interpretation": "This is a documentation and reproducibility artifact. It protects the current research state from summary loss, but it adds no new physics claim and leaves the v2.188 blockers in force."
+}

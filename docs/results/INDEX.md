@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (299 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (300 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -348,3 +348,4 @@ Auto-generated front door to the full research program (299 notes). Regenerate w
 | v2.186 | [v2.186 - R4 nuisance covariance export](2026-06-20-v2.186-r4-nuisance-covariance-export.md) | Can the v2.185 LALSuite-calibrated GWOSC R4 projection export a |
 | v2.187 | [v2.187 - R4 LALSuite waveform-likelihood posterior](2026-06-20-v2.187-r4-lalsuite-waveform-likelihood-posterior.md) | Can the v2.186 covariance scaffold be replaced by a coarse waveform-template |
 | v2.188 | [v2.188 - R4 ParSpec ringdown source bridge](2026-06-20-v2.188-r4-parspec-ringdown-source-bridge.md) | Can the v2.187 source-owned full-IMR blocker be split by identifying a primary |
+| v2.189 | [v2.189 - R4 research continuity ledger](2026-06-20-v2.189-r4-research-continuity-ledger.md) | There were many runs between the current README summary and the latest source |
