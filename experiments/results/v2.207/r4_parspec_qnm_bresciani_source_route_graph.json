@@ -1,0 +1,337 @@
+{
+  "version": "v2.207",
+  "basis": [
+    "v2.200_qnm_to_bresciani_gate",
+    "v2.205_pyring_to_bresciani_orientation_audit",
+    "v2.206_public_likelihood_packet_gate",
+    "public_source_route_recheck_2026_06_21"
+  ],
+  "source_route_graph": {
+    "graph_id": "r4_parspec_qnm_bresciani_source_route_graph_v1",
+    "version": "v2.207",
+    "target_sensitivity": {
+      "rows": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "columns": [
+        "delta_omega_qeft_0",
+        "delta_tau_qeft_0",
+        "delta_omega_qeft_1",
+        "delta_tau_qeft_1"
+      ],
+      "required_rank": 3,
+      "required_edges": [
+        "source_qnm_deformation_axis_schema",
+        "qnm_deformation_to_operator_coordinate_map",
+        "operator_coordinate_to_bresciani_K_map",
+        "bresciani_K_to_engine_axis_projection",
+        "finite_3x4_sensitivity_matrix",
+        "field_redefinition_policy",
+        "axis_normalization_policy"
+      ]
+    },
+    "claim_stage_requirements": [
+      "source_qnm_deformation_axis_schema",
+      "qnm_deformation_to_operator_coordinate_map",
+      "operator_coordinate_to_bresciani_K_map",
+      "bresciani_K_to_engine_axis_projection",
+      "finite_3x4_sensitivity_matrix",
+      "field_redefinition_policy",
+      "axis_normalization_policy",
+      "public_or_reproducible_likelihood_export",
+      "claim_grade_systematics_export",
+      "external_adversarial_review"
+    ],
+    "source_registry": {
+      "silva_ghosh_buonanno_2023": {
+        "url": "https://arxiv.org/abs/2205.05132",
+        "doi": "https://doi.org/10.1103/PhysRevD.107.044030",
+        "source_eprint_url": "https://arxiv.org/e-print/2205.05132",
+        "role": "ParSpec qEFT ringdown source and published qEFT bounds",
+        "provides": [
+          "ell_qEFT_km source axis",
+          "qEFT power p=6",
+          "qEFT gamma-to-qNM deformation ray",
+          "GW150914/GW200129 published bounds"
+        ],
+        "does_not_provide": [
+          "three-axis Bresciani R4 operator basis",
+          "machine-readable likelihood packet"
+        ]
+      },
+      "maselli_cardoso_et_al_2020_parspec": {
+        "url": "https://arxiv.org/abs/1910.12893",
+        "role": "ParSpec ringdown-parameterization foundation",
+        "provides": [
+          "frequency and damping-time deformation-axis schema",
+          "spin expansion convention for qNM deviations"
+        ],
+        "does_not_provide": [
+          "higher-curvature amplitude coefficient map",
+          "Bresciani K coordinate orientation"
+        ]
+      },
+      "parspec_eft_scale_framework_2021": {
+        "url": "https://arxiv.org/abs/2102.05939",
+        "role": "ParSpec EFT scaling and gamma policy source",
+        "provides": [
+          "gamma scaling convention for beyond-GR ringdown deformations",
+          "EFT mass-scale interpretation"
+        ],
+        "does_not_provide": [
+          "spin-2 R4 amplitude basis normalization",
+          "qNM-to-Bresciani sensitivity matrix"
+        ]
+      },
+      "cano_et_al_2021_quartic_qnm_shifts": {
+        "url": "https://arxiv.org/abs/2110.11378",
+        "role": "slow-rotation quartic-EFT QNM shift source",
+        "provides": [
+          "forward QNM sensitivities to quartic EFT couplings",
+          "plus/minus branch and parity-breaking branch structure"
+        ],
+        "does_not_provide": [
+          "Bresciani K_plus/Re(K_minus)/Im(K_minus) normalization",
+          "source-backed inverse from qNM axes to amplitude axes"
+        ]
+      },
+      "cano_fransen_hertog_maenaut_2023": {
+        "url": "https://arxiv.org/abs/2307.07431",
+        "role": "higher-derivative rotating black-hole QNM shifts",
+        "provides": [
+          "quartic EFT QNM shift calculations",
+          "polar/axial plus-minus branch semantics",
+          "pyRing table provenance"
+        ],
+        "does_not_provide": [
+          "Bresciani K_plus/Re(K_minus)/Im(K_minus) orientation",
+          "field-redefinition policy into the Bresciani amplitude basis"
+        ]
+      },
+      "bresciani_levati_paradisi_2026": {
+        "url": "https://arxiv.org/abs/2504.12855",
+        "role": "spin-2 R4 amplitude/unitarity source",
+        "provides": [
+          "Bresciani K coordinate basis",
+          "engine projection axes g_R4_c1/g_R4_c2/g_R4_c3"
+        ],
+        "does_not_provide": [
+          "ringdown qNM deformation sensitivity",
+          "pyRing quartic branch identity"
+        ]
+      },
+      "pyring_eft_qnms_branch": {
+        "url": "https://git.ligo.org/lscsoft/pyring/-/tree/EFT_QNMs/pyRing/data/NR_data",
+        "waveform_url": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/waveform.pyx",
+        "branch": "EFT_QNMs",
+        "branch_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+        "role": "public implementation of EFT QNM coefficient tables",
+        "provides": [
+          "hash-pinned quartic_1/2/3 plus/minus QNM branch tables",
+          "runtime table-loading convention"
+        ],
+        "does_not_provide": [
+          "operator-basis orientation to Bresciani K coordinates",
+          "claim-grade public likelihood export"
+        ]
+      },
+      "maenaut_2024_pyring_eft_ringdown_analysis": {
+        "url": "https://arxiv.org/abs/2411.17893",
+        "role": "pyRing EFT ringdown analysis path for GWTC-3 events",
+        "provides": [
+          "time-domain pyRing EFT template path",
+          "uniform-prior and event-selection description",
+          "candidate rerun route for a reproducible likelihood packet"
+        ],
+        "does_not_provide": [
+          "machine-readable posterior bundle in the current repo",
+          "Bresciani K coordinate orientation"
+        ]
+      }
+    },
+    "routes": [
+      {
+        "route_id": "parspec_qeft_ray_plus_bresciani_dictionary",
+        "route_kind": "source_combination_attempt",
+        "source_ids": [
+          "maselli_cardoso_et_al_2020_parspec",
+          "parspec_eft_scale_framework_2021",
+          "silva_ghosh_buonanno_2023",
+          "bresciani_levati_paradisi_2026"
+        ],
+        "provided_edges": [
+          "source_qnm_deformation_axis_schema",
+          "bresciani_K_to_engine_axis_projection",
+          "axis_normalization_policy"
+        ],
+        "missing_edges": [
+          "qnm_deformation_to_operator_coordinate_map",
+          "operator_coordinate_to_bresciani_K_map",
+          "finite_3x4_sensitivity_matrix",
+          "field_redefinition_policy"
+        ],
+        "local_matrix_shape": [
+          4,
+          1
+        ],
+        "local_matrix_rank": 1,
+        "synthetic": false,
+        "source_backed_edges_only": true,
+        "sensitivity_ready": false,
+        "interpretation": "ParSpec qEFT supplies a one-dimensional gamma-to-qNM ray. Bresciani supplies K-to-engine axes. The missing edge is the source-backed map from qNM deformation coordinates to Bresciani K coordinates.",
+        "next_action": "Find a theory-coordinate source relating ParSpec qNM shifts to the Bresciani spin-2 R4 amplitude basis."
+      },
+      {
+        "route_id": "pyring_quartic_tables_plus_bresciani_dictionary",
+        "route_kind": "source_combination_attempt",
+        "source_ids": [
+          "cano_et_al_2021_quartic_qnm_shifts",
+          "cano_fransen_hertog_maenaut_2023",
+          "pyring_eft_qnms_branch",
+          "bresciani_levati_paradisi_2026"
+        ],
+        "provided_edges": [
+          "source_qnm_deformation_axis_schema",
+          "bresciani_K_to_engine_axis_projection",
+          "axis_normalization_policy"
+        ],
+        "missing_edges": [
+          "qnm_deformation_to_operator_coordinate_map",
+          "operator_coordinate_to_bresciani_K_map",
+          "finite_3x4_sensitivity_matrix",
+          "field_redefinition_policy"
+        ],
+        "local_matrix_shape": [
+          6,
+          4
+        ],
+        "local_matrix_rank": 4,
+        "synthetic": false,
+        "source_backed_edges_only": true,
+        "sensitivity_ready": false,
+        "interpretation": "The pyRing table slice has local QNM branch-column rank, but rank in branch coordinates is not an operator-basis orientation into Bresciani K axes.",
+        "next_action": "Keep pyRing runtime coordinates for reruns unless a separate field-redefinition source identifies the branch directions with Bresciani operator coordinates."
+      },
+      {
+        "route_id": "bresciani_amplitude_dictionary_only",
+        "route_kind": "single_source_edge",
+        "source_ids": [
+          "bresciani_levati_paradisi_2026"
+        ],
+        "provided_edges": [
+          "bresciani_K_to_engine_axis_projection"
+        ],
+        "missing_edges": [
+          "source_qnm_deformation_axis_schema",
+          "qnm_deformation_to_operator_coordinate_map",
+          "operator_coordinate_to_bresciani_K_map",
+          "finite_3x4_sensitivity_matrix",
+          "field_redefinition_policy",
+          "axis_normalization_policy"
+        ],
+        "local_matrix_shape": [
+          3,
+          3
+        ],
+        "local_matrix_rank": 3,
+        "synthetic": false,
+        "source_backed_edges_only": true,
+        "sensitivity_ready": false,
+        "interpretation": "The amplitude dictionary is complete for K-to-engine projection but contains no ringdown/QNM edge.",
+        "next_action": "Use this dictionary only downstream of a real qNM-to-K source."
+      },
+      {
+        "route_id": "pyring_eft_likelihood_rerun_route",
+        "route_kind": "next_likelihood_build_candidate",
+        "source_ids": [
+          "maenaut_2024_pyring_eft_ringdown_analysis",
+          "pyring_eft_qnms_branch"
+        ],
+        "provided_edges": [
+          "source_qnm_deformation_axis_schema",
+          "axis_normalization_policy"
+        ],
+        "missing_edges": [
+          "public_or_reproducible_likelihood_export",
+          "claim_grade_systematics_export",
+          "operator_coordinate_to_bresciani_K_map",
+          "finite_3x4_sensitivity_matrix",
+          "field_redefinition_policy"
+        ],
+        "local_matrix_shape": [],
+        "local_matrix_rank": 0,
+        "synthetic": false,
+        "source_backed_edges_only": true,
+        "sensitivity_ready": false,
+        "interpretation": "This is not a Bresciani sensitivity source. It is the best nonclaiming path toward a reproducible likelihood export in pyRing runtime coordinates.",
+        "next_action": "Build a rerun packet with event configs, priors, pyRing commit, sampler settings, hashes, and explicit nonclaiming coordinate scope."
+      }
+    ],
+    "disallowed_inferences": [
+      "rank_only_branch_projection",
+      "label_overlap_as_operator_identity",
+      "synthetic_qnm_to_K_matrix",
+      "published_bound_surrogate_as_likelihood"
+    ],
+    "claim_controls": {
+      "claim_use_allowed": false,
+      "framework_claim_allowed": false,
+      "synthetic_sensitivity_allowed": false,
+      "route_graph_only_not_claim_evidence": true
+    }
+  },
+  "evaluation": {
+    "source_route_graph_ready": true,
+    "qnm_to_bresciani_sensitivity_ready": false,
+    "ready_sensitivity_routes": [],
+    "next_likelihood_build_candidate_routes": [
+      "pyring_eft_likelihood_rerun_route"
+    ],
+    "ready_for_framework_claim": false,
+    "claimable_framework_exclusions_now": [],
+    "blockers": [],
+    "warnings": [],
+    "remaining_claim_blockers": [
+      "claim_grade_systematics_export_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing"
+    ],
+    "route_status": "source_route_graph_ready_sensitivity_missing"
+  },
+  "malformed_control_evaluation": {
+    "source_route_graph_ready": false,
+    "qnm_to_bresciani_sensitivity_ready": false,
+    "ready_sensitivity_routes": [],
+    "next_likelihood_build_candidate_routes": [
+      "pyring_eft_likelihood_rerun_route"
+    ],
+    "ready_for_framework_claim": false,
+    "claimable_framework_exclusions_now": [],
+    "blockers": [
+      "synthetic_qnm_to_bresciani_matrix_synthetic_route_present",
+      "synthetic_sensitivity_not_forbidden"
+    ],
+    "warnings": [],
+    "remaining_claim_blockers": [
+      "claim_grade_systematics_export_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "qnm_bresciani_source_route_graph_not_clean",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing"
+    ],
+    "route_status": "source_route_graph_not_ready"
+  },
+  "v2206_public_likelihood_status": {
+    "route_status": "parspec_public_likelihood_packet_absent_bound_surrogate_retained",
+    "machine_readable_public_likelihood_ready": false
+  },
+  "qnm_to_bresciani_sensitivity_ready": false,
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "route_status": "source_route_graph_ready_sensitivity_missing",
+  "selected_next_build_action": "build_pyring_eft_likelihood_rerun_packet_or_find_primary_qnm_to_bresciani_operator_source",
+  "interpretation": "v2.207 records the source-route graph rather than manufacturing a sensitivity matrix. ParSpec, pyRing/Cano, and Bresciani each supply useful source-backed edges, but no current public source supplies the field-redefinition/operator edge from qNM deformations into Bresciani K coordinates. The best executable next route is therefore a pyRing EFT likelihood-rerun packet in runtime coordinates, while the Bresciani map gate remains closed."
+}

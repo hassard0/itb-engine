@@ -1,6 +1,6 @@
 # ITB Engine Research Roadmap
 
-This roadmap starts from the v2.206 state. It is a research plan, not a solved
+This roadmap starts from the v2.207 state. It is a research plan, not a solved
 quantum-gravity claim.
 
 ## Current State
@@ -80,6 +80,14 @@ figure PDFs, not a machine-readable `ell_qEFT_km` posterior sample file,
 covariance matrix, or log-likelihood grid. The published-bound surrogate remains
 available only as nonclaiming continuity evidence.
 
+v2.207 records the public-source route graph for the missing qNM-to-Bresciani
+bridge. It confirms that public sources provide ParSpec qNM axes, a rank-1 qEFT
+ray, pyRing/Cano quartic QNM branch coefficients, and Bresciani K-to-engine
+projection, but no source-backed field-redefinition/operator edge from qNM
+deformation coordinates to Bresciani K coordinates. The best executable next
+route is a pyRing EFT likelihood-rerun packet in runtime coordinates, with the
+Bresciani map gate still closed.
+
 ## Roadmap
 
 1. Acquire a real qNM-to-Bresciani sensitivity source.
@@ -97,12 +105,12 @@ available only as nonclaiming continuity evidence.
    `g_R4_c1/c2/c3`. If no source supplies that, preserve the negative result
    rather than manufacturing a projection.
 
-3. Build or acquire a machine-readable qEFT likelihood.
+3. Build a reproducible pyRing EFT likelihood-rerun packet.
    v2.206 did not find a public posterior sample file, covariance matrix, or
-   log-likelihood grid. The practical next path is either a newly found public
-   release or a reproducible pyRing/LALSuite rerun that exports a likelihood
-   packet with event metadata, priors, waveform/sampler versions, hashes,
-   license/access policy, and calibration/systematics policy.
+   log-likelihood grid, and v2.207 did not find a public qNM-to-Bresciani
+   operator edge. The practical next build is a nonclaiming pyRing runtime
+   likelihood packet with event metadata, priors, waveform/sampler versions,
+   hashes, license/access policy, and calibration/systematics policy.
 
 4. Attach claim-grade systematics.
    The current route has deterministic controls and coarse likelihood grids. A
@@ -125,12 +133,12 @@ available only as nonclaiming continuity evidence.
 
 The next best artifact is one of:
 
+- `r4_parspec_pyring_likelihood_rerun_packet.py`, if pyRing remains the most
+  practical route to a reproducible likelihood export in runtime coordinates;
 - `r4_parspec_qnm_to_bresciani_sensitivity.py`, if a source-backed 3x4
   sensitivity relation can be derived or imported;
-- `r4_parspec_qeft_likelihood_rerun_packet.py`, if a reproducible qEFT
-  sampler rerun becomes the fastest route to a real likelihood packet;
-- `r4_parspec_pyring_likelihood_rerun_packet.py`, if pyRing becomes the most
-  practical bridge toward a reproducible likelihood rerun.
+- `r4_parspec_qeft_likelihood_rerun_packet.py`, if a source-backed ParSpec/qEFT
+  sampler rerun becomes more practical than the pyRing route.
 
 Each artifact should include a JSON result, focused tests, a result note, and a
 claim gate that remains closed unless the packet is source-backed and complete.
