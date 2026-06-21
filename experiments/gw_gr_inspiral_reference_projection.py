@@ -87,11 +87,13 @@ def psd_whitened_reference_context(
     gps_start: int,
     sample_rate_hz: int = SAMPLE_RATE_HZ,
     total_mass_solar: float = REFERENCE_TOTAL_MASS_SOLAR,
+    event_gps: float | None = None,
 ) -> dict[str, Any]:
     event = event_tapered_segment(
         strain,
         gps_start=gps_start,
         sample_rate_hz=sample_rate_hz,
+        event_gps=event_gps,
     )
     psd = welch_psd_estimate(
         strain,

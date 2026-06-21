@@ -179,6 +179,7 @@ def detector_nuisance_template_packets(
     detector: str,
     gps_start: int,
     sample_rate_hz: int,
+    event_gps: float | None = None,
 ) -> list[dict[str, Any]]:
     packets = []
     for nuisance in nuisance_grid():
@@ -187,6 +188,7 @@ def detector_nuisance_template_packets(
             gps_start=gps_start,
             sample_rate_hz=sample_rate_hz,
             total_mass_solar=nuisance["total_mass_solar"],
+            event_gps=event_gps,
         )
         template_packet = r4_imrphenomd_detector_templates(
             context["frequencies_hz"],
@@ -268,6 +270,7 @@ def detector_r4_waveform_likelihood(
     cache_dir: Path,
     *,
     central_values: dict[str, float],
+    event_gps: float | None = None,
 ) -> dict[str, Any]:
     path = ensure_cached_strain_file(record, cache_dir)
     strain = read_strain_values(path)
@@ -276,6 +279,7 @@ def detector_r4_waveform_likelihood(
         detector=str(record["detector"]),
         gps_start=int(record["gps_start"]),
         sample_rate_hz=int(record["sample_rate_hz"]),
+        event_gps=event_gps,
     )
     marginal = marginalize_r4_grid_from_packets(packets, central_values)
     return canonicalize_json_floats({

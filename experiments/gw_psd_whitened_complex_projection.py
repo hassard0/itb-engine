@@ -56,11 +56,14 @@ def event_tapered_segment(
     *,
     gps_start: int,
     sample_rate_hz: int = SAMPLE_RATE_HZ,
+    event_gps: float | None = None,
 ) -> dict[str, Any]:
+    gps_kwargs = {} if event_gps is None else {"event_gps": event_gps}
     selection = event_centered_slice(
         gps_start=gps_start,
         sample_count=int(np.asarray(strain).size),
         sample_rate_hz=sample_rate_hz,
+        **gps_kwargs,
     )
     raw = np.asarray(strain[selection], dtype=float)
     demeaned = raw - float(np.mean(raw))
