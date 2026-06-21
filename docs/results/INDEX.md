@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (316 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (317 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -365,3 +365,4 @@ Auto-generated front door to the full research program (316 notes). Regenerate w
 | v2.203 | [v2.203 - R4 ParSpec pyRing event-spin Jacobian](2026-06-21-v2.203-r4-parspec-pyring-event-spin-jacobian.md) | v2.202 converted pyRing imaginary-frequency coefficients into a spin-zero |
 | v2.204 | [v2.204 - R4 ParSpec pyRing runtime-to-ParSpec normalization policy](2026-06-21-v2.204-r4-parspec-pyring-runtime-to-parspec-normalization-policy.md) | v2.203 exposed a few-percent difference between pyRing's runtime Berti-GR |
 | v2.205 | [v2.205 - R4 ParSpec pyRing-to-Bresciani orientation audit](2026-06-21-v2.205-r4-parspec-pyring-to-bresciani-orientation.md) | After v2.204 isolated the pyRing runtime normalization policy, the next blocker |
+| v2.206 | [v2.206 - R4 ParSpec public-likelihood packet gate](2026-06-21-v2.206-r4-parspec-public-likelihood-packet.md) | After v2.205 closed the current pyRing-to-Bresciani orientation route as a |

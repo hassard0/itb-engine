@@ -1,6 +1,6 @@
 # ITB Engine Research Roadmap
 
-This roadmap starts from the v2.205 state. It is a research plan, not a solved
+This roadmap starts from the v2.206 state. It is a research plan, not a solved
 quantum-gravity claim.
 
 ## Current State
@@ -74,6 +74,12 @@ claim_grade_systematics_export_missing
 external_adversarial_review_missing
 ```
 
+v2.206 documents the public ParSpec/qEFT likelihood acceptance gate and rechecks
+public source surfaces. The available source package still provides TeX and
+figure PDFs, not a machine-readable `ell_qEFT_km` posterior sample file,
+covariance matrix, or log-likelihood grid. The published-bound surrogate remains
+available only as nonclaiming continuity evidence.
+
 ## Roadmap
 
 1. Acquire a real qNM-to-Bresciani sensitivity source.
@@ -91,12 +97,12 @@ external_adversarial_review_missing
    `g_R4_c1/c2/c3`. If no source supplies that, preserve the negative result
    rather than manufacturing a projection.
 
-3. Acquire a machine-readable qEFT likelihood.
-   A public posterior sample file, covariance matrix, or log-likelihood grid
-   would be enough to replace the current published-bound surrogate. If the
-   original ParSpec samples are unavailable, the fallback is a reproducible
-   pyRing/LALSuite rerun that exports a likelihood packet with event metadata,
-   priors, waveform versions, and calibration/systematics policy.
+3. Build or acquire a machine-readable qEFT likelihood.
+   v2.206 did not find a public posterior sample file, covariance matrix, or
+   log-likelihood grid. The practical next path is either a newly found public
+   release or a reproducible pyRing/LALSuite rerun that exports a likelihood
+   packet with event metadata, priors, waveform/sampler versions, hashes,
+   license/access policy, and calibration/systematics policy.
 
 4. Attach claim-grade systematics.
    The current route has deterministic controls and coarse likelihood grids. A
@@ -119,10 +125,10 @@ external_adversarial_review_missing
 
 The next best artifact is one of:
 
-- `r4_parspec_public_likelihood_packet.py`, if public or reproducible qEFT
-  samples/log-likelihood data can be obtained;
 - `r4_parspec_qnm_to_bresciani_sensitivity.py`, if a source-backed 3x4
   sensitivity relation can be derived or imported;
+- `r4_parspec_qeft_likelihood_rerun_packet.py`, if a reproducible qEFT
+  sampler rerun becomes the fastest route to a real likelihood packet;
 - `r4_parspec_pyring_likelihood_rerun_packet.py`, if pyRing becomes the most
   practical bridge toward a reproducible likelihood rerun.
 

@@ -2,11 +2,11 @@
 
 **A research platform that constrains the space of possible quantum-gravity theories by imposing every consistency condition we can encode — amplitude positivity, causality, holographic-information bounds, the swampland, anomaly flow, black-hole thermodynamics — then confronts the survivors with *real experimental data* and asks what's left.**
 
-> **Status:** v2.205 research loop · **local and remote Linux validation current** · **38 theoretical constraints (+4 ingested-data)** · **14 framework encoders** · **8 Wilson coefficients** · **9 observables** · **316 indexed result notes**
+> **Status:** v2.206 research loop · **local and remote Linux validation current** · **38 theoretical constraints (+4 ingested-data)** · **14 framework encoders** · **8 Wilson coefficients** · **9 observables** · **317 indexed result notes**
 >
 > Honest by construction: most constraint prefactors are O(1) placeholders ("the right streets, the wrong house numbers"). A dedicated **realism program** stress-tests every headline claim against that toy-prefactor uncertainty, so the repo distinguishes *robust conclusions* from *artifacts*. Read every claim below with that in mind — and see [Honest limitations](#honest-limitations).
 
-**Start here:** [**v2.205 R4 ParSpec pyRing-to-Bresciani orientation audit**](docs/results/2026-06-21-v2.205-r4-parspec-pyring-to-bresciani-orientation.md) (source-audits pyRing branch directions against Bresciani K/g_R4 axes and records a no-map ledger) · [**v2.204 R4 ParSpec pyRing runtime-to-ParSpec normalization policy**](docs/results/2026-06-21-v2.204-r4-parspec-pyring-runtime-to-parspec-normalization-policy.md) (formally isolates the pyRing runtime-vs-ParSpec high-spin normalizer gap) · [**v2.203 R4 ParSpec pyRing event-spin Jacobian**](docs/results/2026-06-21-v2.203-r4-parspec-pyring-event-spin-jacobian.md) (evaluates pyRing quartic EFT rows at source-event remnant spins) · [**FINDINGS.md**](docs/FINDINGS.md) (curated findings) · [**ROADMAP.md**](docs/ROADMAP.md) (where the research should go next) · [**Results index**](docs/results/INDEX.md) (chronological)
+**Start here:** [**v2.206 R4 ParSpec public-likelihood packet gate**](docs/results/2026-06-21-v2.206-r4-parspec-public-likelihood-packet.md) (documents the public-likelihood acceptance gate and current no-public-packet finding) · [**v2.205 R4 ParSpec pyRing-to-Bresciani orientation audit**](docs/results/2026-06-21-v2.205-r4-parspec-pyring-to-bresciani-orientation.md) (source-audits pyRing branch directions against Bresciani K/g_R4 axes and records a no-map ledger) · [**v2.204 R4 ParSpec pyRing runtime-to-ParSpec normalization policy**](docs/results/2026-06-21-v2.204-r4-parspec-pyring-runtime-to-parspec-normalization-policy.md) (formally isolates the pyRing runtime-vs-ParSpec high-spin normalizer gap) · [**FINDINGS.md**](docs/FINDINGS.md) (curated findings) · [**ROADMAP.md**](docs/ROADMAP.md) (where the research should go next) · [**Results index**](docs/results/INDEX.md) (chronological)
 
 ---
 
@@ -46,7 +46,7 @@ The engine is one of few QG-phenomenology tools that **folds in real experiments
 - **GW170817 speed** is *blind* to higher-derivative gravity (frequency-suppressed), but **LIGO's GW dispersion test** reaches the dark-energy cutoff — *which observable* matters as much as which sector. *(v1.84–85)*
 
 ### Current live-data frontier: R4 through GWOSC and LALSuite
-The latest loop, v2.170-v2.205, turns the most promising gravitational-wave route into an executable nonclaiming pipeline:
+The latest loop, v2.170-v2.206, turns the most promising gravitational-wave route into an executable nonclaiming pipeline:
 - **v2.170-v2.171:** the symbolic R4 scale route now has a strict packet contract for a future source-backed `Lambda_R4` policy; no numeric policy is present yet.
 - **v2.172-v2.173:** the parallel Weyl/G8 route now has a joint-likelihood packet contract; it remains blocked on a real `g_C+g_8` likelihood.
 - **v2.174:** the engine selected the Bresciani-axis plus public-GWOSC reanalysis path after checking source/public candidates.
@@ -73,8 +73,9 @@ The latest loop, v2.170-v2.205, turns the most promising gravitational-wave rout
 - **v2.203:** the pyRing quartic EFT frequency and damping-time rows are now evaluated at source-event remnant spins for GW150914 and GW200129. This exposes a few-percent pyRing-runtime Berti-GR versus ParSpec-high-spin normalization gap and keeps the claim gate closed.
 - **v2.204:** the pyRing-runtime-to-ParSpec-high-spin normalizer gap now has an explicit nonclaiming policy. Runtime Berti-GR normalization is allowed for internal pyRing reruns, while ParSpec high-spin rows are comparison-only until a source-backed operator-axis map exists.
 - **v2.205:** the pyRing-to-Bresciani orientation source audit is now complete as a no-map ledger. pyRing branch directions remain local QNM branch-splitting columns, and synthetic branch-to-operator maps are explicitly forbidden.
+- **v2.206:** the public ParSpec/qEFT likelihood route now has a tested packet gate. The current public recheck finds no machine-readable posterior samples, covariance matrix, or log-likelihood grid; the published-bound surrogate remains nonclaiming continuity evidence only.
 
-The latest pyRing/Bresciani artifact is [v2.205 R4 ParSpec pyRing-to-Bresciani orientation audit](docs/results/2026-06-21-v2.205-r4-parspec-pyring-to-bresciani-orientation.md). The latest operator-map gate remains [v2.200 R4 ParSpec qNM-to-Bresciani gate](docs/results/2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md). The current roadmap is [docs/ROADMAP.md](docs/ROADMAP.md). This is progress toward a live gravitational-wave discriminator, not a framework exclusion or discovery claim.
+The latest artifact is [v2.206 R4 ParSpec public-likelihood packet gate](docs/results/2026-06-21-v2.206-r4-parspec-public-likelihood-packet.md). The latest operator-map gate remains [v2.200 R4 ParSpec qNM-to-Bresciani gate](docs/results/2026-06-20-v2.200-r4-parspec-qnm-to-bresciani-gate.md), and the latest pyRing/Bresciani source audit remains [v2.205](docs/results/2026-06-21-v2.205-r4-parspec-pyring-to-bresciani-orientation.md). The current roadmap is [docs/ROADMAP.md](docs/ROADMAP.md). This is progress toward a live gravitational-wave discriminator, not a framework exclusion or discovery claim.
 
 ### The "data-driven EFT"
 Folding consistency + the two ingested experiments points to a specific, registered theory — `discovered_data_driven` — a **screened-scalaron, positive-handed-parity EFT** that matches cosmic birefringence and predicts GW/PTA parity signals just below current reach. It sits where *none* of the 13 textbook frameworks do. `itb predict discovered_data_driven`. *(v1.79)*
@@ -170,14 +171,14 @@ itb-engine/
 │   ├── scope.py               engine-validity (local / Lorentz / fundamental flags)
 │   ├── cli.py                 `itb` command
 │   └── api/server.py          FastAPI web app
-├── experiments/              274 cycle scripts (island census, center, data ingestion,
+├── experiments/              275 cycle scripts (island census, center, data ingestion,
 │                              meta-experiments) + stack.py (the constraint assembler)
 ├── tools/                    reproduction helpers, consult_drm.py, build_index.py
-├── tests/                    316 test files (latest full-suite count is in the v2.205 report)
+├── tests/                    317 test files (latest full-suite count is in the v2.206 report)
 ├── docs/
 │   ├── FINDINGS.md           ← curated findings (read this)
 │   ├── CONSTRAINTS.md        ← the constraint stack, by class
-│   └── results/              316 indexed result notes
+│   └── results/              317 indexed result notes
 └── legacy/                   early-program report generators (v1.0–v1.19)
 ```
 

@@ -1,0 +1,348 @@
+{
+  "version": "v2.206",
+  "basis": [
+    "v2.191_r4_parspec_qeft_source_asset_audit",
+    "v2.196_r4_parspec_published_bound_surrogate",
+    "v2.205_r4_parspec_pyring_to_bresciani_orientation",
+    "public_source_recheck_2026_06_21"
+  ],
+  "public_likelihood_packet": {
+    "packet_id": "v2206_parspec_public_likelihood_packet_candidate",
+    "source_identity": {
+      "paper": "Silva_Ghosh_Buonanno_2023",
+      "source_url": "https://arxiv.org/abs/2205.05132",
+      "source_doi": "https://doi.org/10.1103/PhysRevD.107.044030",
+      "arxiv_doi": "https://doi.org/10.48550/arXiv.2205.05132",
+      "source_eprint_url": "https://arxiv.org/e-print/2205.05132"
+    },
+    "acceptance_criteria": [
+      {
+        "criterion": "machine_readable_public_url",
+        "required": true,
+        "description": "A public URL or DOI-backed landing page must expose the machine-readable object, not only a plotted figure."
+      },
+      {
+        "criterion": "posterior_samples_or_covariance_or_log_likelihood_grid",
+        "required": true,
+        "description": "The object must be posterior samples, a covariance matrix, or a log-likelihood grid for the qEFT source axis."
+      },
+      {
+        "criterion": "ell_qeft_or_qnm_axis_schema",
+        "required": true,
+        "description": "The schema must identify ell_qEFT_km or the four ParSpec qNM deformation axes used by the engine bridge."
+      },
+      {
+        "criterion": "source_event_rows_or_combined_policy",
+        "required": true,
+        "description": "The packet must name GW150914/GW200129 rows or a source-backed combined-event policy."
+      },
+      {
+        "criterion": "prior_and_threshold_policy",
+        "required": true,
+        "description": "The prior, EFT threshold, and credible-bound policy must be recoverable from the packet."
+      },
+      {
+        "criterion": "waveform_sampler_version_metadata",
+        "required": true,
+        "description": "The waveform family, sampler, and version metadata must be recorded so the likelihood can be reproduced."
+      },
+      {
+        "criterion": "calibration_and_systematics_policy",
+        "required": true,
+        "description": "Calibration, detector topology, and waveform-systematics policy must be explicit."
+      },
+      {
+        "criterion": "content_hashes_and_license",
+        "required": true,
+        "description": "The released object must carry content hashes and an access or license statement."
+      }
+    ],
+    "source_package_hashes": {
+      "source_package_sha256": "11b568f5107b4e31a7efd83b704178e7a9e938467fcd36a4856f53a208b05da2",
+      "qeft_tex_sha256": "e204f46bc95bdbbfaf4ea3fc13675f188d33a70b58363f605f40fd228da7dc0b",
+      "qeft_posterior_figure_sha256": "b41b2847087581da0d7b00ef947f59dfed369a503e512f45a8361e6596cb18b3",
+      "qeft_cdf_figure_sha256": "e71d3f19b28558bf0b52d43def1ca5390e1cfcb0fdd482fc556b8ead010f601c"
+    },
+    "source_facts_preserved": {
+      "source_axis": "ell_qEFT_km",
+      "qeft_power": 6,
+      "qnm_deformation_coefficients": {
+        "nmax_0": {
+          "delta_omega_qeft_0": -0.2114,
+          "delta_tau_qeft_0": -0.607
+        },
+        "nmax_1": {
+          "delta_omega_qeft_1": -1.5263,
+          "delta_tau_qeft_1": 171.35
+        }
+      },
+      "event_bounds_90_credible_km": {
+        "GW150914": 51.7,
+        "GW200129": 54.8,
+        "combined": 51.3
+      },
+      "source_events": [
+        "GW150914",
+        "GW200129"
+      ]
+    },
+    "available_public_assets": {
+      "top_level_files": [
+        "GW150914_intrinsic_params.pdf",
+        "GW150914_intrinsic_params_remnant.pdf",
+        "ceft_cdf_varying_threshold.pdf",
+        "ceft_posteriors_combined.pdf",
+        "dcs_cdf_varying_threshold.pdf",
+        "dcs_posteriors_combined.pdf",
+        "edgb_cdf_varying_threshold.pdf",
+        "edgb_gamma.pdf",
+        "edgb_posteriors_combined.pdf",
+        "example_waveform_cubicEFT.pdf",
+        "paper_alt_theory_bounds.bbl",
+        "paper_alt_theory_bounds.bib",
+        "paper_alt_theory_bounds.tex",
+        "qeft_cdf_varying_threshold.pdf",
+        "qeft_posteriors_combined.pdf"
+      ],
+      "audited_assets": [
+        {
+          "path": "paper_alt_theory_bounds.tex",
+          "kind": "latex_source",
+          "size_bytes": 101949,
+          "sha256": "e204f46bc95bdbbfaf4ea3fc13675f188d33a70b58363f605f40fd228da7dc0b",
+          "preserved_facts": [
+            "ParSpec gamma relation",
+            "qEFT power p_qEFT = 6",
+            "qEFT QNM deformation coefficients",
+            "GW150914/GW200129/combined qEFT bounds"
+          ]
+        },
+        {
+          "path": "qeft_posteriors_combined.pdf",
+          "kind": "posterior_figure",
+          "size_bytes": 28505,
+          "sha256": "b41b2847087581da0d7b00ef947f59dfed369a503e512f45a8361e6596cb18b3",
+          "machine_readable_likelihood": false
+        },
+        {
+          "path": "qeft_cdf_varying_threshold.pdf",
+          "kind": "cdf_figure",
+          "size_bytes": 201759,
+          "sha256": "e71d3f19b28558bf0b52d43def1ca5390e1cfcb0fdd482fc556b8ead010f601c",
+          "machine_readable_likelihood": false
+        }
+      ],
+      "detected_machine_readable_likelihood_assets": [],
+      "machine_readable_likelihood_ready": false
+    },
+    "public_surface_recheck": {
+      "checked_on": "2026-06-21",
+      "snapshot_id": "parspec_qeft_public_likelihood_surface_recheck_v2",
+      "source_package_top_level_files": [
+        "GW150914_intrinsic_params.pdf",
+        "GW150914_intrinsic_params_remnant.pdf",
+        "ceft_cdf_varying_threshold.pdf",
+        "ceft_posteriors_combined.pdf",
+        "dcs_cdf_varying_threshold.pdf",
+        "dcs_posteriors_combined.pdf",
+        "edgb_cdf_varying_threshold.pdf",
+        "edgb_gamma.pdf",
+        "edgb_posteriors_combined.pdf",
+        "example_waveform_cubicEFT.pdf",
+        "paper_alt_theory_bounds.bbl",
+        "paper_alt_theory_bounds.bib",
+        "paper_alt_theory_bounds.tex",
+        "qeft_cdf_varying_threshold.pdf",
+        "qeft_posteriors_combined.pdf"
+      ],
+      "queries": [
+        "\"2205.05132\" \"posterior samples\" qEFT ParSpec",
+        "\"Tests of general relativity with GW150914 and GW200129\" \"data\"",
+        "\"qeft_posteriors_combined\" \"paper_alt_theory_bounds\"",
+        "\"Silva\" \"Ghosh\" \"Buonanno\" \"ParSpec\" \"GitHub\"",
+        "\"2205.05132\" \"github.com\"",
+        "\"paper_alt_theory_bounds\" github",
+        "\"qeft_posteriors_combined.pdf\"",
+        "\"ell_qEFT\" \"posterior\""
+      ],
+      "surfaces": [
+        {
+          "surface": "arxiv_abs",
+          "url": "https://arxiv.org/abs/2205.05132",
+          "result": "paper, PDF, and TeX source links visible; no code/data landing page for qEFT posterior samples."
+        },
+        {
+          "surface": "arxiv_eprint_source_package",
+          "url": "https://arxiv.org/e-print/2205.05132",
+          "result": "TeX/Bib/Bbl plus figure PDFs only; no h5, txt, csv, dat, npy, json, posterior chain, covariance, or likelihood grid."
+        },
+        {
+          "surface": "published_article",
+          "url": "https://doi.org/10.1103/PhysRevD.107.044030",
+          "result": "Published bounds and figures are available; no visible machine-readable supplemental qEFT likelihood packet."
+        },
+        {
+          "surface": "arxiv_doi",
+          "url": "https://doi.org/10.48550/arXiv.2205.05132",
+          "result": "redirects to the arXiv paper/source surface."
+        },
+        {
+          "surface": "lvk_gwtc2_tests_of_gr_zenodo",
+          "url": "https://zenodo.org/records/5172704",
+          "result": "Generic LVK tests-of-GR posterior products are public, but not a Silva/Ghosh/Buonanno ell_qEFT likelihood release."
+        },
+        {
+          "surface": "lvk_gwtc3_tests_of_gr_zenodo",
+          "url": "https://zenodo.org/records/7007370",
+          "result": "Generic LVK tests-of-GR posterior products are public, but not the required qEFT source-axis likelihood packet."
+        },
+        {
+          "surface": "author_and_public_code_surfaces",
+          "url": "https://github.com/hosilva",
+          "result": "No paper-specific public repository or data release for the qEFT posterior/likelihood surfaced in exact searches."
+        },
+        {
+          "surface": "public_web_search",
+          "queries": [
+            "\"2205.05132\" \"posterior samples\" qEFT ParSpec",
+            "\"Tests of general relativity with GW150914 and GW200129\" \"data\"",
+            "\"qeft_posteriors_combined\" \"paper_alt_theory_bounds\"",
+            "\"Silva\" \"Ghosh\" \"Buonanno\" \"ParSpec\" \"GitHub\"",
+            "\"2205.05132\" \"github.com\"",
+            "\"paper_alt_theory_bounds\" github",
+            "\"qeft_posteriors_combined.pdf\"",
+            "\"ell_qEFT\" \"posterior\""
+          ],
+          "result": "No public machine-readable samples, covariance, or log-likelihood grid found."
+        }
+      ],
+      "detected_machine_readable_likelihood_assets": [],
+      "machine_readable_public_likelihood_ready": false
+    },
+    "public_likelihood_candidate": {
+      "status": "absent",
+      "asset_type": "none",
+      "machine_readable": false,
+      "public_url": "",
+      "source_axis_schema": [],
+      "event_scope": [],
+      "combined_event_policy": "",
+      "prior_policy": "",
+      "threshold_policy": "",
+      "waveform_sampler_metadata": {},
+      "calibration_systematics_policy": {},
+      "content_hash_sha256": "",
+      "license_or_access_statement": "",
+      "source_note": "No public posterior sample file, covariance object, or log-likelihood grid for ell_qEFT_km was found."
+    },
+    "published_bound_surrogate_reference": {
+      "surrogate_id": "parspec_qeft_published_bound_surrogate_v1",
+      "source_axis": "ell_qEFT_km",
+      "source_axis_power": 6,
+      "event_labels": [
+        "GW150914",
+        "GW200129",
+        "combined"
+      ],
+      "machine_readable_public_likelihood_ready": false,
+      "surrogate_ready_for_nonclaiming_attachment": true,
+      "claim_use_allowed": false
+    },
+    "claim_controls": {
+      "claim_use_allowed": false,
+      "public_likelihood_required_for_claim": true,
+      "published_bound_surrogate_not_claim_evidence": true
+    }
+  },
+  "evaluation": {
+    "acceptance_gate_documented": true,
+    "criterion_status": {
+      "machine_readable_public_url": false,
+      "posterior_samples_or_covariance_or_log_likelihood_grid": false,
+      "ell_qeft_or_qnm_axis_schema": false,
+      "source_event_rows_or_combined_policy": false,
+      "prior_and_threshold_policy": false,
+      "waveform_sampler_version_metadata": false,
+      "calibration_and_systematics_policy": false,
+      "content_hashes_and_license": false
+    },
+    "public_likelihood_packet_ready": false,
+    "machine_readable_public_likelihood_ready": false,
+    "published_bound_surrogate_retained": true,
+    "published_bound_surrogate_claim_use_allowed": false,
+    "blockers": [
+      "machine_readable_public_url_missing",
+      "posterior_samples_or_covariance_or_log_likelihood_grid_missing",
+      "ell_qeft_or_qnm_axis_schema_missing",
+      "source_event_rows_or_combined_policy_missing",
+      "prior_and_threshold_policy_missing",
+      "waveform_sampler_version_metadata_missing",
+      "calibration_and_systematics_policy_missing",
+      "content_hashes_and_license_missing"
+    ],
+    "claim_blockers": [
+      "calibration_and_systematics_policy_missing",
+      "claim_grade_systematics_export_missing",
+      "content_hashes_and_license_missing",
+      "ell_qeft_or_qnm_axis_schema_missing",
+      "external_adversarial_review_missing",
+      "machine_readable_public_url_missing",
+      "posterior_samples_or_covariance_or_log_likelihood_grid_missing",
+      "prior_and_threshold_policy_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "pyring_quartic_direction_to_bresciani_axis_orientation_missing",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing",
+      "source_event_rows_or_combined_policy_missing",
+      "waveform_sampler_version_metadata_missing"
+    ],
+    "ready_for_framework_claim": false,
+    "claimable_framework_exclusions_now": [],
+    "route_status": "parspec_public_likelihood_packet_absent_bound_surrogate_retained"
+  },
+  "malformed_control_evaluation": {
+    "acceptance_gate_documented": true,
+    "criterion_status": {
+      "machine_readable_public_url": true,
+      "posterior_samples_or_covariance_or_log_likelihood_grid": true,
+      "ell_qeft_or_qnm_axis_schema": true,
+      "source_event_rows_or_combined_policy": false,
+      "prior_and_threshold_policy": false,
+      "waveform_sampler_version_metadata": false,
+      "calibration_and_systematics_policy": false,
+      "content_hashes_and_license": false
+    },
+    "public_likelihood_packet_ready": false,
+    "machine_readable_public_likelihood_ready": false,
+    "published_bound_surrogate_retained": true,
+    "published_bound_surrogate_claim_use_allowed": false,
+    "blockers": [
+      "source_event_rows_or_combined_policy_missing",
+      "prior_and_threshold_policy_missing",
+      "waveform_sampler_version_metadata_missing",
+      "calibration_and_systematics_policy_missing",
+      "content_hashes_and_license_missing"
+    ],
+    "claim_blockers": [
+      "calibration_and_systematics_policy_missing",
+      "claim_grade_systematics_export_missing",
+      "content_hashes_and_license_missing",
+      "external_adversarial_review_missing",
+      "prior_and_threshold_policy_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "pyring_quartic_direction_to_bresciani_axis_orientation_missing",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing",
+      "source_event_rows_or_combined_policy_missing",
+      "waveform_sampler_version_metadata_missing"
+    ],
+    "ready_for_framework_claim": false,
+    "claimable_framework_exclusions_now": [],
+    "route_status": "parspec_public_likelihood_packet_absent_bound_surrogate_retained"
+  },
+  "public_likelihood_packet_ready": false,
+  "machine_readable_public_likelihood_ready": false,
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "route_status": "parspec_public_likelihood_packet_absent_bound_surrogate_retained",
+  "selected_next_build_action": "build_reproducible_qeft_likelihood_rerun_packet_or_find_new_source_backed_qnm_to_bresciani_sensitivity",
+  "interpretation": "The public-source recheck preserves the same conclusion as the source-package audit: the ParSpec qEFT paper exposes source TeX and plotted posterior/CDF figures, and the engine can retain the published-bound surrogate for nonclaiming continuity. It still does not have a public machine-readable posterior sample, covariance matrix, or log-likelihood grid on ell_qEFT_km, so the claim gate remains closed."
+}
