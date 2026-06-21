@@ -1,6 +1,6 @@
 # ITB Engine Research Roadmap
 
-This roadmap starts from the v2.200 state. It is a research plan, not a solved
+This roadmap starts from the v2.201 state. It is a research plan, not a solved
 quantum-gravity claim.
 
 ## Current State
@@ -12,6 +12,7 @@ The strongest live-data route is the R4/GWOSC/ParSpec path. The repo can now:
 - attach published qEFT bounds as nonclaiming surrogates;
 - compute source-event absolute ParSpec gamma from final-mass/redshift metadata;
 - define an executable acceptance gate for the missing qNM-to-Bresciani map.
+- hash-pin and parse the public pyRing quartic EFT QNM coefficient tables.
 
 The decisive current blocker is still unresolved:
 
@@ -31,6 +32,17 @@ required row rank = 3
 The current qEFT source object is only a rank-1 gamma-to-qNM ray, so it cannot
 be inverted into the three Bresciani engine axes.
 
+v2.201 shows that public pyRing is useful but not sufficient by itself. It
+provides three quartic EFT theory labels with plus/minus QNM mode-splitting
+branches, not independent Bresciani operator axes. The checked table slice has
+full rank in local branch-column QNM coordinates, but still lacks:
+
+```text
+pyring_quartic_direction_to_bresciani_axis_orientation_missing
+pyring_plus_minus_branches_not_independent_operator_axes
+pyring_imaginary_frequency_to_parspec_tau_jacobian_missing
+```
+
 ## Roadmap
 
 1. Acquire a real qNM-to-Bresciani sensitivity source.
@@ -41,25 +53,38 @@ be inverted into the three Bresciani engine axes.
    rotating-EFT ringdown, pyRing EFT QNM coefficient tables, and the Bresciani
    spin-2 R4 amplitude basis.
 
-2. Acquire a machine-readable qEFT likelihood.
+2. Derive the pyRing-to-Bresciani orientation if it exists.
+   The immediate route is to identify whether pyRing `quartic_1/2/3` and the
+   plus/minus branch splitting can be mapped into the Bresciani
+   `K_plus/Re(K_minus)/Im(K_minus)` basis with a closed normalization and
+   field-redefinition policy. If not, the result should be a negative theorem
+   or source-backed no-map ledger, not a synthetic map.
+
+3. Build the imaginary-frequency to ParSpec-tau Jacobian.
+   pyRing supplies `domi` coefficients after a sign-convention flip, while the
+   v2.200 gate is expressed in ParSpec-style frequency and damping-time
+   deformation axes. A source-backed tau-axis conversion is required before any
+   pyRing table can be interpreted as a ParSpec qNM-axis packet.
+
+4. Acquire a machine-readable qEFT likelihood.
    A public posterior sample file, covariance matrix, or log-likelihood grid
    would be enough to replace the current published-bound surrogate. If the
    original ParSpec samples are unavailable, the fallback is a reproducible
    pyRing/LALSuite rerun that exports a likelihood packet with event metadata,
    priors, waveform versions, and calibration/systematics policy.
 
-3. Attach claim-grade systematics.
+5. Attach claim-grade systematics.
    The current route has deterministic controls and coarse likelihood grids. A
    defensible discriminator needs waveform-family comparisons, calibration
    priors, detector topology, event-selection policy, EFT validity bounds, and
    covariance propagation through the qNM-to-engine map.
 
-4. Run an adversarial review pass.
+6. Run an adversarial review pass.
    Before any framework exclusion claim, an independent reviewer should be able
    to reproduce the source packet, verify the operator-basis orientation,
    inspect the likelihood export, and challenge the EFT validity domain.
 
-5. Only then promote the discriminator.
+7. Only then promote the discriminator.
    A claimable result requires: full-rank source-backed map, public likelihood
    or reproducible likelihood export, claim-grade systematics, remote Linux
    reproduction, and external adversarial review. Without all five, the route
@@ -69,12 +94,16 @@ be inverted into the three Bresciani engine axes.
 
 The next best artifact is one of:
 
+- `r4_parspec_pyring_to_bresciani_orientation.py`, if the pyRing quartic
+  theory labels can be source-mapped to Bresciani coordinates;
+- `r4_parspec_pyring_tau_axis_jacobian.py`, if the pyRing `domi` convention can
+  be converted into ParSpec damping-time deformation axes;
 - `r4_parspec_public_likelihood_packet.py`, if public or reproducible qEFT
   samples/log-likelihood data can be obtained;
 - `r4_parspec_qnm_to_bresciani_sensitivity.py`, if a source-backed 3x4
   sensitivity relation can be derived or imported;
-- `r4_parspec_pyring_source_probe.py`, if pyRing coefficient tables are the
-  most practical bridge toward a reproducible likelihood rerun.
+- `r4_parspec_pyring_likelihood_rerun_packet.py`, if pyRing becomes the most
+  practical bridge toward a reproducible likelihood rerun.
 
 Each artifact should include a JSON result, focused tests, a result note, and a
 claim gate that remains closed unless the packet is source-backed and complete.

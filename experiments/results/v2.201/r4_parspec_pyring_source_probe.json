@@ -1,0 +1,335 @@
+{
+  "version": "v2.201",
+  "basis": [
+    "v2.175_bresciani_r4_axis_dictionary",
+    "v2.197_parspec_qnm_deformation_jacobian",
+    "v2.200_parspec_qnm_to_bresciani_gate",
+    "public_pyring_EFT_QNMs_branch"
+  ],
+  "source_manifest": {
+    "repo_url": "https://git.ligo.org/lscsoft/pyring",
+    "branch": "EFT_QNMs",
+    "branch_head_sha": "01b7f797c6a260962a1662c4e3450ccfbf48653f",
+    "tree_url": "https://git.ligo.org/lscsoft/pyring/-/tree/EFT_QNMs/pyRing/data/NR_data",
+    "waveform_source_url": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/waveform.pyx",
+    "initialise_source_url": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/initialise.py",
+    "rotating_qnm_source_url": "https://arxiv.org/abs/2307.07431",
+    "tables": [
+      {
+        "source_direction": "quartic_1_minus",
+        "filename": "EFT_coefficients_quartic_1_minus.txt",
+        "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_1_minus.txt",
+        "sha256": "595040fc50a87b31b766105c84856600c36fa1f6ec3ce2130efe46e5c18f96ab",
+        "git_lfs_pointer_blob_sha1": "02fd720330226d5a08c45484e228eac027547972",
+        "data_rows": 3,
+        "columns": 29,
+        "required_modes_present": [
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "source_direction": "quartic_1_plus",
+        "filename": "EFT_coefficients_quartic_1_plus.txt",
+        "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_1_plus.txt",
+        "sha256": "5f81fb7dd2839846b474a5fedc4aa02f5e927b1f8c9eabb91cebe5ebc3c33a86",
+        "git_lfs_pointer_blob_sha1": "2983d46acb02bd9f9cdc2c215fe71a1c7f09ef13",
+        "data_rows": 3,
+        "columns": 29,
+        "required_modes_present": [
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "source_direction": "quartic_2_minus",
+        "filename": "EFT_coefficients_quartic_2_minus.txt",
+        "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_2_minus.txt",
+        "sha256": "751f35d10bed3db75fbb321548f611483e785853e50b2d29d5add972abe2fbdd",
+        "git_lfs_pointer_blob_sha1": "a03c0d55b7f068e8a002140cffe13f8c2739edcf",
+        "data_rows": 3,
+        "columns": 29,
+        "required_modes_present": [
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "source_direction": "quartic_2_plus",
+        "filename": "EFT_coefficients_quartic_2_plus.txt",
+        "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_2_plus.txt",
+        "sha256": "a31664948aa56f77604c1d7f457cc874e95cfc9d832f6d107bf13688ac27f00c",
+        "git_lfs_pointer_blob_sha1": "05e0c4a2203bebc7f7ea3f74b9deff3ce6faf5ec",
+        "data_rows": 3,
+        "columns": 29,
+        "required_modes_present": [
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "source_direction": "quartic_3_minus",
+        "filename": "EFT_coefficients_quartic_3_minus.txt",
+        "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_3_minus.txt",
+        "sha256": "b878ef82bbf5ec6584942fc75ef305aabeacaf627d2bf3fe1cc28d15d1e13575",
+        "git_lfs_pointer_blob_sha1": "6ad6f01b10c682f39e90d2994194cebfb2a90625",
+        "data_rows": 3,
+        "columns": 29,
+        "required_modes_present": [
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            0
+          ]
+        ]
+      },
+      {
+        "source_direction": "quartic_3_plus",
+        "filename": "EFT_coefficients_quartic_3_plus.txt",
+        "raw_url": "https://git.ligo.org/lscsoft/pyring/-/raw/EFT_QNMs/pyRing/data/NR_data/EFT_coefficients_quartic_3_plus.txt",
+        "sha256": "f94c81dc0dfc6b265b0b2638199499d0fb0a1d457c5b295b77f8088c28a716c9",
+        "git_lfs_pointer_blob_sha1": "659adcb51d9b5ff53ee7a81e2f4e05ab0c92b112",
+        "data_rows": 3,
+        "columns": 29,
+        "required_modes_present": [
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1
+          ],
+          [
+            3,
+            3,
+            0
+          ]
+        ]
+      }
+    ],
+    "runtime_interpretation": {
+      "source": "https://git.ligo.org/lscsoft/pyring/-/blob/EFT_QNMs/pyRing/waveform.pyx",
+      "frequency_coefficients": "df_EFT_coeffs[theory] = om_r_i",
+      "imaginary_frequency_sign": "domi_EFT_coeffs[theory] = -om_i_i",
+      "available_eft_theories": [
+        "quartic_1",
+        "quartic_2",
+        "quartic_3"
+      ],
+      "branch_split": [
+        "plus",
+        "minus"
+      ],
+      "branch_policy": "plus/minus are QNM mode-splitting branches for a selected EFT theory, not independent Wilson/operator axes."
+    }
+  },
+  "engine_target_axes": [
+    "g_R4_c1",
+    "g_R4_c2",
+    "g_R4_c3"
+  ],
+  "parspec_qnm_axes": [
+    "delta_omega_qeft_0",
+    "delta_tau_qeft_0",
+    "delta_omega_qeft_1",
+    "delta_tau_qeft_1"
+  ],
+  "pyring_probe_axes": [
+    "domega_220_n0_spin0",
+    "domi_220_n0_spin0_pyring_sign",
+    "domega_221_n1_spin0",
+    "domi_221_n1_spin0_pyring_sign"
+  ],
+  "pyring_quartic_theories": [
+    "quartic_1",
+    "quartic_2",
+    "quartic_3"
+  ],
+  "pyring_source_directions": [
+    "quartic_1_minus",
+    "quartic_1_plus",
+    "quartic_2_minus",
+    "quartic_2_plus",
+    "quartic_3_minus",
+    "quartic_3_plus"
+  ],
+  "spin_zero_qnm_direction_matrix": {
+    "matrix_id": "pyring_quartic_spin_zero_220_221_direction_matrix_v1",
+    "rows": [
+      "domega_220_n0_spin0",
+      "domi_220_n0_spin0_pyring_sign",
+      "domega_221_n1_spin0",
+      "domi_221_n1_spin0_pyring_sign"
+    ],
+    "columns": [
+      "quartic_1_minus",
+      "quartic_1_plus",
+      "quartic_2_minus",
+      "quartic_2_plus",
+      "quartic_3_minus",
+      "quartic_3_plus"
+    ],
+    "columns_are_branch_splitting_directions": true,
+    "columns_are_independent_operator_axes": false,
+    "matrix": [
+      [
+        -0.079381,
+        -0.166139,
+        -0.199007,
+        0.0,
+        -0.073712,
+        0.073712
+      ],
+      [
+        0.057608,
+        0.244369,
+        0.35232,
+        0.0,
+        0.136392,
+        -0.136392
+      ],
+      [
+        -0.600495,
+        -0.428423,
+        -0.777659,
+        0.0,
+        -0.169775,
+        0.169775
+      ],
+      [
+        -0.473316,
+        1.23114,
+        1.258555,
+        0.0,
+        0.741556,
+        -0.741556
+      ]
+    ],
+    "rank": 4,
+    "required_rank_for_probe_axes": 4,
+    "source_scope": "Public pyRing quartic EFT coefficient tables at spin polynomial order zero for modes (2,2,0) and (2,2,1)."
+  },
+  "evaluation": {
+    "public_pyring_quartic_table_intake_ready": true,
+    "independent_branch_qnm_columns_ready": true,
+    "independent_qnm_source_directions_ready": false,
+    "operator_theory_count": 3,
+    "branch_column_count": 6,
+    "qnm_to_bresciani_sensitivity_ready": false,
+    "public_likelihood_ready": false,
+    "ready_for_framework_claim": false,
+    "source_intake_blockers": [],
+    "remaining_claim_blockers": [
+      "claim_grade_systematics_export_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "pyring_imaginary_frequency_to_parspec_tau_jacobian_missing",
+      "pyring_plus_minus_branches_not_independent_operator_axes",
+      "pyring_quartic_direction_to_bresciani_axis_orientation_missing",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing"
+    ],
+    "resolved_v2200_subpieces": [
+      "public_pyring_quartic_qnm_table_intake_ready",
+      "spin_zero_quartic_branch_qnm_coefficients_ranked"
+    ],
+    "route_status": "pyring_quartic_qnm_tables_ready_bresciani_map_missing"
+  },
+  "malformed_control_evaluation": {
+    "public_pyring_quartic_table_intake_ready": false,
+    "independent_branch_qnm_columns_ready": false,
+    "independent_qnm_source_directions_ready": false,
+    "operator_theory_count": 3,
+    "branch_column_count": 6,
+    "qnm_to_bresciani_sensitivity_ready": false,
+    "public_likelihood_ready": false,
+    "ready_for_framework_claim": false,
+    "source_intake_blockers": [
+      "pyring_quartic_spin_zero_direction_rank_deficient"
+    ],
+    "remaining_claim_blockers": [
+      "claim_grade_systematics_export_missing",
+      "external_adversarial_review_missing",
+      "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+      "pyring_imaginary_frequency_to_parspec_tau_jacobian_missing",
+      "pyring_plus_minus_branches_not_independent_operator_axes",
+      "pyring_quartic_direction_to_bresciani_axis_orientation_missing",
+      "qnm_deformation_to_bresciani_engine_r4_map_missing"
+    ],
+    "resolved_v2200_subpieces": [],
+    "route_status": "pyring_quartic_qnm_table_probe_not_ready"
+  },
+  "public_pyring_quartic_table_intake_ready": true,
+  "independent_branch_qnm_columns_ready": true,
+  "independent_qnm_source_directions_ready": false,
+  "qnm_to_bresciani_sensitivity_ready": false,
+  "claimable_framework_exclusions_now": [],
+  "ready_for_framework_claim": false,
+  "selected_next_build_action": "derive_pyring_quartic_direction_to_bresciani_axis_orientation_or_obtain_public_parspec_likelihood",
+  "route_status": "pyring_quartic_qnm_tables_ready_bresciani_map_missing",
+  "interpretation": "pyRing's public EFT_QNMs branch supplies hash-pinned quartic QNM coefficient tables and the spin-zero (2,2,0)/(2,2,1) slice has full rank in the four local qNM probe axes when the plus/minus branch columns are kept separate. This is useful source material, but it is not a Bresciani engine-axis map: the physical source theories are three pyRing quartic labels, plus/minus are mode-splitting branches rather than independent operator axes, the imaginary-frequency coefficients still need a ParSpec tau-axis Jacobian, and no public qEFT likelihood or posterior is attached."
+}
