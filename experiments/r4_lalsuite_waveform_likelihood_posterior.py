@@ -123,6 +123,7 @@ def r4_imrphenomd_detector_templates(
     detector: str,
     total_mass_solar: float = REFERENCE_TOTAL_MASS_SOLAR,
     eta: float = ETA_REFERENCE,
+    detector_channel_response: dict[str, float] | None = None,
 ) -> dict[str, Any]:
     waveform = generate_imrphenomd_reference(
         frequencies_hz,
@@ -134,7 +135,15 @@ def r4_imrphenomd_detector_templates(
     if psd_values.shape != grid.shape or np.any(psd_values <= 0.0):
         raise ValueError("psd must match v_f and be positive")
     terms = r4_pn_power_law_terms(grid)
-    channel_response = calibrated_channel_coefficients(detector)
+    channel_response = (
+        calibrated_channel_coefficients(detector)
+        if detector_channel_response is None
+        else {
+            "K_plus": float(detector_channel_response["K_plus"]),
+            "Re_K_minus": float(detector_channel_response["Re_K_minus"]),
+            "Im_K_minus": float(detector_channel_response["Im_K_minus"]),
+        }
+    )
     raw_templates: dict[str, np.ndarray] = {}
     for axis in AXES:
         response = np.zeros_like(grid)
@@ -180,6 +189,7 @@ def detector_nuisance_template_packets(
     gps_start: int,
     sample_rate_hz: int,
     event_gps: float | None = None,
+    detector_channel_response: dict[str, float] | None = None,
 ) -> list[dict[str, Any]]:
     packets = []
     for nuisance in nuisance_grid():
@@ -197,6 +207,7 @@ def detector_nuisance_template_packets(
             detector=detector,
             total_mass_solar=nuisance["total_mass_solar"],
             eta=nuisance["eta"],
+            detector_channel_response=detector_channel_response,
         )
         rotated = rotate_templates_for_tc_phic(
             template_packet["templates"],
@@ -210,6 +221,9 @@ def detector_nuisance_template_packets(
             "templates": rotated,
             "frequency_window": context["frequency_window"],
             "waveform_summary": template_packet["waveform_summary"],
+            "detector_channel_response": template_packet[
+                "detector_channel_response"
+            ],
             "template_kind": template_packet["template_kind"],
         })
     return packets
@@ -271,6 +285,7 @@ def detector_r4_waveform_likelihood(
     *,
     central_values: dict[str, float],
     event_gps: float | None = None,
+    detector_channel_response: dict[str, float] | None = None,
 ) -> dict[str, Any]:
     path = ensure_cached_strain_file(record, cache_dir)
     strain = read_strain_values(path)
@@ -280,11 +295,13 @@ def detector_r4_waveform_likelihood(
         gps_start=int(record["gps_start"]),
         sample_rate_hz=int(record["sample_rate_hz"]),
         event_gps=event_gps,
+        detector_channel_response=detector_channel_response,
     )
     marginal = marginalize_r4_grid_from_packets(packets, central_values)
     return canonicalize_json_floats({
         "detector": record["detector"],
         "path": cache_path_for_record(record, cache_dir).as_posix(),
+        "detector_channel_response": packets[0]["detector_channel_response"],
         "likelihood_kind": (
             "coarse_nuisance_marginal_linearized_r4_imrphenomd_grid"
         ),
