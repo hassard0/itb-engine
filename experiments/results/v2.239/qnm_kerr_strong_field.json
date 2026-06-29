@@ -1,0 +1,67 @@
+{
+  "version": "v2.239",
+  "method": "Kerr equatorial Bardeen-Press-Teukolsky formulas (M=1): ISCO, circular-orbit energy/efficiency, equatorial photon orbit; prograde & retrograde branches",
+  "schwarzschild_limit_reproduced": true,
+  "spin_sequence": [
+    {
+      "a": 0.0,
+      "isco_prograde": 6.0,
+      "isco_retrograde": 6.0,
+      "efficiency_prograde": 0.057190958417936644,
+      "efficiency_retrograde": 0.057190958417936644,
+      "photon_prograde": 3.0,
+      "photon_retrograde": 3.0
+    },
+    {
+      "a": 0.5,
+      "isco_prograde": 4.233002529530826,
+      "isco_retrograde": 7.554584714512358,
+      "efficiency_prograde": 0.0821179933392242,
+      "efficiency_retrograde": 0.04514222695272396,
+      "photon_prograde": 2.3472963553338606,
+      "photon_retrograde": 3.532088886237956
+    },
+    {
+      "a": 0.9,
+      "isco_prograde": 2.320883041761887,
+      "isco_retrograde": 8.717352279606489,
+      "efficiency_prograde": 0.1557529919944638,
+      "efficiency_retrograde": 0.03899834564528193,
+      "photon_prograde": 1.5578546274233829,
+      "photon_retrograde": 3.910267939103037
+    },
+    {
+      "a": 0.99,
+      "isco_prograde": 1.4544979380596716,
+      "isco_retrograde": 8.971861342546969,
+      "efficiency_prograde": 0.26403010011626504,
+      "efficiency_retrograde": 0.03787027606246207,
+      "photon_prograde": 1.1676418518575313,
+      "photon_retrograde": 3.991102861089397
+    },
+    {
+      "a": 0.998,
+      "isco_prograde": 1.2369706551751847,
+      "isco_retrograde": 8.99437445480357,
+      "efficiency_prograde": 0.320994165616197,
+      "efficiency_retrograde": 0.03777362529209349,
+      "photon_prograde": 1.0739092576799516,
+      "photon_retrograde": 3.998221892847946
+    }
+  ],
+  "extremal_a1": {
+    "isco_prograde_limit": 1.0,
+    "efficiency_prograde_limit": 0.42264973081037416,
+    "isco_retrograde": 9.0,
+    "efficiency_retrograde": 0.037749551350623634,
+    "photon_prograde_limit": 1.0,
+    "photon_retrograde": 4.0
+  },
+  "finding": "Spin SPLITS the v2.238-locked strong-field observables into prograde and retrograde branches and AMPLIFIES the prograde channel. As a goes 0 -> 1 the prograde ISCO shrinks 6 -> 1 (frame-dragging) while the retrograde ISCO grows 6 -> 9; the equatorial photon orbit splits 3 -> 1 (pro) and 3 -> 4 (retro); and the prograde accretion efficiency climbs from 0.0572 (5.72%) to the extremal limit 0.4226 (1 - 1/sqrt3 ~ 42.3%), while retrograde DROPS to ~3.77%. Schwarzschild (a=0) is reproduced exactly. The 42% prograde efficiency -- nearly an order of magnitude above Schwarzschild and ~75x the rest-mass efficiency of stellar fusion -- is the rotational energy extraction that powers the most luminous AGN and quasars, and it is the spin-dependent generalization of the single-deformation fingerprint (v2.238): spin is the one parameter Nature actually varies.",
+  "honest_scope": "Equatorial, geodesic (test-particle) circular orbits of the exact Kerr metric, M=1; the ISCO/efficiency/photon formulas are the standard Bardeen-Press-Teukolsky results (exact, not deformation-perturbative -- this is real Kerr, not a bump). The a=1 EXTREMAL point has a coordinate degeneracy at r=1 (the prograde ISCO, photon orbit, and horizon coincide in Boyer-Lindquist r), so the prograde efficiency/radii there are reported as analytic LIMITS (1-1/sqrt3, r->1), and astrophysical spins are capped near the Thorne a=0.998 value (radiation torque) -- included in the sequence. Efficiency assumes a standard thin disk radiating the binding energy. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Bardeen, Press, Teukolsky, ApJ 178 (1972) 347 -- Kerr equatorial orbits / ISCO / efficiency",
+    "Thorne, ApJ 191 (1974) 507 -- a/M = 0.998 spin equilibrium",
+    "this repo: v2.237 (Schwarzschild ISCO), v2.238 (unified deformation fingerprint)"
+  ]
+}

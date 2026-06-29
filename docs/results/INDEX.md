@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (349 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (350 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -398,3 +398,4 @@ Auto-generated front door to the full research program (349 notes). Regenerate w
 | v2.236 | [v2.236 - How a deformation lifts the GR-zero tidal Love number: the ne](2026-06-29-v2.236-qnm-love-number-deformation.md) | Any localized deformation lifts the GR-zero Love number, linearly in the deformation strength. |
 | v2.237 | [v2.237 - The ISCO and accretion efficiency: the matter-orbit companion](2026-06-29-v2.237-qnm-isco-accretion.md) | Where the photon sphere (`r = 3M`) governs light (ringdown, shadow), the innermost stable circular |
 | v2.238 | [v2.238 - Unified deformation fingerprint: one non-Kerr parameter, all ](2026-06-29-v2.238-qnm-unified-deformation-fingerprint.md) | The v2.229-v2.237 sub-program built the strong-field black-hole observables one at a time -- photon |
+| v2.239 | [v2.239 - Kerr generalization: how spin splits and amplifies the strong](2026-06-29-v2.239-qnm-kerr-strong-field.md) | The v2.229-v2.238 sub-program was non-rotating (Schwarzschild). Rotation is the one parameter Nature |
