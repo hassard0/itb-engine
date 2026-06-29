@@ -1,0 +1,332 @@
+{
+  "version": "v2.281",
+  "method": "run the engine (itb.engine.check) on all frameworks against the full stack + gw_speed/gw_dispersion, extract the GW + swampland sector; cross-tabulate the engine's encoded bounds against the independently reconstructed v2.251-v2.270 values",
+  "framework_sector_results": [
+    {
+      "framework": "pure_gr",
+      "gw_swampland_all_satisfied": true,
+      "n_sector_constraints": 11,
+      "sector_failures": [],
+      "sector": {
+        "graviton_mixed_positivity": {
+          "satisfied": true,
+          "margin": 0.0
+        },
+        "cubic_graviton_matter_bound": {
+          "satisfied": true,
+          "margin": 0.0
+        },
+        "graviton_forward_positivity": {
+          "satisfied": true,
+          "margin": 0.0
+        },
+        "parity_violating_positivity": {
+          "satisfied": true,
+          "margin": 0.0
+        },
+        "parity_violating_cubic_bound": {
+          "satisfied": true,
+          "margin": 0.0
+        },
+        "ligo_birefringence_bound": {
+          "satisfied": true,
+          "margin": 0.1
+        },
+        "ligo_graviton_mass_bound": {
+          "satisfied": true,
+          "margin": 0.5
+        },
+        "swampland_distance_conjecture": {
+          "satisfied": true,
+          "margin": 20.0
+        },
+        "species_scale_bound": {
+          "satisfied": true,
+          "margin": 2.0
+        },
+        "gw_speed_bound": {
+          "satisfied": true,
+          "margin": 5e-16
+        },
+        "gw_dispersion_bound": {
+          "satisfied": true,
+          "margin": 1.0
+        }
+      }
+    },
+    {
+      "framework": "string_tree_eft",
+      "gw_swampland_all_satisfied": true,
+      "n_sector_constraints": 11,
+      "sector_failures": [],
+      "sector": {
+        "graviton_mixed_positivity": {
+          "satisfied": true,
+          "margin": 0.16
+        },
+        "cubic_graviton_matter_bound": {
+          "satisfied": true,
+          "margin": 0.1
+        },
+        "graviton_forward_positivity": {
+          "satisfied": true,
+          "margin": 0.020000000000000018
+        },
+        "parity_violating_positivity": {
+          "satisfied": true,
+          "margin": 0.16
+        },
+        "parity_violating_cubic_bound": {
+          "satisfied": true,
+          "margin": 0.2275
+        },
+        "ligo_birefringence_bound": {
+          "satisfied": true,
+          "margin": 0.1
+        },
+        "ligo_graviton_mass_bound": {
+          "satisfied": true,
+          "margin": 0.3
+        },
+        "swampland_distance_conjecture": {
+          "satisfied": true,
+          "margin": 16.666666666666668
+        },
+        "species_scale_bound": {
+          "satisfied": true,
+          "margin": 1.3
+        },
+        "gw_speed_bound": {
+          "satisfied": true,
+          "margin": 4.999883263888889e-16
+        },
+        "gw_dispersion_bound": {
+          "satisfied": true,
+          "margin": 0.6256930259897504
+        }
+      }
+    },
+    {
+      "framework": "asymptotic_safety",
+      "gw_swampland_all_satisfied": true,
+      "n_sector_constraints": 11,
+      "sector_failures": [],
+      "sector": {
+        "graviton_mixed_positivity": {
+          "satisfied": true,
+          "margin": 0.0975
+        },
+        "cubic_graviton_matter_bound": {
+          "satisfied": true,
+          "margin": 0.060000000000000026
+        },
+        "graviton_forward_positivity": {
+          "satisfied": true,
+          "margin": 0.03
+        },
+        "parity_violating_positivity": {
+          "satisfied": true,
+          "margin": 0.0975
+        },
+        "parity_violating_cubic_bound": {
+          "satisfied": true,
+          "margin": 0.15000000000000002
+        },
+        "ligo_birefringence_bound": {
+          "satisfied": true,
+          "margin": 0.1
+        },
+        "ligo_graviton_mass_bound": {
+          "satisfied": true,
+          "margin": 0.35
+        },
+        "swampland_distance_conjecture": {
+          "satisfied": true,
+          "margin": 16.0
+        },
+        "species_scale_bound": {
+          "satisfied": true,
+          "margin": 1.5
+        },
+        "gw_speed_bound": {
+          "satisfied": true,
+          "margin": 4.999912447916667e-16
+        },
+        "gw_dispersion_bound": {
+          "satisfied": true,
+          "margin": 0.7192697694923127
+        }
+      }
+    },
+    {
+      "framework": "lqg_induced",
+      "gw_swampland_all_satisfied": false,
+      "n_sector_constraints": 11,
+      "sector_failures": [
+        "graviton_forward_positivity"
+      ],
+      "sector": {
+        "graviton_mixed_positivity": {
+          "satisfied": true,
+          "margin": 0.18000000000000002
+        },
+        "cubic_graviton_matter_bound": {
+          "satisfied": true,
+          "margin": 0.06
+        },
+        "graviton_forward_positivity": {
+          "satisfied": false,
+          "margin": -0.06
+        },
+        "parity_violating_positivity": {
+          "satisfied": true,
+          "margin": 0.17360000000000003
+        },
+        "parity_violating_cubic_bound": {
+          "satisfied": true,
+          "margin": 0.26839999999999997
+        },
+        "ligo_birefringence_bound": {
+          "satisfied": true,
+          "margin": 0.020000000000000004
+        },
+        "ligo_graviton_mass_bound": {
+          "satisfied": true,
+          "margin": 0.2
+        },
+        "swampland_distance_conjecture": {
+          "satisfied": true,
+          "margin": 5.0
+        },
+        "species_scale_bound": {
+          "satisfied": true,
+          "margin": 0.7999999999999998
+        },
+        "gw_speed_bound": {
+          "satisfied": true,
+          "margin": 4.999824895833334e-16
+        },
+        "gw_dispersion_bound": {
+          "satisfied": true,
+          "margin": 0.4385395389846255
+        }
+      }
+    },
+    {
+      "framework": "cdt",
+      "gw_swampland_all_satisfied": true,
+      "n_sector_constraints": 11,
+      "sector_failures": [],
+      "sector": {
+        "graviton_mixed_positivity": {
+          "satisfied": true,
+          "margin": 0.17160000000000003
+        },
+        "cubic_graviton_matter_bound": {
+          "satisfied": true,
+          "margin": 0.15250000000000005
+        },
+        "graviton_forward_positivity": {
+          "satisfied": true,
+          "margin": 0.04000000000000001
+        },
+        "parity_violating_positivity": {
+          "satisfied": true,
+          "margin": 0.17160000000000003
+        },
+        "parity_violating_cubic_bound": {
+          "satisfied": true,
+          "margin": 0.28
+        },
+        "ligo_birefringence_bound": {
+          "satisfied": true,
+          "margin": 0.1
+        },
+        "ligo_graviton_mass_bound": {
+          "satisfied": true,
+          "margin": 0.28
+        },
+        "swampland_distance_conjecture": {
+          "satisfied": true,
+          "margin": 16.333333333333332
+        },
+        "species_scale_bound": {
+          "satisfied": true,
+          "margin": 1.26
+        },
+        "gw_speed_bound": {
+          "satisfied": true,
+          "margin": 4.999871590277778e-16
+        },
+        "gw_dispersion_bound": {
+          "satisfied": true,
+          "margin": 0.5882623285887254
+        }
+      }
+    }
+  ],
+  "cross_validation": [
+    {
+      "physics": "species scale",
+      "reconstructed": "v2.264: Lambda = M_Pl/sqrt(N) (d=4)",
+      "engine": "species_scale_bound: Lambda = M_Pl/N^{1/(d-2)}",
+      "match": "IDENTICAL form (d=4 -> 1/(d-2)=1/2)",
+      "agrees": true
+    },
+    {
+      "physics": "GW speed",
+      "reconstructed": "v2.251/v2.270: |dv/c| < ~5e-16 (GW170817)",
+      "engine": "gw_speed_bound: CGW_BOUND = 5e-16",
+      "match": "same source-backed bound",
+      "agrees": true
+    },
+    {
+      "physics": "GW dispersion",
+      "reconstructed": "v2.251: LVK energy-dependent dispersion",
+      "engine": "gw_dispersion_bound",
+      "match": "same physics (cumulative-phase)",
+      "agrees": true
+    },
+    {
+      "physics": "graviton mass",
+      "reconstructed": "v2.266: m_g < 1.2e-22 eV (GW150914, pure-GW)",
+      "engine": "ligo_graviton_mass_bound: 1.27e-23 eV (Will 2018, solar-system-combined)",
+      "match": "DOCUMENTED source-choice difference (engine uses the tighter combined value)",
+      "agrees": true
+    },
+    {
+      "physics": "parity / birefringence",
+      "reconstructed": "v2.252/v2.269: cosmic + GW birefringence (g_R2_parity)",
+      "engine": "cosmic_birefringence / parity sector",
+      "match": "same parity coupling",
+      "agrees": true
+    }
+  ],
+  "engine_CGW_BOUND": 5e-16,
+  "frameworks_passing_full_sector": [
+    "pure_gr",
+    "string_tree_eft",
+    "asymptotic_safety",
+    "cdt"
+  ],
+  "frameworks_failing_sector": {
+    "lqg_induced": [
+      "graviton_forward_positivity"
+    ]
+  },
+  "consistency_checks": {
+    "species_scale_form_matches_v264": true,
+    "engine_gw_speed_bound_is_5e_minus_16": true,
+    "cross_validation_table_all_agree": true,
+    "four_frameworks_satisfy_full_sector": true,
+    "lqg_flagged_by_forward_positivity_like_v262": true
+  },
+  "all_checks_pass": true,
+  "finding": "The long GW-phenomenology arc (v2.251-v2.280) and the engine are two views of the same physics, and they agree -- including, independently, on which framework is anomalous. The engine already encodes as live constraints exactly the bounds those cycles reconstructed: the species-scale cutoff Lambda = M_Pl/N^{1/(d-2)} is IDENTICAL in d=4 to the v2.264 derivation M_Pl/sqrt(N); the GW-speed bound CGW_BOUND = 5e-16 is the same source-backed GW170817 value as v2.251/v2.270; GW dispersion and parity/birefringence map onto v2.251 and v2.252/v2.269. The one numeric difference -- the engine's graviton-mass bound 1.27e-23 eV (Will 2018, solar-system-combined) vs the reconstruction's 1.2e-22 eV (GW150914, pure-GW) -- is a documented, legitimate source-choice difference (the engine uses the tighter combined value), not an inconsistency. Running the engine on all five frameworks, FOUR satisfy the entire GW + swampland + graviton-positivity sector (pure_gr, string_tree_eft, asymptotic_safety, cdt), and the lone failure is lqg_induced, which violates graviton_forward_positivity (margin -0.06) -- the forward-limit graviton dispersion positivity, which is EXACTLY the moment-tower / Hankel-positivity physics the v2.261/v2.262 cycles built. So the engine's graviton-positivity constraint INDEPENDENTLY reproduces the v2.262 result that lqg_induced is the marginal/anomalous framework (its moment ratio x = g_R3/g_R2 = 1 sits at the positivity boundary). Two strands -- the from-scratch positivity theory and the engine's encoded constraint -- agree both on the GW/swampland bounds and on lqg being the framework that fails them. This reconnects the reconstruction arc to the engine's machinery and cross-validates the v2.262 lqg flag.",
+  "honest_scope": "A cross-validation / consistency cycle: it verifies that the engine's encoded GW + swampland + graviton-positivity constraints agree with the independently reconstructed source-backed bounds (v2.251-v2.270) and that the engine's framework-level verdict on lqg matches the v2.262 moment-tower diagnostic -- it does NOT add a new constraint or change any coupling. The species-scale form match is exact; the numeric bound matches are at the source-value level; the graviton-mass case is a real, documented difference in which published bound is encoded, preserved honestly. The lqg failure is the engine's own verdict (margin -0.06 on graviton_forward_positivity), which this cycle reports and connects to v2.262 -- it does not re-derive the constraint. The frameworks' couplings and the engine's O(1) prefactors carry their usual representative-value caveat. A consistency result tying the phenomenology arc to the engine, using the real check()/frameworks() API.",
+  "references": [
+    "this repo: src/itb/constraints/{species_scale,gw_speed,gw_dispersion,ligo_graviton_mass}.py",
+    "this repo: v2.251 (LIV dispersion), v2.264 (species scale), v2.266 (graviton mass), v2.270 (GW/EM distance)",
+    "Bertotti, Iess, Tortora 2003 (Cassini); Will 2018 (graviton mass); Dvali 2010 (species scale)"
+  ]
+}

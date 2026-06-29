@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (391 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (392 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -440,3 +440,4 @@ Auto-generated front door to the full research program (391 notes). Regenerate w
 | v2.278 | [v2.278 - The Hulse-Taylor binary pulsar: the quadrupole formula and th](2026-06-29-v2.278-qnm-hulse-taylor-quadrupole.md) | A fresh sector stepping off the black-hole cycles: the cleanest classical confirmation that |
 | v2.279 | [v2.279 - The double pulsar PSR J0737-3039: general relativity's most s](2026-06-29-v2.279-qnm-double-pulsar.md) | The natural sequel to the v2.278 Hulse-Taylor pulsar. In the double pulsar BOTH neutron stars are |
 | v2.280 | [v2.280 - The four classic tests of general relativity and the PPN para](2026-06-29-v2.280-qnm-ppn-solar-system.md) | Continuing the classical-GR thread (v2.278/v2.279 binary pulsars, strong field) into the solar system |
+| v2.281 | [v2.281 - Cross-validating the engine's GW + swampland constraints agai](2026-06-29-v2.281-qnm-engine-gw-swampland-crossvalidation.md) | A deliberate RECONNECTION to the engine after a long classical-GR / GW-phenomenology arc |
