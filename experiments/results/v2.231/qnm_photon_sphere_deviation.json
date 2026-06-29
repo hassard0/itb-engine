@@ -1,0 +1,39 @@
+{
+  "version": "v2.231",
+  "method": "one-parameter photon-sphere deformation f = 1 - 2/r + eps/r^k (k=2,3,4); geodesic shadow radius / orbital frequency / Lyapunov rate sensitivities to eps; eikonal ringdown via Omega_c=1/b_c, lambda; M=1",
+  "sensitivities_per_profile": [
+    {
+      "k": 2,
+      "d_ln_b_c": -0.16666666679499317,
+      "d_ln_Omega_c": 0.16666666694960472,
+      "d_ln_lambda": 0.05555555534267495,
+      "locking_residual": 1.5461154578844116e-10,
+      "damping_minus_neg_b_c": -0.11111111145231822
+    },
+    {
+      "k": 3,
+      "d_ln_b_c": -0.05555555557724969,
+      "d_ln_Omega_c": 0.0555555555885738,
+      "d_ln_lambda": -0.037037037154235855,
+      "locking_residual": 1.1324108317722903e-11,
+      "damping_minus_neg_b_c": -0.09259259273148554
+    },
+    {
+      "k": 4,
+      "d_ln_b_c": -0.01851851852119176,
+      "d_ln_Omega_c": 0.018518518521592378,
+      "d_ln_lambda": -0.037037037059770316,
+      "locking_residual": 4.0061703954208383e-13,
+      "damping_minus_neg_b_c": -0.05555555558096208
+    }
+  ],
+  "locking_identity_universal": true,
+  "damping_independent": true,
+  "finding": "Two structural cross-channel results, both verified. (1) LOCKING: d ln(Omega_c) = -d ln(b_c) for EVERY deformation profile (residual < 1e-6) -- the eikonal ringdown frequency and the shadow radius shift by equal-and-opposite fractional amounts, a parametrization-independent identity (since Omega_c b_c = 1). So a measured shadow size predicts the ringdown frequency: a GW/EM null test of the photon-sphere hypothesis. (2) INDEPENDENT DAMPING: d ln(lambda) differs from -d ln(b_c) (e.g. k=3: d ln lambda = -0.0370 vs d ln Omega_c = +0.0556), because lambda probes the curvature f''(r_ph) independently of b_c. So shadow + ringdown frequency + ringdown damping OVER-DETERMINE a one-parameter deformation -- a consistency over-test that a single channel cannot provide.",
+  "honest_scope": "Eikonal (large-l) and static-spherical only: the locking identity is exact in the eikonal limit (finite-l O(1/l) corrections, v2.229/v2.230); Kerr/rotation breaks the spherical shadow and splits Omega_c != lambda. The deformation f=1-2/r+eps/r^k is illustrative (a generic photon-sphere bump), not a specific QG metric -- the LOCKING identity is metric-independent, but the per-profile coefficients are illustrative. Turning this into a real bound needs measured shadow + ringdown data and a chosen metric ansatz (not done here). This frames a QG null test; it does not itself constrain a coupling. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Cardoso et al., PRD 79 (2009) 064016 -- eikonal QNM / photon sphere / Lyapunov",
+    "Rezzolla & Zhidenko, PRD 90 (2014) 084009 -- parametrized non-Kerr deviations",
+    "this repo: v2.229 (eikonal correspondence), v2.230 (ringdown<->shadow)"
+  ]
+}
