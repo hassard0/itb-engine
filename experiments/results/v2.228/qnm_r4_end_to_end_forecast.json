@@ -1,0 +1,60 @@
+{
+  "version": "v2.228",
+  "method": "integrate v2.227 (covariance-corrected single-event no-hair damping reach, gamma_min(1 sigma)=0.133/rho) with v2.223 (population 1/sqrt(N) in gamma, ell~N^{-1/12}); n-sigma network reach gamma = n*0.133/(rho sqrt(N))",
+  "single_event_1sigma_coupling": "gamma_min = 0.133 / rho  (damping no-hair channel)",
+  "scenarios": [
+    {
+      "label": "current single event",
+      "rho": 10,
+      "N": 1,
+      "gamma_reach_5sigma": 0.06665,
+      "effective_snr": 10.0,
+      "ell_relative_reach": 0.6812920690579612
+    },
+    {
+      "label": "loud single event",
+      "rho": 30,
+      "N": 1,
+      "gamma_reach_5sigma": 0.022216666666666666,
+      "effective_snr": 30.0,
+      "ell_relative_reach": 0.5673004449747446
+    },
+    {
+      "label": "O4-era network",
+      "rho": 10,
+      "N": 50,
+      "gamma_reach_5sigma": 0.009425733393216678,
+      "effective_snr": 70.71067811865476,
+      "ell_relative_reach": 0.49175920684029467
+    },
+    {
+      "label": "3G/LISA loud event",
+      "rho": 100,
+      "N": 1,
+      "gamma_reach_5sigma": 0.006665,
+      "effective_snr": 100.0,
+      "ell_relative_reach": 0.4641588833612779
+    },
+    {
+      "label": "3G network",
+      "rho": 30,
+      "N": 1000,
+      "gamma_reach_5sigma": 0.0007025526868340749,
+      "effective_snr": 948.6832980505138,
+      "ell_relative_reach": 0.3190164840081726
+    }
+  ],
+  "lever_comparison": {
+    "gamma_reach_scales_as": "1 / (rho * sqrt(N))",
+    "ell_reach_scales_as": "(rho * sqrt(N))^{-1/6}",
+    "snr_vs_count": "per-event SNR and sqrt(N) enter gamma identically, but for the ELL scale a k-louder event equals k^2 events (v2.223) -- chase SNR"
+  },
+  "finding": "Integrated bottom line: the R4 ParSpec coupling reach is gamma_reach(5 sigma) = 0.665 / (rho sqrt(N)). A current single event (rho~10) reaches gamma ~ 0.067; an O4-era network (rho~10, N~50) reaches gamma ~ 0.0094; a 3G network (rho~30, N~1000) reaches gamma ~ 0.00070. The reach is dominated by the overtone damping channel (v2.217-v2.227) and limited on the length-scale axis by the steep p=6 power (ell ~ (rho sqrt N)^{-1/6}), so loud events dominate quiet populations (v2.223).",
+  "honest_scope": "Integrates prior-cycle results, each with its caveats: the covariance-corrected single-event number (v2.227, equal-amplitude white-noise two-mode Fisher), the population 1/sqrt(N) (v2.223, independent half-normal posteriors), and the source-backed overtone qEFT coefficient (v2.217, dtq_1=171.35, perturbatively valid for gamma << 6e-3 -- so the larger gamma_reach values at low rho*sqrt(N) are at the edge of linear validity). gamma is the ParSpec coupling; converting to an absolute ell in km needs the v2.215 normalization (not claimed here -- ell is reported as a relative scaling). Parity-odd g_R4_c3 stays dark (v2.209).",
+  "leaver_solver_foundation": "A high-accuracy Leaver continued-fraction solver (to close the v2.212 cross-multipole WKB-sensitivity gap) was scoped this cycle on Vulcan: the exact Regge-Wheeler recurrence polynomials were DERIVED symbolically (sympy, 2M=1 ansatz psi = e^{iwr}(r-1)^{-iw}r^{2iw} sum a_n ((r-1)/r)^n). The derivation reveals a 5-TERM recurrence (coupling a_k..a_{k-4}), not the textbook 3-term, so a validated solver requires a matrix continued fraction / Gaussian-elimination-to-3-term step (Leaver 1990). Foundation laid; the validated solver is deferred to a dedicated cycle rather than shipped unvalidated.",
+  "references": [
+    "this repo: v2.217 (overtone sensitivity), v2.223 (population), v2.227 (covariance no-hair)",
+    "Silva, Ghosh, Buonanno, PRD 107 (2023) 044030 -- qEFT coefficients / ParSpec power",
+    "Leaver, Proc. R. Soc. Lond. A 402 (1985) 285; J. Math. Phys. 27 (1990) 1238 (elimination)"
+  ]
+}
