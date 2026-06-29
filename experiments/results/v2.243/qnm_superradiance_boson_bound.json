@@ -1,0 +1,64 @@
+{
+  "version": "v2.243",
+  "method": "Kerr horizon angular velocity Omega_H(a*) -> superradiance condition mu < m Omega_H/M -> max superradiant alpha = m Omega_H -> physical boson mass via hbar c/(G M/c^2); G=c=1",
+  "horizon_angular_velocity": [
+    {
+      "a_star": 0.0,
+      "Omega_H": 0.0,
+      "alpha_max_m1": 0.0
+    },
+    {
+      "a_star": 0.5,
+      "Omega_H": 0.13397459621556135,
+      "alpha_max_m1": 0.13397459621556135
+    },
+    {
+      "a_star": 0.9,
+      "Omega_H": 0.3133945031366293,
+      "alpha_max_m1": 0.3133945031366293
+    },
+    {
+      "a_star": 0.998,
+      "Omega_H": 0.4693317021457332,
+      "alpha_max_m1": 0.4693317021457332
+    },
+    {
+      "a_star": 1.0,
+      "Omega_H": 0.5,
+      "alpha_max_m1": 0.5
+    }
+  ],
+  "extremal_Omega_H": 0.5,
+  "observed_spin_for_windows": 0.9,
+  "alpha_max_at_observed_spin": 0.3133945031366293,
+  "boson_mass_windows": [
+    {
+      "system": "stellar-mass (10 Msun)",
+      "mass_solar": 10.0,
+      "mu_max_eV": 4.188080530979389e-12
+    },
+    {
+      "system": "GW150914 remnant (~62 Msun)",
+      "mass_solar": 62.0,
+      "mu_max_eV": 6.754968598353853e-13
+    },
+    {
+      "system": "SMBH 1e6 Msun",
+      "mass_solar": 1000000.0,
+      "mu_max_eV": 4.188080530979389e-17
+    },
+    {
+      "system": "M87* (6.5e9 Msun)",
+      "mass_solar": 6500000000.0,
+      "mu_max_eV": 6.4432008168913674e-21
+    }
+  ],
+  "finding": "Black-hole spin is an ultralight-boson detector. The Kerr horizon angular velocity Omega_H rises from 0 (Schwarzschild) to the extremal 1/2 (a*=1), and the superradiance condition mu < m Omega_H/M means a fast-spinning hole (a* = 0.9, Omega_H = 0.313) amplifies and spins down on bosons up to alpha = M mu = 0.31 (m=1). Converting to physical mass, observed rapidly-spinning black holes across the mass spectrum exclude ultralight bosons in windows no laboratory reaches: a stellar-mass hole probes mu ~ 4.2e-12 eV, a GW150914-like remnant similar, and a supermassive hole down to mu ~ 6.4e-21 eV -- spanning the QCD axion, fuzzy-dark-matter (~1e-22 eV), and dark-photon windows. A measured high spin where superradiance WOULD have spun the hole down excludes that boson mass: the 'Regge-plane' gap.",
+  "honest_scope": "The superradiance CONDITION (mu < m Omega_H/M) and Omega_H(a*) are EXACT Kerr results (verified: Omega_H -> 1/2 extremal). The actual EXCLUSION additionally requires the instability GROWTH TIME to be shorter than the hole's spin-down/age timescale -- the Detweiler rate scales as alpha^{4l+5} (~alpha^9 for the dominant l=m=1 mode) and peaks near alpha ~ 0.4, so the real bound is a window in (mass, spin), not the full condition; that timescale calculation (and the cloud's GW signature) is the detailed step, not done here. The mass estimates use a representative a*=0.9 and alpha~Omega_H; published bounds (e.g. from GW/X-ray spin measurements) fold in the measured spin posteriors and ages. Self-contained order-of-magnitude reconstruction of a real BSM probe, not a new bound. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Zel'dovich (1971); Press & Teukolsky, Nature 238 (1972) 211 -- superradiance / BH bomb",
+    "Detweiler, PRD 22 (1980) 2323 -- massive-scalar superradiant growth rate",
+    "Arvanitaki & Dubovsky, PRD 83 (2011) 044026 -- black-hole superradiance / axiverse",
+    "this repo: v2.239 (Kerr horizon / spin)"
+  ]
+}
