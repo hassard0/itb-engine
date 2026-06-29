@@ -1,0 +1,52 @@
+{
+  "version": "v2.261",
+  "method": "curvature couplings g_R(k+2) as Stieltjes moments of a positive 3-state spectral density; Hankel and shifted-Hankel PSD checks; 2x2 minor vs the v2.234 bound; a swampland (non-moment) counterexample",
+  "spectral_density": {
+    "weights": [
+      0.5,
+      0.3,
+      0.2
+    ],
+    "masses_squared": [
+      1.0,
+      2.0,
+      4.0
+    ]
+  },
+  "curvature_couplings": {
+    "g_R2": 1.0,
+    "g_R3": 1.9,
+    "g_R4": 4.9,
+    "g_R5": 15.700000000000001,
+    "g_R6": 56.5
+  },
+  "hankel_2x2_minor": 1.29,
+  "v234_bound_g_R2_g_R4_minus_g_R3_sq": 1.2900000000000005,
+  "minor_matches_v234": true,
+  "hankel_tower": [
+    {
+      "size": 2,
+      "hankel_psd": true,
+      "shifted_stieltjes_psd": true
+    },
+    {
+      "size": 3,
+      "hankel_psd": true,
+      "shifted_stieltjes_psd": true
+    },
+    {
+      "size": 4,
+      "hankel_psd": true,
+      "shifted_stieltjes_psd": true
+    }
+  ],
+  "all_hankel_psd": true,
+  "swampland_counterexample_violates_hankel": true,
+  "finding": "The curvature dispersion tower has a complete positivity structure: the higher-curvature couplings of any consistent UV completion are a STIELTJES MOMENT SEQUENCE (moments of a positive spectral density), so ALL Hankel matrices -- not just one bound -- must be positive-semidefinite. The v2.234 result g_R4 >= g_R3^2/g_R2 is exactly the 2x2 Hankel minor (det = 1.2900, identical to the v2.234 expression), and the full tower (verified here to the 4x4 Hankel and 4x4 shifted-Stieltjes level, all PSD for a 3-state spectral density) is the complete EFT-hedron constraint hierarchy -- of which the engine's dispersion_tower (g_6^2 <= g_4 g_8) encodes a single 2x2 slice. The converse is the swampland criterion: a coupling sequence violating ANY Hankel minor (e.g. g_R4 dropped 20% below g_R3^2/g_R2 -> the 2x2 Hankel is no longer PSD) has NO positive spectral representation and so NO quantum-gravity UV completion. This promotes the v2.234 single-bound mandate to the full moment-sequence / Hankel-positivity structure -- the rigorous theory behind the engine's positivity constraints.",
+  "honest_scope": "The moment-sequence / Hankel-positivity structure is the EXACT EFT-hedron statement for couplings that are forward-limit moments of a positive (unitary) spectral density; the mapping of the engine's specific curvature operators (g_R2, g_R3, ...) onto the moment index requires the literal dispersion-relation derivation with its Gegenbauer/spin weights (the engine uses representative O(1) prefactors, as its dispersion_tower docstring flags) -- so the INDEXING here (g_R(k+2) <-> m_k) is the representative structural form, not the operator-exact moment map. The PSD checks and the swampland counterexample are exact for the constructed sequence. This is a theory-structure result extending v2.234, not a new bound on a measured coupling. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Caron-Huot, Mazac, Rastelli, Simmons-Duffin, JHEP 07 (2021) 110 -- the EFT-hedron / moments",
+    "Bellazzini, Riva et al. -- positivity / moment problem for EFT coefficients",
+    "this repo: v2.234 (g_R4 dispersion-tower mandate); engine dispersion_tower"
+  ]
+}

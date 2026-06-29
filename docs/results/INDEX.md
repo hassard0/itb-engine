@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (371 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (372 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -420,3 +420,4 @@ Auto-generated front door to the full research program (371 notes). Regenerate w
 | v2.258 | [v2.258 - The holographic bound, the Bekenstein bound, and the cosmic e](2026-06-29-v2.258-qnm-holographic-bound.md) | Continuing the entropy thread (v2.257), reconnecting to the engine's `bh_entropy_positivity` / |
 | v2.259 | [v2.259 - The cosmological constant problem: 'the worst prediction in p](2026-06-29-v2.259-qnm-cosmological-constant-problem.md) | A fresh fundamental-QG cycle, connecting to the engine's `cc_naturalness` experiment. The observed |
 | v2.260 | [v2.260 - Leaver continued-fraction machinery (validated) + an honest b](2026-06-29-v2.260-qnm-leaver-continued-fraction.md) | A focused, serious attempt at the high-accuracy Leaver QNM solver -- the infrastructure that would |
+| v2.261 | [v2.261 - The curvature dispersion tower as a Stieltjes moment sequence](2026-06-29-v2.261-qnm-curvature-moment-tower.md) | A genuinely novel theory advance extending v2.234 (which mandated `g_R4 >= g_R3^2/g_R2` from the |
