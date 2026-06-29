@@ -1,0 +1,57 @@
+{
+  "version": "v2.269",
+  "method": "circular polarizations e_{R,L}=(e_plus +/- i e_cross)/sqrt2 as helicity +/-2 eigenstates; Chern-Simons amplitude birefringence h_{R,L}=h^GR exp(+/-zeta), zeta~kappa k D; induced Stokes V=tanh(2 zeta) on a linear source",
+  "helicity_eigenvalues": {
+    "R": [
+      0.7384685587295879,
+      -0.674287911628145
+    ],
+    "L": [
+      0.7384685587295879,
+      0.674287911628145
+    ],
+    "expected_R": [
+      0.7384685587295879,
+      -0.674287911628145
+    ]
+  },
+  "birefringence_bands": [
+    {
+      "f_hz": 35.0,
+      "zeta": 9.05466104107361e-09,
+      "induced_V": 1.8109322082147218e-08,
+      "amp_ratio_R_over_L": 1.0000000181093223
+    },
+    {
+      "f_hz": 100.0,
+      "zeta": 2.5870460117353173e-08,
+      "induced_V": 5.17409202347063e-08,
+      "amp_ratio_R_over_L": 1.0000000517409215
+    },
+    {
+      "f_hz": 250.0,
+      "zeta": 6.467615029338293e-08,
+      "induced_V": 1.2935230058676514e-07,
+      "amp_ratio_R_over_L": 1.0000001293523089
+    }
+  ],
+  "gr_limit_induced_V": 0.0,
+  "representative_kappa_bound_for_V_below_0p1": 1.9391875381407205e-21,
+  "consistency_checks": {
+    "circular_modes_are_helicity_pm2": true,
+    "circular_modes_orthonormal": true,
+    "gr_limit_has_no_induced_polarization": true,
+    "birefringence_is_chromatic": true,
+    "induced_V_is_tanh_2zeta": true
+  },
+  "all_checks_pass": true,
+  "engine_link": "the parity coupling kappa is the engine's gravitational-Chern-Simons / Pontryagin sector g_R2_parity (the same parity axis whose dim-4 photon analog gives the v2.252 cosmic-birefringence hint); GW amplitude birefringence is its graviton-helicity face",
+  "finding": "Parity-violating (Chern-Simons) gravity splits the two graviton helicities as they propagate: the right/left circular polarizations -- exact helicity +/-2 eigenstates built from the plus/cross tensors (verified: a rotation by psi about the line of sight multiplies them by exp(-/+2 i psi)) -- are amplified and damped by h_{R,L}=h^GR exp(+/-zeta) with zeta ~ kappa k D growing linearly with frequency and distance. The clean signature is a propagation-induced net circular polarization on an intrinsically LINEAR (edge-on, Stokes V=0 in GR) source: V = tanh(2 zeta), nonzero ONLY if gravity violates parity, and CHROMATIC (zeta ~ f, verified) -- which distinguishes it from any achromatic source effect or an inclination-driven intrinsic circular polarization. In the parity-conserving (GR) limit zeta=0 the induced V vanishes exactly. This is the graviton analog of the v2.252 cosmic birefringence (an electromagnetic Chern-Simons term rotating photon polarization), the same parity axis the engine carries as g_R2_parity, and a concrete falsifiable test: a measured frequency-dependent circular-polarization excess in a GW signal would be smoking-gun parity violation in gravity.",
+  "honest_scope": "The helicity-eigenstate result and the induced-V = tanh(2 zeta) formula are EXACT for the model. The amplitude-birefringence form zeta ~ kappa k D is the standard LEADING Chern-Simons parametrization (Alexander-Yunes); the actual zeta is an integral of the CS scalar's evolution (proportional to the time-derivative of the coupling) along the line of sight, so kappa here is a representative effective coupling in illustrative units, NOT a calibrated physical value -- the representative_kappa_bound is therefore an illustration of how a V<0.1 measurement maps to a coupling bound, not a re-derivation of the published LVC limit. Real sources have an intrinsic inclination-dependent circular polarization that must be modelled to extract the propagation part (the chromaticity is the discriminant). A GW-propagation / parity-test result, not an engine constraint refit.",
+  "references": [
+    "Alexander, Yunes, 'Chern-Simons Modified General Relativity', Phys. Rept. 480 (2009) 1",
+    "Yunes, Mirshekari, ... amplitude/velocity birefringence of GWs in parity-violating gravity",
+    "Okounkova et al.; Ng et al. -- LIGO/Virgo birefringence constraints",
+    "this repo: v2.252 (cosmic birefringence, photon CS), v2.268 (GW polarizations)"
+  ]
+}
