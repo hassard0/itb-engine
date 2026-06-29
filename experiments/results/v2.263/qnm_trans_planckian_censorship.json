@@ -1,0 +1,75 @@
+{
+  "version": "v2.263",
+  "method": "Trans-Planckian Censorship Conjecture e^N < M_Pl/H_f translated to a tensor bound via the v2.253 slow-roll relations: r_max(N)=2 e^{-2N}/(pi^2 A_s), V^{1/4}_max=(3/2 pi^2 A_s r_max)^{1/4} M_Pl; reduced M_Pl=2.435e18 GeV, A_s=2.1e-9",
+  "scalar_amplitude": 2.1e-09,
+  "reduced_M_Pl_gev": 2.435e+18,
+  "tcc_bounds": [
+    {
+      "N_efolds": 44.0,
+      "H_max_gev": 0.18947057007160795,
+      "r_max": 5.84247076690657e-31,
+      "V_quarter_max_gev": 893924164.7108333,
+      "orders_below_CMB_S4": 27.233403451944366,
+      "roundtrip_H_consistent": true
+    },
+    {
+      "N_efolds": 50.0,
+      "H_max_gev": 0.000469650587979214,
+      "r_max": 3.589738105998629e-36,
+      "V_quarter_max_gev": 44505863.50414392,
+      "orders_below_CMB_S4": 32.44493723478339,
+      "roundtrip_H_consistent": true
+    },
+    {
+      "N_efolds": 60.0,
+      "H_max_gev": 2.1322103707166027e-08,
+      "r_max": 7.399001700784802e-45,
+      "V_quarter_max_gev": 299878.149439454,
+      "orders_below_CMB_S4": 41.130826872848424,
+      "roundtrip_H_consistent": true
+    },
+    {
+      "N_efolds": 70.0,
+      "H_max_gev": 9.680220106937555e-13,
+      "r_max": 1.5250479158001645e-53,
+      "V_quarter_max_gev": 2020.5630771068722,
+      "orders_below_CMB_S4": 49.81671651091346,
+      "roundtrip_H_consistent": true
+    }
+  ],
+  "bedroya_vafa_anchor": {
+    "N_efolds": 44.0,
+    "V_quarter_max_gev": 893924164.7108333,
+    "r_max": 5.84247076690657e-31,
+    "reproduces_bedroya_vafa_order": true
+  },
+  "detection_floor_gaps": [
+    {
+      "r": 0.036,
+      "label": "current bound (BICEP/Keck 2021)",
+      "orders_above_tcc_N44": 28.789705952711653
+    },
+    {
+      "r": 0.001,
+      "label": "CMB-S4 / LiteBIRD reach",
+      "orders_above_tcc_N44": 27.233403451944366
+    },
+    {
+      "r": 1e-05,
+      "label": "cosmic-variance / ultimate CMB",
+      "orders_above_tcc_N44": 25.233403451944366
+    },
+    {
+      "r": 1e-06,
+      "label": "speculative far-future floor",
+      "orders_above_tcc_N44": 24.233403451944366
+    }
+  ],
+  "finding": "The TCC caps the inflationary Hubble rate at H < M_Pl e^{-N}, which (via the measured A_s) caps the tensor-to-scalar ratio at r_max(N) = 2 e^{-2N}/(pi^2 A_s). Even for the most generous e-fold count N ~ 44 (the CMB-pivot value), r_max ~ 6e-31 and V^{1/4}_max ~ 1e9 GeV -- reproducing the Bedroya-Vafa headline (V^{1/4} <~ 6e8 GeV, r <~ 1e-30) to order of magnitude. That is ~27 orders of magnitude below the CMB-S4 / LiteBIRD reach (r ~ 1e-3) and ~24 below even a speculative r ~ 1e-6 floor. So the TCC predicts primordial gravitational waves are FOREVER unobservable, and conversely a single B-mode detection at r > ~1e-3 would FALSIFY the conjecture -- a sharp, decidable QG-consistency test. This is exponentially stronger than the v2.255 Swampland Distance Conjecture, which only mildly prefers small r (sub-Planckian field excursion); the two swampland criteria agree in DIRECTION (both push r down) but the TCC is the aggressive one. The round-trip H(r) <-> H_max(N) is self-consistent to 1e-9 for every N.",
+  "honest_scope": "The TCC is a conjecture, not a theorem; the bound assumes a single near-constant-H accelerating phase of N e-folds and uses the leading slow-roll tensor relation (exact at that order, as in v2.253). The result is exponentially sensitive to N (r_max ~ e^{-2N}): N=44 -> 6e-31, N=60 -> 7e-45 -- so the specific ceiling is order-of-magnitude, but the QUALITATIVE conclusion (r unobservably small for any plausible N >~ 40) is robust across the whole range. A_s is measured and M_Pl fixed (reduced convention). Multi-field or non-standard-thermal-history inflation can relax the e-fold bookkeeping; this is the vanilla single-field statement. A QG-consistency / falsifiability result, not an engine constraint refit.",
+  "references": [
+    "Bedroya, Vafa, 'Trans-Planckian Censorship and the Swampland', JHEP 09 (2020) 123, arXiv:1909.11063",
+    "Bedroya, Brandenberger, Loverde, Vafa, 'Trans-Planckian Censorship and Inflationary Cosmology', PRD 101 (2020) 103502",
+    "this repo: v2.253 (inflation tensor spectrum), v2.255 (Swampland Distance Conjecture)"
+  ]
+}
