@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (348 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (349 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -397,3 +397,4 @@ Auto-generated front door to the full research program (348 notes). Regenerate w
 | v2.235 | [v2.235 - The black-hole tidal Love number vanishes: the 'is it really ](2026-06-29-v2.235-qnm-tidal-love-number.md) | A fresh, self-contained observable distinct from ringdown: the static tidal RESPONSE rather than the |
 | v2.236 | [v2.236 - How a deformation lifts the GR-zero tidal Love number: the ne](2026-06-29-v2.236-qnm-love-number-deformation.md) | Any localized deformation lifts the GR-zero Love number, linearly in the deformation strength. |
 | v2.237 | [v2.237 - The ISCO and accretion efficiency: the matter-orbit companion](2026-06-29-v2.237-qnm-isco-accretion.md) | Where the photon sphere (`r = 3M`) governs light (ringdown, shadow), the innermost stable circular |
+| v2.238 | [v2.238 - Unified deformation fingerprint: one non-Kerr parameter, all ](2026-06-29-v2.238-qnm-unified-deformation-fingerprint.md) | The v2.229-v2.237 sub-program built the strong-field black-hole observables one at a time -- photon |

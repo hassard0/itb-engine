@@ -1,0 +1,54 @@
+{
+  "version": "v2.238",
+  "method": "single deformation f=1-2/r+eps/r^3; assemble the fractional response of all geodesic/eikonal strong-field observables (v2.231 photon sphere + v2.237 ISCO); M=1",
+  "gr_baseline": {
+    "shadow_b_c": 5.196152422706632,
+    "ringdown_freq_Omega_c": 0.19245008972987526,
+    "ringdown_damping_lambda": 0.19245008972987526,
+    "isco_radius": 5.999999895789342,
+    "accretion_efficiency": 0.057190958417936644,
+    "merger_freq_Omega_isco": 0.0680413835166365
+  },
+  "channel": {
+    "shadow_b_c": "EM",
+    "ringdown_freq_Omega_c": "GW",
+    "ringdown_damping_lambda": "GW",
+    "isco_radius": "geom",
+    "accretion_efficiency": "EM",
+    "merger_freq_Omega_isco": "GW"
+  },
+  "fractional_sensitivity_d_ln_d_eps": {
+    "shadow_b_c": -0.05555555557724969,
+    "ringdown_freq_Omega_c": 0.0555555555885738,
+    "ringdown_damping_lambda": -0.037037037154235855,
+    "isco_radius": -0.08788866445094426,
+    "accretion_efficiency": 0.07632074713979499,
+    "merger_freq_Omega_isco": 0.11099966074546708
+  },
+  "absolute_sensitivity_d_d_eps": {
+    "shadow_b_c": -0.2886751347075389,
+    "ringdown_freq_Omega_c": 0.010691671658014101,
+    "ringdown_damping_lambda": -0.007127781123661414,
+    "isco_radius": -0.52733197754673,
+    "accretion_efficiency": 0.004364856676097872,
+    "merger_freq_Omega_isco": 0.007552570486998866
+  },
+  "shadow_ringdown_locking_residual": 1.1324108317722903e-11,
+  "fingerprint": {
+    "EM_channels": {
+      "shadow_b_c": -0.05555555557724969,
+      "accretion_efficiency": 0.07632074713979499
+    },
+    "GW_channels": {
+      "ringdown_freq_Omega_c": 0.0555555555885738,
+      "ringdown_damping_lambda": -0.037037037154235855,
+      "merger_freq_Omega_isco": 0.11099966074546708
+    }
+  },
+  "finding": "A single non-Kerr deformation (eps/r^3) imprints a COHERENT fingerprint across every strong-field observable, each reproduced at its GR baseline (shadow b_c=5.196, ringdown Omega_c=lambda=0.1925, ISCO r=6, efficiency 5.72%, merger Omega=0.0680). The fractional responses d ln/d eps: shadow shrinks (-0.056) while the ringdown frequency rises (+0.056) -- EXACTLY locked (residual 1.1e-11, the Omega_c=1/b_c identity, v2.231); the ringdown damping (-0.037), ISCO radius (-0.088), accretion efficiency (+0.076), and merger frequency (+0.111) respond INDEPENDENTLY. So the same deformation raises the disk efficiency and merger frequency (both up) while shrinking the shadow and pulling the ISCO inward -- a correlated EM+GW signature: the shadow (EM imaging), ringdown (GW post-merger), disk efficiency (EM luminosity), and merger frequency (GW inspiral) are NOT independent knobs but one deformation seen six ways, which is what makes it falsifiable across channels.",
+  "honest_scope": "Eikonal (large-l) ringdown + static-spherical Schwarzschild baseline + linear deformation response (the v2.229-v2.237 caveats compound here). The deformation eps/r^3 is illustrative, not a derived QG metric; Kerr/rotation would split the locked channels and add frame-dragging. This is a SYNTHESIS of the prior validated cycles (each channel reproduces its baseline), assembling the joint fingerprint -- not a new measurement or bound. The static tidal Love number (v2.235/v2.236) is the complementary static channel (different machinery), also lifted by the deformation. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "this repo: v2.229-v2.232 (photon sphere / shadow / deviation), v2.237 (ISCO), v2.235-236 (tidal)",
+    "Cardoso et al., PRD 79 (2009) 064016; Bardeen-Press-Teukolsky, ApJ 178 (1972) 347"
+  ]
+}
