@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (380 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (381 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -429,3 +429,4 @@ Auto-generated front door to the full research program (380 notes). Regenerate w
 | v2.267 | [v2.267 - The gravitational-wave memory effect and the infrared triangl](2026-06-29-v2.267-qnm-gw-memory-infrared-triangle.md) | A fresh QG-structure / GW-observable thread (continuing v2.266). A passing gravitational-wave burst |
 | v2.268 | [v2.268 - GW polarization content: GR's two modes vs the six of a gener](2026-06-29-v2.268-qnm-gw-polarizations.md) | A fresh falsifiable-gravity probe (continuing the v2.266/v2.267 GW thread). A massless spin-2 metric |
 | v2.269 | [v2.269 - GW amplitude birefringence: parity-violating gravity splits t](2026-06-29-v2.269-qnm-gw-birefringence.md) | A fresh GW-propagation probe (continuing the v2.266-v2.268 GW thread) and the graviton analog of the |
+| v2.270 | [v2.270 - The GW vs EM luminosity-distance ratio: a standard-siren test](2026-06-29-v2.270-qnm-gw-em-distance-ratio.md) | A fresh GW-propagation probe (continuing v2.266-v2.269) and the achromatic-AMPLITUDE partner of the |
