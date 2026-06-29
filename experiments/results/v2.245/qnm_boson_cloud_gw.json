@@ -1,0 +1,61 @@
+{
+  "version": "v2.245",
+  "method": "boson-annihilation GW frequency f = mu c^2/(pi hbar) applied to the v2.244 superradiance-excluded boson-mass windows; assign detector bands",
+  "cloud_gw_bands": [
+    {
+      "system": "stellar BH (10 Msun, a*=0.9, 1 Gyr)",
+      "mu_window_eV": [
+        1.0690884464309901e-13,
+        4.176126743871055e-12
+      ],
+      "f_gw_hz": [
+        51.70089171949855,
+        2019.566082792912
+      ],
+      "band": "LIGO/Virgo/KAGRA (10-2000 Hz)"
+    },
+    {
+      "system": "GW150914-like remnant (62 Msun, a*=0.7, 10 Gyr)",
+      "mu_window_eV": [
+        1.724336203920952e-14,
+        4.386280218723921e-13
+      ],
+      "f_gw_hz": [
+        8.338853503144927,
+        212.11958598624906
+      ],
+      "band": "LIGO/Virgo/KAGRA (10-2000 Hz)"
+    },
+    {
+      "system": "SMBH (1e6 Msun, a*=0.9, 10 Gyr)",
+      "mu_window_eV": [
+        3.407719422998781e-18,
+        4.176126743871055e-17
+      ],
+      "f_gw_hz": [
+        0.0016479659235590163,
+        0.02019566082792912
+      ],
+      "band": "LISA (0.1-100 mHz)"
+    },
+    {
+      "system": "M87* (6.5e9 Msun, a*=0.9, 10 Gyr)",
+      "mu_window_eV": [
+        1.5933529730461874e-21,
+        6.424810375186238e-21
+      ],
+      "f_gw_hz": [
+        7.70542136204065e-07,
+        3.107024742758326e-06
+      ],
+      "band": "PTA / nHz"
+    }
+  ],
+  "finding": "The superradiant boson cloud is a continuous-wave GW source whose frequency (f = mu c^2/(pi hbar)) maps the superradiance boson-mass windows DIRECTLY onto detector bands: stellar-mass black-hole clouds radiate at ~52-2020 Hz (LIGO/Virgo/KAGRA), a supermassive (1e6 Msun) cloud at mHz (LISA), and an M87*-scale cloud at micro-Hz (PTA/nHz). So superradiance is a TWO-SIDED probe: a measured high spin excludes a boson (indirect, v2.243/v2.244) AND predicts a nearly-monochromatic GW line at a definite frequency that a continuous-wave search can directly target. The same physics that makes black-hole spin an ultralight-boson detector also makes the boson cloud a gravitational-wave beacon, with the detector band set simply by the black-hole mass.",
+  "honest_scope": "The annihilation FREQUENCY f = mu c^2/(pi hbar) is exact at leading order (small alpha^2 binding corrections and a tiny secular spin-up as the cloud depletes are neglected -- the signal is monochromatic to high precision, the basis of continuous-wave searches). The detector-band mapping is robust; the STRAIN amplitude / detectability (which sets whether each source is actually seen) depends on the cloud mass (~a few % of M), distance, and search coherence -- not computed here. The boson-mass windows are the v2.244 representative ones (their caveats carry). This is the frequency/band reconstruction of the direct-detection channel, not a detectability forecast. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Arvanitaki & Dubovsky, PRD 83 (2011) 044026 -- boson annihilation GW signal",
+    "Brito, Cardoso, Pani, Lect. Notes Phys. 906 (2015); Brito et al., PRD 96 (2017) 064050",
+    "this repo: v2.243/v2.244 (superradiance condition / Regge exclusion)"
+  ]
+}
