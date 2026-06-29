@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (319 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (320 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -368,3 +368,4 @@ Auto-generated front door to the full research program (319 notes). Regenerate w
 | v2.206 | [v2.206 - R4 ParSpec public-likelihood packet gate](2026-06-21-v2.206-r4-parspec-public-likelihood-packet.md) | After v2.205 closed the current pyRing-to-Bresciani orientation route as a |
 | v2.207 | [v2.207 - R4 ParSpec qNM-to-Bresciani source-route graph](2026-06-21-v2.207-r4-parspec-qnm-bresciani-source-route-graph.md) | After v2.206 confirmed that no public machine-readable ParSpec/qEFT likelihood |
 | v2.208 | [v2.208 - R4 ParSpec pyRing likelihood-rerun packet](2026-06-21-v2.208-r4-parspec-pyring-likelihood-rerun-packet.md) | After v2.207 identified a pyRing EFT likelihood rerun as the best executable |
+| v2.209 | [v2.209 - R4 ParSpec qNM-to-Bresciani sourceable-rank determination](2026-06-29-v2.209-r4-parspec-qnm-sourceable-rank-determination.md) | v2.200 defined the gate (a claim-grade bridge needs a source-backed rank-3 3x4 |

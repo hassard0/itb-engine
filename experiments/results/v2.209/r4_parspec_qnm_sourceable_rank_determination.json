@@ -1,0 +1,142 @@
+{
+  "version": "v2.209",
+  "basis": [
+    "v2.175_bresciani_r4_axis_dictionary",
+    "v2.200_qnm_to_bresciani_gate",
+    "v2.205_pyring_to_bresciani_orientation_no_map",
+    "v2.207_qnm_bresciani_source_route_graph"
+  ],
+  "engine_axes": [
+    "g_R4_c1",
+    "g_R4_c2",
+    "g_R4_c3"
+  ],
+  "qnm_axes": [
+    "delta_omega_qeft_0",
+    "delta_tau_qeft_0",
+    "delta_omega_qeft_1",
+    "delta_tau_qeft_1"
+  ],
+  "literature_provisions": {
+    "bresciani_operator_basis": {
+      "url": "https://arxiv.org/abs/2504.12855",
+      "role": "operator_basis_only",
+      "provides": [
+        "three real quartic operators (Q2)^2, (Q2tilde)^2, Q2.Q2tilde",
+        "c_plus = c1 + c2 in R (parity-even); c_minus = c1 - c2 + i*c3 in C",
+        "partial-wave unitarity / positivity constraints on the Wilson coefficients"
+      ],
+      "does_not_provide": [
+        "any black-hole / QNM / ringdown apparatus",
+        "any map from QNM deformation axes to c1/c2/c3"
+      ],
+      "evidence": "Fetched 2026-06-29: pure scattering-amplitude/positivity paper; the s=2 sector has exactly three real coefficients c1,c2,c3; zero QNM content."
+    },
+    "qeft_public_ringdown_analysis": {
+      "url": "https://arxiv.org/abs/2411.17893",
+      "role": "public_ringdown_likelihood_analysis",
+      "provides": [
+        "real GW150914/GW200129 ringdown likelihoods over EFT operators",
+        "single combined length scale ell per theory family (rank 1)",
+        "parity-even cubic and two parity-even quartic theories",
+        "the ell <~ 35 km combined bound"
+      ],
+      "does_not_provide": [
+        "a joint multi-operator covariance over the parity-even quartic axes",
+        "any constraint on the parity-odd / CP-violating quartic operator"
+      ],
+      "evidence": "Fetched 2026-06-29: 'we can always set lambda = +/- 1' (rank 1 per theory); 'we leave such [parity-violating] extension to future study'."
+    },
+    "cano_qnm_shift_computation": {
+      "url": "https://arxiv.org/abs/2307.07431",
+      "secondary_url": "https://arxiv.org/abs/2110.11378",
+      "role": "qnm_shift_theory_no_public_likelihood",
+      "provides": [
+        "computed QNM frequency/damping shifts for higher-derivative operators",
+        "odd- and even-parity master equations; parity-violating coupling under spin"
+      ],
+      "does_not_provide": [
+        "a public likelihood/posterior over the operator coefficients",
+        "a source-backed field-redefinition map into the Bresciani c-basis"
+      ],
+      "evidence": "Fetched 2026-06-29: parity-violating corrections couple even at linear order for rotating black holes; rotation enhances shifts ~order of magnitude vs static; computable in principle, unmeasured (no public likelihood)."
+    }
+  },
+  "determination": {
+    "determination_id": "qnm_to_bresciani_sourceable_rank_determination_v1",
+    "required_rank_for_claim_grade_map": 3,
+    "operator_basis_rank_source_backed": 3,
+    "operator_basis_has_qnm_map": false,
+    "public_analysis_realized_rank_per_theory": 1,
+    "max_parity_even_sourceable_rank": 2,
+    "source_backed_observable_rank": 2,
+    "dark_axes": [
+      "g_R4_c3"
+    ],
+    "full_rank_3_qnm_to_bresciani_source_backed": false,
+    "observability_incidence": {
+      "observable_engine_axes": [
+        "g_R4_c1",
+        "g_R4_c2"
+      ],
+      "incidence_rows_are_observable_axes": true,
+      "incidence_columns": [
+        "g_R4_c1",
+        "g_R4_c2",
+        "g_R4_c3"
+      ],
+      "incidence": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "incidence_rank": 2
+    },
+    "engine_axis_observability": {
+      "g_R4_c1": {
+        "parity": "even",
+        "bresciani_operator": "real part of c_plus / c_minus (parity-even quartic)",
+        "public_qnm_observable": true,
+        "citing_source": "https://arxiv.org/abs/2411.17893",
+        "note": "Parity-even quartic direction; constrained by the public qEFT ringdown analysis as a single-ell theory (rank 1)."
+      },
+      "g_R4_c2": {
+        "parity": "even",
+        "bresciani_operator": "Re(c_minus) (parity-even quartic)",
+        "public_qnm_observable": true,
+        "citing_source": "https://arxiv.org/abs/2411.17893",
+        "note": "Second parity-even quartic direction; the qEFT analysis bounds distinct parity-even quartic theories separately (each rank 1), so two parity-even directions are sourceable in principle but are not jointly covariance-fit in the public analysis."
+      },
+      "g_R4_c3": {
+        "parity": "odd",
+        "bresciani_operator": "Im(c_minus) = Q2.Q2tilde (parity-odd / CP-violating)",
+        "public_qnm_observable": false,
+        "citing_source": "https://arxiv.org/abs/2411.17893",
+        "note": "Parity-odd / CP-violating quartic operator. Explicitly deferred by the public qEFT ringdown analysis ('we leave such extension to future study'). Enters QNMs only via rotation-induced parity mixing (Cano et al.) with no attached public likelihood. DARK axis: not source-backed-observable."
+      }
+    },
+    "verdict": "A source-backed rank-3 qNM-to-Bresciani map does NOT exist. The Bresciani operator basis is rank 3 but carries no QNM map; the only public ringdown analysis is rank 1 per parity-even theory (max parity-even sourceable rank 2 across the two separately-bounded quartic theories); and the parity-odd third axis g_R4_c3 = Im(K_minus) is explicitly deferred, hence dark. The negative result is preserved; no projection is manufactured."
+  },
+  "resolves": [
+    "sourceable_rank_determined_from_public_sources",
+    "parity_odd_third_axis_identified_as_dark"
+  ],
+  "does_not_resolve": [
+    "qnm_deformation_to_bresciani_engine_r4_map_missing",
+    "public_parspec_qeft_likelihood_or_posterior_samples_missing",
+    "claim_grade_systematics_export_missing",
+    "external_adversarial_review_missing"
+  ],
+  "framework_claims_ready_now": false,
+  "route_status": "qnm_to_bresciani_full_rank_unsourceable_parity_odd_axis_dark",
+  "correct_claim": "Public sources cap the qNM-to-Bresciani sensitivity at the parity-even quartic subspace (rank 1 per theory in the published analysis). The parity-odd engine axis g_R4_c3 is unconstrained by current ringdown observables, so a full-rank R4 ringdown discriminator is not source-backed.",
+  "incorrect_claim": "The repo can invert ringdown data into all three Bresciani R4 axes, or constrains the CP-violating quartic operator from current ringdown.",
+  "selected_next_build_action": "either execute the v2.208 pyRing rank-1 parity-even runtime likelihood as a nonclaiming null test, or seek a polarization/rotation-resolved source that constrains the parity-odd axis; do not manufacture the dark direction"
+}

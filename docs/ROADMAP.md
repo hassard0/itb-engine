@@ -28,10 +28,21 @@ The strongest live-data route is the R4/GWOSC/ParSpec path. The repo can now:
   grid, runtime-coordinate policy, and an output contract for posterior samples
   or a log-likelihood grid.
 
-The decisive current blocker is still unresolved:
+The decisive current blocker is still unresolved as a *map*, but v2.209 now determines
+its sourceable rank from the primary literature (fetched 2026-06-29): a source-backed
+**rank-3** qNM-to-Bresciani map does NOT exist. The Bresciani operator basis
+(arXiv:2504.12855) is rank 3 but carries no QNM apparatus; the only public ringdown
+analysis (arXiv:2411.17893) is **rank 1 per parity-even theory** and **explicitly defers
+the parity-violating sector**, so the engine's third axis `g_R4_c3 = Im(c_minus)` (the
+parity-odd `Q2.Q2tilde` operator) is a **dark axis** — unconstrained by current ringdown
+observables. The defensible R4 ringdown product is therefore at most a parity-even,
+rank-1-per-theory nonclaiming null test; a full-rank discriminator needs a
+polarization/rotation-resolved source for the parity-odd operator that does not yet exist
+in public form.
 
 ```text
-qnm_deformation_to_bresciani_engine_r4_map_missing
+qnm_deformation_to_bresciani_engine_r4_map_missing       (full rank unsourceable)
+parity_odd_axis_g_R4_c3_dark_to_current_ringdown         (v2.209)
 ```
 
 v2.200 makes that blocker concrete. The next source-backed packet must provide a
