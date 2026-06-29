@@ -1,0 +1,41 @@
+{
+  "version": "v2.251",
+  "method": "linear (n=1) LIV time-of-flight bound E_QG > (D/c) Delta E / Delta t_obs; D = light-travel distance; messenger energies from GRB photons vs LIGO gravitons; plus the GW170817 GW-EM speed bound for the constant-offset sector",
+  "E_Planck_eV": 1.22e+28,
+  "messenger_bounds": [
+    {
+      "name": "Fermi GRB 090510 photons",
+      "E_eV": 30000000000.0,
+      "light_travel_Gyr": 7.0,
+      "dt_s": 1.0,
+      "comment": "GeV gamma-rays, z~0.9 -- the strongest single-messenger time-of-flight bound",
+      "E_QG_lower_bound_eV": 6.6276e+27,
+      "in_units_of_E_Planck": 0.5432459016393443
+    },
+    {
+      "name": "LIGO/Virgo GW dispersion",
+      "E_eV": 4e-12,
+      "light_travel_Gyr": 1.3,
+      "dt_s": 0.1,
+      "comment": "kHz gravitons (~1e-12 eV), z~0.1 -- weak because the graviton energy is tiny",
+      "E_QG_lower_bound_eV": 1641120.0,
+      "in_units_of_E_Planck": 1.3451803278688526e-22
+    }
+  ],
+  "gw170817_speed_bound": {
+    "observable": "|Delta v / c| < 1e-15 (GW vs gamma, 40 Mpc, 1.7 s)",
+    "sector": "n=0 constant offset / graviton mass -- the strongest there"
+  },
+  "energy_scaling": {
+    "messenger_energy_ratio_grb_over_gw": 7.5e+21,
+    "bound_ratio_at_fixed_D_dt": 7.5e+21,
+    "scales_linearly": true
+  },
+  "finding": "The linear-LIV time-of-flight bound reaches E_QG > 6.6e+27 eV ~ 0.54 E_Planck from a single 30 GeV GRB photon -- right at the Planck scale, the headline quantum-gravity-phenomenology result. The same analysis on LIGO gravitons gives only E_QG > 1.6e+06 eV (~1e-22 E_Planck), ~22 orders of magnitude weaker, because the bound scales with the MESSENGER ENERGY and gravitons (~1e-12 eV) are ~1e40 times lower-energy than GeV gamma-rays. So gravitational waves are a POOR probe of energy-dependent (n>=1) LIV dispersion -- but the multi-messenger GW170817 GW-vs-photon SPEED comparison (|Delta v/c| < 1e-15) is instead the STRONGEST bound on the constant-offset (n=0 / graviton-mass) sector. The two channels are complementary: high-energy photons probe Planck-suppressed dispersion, GW170817 probes the constant speed offset -- together testing whether spacetime is smooth at the Planck length.",
+  "honest_scope": "Order-of-magnitude time-of-flight reconstruction (linear n=1 leading; n=2 quadratic LIV is far weaker). The precise bounds use the cosmological distance integral with the (1+z) energy factors, the source-intrinsic emission-time systematics (the dominant uncertainty in GRB LIV bounds), and the detailed Fermi / LVC analyses -- not done here; the light-travel-distance approximation and representative (E, z, Delta t) give the right scale and the messenger-energy scaling, which is the point. The sign s (subluminal vs superluminal) is not fixed. Self-contained reconstruction of a real QG-phenomenology probe, not a published bound. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Amelino-Camelia et al., Nature 393 (1998) 763 -- quantum-gravity time-of-flight",
+    "Abdo et al. (Fermi), Nature 462 (2009) 331 -- GRB 090510 LIV bound ~E_Planck",
+    "Abbott et al. (LVC), ApJL 848 (2017) L13 -- GW170817 GW-EM speed; LVC TGR dispersion papers"
+  ]
+}
