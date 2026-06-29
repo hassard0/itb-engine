@@ -1,0 +1,69 @@
+{
+  "version": "v2.276",
+  "method": "Schwarzschild-AdS_4 thermodynamics: T=(1/4pi)(1/r_+ + 3r_+/L^2), M=(r_+/2)(1+r_+^2/L^2), S=pi r_+^2, F=M-TS=(r_+/4)(1-r_+^2/L^2); minima/sign-changes give the phase diagram (L=1)",
+  "L": 1.0,
+  "r_temperature_min": 0.5773502691896258,
+  "T_min": 0.27566444771089604,
+  "r_hawking_page": 1.0,
+  "T_hawking_page": 0.3183098861837907,
+  "branch_table": [
+    {
+      "r_plus": 0.4,
+      "T": 0.2944366447200064,
+      "F": 0.08400000000000002,
+      "C": -2.8612659245157253,
+      "phase": "small branch (unstable, C<0)"
+    },
+    {
+      "r_plus": 0.5,
+      "T": 0.2785211504108169,
+      "F": 0.09374999999999997,
+      "C": -10.995574286215472,
+      "phase": "small branch (unstable, C<0)"
+    },
+    {
+      "r_plus": 0.8,
+      "T": 0.29045777114270904,
+      "F": 0.07199999999999995,
+      "C": 12.763061632663081,
+      "phase": "large branch, thermal AdS dominates (F>0)"
+    },
+    {
+      "r_plus": 1.0,
+      "T": 0.3183098861837907,
+      "F": 0.0,
+      "C": 12.566370617399974,
+      "phase": "large branch, black hole dominates (F<0)"
+    },
+    {
+      "r_plus": 1.5,
+      "T": 0.411150269654063,
+      "F": -0.46875,
+      "C": 19.054442402718408,
+      "phase": "large branch, black hole dominates (F<0)"
+    },
+    {
+      "r_plus": 2.5,
+      "T": 0.6286620252129866,
+      "F": -3.2812500000000018,
+      "C": 43.69468655042857,
+      "phase": "large branch, black hole dominates (F<0)"
+    }
+  ],
+  "consistency_checks": {
+    "temperature_has_minimum_at_L_over_sqrt3": true,
+    "free_energy_closed_form": true,
+    "hawking_page_free_energy_sign_change_at_rL": true,
+    "T_HP_is_one_over_piL_above_Tmin": true,
+    "specific_heat_sign_change": true
+  },
+  "all_checks_pass": true,
+  "ads_cft_dual": "the Hawking-Page transition is the gravity dual of the confinement-deconfinement transition of the boundary gauge theory (Witten 1998): thermal AdS = confined phase, large black hole = deconfined phase",
+  "finding": "A Schwarzschild-AdS black hole has a real phase diagram, unlike its asymptotically-flat cousin. The Hawking temperature T(r_+) = (1/4pi)(1/r_+ + 3 r_+/L^2) has a MINIMUM at r_+ = L/sqrt3, T_min = sqrt3/(2 pi L) ~ 0.2757 (L=1): below T_min no black hole exists. The specific heat dM/dT changes sign there (verified) -- the small branch is thermodynamically UNSTABLE (negative C, like a flat-space hole), the large branch STABLE (positive C, it can sit in a heat bath). The free energy relative to thermal AdS is exactly F = (r_+/4)(1 - r_+^2/L^2) (verified against M - T S), which changes sign at the HAWKING-PAGE point r_+ = L, T_HP = 1/(pi L) ~ 0.3183: below T_HP thermal AdS wins (F > 0, the black hole is metastable), above it the large black hole dominates (F < 0). So there is a first-order phase transition between empty thermal AdS and a big black hole. Witten's insight makes it holographic: this is the gravity dual of the confinement-deconfinement transition of the boundary gauge theory -- thermal AdS is the confined phase, the black hole the deconfined plasma. It completes the BH-thermodynamics sub-arc: the v2.257 entropy and v2.275 Page curve described a single evaporating hole; here the hole has a genuine equilibrium phase structure with a sharp, holographically meaningful transition.",
+  "honest_scope": "Exact textbook Schwarzschild-AdS_4 thermodynamics (Hawking-Page 1983; Witten 1998): the temperature, mass, entropy and free-energy formulas and all the derived critical points (r_+ = L/sqrt3 minimum, r_+ = L transition) are analytic and verified to machine precision. L=1 units; AdS_4 (the AdS_5/CFT_4 case shifts the numeric coefficients but not the structure). The AdS/CFT confinement-deconfinement identification is Witten's result, cited not re-derived (it needs the boundary-gauge-theory partition function). A BH-thermodynamics / holography result, not an engine constraint refit; the engine encodes asymptotically-flat / cosmological constraints, so this AdS phase structure is a companion piece, not an engine coupling.",
+  "references": [
+    "Hawking, Page, 'Thermodynamics of black holes in anti-de Sitter space', Commun. Math. Phys. 87 (1983) 577",
+    "Witten, 'Anti-de Sitter space, thermal phase transition, and confinement in gauge theories', ATMP 2 (1998) 505",
+    "this repo: v2.257 (BH thermodynamics), v2.275 (Page curve), v2.258 (holographic bound)"
+  ]
+}
