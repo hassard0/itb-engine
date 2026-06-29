@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (340 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (341 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -389,3 +389,4 @@ Auto-generated front door to the full research program (340 notes). Regenerate w
 | v2.227 | [v2.227 - Covariance-corrected no-hair detectability: the realistic 220](2026-06-29-v2.227-qnm-nohair-covariance-forecast.md) | v2.226 quantified how R4 violates the 220/221 no-hair consistency and gave a critical SNR using |
 | v2.228 | [v2.228 - End-to-end R4 detectability forecast (and a Leaver high-accur](2026-06-29-v2.228-qnm-r4-end-to-end-forecast.md) | The v2.217-v2.227 ringdown program built each piece of the R4 detectability chain separately. |
 | v2.229 | [v2.229 - The eikonal QNM <-> photon-sphere correspondence: ringdown fr](2026-06-29-v2.229-qnm-photon-sphere-correspondence.md) | A fresh, fully self-contained thread (pivoting out of the EFT-ringdown vein after v2.215-v2.228). |
+| v2.230 | [v2.230 - The photon sphere as the common origin of ringdown and the bl](2026-06-29-v2.230-qnm-shadow-multimessenger.md) | v2.229 showed the eikonal ringdown is governed by the photon sphere. The SAME unstable photon |

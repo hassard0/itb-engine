@@ -1,0 +1,66 @@
+{
+  "version": "v2.230",
+  "method": "first-principles photon-sphere / shadow quantities vs the in-house WKB QNM solver; ringdown<->shadow consistency and the overtone damping ladder; Schwarzschild M=1",
+  "photon_sphere_shadow": {
+    "r_ph": 3.0,
+    "b_c_shadow_radius": 5.196152422706631,
+    "Omega_c": 0.1924500897298753,
+    "lambda": 0.19245008972987526,
+    "b_c_closed_form_3sqrt3": 5.196152422706632,
+    "Omega_c_times_b_c": 1.0
+  },
+  "first_principles_consistency": {
+    "b_c_equals_3sqrt3": true,
+    "Omega_c_times_b_c_equals_1": true
+  },
+  "ringdown_shadow_consistency": [
+    {
+      "l": 2,
+      "omega_R": 0.3731619993234687,
+      "omega_R_b_c_over_l_half": 0.775602650738677
+    },
+    {
+      "l": 4,
+      "omega_R": 0.8090978083220801,
+      "omega_R_b_c_over_l_half": 0.9342656748709781
+    },
+    {
+      "l": 6,
+      "omega_R": 1.211983882902984,
+      "omega_R_b_c_over_l_half": 0.9688696906811894
+    },
+    {
+      "l": 8,
+      "omega_R": 1.6061822639343608,
+      "omega_R_b_c_over_l_half": 0.9818785720059943
+    },
+    {
+      "l": 12,
+      "omega_R": 2.3855378082273884,
+      "omega_R_b_c_over_l_half": 0.9916494449343208
+    }
+  ],
+  "consistency_converges_to_1": true,
+  "best_ringdown_shadow_ratio": 0.9916494449343208,
+  "overtone_ladder": {
+    "L": 10,
+    "omega_I": [
+      -0.09586404051169746,
+      -0.2879127651089319,
+      -0.4808834461882715
+    ],
+    "spacings": [
+      -0.19204872459723443,
+      -0.19297068107933962
+    ],
+    "target_minus_lambda": -0.19245008972987526,
+    "max_rel_err": 0.002705072001759354
+  },
+  "finding": "The photon sphere is the common origin of ringdown and the shadow. The shadow radius b_c = 3 sqrt3 = 5.1962 M and the orbital frequency satisfy Omega_c * b_c = 1 exactly (first principles). The WKB ringdown then obeys the multi-messenger consistency omega_R * b_c / (l+1/2) -> 1 (reaching 0.992 at l=12), and the overtone imaginary parts form an equally-spaced ladder with spacing -> -lambda = -1/b_c (to 0.3% at l=10). So a LIGO/Virgo ringdown and an EHT shadow probe the SAME geometric quantity (1/b_c): a non-Kerr or quantum-corrected metric that shifts the photon sphere moves BOTH observables coherently -- a genuine gravitational-wave / electromagnetic cross-channel test of the Kerr hypothesis.",
+  "honest_scope": "Eikonal (large-l) and Schwarzschild-only: the consistency ratio approaches 1 with O(1/l) corrections (22% at l=2 -> 0.8% at l=12), and the overtone ladder uses 3rd-order WKB (good for these low n at l=10). The cross-channel TEST is the physical claim; turning it into a quantitative joint bound needs a specific non-Kerr metric and real EHT + ringdown data (not done here). Kerr would split Omega_c != lambda and make the shadow non-circular. This is a geodesic/geometric-optics result; it frames a QG test (photon-sphere deviations from exotic/quantum-corrected compact objects) but does not itself constrain a coupling. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Cardoso, Miranda, Berti, Witek, Zanchin, PRD 79 (2009) 064016 -- eikonal QNM / photon sphere",
+    "Event Horizon Telescope Collab., ApJL 875 (2019) L1; 930 (2022) L12 -- BH shadow",
+    "this repo: v2.229 (eikonal correspondence), v2.210 (WKB solver)"
+  ]
+}
