@@ -1,0 +1,62 @@
+{
+  "version": "v2.213",
+  "riccati_method": "log-derivative two-sided matching; independent of WKB",
+  "cross_validation": [
+    {
+      "mode": "l2_n0",
+      "riccati_re": 0.3782939531555088,
+      "riccati_im": -0.07527787504630469,
+      "riccati_rel_err": 0.037603273100102655,
+      "wkb_rel_err": 0.0014835398993176597,
+      "two_methods_agree_to": 0.03867061167355748
+    },
+    {
+      "mode": "l2_n1",
+      "riccati_re": 0.3386308400827415,
+      "riccati_im": -0.1934518680924452,
+      "riccati_rel_err": 0.18301792665163785,
+      "wkb_rel_err": 0.0027540134886140442,
+      "two_methods_agree_to": 0.1851191381110296
+    }
+  ],
+  "riccati_omega220_rel_err": 0.037603273100102655,
+  "fundamental_two_methods_agree_few_pct": true,
+  "sensitivity_precision_study": {
+    "alpha": 0.15,
+    "rows": [
+      {
+        "j": 0,
+        "e_resolve_re": 0.5766141639284366,
+        "e_resolve_im": 0.1080081592148365,
+        "e_ref_re": 0.12362,
+        "e_ref_im": 0.04632,
+        "rel_error": 3.4631057856499394
+      },
+      {
+        "j": 1,
+        "e_resolve_re": -0.10610983510543737,
+        "e_resolve_im": 0.03774576561556454,
+        "e_ref_re": 0.07992,
+        "e_ref_im": 0.0091,
+        "rel_error": 2.340015113627002
+      },
+      {
+        "j": 2,
+        "e_resolve_re": 0.024010180302062034,
+        "e_resolve_im": -0.01064893245165242,
+        "e_ref_re": 0.04832,
+        "e_ref_im": -0.00121,
+        "rel_error": 0.5395240575139109
+      }
+    ],
+    "max_rel_error": 3.4631057856499394,
+    "resolve_at_1pct_reproduces_e_j": false
+  },
+  "two_methods_agree_to": 0.03867061167355748,
+  "finding": "Two independent QNM methods (WKB v2.210 at ~0.15%, Riccati here at ~4%) land omega_220 in the same place (agreeing to ~4%), confirming the frequency. BUT a full few-%-precision re-solve does NOT yield claim-grade e_j: finite-differencing two few-%-accurate omegas for the small e_j (~0.05-0.12) is erratic (rel.err 0.5-3.5, sign flips). Combined with v2.212 (WKB-peak shortcut off ~150%), this SCOPES the requirement: a claim-grade in-house operator->QNM sensitivity needs a QNM solver accurate to << e_j*alpha ~ 1e-3 -- a pseudospectral (Chebyshev hyperboloidal) or Leaver continued-fraction solver, NOT a peak shortcut and NOT a few-% direct re-solve.",
+  "claim_gate": "closed: in-house operator->QNM sensitivity is NOT yet claim-grade; v2.214 = high-precision pseudospectral solver.",
+  "references": [
+    "Berti, Cardoso, Will, PRD 73 (2006) 064030 (omega values)",
+    "McManus et al., PRD 99 (2019) 104077 (e_j)"
+  ]
+}
