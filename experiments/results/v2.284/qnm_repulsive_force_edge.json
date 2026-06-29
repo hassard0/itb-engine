@@ -1,0 +1,105 @@
+{
+  "version": "v2.284",
+  "method": "decompose the repulsive-force-conjecture margin g_4 g_6 - g_R2 - gamma g_R2^2 into matter product vs curvature cost (linear WGC + quadratic RFC) per framework; compare to the engine margin and to the weaker linear-WGC bound",
+  "gamma": 1.0,
+  "framework_anatomy": [
+    {
+      "framework": "pure_gr",
+      "g_4": 0.0,
+      "g_6": 0.0,
+      "g_R2": 0.0,
+      "matter_product": 0.0,
+      "curv_linear_WGC": 0.0,
+      "curv_quadratic_RFC": 0.0,
+      "rfc_margin": 0.0,
+      "linear_wgc_margin": 0.0,
+      "engine_margin": 0.0,
+      "gamma_to_heal": null,
+      "on_linear_wgc_boundary": true,
+      "matches_engine": true
+    },
+    {
+      "framework": "string_tree_eft",
+      "g_4": 0.5,
+      "g_6": 0.4,
+      "g_R2": 0.2,
+      "matter_product": 0.2,
+      "curv_linear_WGC": 0.2,
+      "curv_quadratic_RFC": 0.04000000000000001,
+      "rfc_margin": -0.04000000000000001,
+      "linear_wgc_margin": 0.0,
+      "engine_margin": -0.04000000000000001,
+      "gamma_to_heal": 0.0,
+      "on_linear_wgc_boundary": true,
+      "matches_engine": true
+    },
+    {
+      "framework": "asymptotic_safety",
+      "g_4": 0.4,
+      "g_6": 0.3,
+      "g_R2": 0.15,
+      "matter_product": 0.12,
+      "curv_linear_WGC": 0.15,
+      "curv_quadratic_RFC": 0.0225,
+      "rfc_margin": -0.0525,
+      "linear_wgc_margin": -0.03,
+      "engine_margin": -0.0525,
+      "gamma_to_heal": -1.3333333333333333,
+      "on_linear_wgc_boundary": false,
+      "matches_engine": true
+    },
+    {
+      "framework": "lqg_induced",
+      "g_4": 0.6,
+      "g_6": 0.45,
+      "g_R2": 0.3,
+      "matter_product": 0.27,
+      "curv_linear_WGC": 0.3,
+      "curv_quadratic_RFC": 0.09,
+      "rfc_margin": -0.11999999999999997,
+      "linear_wgc_margin": -0.02999999999999997,
+      "engine_margin": -0.11999999999999997,
+      "gamma_to_heal": -0.33333333333333304,
+      "on_linear_wgc_boundary": false,
+      "matches_engine": true
+    },
+    {
+      "framework": "cdt",
+      "g_4": 0.55,
+      "g_6": 0.4,
+      "g_R2": 0.22,
+      "matter_product": 0.22000000000000003,
+      "curv_linear_WGC": 0.22,
+      "curv_quadratic_RFC": 0.0484,
+      "rfc_margin": -0.04839999999999997,
+      "linear_wgc_margin": 2.7755575615628914e-17,
+      "engine_margin": -0.04839999999999997,
+      "gamma_to_heal": 5.734623061080354e-16,
+      "on_linear_wgc_boundary": true,
+      "matches_engine": true
+    }
+  ],
+  "on_linear_wgc_boundary": [
+    "string_tree_eft",
+    "cdt"
+  ],
+  "below_linear_wgc": [
+    "asymptotic_safety",
+    "lqg_induced"
+  ],
+  "consistency_checks": {
+    "formula_matches_engine": true,
+    "pure_gr_trivially_saturates": true,
+    "string_and_cdt_on_linear_wgc_boundary": true,
+    "as_and_lqg_below_linear_wgc": true,
+    "rfc_quadratic_tips_boundary_frameworks": true
+  },
+  "all_checks_pass": true,
+  "finding": "The constraint that defines the engine's feasible-region edge dissects cleanly. The repulsive-force conjecture demands the matter product g_4 g_6 cover the curvature cost g_R2 + gamma g_R2^2, and the four higher-derivative frameworks split into two groups. string_tree_eft and cdt sit EXACTLY on the original-WGC boundary (g_4 g_6 = g_R2, linear margin 0) -- they would be feasible under the weaker original Weak Gravity Conjecture, and fail ONLY because of the quadratic gamma g_R2^2 enhancement of the STRONGER repulsive-force conjecture (Heidenreich-Reece-Rudelius), by margins of just -0.04 and -0.048. asymptotic_safety and lqg_induced fail even the linear WGC (g_4 g_6 < g_R2), so their matter sectors are genuinely too weak to support their curvature -- they are below the boundary, not merely tipped over it. pure_gr trivially saturates (all couplings zero). So the binding edge of the feasible region is a single, interpretable inequality: the toy frameworks are calibrated so their matter product lands right at the WGC line, making the repulsive-force conjecture's quadratic term the discriminating constraint -- the engine's tightest gravitational-universality bound, sitting a single prefactor-step from the encodings by design. This explains the v2.283 edge structure (string/AS/cdt one constraint out) at the level of the actual coupling arithmetic.",
+  "honest_scope": "Exact arithmetic on the engine's encoded repulsive_force_conjecture (verified to match the engine margin to 1e-9). The split into linear-WGC-boundary (string, cdt) vs below-linear (asymptotic_safety, lqg) is the engine's literal coupling values; these are the repo's representative O(1) toy encodings, so 'on the WGC boundary' is a statement about the ENCODING, not a claim that string theory saturates the physical WGC (which it need not at tree level). gamma = 1 is the engine's chosen RFC strength; a different gamma shifts the boundary-group frameworks but not the below-linear ones (whose matter product is below g_R2 regardless of gamma). A constraint-anatomy / feasible-edge result, not a new constraint or a claim about the physical frameworks.",
+  "references": [
+    "Heidenreich, Reece, Rudelius, 'The Repulsive Force Conjecture' (2019)",
+    "Arkani-Hamed, Motl, Nicolis, Vafa, 'The String Landscape, Black Holes and Gravity as the Weakest Force', JHEP 06 (2007) 060",
+    "this repo: v2.283 (feasible-region edge), src/itb/constraints/swampland_variants.py"
+  ]
+}

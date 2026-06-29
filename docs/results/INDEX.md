@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (394 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (395 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -443,3 +443,4 @@ Auto-generated front door to the full research program (394 notes). Regenerate w
 | v2.281 | [v2.281 - Cross-validating the engine's GW + swampland constraints agai](2026-06-29-v2.281-qnm-engine-gw-swampland-crossvalidation.md) | A deliberate RECONNECTION to the engine after a long classical-GR / GW-phenomenology arc |
 | v2.282 | [v2.282 - Decomposing the lqg framework anomaly: which couplings source](2026-06-29-v2.282-qnm-lqg-anomaly-decomposition.md) | Deepens v2.281, which found lqg_induced the lone framework failing the GW + swampland sector. Running |
 | v2.283 | [v2.283 - The edge of the feasible region: how each framework sits agai](2026-06-29-v2.283-qnm-curvature-headroom.md) | Extends v2.281/v2.282. The intended question was "how much headroom do the feasible frameworks have" |
+| v2.284 | [v2.284 - Anatomy of the binding bound: why the repulsive-force conject](2026-06-29-v2.284-qnm-repulsive-force-edge.md) | v2.283 found that the canonical engine roster admits only pure_gr, and that string_tree_eft, |
