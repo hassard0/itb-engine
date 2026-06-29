@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (337 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (338 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -386,3 +386,4 @@ Auto-generated front door to the full research program (337 notes). Regenerate w
 | v2.224 | [v2.224 - The isospectrality-breaking response: axial vs polar QNM sens](2026-06-29-v2.224-qnm-parity-sensitivity.md) | v2.218 confirmed GR isospectrality and identified isospectrality BREAKING as the R4 parity |
 | v2.225 | [v2.225 - Multipole robustness: is the isospectrality-breaking response](2026-06-29-v2.225-qnm-parity-breaking-multipole.md) | v2.224 found the axial-vs-polar QNM response to a `(r_H/r)^j` deformation diverges monotonically |
 | v2.226 | [v2.226 - Black-hole-spectroscopy no-hair consistency test, and how R4 ](2026-06-29-v2.226-qnm-nohair-consistency.md) | GR no-hair fingerprint (validated vs Berti-Cardoso-Will): |
+| v2.227 | [v2.227 - Covariance-corrected no-hair detectability: the realistic 220](2026-06-29-v2.227-qnm-nohair-covariance-forecast.md) | v2.226 quantified how R4 violates the 220/221 no-hair consistency and gave a critical SNR using |

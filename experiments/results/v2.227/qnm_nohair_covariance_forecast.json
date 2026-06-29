@@ -1,0 +1,40 @@
+{
+  "version": "v2.227",
+  "method": "two-mode (220+221) joint Fisher (v2.221) -> covariance of ln-ratio observables; rho_crit = rho_tot sigma(ln ratio) / |R4 violation per gamma| (v2.226); white-noise, equal amplitudes, M=1",
+  "ratio_uncertainty": {
+    "freq": {
+      "rho_sigma_full": 34.568046819357996,
+      "rho_sigma_diag": 38.04005631277248,
+      "mode_correlation": 0.8655131586256728
+    },
+    "damp": {
+      "rho_sigma_full": 22.92094660136821,
+      "rho_sigma_diag": 37.096177881979436,
+      "mode_correlation": 0.8530573462183405
+    }
+  },
+  "nohair_forecast": {
+    "freq": {
+      "rho_crit_1sigma_full_per_gamma": 26.289487276110727,
+      "rho_crit_1sigma_diag_per_gamma": 28.929999477353775,
+      "rho_crit_isolated_v2226_per_gamma": 2.901,
+      "optimism_factor_vs_isolated": 9.062215538128482,
+      "correlation_mitigation": 0.09127245934829775
+    },
+    "damp": {
+      "rho_crit_1sigma_full_per_gamma": 0.1332946411100927,
+      "rho_crit_1sigma_diag_per_gamma": 0.21572938514849316,
+      "rho_crit_isolated_v2226_per_gamma": 0.0188,
+      "optimism_factor_vs_isolated": 7.090140484579399,
+      "correlation_mitigation": 0.3821210725727424
+    }
+  },
+  "damp_over_freq_sensitivity_full": 197.22838860714077,
+  "finding": "The covariance-corrected no-hair critical SNR is ~9x (freq) and ~7x (damp) LARGER than the v2.226 isolated-resolvability estimate -- the isolated number was optimistic, as v2.221 covariance inflation implies. But the strong mode correlation (~0.86) partially MITIGATES the ratio variance (correlated errors cancel in a ratio): the full-covariance rho*sigma is 38% below the diagonal (correlation-ignoring) value in the damping channel, 9% in the frequency channel. The realistic forecast: rho_crit ~ 26/gamma (freq) vs ~0.13/gamma (damp) -- the damping no-hair channel still dominates by ~197x.",
+  "honest_scope": "Equal-amplitude, white-noise, t=0-start two-mode Fisher (v2.221 idealizations). The R4 violation magnitudes are source-backed (qEFT dwq/dtq, v2.217) and the ratio covariance is from first principles. This REFINES the v2.226 isolated estimate (which was optimistic by ~7-9x) toward realism without overturning the qualitative result (damping channel dominates). A realistic overtone excitation rho_1/rho_0 < 1 would raise rho_crit further (reach scales as 1/rho_1). The dtq_1 perturbative-delicacy caveat carries (v2.217, gamma << 6e-3). Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Isi et al., PRL 123 (2019) 111102 -- 220+221 no-hair test",
+    "Silva, Ghosh, Buonanno, PRD 107 (2023) 044030 -- qEFT coefficients (v2.217)",
+    "this repo: v2.221 (two-mode covariance), v2.226 (no-hair violation, isolated estimate)"
+  ]
+}
