@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (324 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (325 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -373,3 +373,4 @@ Auto-generated front door to the full research program (324 notes). Regenerate w
 | v2.211 | [v2.211 - QNM solver validation across the Regge-Wheeler family + stabl](2026-06-29-v2.211-qnm-validation-suite.md) | v2.210 validated the in-house WKB QNM solver on the gravitational (s=2, l=2) fundamental |
 | v2.212 | [v2.212 - Operator->QNM sensitivity vs published parametrized-ringdown ](2026-06-29-v2.212-qnm-parametrized-validation.md) | stability != correctness. |
 | v2.213 | [v2.213 - Independent Riccati QNM solver + the precision requirement fo](2026-06-29-v2.213-qnm-riccati-precision-requirement.md) | v2.212 showed the WKB-at-peak operator->QNM sensitivity is stable but inaccurate (misses |
+| v2.214 | [v2.214 - Operator->QNM sensitivity via the published parametrized-ring](2026-06-29-v2.214-qnm-parametrized-basis.md) | v2.212/v2.213 proved an in-house machine-precision QNM solver is required to RECOMPUTE the |
