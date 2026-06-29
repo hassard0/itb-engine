@@ -1,0 +1,59 @@
+{
+  "version": "v2.275",
+  "method": "Page curve S_rad = min(S_rad^thermal, S_BH^remaining) with S_BH=(M/M_0)^2 S_0 and S_rad^thermal = S_0 - S_BH; Page point at M=M_0/sqrt2, S=S_0/2; Page time via the M^3 evaporation law t/tau = 1 - (M/M_0)^3",
+  "page_point": {
+    "M_over_M0": 0.7071067811865475,
+    "S_fine_over_S0": 0.5
+  },
+  "page_time_over_tau": 0.6464466094067263,
+  "sampled_curve": [
+    {
+      "M_over_M0": 1.0,
+      "hawking": 0.0,
+      "page": 0.0
+    },
+    {
+      "M_over_M0": 0.9,
+      "hawking": 0.18999999999999995,
+      "page": 0.18999999999999995
+    },
+    {
+      "M_over_M0": 0.7071067811865475,
+      "hawking": 0.5000000000000001,
+      "page": 0.4999999999999999
+    },
+    {
+      "M_over_M0": 0.5,
+      "hawking": 0.75,
+      "page": 0.25
+    },
+    {
+      "M_over_M0": 0.25,
+      "hawking": 0.9375,
+      "page": 0.0625
+    },
+    {
+      "M_over_M0": 0.01,
+      "hawking": 0.9999,
+      "page": 0.0001
+    }
+  ],
+  "consistency_checks": {
+    "hawking_monotonic_to_S0": true,
+    "page_curve_turns_over": true,
+    "page_point_half_entropy_at_M0_over_sqrt2": true,
+    "page_time_is_1_minus_2_to_minus_3_halves": true,
+    "information_returns_unitary": true,
+    "island_min_prescription": true
+  },
+  "all_checks_pass": true,
+  "finding": "The Page curve is the entanglement signature of black-hole unitarity, and it is the MINIMUM of two saddles: the coarse-grained Hawking entropy (which rises monotonically to the full initial entropy S_0 -- the information-loss prediction, verified) and the remaining horizon entropy S_BH = (M/M_0)^2 S_0 (which falls). The fine-grained radiation entropy follows the lower of the two, so it RISES to a peak and then comes back DOWN: the turnover (verified) at the Page point M = M_0/sqrt2, where exactly half the entropy has been radiated (S_fine = S_0/2), which via the M^3 evaporation law (v2.257) is the Page time t_Page/tau = 1 - 2^(-3/2) ~ 0.646 of the lifetime. After the Page time the radiation entropy decreases back toward 0 (verified -> pure final state, information returns), in sharp contrast to Hawking's monotonic rise to S_0 (information lost). The switch from the 'no-island' to the 'island' saddle at the Page time is the quantum-extremal-surface resolution of the information paradox (Penington; Almheiri et al.), and it caps the BH-entropy thread: the same horizon area that sets the v2.257 entropy, the v2.273 greybody emission and the v2.274 area quantum is the late-time island that brings the information back out.",
+  "honest_scope": "This is the standard PHENOMENOLOGICAL Page model: the fine-grained entropy is taken as min(S_rad^thermal, S_BH), the island-formula RESULT, modeled here directly rather than derived from a replica-wormhole / gravitational-path-integral computation. The coarse-grained S_rad^thermal = S_0 - S_BH uses entropy conservation and OMITS the Page/greybody factor (Hawking radiation is ~1.4-1.6x more entropic than the BH's entropy deficit, v2.273), which shifts the exact Page time modestly earlier -- so t_Page ~ 0.646 tau is the clean-model value, not a precise number. S_BH = A/4 is semiclassical, M^3 evaporation is the leading law, and unitarity (S_fine -> 0) is the ASSUMPTION whose entanglement signature the Page curve IS -- the paradox's resolution is illustrated, not proven. A QG-structure / information-paradox result, not an engine constraint refit.",
+  "references": [
+    "Page, 'Information in black hole radiation', PRL 71 (1993) 3743",
+    "Penington, 'Entanglement wedge reconstruction and the information paradox', JHEP 09 (2020) 002",
+    "Almheiri, Engelhardt, Marolf, Maxfield, 'The entropy of bulk quantum fields and the entanglement wedge of an evaporating black hole', JHEP 12 (2019) 063",
+    "Almheiri, Hartman, Maldacena, Shaghoulian, Tajdini, 'The entropy of Hawking radiation', RMP 93 (2021) 035002",
+    "this repo: v2.257/v2.258 (BH entropy), v2.273 (greybody), v2.274 (area quantization)"
+  ]
+}

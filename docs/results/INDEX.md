@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (385 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (386 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -434,3 +434,4 @@ Auto-generated front door to the full research program (385 notes). Regenerate w
 | v2.272 | [v2.272 - The stochastic gravitational-wave background: a spectral zoo ](2026-06-29-v2.272-qnm-stochastic-gw-background.md) | A fresh GW-cosmology probe (opening after the graviton-observable arc v2.266-v2.271). The |
 | v2.273 | [v2.273 - Black-hole greybody factors: how the potential barrier shapes](2026-06-29-v2.273-qnm-greybody-hawking.md) | A fresh QG thread pivoting off the GW arc, REUSING the validated v2.210 WKB / Regge-Wheeler machinery. |
 | v2.274 | [v2.274 - QNM asymptotics, black-hole area quantization, and the Barber](2026-06-29-v2.274-qnm-area-quantization.md) | A fresh QG thread tying the validated QNM ringdown (v2.210) to black-hole entropy (v2.257/v2.258) and |
+| v2.275 | [v2.275 - The Page curve: the entanglement signature of black-hole unit](2026-06-29-v2.275-qnm-page-curve.md) | A fresh QG capstone of the black-hole-entropy thread (v2.257/v2.258/v2.273/v2.274), addressing the |
