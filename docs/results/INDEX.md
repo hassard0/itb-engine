@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (333 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (334 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -382,3 +382,4 @@ Auto-generated front door to the full research program (333 notes). Regenerate w
 | v2.220 | [v2.220 - Net R4 reach per overtone: sensitivity x resolvability](2026-06-29-v2.220-qnm-r4-overtone-reach.md) | Three cycles built the pieces of one question. v2.217: the n=1 first overtone is ~491x more |
 | v2.221 | [v2.221 - Two-mode (220+221) joint Fisher: does the overtone advantage ](2026-06-29-v2.221-qnm-r4-twomode-fisher.md) | v2.220 computed the per-mode R4 reach treating the fundamental and the first overtone as |
 | v2.222 | [v2.222 - The overtone covariance wall: ringdown spectroscopy self-limi](2026-06-29-v2.222-qnm-overtone-covariance-wall.md) | v2.221 showed the 2-mode (220+221) joint fit inflates each mode's resolvability ~4-5.5x vs the |
+| v2.223 | [v2.223 - Population scaling of R4 ringdown bounds: multi-event stackin](2026-06-29-v2.223-qnm-r4-population-scaling.md) | The single-event ringdown lever was mapped end to end in v2.217-v2.222. Pivot to the POPULATION |

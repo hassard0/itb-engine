@@ -1,0 +1,36 @@
+{
+  "version": "v2.223",
+  "source": "Silva-Ghosh-Buonanno (2205.05132); per-event + combined qEFT ell bounds, p=6",
+  "qeft_power_p": 6,
+  "per_event_bounds_km": {
+    "GW150914": 51.7,
+    "GW200129": 54.8
+  },
+  "population_scaling_law": {
+    "ell_bound_scales_as": "N^{-1/(2p)} = N^{-1/12}  (equal events)",
+    "N_to_halve_ell_bound": 4096.0,
+    "N_to_improve_ell_10x": 1000000000000.0,
+    "interpretation": "Because the QNM deformation scales as the 6th power of the length scale, multi-event stacking is an extraordinarily weak lever on ell: halving the bound needs ~4096 comparable events."
+  },
+  "snr_vs_population_lever": {
+    "single_event_ell_scales_as": "rho^{-1/p} = rho^{-1/6}",
+    "event_k_louder_worth_N_events": "N = k^2",
+    "example_2x_louder_equals_events": 4.0,
+    "example_10x_louder_equals_events": 100.0,
+    "interpretation": "Per-event SNR is a QUADRATICALLY stronger lever than event count: a 2x-louder event is worth 4 events, a 10x-louder event worth 100. This is why a single loud ringdown (v2.219 reach ~ 1/rho) dominates the R4 constraint over a large quiet population -- consistent with the whole single-event ringdown arc (v2.217-v2.222)."
+  },
+  "two_event_combination_check": {
+    "inverse_variance_estimate_km": 49.99012289278988,
+    "best_single_event_km": 51.7,
+    "published_combined_km": 51.3,
+    "iv_improvement_vs_best_single": 0.03307305816654016,
+    "published_improvement_vs_best_single": 0.007736943907156735,
+    "iv_vs_published_relative_diff": 0.02553366680721482,
+    "finding": "The naive independent-half-normal inverse-variance combination gives 50.0 km (a 3.3% improvement over the best single event, 51.7 km). The PUBLISHED combined bound is 51.3 km -- only a 0.8% improvement. Both confirm the headline (combining two comparable events barely tightens the ell bound, as the N^{-1/12} law demands), but the published combination is ~3% LESS tight than naive inverse-variance."
+  },
+  "claim_gate": "The SCALING LAW (ell ~ N^{-1/12}; SNR k-louder = k^2 events) is claim-grade -- it follows from the source-backed power p=6 and the Fisher-Gaussian-in-gamma regime, method-independent. The specific 2-event NUMBER (50.0 km) is an approximation: it assumes independent half-normal posteriors, and it lands ~2-3% tighter than the published combined bound (51.3 km), a residual that reflects the un-sourced posterior shapes / the paper's actual combination method (the machine-readable likelihoods are not in the cached source package). Negative preserved; not tuned. The single-event ell<->gamma map normalization (v2.215) and parity-odd g_R4_c3 darkness (v2.209) carry.",
+  "references": [
+    "Silva, Ghosh, Buonanno, PRD 107 (2023) 044030 (arXiv:2205.05132) -- ell bounds, p=6",
+    "this repo: v2.219 (single-event Fisher reach ~ 1/rho)"
+  ]
+}
