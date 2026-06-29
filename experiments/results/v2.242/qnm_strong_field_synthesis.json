@@ -1,0 +1,83 @@
+{
+  "version": "v2.242",
+  "method": "cross-import the program's headline modules and verify mutual consistency on the shared Schwarzschild physics; thematic map of v2.210-v2.241",
+  "cross_program_consistency": [
+    {
+      "check": "photon_sphere_Omega_c == 1/(3sqrt3)",
+      "value": 0.1924500897298753,
+      "expected": 0.19245008972987526,
+      "ok": true
+    },
+    {
+      "check": "eikonal_ringdown_freq(a=0) == Omega_c",
+      "value": 0.19245008972987526,
+      "expected": 0.19245008972987526,
+      "ok": true
+    },
+    {
+      "check": "eikonal_ringdown_damping(a=0) == Omega_c",
+      "value": 0.19245008972987523,
+      "expected": 0.19245008972987526,
+      "ok": true
+    },
+    {
+      "check": "shadow Omega_c * b_c == 1",
+      "value": 1.0,
+      "expected": 1.0,
+      "ok": true
+    },
+    {
+      "check": "Schwarzschild ISCO == Kerr(a=0) ISCO == 6",
+      "value": 5.999999895789342,
+      "expected": 6.0,
+      "ok": true
+    },
+    {
+      "check": "ISCO efficiency == Kerr(a=0) efficiency == 5.72%",
+      "value": 0.057190958417936644,
+      "expected": 0.057190958417936644,
+      "ok": true
+    },
+    {
+      "check": "WKB omega_220 ~ Berti reference",
+      "ok": true
+    },
+    {
+      "check": "BH tidal Love number == 0",
+      "ok": true
+    }
+  ],
+  "all_consistent": true,
+  "program_map": [
+    {
+      "theme": "R4 / qEFT ringdown sensitivity",
+      "cycles": "v2.210-v2.228",
+      "headline": "in-house WKB+Riccati QNM solver -> source-backed R4 odd-parity ringdown sensitivity -> overtone-DAMPING dominance (the n=1 overtone is the lever) -> resolvability + two-mode covariance + the overtone covariance wall -> no-hair consistency violation -> population N^-1/12 scaling -> end-to-end reach"
+    },
+    {
+      "theme": "Operator-sector bridge to the core engine",
+      "cycles": "v2.233-v2.234",
+      "headline": "Schwarzschild is Ricci-flat, so the engine's g_R2/g_R3 are ringdown-blind and the ringdown-active operator is the quartic Riemann^4 -- beyond the engine basis; the dispersion tower MANDATES g_R4 >= g_R3^2/g_R2 (4/5 frameworks)"
+    },
+    {
+      "theme": "Geodesic strong-field + deformation null tests",
+      "cycles": "v2.229-v2.232, v2.237-v2.238",
+      "headline": "eikonal QNM <-> photon sphere; photon-sphere<->shadow multi-messenger (Omega_c=1/b_c); the ringdown-frequency/shadow LOCKING vs independent damping; two-observable inversion; ISCO/accretion efficiency; the unified one-parameter fingerprint across all observables"
+    },
+    {
+      "theme": "Tidal Love number (static response)",
+      "cycles": "v2.235-v2.236",
+      "headline": "the GR black-hole tidal Love number is EXACTLY ZERO (tail-free Legendre polynomial); any localized deformation lifts it linearly (overlap-integral transfer function) -- the 'is it a black hole?' test"
+    },
+    {
+      "theme": "Kerr generalization",
+      "cycles": "v2.239-v2.241",
+      "headline": "exact Kerr: spin SPLITS the locked observables (pro/retro) and AMPLIFIES the prograde efficiency 5.72%->42% (AGN engine); the full eikonal Kerr QNM omega_lmn(a) from the photon orbit -- frequency rises, damping falls (rising quality factor / near-extremal zero-damping modes)"
+    }
+  ],
+  "finding": "The black-hole strong-field program (v2.210-v2.241, ~30 cycles) is internally CONSISTENT: independent modules computing the shared Schwarzschild physics by different routes all agree (the photon-sphere Omega_c = 1/(3 sqrt3) appears identically in the shadow, eikonal-frequency, and Lyapunov-damping modules; the Schwarzschild ISCO matches the a=0 limit of the exact Kerr formula; the WKB omega_220 matches Berti; the BH tidal Love number is zero). The program spans five themes -- the source-backed R4/qEFT ringdown sensitivity (overtone-damping dominated), the operator-sector bridge that shows the engine's positivity tower MANDATES the ringdown-active Riemann^4 operator, the geodesic strong-field null tests with their unified deformation fingerprint, the exactly-zero tidal Love number and its deformation signal, and the Kerr generalization with its full eikonal QNM -- unified by the photon orbit and the deformation-response structure. Two larger efforts remain honestly scoped and deferred: the precise low-l Teukolsky/Leaver QNM solver (multi-session) and the g_R4 core-engine basis extension (awaiting user authorization).",
+  "honest_scope": "A SYNTHESIS / consistency capstone, not a new measurement: it re-verifies the shared baselines and maps the program. The per-cycle honest caveats (eikonal large-l limits, static/Schwarzschild baselines, illustrative deformations, un-sourceable absolute R4 normalization, representative O(1) positivity prefactors) all carry. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "this repo: v2.210-v2.241 result notes (docs/results/), docs/results/INDEX.md"
+  ]
+}
