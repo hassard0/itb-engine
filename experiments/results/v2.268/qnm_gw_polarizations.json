@@ -1,0 +1,88 @@
+{
+  "version": "v2.268",
+  "method": "six E(2) polarization strain tensors (sym 3x3) for z-propagation; antenna response F = D:e with D = 1/2(a(x)a - b(x)b); basis rank, TT classification, single-detector degeneracy, and network response-matrix rank",
+  "mode_properties": {
+    "plus": {
+      "class": "tensor",
+      "traceless": true,
+      "transverse": true,
+      "is_GR": true
+    },
+    "cross": {
+      "class": "tensor",
+      "traceless": true,
+      "transverse": true,
+      "is_GR": true
+    },
+    "breathing": {
+      "class": "scalar",
+      "traceless": false,
+      "transverse": true,
+      "is_GR": false
+    },
+    "longitudinal": {
+      "class": "scalar",
+      "traceless": false,
+      "transverse": false,
+      "is_GR": false
+    },
+    "vector_x": {
+      "class": "vector",
+      "traceless": true,
+      "transverse": false,
+      "is_GR": false
+    },
+    "vector_y": {
+      "class": "vector",
+      "traceless": true,
+      "transverse": false,
+      "is_GR": false
+    }
+  },
+  "polarization_classes": {
+    "tensor (GR)": [
+      "plus",
+      "cross"
+    ],
+    "vector": [
+      "vector_x",
+      "vector_y"
+    ],
+    "scalar": [
+      "breathing",
+      "longitudinal"
+    ]
+  },
+  "basis_rank": 6,
+  "single_detector_overhead_response": {
+    "plus": 1.0,
+    "cross": 0.0,
+    "breathing": 0.0,
+    "longitudinal": 0.0,
+    "vector_x": 0.0,
+    "vector_y": 0.0
+  },
+  "network_response_rank": 5,
+  "gr_submatrix_rank": 2,
+  "detectors_to_resolve_separable": 5,
+  "max_separable_polarizations": 5,
+  "consistency_checks": {
+    "six_modes_complete_basis": true,
+    "gr_modes_are_transverse_traceless": true,
+    "nongr_modes_break_tt": true,
+    "single_detector_overhead_degenerate": true,
+    "interferometer_network_rank_five": true,
+    "scalar_modes_degenerate_for_interferometers": true,
+    "detector_response_is_traceless": true,
+    "gr_needs_only_two": true
+  },
+  "all_checks_pass": true,
+  "finding": "A general massless metric theory carries six GW polarizations -- the Eardley-Lee-Will E(2) set -- and they form a COMPLETE basis for the symmetric 3x3 strain (rank 6, verified), split into two tensor, two vector and two scalar modes. General relativity excites only the two TENSOR modes (plus, cross), which are exactly the transverse and traceless ones (verified), while every non-GR mode breaks transverse-tracelessness. So detecting ANY non-tensor polarization falsifies GR's polarization content. But there is a sharp limit on what interferometers can measure: the Michelson response tensor D = 1/2(a(x)a - b(x)b) is TRACELESS (verified), so it sees only the traceless part of each mode -- and the two SCALAR modes (breathing diag(1,1,0), longitudinal diag(0,0,1)) have PROPORTIONAL traceless parts (antiparallel, verified), so no interferometer network can ever separate them. The (detectors x 6) response matrix therefore saturates at rank FIVE, not six (verified): an interferometer array can resolve at most five polarization combinations, the two scalars collapsing to one measurable scalar. (A single detector with the source overhead is even more degenerate -- it responds ONLY to plus.) GR's two-mode content is fully captured by just two detectors (gr submatrix rank 2). This is why current 3-detector events (GW170814) test tensor-vs-vector-vs-scalar HYPOTHESES -- and favour pure tensor -- rather than measuring all amplitudes; a concrete, falsifiable, near-term test of gravity beyond GR, with the scalar-mode degeneracy a fundamental interferometer limitation (Chatziioannou-Yunes-Cornish).",
+  "honest_scope": "The six strain tensors and their TT classification are exact (a linear-algebra fact about the symmetric 3x3 perturbation for z-propagation), and the single-detector degeneracy, the traceless-response scalar degeneracy, and the rank-5 network result are exact for the idealized Michelson response D = 1/2(a(x)a - b(x)b). The rank result uses a deterministic set of rotated ideal detectors; a REAL network's separability also depends on sky position, noise and the sources' amplitudes (the actual LIGO/Virgo polarization tests are Bayesian model comparisons, not a literal rank count). The scalar-mode degeneracy is specific to INTERFEROMETERS (pulsar-timing arrays, sensitive to the trace differently, can in principle break it). The E(2) class of a SPECIFIC alternative theory (Brans-Dicke etc.) is not computed here -- this is the model-independent polarization-content framework. A falsifiable-gravity / GW-phenomenology result, not an engine constraint refit.",
+  "references": [
+    "Eardley, Lee, Lightman, Wagoner, Will, 'Gravitational-wave observations as a tool for testing relativistic gravity', PRL 30 (1973) 884; PRD 8 (1973) 3308",
+    "Will, 'The confrontation between general relativity and experiment', Living Rev. Rel. 17 (2014) 4",
+    "Abbott et al. (LIGO/Virgo), 'GW170814: A three-detector observation ... tests of polarization', PRL 119 (2017) 141101",
+    "this repo: v2.266 (graviton mass), v2.267 (GW memory / infrared triangle)"
+  ]
+}
