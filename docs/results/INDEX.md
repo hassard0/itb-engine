@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (367 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (368 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -416,3 +416,4 @@ Auto-generated front door to the full research program (367 notes). Regenerate w
 | v2.254 | [v2.254 - The Weak Gravity Conjecture: 'gravity is the weakest force' a](2026-06-29-v2.254-qnm-weak-gravity-conjecture.md) | A fresh QG-CONSISTENCY (swampland) probe, reconnecting to the engine's `distance_conjecture` / |
 | v2.255 | [v2.255 - The Swampland Distance Conjecture: the light tower, and why i](2026-06-29-v2.255-qnm-swampland-distance-conjecture.md) | The companion swampland pillar to the Weak Gravity Conjecture (v2.254), reconnecting to the engine's |
 | v2.256 | [v2.256 - Synthesis: the QG-phenomenology + swampland arc, cross-verifi](2026-06-29-v2.256-qnm-qg-phenomenology-synthesis.md) | The session's third sub-program (v2.251-v2.255) pivoted off black holes to ask, sector by sector: |
+| v2.257 | [v2.257 - Black-hole thermodynamics: entropy, Hawking temperature, evap](2026-06-29-v2.257-qnm-black-hole-thermodynamics.md) | A fresh fundamental-QG thread, reconnecting to the engine's entropy constraints |

@@ -1,0 +1,52 @@
+{
+  "version": "v2.257",
+  "method": "Bekenstein-Hawking S=4pi(M/M_Pl)^2, T_H=T_Pl/(8pi M/M_Pl), t_evap=5120pi(M/M_Pl)^3 t_Pl, Page time ~ t_evap/2; Planck units",
+  "black_holes": [
+    {
+      "object": "1 Msun",
+      "mass_kg": 1.989e+30,
+      "entropy_bits": 1.5147333491570416e+77,
+      "hawking_T_K": 6.168138238939234e-08,
+      "evap_time_yr": 2.0983592672125988e+67,
+      "page_time_yr": 1.0491796336062994e+67,
+      "colder_than_cmb": true
+    },
+    {
+      "object": "30 Msun (LIGO)",
+      "mass_kg": 5.967e+31,
+      "entropy_bits": 1.3632600142413382e+80,
+      "hawking_T_K": 2.056046079646411e-09,
+      "evap_time_yr": 5.665570021474018e+71,
+      "page_time_yr": 2.832785010737009e+71,
+      "colder_than_cmb": true
+    },
+    {
+      "object": "SMBH 1e6 Msun",
+      "mass_kg": 1.989e+36,
+      "entropy_bits": 1.5147333491570425e+89,
+      "hawking_T_K": 6.168138238939233e-14,
+      "evap_time_yr": 2.0983592672125994e+85,
+      "page_time_yr": 1.0491796336062997e+85,
+      "colder_than_cmb": true
+    },
+    {
+      "object": "PBH evaporating now",
+      "mass_kg": 173000000000.0,
+      "entropy_bits": 1.1459319471502796e+39,
+      "hawking_T_K": 709157627586.713,
+      "evap_time_yr": 13807460429.71531,
+      "page_time_yr": 6903730214.857655,
+      "colder_than_cmb": false
+    }
+  ],
+  "mass_evaporating_now_kg": 172968836005.4322,
+  "holographic": "S ~ horizon AREA (not volume) -- the holographic principle",
+  "finding": "Black holes are the most entropic objects in nature: a solar-mass hole stores S ~ 2e+77 bits (its horizon area in Planck units / 4) and evaporates in ~2e+67 years at a Hawking temperature of 6e-08 K -- far colder than the 2.7 K CMB, so stellar and larger holes ABSORB more than they radiate today and are not yet evaporating. The entropy scales as the horizon AREA, not the volume: the holographic principle, the deepest hint that quantum gravity has far fewer degrees of freedom than a local field theory. The M^3 evaporation law makes a primordial black hole of M ~ 1.7e+11 kg evaporate exactly now -- its final gamma-ray burst a cosmological signal (and PBH abundance bound). The Page time (~t_evap/2) is when the radiated information must start re-emerging to preserve unitarity -- the quantitative core of the information paradox, the same physics whose horizon-structure resolutions (echoes, v2.247) the session probed observationally.",
+  "honest_scope": "Schwarzschild (non-rotating, uncharged) thermodynamics; the entropy and temperature are EXACT (Bekenstein-Hawking / Hawking), the evaporation coefficient (5120 pi) is the single-massless-field greybody result -- the real lifetime depends on the number of particle species radiated at each temperature (more species -> faster, an O(1-10) factor), so the PBH-evaporating-now mass is order-of-magnitude (the standard value is a few 1e11 kg). The Page time / information-recovery is the standard unitary expectation; the actual mechanism (islands, replica wormholes, firewalls, ECO structure) is unresolved. Self-contained reconstruction of the standard black-hole thermodynamics, not a new result. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Bekenstein, PRD 7 (1973) 2333; Hawking, CMP 43 (1975) 199 -- entropy / temperature",
+    "Page, PRL 71 (1993) 3743 -- the Page curve / information recovery",
+    "'t Hooft (1993); Susskind (1995); Bousso, Rev. Mod. Phys. 74 (2002) 825 -- holography",
+    "this repo: v2.247 (black-hole echoes / information paradox); engine entropy constraints"
+  ]
+}
