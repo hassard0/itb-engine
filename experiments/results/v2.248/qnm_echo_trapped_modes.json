@@ -1,0 +1,37 @@
+{
+  "version": "v2.248",
+  "method": "frequency comb of the echo train: spacing Delta f = 1/Delta t_echo (Delta t_echo from v2.247); N_trapped ~ f_QNM Delta t_echo; Planck-scale eps=1e-40, l=2 n=0 ringdown",
+  "epsilon": 1e-40,
+  "omega_R_220": 0.3731619993234687,
+  "trapped_mode_comb": [
+    {
+      "system": "30 Msun stellar BH",
+      "mass_solar": 30.0,
+      "f_QNM_hz": 401.9666786218921,
+      "comb_spacing_hz": 18.409777548655487,
+      "n_trapped_modes": 21.834412586438273
+    },
+    {
+      "system": "GW150914 remnant",
+      "mass_solar": 62.0,
+      "f_QNM_hz": 194.50000578478648,
+      "comb_spacing_hz": 8.907956878381688,
+      "n_trapped_modes": 21.83441258643827
+    },
+    {
+      "system": "Sgr A* (4.3e6 Msun)",
+      "mass_solar": 4300000.0,
+      "f_QNM_hz": 0.0028044186880597116,
+      "comb_spacing_hz": 0.0001284403084789918,
+      "n_trapped_modes": 21.834412586438265
+    }
+  ],
+  "n_trapped_scale_invariant": true,
+  "finding": "The reflective surface replaces the black hole's single broad quasinormal mode with a COMB of narrow trapped modes spaced by Delta f = 1/Delta t_echo. For a Planck-scale surface the spacing is 18.4 Hz for a 30 Msun hole (ringing at f_QNM ~ 402 Hz), so ~22 trapped lines sit under the QNM envelope. The number of teeth N ~ f_QNM Delta t_echo is SCALE-INVARIANT (f_QNM ~ 1/M, Delta t_echo ~ M, so the product depends only on the surface location epsilon, NOT the black-hole mass): every horizon-replacing ECO with a Planck-scale surface shows ~22 trapped lines in its ringdown, whether stellar or supermassive. This is the spectral signature -- a dense set of long-lived narrow resonances instead of one decaying tone -- that the frequency-domain echo searches look for, complementing the v2.247 time-domain delay.",
+  "honest_scope": "The comb spacing Delta f = 1/Delta t_echo and the count N ~ f_QNM Delta t_echo are the leading cavity-resonance relations (exact for the round-trip phase condition); the precise trapped-mode FREQUENCIES and WIDTHS require solving the wave equation with the reflective inner boundary (the modes leak through the barrier, so they have finite width and are 'quasi-bound', not exactly the comb -- but the spacing is robust). The geometric-optics/WKB echo delay (v2.247) and its eps<->Planck convention dependence carry. Schwarzschild (non-rotating); Kerr trapped modes differ. Reconstruction of a real QG-at-the-horizon observable, not a detection claim. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Cardoso, Franzin, Pani, PRL 116 (2016) 171101 -- ringdown / echoes / trapped modes",
+    "Maggio, Pani, Ferrari -- ECO quasi-bound mode spectra",
+    "this repo: v2.247 (echo delay), v2.210 (QNM solver / tortoise coordinate)"
+  ]
+}
