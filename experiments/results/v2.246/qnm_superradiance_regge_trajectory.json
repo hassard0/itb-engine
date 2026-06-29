@@ -1,0 +1,82 @@
+{
+  "version": "v2.246",
+  "method": "spin-down saturation Omega_H(a*_f) = alpha (m=1) -> the maximum retained spin a_final(alpha); observed a* > a_final excludes the boson; M=1, G=c=1",
+  "regge_trajectory": [
+    {
+      "alpha": 0.05,
+      "a_final_max_spin": 0.19801980197984806
+    },
+    {
+      "alpha": 0.1,
+      "a_final_max_spin": 0.38461538461538464
+    },
+    {
+      "alpha": 0.15,
+      "a_final_max_spin": 0.5504587155963303
+    },
+    {
+      "alpha": 0.2,
+      "a_final_max_spin": 0.6896551724137931
+    },
+    {
+      "alpha": 0.3,
+      "a_final_max_spin": 0.8823529411763399
+    },
+    {
+      "alpha": 0.4,
+      "a_final_max_spin": 0.9756097560975575
+    }
+  ],
+  "spin_extracted_from_near_extremal": [
+    {
+      "alpha": 0.05,
+      "delta_a_star": 0.791980198020152
+    },
+    {
+      "alpha": 0.1,
+      "delta_a_star": 0.6053846153846154
+    },
+    {
+      "alpha": 0.15,
+      "delta_a_star": 0.4395412844036697
+    },
+    {
+      "alpha": 0.2,
+      "delta_a_star": 0.30034482758620684
+    },
+    {
+      "alpha": 0.3,
+      "delta_a_star": 0.1076470588236601
+    },
+    {
+      "alpha": 0.4,
+      "delta_a_star": 0.014390243902442479
+    }
+  ],
+  "observed_high_spin_systems": [
+    {
+      "system": "Cygnus X-1 (a* ~ 0.95)",
+      "a_star": 0.95,
+      "excludes_alpha_below": 0.36197373688425266
+    },
+    {
+      "system": "GRS 1915+105 (a* ~ 0.98)",
+      "a_star": 0.98,
+      "excludes_alpha_below": 0.4086747513156509
+    },
+    {
+      "system": "M87* (a* ~ 0.9, EHT-favoured)",
+      "a_star": 0.9,
+      "excludes_alpha_below": 0.3133945031366293
+    }
+  ],
+  "consistency_check_Omega_H_at_a_final": 0.1,
+  "finding": "The Regge trajectory a_final(alpha) is the maximum spin a black hole keeps in the presence of a boson of coupling alpha: Omega_H(a_final) = alpha. A boson alpha=0.1 spins a near-extremal (a*=0.99) hole down to a*=0.385 (extracting Delta a*=0.61 of spin); alpha=0.3 only down to a*=0.882. So a measured high spin EXCLUDES every boson with alpha < Omega_H(a*_obs): the well-measured spins of Cygnus X-1 (a*~0.95) and GRS 1915+105 (a*~0.98) exclude bosons up to alpha ~ 0.36-0.41, and the EHT-favoured high spin of M87* extends the same logic to ~1e-21 eV bosons. The observed black holes sitting ABOVE the Regge trajectory are the actual data that turn superradiance into an ultralight-boson constraint -- the spin-extraction endpoint completing the v2.243-v2.245 thread (condition -> exclusion -> GW signal -> spin gaps).",
+  "honest_scope": "Exact-Kerr saturation condition Omega_H(a*_f) = alpha (verified: Omega_H(a_final(0.1)) = 0.1), the EXACT endpoint of an idealized adiabatic spin-down. The real Regge boundary also requires the growth to complete within the BH age (the v2.244 timescale) and folds in the measured spin POSTERIORS and their systematics (X-ray continuum/iron-line vs EHT methods differ); the cloud also re-deposits some angular momentum via GW emission. m=1 dominant level only (higher m saturate at higher spin). Order-of-magnitude reconstruction of a real BSM probe, not a published exclusion. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Arvanitaki & Dubovsky, PRD 83 (2011) 044026 -- Regge trajectories / spin gaps",
+    "Brito, Cardoso, Pani, Lect. Notes Phys. 906 (2015) -- superradiance review",
+    "Stott & Marsh, PRD 98 (2018) 083006 -- BH-spin bounds on ultralight bosons",
+    "this repo: v2.243-v2.245 (superradiance condition / exclusion / GW signal)"
+  ]
+}

@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (356 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (357 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -405,3 +405,4 @@ Auto-generated front door to the full research program (356 notes). Regenerate w
 | v2.243 | [v2.243 - Black-hole superradiance: observed spins as an ultralight-bos](2026-06-29-v2.243-qnm-superradiance-boson-bound.md) | A fresh BSM-relevant thread, reconnecting to the repo's new-physics-constraint purpose. A massive |
 | v2.244 | [v2.244 - The superradiant Regge-plane exclusion: from the condition to](2026-06-29-v2.244-qnm-superradiance-regge-exclusion.md) | v2.243 gave the superradiance CONDITION (`mu < m Omega_H/M`). The actual EXCLUSION needs the |
 | v2.245 | [v2.245 - The boson cloud as a continuous-GW source: the direct-detecti](2026-06-29-v2.245-qnm-boson-cloud-gw.md) | v2.243/v2.244 used superradiance as an INDIRECT probe (a spun-down hole excludes a boson). But the |
+| v2.246 | [v2.246 - The superradiance spin-down endpoint: the Regge trajectory ob](2026-06-29-v2.246-qnm-superradiance-regge-trajectory.md) | v2.243-v2.245 gave the superradiance condition, the growth-time exclusion, and the cloud's direct GW |
