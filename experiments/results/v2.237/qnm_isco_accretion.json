@@ -1,0 +1,42 @@
+{
+  "version": "v2.237",
+  "method": "timelike circular-orbit energy E(r)=sqrt(2f^2/(2f-rf')) of a static metric; ISCO = argmin E(r); efficiency eta=1-E_ISCO; Omega=sqrt(f'/(2r)); deformation f=1-2/r+eps/r^k; M=1",
+  "schwarzschild": {
+    "r_isco": 5.999999895789342,
+    "E_isco": 0.9428090415820634,
+    "efficiency": 0.057190958417936644,
+    "Omega_isco": 0.0680413835166365
+  },
+  "closed_form": {
+    "r_isco": 6.0,
+    "E_isco": 0.9428090415820634,
+    "efficiency": 0.057190958417936644,
+    "Omega_isco": 0.06804138174397717
+  },
+  "matches_closed_form": {
+    "r_isco": true,
+    "E_isco": true,
+    "efficiency": true,
+    "Omega_isco": true
+  },
+  "all_match": true,
+  "deformation_sensitivity": {
+    "k=3": {
+      "r_isco_d_eps": -0.52733197754673,
+      "efficiency_d_eps": 0.004364856676097872,
+      "Omega_isco_d_eps": 0.007552570486998866
+    },
+    "k=4": {
+      "r_isco_d_eps": -0.15277728720786143,
+      "efficiency_d_eps": 0.0010912141684693566,
+      "Omega_isco_d_eps": 0.0022837880461062943
+    }
+  },
+  "finding": "The Schwarzschild ISCO is reproduced exactly from first principles: r_ISCO = 6.0000 (=6M), E_ISCO = 0.94281 (=sqrt(8/9)), radiative efficiency eta = 0.0572 (~5.72%), Omega_ISCO = 0.06804 (=1/(6 sqrt6 M)). A near-horizon / higher-curvature deformation shifts it: an eps/r^3 bump SHRINKS the ISCO (dr/d eps = -0.53), RAISING both the accretion efficiency (d eta/d eps = +0.0044) and the orbital frequency (d Omega/d eps = +0.0076); an eps/r^4 bump does the same but weaker (more localized). Because the ISCO is the inner accretion-disk edge (EM: X-ray continuum / EHT) AND the inspiral-to-merger transition frequency (GW), this is a multi-messenger probe -- the matter-orbit companion to the photon-sphere<->shadow link (v2.230): a deformation moves the disk efficiency and the merger frequency coherently.",
+  "honest_scope": "Schwarzschild baseline (exact) + linear deformation response, equatorial circular timelike geodesics of a static spherical metric in the g_tt g_rr = -1 gauge. Kerr (spin) shifts the ISCO strongly (prograde down to r=M, efficiency up to ~42%) and breaks sphericity -- not included. The deformation profile (eps/r^k) is illustrative, not a derived QG metric; the efficiency assumes a standard thin disk radiating the binding energy. This frames a multi-messenger test (a deformation correlates the disk efficiency and merger frequency), not a coupling bound. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Bardeen, Press, Teukolsky, ApJ 178 (1972) 347 -- circular geodesics / ISCO / efficiency",
+    "Novikov & Thorne (1973) -- thin-disk radiative efficiency",
+    "this repo: v2.230 (photon-sphere<->shadow multi-messenger), v2.231 (deviation null test)"
+  ]
+}
