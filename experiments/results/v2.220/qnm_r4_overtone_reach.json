@@ -1,0 +1,41 @@
+{
+  "version": "v2.220",
+  "method": "per-mode ringdown Fisher resolvability (v2.219) x source-backed qEFT fractional deformation coefficients (v2.217); reach = N R(Q)/(|c| rho), N=5 sigma; l=2 fundamental + first overtone, M=1",
+  "modes": {
+    "n0": {
+      "n": 0,
+      "Q": 2.100177603920775,
+      "R_f": 0.553695256215723,
+      "R_tau": 2.0006891447433808,
+      "dwq": 0.2114,
+      "dtq": 0.607,
+      "reach_freq_x_rho": 13.095914290816534,
+      "reach_damp_x_rho": 16.48014122523378,
+      "best_reach_x_rho": 13.095914290816534,
+      "best_channel": "frequency"
+    },
+    "n1": {
+      "n": 1,
+      "Q": 0.6328806381541718,
+      "R_f": 3.7738429457627465,
+      "R_tau": 2.52891512715319,
+      "dwq": 1.5263,
+      "dtq": 171.35,
+      "reach_freq_x_rho": 12.362716850431587,
+      "reach_damp_x_rho": 0.07379384672171549,
+      "best_reach_x_rho": 0.07379384672171549,
+      "best_channel": "damping"
+    }
+  },
+  "overtone_advantage_at_equal_snr": 177.46620988878152,
+  "dominant_channel_overtone": "damping",
+  "crossover_snr_ratio": 0.005634875510254612,
+  "finding": "The n=1 overtone's DAMPING channel reaches gamma_reach*rho = 0.0738, ~177x DEEPER than the fundamental's best (frequency) channel (13.10) -- at equal SNR. The overtone's enormous damping-time sensitivity (dtq_1 = 171.35) decisively overwhelms its resolvability PENALTY (low Q=0.63 balloons R_f from 0.55 to 3.77). So sensitivity x resolvability still favors the overtone by ~2 orders of magnitude: overtone ringdown is the dominant R4 lever not just in raw sensitivity (v2.217) but in actual detection reach.",
+  "crossover_statement": "The overtone keeps the deeper reach as long as its SNR exceeds ~0.56% of the fundamental's (rho_1/rho_0 > 0.0056) -- an extremely weak condition, essentially always met once the overtone is detected at all. Even a heavily SNR-suppressed overtone dominates the R4 constraint.",
+  "honest_scope": "Idealizations carried from the inputs: EQUAL-SNR comparison (the overtone is typically excited at LOWER SNR; the reach scales as 1/rho_n, so an excitation ratio rho_1/rho_0 ~ 0.1-0.3 shrinks the advantage to ~18-53x -- still dominant); the overtone Q=0.63 < 1 is heavily damped, so its single-damped-sinusoid frequency is poorly defined (correctly reflected in the large R_f); white-noise / single-mode / t=0-start Fisher (v2.219); and the qEFT coefficients carry the v2.217 caveats (dtq_1=171.35 makes the overtone perturbatively delicate -- valid for gamma << 6e-3, consistent with the ~0.07/rho reach being deep in that regime for rho >~ 30). Parity-odd g_R4_c3 stays dark (v2.209); full isospectrality splitting still needs the un-sourceable polar correction (v2.218).",
+  "references": [
+    "Silva, Ghosh, Buonanno, PRD 107 (2023) 044030 (arXiv:2205.05132) -- qEFT coefficients",
+    "Berti, Cardoso, Will, PRD 73 (2006) 064030 -- QNM values + ringdown Fisher analysis",
+    "this repo: v2.217 (overtone sensitivity), v2.219 (resolvability)"
+  ]
+}
