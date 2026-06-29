@@ -1,0 +1,58 @@
+{
+  "version": "v2.255",
+  "method": "SDC tower m/M_Pl = exp(-alpha Delta phi/M_Pl); Lyth bound Delta phi/M_Pl ~ sqrt(r/0.01); trans-Planckian threshold Delta phi > M_Pl",
+  "light_tower": [
+    {
+      "delta_phi_Mpl": 0.5,
+      "tower_mass_over_Mpl": 0.6065306597126334
+    },
+    {
+      "delta_phi_Mpl": 1.0,
+      "tower_mass_over_Mpl": 0.36787944117144233
+    },
+    {
+      "delta_phi_Mpl": 5.0,
+      "tower_mass_over_Mpl": 0.006737946999085467
+    },
+    {
+      "delta_phi_Mpl": 10.0,
+      "tower_mass_over_Mpl": 4.5399929762484854e-05
+    }
+  ],
+  "field_distance_to_descend_to_1e-3_Mpl": 6.907755278982137,
+  "lyth_bound_vs_r": [
+    {
+      "r": 0.036,
+      "delta_phi_Mpl": 1.8973665961010275,
+      "trans_planckian": true,
+      "context": "current bound (BICEP/Keck)"
+    },
+    {
+      "r": 0.01,
+      "delta_phi_Mpl": 1.0,
+      "trans_planckian": false,
+      "context": "Lyth threshold ~ M_Pl"
+    },
+    {
+      "r": 0.003,
+      "delta_phi_Mpl": 0.5477225575051661,
+      "trans_planckian": false,
+      "context": "CMB-S4 target"
+    },
+    {
+      "r": 0.001,
+      "delta_phi_Mpl": 0.31622776601683794,
+      "trans_planckian": false,
+      "context": "LiteBIRD reach"
+    }
+  ],
+  "sdc_predicts_small_r": true,
+  "finding": "The Swampland Distance Conjecture brings an infinite tower of states down exponentially with field distance (m/M_Pl = exp(-alpha Delta phi/M_Pl)): by Delta phi ~ 7 M_Pl the tower has fallen below 1e-3 M_Pl, voiding the EFT. Applied to inflation via the Lyth bound (Delta phi/M_Pl ~ sqrt(r/0.01)), this PREDICTS a small tensor-to-scalar ratio: a sizeable r needs a TRANS-Planckian inflaton excursion, which the Distance Conjecture disfavours. The current bound r < 0.036 implies Delta phi ~ 1.9 M_Pl (trans-Planckian -- mild SDC tension), the Lyth threshold r ~ 0.01 corresponds to Delta phi ~ M_Pl, and a future bound r < 0.002 would give Delta phi < 0.45 M_Pl (sub-Planckian, swampland-safe). So the Distance Conjecture is a FALSIFIABLE swampland statement about the v2.253 tensor sector -- it bets on small-field inflation, testable by CMB-S4 / LiteBIRD -- and it is the physical-tower counterpart of the engine's distance_conjecture aspect-ratio bound on the Wilson coefficients.",
+  "honest_scope": "The SDC is a CONJECTURE (well-supported in string compactifications, not a theorem); the exponent alpha ~ O(1) is order-unity, not fixed (the 'refined' SDC debates its precise value, alpha >= 1/sqrt(d-2) etc.). The Lyth bound coefficient is ORDER-OF-MAGNITUDE -- the precise sqrt(r) prefactor depends on the observable e-fold window and the inflation model (the threshold is conventionally r ~ 0.01 <-> Delta phi ~ M_Pl, used here). Trans-Planckian excursions are not strictly forbidden (some monodromy / multi-field models evade the simple bound). Self-contained reconstruction of the swampland-inflation connection, not a new bound. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Ooguri & Vafa, Nucl. Phys. B766 (2007) 21 -- Swampland Distance Conjecture",
+    "Lyth, PRL 78 (1997) 1861 -- field excursion vs tensor-to-scalar ratio",
+    "Obied, Ooguri, Spodyneiko, Vafa (2018); Agrawal et al. (2018) -- de Sitter / refined SDC",
+    "this repo: v2.253 (inflation tensor r), v2.254 (Weak Gravity Conjecture), engine distance_conjecture"
+  ]
+}

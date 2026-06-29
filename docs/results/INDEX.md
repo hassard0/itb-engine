@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (365 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (366 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -414,3 +414,4 @@ Auto-generated front door to the full research program (365 notes). Regenerate w
 | v2.252 | [v2.252 - Vacuum birefringence: the energy-dependent parity-violation p](2026-06-29-v2.252-qnm-vacuum-birefringence.md) | Continuing the spacetime-structure thread (v2.251) into the PARITY-odd sector, reconnecting to the |
 | v2.253 | [v2.253 - Primordial gravitational waves: the direct observational wind](2026-06-29-v2.253-qnm-inflation-tensor-qg.md) | The QG-cosmology capstone of the spacetime/propagation thread (v2.251-v2.252). Inflation stretches |
 | v2.254 | [v2.254 - The Weak Gravity Conjecture: 'gravity is the weakest force' a](2026-06-29-v2.254-qnm-weak-gravity-conjecture.md) | A fresh QG-CONSISTENCY (swampland) probe, reconnecting to the engine's `distance_conjecture` / |
+| v2.255 | [v2.255 - The Swampland Distance Conjecture: the light tower, and why i](2026-06-29-v2.255-qnm-swampland-distance-conjecture.md) | The companion swampland pillar to the Weak Gravity Conjecture (v2.254), reconnecting to the engine's |
