@@ -1,0 +1,69 @@
+{
+  "version": "v2.279",
+  "method": "Damour-Deruelle PK parameters: omega_dot -> total mass, measured ratio R -> individual masses, then PREDICT gamma, Pdot_b and Shapiro r and compare to measured (Kramer et al. 2006); T_sun=4.9255e-6 s",
+  "double_pulsar_params": {
+    "P_b_s": 8834.534998272,
+    "e": 0.0877775,
+    "omega_dot_deg_yr": 16.89947,
+    "mass_ratio_R": 1.0714,
+    "gamma_ms": 0.3856,
+    "Pdot_b_obs": -1.252e-12,
+    "shapiro_r_us": 6.21,
+    "m_A_msun": 1.3381,
+    "m_B_msun": 1.2489,
+    "M_total_msun": 2.58708
+  },
+  "derived_total_mass_msun": 2.5870758704546404,
+  "derived_m_A_msun": 1.338125464712321,
+  "derived_m_B_msun": 1.2489504057423195,
+  "pk_comparisons": {
+    "total_mass": {
+      "predicted": 2.5870758704546404,
+      "measured": 2.58708,
+      "frac_diff": 1.5962186555667602e-06
+    },
+    "m_A": {
+      "predicted": 1.338125464712321,
+      "measured": 1.3381,
+      "frac_diff": 1.9030500202533855e-05
+    },
+    "m_B": {
+      "predicted": 1.2489504057423195,
+      "measured": 1.2489,
+      "frac_diff": 4.036011075316343e-05
+    },
+    "gamma_ms": {
+      "predicted": 0.38403020107035,
+      "measured": 0.3856,
+      "frac_diff": 0.004071055315482311
+    },
+    "Pdot_b": {
+      "predicted": -1.2478341338207007e-12,
+      "measured": -1.252e-12,
+      "frac_diff": 0.0033273691527948633
+    },
+    "shapiro_r_us": {
+      "predicted": 6.151693916735772,
+      "measured": 6.21,
+      "frac_diff": 0.009389063327573006
+    }
+  },
+  "consistency_checks": {
+    "omega_dot_gives_total_mass": true,
+    "mass_ratio_splits_to_measured_masses": true,
+    "predicted_gamma_matches": true,
+    "predicted_Pdot_b_matches": true,
+    "predicted_shapiro_r_matches": true,
+    "system_overdetermined": true
+  },
+  "all_checks_pass": true,
+  "shapiro_shape_test": "the Shapiro-delay shape s = sin i provides the headline test: observed/GR-predicted s = 0.99987 +/- 0.00050 (Kramer et al. 2006), confirming general relativity to ~0.05% -- the most stringent test from a binary pulsar at the time",
+  "finding": "The double pulsar is general relativity's most stringent binary test because BOTH neutron stars are visible, over-determining the two masses. Periastron advance alone fixes the total mass at M = 2.5871 M_sun (measured 2.58708), and the directly-measured mass ratio R = 1.0714 splits it into m_A = 1.3381, m_B = 1.2490 M_sun (measured 1.3381, 1.2489). With the masses fixed by just those two inputs, every other post-Keplerian parameter is PREDICTED and matches: the Einstein delay gamma = 0.3840 ms (measured 0.3856), the GW orbital decay Pdot_b = -1.2478e-12 (measured -1.252e-12), and the Shapiro range r = 6.152 us (measured 6.21) -- all to ~1%. The five PK curves intersect at a single point in the mass plane, which they need not have: that is the test, and GR passes. The Shapiro shape s = sin i sharpens it to ~0.05% (observed/GR = 0.99987). Together with the v2.278 Hulse-Taylor decay, the binary pulsars confirm both that GR's quadrupole GW emission is real AND that the full strong-field two-body dynamics is Einsteinian, the classical bedrock under the v2.266-v2.272 GW program.",
+  "honest_scope": "Exact leading-order Damour-Deruelle PK formulas with the source-backed Kramer et al. 2006 measured values; the predicted-vs-measured agreements reproduce the published consistency to ~1% (the actual analysis reaches far higher precision with full timing and the later Kramer 2021 update -- this is the structural demonstration, not the full timing fit). The Shapiro shape 0.05% figure is the published headline, cited not re-derived (s needs the inclination from the timing solution, independent of the masses). omega_dot is taken as pure GR (a tiny spin-orbit / higher-PN contribution exists). Point-mass, leading PN PK order. A classical-GR / strong-field-test result, not an engine constraint refit.",
+  "references": [
+    "Kramer et al., 'Tests of general relativity from timing the double pulsar', Science 314 (2006) 97",
+    "Kramer et al., 'Strong-field gravity tests with the double pulsar', PRX 11 (2021) 041050",
+    "Damour, Deruelle, 'General relativistic celestial mechanics of binary systems II', Ann. IHP 44 (1986) 263",
+    "this repo: v2.278 (Hulse-Taylor quadrupole), v2.266-v2.272 (GW observables)"
+  ]
+}
