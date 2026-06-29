@@ -1,0 +1,36 @@
+{
+  "version": "v2.232",
+  "method": "two-parameter non-Kerr lapse f=1-2/r+e1/r^3+e2/r^4; 2x2 Jacobian of the independent geodesic observables (shadow b_c, ringdown damping lambda) wrt (e1,e2); eikonal ringdown, M=1",
+  "jacobian": [
+    [
+      -0.2886751347075389,
+      -0.09622504487882821
+    ],
+    [
+      -0.007127781123661414,
+      -0.007127781105481512
+    ]
+  ],
+  "det": 0.0013717421122799414,
+  "condition_number": 67.55927231652859,
+  "invertible": true,
+  "inversion_check": {
+    "true": [
+      0.01,
+      -0.02
+    ],
+    "recovered": [
+      0.010004861542899387,
+      -0.020014585666464715
+    ],
+    "max_abs_err": 1.4585666464714264e-05
+  },
+  "finding": "The two independent geodesic observables (shadow b_c, ringdown damping lambda) invert a two-parameter photon-sphere deformation: the 2x2 Jacobian is non-singular (det = 1.37e-03, condition number 67.6), so a joint shadow + ringdown measurement recovers BOTH deformation parameters (a linear recovery of a test (e1,e2)=(0.01,-0.02) is exact to 1.5e-05). The ringdown FREQUENCY (= 1/b_c by the v2.231 locking identity) is a redundant third measurement, so the joint observation is OVER-DETERMINED (3 measurements, 2 parameters) -- the redundancy is a built-in GW/EM consistency check. The moderate condition number reflects that the damping responds similarly to the two radial profiles, so the shadow/frequency carries most of the discriminating power between them.",
+  "honest_scope": "Eikonal (large-l) and static-spherical only (v2.229-v2.231 caveats): the inversion is exact for the geodesic observables in the eikonal limit; finite-l O(1/l) corrections and Kerr rotation modify it. The deformation basis (1/r^3, 1/r^4) is illustrative, not a specific QG metric. This demonstrates the INVERTIBILITY structure (2 observables -> 2 parameters, +1 redundant check); a real measurement-error-propagated bound needs detector noise on b_c and lambda (not done here). Frames a QG test, not a coupling constraint. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "core_engine_reconnaissance_note": "Scoped the repo's core 7-D Wilson engine this cycle (g_4,g_6,g_8,g_R2,g_R3,g_R2_parity,g_R3_parity; itb.engine.check is sub-ms over 38 constraints). The feasible region is a thin lower-dimensional cone (0/20000 box rejection-sampling acceptance; naive SLSQP returns NaNs) -- robust mapping needs the existing catalog.py extreme-point optimizer. Per-framework feasibility is already covered by baseline.py (engine flags lqg_induced failing 4/38, worst cft_flat_space_bound). The high-value bridge from the QNM thread is a NEW source-backed RINGDOWN constraint on the quartic g_8 operator (from the v2.223 LIGO ell-bounds) -- a dedicated multi-tick effort, recorded for follow-up.",
+  "references": [
+    "Cardoso et al., PRD 79 (2009) 064016 -- eikonal QNM / photon sphere / Lyapunov",
+    "Rezzolla & Zhidenko, PRD 90 (2014) 084009 -- parametrized non-Kerr deviations",
+    "this repo: v2.231 (cross-channel locking/independence), v2.230 (ringdown<->shadow)"
+  ]
+}

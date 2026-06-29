@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (342 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (343 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -391,3 +391,4 @@ Auto-generated front door to the full research program (342 notes). Regenerate w
 | v2.229 | [v2.229 - The eikonal QNM <-> photon-sphere correspondence: ringdown fr](2026-06-29-v2.229-qnm-photon-sphere-correspondence.md) | A fresh, fully self-contained thread (pivoting out of the EFT-ringdown vein after v2.215-v2.228). |
 | v2.230 | [v2.230 - The photon sphere as the common origin of ringdown and the bl](2026-06-29-v2.230-qnm-shadow-multimessenger.md) | v2.229 showed the eikonal ringdown is governed by the photon sphere. The SAME unstable photon |
 | v2.231 | [v2.231 - Cross-channel sensitivity of a photon-sphere deviation: a rin](2026-06-29-v2.231-qnm-photon-sphere-deviation.md) | v2.230 showed ringdown and the black-hole shadow share the photon sphere. Turn that into a |
+| v2.232 | [v2.232 - Inverting a two-parameter photon-sphere deviation from shadow](2026-06-29-v2.232-qnm-photon-sphere-inversion.md) | v2.231 established that a non-Kerr photon-sphere deformation has exactly TWO independent geodesic |
