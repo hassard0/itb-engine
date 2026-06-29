@@ -1,0 +1,37 @@
+{
+  "version": "v2.212",
+  "target": "McManus et al. PRD 99 (2019) 104077 parametrized-ringdown e_j (odd-parity gravitational, l=2, n=0)",
+  "basis": "delta_V_j = (1/r_H^2)(r_H/r)^j, r_H=2 (M=1); omega=omega_0+sum_j alpha_j e_j",
+  "comparison": [
+    {
+      "j": 0,
+      "e_wkb_re": 0.31686284651352703,
+      "e_wkb_im": 0.07575731993803014,
+      "e_ref_re": 0.123625,
+      "e_ref_im": 0.0463215,
+      "rel_error": 1.4806054500242862
+    },
+    {
+      "j": 1,
+      "e_wkb_re": 0.18791904639720025,
+      "e_wkb_im": 0.05005089247790001,
+      "e_ref_re": 0.079925,
+      "e_ref_im": 0.009104,
+      "rel_error": 1.4357723118760886
+    },
+    {
+      "j": 2,
+      "e_wkb_re": 0.10660611437057765,
+      "e_wkb_im": 0.045312950406835306,
+      "e_ref_re": 0.048316,
+      "e_ref_im": -0.00120775,
+      "rel_error": 1.543069481976931
+    }
+  ],
+  "max_rel_error": 1.543069481976931,
+  "wkb_peak_sensitivity_reproduces_e_j": false,
+  "finding": "NEGATIVE: the WKB-at-peak operator->QNM sensitivity (v2.211) is numerically STABLE but NOT ACCURATE -- it misses the published parametrized-ringdown e_j by ~150% (a consistent ~2.5x on the real parts, with the imaginary parts diverging, so it is not a fixable normalization). Stability != correctness.",
+  "diagnosis": "The exact first-order QNM sensitivity is a GLOBAL mode-overlap integral, d(omega)/d(alpha_j) = integral psi_0^2 delta_V_j dr* / (2 omega_0 integral psi_0^2 dr*), over the (regularized) QNM eigenfunction -- this is what McManus et al. compute. 3rd-order WKB-at-peak only uses delta_V_j's value and derivatives at the single potential-peak point, so it captures the correct STRUCTURE (finite, complex, j-dependent, decreasing with j) but is quantitatively off by O(1) factors for these slowly-varying / horizon-weighted basis functions. The QNM frequencies themselves (v2.210/v2.211) remain validated; only the peak-shortcut SENSITIVITY is inaccurate.",
+  "fix_next": "v2.213: implement the proper first-order overlap-integral sensitivity using the QNM eigenfunction (with the QNM norm / Leung-Maassen-van den Brink regularization), or full Leaver-grade re-solve of V + delta_V, and re-validate against e_j.",
+  "claim_gate": "closed: in-house operator->QNM sensitivity is NOT yet claim-grade."
+}

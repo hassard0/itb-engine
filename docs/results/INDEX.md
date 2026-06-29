@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (322 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (323 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -371,3 +371,4 @@ Auto-generated front door to the full research program (322 notes). Regenerate w
 | v2.209 | [v2.209 - R4 ParSpec qNM-to-Bresciani sourceable-rank determination](2026-06-29-v2.209-r4-parspec-qnm-sourceable-rank-determination.md) | v2.200 defined the gate (a claim-grade bridge needs a source-backed rank-3 3x4 |
 | v2.210 | [v2.210 - First-principles WKB quasinormal-mode solver (validated)](2026-06-29-v2.210-qnm-wkb-solver.md) | v2.209 established that no public source supplies a full-rank operator->QNM sensitivity |
 | v2.211 | [v2.211 - QNM solver validation across the Regge-Wheeler family + stabl](2026-06-29-v2.211-qnm-validation-suite.md) | v2.210 validated the in-house WKB QNM solver on the gravitational (s=2, l=2) fundamental |
+| v2.212 | [v2.212 - Operator->QNM sensitivity vs published parametrized-ringdown ](2026-06-29-v2.212-qnm-parametrized-validation.md) | stability != correctness. |
