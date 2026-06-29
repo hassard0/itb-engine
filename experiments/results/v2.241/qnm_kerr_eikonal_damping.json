@@ -1,0 +1,58 @@
+{
+  "version": "v2.241",
+  "method": "eikonal Kerr QNM damping from the equatorial photon-orbit Lyapunov exponent lambda = sqrt(-V''(r_ph)/2)/tdot; b_c = a(r_ph+3)/(3-r_ph); M=1, E=1; validated vs Schwarzschild (v2.229)",
+  "schwarzschild_gate_ok": true,
+  "spin_sequence": [
+    {
+      "a": 0.0,
+      "lambda_prograde": 0.19245008972987523,
+      "lambda_retrograde": 0.19245008972987523,
+      "Omega_ph_prograde": 0.19245008972987526,
+      "quality_factor_prograde": 0.5000000000000001
+    },
+    {
+      "a": 0.3,
+      "lambda_prograde": 0.1906710315798691,
+      "lambda_retrograde": 0.1914622059198029,
+      "Omega_ph_prograde": 0.2190481440463322,
+      "quality_factor_prograde": 0.574413801171932
+    },
+    {
+      "a": 0.5,
+      "lambda_prograde": 0.18591806207104294,
+      "lambda_retrograde": 0.19008850906913077,
+      "Omega_ph_prograde": 0.24412473193675746,
+      "quality_factor_prograde": 0.6565385020081389
+    },
+    {
+      "a": 0.7,
+      "lambda_prograde": 0.17388847173235547,
+      "lambda_retrograde": 0.188408738931834,
+      "Omega_ph_prograde": 0.2811547456892631,
+      "quality_factor_prograde": 0.8084341155232218
+    },
+    {
+      "a": 0.9,
+      "lambda_prograde": 0.13607999021010353,
+      "lambda_retrograde": 0.1865486876304436,
+      "Omega_ph_prograde": 0.35156534779899323,
+      "quality_factor_prograde": 1.291759895250531
+    },
+    {
+      "a": 0.998,
+      "lambda_prograde": 0.02926041828707797,
+      "lambda_retrograde": 0.18559650640048864,
+      "Omega_ph_prograde": 0.4737343228666683,
+      "quality_factor_prograde": 8.095139280286357
+    }
+  ],
+  "prograde_damping_falls_with_spin": true,
+  "quality_factor_rises_with_spin": true,
+  "finding": "The eikonal Kerr ringdown damping is the photon-orbit Lyapunov rate, reproducing Schwarzschild at a=0 (lambda = 0.19245 = Omega_c = 1/(3 sqrt3), the v2.229 identity). With spin the PROGRADE damping FALLS monotonically -- from 0.192 to 0.0293 at a=0.998 (heading to the extremal zero-damping limit lambda -> 0) -- while the retrograde damping stays ~0.186. So the prograde ringdown QUALITY FACTOR Q ~ omega_R/(2 omega_I) RISES sharply, from 0.50 (Schwarzschild) to 8.1 at a=0.998: near-extremal black holes ring for many more cycles, the long-lived 'zero-damping modes' that make near-extremal remnants the prime targets for ringdown spectroscopy. Combined with v2.240 (frequency) this gives the full eikonal Kerr QNM omega_lmn(a) = (l+1/2) Omega_ph - i(n+1/2) lambda from the photon orbit alone.",
+  "honest_scope": "Eikonal (large-l), equatorial co-rotating (l=m) modes, exact Kerr photon orbits, validated against the Schwarzschild Lyapunov identity. Like v2.240 the eikonal is the large-l LIMIT and SPIN TREND, not a precise omega_220(a) (the precise low-l Kerr QNM, including the actual near-extremal zero-damping modes, needs the Teukolsky/Leaver solver -- the deferred effort; the eikonal captures the lambda -> 0 trend correctly). The a=1 extremal point has the photon orbit coincide with the horizon (coordinate degeneracy); astrophysical spins cap near Thorne a=0.998 (included). Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Yang, Zimmerman, Zhang, Berti, Chen, PRD 86 (2012) 104006 -- eikonal Kerr QNM / Lyapunov",
+    "Cardoso et al., PRD 79 (2009) 064016 -- photon-orbit Lyapunov exponent",
+    "this repo: v2.240 (eikonal Kerr frequency), v2.229 (Schwarzschild Lyapunov = Omega_c)"
+  ]
+}

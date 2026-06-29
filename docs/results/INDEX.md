@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (351 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (352 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -400,3 +400,4 @@ Auto-generated front door to the full research program (351 notes). Regenerate w
 | v2.238 | [v2.238 - Unified deformation fingerprint: one non-Kerr parameter, all ](2026-06-29-v2.238-qnm-unified-deformation-fingerprint.md) | The v2.229-v2.237 sub-program built the strong-field black-hole observables one at a time -- photon |
 | v2.239 | [v2.239 - Kerr generalization: how spin splits and amplifies the strong](2026-06-29-v2.239-qnm-kerr-strong-field.md) | The v2.229-v2.238 sub-program was non-rotating (Schwarzschild). Rotation is the one parameter Nature |
 | v2.240 | [v2.240 - The eikonal Kerr ringdown from the photon orbit: how spin set](2026-06-29-v2.240-qnm-kerr-eikonal-ringdown.md) | The Kerr strong-field thread (v2.239) gave the spin-dependent photon orbits. How does that feed the |
+| v2.241 | [v2.241 - The eikonal Kerr ringdown damping from the photon-orbit Lyapu](2026-06-29-v2.241-qnm-kerr-eikonal-damping.md) | v2.240 gave the eikonal Kerr ringdown FREQUENCY from the equatorial photon orbit. Complete the |
