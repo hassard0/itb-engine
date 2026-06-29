@@ -1,0 +1,75 @@
+{
+  "version": "v2.265",
+  "method": "cross-verify the four swampland modules (WGC/SDC/TCC/species) for shared Planck conventions, agreeing directions and nested strengths; 6 consistency checks",
+  "swampland_web": [
+    {
+      "conjecture": "Weak Gravity (v2.254)",
+      "bounds": "EFT cutoff Lambda <~ g M_Pl; charged states super-extremal",
+      "observable": "charge/mass of states",
+      "direction": "cutoff below Planck"
+    },
+    {
+      "conjecture": "Distance (v2.255)",
+      "bounds": "field range; light tower m ~ M_Pl e^{-alpha dphi}",
+      "observable": "tensor ratio r (via Lyth)",
+      "direction": "r down (sub-Planckian)"
+    },
+    {
+      "conjecture": "Trans-Planckian Censorship (v2.263)",
+      "bounds": "inflationary H < M_Pl e^{-N}",
+      "observable": "tensor ratio r",
+      "direction": "r unobservably small"
+    },
+    {
+      "conjecture": "Species scale (v2.264)",
+      "bounds": "QG cutoff Lambda_sp = M_Pl/sqrt(N)",
+      "observable": "number of light species",
+      "direction": "cutoff below Planck"
+    }
+  ],
+  "lyth_delta_phi_at_current_r": 1.8973665961010275,
+  "consistency_checks": [
+    {
+      "name": "planck_mass_conventions_consistent",
+      "detail": "M_full/M_reduced = 5.0103 vs sqrt(8 pi) = 5.0133",
+      "pass": true
+    },
+    {
+      "name": "tcc_strictly_stronger_than_sdc",
+      "detail": "r_TCC(N=60) = 7.40e-45 << r_SDC_safe = 0.002",
+      "pass": true
+    },
+    {
+      "name": "both_push_r_down",
+      "detail": "r_TCC(60)=7.40e-45 and r_SDC_safe=0.002 both < r_current=0.036",
+      "pass": true
+    },
+    {
+      "name": "species_scale_below_planck",
+      "detail": "Lambda_sp(N=118) = 2.24e+17 GeV = 0.092 M_Pl < M_Pl",
+      "pass": true
+    },
+    {
+      "name": "wgc_cutoff_below_planck",
+      "detail": "Lambda_WGC = g M_Pl, g = 0.303 < 1",
+      "pass": true
+    },
+    {
+      "name": "light_tower_is_the_shared_object",
+      "detail": "as Delta phi grows the SDC tower mass and the species-scale cutoff both fall monotonically",
+      "pass": true
+    }
+  ],
+  "checks_passed": 6,
+  "checks_total": 6,
+  "all_pass": true,
+  "finding": "The four-cycle swampland sub-arc forms one interlocking web, and all 6/6 cross-program consistency checks pass. The modules share a consistent Planck-mass bookkeeping (the WGC's full M_Pl and the inflation/TCC/species reduced M_Pl differ by exactly sqrt(8 pi), verified to <1%). The LIGHT TOWER is the unifying object: the SDC says it descends with field distance, that growing tower IS the species count N that lowers the Dvali cutoff Lambda_sp = M_Pl/sqrt(N), and the SDC and TCC then both push the tensor-to-scalar ratio r down -- with the TCC strictly stronger (r_TCC(N=60) ~ 7e-45 << the SDC sub-Planckian r ~ 2e-3 << the current bound 0.036). The WGC and the species scale independently say the gravitational EFT cuts off BELOW the Planck mass (g M_Pl and M_Pl/sqrt(N) respectively). So 'is this EFT in the swampland?' is answered by one coherent structure -- the cutoff (WGC + species), the field range (SDC), and the observable consequence (TCC: no detectable primordial GWs) -- not four disconnected slogans.",
+  "honest_scope": "A synthesis / cross-verification capstone: every check is a consistency relation among results already established and caveated in v2.254/v2.255/v2.263/v2.264 (each a conjecture, not a theorem; O(1) prefactors, alpha~O(1) tower exponent, model-dependent N(dphi) law -- the species-count-from-tower step uses an illustrative p=1 density whose only robust content is the monotone DIRECTION). No new bound is derived; the value is showing the four conjectures are mutually consistent and share one mechanism (the light tower) and one bookkeeping (sqrt(8 pi) Planck conventions). A QG-consistency structural result, not an engine constraint refit.",
+  "references": [
+    "Arkani-Hamed, Motl, Nicolis, Vafa (WGC), JHEP 06 (2007) 060",
+    "Ooguri, Vafa (Distance Conjecture), Nucl.Phys.B 766 (2007) 21",
+    "Bedroya, Vafa (TCC), JHEP 09 (2020) 123, arXiv:1909.11063",
+    "Dvali (species scale), Fortsch.Phys. 58 (2010) 528, arXiv:0706.2050",
+    "this repo: v2.254, v2.255, v2.263, v2.264"
+  ]
+}

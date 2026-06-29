@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (375 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (376 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -424,3 +424,4 @@ Auto-generated front door to the full research program (375 notes). Regenerate w
 | v2.262 | [v2.262 - Forced per-framework higher-curvature towers from Hankel posi](2026-06-29-v2.262-qnm-framework-curvature-tower.md) | v2.261 established that a consistent UV completion's curvature couplings form a Stieltjes moment |
 | v2.263 | [v2.263 - The Trans-Planckian Censorship Conjecture: why it predicts un](2026-06-29-v2.263-qnm-trans-planckian-censorship.md) | A fresh QG-consistency / swampland probe extending the inflation-tensor (v2.253) and Swampland |
 | v2.264 | [v2.264 - The Dvali species scale: how many light fields lower the quan](2026-06-29-v2.264-qnm-species-scale.md) | The Standard Model's ~118 light dof already lower gravity's true cutoff to `~0.09 M_Pl ~ 2e17 GeV` |
+| v2.265 | [v2.265 - Synthesis capstone: the swampland web (WGC + SDC + TCC + spec](2026-06-29-v2.265-qnm-swampland-web-synthesis.md) | Four consecutive cycles built a swampland sub-arc -- the Weak Gravity Conjecture (v2.254), the |
