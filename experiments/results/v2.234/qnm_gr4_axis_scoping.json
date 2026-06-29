@@ -1,0 +1,81 @@
+{
+  "version": "v2.234",
+  "method": "read-only scoping: extend the engine's existing positivity/causality machinery one order up the curvature ladder to a Riemann^4 (g_R4) axis; compute the positivity-forced minimum g_R4 per known framework",
+  "gr4_constraint_types": [
+    {
+      "name": "gr4_positivity",
+      "form": "g_R4 >= 0",
+      "class": "A (dispersion tower)",
+      "source": "dispersion_tower.py (g_2n>=0 analog)"
+    },
+    {
+      "name": "curvature_dispersion_tower",
+      "form": "g_R3^2 <= g_R2 * g_R4",
+      "class": "A (Cauchy-Schwarz)",
+      "source": "dispersion_tower.py (g_6^2<=g_4*g_8 analog)"
+    },
+    {
+      "name": "curvature_forward_dominance",
+      "form": "g_R3 >= c * g_R4  (c ~ O(1))",
+      "class": "A (forward positivity)",
+      "source": "graviton_forward_positivity.py (g_R2>=c*g_R3 analog)"
+    },
+    {
+      "name": "spin6_positivity",
+      "form": "g_R4 enters the J=6 graviton partial wave >= 0",
+      "class": "A (partial-wave)",
+      "source": "spin_four_positivity.py (next J)"
+    },
+    {
+      "name": "cemz_higher_causality",
+      "form": "|g_R4| <= kappa * (matter * curvature product)",
+      "class": "C (causality)",
+      "source": "cemz_causality.py (higher-order time-advance)"
+    }
+  ],
+  "forced_gr4_minimum_per_framework": [
+    {
+      "framework": "pure_gr",
+      "g_R2": 0.0,
+      "g_R3": 0.0,
+      "g_R4_min_forced": 0.0,
+      "ringdown_operator_mandated": false
+    },
+    {
+      "framework": "string_tree_eft",
+      "g_R2": 0.2,
+      "g_R3": 0.15,
+      "g_R4_min_forced": 0.11249999999999999,
+      "ringdown_operator_mandated": true
+    },
+    {
+      "framework": "asymptotic_safety",
+      "g_R2": 0.15,
+      "g_R3": 0.1,
+      "g_R4_min_forced": 0.06666666666666668,
+      "ringdown_operator_mandated": true
+    },
+    {
+      "framework": "lqg_induced",
+      "g_R2": 0.3,
+      "g_R3": 0.3,
+      "g_R4_min_forced": 0.3,
+      "ringdown_operator_mandated": true
+    },
+    {
+      "framework": "cdt",
+      "g_R2": 0.22,
+      "g_R3": 0.15,
+      "g_R4_min_forced": 0.10227272727272727,
+      "ringdown_operator_mandated": true
+    }
+  ],
+  "n_frameworks_mandating_gr4": 4,
+  "finding": "A g_R4 (Riemann^4) axis would carry a definite set of constraint types from the engine's existing machinery -- positivity (g_R4>=0), the curvature Cauchy-Schwarz tower (g_R3^2<=g_R2*g_R4), forward dominance, spin-6 positivity, and higher-order CEMZ causality. The verifiable bridge: the curvature dispersion tower FORCES g_R4 >= g_R3^2/g_R2, so 4 of the known frameworks (every one with curvature corrections) MUST carry a nonzero Riemann^4 coefficient (string 0.113, asymptotic-safety 0.067, cdt 0.102, lqg_induced 0.300; pure GR none). The engine's own positivity logic therefore does not merely ALLOW the ringdown-active operator (v2.233) -- it REQUIRES it, at a level set by the lower curvature couplings. That is the structural bridge between the ringdown thread and the core engine.",
+  "honest_scope": "READ-ONLY scoping -- this does NOT modify the committed constraint stack (still 38 constraints); it specifies what a g_R4 axis WOULD carry. The bound forms use representative O(1) prefactors (set to 1), exactly as the existing curvature/matter constraints do (their docstrings flag the same); the literal coefficients need the Gegenbauer/partial-wave evaluation. The forced g_R4_min is a relative (dimensionless) statement in the toy basis; the absolute g_R4 normalization that would connect it to a physical ringdown bound stays un-sourceable (the v2.215 / Bresciani-axis-map blocker). Actually adding the axis + constraints to the engine is a separate, dedicated effort. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Caron-Huot, Mazac, Rastelli, Simmons-Duffin, JHEP 07 (2021) 110 -- dispersion tower",
+    "Camanho, Edelstein, Maldacena, Zhiboedov (2014) -- causality / time advance",
+    "this repo: v2.233 (operator-sector bridge), dispersion_tower/graviton_forward_positivity/cemz_causality"
+  ]
+}
