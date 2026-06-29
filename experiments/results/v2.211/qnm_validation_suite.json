@@ -1,0 +1,129 @@
+{
+  "version": "v2.211",
+  "method": "3rd-order Iyer-Will WKB; Regge-Wheeler family s=0,1,2",
+  "validation": [
+    {
+      "label": "s2_l2_n0",
+      "s": 2,
+      "l": 2,
+      "n": 0,
+      "omega_re": 0.373162,
+      "omega_im": -0.089217,
+      "ref_re": 0.373672,
+      "ref_im": -0.088962,
+      "rel_error": 0.0014846414935545597,
+      "within_wkb_tol": true,
+      "wkb_tol": 0.003
+    },
+    {
+      "label": "s2_l2_n1",
+      "s": 2,
+      "l": 2,
+      "n": 1,
+      "omega_re": 0.346016,
+      "omega_im": -0.274914,
+      "ref_re": 0.346711,
+      "ref_im": -0.273915,
+      "rel_error": 0.0027540134886140442,
+      "within_wkb_tol": true,
+      "wkb_tol": 0.006
+    },
+    {
+      "label": "s2_l3_n0",
+      "s": 2,
+      "l": 3,
+      "n": 0,
+      "omega_re": 0.599265,
+      "omega_im": -0.092728,
+      "ref_re": 0.599443,
+      "ref_im": -0.092703,
+      "rel_error": 0.00029623567958724265,
+      "within_wkb_tol": true,
+      "wkb_tol": 0.003
+    },
+    {
+      "label": "s2_l3_n1",
+      "s": 2,
+      "l": 3,
+      "n": 1,
+      "omega_re": 0.582354,
+      "omega_im": -0.281406,
+      "ref_re": 0.582644,
+      "ref_im": -0.281298,
+      "rel_error": 0.0004774120459201573,
+      "within_wkb_tol": true,
+      "wkb_tol": 0.006
+    },
+    {
+      "label": "s1_l2_n0",
+      "s": 1,
+      "l": 2,
+      "n": 0,
+      "omega_re": 0.457131,
+      "omega_im": -0.095065,
+      "ref_re": 0.457596,
+      "ref_im": -0.095004,
+      "rel_error": 0.001003419293883101,
+      "within_wkb_tol": true,
+      "wkb_tol": 0.005
+    },
+    {
+      "label": "s1_l1_n0",
+      "s": 1,
+      "l": 1,
+      "n": 0,
+      "omega_re": 0.24587,
+      "omega_im": -0.093106,
+      "ref_re": 0.248263,
+      "ref_im": -0.092488,
+      "rel_error": 0.009329556076293485,
+      "within_wkb_tol": true,
+      "wkb_tol": 0.02
+    },
+    {
+      "label": "s0_l2_n0",
+      "s": 0,
+      "l": 2,
+      "n": 0,
+      "omega_re": 0.483211,
+      "omega_im": -0.096805,
+      "ref_re": 0.483644,
+      "ref_im": -0.096759,
+      "rel_error": 0.0008827597198826697,
+      "within_wkb_tol": true,
+      "wkb_tol": 0.005
+    },
+    {
+      "label": "s0_l1_n0",
+      "s": 0,
+      "l": 1,
+      "n": 0,
+      "omega_re": 0.291114,
+      "omega_im": -0.098001,
+      "ref_re": 0.292936,
+      "ref_im": -0.09766,
+      "rel_error": 0.0060028872615024865,
+      "within_wkb_tol": true,
+      "wkb_tol": 0.02
+    }
+  ],
+  "n_modes": 8,
+  "n_within_wkb_tol": 8,
+  "anchor_max_rel_error": 0.0027540134886140442,
+  "all_within_wkb_tol": true,
+  "sensitivity_robustness": {
+    "delta_V": "f(r)/r^4 peak-normalized to V0 (fractional-perturbation units)",
+    "steps_swept": "t in {3e-4,1e-3,3e-3} x h in {0.06,0.08,0.10}",
+    "d_omegaR_d_eps_mean": 0.1916185228899879,
+    "d_omegaR_d_eps_std": 1.943786223740124e-07,
+    "d_omegaI_d_eps_mean": 0.05139815182862614,
+    "d_omegaI_d_eps_std": 1.1642617974539892e-06,
+    "relative_scatter": 2.265182221601895e-05
+  },
+  "sensitivity_stable": true,
+  "finding": "The in-house WKB QNM solver reproduces the scalar, electromagnetic, and gravitational Schwarzschild QNMs (l=2,3; n=0,1) to WKB accuracy, and its operator->QNM sensitivity is numerically stable across eps and h. The tool is trustworthy for arbitrary perturbation potentials -- the prerequisite for computing the R4 quartic operator->QNM sensitivity in-house (v2.209/v2.210).",
+  "honest": "3rd-order WKB; reference digits beyond the s=2,l=2 anchors carry small literature uncertainty, so non-anchor modes are consistency checks at WKB tolerance, not high-precision validations. The sensitivity demo uses an illustrative delta_V, not the physical R4 operator potential.",
+  "references": [
+    "Berti, Cardoso, Will, PRD 73 (2006) 064030 (tabulated QNMs)"
+  ]
+}

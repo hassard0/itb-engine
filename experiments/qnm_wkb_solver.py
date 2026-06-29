@@ -137,19 +137,30 @@ def schwarzschild_qnm(n: int = 0, L: int = 2, s: int = 2, **kw) -> complex:
 
 
 def qnm_potential_sensitivity(delta_V_of_r: Callable[[float], float], n: int = 0,
-                              L: int = 2, s: int = 2, eps: float = 1e-4) -> dict:
-    """Linear QNM sensitivity d(omega)/d(eps) to a perturbation potential deformation
-    V -> V + eps * delta_V, via a central finite difference of the WKB QNM. This is the
-    operator->QNM machinery: a published (or in-house) higher-derivative modification of
-    the Regge-Wheeler potential maps to a ringdown frequency/damping shift. (The physical
-    delta_V for the R4 quartic operators is the next required input; cf v2.209.)"""
+                              L: int = 2, s: int = 2, t: float = 1e-3, **kw) -> dict:
+    """Linear QNM sensitivity d(omega)/d(eps) to a deformation V -> V + eps * delta_V.
+
+    Computed analytically through the WKB formula: V -> V + eps delta_V shifts each
+    peak tortoise-derivative V_k -> V_k + eps * (delta_V)_k, so d(omega)/d(eps) is the
+    directional derivative of the smooth WKB function wkb3_from_derivs(...) along the
+    deformation's derivative vector. This avoids re-solving the QNM for a tiny potential
+    change (which would fight the solver's ~1e-3 floor); the finite difference is over the
+    SMOOTH WKB formula with exact derivative inputs, holding the peak at linear order.
+
+    This is the operator->QNM machinery: a higher-derivative (e.g. R4 quartic) modification
+    of the Regge-Wheeler potential maps to a definite ringdown (omega_R, omega_I) shift."""
     base = lambda rs: rw_potential(r_of_rstar(rs), L, s)
-    def Vpm(sign):
-        return lambda rs: base(rs) + sign * eps * delta_V_of_r(r_of_rstar(rs))
-    w_plus = qnm(Vpm(+1), n=n)
-    w_minus = qnm(Vpm(-1), n=n)
-    w0 = qnm(base, n=n)
-    dwde = (w_plus - w_minus) / (2.0 * eps)
+    rstar0 = find_peak_rstar(base)
+    Vk = tortoise_derivatives(base, rstar0, order=6, **kw)
+    dVk = tortoise_derivatives(lambda rs: delta_V_of_r(r_of_rstar(rs)), rstar0,
+                               order=6, **kw)
+
+    def w_of_t(tt: float) -> complex:
+        v = [Vk[k] + tt * dVk[k] for k in range(7)]
+        return wkb3_from_derivs(v[0], v[2], v[3], v[4], v[5], v[6], n)
+
+    w0 = w_of_t(0.0)
+    dwde = (w_of_t(t) - w_of_t(-t)) / (2.0 * t)
     return {"omega0": w0, "d_omega_d_eps": dwde,
             "d_omega_R_d_eps": dwde.real, "d_omega_I_d_eps": dwde.imag}
 
