@@ -1,0 +1,26 @@
+{
+  "version": "v2.258",
+  "method": "Bekenstein S<=2piRE and holographic S<=A/4 bounds; BH saturation (R=2M,E=M,A=16piM^2); observable-universe holographic bound pi(R_H/l_p)^2; cosmic entropy budget",
+  "bh_saturation": {
+    "S_BH": 1256.6370614359173,
+    "bekenstein_bound": 1256.6370614359173,
+    "holographic_bound": 1256.6370614359173,
+    "all_equal": true
+  },
+  "bh_saturates_both": true,
+  "universe_holographic_bound_nats": 2.0330771740235143e+122,
+  "cosmic_entropy_budget": {
+    "holographic_capacity": 2.0330771740235143e+122,
+    "actual_smbh_dominated": 3.1e+104,
+    "cmb": 1.5e+88,
+    "fraction_of_capacity_used": 1.5247822559854022e-18
+  },
+  "finding": "The Bekenstein bound (S <= 2 pi R E) and the holographic bound (S <= A/4) are both SATURATED by a Schwarzschild black hole -- S_BH = 4 pi M^2 = 2 pi (2M)(M) = (16 pi M^2)/4 -- so the black hole is the MAXIMUM-entropy object for its size, and the entropy of any region is capped by its boundary AREA, not its volume: the holographic principle. For the observable universe the holographic capacity (the de Sitter / Hubble horizon, pi(R_H/l_p)^2) is ~2.0e+122 nats -- the famous ~1e122 -- while the actual cosmic entropy (~3e+104, dominated by supermassive black holes, with the CMB a further ~1e16 below at ~2e+88) is ~2e-18 of that capacity. So the universe has used a TINY fraction of its entropy budget -- the quantitative form of the low-entropy-past / arrow-of-time puzzle (why did the universe begin so far from maximum entropy?). The generalized second law (S_BH + S_outside never decreases) is what keeps these QG bounds consistent with thermodynamics, and these are exactly the entropy constraints the engine encodes.",
+  "honest_scope": "The Bekenstein and holographic bounds are well-established (the holographic / covariant Bousso bound is the rigorous form; the naive S <= A/4 has known subtleties for non-quasi-static / strongly-gravitating regions, which the covariant bound fixes). The BH saturation is exact. The cosmic-entropy numbers are the standard Egan-Lineweaver (2010) estimates (SMBH ~3e104, CMB ~1.5e88) -- order-of-magnitude, dominated by the most uncertain SMBH census; a future entropy (e.g. from a cosmological-horizon or putative dark-sector contribution) could shift the budget. de Sitter / Hubble-horizon entropy used for the capacity. Self-contained reconstruction of standard QG entropy bounds, not a new result. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Bekenstein, PRD 23 (1981) 287 -- the entropy bound",
+    "'t Hooft (1993); Susskind, J. Math. Phys. 36 (1995) 6377 -- holographic principle",
+    "Bousso, Rev. Mod. Phys. 74 (2002) 825 -- the covariant entropy bound",
+    "Egan & Lineweaver, ApJ 710 (2010) 1825 -- the cosmic entropy budget; this repo: v2.257"
+  ]
+}
