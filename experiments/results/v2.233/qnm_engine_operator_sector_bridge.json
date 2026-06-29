@@ -1,0 +1,63 @@
+{
+  "version": "v2.233",
+  "method": "Schwarzschild curvature invariants (sympy on Vulcan: R=0, R_ab=0, K=48M^2/r^6, G=K) re-verified here numerically from the orthonormal tidal tensor; operator-sector classification for tensor-ringdown activity; M=1",
+  "curvature_checks": [
+    {
+      "r": 3.0,
+      "K_numeric": 0.06584362139917695,
+      "K_closed_form": 0.06584362139917696,
+      "K_match": true,
+      "ricci_flat": true
+    },
+    {
+      "r": 5.0,
+      "K_numeric": 0.003072,
+      "K_closed_form": 0.003072,
+      "K_match": true,
+      "ricci_flat": true
+    },
+    {
+      "r": 10.0,
+      "K_numeric": 4.8e-05,
+      "K_closed_form": 4.8e-05,
+      "K_match": true,
+      "ricci_flat": true
+    }
+  ],
+  "all_K_match": true,
+  "all_ricci_flat": true,
+  "operator_sector_classification": {
+    "g_R2_R_squared": {
+      "on_shell_value": "0 (R=0)",
+      "ringdown_active": false,
+      "in_engine_basis": true
+    },
+    "g_R3_R_cubed": {
+      "on_shell_value": "0 (R=0)",
+      "ringdown_active": false,
+      "in_engine_basis": true
+    },
+    "gauss_bonnet_quadratic_Riemann": {
+      "on_shell_value": "K (topological in 4D)",
+      "ringdown_active": false,
+      "in_engine_basis": false
+    },
+    "Riemann4_quartic_dim8_R4": {
+      "on_shell_value": "~ K^2 != 0",
+      "ringdown_active": true,
+      "in_engine_basis": false
+    },
+    "g_8_matter_s4_moment": {
+      "note": "MATTER spin-4 moment, not a curvature operator",
+      "ringdown_active": false,
+      "in_engine_basis": true
+    }
+  },
+  "finding": "Schwarzschild is Ricci-flat (R = R_ab = 0, verified) with nonzero Kretschmann K = 48/r^6, so the curvature operators differ sharply in tensor-ringdown activity: the engine's Ricci-scalar operators g_R2 (R^2) and g_R3 (R^3) VANISH on-shell and are ringdown-blind; the quadratic-Riemann Gauss-Bonnet term is 4D-topological (also inert); the FIRST curvature operator that modifies the Schwarzschild tensor ringdown is the QUARTIC Riemann invariant (~K^2, dim-8 = the QNM thread's 'R4'), because K != 0. That ringdown-active operator is NOT in the engine's basis (which stops at the cubic Ricci scalar g_R3), and the engine's g_8 is the MATTER s^4 moment, not curvature -- so the QNM thread and the core engine probe COMPLEMENTARY operator sectors. Bridging them requires EXTENDING the engine with a Riemann^4 (g_R4) curvature axis, not constraining an existing coefficient.",
+  "honest_scope": "Leading-order, Schwarzschild (non-rotating), tensor-sector statement: f(R) gravity DOES add a separate massive SCALAR mode and the Ricci-scalar operators can affect rotating (Kerr, R != 0 off-vacuum is still 0 but frame-dragging matters) or matter-sourced backgrounds -- 'ringdown-blind' is specifically the leading tensor QNM on the Ricci-flat Schwarzschild background. The Riemann^4 -> ringdown link is the established literature result (Bresciani; SGB) the QNM thread used; the absolute g_R4 normalization stays un-sourceable (the standing v2.215 / Bresciani-axis-map blocker). This is a STRUCTURAL clarification, not a new bound. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "curvature invariants verified on Vulcan (sympy 1.14): R=0, K=48 M^2/r^6, G=K",
+    "Bresciani et al. (arXiv:2504.12855); Silva, Ghosh, Buonanno (arXiv:2205.05132) -- R4 ringdown",
+    "this repo: core 7-D Wilson engine (g_4..g_R3_parity), v2.215 (R4 normalization blocker)"
+  ]
+}
