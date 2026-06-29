@@ -1,0 +1,52 @@
+{
+  "version": "v2.247",
+  "method": "echo delay = 2[r*(3M) - r*(2M(1+eps))] from the tortoise coordinate; reflective surface at r=2M(1+eps); M=1 for the delay-in-M, then * (G M_sun/c^3) for seconds",
+  "log_scaling": [
+    {
+      "epsilon": 0.0001,
+      "echo_delay_M": 36.06837276566495,
+      "minus_4_ln_eps": 36.84136148790473
+    },
+    {
+      "epsilon": 1e-10,
+      "echo_delay_M": 91.33081499712206,
+      "minus_4_ln_eps": 92.10340371976183
+    },
+    {
+      "epsilon": 1e-20,
+      "echo_delay_M": 183.43421871728387,
+      "minus_4_ln_eps": 184.20680743952366
+    },
+    {
+      "epsilon": 1e-40,
+      "echo_delay_M": 367.6410261568075,
+      "minus_4_ln_eps": 368.4136148790473
+    }
+  ],
+  "delay_is_log_sensitive": true,
+  "physical_echo_delays_planck": [
+    {
+      "system": "30 Msun stellar BH (LIGO)",
+      "mass_solar": 30.0,
+      "echo_delay_s_planck": 0.05431896161466832
+    },
+    {
+      "system": "GW150914 remnant",
+      "mass_solar": 62.0,
+      "echo_delay_s_planck": 0.11225918733698119
+    },
+    {
+      "system": "Sgr A* (4.3e6 Msun)",
+      "mass_solar": 4300000.0,
+      "echo_delay_s_planck": 7785.717831435792
+    }
+  ],
+  "finding": "Black-hole echoes turn the ringdown into a probe of horizon-scale new physics. A reflective surface at r = 2M(1+epsilon) produces echoes delayed by Delta t ~ -4M ln(epsilon): the delay grows only LOGARITHMICALLY as the surface approaches the horizon, so a Planck-scale surface (epsilon ~ 1e-40) gives Delta t ~ 368 M -- 54 ms for a 30 Msun black hole, 112 ms for the GW150914 remnant, and ~2.2 hours for Sgr A*. The 36-orders-of-magnitude range of epsilon (1e-4 to 1e-40) changes the delay only ~10x, so the delay is a clean, weakly-model-dependent observable: detecting (or bounding) post-ringdown echoes at this delay tests whether the remnant has a true horizon or a quantum-corrected surface -- the information-paradox question, made observational. This is exactly what the LIGO/Virgo echo searches target.",
+  "honest_scope": "This is the geometric-optics ECHO DELAY (the leading round-trip light-crossing time), exact for the Schwarzschild tortoise coordinate. The full echo WAVEFORM -- amplitudes, the surface reflectivity, the progressive damping and frequency content of successive echoes, and the spinning (Kerr) case -- requires solving the wave equation with the modified inner boundary condition (not done here). The epsilon <-> Planck-scale relation is convention-dependent (coordinate vs proper distance differ by O(1) in ln), so the physical delays are order-of-magnitude. Echoes remain a debated/unconfirmed signal in the data. Reconstruction of a real QG-at-the-horizon observable, not a detection claim. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Cardoso, Franzin, Pani, PRL 116 (2016) 171101 -- ringdown is not the horizon / echoes",
+    "Cardoso & Pani, Living Rev. Rel. 22 (2019) 4 -- testing the nature of compact objects",
+    "Abedi, Dykaar, Afshordi, PRD 96 (2017) 082004 -- LIGO echo search",
+    "this repo: v2.210 (tortoise coordinate / QNM solver)"
+  ]
+}
