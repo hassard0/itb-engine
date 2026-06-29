@@ -1,0 +1,113 @@
+{
+  "version": "v2.273",
+  "method": "Schutz-Will WKB greybody Gamma=1/(1+exp(2 pi (V_max-omega^2)/sqrt(-2 V''))) from the reused Regge-Wheeler barrier peak (v2.210); Hawking flux Gamma/(exp(omega/T_H)-1), T_H=1/8pi; eikonal -> photon sphere b_c=3sqrt3, area theorem A_H=16pi (M=1)",
+  "barrier": {
+    "V_max": 0.15128669957006938,
+    "V2_curvature": -0.009919411717402434,
+    "omega_c": 0.38895590954511716
+  },
+  "hawking_temperature": 0.039788735772973836,
+  "greybody_curve": [
+    {
+      "omega": 0.05,
+      "gamma": 0.001308954048481834
+    },
+    {
+      "omega": 0.1,
+      "gamma": 0.0018280968997090434
+    },
+    {
+      "omega": 0.19447795477255858,
+      "gamma": 0.006295814102497637
+    },
+    {
+      "omega": 0.38895590954511716,
+      "gamma": 0.5
+    },
+    {
+      "omega": 0.5834338643176757,
+      "gamma": 0.9997831145461201
+    },
+    {
+      "omega": 0.6,
+      "gamma": 0.9999095370105917
+    },
+    {
+      "omega": 1.0,
+      "gamma": 1.0
+    }
+  ],
+  "eikonal_scan": [
+    {
+      "L": 2,
+      "omega_c": 0.38895590954511716,
+      "wc_bc_over_l": 0.8084296766835688
+    },
+    {
+      "L": 5,
+      "omega_c": 1.0185681776717763,
+      "wc_bc_over_l": 0.9622973643820145
+    },
+    {
+      "L": 10,
+      "omega_c": 2.000028635186948,
+      "wc_bc_over_l": 0.9897574893532666
+    },
+    {
+      "L": 20,
+      "omega_c": 3.9346551351047863,
+      "wc_bc_over_l": 0.9973203811116989
+    },
+    {
+      "L": 40,
+      "omega_c": 7.788881447597735,
+      "wc_bc_over_l": 0.9993139556570299
+    }
+  ],
+  "capture_cross_section_high_freq": 84.82300164692441,
+  "photon_sphere_b_c": 5.196152422706632,
+  "low_freq_area_theorem_sigma": 50.26548245743669,
+  "hawking_spectrum": [
+    {
+      "omega": 0.05,
+      "greybody_flux": 0.0005207517244827455,
+      "blackbody_flux": 0.3978380486975304
+    },
+    {
+      "omega": 0.1,
+      "greybody_flux": 0.00016113275873111247,
+      "blackbody_flux": 0.08814235107381783
+    },
+    {
+      "omega": 0.2,
+      "greybody_flux": 4.579640286273131e-05,
+      "blackbody_flux": 0.006604756517393746
+    },
+    {
+      "omega": 0.38895590954511716,
+      "greybody_flux": 2.8414284111010996e-05,
+      "blackbody_flux": 5.682856822202199e-05
+    },
+    {
+      "omega": 0.6,
+      "greybody_flux": 2.824582960586555e-07,
+      "blackbody_flux": 2.8248385039222153e-07
+    }
+  ],
+  "consistency_checks": {
+    "gamma_is_half_at_barrier_peak": true,
+    "gamma_monotonic_0_to_1": true,
+    "eikonal_peak_is_photon_sphere": true,
+    "capture_cross_section_27pi": true,
+    "greybody_suppresses_low_freq_hawking": true
+  },
+  "all_checks_pass": true,
+  "finding": "Hawking radiation is a greybody, not a blackbody: a quantum must tunnel out through the same Regge-Wheeler barrier that sets the ringdown, so the emitted flux is the Planck spectrum WEIGHTED by the barrier transmission Gamma_l(omega). Reusing the validated v2.210 WKB machinery, the Schutz-Will transmission through the l=2 barrier (V_max = 0.1513, omega_c = 0.3890) rises monotonically from ~0 at low frequency (the barrier reflects soft quanta) through 1/2 at omega^2 = V_max to ~1 above the barrier (verified). The two physical limits anchor it: at HIGH frequency the barrier peak becomes the photon-sphere orbit -- omega_c b_c/(L+1/2) -> 1 as L grows (verified to <2% by L=40) -- so the capture cross-section is the geometric sigma = pi b_c^2 = 27 pi M^2 (b_c = 3 sqrt3 M, exactly the v2.230 shadow); at LOW frequency the s-wave absorption cross-section tends to the horizon AREA A_H = 16 pi M^2 (the area theorem). The greybody therefore SUPPRESSES the low-frequency Hawking flux relative to a pure blackbody (verified) -- the black hole is a leaky, frequency-filtered thermal source, and the same barrier governs both how it rings (QNMs) and how it glows (Hawking), tying the v2.210 ringdown, the v2.230 photon sphere and the v2.257 Hawking temperature into one object.",
+  "honest_scope": "The Schutz-Will WKB greybody is the LEADING barrier approximation: it is accurate near and above the peak (where it gives the correct 1/2-point and the geometric high-frequency cross-section), but it is NOT accurate at low frequency -- the true low-omega behaviour is the analytic area theorem (sigma -> A_H), quoted here as the complementary limit, not reproduced by the WKB formula (which underestimates the soft tail). So the low-frequency Hawking SUPPRESSION is qualitatively right and quantitatively WKB-limited. M=1 units, Schwarzschild, massless fields; the bosonic flux is shown (fermionic flips the -1 to +1). The eikonal peak->photon-sphere identification is exact in the large-L limit and verified numerically. A BH-physics result reusing the validated QNM potential, not an engine constraint refit.",
+  "references": [
+    "Schutz, Will, 'Black hole normal modes: a semianalytic approach', ApJL 291 (1985) L33",
+    "Page, 'Particle emission rates from a black hole', PRD 13 (1976) 198",
+    "Iyer, Will, 'Black-hole normal modes: WKB approach', PRD 35 (1987) 3621",
+    "this repo: v2.210 (WKB QNM solver), v2.230 (photon sphere / shadow), v2.257 (Hawking temperature)"
+  ]
+}

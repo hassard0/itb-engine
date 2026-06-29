@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (383 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (384 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -432,3 +432,4 @@ Auto-generated front door to the full research program (383 notes). Regenerate w
 | v2.270 | [v2.270 - The GW vs EM luminosity-distance ratio: a standard-siren test](2026-06-29-v2.270-qnm-gw-em-distance-ratio.md) | A fresh GW-propagation probe (continuing v2.266-v2.269) and the achromatic-AMPLITUDE partner of the |
 | v2.271 | [v2.271 - Synthesis capstone: the graviton-observables arc (v2.266-v2.2](2026-06-29-v2.271-qnm-graviton-observables-synthesis.md) | Five consecutive cycles built a gravitational-wave / graviton-observable arc -- the graviton's mass |
 | v2.272 | [v2.272 - The stochastic gravitational-wave background: a spectral zoo ](2026-06-29-v2.272-qnm-stochastic-gw-background.md) | A fresh GW-cosmology probe (opening after the graviton-observable arc v2.266-v2.271). The |
+| v2.273 | [v2.273 - Black-hole greybody factors: how the potential barrier shapes](2026-06-29-v2.273-qnm-greybody-hawking.md) | A fresh QG thread pivoting off the GW arc, REUSING the validated v2.210 WKB / Regge-Wheeler machinery. |
