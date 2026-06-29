@@ -1,0 +1,63 @@
+{
+  "version": "v2.249",
+  "method": "horizon tidal-heating flux sign = sign(Omega_orbit - Omega_H); prograde Kerr circular orbit Omega_orbit=1/(r^{3/2}+a); flux flips at r_crit=(1/Omega_H-a)^{2/3}; compared to the prograde ISCO; M=1",
+  "spin_sequence": [
+    {
+      "a_star": 0.1,
+      "Omega_H": 0.02506281446690023,
+      "r_crit": 11.657002427393104,
+      "r_isco_prograde": 5.669302571208653,
+      "Omega_orbit_isco": 0.07353601937763848,
+      "regime_at_isco": "absorbing (orbit->hole)"
+    },
+    {
+      "a_star": 0.3,
+      "Omega_H": 0.07676799763842392,
+      "r_crit": 5.450887578302341,
+      "r_isco_prograde": 4.97861683057595,
+      "Omega_orbit_isco": 0.08765244178312537,
+      "regime_at_isco": "absorbing (orbit->hole)"
+    },
+    {
+      "a_star": 0.5,
+      "Omega_H": 0.13397459621556135,
+      "r_crit": 3.646784214730956,
+      "r_isco_prograde": 4.233002529530826,
+      "Omega_orbit_isco": 0.10858835898027674,
+      "regime_at_isco": "superradiant (hole->orbit)"
+    },
+    {
+      "a_star": 0.7,
+      "Omega_H": 0.2041836836755107,
+      "r_crit": 2.602139965319612,
+      "r_isco_prograde": 3.3931284701816304,
+      "Omega_orbit_isco": 0.14387880312257215,
+      "regime_at_isco": "superradiant (hole->orbit)"
+    },
+    {
+      "a_star": 0.9,
+      "Omega_H": 0.3133945031366293,
+      "r_crit": 1.7378002113329958,
+      "r_isco_prograde": 2.320883041761887,
+      "Omega_orbit_isco": 0.22544170883530795,
+      "regime_at_isco": "superradiant (hole->orbit)"
+    },
+    {
+      "a_star": 0.99,
+      "Omega_H": 0.4338043637390611,
+      "r_crit": 1.2003970340253665,
+      "r_isco_prograde": 1.4544979380596716,
+      "Omega_orbit_isco": 0.36440999105450855,
+      "regime_at_isco": "superradiant (hole->orbit)"
+    }
+  ],
+  "regime_crossover_near_spin": 0.5,
+  "finding": "The horizon tidal-heating flux has the SAME sign condition as superradiance: it is superradiant (the hole gives energy to the orbit, spinning down) when Omega_orbit < Omega_H and absorbing otherwise. The flux flips at r_crit = (1/Omega_H - a)^{2/3}. For SLOWLY-spinning holes the inspiral is ABSORBING at the ISCO (standard tidal heating that drains orbital energy into the hole), but for FAST-spinning holes (a* >~ 0.4) r_crit drops BELOW the ISCO, so the ENTIRE stable inspiral is SUPERRADIANT -- the hole feeds energy to the orbit (e.g. a*=0.9: r_crit=1.74 < ISCO=2.32, Omega_orbit=0.225 < Omega_H=0.313). A horizonless ECO has NO horizon flux of either sign, so the inspiral gravitational-wave phase differs: horizon tidal heating is the ABSORPTION channel of the 'is it a black hole?' test, complementing the static Love number (v2.235) and the ringdown echoes (v2.247), and it ties the horizon-test and superradiance suites together through the shared Omega_H.",
+  "honest_scope": "The flux SIGN and the critical radius (Omega_orbit vs Omega_H) are exact-Kerr geodesic results (verified). The flux MAGNITUDE and the actual GW PHASE shift (the observable that distinguishes BH from ECO in an inspiral) require the full Teukolsky horizon flux and its post-Newtonian expansion -- horizon absorption enters the phase at 2.5PN for Schwarzschild and 1.5PN (spin-enhanced) for Kerr -- not computed here. Equatorial, adiabatic circular inspiral; the l=m=2 dominant tidal coupling. ECO absorption is set to zero (a perfectly reflecting surface); partial reflectivity interpolates. Reconstruction of a real horizon observable, not a detection forecast. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Hartle (1973); Poisson & Sasaki (1995) -- tidal heating of a Kerr horizon",
+    "Hughes, PRD 64 (2001) 064004 -- horizon flux and the inspiral",
+    "Maselli et al., PRL 120 (2018) 081101 -- tidal heating as a horizon test (BH vs ECO)",
+    "this repo: v2.243-v2.246 (superradiance / Omega_H), v2.235 (tidal Love number)"
+  ]
+}

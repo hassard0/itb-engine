@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (359 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (360 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -408,3 +408,4 @@ Auto-generated front door to the full research program (359 notes). Regenerate w
 | v2.246 | [v2.246 - The superradiance spin-down endpoint: the Regge trajectory ob](2026-06-29-v2.246-qnm-superradiance-regge-trajectory.md) | v2.243-v2.245 gave the superradiance condition, the growth-time exclusion, and the cloud's direct GW |
 | v2.247 | [v2.247 - Black-hole echoes: the ringdown delay that probes horizon-sca](2026-06-29-v2.247-qnm-black-hole-echoes.md) | A fresh QG-at-the-horizon thread. If the event horizon is replaced by a quantum-corrected REFLECTIVE |
 | v2.248 | [v2.248 - The frequency-domain face of echoes: the ECO trapped-mode com](2026-06-29-v2.248-qnm-echo-trapped-modes.md) | The ECO's ringdown spectrum is a dense comb of long-lived narrow lines, not one decaying tone. |
+| v2.249 | [v2.249 - Horizon tidal heating: the absorption channel of the 'is it a](2026-06-29-v2.249-qnm-horizon-tidal-heating.md) | A black hole exchanges energy with an inspiralling companion through its HORIZON (tidal heating). A |
