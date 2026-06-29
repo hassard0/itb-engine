@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (388 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (389 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -437,3 +437,4 @@ Auto-generated front door to the full research program (388 notes). Regenerate w
 | v2.275 | [v2.275 - The Page curve: the entanglement signature of black-hole unit](2026-06-29-v2.275-qnm-page-curve.md) | A fresh QG capstone of the black-hole-entropy thread (v2.257/v2.258/v2.273/v2.274), addressing the |
 | v2.276 | [v2.276 - The Hawking-Page transition: black holes have a phase diagram](2026-06-29-v2.276-qnm-hawking-page-transition.md) | A fresh QG thermodynamics probe completing the black-hole-entropy sub-arc (v2.257/v2.273/v2.274/v2.275). |
 | v2.277 | [v2.277 - Synthesis capstone: the black-hole thermodynamics sub-arc (v2](2026-06-29-v2.277-qnm-bh-thermodynamics-synthesis.md) | Six cycles built a black-hole thermodynamics / quantum-geometry sub-arc -- entropy (v2.257), the |
+| v2.278 | [v2.278 - The Hulse-Taylor binary pulsar: the quadrupole formula and th](2026-06-29-v2.278-qnm-hulse-taylor-quadrupole.md) | A fresh sector stepping off the black-hole cycles: the cleanest classical confirmation that |

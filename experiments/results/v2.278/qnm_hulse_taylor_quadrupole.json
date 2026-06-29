@@ -1,0 +1,36 @@
+{
+  "version": "v2.278",
+  "method": "Peters 1964 quadrupole orbital decay dP/dt = -(192 pi/5)(G^{5/3}/c^5)(m1 m2/M^{1/3})(2 pi/P)^{5/3} f(e), f(e)=(1+73/24 e^2+37/96 e^4)/(1-e^2)^{7/2}; PSR B1913+16 parameters (Weisberg-Huang 2016)",
+  "hulse_taylor_params": {
+    "m1_msun": 1.4398,
+    "m2_msun": 1.3886,
+    "P_s": 27906.98,
+    "e": 0.6171,
+    "observed_Pdot": -2.398e-12,
+    "observed_err": 4e-15
+  },
+  "f_eccentricity": 11.853275191022924,
+  "predicted_Pdot": -2.4025571671682392e-12,
+  "observed_Pdot": -2.398e-12,
+  "predicted_over_observed": 1.0019004033228687,
+  "semi_major_axis_m": 1949287598.8077068,
+  "merger_time_circular_yr": 1635956499.2633584,
+  "merger_time_eccentric_yr": 305597363.8093676,
+  "consistency_checks": {
+    "circular_limit_f_is_one": true,
+    "eccentricity_enhances_emission": true,
+    "f_monotonic_in_e": true,
+    "predicted_matches_observed_within_1pct": true,
+    "predicted_Pdot_order_2p4e_minus_12": true,
+    "merges_within_a_few_hundred_Myr": true
+  },
+  "all_checks_pass": true,
+  "finding": "The quadrupole formula reproduces the Hulse-Taylor orbital decay to ~0.1%: for PSR B1913+16 (two ~1.4 Msun neutron stars, P=7.75 hr, e=0.617) Peters' formula predicts dP/dt = -2.4026e-12, versus the measured -2.3980e-12 -- a ratio of 1.0019, agreement to better than 1%. The high eccentricity boosts the GW luminosity by f(e) = 11.85 over a circular orbit (most of the radiation comes from the fast periastron passage, where the quadrupole moment changes fastest), and the orbit will spiral in and merge in ~306 Myr. This is the 1993 Nobel-winning indirect detection of gravitational waves -- the orbit is demonstrably losing exactly the energy the quadrupole formula says it radiates as GWs, two decades before LIGO saw them directly. It anchors the whole GW program (v2.266-v2.272): the same quadrupole emission whose stochastic background, polarizations and propagation those cycles probed is here measured, classically and unambiguously, in a single binary.",
+  "honest_scope": "The Peters quadrupole formula and f(e) are exact leading-order results, and the predicted dP/dt uses the source-backed PSR B1913+16 parameters (Weisberg-Huang 2016); the ~0.1% agreement is the published result (after the small kinematic / galactic-acceleration correction to the OBSERVED value, which this experiment does not re-derive -- it compares to the already-corrected intrinsic value). The merger time uses the CIRCULAR-orbit Peters formula with a leading (1-e^2)^{7/2} eccentricity factor; the exact inspiral time needs the coupled da/dt, de/dt integral (the orbit circularizes as it shrinks), so ~300 Myr is order-correct, not exact. Point-mass, leading post-Newtonian quadrupole order. A classical-GR / GW-confirmation result, not an engine constraint refit.",
+  "references": [
+    "Peters, Mathews, 'Gravitational radiation from point masses in a Keplerian orbit', Phys. Rev. 131 (1963) 435",
+    "Peters, 'Gravitational radiation and the motion of two point masses', Phys. Rev. 136 (1964) B1224",
+    "Weisberg, Huang, 'Relativistic measurements from timing the binary pulsar PSR B1913+16', ApJ 829 (2016) 55",
+    "this repo: v2.266-v2.272 (gravitational-wave observables)"
+  ]
+}
