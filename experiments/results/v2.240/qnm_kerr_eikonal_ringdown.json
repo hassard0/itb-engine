@@ -1,0 +1,59 @@
+{
+  "version": "v2.240",
+  "method": "eikonal Kerr QNM frequency from the equatorial photon orbit (Yang et al. 2012, Kerr generalization of v2.229): omega_R ~ (l+1/2) Omega_ph, Omega_ph = 1/(r_ph^{3/2} +/- a); M=1",
+  "schwarzschild_limit_ok": true,
+  "spin_sequence": [
+    {
+      "a": 0.0,
+      "Omega_ph_prograde": 0.19245008972987526,
+      "Omega_ph_retrograde": 0.19245008972987526,
+      "eikonal_omegaR_l2_prograde": 0.4811252243246882,
+      "eikonal_omegaR_l2_retrograde": 0.4811252243246882
+    },
+    {
+      "a": 0.3,
+      "Omega_ph_prograde": 0.2190481440463322,
+      "Omega_ph_retrograde": 0.17320382251588734,
+      "eikonal_omegaR_l2_prograde": 0.5476203601158305,
+      "eikonal_omegaR_l2_retrograde": 0.4330095562897184
+    },
+    {
+      "a": 0.5,
+      "Omega_ph_prograde": 0.24412473193675746,
+      "Omega_ph_retrograde": 0.16291538449789944,
+      "eikonal_omegaR_l2_prograde": 0.6103118298418937,
+      "eikonal_omegaR_l2_retrograde": 0.4072884612447486
+    },
+    {
+      "a": 0.7,
+      "Omega_ph_prograde": 0.2811547456892631,
+      "Omega_ph_retrograde": 0.15407498982611917,
+      "eikonal_omegaR_l2_prograde": 0.7028868642231577,
+      "eikonal_omegaR_l2_retrograde": 0.3851874745652979
+    },
+    {
+      "a": 0.9,
+      "Omega_ph_prograde": 0.35156534779899323,
+      "Omega_ph_retrograde": 0.1463631844870083,
+      "eikonal_omegaR_l2_prograde": 0.8789133694974831,
+      "eikonal_omegaR_l2_retrograde": 0.3659079612175208
+    },
+    {
+      "a": 0.998,
+      "Omega_ph_prograde": 0.4737343228666683,
+      "Omega_ph_retrograde": 0.14292521055172613,
+      "eikonal_omegaR_l2_prograde": 1.1843358071666708,
+      "eikonal_omegaR_l2_retrograde": 0.35731302637931533
+    }
+  ],
+  "prograde_frequency_rises_with_spin": true,
+  "retrograde_frequency_falls_with_spin": true,
+  "extremal_prograde_Omega_ph": 0.4999999999999998,
+  "finding": "The eikonal ringdown frequency tracks the equatorial photon-orbit frequency, which reproduces Schwarzschild at a=0 (Omega_ph = 0.19245 = 1/(3 sqrt3)) and SPLITS under spin: the prograde branch RISES monotonically to the extremal Omega_ph = 0.500 (the per-(l+1/2) ringdown frequency ~2.6x the Schwarzschild value), while the retrograde branch FALLS to ~0.143. So a higher-spin (prograde) remnant rings at a HIGHER frequency -- this is the spin dependence LIGO/Virgo fits to measure the final black hole's spin from the dominant ringdown mode, and it is the photon-orbit origin (v2.239) of that measurement. The single Schwarzschild shadow<->ringdown locking (v2.238) is now two distinct prograde/retrograde frequencies.",
+  "honest_scope": "Eikonal (large-l), equatorial co-rotating (l=m) modes, exact Kerr photon orbits. The eikonal OVERESTIMATES the l=2 frequency by the usual O(1/l) (~22% at a=0, v2.229) -- the value is the large-l LIMIT and the SPIN TREND, not a precise omega_220(a) (that needs the Teukolsky/Leaver solver, the deferred effort). The damping follows the same orbit's Lyapunov rate (computed for Schwarzschild in v2.229; the Kerr equatorial Lyapunov exponent is the natural extension, not done here). This connects v2.239's photon orbits to the ringdown frequency; it is not a new bound. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Yang, Zimmerman, Zhang, Berti, Chen, PRD 86 (2012) 104006 -- eikonal Kerr QNM / photon orbits",
+    "Berti, Cardoso, Will, PRD 73 (2006) 064030 -- Kerr QNM spin dependence",
+    "this repo: v2.239 (Kerr photon orbits / ISCO), v2.229 (Schwarzschild eikonal correspondence)"
+  ]
+}
