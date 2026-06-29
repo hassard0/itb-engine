@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (354 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (355 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -403,3 +403,4 @@ Auto-generated front door to the full research program (354 notes). Regenerate w
 | v2.241 | [v2.241 - The eikonal Kerr ringdown damping from the photon-orbit Lyapu](2026-06-29-v2.241-qnm-kerr-eikonal-damping.md) | v2.240 gave the eikonal Kerr ringdown FREQUENCY from the equatorial photon orbit. Complete the |
 | v2.242 | [v2.242 - Synthesis capstone: the black-hole strong-field program, cros](2026-06-29-v2.242-qnm-strong-field-synthesis.md) | This session built a large black-hole-physics program across ~30 cycles (v2.210-v2.241). Two things |
 | v2.243 | [v2.243 - Black-hole superradiance: observed spins as an ultralight-bos](2026-06-29-v2.243-qnm-superradiance-boson-bound.md) | A fresh BSM-relevant thread, reconnecting to the repo's new-physics-constraint purpose. A massive |
+| v2.244 | [v2.244 - The superradiant Regge-plane exclusion: from the condition to](2026-06-29-v2.244-qnm-superradiance-regge-exclusion.md) | v2.243 gave the superradiance CONDITION (`mu < m Omega_H/M`). The actual EXCLUSION needs the |
