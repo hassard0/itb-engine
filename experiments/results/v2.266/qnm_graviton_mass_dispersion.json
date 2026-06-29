@@ -1,0 +1,47 @@
+{
+  "version": "v2.266",
+  "method": "massive-graviton GW dispersion v_g/c = sqrt(1-(m c^2/E)^2); arrival spread Delta t = (D/2c)(m c^2)^2(1/E1^2-1/E2^2); Compton lambda_g = h c/(m c^2); LVC bound m_g < 1.2e-22 eV",
+  "graviton_mass_bound_eV": 1.2e-22,
+  "compton_wavelength_m": 1.0331666666666666e+16,
+  "compton_wavelength_km": 10331666666666.666,
+  "reproduces_lvc_1e13_km": true,
+  "event_dispersion": [
+    {
+      "name": "GW150914",
+      "D_Mpc": 410.0,
+      "signal_duration_s": 0.2,
+      "dispersion_delay_s": 0.014218369768099185,
+      "delay_over_signal": 0.07109184884049592
+    },
+    {
+      "name": "GW170817 (BNS)",
+      "D_Mpc": 40.0,
+      "signal_duration_s": 100.0,
+      "dispersion_delay_s": 0.0013871580261560178,
+      "delay_over_signal": 1.3871580261560177e-05
+    },
+    {
+      "name": "a z~1 LISA/3G source",
+      "D_Mpc": 6700.0,
+      "signal_duration_s": 1.0,
+      "dispersion_delay_s": 0.23234896938113297,
+      "delay_over_signal": 0.23234896938113297
+    }
+  ],
+  "reference_energy_eV": 4e-12,
+  "speed_deficit_at_ref": 4.5e-22,
+  "consistent_with_gw170817_speed_bound": true,
+  "contrast_with_liv_v2251": {
+    "graviton_mass": "speed deficit ~ (m c^2/E)^2 grows as 1/E^2 -- LOW-energy / long-wavelength",
+    "planck_liv": "speed deficit ~ (E/E_QG)^n grows as E^n -- HIGH-energy / short-wavelength",
+    "discriminant": "the SIGN of the energy dependence (n<0 mass vs n>0 LIV)"
+  },
+  "finding": "A graviton rest mass makes gravitational waves dispersive, v_g/c = sqrt(1-(m c^2/E)^2). At the LVC bound m_g < 1.2e-22 eV the Compton wavelength is lambda_g = 1.03e+13 km -- reproducing the published lambda_g > 1e13 km. The mechanism that sets the bound: over GW150914's ~410 Mpc the 35-250 Hz band would spread by 14.2 ms, comparable to the ~0.2 s signal, so a heavier graviton would visibly smear the chirp -- which is why the bound lands near 1e-22 eV. The speed deficit at a reference kHz graviton is only 1-v/c ~ 4.5e-22, far inside the GW170817 multimessenger speed bound |Delta v/c| < 1e-15 (so that constant-offset bound does NOT constrain a mass this small -- the dispersive in-band test is the sensitive one). This is the LOW-energy mirror of the v2.251 Lorentz-violation probe: a graviton mass makes the deficit grow as 1/E^2 (worst at low energy), Planck-scale LIV makes it grow as E^n (worst at high energy) -- opposite energy dependence, so the two probes are complementary and the sign of the energy dependence is the discriminant. Massless graviton = exact GR; any nonzero m_g is a falsifiable departure.",
+  "honest_scope": "The LVC bound m_g < 1.2e-22 eV is the source-backed value; here the dispersion-delay estimate reproduces its ORDER OF MAGNITUDE via the simple two-frequency time-spread heuristic, not the full matched-filter waveform-phase analysis LIGO actually uses (which folds the (m_g/E)^2 term into the inspiral phase). The Compton-wavelength inversion is exact. Static Yukawa-potential bounds (solar-system planetary precession, galaxy-cluster dynamics) are complementary and in places tighter (m_g <~ 1e-29 eV) but more model-dependent, so the clean dynamical GW bound is quoted as primary. A consistent nonlinear massive-gravity theory (the vDVZ discontinuity, requiring the dRGT ghost-free construction) is a separate theoretical issue not modelled here. A QG-phenomenology probe, not an engine constraint refit.",
+  "references": [
+    "Abbott et al. (LIGO/Virgo), 'Tests of general relativity with GW150914', PRL 116 (2016) 221101",
+    "Abbott et al. (LIGO/Virgo), GWTC test-of-GR papers (graviton-mass bound m_g < 1.2e-22 eV)",
+    "Will, 'Bounding the mass of the graviton using gravitational-wave observations', PRD 57 (1998) 2061",
+    "this repo: v2.251 (Lorentz-violation dispersion), v2.253 (graviton quantization)"
+  ]
+}
