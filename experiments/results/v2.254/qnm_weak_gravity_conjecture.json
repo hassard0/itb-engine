@@ -1,0 +1,56 @@
+{
+  "version": "v2.254",
+  "method": "WGC super-extremality z = q g M_Pl/m (g=sqrt(4 pi alpha)); extremal RN Q=M; magnetic-WGC cutoff Lambda <~ g M_Pl; M_Pl=1.22e28 eV, alpha=1/137",
+  "gauge_coupling_g": 0.30282211985966434,
+  "particles": [
+    {
+      "particle": "electron",
+      "mass_eV": 511000.0,
+      "wgc_ratio_z": 7.229804035788464e+21,
+      "force_ratio_gauge_over_grav": 5.227006639590317e+43,
+      "satisfies_wgc": true
+    },
+    {
+      "particle": "muon",
+      "mass_eV": 105700000.0,
+      "wgc_ratio_z": 3.4952032755798532e+19,
+      "force_ratio_gauge_over_grav": 1.2216445937624135e+39,
+      "satisfies_wgc": true
+    },
+    {
+      "particle": "tau",
+      "mass_eV": 1776900000.0,
+      "wgc_ratio_z": 2.0791433745781445e+18,
+      "force_ratio_gauge_over_grav": 4.322837172052195e+36,
+      "satisfies_wgc": true
+    },
+    {
+      "particle": "up quark",
+      "mass_eV": 2200000.0,
+      "wgc_ratio_z": 1.6792863010399569e+21,
+      "force_ratio_gauge_over_grav": 2.8200024808604607e+42,
+      "satisfies_wgc": true
+    },
+    {
+      "particle": "proton",
+      "mass_eV": 938300000.0,
+      "wgc_ratio_z": 3.9373653013832515e+18,
+      "force_ratio_gauge_over_grav": 1.5502845516536821e+37,
+      "satisfies_wgc": true
+    }
+  ],
+  "all_satisfy_wgc": true,
+  "magnetic_wgc_cutoff_eV": 3.694429862287905e+27,
+  "extremal_rn": {
+    "condition": "Q = M (Planck units)",
+    "horizon": "r_+ = M (horizons merge)",
+    "discharge_requires": "a state with q/m > 1 (super-extremal)"
+  },
+  "finding": "The Weak Gravity Conjecture -- 'gravity is the weakest force', the requirement that extremal charged black holes can discharge -- is satisfied by EVERY Standard-Model charged particle by enormous margins: the electron has z = q g M_Pl/m = 7.2e+21, so its electromagnetic force exceeds its gravity by z^2 = 5.2e+43 (43 orders of magnitude); the heaviest, the proton, still has z = 3.9e+18. So the SM sits deep in the WGC-allowed region -- comfortably consistent with this quantum-gravity consistency criterion, and far from the swampland boundary z = 1 where an EFT with no super-extremal state would be UV-incompletable. The magnetic WGC additionally bounds the EFT cutoff Lambda <~ g M_Pl = 3.7e+27 eV (near Planck). This is a QG-CONSISTENCY probe (does the low-energy theory admit a quantum-gravity completion?), complementing the session's QG-PHENOMENOLOGY probes (what does QG predict observably?) -- and it ties to the engine's distance_conjecture / eft_validity swampland sector.",
+  "honest_scope": "The WGC is a well-motivated CONJECTURE, not a theorem (proven only in special cases / from black-hole entropy and unitarity arguments). The precise 'extremal' normalization and the MILD (one super-extremal state) vs STRONG/TOWER/lattice forms differ by O(1) and in scope; z >= 1 here uses the leading extremal ratio. The SM verification is exact given the masses and alpha (low-energy alpha used; it runs). Multi-U(1) / dilatonic convex-hull refinements are not included. Self-contained reconstruction of a real swampland criterion, not a new bound. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Arkani-Hamed, Motl, Nicolis, Vafa, JHEP 06 (2007) 060 -- the Weak Gravity Conjecture",
+    "Harlow, Heidenreich, Reece, Rudelius, Rev. Mod. Phys. 95 (2023) 035003 -- WGC review",
+    "this repo: engine distance_conjecture / eft_validity (swampland sector)"
+  ]
+}
