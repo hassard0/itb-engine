@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (377 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (378 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -426,3 +426,4 @@ Auto-generated front door to the full research program (377 notes). Regenerate w
 | v2.264 | [v2.264 - The Dvali species scale: how many light fields lower the quan](2026-06-29-v2.264-qnm-species-scale.md) | The Standard Model's ~118 light dof already lower gravity's true cutoff to `~0.09 M_Pl ~ 2e17 GeV` |
 | v2.265 | [v2.265 - Synthesis capstone: the swampland web (WGC + SDC + TCC + spec](2026-06-29-v2.265-qnm-swampland-web-synthesis.md) | Four consecutive cycles built a swampland sub-arc -- the Weak Gravity Conjecture (v2.254), the |
 | v2.266 | [v2.266 - Graviton mass bounds from gravitational-wave dispersion (the ](2026-06-29-v2.266-qnm-graviton-mass-dispersion.md) | A fresh QG-phenomenology sector opening after the swampland arc (v2.254-v2.265). General relativity's |
+| v2.267 | [v2.267 - The gravitational-wave memory effect and the infrared triangl](2026-06-29-v2.267-qnm-gw-memory-infrared-triangle.md) | A fresh QG-structure / GW-observable thread (continuing v2.266). A passing gravitational-wave burst |
