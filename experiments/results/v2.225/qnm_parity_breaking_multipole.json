@@ -1,0 +1,57 @@
+{
+  "version": "v2.225",
+  "method": "axial RW vs polar Zerilli WKB QNM sensitivity (v2.224 machinery) to a common (r_H/r)^j basis, swept over multipoles l=2,3,4; breaking = |d_omega_polar - d_omega_axial| / |d_omega_axial|; n=0, M=1",
+  "breaking_curves_per_l": {
+    "2": {
+      "2": 0.12310241744477933,
+      "3": 0.18366446924343213,
+      "4": 0.24323498314997086,
+      "5": 0.30390950732292094,
+      "6": 0.3706120269735456,
+      "7": 0.4547502883238478,
+      "8": 0.5740231199384347,
+      "9": 0.742527189454857,
+      "10": 0.9533036054943769
+    },
+    "3": {
+      "2": 0.02321537114277487,
+      "3": 0.03467893560972405,
+      "4": 0.04598139281076791,
+      "5": 0.057067872519299276,
+      "6": 0.06794817064121161,
+      "7": 0.07889902252227476,
+      "8": 0.09069431088316557,
+      "9": 0.1045477921881136,
+      "10": 0.12159651928188647
+    },
+    "4": {
+      "2": 0.0075904347930282395,
+      "3": 0.011344865790757261,
+      "4": 0.015060624992469374,
+      "5": 0.018727811818503772,
+      "6": 0.022339168052866273,
+      "7": 0.02591139716844276,
+      "8": 0.029522281809297255,
+      "9": 0.033336529987807034,
+      "10": 0.03758012038399353
+    }
+  },
+  "monotonic_in_j_each_l": {
+    "2": true,
+    "3": true,
+    "4": true
+  },
+  "decreasing_in_l_each_j": true,
+  "breaking_at_j10": {
+    "2": 0.9533036054943769,
+    "3": 0.12159651928188647,
+    "4": 0.03758012038399353
+  },
+  "finding": "The v2.224 breaking is PHYSICAL, not a low-l WKB artifact: the monotonic-in-j structure persists at the WKB-accurate l=3 and l=4 (where the v2.218 isospectrality residual is ~1e-6, two orders below l=2). Both physical predictions hold -- breaking rises with j (near-horizon localization) at every l, and FALLS sharply with l (at j=10: 95% -> 12% -> 4% for l=2,3,4) as the potentials converge to the common centrifugal term. Observational bonus: the breaking is concentrated at the LOWEST multipole l=2, which is also the LOUDEST ringdown mode -- so the dominant observable mode is the one most sensitive to isospectrality breaking, and the R4 sweet spot (l=2, j=10) is near-maximal.",
+  "honest_scope": "The TREND (monotonic in j, decreasing in l, consistent with potential convergence at high l) is robust -- its persistence at the WKB-accurate l=3,4 is the evidence it is physical. Absolute per-(l,j) values still carry the v2.212 WKB-sensitivity caveat (worst at l=2), so the precise l=2 j=10 number (~95%) is qualitative, not claim-grade; the robust claim is the structure. The l-decrease is real physics (the potentials converge), NOT merely improving WKB accuracy -- a pure WKB artifact would not reproduce the clean monotonic-in-j curve at l=3,4. Still establishes the response structure, not the absolute R4 splitting magnitude (un-sourceable polar delta_V profile). Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Chandrasekhar, The Mathematical Theory of Black Holes (1983) -- isospectrality",
+    "Berti, Cardoso, Will, PRD 73 (2006) 064030 -- RW/Zerilli potentials",
+    "this repo: v2.224 (parity-breaking response), v2.218 (Zerilli solver), v2.212 (WKB caveat)"
+  ]
+}
