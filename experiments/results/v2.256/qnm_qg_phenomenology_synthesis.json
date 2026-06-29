@@ -1,0 +1,73 @@
+{
+  "version": "v2.256",
+  "method": "cross-import the QG-phenomenology + swampland modules; verify the shared Planck scale (reduced & full), the r/Lyth link, and the engine reconnections; map the arc",
+  "cross_arc_consistency": [
+    {
+      "check": "M_Pl(reduced, v2.253) == M_Pl(full, v2.254)/sqrt(8pi)",
+      "ok": true
+    },
+    {
+      "check": "E_Planck(v2.251) == M_Pl(full, v2.254)",
+      "ok": true
+    },
+    {
+      "check": "SDC: r=0.036 (v2.253 bound) is trans-Planckian (Delta phi > M_Pl)",
+      "ok": true
+    },
+    {
+      "check": "engine reconnection: itb.constraints.cosmic_birefringence exists",
+      "ok": true
+    },
+    {
+      "check": "engine reconnection: itb.constraints.distance_conjecture exists",
+      "ok": true
+    },
+    {
+      "check": "engine reconnection: itb.constraints.eft_validity exists",
+      "ok": true
+    }
+  ],
+  "all_consistent": true,
+  "arc_map": [
+    {
+      "axis": "QG PHENOMENOLOGY (what QG predicts observably)",
+      "cycles": [
+        {
+          "name": "LIV dispersion (propagation)",
+          "cycle": "v2.251",
+          "result": "energy-dependent speed -> GRB time-of-flight bounds E_QG ~ E_Planck"
+        },
+        {
+          "name": "vacuum birefringence (parity)",
+          "cycle": "v2.252",
+          "result": "dim-5 parity violation -> GRB polarimetry excludes xi < ~1e-17"
+        },
+        {
+          "name": "primordial GWs (early universe)",
+          "cycle": "v2.253",
+          "result": "tensor r -> inflation at ~GUT scale; r>0 = graviton quantization"
+        }
+      ]
+    },
+    {
+      "axis": "QG CONSISTENCY (which theories admit a QG completion / swampland)",
+      "cycles": [
+        {
+          "name": "Weak Gravity Conjecture",
+          "cycle": "v2.254",
+          "result": "gravity is the weakest force; the SM satisfies it by ~1e43"
+        },
+        {
+          "name": "Swampland Distance Conjecture",
+          "cycle": "v2.255",
+          "result": "exponentially light tower -> predicts small r (via the Lyth bound)"
+        }
+      ]
+    }
+  ],
+  "finding": "The QG-phenomenology + swampland arc (v2.251-v2.255) is internally consistent: the reduced Planck mass (inflation, v2.253) and the full Planck mass (WGC, v2.254) agree via the sqrt(8 pi) factor; the dispersion E_Planck (v2.251) equals the WGC Planck mass; the Swampland Distance Conjecture (v2.255) correctly flags the current r bound (v2.253) as trans-Planckian; and the engine's swampland/parity reconnections (cosmic_birefringence, distance_conjecture, eft_validity) exist. The arc has two axes: QG PHENOMENOLOGY (what QG predicts observably -- energy-dependent propagation reaching E_Planck, parity-violating birefringence, and the primordial graviton-quantization signal) and QG CONSISTENCY (which low-energy theories admit a quantum-gravity completion -- the Weak Gravity Conjecture and the Swampland Distance Conjecture). The two axes MEET in the tensor sector: the SDC (consistency) predicts small r, which the primordial-GW channel (phenomenology) measures -- a rare case where a swampland criterion and an observation constrain the same number. With v2.242 (strong-field GR) and v2.250 (black-hole hypothesis tests), the session now has three cross-verified synthesis capstones.",
+  "honest_scope": "A SYNTHESIS / consistency capstone, not a new measurement. The per-cycle caveats carry (order-of-magnitude time-of-flight and birefringence bounds; slow-roll inflation relations; the WGC and SDC are conjectures with O(1) / mild-vs-strong ambiguities; the Lyth coefficient convention). Self-contained reconstructions of real QG-phenomenology and swampland criteria, not detection claims or published bounds. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "this repo: v2.251-v2.255 result notes (docs/results/), docs/results/INDEX.md"
+  ]
+}
