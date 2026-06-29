@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (329 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (330 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -378,3 +378,4 @@ Auto-generated front door to the full research program (329 notes). Regenerate w
 | v2.216 | [v2.216 - Cross-validating the R4 ringdown sensitivity: qualitative agr](2026-06-29-v2.216-qnm-r4-cross-validation.md) | v2.215 computed the engine's R4 odd-parity QNM sensitivity (McManus route, single-term |
 | v2.217 | [v2.217 - The overtone-sensitivity hierarchy of the R4 ringdown shift](2026-06-29-v2.217-qnm-r4-overtone-sensitivity.md) | v2.216 left the R4 ringdown sensitivity qualitatively validated but quantitatively |
 | v2.218 | [v2.218 - Axial<->polar QNM isospectrality and the R4 parity-splitting ](2026-06-29-v2.218-qnm-isospectrality.md) | v2.217 left the R4 single-event ringdown thread blocked on un-sourceable appendix data (the |
+| v2.219 | [v2.219 - First-principles ringdown resolvability: turning a QNM deviat](2026-06-29-v2.219-qnm-ringdown-resolvability.md) | v2.218 quantified the parity-splitting noise floor and showed the source-backed axial R4 QNM |

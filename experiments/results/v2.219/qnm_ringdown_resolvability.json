@@ -1,0 +1,32 @@
+{
+  "version": "v2.219",
+  "method": "analytic damped-sinusoid Fisher matrix over {lnA, phi, omega, tau}, white-noise inner product int_0^inf a b dt, ringdown starts at t=0; M=1 units",
+  "mode": "l=2 n=0 Schwarzschild gravitational",
+  "resolvability_coefficients": {
+    "Q": 2.100177603920775,
+    "R_f_rho_sigma_f_over_f": 0.553695256215723,
+    "R_tau_rho_sigma_tau_over_tau": 2.0006891447433808
+  },
+  "Q_scale_invariance_validated": true,
+  "critical_snr_5sigma": {
+    "0.01": 276.8476281078615,
+    "0.05": 55.3695256215723,
+    "0.1": 27.68476281078615
+  },
+  "finding": "For the l=2 n=0 ringdown (Q = 2.10) the universal resolvability coefficients are rho*sigma_f/f = 0.554 and rho*sigma_tau/tau = 2.00 (both O(1), consistent with the published Berti-Cardoso-Will ringdown Fisher analysis). A fractional QNM frequency deviation delta is resolvable at 5 sigma when rho > 2.77/delta -- e.g. delta = 1% needs rho ~ 277, delta = 10% needs rho ~ 28.",
+  "r4_isospectrality_application": {
+    "axial_R4_delta_f_per_eta2": 8.521107281252007,
+    "eta2_reach_5sigma": {
+      "rho=8": 0.04061203828476859,
+      "rho=30": 0.01082987687593829,
+      "rho=100": 0.003248963062781487
+    },
+    "statement": "The source-backed axial R4 shift (v2.215) gives a fractional frequency deviation |Delta omega_R|/omega_R = 8.52 per unit eta_2. A ringdown of SNR rho thus resolves the R4-induced shift (5 sigma) for eta_2 > 0.325/rho: a current single-event SNR ~8 reaches eta_2 ~ 0.041 (at the edge of the linear/perturbative regime), while a high-SNR ~100 event (3G/LISA-era) reaches eta_2 ~ 0.0032, comfortably perturbative -- so isospectrality-resolved R4 ringdown bounds sharpen by ~an order of magnitude with next-generation SNR."
+  },
+  "honest_scope": "Idealized estimate: SINGLE mode, WHITE noise, ringdown-starts-at-t=0 step (some spectral leakage), no detector PSD coloring, no overtone/mode mixing. R_f(Q) is therefore an O(1) order-of-magnitude resolvability coefficient (consistent with the published BCW analysis), NOT a detector-specific forecast. The eta_2 reach also carries the v2.215 eta_2 normalization caveat (the (r_g/r)^10 prefactor convention) and the axial-only limitation (the full isospectrality splitting needs the un-sourceable polar correction, v2.218). Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Berti, Cardoso, Will, PRD 73 (2006) 064030 -- ringdown Fisher analysis / sigma_f, sigma_Q",
+    "Echeverria, PRD 40 (1989) 3194 -- ringdown frequency resolvability",
+    "Silva, Ghosh, Buonanno, PRD 107 (2023) 044030 -- axial R4 delta_V (v2.215)"
+  ]
+}
