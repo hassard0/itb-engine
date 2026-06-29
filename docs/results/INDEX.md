@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (393 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (394 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -442,3 +442,4 @@ Auto-generated front door to the full research program (393 notes). Regenerate w
 | v2.280 | [v2.280 - The four classic tests of general relativity and the PPN para](2026-06-29-v2.280-qnm-ppn-solar-system.md) | Continuing the classical-GR thread (v2.278/v2.279 binary pulsars, strong field) into the solar system |
 | v2.281 | [v2.281 - Cross-validating the engine's GW + swampland constraints agai](2026-06-29-v2.281-qnm-engine-gw-swampland-crossvalidation.md) | A deliberate RECONNECTION to the engine after a long classical-GR / GW-phenomenology arc |
 | v2.282 | [v2.282 - Decomposing the lqg framework anomaly: which couplings source](2026-06-29-v2.282-qnm-lqg-anomaly-decomposition.md) | Deepens v2.281, which found lqg_induced the lone framework failing the GW + swampland sector. Running |
+| v2.283 | [v2.283 - The edge of the feasible region: how each framework sits agai](2026-06-29-v2.283-qnm-curvature-headroom.md) | Extends v2.281/v2.282. The intended question was "how much headroom do the feasible frameworks have" |

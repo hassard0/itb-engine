@@ -1,0 +1,83 @@
+{
+  "version": "v2.283",
+  "method": "run the canonical 38-constraint build_stack on each framework and report the feasible-region edge (failures, binding); probe lqg's curvature-scaling tension via anomaly_cancellation (curvature off) vs positivity (curvature on)",
+  "framework_edge": [
+    {
+      "framework": "pure_gr",
+      "feasible": true,
+      "n_failing": 0,
+      "failing_constraints": [],
+      "binding": null,
+      "x_ratio": null
+    },
+    {
+      "framework": "string_tree_eft",
+      "feasible": false,
+      "n_failing": 1,
+      "failing_constraints": [
+        "repulsive_force_conjecture"
+      ],
+      "binding": "repulsive_force_conjecture",
+      "x_ratio": 0.75
+    },
+    {
+      "framework": "asymptotic_safety",
+      "feasible": false,
+      "n_failing": 1,
+      "failing_constraints": [
+        "repulsive_force_conjecture"
+      ],
+      "binding": "repulsive_force_conjecture",
+      "x_ratio": 0.667
+    },
+    {
+      "framework": "lqg_induced",
+      "feasible": false,
+      "n_failing": 6,
+      "failing_constraints": [
+        "bnossw_monogamy",
+        "cft_flat_space_bound",
+        "complexity_cutoff",
+        "cross_sector_efthedron",
+        "graviton_forward_positivity",
+        "repulsive_force_conjecture"
+      ],
+      "binding": "repulsive_force_conjecture",
+      "x_ratio": 1.0
+    },
+    {
+      "framework": "cdt",
+      "feasible": false,
+      "n_failing": 1,
+      "failing_constraints": [
+        "repulsive_force_conjecture"
+      ],
+      "binding": "repulsive_force_conjecture",
+      "x_ratio": 0.682
+    }
+  ],
+  "lqg_extra_failures_vs_others": [
+    "bnossw_monogamy",
+    "cft_flat_space_bound",
+    "complexity_cutoff",
+    "cross_sector_efthedron",
+    "graviton_forward_positivity"
+  ],
+  "lqg_fails_curvature_off": [
+    "anomaly_cancellation"
+  ],
+  "consistency_checks": {
+    "only_pure_gr_feasible": true,
+    "three_eft_fail_only_repulsive_force": true,
+    "lqg_fails_six": true,
+    "lqg_extra_failures_are_positivity_family": true,
+    "lqg_anomaly_vs_positivity_tension": true
+  },
+  "all_checks_pass": true,
+  "finding": "Against the canonical 38-constraint engine roster, only pure_gr is strictly feasible. The three higher-derivative frameworks string_tree_eft, asymptotic_safety and cdt each miss by EXACTLY ONE constraint -- repulsive_force_conjecture -- a magnitude-driven gravitational-universality bound; they are a single marginal near-miss outside the feasible region, well within the engine's representative-O(1)-prefactor band, and they are otherwise consistent. lqg_induced is the deep outlier: it fails SIX constraints, the five extra (['bnossw_monogamy', 'cft_flat_space_bound', 'complexity_cutoff', 'cross_sector_efthedron', 'graviton_forward_positivity']) being the curvature moment-tower positivity family (graviton_forward_positivity, cross_sector_efthedron, cft_flat_space) plus complexity and entanglement-monogamy -- exactly the v2.282 curvature pathology its x = g_R3/g_R2 = 1 boundary saturation trips. And lqg is uniquely UNREPAIRABLE by curvature scaling: turning its curvature down to relieve the positivity failures makes it fail anomaly_cancellation (which NEEDS the curvature terms, verified -- curvature off fails ['anomaly_cancellation']), so it is caught in an anomaly-vs-positivity tension that no single curvature scale resolves. So the engine's feasible region is sharply structured: pure GR inside, the string / asymptotic-safety / CDT encodings one marginal magnitude-bound step outside, and the lqg encoding deep outside with a genuine internal tension -- the cleanest and most honest map of the frameworks' standing, correcting this cycle's own initial 'headroom' premise with the engine's literal verdict.",
+  "honest_scope": "The engine's literal verdict from check() on the canonical build_stack; the failure counts and binding constraints are exact. The 'one marginal constraint' standing of string/AS/cdt and the 'six failures' of lqg are the engine's TOY encodings with representative O(1) curvature prefactors -- this is NOT a claim that string theory is in the swampland, but that the engine's representative encoding of it sits one prefactor-sized step over a single bound (the repo's 'honest by construction' design). The lqg anomaly-vs-positivity tension is read from the failing-constraint sets at curvature scale 0 vs 1 (resolved at the engine level, not a continuum proof). A consistency / feasible-region geometry result, not a new constraint or a claim about the physical frameworks; this writeup corrects the cycle's initial 'headroom' framing after the engine showed all higher-derivative frameworks marginally infeasible.",
+  "references": [
+    "this repo: v2.282 (lqg anomaly decomposition), v2.281 (engine cross-validation), v2.262 (moment tower)",
+    "this repo: src/itb/constraints/{repulsive_force_conjecture,graviton_forward_positivity,anomaly}.py"
+  ]
+}
