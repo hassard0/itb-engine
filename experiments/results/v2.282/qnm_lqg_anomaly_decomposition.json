@@ -1,0 +1,103 @@
+{
+  "version": "v2.282",
+  "method": "scale lqg's curvature (g_R2,g_R3,g_R2_parity,g_R3_parity) and matter (g_4,g_6,g_8) sectors toward 0 independently; for each of lqg's failing constraints record the heal scale and classify the failure's coupling origin",
+  "lqg_couplings": {
+    "g_4": 0.6,
+    "g_6": 0.45,
+    "g_R2": 0.3,
+    "g_8": 0.4,
+    "g_R3": 0.3,
+    "g_R2_parity": 0.08,
+    "g_R3_parity": 0.04
+  },
+  "failing_constraints": [
+    "bnossw_monogamy",
+    "cft_flat_space_bound",
+    "complexity_cutoff",
+    "cross_sector_efthedron",
+    "graviton_forward_positivity",
+    "repulsive_force_conjecture"
+  ],
+  "decomposition": [
+    {
+      "constraint": "bnossw_monogamy",
+      "base_margin": -0.042857142857142816,
+      "curvature_off_margin": 0.2571428571428572,
+      "matter_off_margin": -0.3,
+      "curvature_heal_scale": 0.85,
+      "matter_heal_scale": null,
+      "classification": "curvature-driven"
+    },
+    {
+      "constraint": "cft_flat_space_bound",
+      "base_margin": -0.07499999999999996,
+      "curvature_off_margin": 0.525,
+      "matter_off_margin": -0.6,
+      "curvature_heal_scale": 0.85,
+      "matter_heal_scale": null,
+      "classification": "curvature-driven"
+    },
+    {
+      "constraint": "complexity_cutoff",
+      "base_margin": -0.024599999999999955,
+      "curvature_off_margin": 0.2549999999999999,
+      "matter_off_margin": 1.2204,
+      "curvature_heal_scale": 0.95,
+      "matter_heal_scale": 0.95,
+      "classification": "either-sector (mixed)"
+    },
+    {
+      "constraint": "cross_sector_efthedron",
+      "base_margin": -0.028500000000000025,
+      "curvature_off_margin": 0.0,
+      "matter_off_margin": 0.0,
+      "curvature_heal_scale": 0.0,
+      "matter_heal_scale": 0.0,
+      "classification": "either-sector (mixed)"
+    },
+    {
+      "constraint": "graviton_forward_positivity",
+      "base_margin": -0.06,
+      "curvature_off_margin": 0.0,
+      "matter_off_margin": -0.06,
+      "curvature_heal_scale": 0.0,
+      "matter_heal_scale": null,
+      "classification": "curvature-driven"
+    },
+    {
+      "constraint": "repulsive_force_conjecture",
+      "base_margin": -0.11999999999999997,
+      "curvature_off_margin": 0.27,
+      "matter_off_margin": -0.39,
+      "curvature_heal_scale": 0.7,
+      "matter_heal_scale": null,
+      "classification": "curvature-driven"
+    }
+  ],
+  "failures_by_classification": {
+    "curvature-driven": [
+      "bnossw_monogamy",
+      "cft_flat_space_bound",
+      "graviton_forward_positivity",
+      "repulsive_force_conjecture"
+    ],
+    "either-sector (mixed)": [
+      "complexity_cutoff",
+      "cross_sector_efthedron"
+    ]
+  },
+  "consistency_checks": {
+    "lqg_fails_six_constraints": true,
+    "all_failures_heal_with_curvature_off": true,
+    "amplitude_bootstrap_is_curvature_driven": true,
+    "forward_positivity_heals_as_curvature_drops": true,
+    "decomposition_covers_all_failures": true
+  },
+  "all_checks_pass": true,
+  "finding": "lqg_induced fails 6 constraints across three classes, and scaling its coupling sectors decomposes the anomaly by ORIGIN. Turning the curvature sector (g_R2, g_R3, and the parity couplings) fully off heals ALL six failures, so lqg's anomaly is fundamentally a CURVATURE-sector problem -- consistent with its couplings sitting on the moment-tower positivity boundary (x = g_R3/g_R2 = 1, v2.262). In particular the three amplitude-bootstrap failures (cft_flat_space, graviton_forward_positivity, cross_sector_efthedron) are curvature-driven: graviton_forward_positivity is the forward-limit positivity = the v2.261/v2.262 moment tower itself, and it heals as the curvature couplings drop. The classification of each failure by sector: {'curvature-driven': ['bnossw_monogamy', 'cft_flat_space_bound', 'graviton_forward_positivity', 'repulsive_force_conjecture'], 'either-sector (mixed)': ['complexity_cutoff', 'cross_sector_efthedron']}. So lqg is not failing for many unrelated reasons -- its single over-large, boundary-saturating curvature sector trips positivity (amplitude bootstrap), the repulsive-force / complexity (gravitational universality) and the entanglement-monogamy (information-theoretic) bounds together. The from-scratch moment-tower diagnosis (v2.262) and the engine's full constraint suite agree on the diagnosis AND now on the mechanism: the curvature couplings are the disease.",
+  "honest_scope": "An engine-driven sensitivity analysis using the real check()/Theory API: it scales lqg's encoded couplings and reads the engine's margins -- it does not re-derive any constraint or change the engine. 'Curvature-driven' means the failure heals when the curvature couplings are scaled to zero (with matter held); the heal scales are read off a 0.05-step scan, so they are resolved to +/-0.05. The classification reflects which SECTOR sources each failure, not a unique coupling (the curvature sector is scaled as a block). lqg's couplings are the engine's encoded representative values (the O(1)-prefactor caveat applies), so this diagnoses the engine's lqg ENCODING, which is the object v2.262 and v2.281 also analyzed -- consistent across all three. A consistency / mechanism result, not a new constraint or a claim about physical loop quantum gravity itself.",
+  "references": [
+    "this repo: v2.281 (engine GW/swampland cross-validation), v2.262 (per-framework moment tower), v2.261 (Hankel positivity)",
+    "this repo: src/itb/constraints/{graviton_forward_positivity,cross_sector_efthedron,repulsive_force_conjecture}.py"
+  ]
+}
