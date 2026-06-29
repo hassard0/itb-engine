@@ -1,0 +1,78 @@
+{
+  "version": "v2.218",
+  "method": "axial Regge-Wheeler vs polar Zerilli potentials through the same WKB solver (qnm_wkb_solver, validated v2.210/v2.211); M=1, G=c=1",
+  "isospectrality": [
+    {
+      "L": 2,
+      "n": 0,
+      "axial": [
+        0.3731619993234687,
+        -0.08921717083133958
+      ],
+      "polar": [
+        0.3730124309612553,
+        -0.08910890639371105
+      ],
+      "residual": 0.000184639874973486
+    },
+    {
+      "L": 2,
+      "n": 1,
+      "axial": [
+        0.34601620808325095,
+        -0.2749140315377644
+      ],
+      "polar": [
+        0.3451628026178268,
+        -0.2746412318602167
+      ],
+      "residual": 0.0008959467352951093
+    },
+    {
+      "L": 3,
+      "n": 0,
+      "axial": [
+        0.5992651069711731,
+        -0.09272832997557325
+      ],
+      "polar": [
+        0.5992642669731048,
+        -0.09272778471721421
+      ],
+      "residual": 1.0014506642292177e-06
+    },
+    {
+      "L": 3,
+      "n": 1,
+      "axial": [
+        0.5823544768699064,
+        -0.28140563460142326
+      ],
+      "polar": [
+        0.582349872282393,
+        -0.2814036837409235
+      ],
+      "residual": 5.000808220475646e-06
+    }
+  ],
+  "parity_splitting_noise_floor": 0.0008959467352951093,
+  "isospectrality_validated": true,
+  "finding": "GR isospectrality CONFIRMED in-house: the axial (Regge-Wheeler) and polar (Zerilli) potentials -- structurally unalike -- yield the SAME QNM spectrum to the WKB solver's precision (max residual 9.0e-04; the l=3 modes agree to ~1e-6, the l=2 residual ~2e-4 is the known low-l WKB systematic). This residual is the parity-splitting NOISE FLOOR: any beyond-GR isospectrality breaking must exceed it to be an observable discriminator.",
+  "r4_discriminator": {
+    "axial_R4_shift_per_eta2": [
+      -3.1840992,
+      -5.6370816
+    ],
+    "axial_shift_magnitude": 6.474193129687992,
+    "noise_floor_l2_n0": 0.000184639874973486,
+    "headroom_over_noise_floor": 35063.89467940052,
+    "statement": "The source-backed AXIAL R4 correction (v2.215) shifts the l=2 n=0 QNM by |Delta omega| ~ 6.47 per unit eta_2 -- ~4e+04x the parity-splitting noise floor -- so isospectrality breaking is sharply resolvable IN PRINCIPLE and is the parity-resolved lever the v2.209 'g_R4_c3 is dark to non-polarization-resolved ringdown' finding identified.",
+    "honest_negative": "The MAGNITUDE of the physical R4 isospectrality splitting |Delta omega_axial - Delta omega_polar| needs the POLAR (even-parity / Zerilli-sector) R4 correction too, which lives in the same un-sourceable 2205.05132 appendix (v2.215's claim-gate already lists the even-parity sector as required). Only the one-sided axial contribution is source-backed here; the full splitting number is NOT claimed."
+  },
+  "claim_gate": "GR isospectrality result is claim-grade (textbook fact reproduced by a validated solver, self-contained). The R4 discriminator is delivered as validated machinery + the one-sided axial shift only; the full splitting magnitude stays gated on the un-sourceable even-parity (Zerilli) R4 correction. Parity-odd g_R4_c3 dark (v2.209).",
+  "references": [
+    "Chandrasekhar, The Mathematical Theory of Black Holes (1983) -- isospectrality",
+    "Berti, Cardoso, Will, PRD 73 (2006) 064030 -- Zerilli potential / QNMs",
+    "Silva, Ghosh, Buonanno, PRD 107 (2023) 044030 (arXiv:2205.05132) -- axial R4 delta_V"
+  ]
+}
