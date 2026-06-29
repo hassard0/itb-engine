@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (360 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (361 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -409,3 +409,4 @@ Auto-generated front door to the full research program (360 notes). Regenerate w
 | v2.247 | [v2.247 - Black-hole echoes: the ringdown delay that probes horizon-sca](2026-06-29-v2.247-qnm-black-hole-echoes.md) | A fresh QG-at-the-horizon thread. If the event horizon is replaced by a quantum-corrected REFLECTIVE |
 | v2.248 | [v2.248 - The frequency-domain face of echoes: the ECO trapped-mode com](2026-06-29-v2.248-qnm-echo-trapped-modes.md) | The ECO's ringdown spectrum is a dense comb of long-lived narrow lines, not one decaying tone. |
 | v2.249 | [v2.249 - Horizon tidal heating: the absorption channel of the 'is it a](2026-06-29-v2.249-qnm-horizon-tidal-heating.md) | A black hole exchanges energy with an inspiralling companion through its HORIZON (tidal heating). A |
+| v2.250 | [v2.250 - Synthesis: the 'is it really a black hole?' test suite, cross](2026-06-29-v2.250-qnm-bh-hypothesis-tests-synthesis.md) | This session's second sub-program (v2.235-v2.249) asks, channel by channel, whether a compact remnant |
