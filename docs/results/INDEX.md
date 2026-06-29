@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (363 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (364 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -412,3 +412,4 @@ Auto-generated front door to the full research program (363 notes). Regenerate w
 | v2.250 | [v2.250 - Synthesis: the 'is it really a black hole?' test suite, cross](2026-06-29-v2.250-qnm-bh-hypothesis-tests-synthesis.md) | This session's second sub-program (v2.235-v2.249) asks, channel by channel, whether a compact remnant |
 | v2.251 | [v2.251 - Lorentz-violation / modified dispersion: testing Planck-scale](2026-06-29-v2.251-qnm-lorentz-violation-dispersion.md) | A fresh thread, pivoting off black holes to the flagship quantum-gravity-PHENOMENOLOGY probe: is |
 | v2.252 | [v2.252 - Vacuum birefringence: the energy-dependent parity-violation p](2026-06-29-v2.252-qnm-vacuum-birefringence.md) | Continuing the spacetime-structure thread (v2.251) into the PARITY-odd sector, reconnecting to the |
+| v2.253 | [v2.253 - Primordial gravitational waves: the direct observational wind](2026-06-29-v2.253-qnm-inflation-tensor-qg.md) | The QG-cosmology capstone of the spacetime/propagation thread (v2.251-v2.252). Inflation stretches |

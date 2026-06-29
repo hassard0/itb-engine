@@ -1,0 +1,47 @@
+{
+  "version": "v2.253",
+  "method": "inflationary tensor spectrum: V^{1/4}=(3/2 pi^2 A_s r)^{1/4} M_Pl, H=M_Pl pi sqrt(A_s r/2); A_s=2.1e-9, M_Pl=2.435e18 GeV",
+  "scalar_amplitude": 2.1e-09,
+  "tensor_targets": [
+    {
+      "r": 0.036,
+      "context": "current bound (BICEP/Keck 2021)",
+      "V_quarter_GeV": 1.408403726617049e+16,
+      "H_inflation_GeV": 47032139807379.1,
+      "V_quarter_over_GUT": 0.7042018633085245
+    },
+    {
+      "r": 0.01,
+      "context": "Planck-era sensitivity",
+      "V_quarter_GeV": 1.0224722742539286e+16,
+      "H_inflation_GeV": 24788114170465.145,
+      "V_quarter_over_GUT": 0.5112361371269643
+    },
+    {
+      "r": 0.003,
+      "context": "CMB-S4 target",
+      "V_quarter_GeV": 7567141482454524.0,
+      "H_inflation_GeV": 13577009289177.219,
+      "V_quarter_over_GUT": 0.3783570741227262
+    },
+    {
+      "r": 0.001,
+      "context": "LiteBIRD reach",
+      "V_quarter_GeV": 5749784136743442.0,
+      "H_inflation_GeV": 7838689967896.518,
+      "V_quarter_over_GUT": 0.2874892068371721
+    }
+  ],
+  "energy_scale_context": {
+    "GUT_GeV": 2e+16,
+    "LHC_GeV": 14000.0,
+    "inflation_over_LHC": 1006002661869.3207
+  },
+  "finding": "The tensor-to-scalar ratio fixes the inflation energy scale: the current bound r < 0.036 gives V^{1/4} < 1.41e+16 GeV (0.70 x the GUT scale) and H_inf < 4.7e+13 GeV -- inflation probes physics ~1e+12x above the LHC. Next-generation experiments reach r ~ 0.001 (V^{1/4} ~ 5.7e+15 GeV). The deep significance: the primordial tensor modes ARE the quantized graviton's zero-point fluctuations stretched across the sky, so a detection of r > 0 (primordial B-modes) is direct experimental evidence that the gravitational field is QUANTIZED (Krauss-Wilczek) -- the single place in nature where quantum gravity is directly observable. This is the cosmological counterpart of the session's local QG probes (black-hole horizon structure, superradiance, propagation/parity LIV): the early universe as the highest-energy QG laboratory.",
+  "honest_scope": "Standard single-field slow-roll relations (the consistency between V^{1/4}, H, and r is exact at leading slow-roll order; A_s is measured, M_Pl fixed). The r BOUND is the published BICEP/Keck value; r is NOT detected (only bounded), so the graviton-quantization evidence is PROSPECTIVE -- the Krauss-Wilczek argument is what a future B-mode detection would establish, with the caveat that some alternatives (e.g. certain modified-gravity or non-inflationary sources) are debated. Reheating and the tensor tilt n_t are neglected. Self-contained reconstruction of the standard inflationary energy-scale relations and their QG meaning, not a new measurement. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Krauss & Wilczek, PRD 89 (2014) 047501 -- primordial GWs prove gravity is quantized",
+    "BICEP/Keck Collaboration, PRL 127 (2021) 151301 -- r < 0.036",
+    "Planck 2018 (A_s); CMB-S4 / LiteBIRD science books -- future r reach"
+  ]
+}
