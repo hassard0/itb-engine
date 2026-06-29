@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (332 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (333 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -381,3 +381,4 @@ Auto-generated front door to the full research program (332 notes). Regenerate w
 | v2.219 | [v2.219 - First-principles ringdown resolvability: turning a QNM deviat](2026-06-29-v2.219-qnm-ringdown-resolvability.md) | v2.218 quantified the parity-splitting noise floor and showed the source-backed axial R4 QNM |
 | v2.220 | [v2.220 - Net R4 reach per overtone: sensitivity x resolvability](2026-06-29-v2.220-qnm-r4-overtone-reach.md) | Three cycles built the pieces of one question. v2.217: the n=1 first overtone is ~491x more |
 | v2.221 | [v2.221 - Two-mode (220+221) joint Fisher: does the overtone advantage ](2026-06-29-v2.221-qnm-r4-twomode-fisher.md) | v2.220 computed the per-mode R4 reach treating the fundamental and the first overtone as |
+| v2.222 | [v2.222 - The overtone covariance wall: ringdown spectroscopy self-limi](2026-06-29-v2.222-qnm-overtone-covariance-wall.md) | v2.221 showed the 2-mode (220+221) joint fit inflates each mode's resolvability ~4-5.5x vs the |

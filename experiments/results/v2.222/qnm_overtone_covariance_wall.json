@@ -1,0 +1,43 @@
+{
+  "version": "v2.222",
+  "method": "joint white-noise ringdown Fisher (v2.221 machinery) extended to the n=2 second overtone; per-mode resolvability from the joint covariance; M=1",
+  "resolvability_R_tau": {
+    "isolated_1mode": {
+      "0": 2.0007,
+      "1": 2.529
+    },
+    "two_mode_220_221": {
+      "n0": 9.176742124377576,
+      "n1": 13.970896769718907
+    },
+    "three_mode_220_221_222": {
+      "n0": 25.650368984929173,
+      "n1": 493.7708625046239,
+      "n2": 912.0965822066483
+    }
+  },
+  "fisher_condition_number": {
+    "two_mode": 1016912.1206795103,
+    "three_mode": 3030879885.997275
+  },
+  "compounding": {
+    "R_tau1_isolated_to_2mode": 5.524277093601782,
+    "R_tau1_2mode_to_3mode": 35.34281804836201,
+    "R_tau1_isolated_to_3mode": 195.2435201679019,
+    "cond_number_growth_2mode_to_3mode": 2980.473754184395
+  },
+  "r4_overtone_reach_x_rho": {
+    "n1_damping_2mode": 0.40767133848027165,
+    "n1_damping_3mode": 14.40825393944044,
+    "overtone_advantage_2mode": 140.0670505346091,
+    "overtone_advantage_3mode": 10.157005008107559
+  },
+  "finding": "Covariance COMPOUNDS super-linearly. Adding the n=2 overtone inflates the first overtone resolvability R_tau1 from 14.0 (2-mode) to 494 (3-mode) -- a further ~35x, ~195x vs the isolated mode -- while the Fisher condition number jumps from 1.0e+06 to 3.0e+09. The heavily-damped overtones (Q_2 ~ 0.31) are broad and near-degenerate in parameter space, so stacking them collapses resolvability. This is the first-principles mechanism behind the published overtone-overfitting concerns (Baibhav-Berti). Consequence: the v2.220/v2.221 overtone R4 advantage holds in a 2-mode model but erodes from ~140x to ~10x if the fit is pushed to 3 modes -- so the OPTIMAL R4 strategy is the low-order (2-mode) model: enough to exploit the overtone sensitivity, few enough to stay off the covariance wall.",
+  "honest_scope": "Equal mode self-SNR; white-noise / t=0-start Fisher (v2.219 idealizations); the n=2 qEFT deformation coefficient is NOT published (only n=0,1 are), so this measures the n=2 mode's EFFECT on the n=0/n=1 resolvability, not the n=2 R4 reach itself. The 3-mode condition number ~3e9 is still safely invertible in double precision; a 4th mode would push toward the precision limit (itself the point -- the wall). REFINES v2.220/v2.221: the overtone advantage is contingent on a low-order ringdown model. Parity-odd g_R4_c3 dark (v2.209); full splitting needs the un-sourceable polar correction (v2.218); dtq_1 perturbative-delicacy caveat (v2.217).",
+  "references": [
+    "Baibhav, Berti, Cardoso et al. -- overtone content / overfitting of ringdown",
+    "Berti, Cardoso, Will, PRD 73 (2006) 064030 -- QNM values + multi-mode Fisher",
+    "Silva, Ghosh, Buonanno, PRD 107 (2023) 044030 -- qEFT coefficients",
+    "this repo: v2.219 (isolated), v2.220 (per-mode reach), v2.221 (2-mode covariance)"
+  ]
+}
