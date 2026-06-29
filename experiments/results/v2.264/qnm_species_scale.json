@@ -1,0 +1,72 @@
+{
+  "version": "v2.264",
+  "method": "Dvali species scale Lambda_sp = M_Pl/sqrt(N) from BH entropy (smallest semiclassical BH has S=(M_Pl/Lambda)^2>=N) cross-checked against the running Newton constant (M_Pl,eff^2 ~ N Lambda^2); reduced M_Pl=2.435e18 GeV",
+  "reduced_M_Pl_gev": 2.435e+18,
+  "full_M_Pl_gev": 1.22e+19,
+  "species_grid": [
+    {
+      "N": 1.0,
+      "lambda_sp_gev": 2.435e+18,
+      "lambda_sp_over_Mpl": 1.0,
+      "min_bh_entropy_equals_N": true,
+      "context": "no extra species (cutoff = M_Pl)"
+    },
+    {
+      "N": 118.0,
+      "lambda_sp_gev": 2.2415991945824176e+17,
+      "lambda_sp_over_Mpl": 0.09205746178983235,
+      "min_bh_entropy_equals_N": true,
+      "context": "Standard Model light dof"
+    },
+    {
+      "N": 1000.0,
+      "lambda_sp_gev": 7.700146102510003e+16,
+      "lambda_sp_over_Mpl": 0.03162277660168379,
+      "min_bh_entropy_equals_N": true,
+      "context": "modest BSM tower"
+    },
+    {
+      "N": 1000000.0,
+      "lambda_sp_gev": 2435000000000000.0,
+      "lambda_sp_over_Mpl": 0.001,
+      "min_bh_entropy_equals_N": true,
+      "context": "large tower"
+    },
+    {
+      "N": 1e+32,
+      "lambda_sp_gev": 243.5,
+      "lambda_sp_over_Mpl": 1e-16,
+      "min_bh_entropy_equals_N": true,
+      "context": "ADD / large-extra-dimensions regime"
+    }
+  ],
+  "loglog_slope_lambda_vs_N": -0.5000000000000003,
+  "slope_is_minus_half": true,
+  "add_tev_cutoff": {
+    "target_gev": 1000.0,
+    "N_for_TeV_reduced_Mpl": 5.929225e+30,
+    "N_for_TeV_full_Mpl": 1.4884e+32
+  },
+  "sdc_tower_tie_in": [
+    {
+      "lambda_sp_over_Mpl": 0.1,
+      "delta_phi_over_Mpl_for_tower_at_cutoff": 2.3025850929940455
+    },
+    {
+      "lambda_sp_over_Mpl": 0.01,
+      "delta_phi_over_Mpl_for_tower_at_cutoff": 4.605170185988091
+    },
+    {
+      "lambda_sp_over_Mpl": 0.0001,
+      "delta_phi_over_Mpl_for_tower_at_cutoff": 9.210340371976182
+    }
+  ],
+  "finding": "The quantum-gravity cutoff in a theory with N light species is the Dvali species scale Lambda_sp = M_Pl/sqrt(N), not the Planck mass. The black-hole-entropy definition is exact: the smallest semiclassical BH at the species scale carries entropy EXACTLY N (verified for every grid point), and the perturbative-unitarity / running-Newton argument gives the same -1/2 scaling (log-log slope = -0.5 exactly, the prefactor-free robust content). Numbers: the Standard Model's ~118 light dof already lower gravity's true cutoff to ~0.092 M_Pl ~ 2.24e+17 GeV -- about an order of magnitude below Planck. Reaching a TeV cutoff (the large-extra-dimensions / ADD scenario) needs N ~ 1e31-1e32 species (6e30 in the reduced-M_Pl convention, 1.5e32 in the full-M_Pl one) -- reproducing the famous ADD count, since the species scale IS the ADD fundamental gravity scale. Finally the species scale closes the swampland loop: a Distance-Conjecture light tower (v2.255) makes N grow with field distance, so Lambda_sp drops below M_Pl exactly as the EFT-breakdown picture demands -- the WGC (v2.254), the SDC (v2.255), the TCC (v2.263) and the species scale are one web.",
+  "honest_scope": "Lambda_sp = M_Pl/sqrt(N) is the standard Dvali result; the -1/2 exponent is robust (fixed by BH entropy), but the O(1)-O(4pi) PREFACTOR is convention-dependent (the BH argument gives 1, the loop-running argument carries a 4pi), so the absolute cutoff is order-of-magnitude. The SM 'N~118' is the count of light degrees of freedom and is itself a representative O(100) number (depends on what is counted as light). The ADD count differs by ~25x between the reduced and full Planck-mass conventions (both reported). The SDC tie-in uses the v2.255 tower m/M_Pl = exp(-alpha dphi/M_Pl) with alpha~O(1); the precise N(dphi) law (KK vs string tower) is model-dependent, so the field-distance map is illustrative of the direction, not an exact prediction. A QG-consistency / cutoff-structure result, not an engine constraint refit.",
+  "references": [
+    "Dvali, 'Black Holes and Large N Species Solution to the Hierarchy Problem', Fortsch. Phys. 58 (2010) 528, arXiv:0706.2050",
+    "Dvali, Redi, 'Black Hole Bound on the Number of Species', PRD 77 (2008) 045027, arXiv:0710.4344",
+    "Arkani-Hamed, Dimopoulos, Dvali (ADD), 'The Hierarchy Problem and New Dimensions at a Millimeter', PLB 429 (1998) 263",
+    "this repo: v2.254 (WGC), v2.255 (SDC), v2.263 (TCC)"
+  ]
+}
