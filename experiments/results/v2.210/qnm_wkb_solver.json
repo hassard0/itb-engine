@@ -1,0 +1,37 @@
+{
+  "version": "v2.210",
+  "method": "3rd-order Iyer-Will WKB; exact RW potential; Fornberg tortoise derivatives",
+  "units": "M=1, G=c=1",
+  "validation": [
+    {
+      "mode": "220",
+      "omega_re": 0.3731619993234687,
+      "omega_im": -0.08921717083133958,
+      "ref_re": 0.373672,
+      "ref_im": -0.088962,
+      "rel_error": 0.0014846414935545597
+    },
+    {
+      "mode": "221",
+      "omega_re": 0.34601620808325095,
+      "omega_im": -0.2749140315377644,
+      "ref_re": 0.346711,
+      "ref_im": -0.273915,
+      "rel_error": 0.0027540134886140442
+    }
+  ],
+  "max_rel_error": 0.0027540134886140442,
+  "validated": true,
+  "sensitivity_demo": {
+    "delta_V": "f(r) / r^6  (representative short-range / dim-8 deformation shape)",
+    "d_omegaR_d_eps": 0.0004361119121387702,
+    "d_omegaI_d_eps": 0.0003802485503551223,
+    "note": "operator->QNM machinery: a potential deformation maps to a finite ringdown (omega_R, omega_I) shift. Plugging the physical R4 quartic delta_V here yields the engine's own operator->QNM sensitivity."
+  },
+  "capability": "first-principles QNM frequencies from any perturbation potential; the in-house black-hole-spectroscopy tool the R4 ringdown route needs to compute operator->QNM sensitivities without a published map (cf v2.209).",
+  "references": [
+    "Schutz & Will, ApJ 291 (1985) L33",
+    "Iyer & Will, PRD 35 (1987) 3621",
+    "Berti, Cardoso, Will, PRD 73 (2006) 064030 (tabulated omega values)"
+  ]
+}

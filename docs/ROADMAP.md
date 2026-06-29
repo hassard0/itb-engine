@@ -129,6 +129,19 @@ the qNM-to-Bresciani operator map.
    `g_R4_c1/c2/c3`. If no source supplies that, preserve the negative result
    rather than manufacturing a projection.
 
+   **In-house alternative (opened by v2.210).** The engine now has a validated
+   from-scratch QNM solver (3rd-order WKB, `experiments/qnm_wkb_solver.py`,
+   omega_220/omega_221 reproduced to ~0.2%) with an operator->QNM sensitivity
+   function. This lets the engine *derive* the operator->QNM map instead of
+   importing one: build the **physical** higher-derivative (quartic-curvature)
+   modification of the Regge-Wheeler/Bardeen-Press potential, feed its `delta_V`
+   to `qnm_potential_sensitivity`, and read off `d(omega_R, omega_I)/d(coupling)`.
+   The parity-even sector is computable this way; the parity-odd axis (`g_R4_c3`)
+   stays dark to non-polarization-resolved ringdown (v2.209). This route still
+   requires a *source-backed* modified potential (not a manufactured `delta_V`)
+   before any claim, but it removes the dependence on a published sensitivity
+   matrix.
+
 3. Execute the reproducible pyRing EFT likelihood-rerun packet.
    v2.208 defines the packet shape. The practical next build is an executable
    config exporter that writes pyRing runtime configs for the 12 event/direction
