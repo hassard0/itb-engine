@@ -1,0 +1,29 @@
+{
+  "version": "v2.260",
+  "method": "Leaver continued-fraction evaluator + brentq root-finder, parameterized by (alpha,beta,gamma); validated on a constant-coefficient analytic case and a constructed known-root case",
+  "machinery_validation": {
+    "cf_numeric": 4.561552812808831,
+    "cf_analytic": 4.561552812808831,
+    "match": true
+  },
+  "root_finder_demo": {
+    "omega_star": 0.7,
+    "root_found": 0.7,
+    "recovered": true
+  },
+  "machinery_works": true,
+  "blocker_diagnosis": {
+    "goal": "3-term Leaver recurrence for Schwarzschild QNMs (closes v2.212 cross-l gap)",
+    "v2228_attempt": "symbolic-exponent shortcut -> drops e^{iwr} essential-singularity terms -> spurious 5-term recurrence (no a_{n+1})",
+    "v2260_attempt": "essential singularity explicit -> sympy.simplify intractable (timeout 124 at 220s, even l=2)",
+    "resolution_needed": "analytic hand-derivation of (alpha,beta,gamma), OR the published Leaver-1985 c-coefficients, OR high-precision direct integration with asymptotic-series BCs (regular Frobenius, not essential-singularity-blocked)",
+    "status": "dedicated multi-step effort, not an autonomous-tick task -- recorded, not forced"
+  },
+  "finding": "The high-accuracy Leaver QNM solver was given a second serious attempt and the obstacle is now precisely diagnosed: the 3-term recurrence coefficients cannot be derived symbolically -- the symbolic-exponent shortcut (v2.228) silently drops the e^{iwr} essential-singularity contributions (spurious 5-term result), and keeping the essential singularity explicit makes sympy.simplify time out (v2.260). The coefficients need ANALYTIC hand-derivation or the published Leaver-1985 values, or a switch to high-precision direct integration with asymptotic-series boundary conditions. That is a dedicated effort, NOT an autonomous-tick task, so it is recorded rather than forced (no guessed/unvalidated solver is shipped -- claim-gating discipline). What IS delivered is the reusable, VALIDATED continued-fraction machinery (the evaluator matches the analytic constant-coefficient tail to 1e-9, and the brentq root-finder recovers a constructed known root to 1e-9), parameterized by (alpha,beta,gamma) -- so the dedicated follow-up just supplies the coefficients and the QNM solver is complete.",
+  "honest_scope": "This is a NEGATIVE-result + infrastructure cycle: the QNM solver itself is NOT delivered (the Schwarzschild coefficients are the missing piece). The continued-fraction evaluator and root-finder are exact and tested on analytic cases, but they have NOT been run on the physical Leaver recurrence (which does not yet exist in a validated form). No QNM value is claimed here; the validated v2.210 WKB solver remains the in-house QNM tool. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Leaver, Proc. R. Soc. Lond. A 402 (1985) 285 -- continued-fraction QNM method",
+    "Nollert, PRD 47 (1993) 5253 -- continued-fraction convergence / inversion",
+    "this repo: v2.228 (first Leaver derivation attempt), v2.212 (WKB cross-l caveat)"
+  ]
+}
