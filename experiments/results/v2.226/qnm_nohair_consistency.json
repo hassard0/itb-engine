@@ -1,0 +1,45 @@
+{
+  "version": "v2.226",
+  "method": "GR no-hair frequency ratios from the in-house WKB solver (validated vs Berti-Cardoso-Will); R4 violation of the 220/221 pair from source-backed qEFT deformation coefficients (v2.217); M=1",
+  "gr_nohair_ratios": {
+    "220": {
+      "solver": 1.0,
+      "berti": 1.0,
+      "rel_err": 0.0
+    },
+    "221": {
+      "solver": 0.9272546741376875,
+      "berti": 0.9278484874435333,
+      "rel_err": 0.0006399895175579357
+    },
+    "330": {
+      "solver": 1.6059113952053596,
+      "berti": 1.6041956582243249,
+      "rel_err": 0.0010695309965705283
+    },
+    "440": {
+      "solver": 2.1682213349401858,
+      "berti": 2.1654766747307796,
+      "rel_err": 0.0012674623751130177
+    }
+  },
+  "gr_ratios_validated": true,
+  "max_ratio_rel_err": 0.0012674623751130177,
+  "r4_nohair_violation_220_221": {
+    "gr_freq_ratio_wR221_over_wR220": 0.9278484874435333,
+    "gr_damp_ratio_wI221_over_wI220": 3.0790112632359885,
+    "r4_freq_ratio_violation_per_gamma": -1.3149,
+    "r4_damp_ratio_violation_per_gamma": -171.957,
+    "rho_crit_1sigma_freq_channel_per_gamma": 2.9009062409638497,
+    "rho_crit_1sigma_damp_channel_per_gamma": 0.01875290022742017,
+    "damp_over_freq_sensitivity": 130.77572438968744
+  },
+  "finding": "GR no-hair fingerprint reproduced to 0.13% (omega_330/omega_220 = 1.606, omega_440/omega_220 = 2.168). R4 VIOLATES the 220/221 no-hair consistency: it shifts the frequency ratio by -1.31 per gamma and the damping ratio by -172 per gamma. The DAMPING no-hair channel is ~131x more sensitive (critical SNR 0.019/gamma vs 2.90/gamma) -- it inherits the overtone damping coefficient dtq_1 = 171.35, so the no-hair test, like the R4 reach (v2.217-v2.220), is overtone-damping dominated.",
+  "honest_scope": "The GR no-hair RATIOS are claim-grade (the solver reproduces Berti to <0.2%). The R4 VIOLATION of the 220/221 pair is source-backed (published qEFT dwq/dtq, v2.217). The cross-multipole no-hair violation (330/440 vs 220) is NOT computed: only the n=0,1 l=2 qEFT coefficients are published, and the in-house cross-l WKB sensitivity to the (r_g/r)^10 R4 deformation is unreliable (v2.212 overshoot, which does NOT cancel across different multipoles -- unlike the same-l parity ratio of v2.224). The detectability uses ISOLATED resolvability (v2.221 covariance would inflate rho_crit a few-fold). The dtq_1 perturbative-delicacy caveat carries (v2.217, valid for gamma << 6e-3). Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Berti, Cardoso, Will, PRD 73 (2006) 064030 -- QNM table / no-hair spectroscopy",
+    "Isi, Giesler, Farr, Scheel, Teukolsky, PRL 123 (2019) 111102 -- 220+221 no-hair test",
+    "Silva, Ghosh, Buonanno, PRD 107 (2023) 044030 -- qEFT coefficients (v2.217)",
+    "this repo: v2.219 (resolvability), v2.212 (cross-l WKB sensitivity caveat)"
+  ]
+}

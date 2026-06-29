@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (336 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (337 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -385,3 +385,4 @@ Auto-generated front door to the full research program (336 notes). Regenerate w
 | v2.223 | [v2.223 - Population scaling of R4 ringdown bounds: multi-event stackin](2026-06-29-v2.223-qnm-r4-population-scaling.md) | The single-event ringdown lever was mapped end to end in v2.217-v2.222. Pivot to the POPULATION |
 | v2.224 | [v2.224 - The isospectrality-breaking response: axial vs polar QNM sens](2026-06-29-v2.224-qnm-parity-sensitivity.md) | v2.218 confirmed GR isospectrality and identified isospectrality BREAKING as the R4 parity |
 | v2.225 | [v2.225 - Multipole robustness: is the isospectrality-breaking response](2026-06-29-v2.225-qnm-parity-breaking-multipole.md) | v2.224 found the axial-vs-polar QNM response to a `(r_H/r)^j` deformation diverges monotonically |
+| v2.226 | [v2.226 - Black-hole-spectroscopy no-hair consistency test, and how R4 ](2026-06-29-v2.226-qnm-nohair-consistency.md) | GR no-hair fingerprint (validated vs Berti-Cardoso-Will): |
