@@ -1,0 +1,82 @@
+{
+  "version": "v2.271",
+  "method": "cross-verify the five graviton-observable modules for shared helicity-2 structure, correct chromaticity/parity classification, and GR null limits; 4 consistency checks",
+  "graviton_observables": [
+    {
+      "observable": "graviton mass (v2.266)",
+      "property": "MASS",
+      "gr": "m_g = 0",
+      "signature": "chromatic 1/E^2 speed deficit"
+    },
+    {
+      "observable": "GW memory (v2.267)",
+      "property": "INFRARED / soft charge",
+      "gr": "soft theorem",
+      "signature": "permanent DC strain offset = zero-frequency mode"
+    },
+    {
+      "observable": "GW polarizations (v2.268)",
+      "property": "SPIN / helicity",
+      "gr": "2 tensor modes",
+      "signature": "E(2) content; interferometer rank <= 5"
+    },
+    {
+      "observable": "GW birefringence (v2.269)",
+      "property": "PARITY",
+      "gr": "no L/R split",
+      "signature": "chromatic parity-odd amplitude split"
+    },
+    {
+      "observable": "GW/EM distance (v2.270)",
+      "property": "EXTRA DIMS / running M_Pl",
+      "gr": "D=4, Xi_0=1",
+      "signature": "achromatic amplitude vs distance"
+    }
+  ],
+  "propagation_channel_map": {
+    "chromatic_parity_even": "mass dispersion (v2.266)",
+    "achromatic_parity_even": "distance ratio (v2.270)",
+    "chromatic_parity_odd": "birefringence (v2.269)",
+    "achromatic_parity_odd": "(none known)"
+  },
+  "gr_null_limits": {
+    "massless_graviton_no_deficit": true,
+    "gr_has_two_polarizations": true,
+    "no_birefringence_no_induced_V": true,
+    "four_dimensions_ratio_unity": true,
+    "no_planck_running_ratio_unity": true,
+    "oscillation_carries_no_memory": true
+  },
+  "consistency_checks": [
+    {
+      "name": "circular_modes_built_from_gr_tensor_modes",
+      "pass": true
+    },
+    {
+      "name": "mass_dispersion_chromatic_inverse_square",
+      "pass": true
+    },
+    {
+      "name": "birefringence_chromatic_linear",
+      "pass": true
+    },
+    {
+      "name": "distance_ratio_achromatic",
+      "pass": true
+    },
+    {
+      "name": "all_tests_reduce_to_gr",
+      "pass": true
+    }
+  ],
+  "checks_passed": 5,
+  "checks_total": 5,
+  "all_pass": true,
+  "finding": "The five-cycle graviton-observable arc forms one complete structure -- everything a gravitational wave measures about the graviton -- and all 5/5 cross-program checks pass. The modules share the helicity-2 backbone: v2.269's circular polarizations are built from EXACTLY v2.268's two GR tensor modes (verified to 1e-12). The five observables map to five distinct graviton properties: MASS (v2.266 dispersion), INFRARED/soft charge (v2.267 memory = soft-theorem zero-mode), SPIN/helicity (v2.268 polarization content), PARITY (v2.269 birefringence), and EXTRA DIMENSIONS / running Planck mass (v2.270 distance ratio). The propagation sector cleanly factorizes by two binary labels -- chromatic vs achromatic (frequency dependence) and parity-even vs parity-odd (handedness): mass dispersion is chromatic/parity-even (1/E^2, verified), birefringence is chromatic/parity-odd (~f, verified), the distance ratio is achromatic/parity-even, and the fourth cell (achromatic parity-odd) is empty -- so a GW propagation anomaly is diagnosable from its frequency dependence and handedness alone. And every test reduces to GR in its null limit (massless graviton -> no dispersion, two polarizations, zero memory from oscillation, zero birefringence, D=4 and Xi_0=1 -> unit distance ratio, all verified). This is the session's fifth cross-verified synthesis capstone (after v2.242 strong-field, v2.250 BH-hypothesis, v2.256 QG-phenomenology, v2.265 swampland).",
+  "honest_scope": "A synthesis / cross-verification capstone: every check is a consistency relation among results already established and caveated in v2.266-v2.270 (representative couplings for the birefringence and distance parametrizations, order-of-magnitude reproduction of the published mass and dimension bounds, toy-waveform verification of the memory identity, idealized Michelson response for the polarization rank). No new bound is derived; the value is showing the five observables are mutually consistent, share one helicity-2 structure, and completely partition into MASS / INFRARED / SPIN / PARITY / DIMENSIONS with a clean chromaticity-x-parity map of the propagation sector. A QG / GW-structure result, not an engine constraint refit.",
+  "references": [
+    "Will, 'The confrontation between GR and experiment', Living Rev. Rel. 17 (2014) 4",
+    "Yunes, Yagi, Pretorius, 'Theoretical physics implications of GW150914 / GW170817'",
+    "this repo: v2.266 (mass), v2.267 (memory), v2.268 (polarizations), v2.269 (birefringence), v2.270 (distance ratio)"
+  ]
+}

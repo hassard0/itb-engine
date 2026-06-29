@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (381 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (382 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -430,3 +430,4 @@ Auto-generated front door to the full research program (381 notes). Regenerate w
 | v2.268 | [v2.268 - GW polarization content: GR's two modes vs the six of a gener](2026-06-29-v2.268-qnm-gw-polarizations.md) | A fresh falsifiable-gravity probe (continuing the v2.266/v2.267 GW thread). A massless spin-2 metric |
 | v2.269 | [v2.269 - GW amplitude birefringence: parity-violating gravity splits t](2026-06-29-v2.269-qnm-gw-birefringence.md) | A fresh GW-propagation probe (continuing the v2.266-v2.268 GW thread) and the graviton analog of the |
 | v2.270 | [v2.270 - The GW vs EM luminosity-distance ratio: a standard-siren test](2026-06-29-v2.270-qnm-gw-em-distance-ratio.md) | A fresh GW-propagation probe (continuing v2.266-v2.269) and the achromatic-AMPLITUDE partner of the |
+| v2.271 | [v2.271 - Synthesis capstone: the graviton-observables arc (v2.266-v2.2](2026-06-29-v2.271-qnm-graviton-observables-synthesis.md) | Five consecutive cycles built a gravitational-wave / graviton-observable arc -- the graviton's mass |
