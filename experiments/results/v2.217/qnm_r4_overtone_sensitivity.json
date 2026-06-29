@@ -1,0 +1,41 @@
+{
+  "version": "v2.217",
+  "source": "Silva-Ghosh-Buonanno (2205.05132) qEFT deformation coefficients (repo extraction)",
+  "qeft_coefficients": {
+    "n0": {
+      "delta_omega": -0.2114,
+      "delta_tau": -0.607
+    },
+    "n1": {
+      "delta_omega": -1.5263,
+      "delta_tau": 171.35
+    }
+  },
+  "complex_shift_per_gamma": {
+    "n0": [
+      -0.07899426080000001,
+      -0.053999934
+    ],
+    "n1": [
+      -0.5291849993,
+      46.93533525
+    ],
+    "magnitude_n0": 0.09568743967388182,
+    "magnitude_n1": 46.9383183741533
+  },
+  "overtone_enhancement": {
+    "freq_shift_ratio_n1_over_n0": 7.21996215704825,
+    "damping_shift_ratio_n1_over_n0": 282.28995057660626,
+    "complex_shift_magnitude_ratio_n1_over_n0": 490.53792780041596,
+    "damping_response_sign_n0": "faster (Delta omega_I < 0)",
+    "damping_response_sign_n1": "slower (Delta omega_I > 0)",
+    "damping_signs_opposite": true
+  },
+  "finding": "The n=1 first overtone is ~491x more sensitive to the R4 correction than the n=0 fundamental (driven by dtq_1 = 171.35, ~282x the fundamental's damping coefficient), and the two overtones respond with OPPOSITE sign in the damping: the fundamental decays faster under R4 while the first overtone decays much slower. Overtones probe the near-horizon region where R4 curvature corrections concentrate, so overtone-resolved ringdown is the dominant lever for higher-curvature gravity (cf the active overtone-ringdown literature, e.g. arXiv:2512.22728).",
+  "perturbative_caveat": "dtq_1 = 171.35 is very large (O(170)); the ParSpec linear-in-gamma expansion is therefore only valid for gamma << 1/170 ~ 6e-3, so the overtone bound is perturbatively DELICATE even as it dominates the constraint. The precise n=1 value should be treated cautiously; the QUALITATIVE result (overtones vastly more sensitive) is robust.",
+  "claim_gate": "closed on the full R4 ringdown sensitivity: the complete odd-parity delta_V (all radial terms) for a McManus cross-check is NOT sourceable this cycle (2205.05132 appendix not cached/renderable; cached 2407.08929 is the cubic inspiral paper). The overtone hierarchy here is SOURCE-BACKED (reads the published qEFT coefficients) and claim-grade as a relative statement; an independent McManus n=1 e_j cross-check is the next step. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Silva, Ghosh, Buonanno, PRD 107 (2023) 044030 (arXiv:2205.05132)",
+    "active overtone-ringdown probes of higher-curvature gravity, e.g. arXiv:2512.22728"
+  ]
+}
