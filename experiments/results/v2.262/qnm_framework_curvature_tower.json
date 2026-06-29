@@ -1,0 +1,79 @@
+{
+  "version": "v2.262",
+  "method": "minimal Hankel-saturating curvature tower g_R(k+2)=g_R2 x^k, x=g_R3/g_R2, per engine framework (single effective spectral state); convergence diagnostic x<1",
+  "framework_towers": [
+    {
+      "framework": "pure_gr",
+      "has_curvature": false
+    },
+    {
+      "framework": "string_tree_eft",
+      "has_curvature": true,
+      "g_R2": 0.2,
+      "g_R3": 0.15,
+      "effective_state_x": 0.7499999999999999,
+      "minimal_tower": {
+        "g_R4": 0.11249999999999999,
+        "g_R5": 0.08437499999999998,
+        "g_R6": 0.06328124999999997
+      },
+      "g_R4_min_matches_v234": true,
+      "hankel_2x2_det": 0.0,
+      "tower_regime": "converging (operators decouple)"
+    },
+    {
+      "framework": "asymptotic_safety",
+      "has_curvature": true,
+      "g_R2": 0.15,
+      "g_R3": 0.1,
+      "effective_state_x": 0.6666666666666667,
+      "minimal_tower": {
+        "g_R4": 0.06666666666666668,
+        "g_R5": 0.04444444444444446,
+        "g_R6": 0.029629629629629645
+      },
+      "g_R4_min_matches_v234": true,
+      "hankel_2x2_det": 0.0,
+      "tower_regime": "converging (operators decouple)"
+    },
+    {
+      "framework": "lqg_induced",
+      "has_curvature": true,
+      "g_R2": 0.3,
+      "g_R3": 0.3,
+      "effective_state_x": 1.0,
+      "minimal_tower": {
+        "g_R4": 0.3,
+        "g_R5": 0.3,
+        "g_R6": 0.3
+      },
+      "g_R4_min_matches_v234": true,
+      "hankel_2x2_det": 0.0,
+      "tower_regime": "marginal (operators do NOT decouple)"
+    },
+    {
+      "framework": "cdt",
+      "has_curvature": true,
+      "g_R2": 0.22,
+      "g_R3": 0.15,
+      "effective_state_x": 0.6818181818181818,
+      "minimal_tower": {
+        "g_R4": 0.10227272727272727,
+        "g_R5": 0.06973140495867768,
+        "g_R6": 0.04754413974455295
+      },
+      "g_R4_min_matches_v234": true,
+      "hankel_2x2_det": -3.053113317719192e-18,
+      "tower_regime": "converging (operators decouple)"
+    }
+  ],
+  "marginal_frameworks": [
+    "lqg_induced"
+  ],
+  "finding": "Applying the v2.261 moment-tower positivity to the engine's frameworks gives each a concrete MINIMAL higher-curvature tower: a geometric sequence g_R(k+2) = g_R2 x^k with ratio x = g_R3/g_R2 (the effective mass^2 of the lightest curvature state, single-state saturating every Hankel minor -- 2x2 det ~ 0). g_R4_min reproduces the v2.234 bound exactly. The new diagnostic is the ratio x: string_tree_eft (x=0.75), asymptotic_safety (x=0.67), and cdt (x=0.68) have CONVERGING towers (x<1 -> the higher-curvature operators decouple, a healthy EFT), but LQG_INDUCED has x=1.0 (g_R2=g_R3=0.3) -- a MARGINAL tower (g_R4=g_R5=g_R6=0.3, the curvature operators do NOT decouple). So lqg sits at the boundary of the moment-tower's healthy region, an independent flag consistent with its already-anomalous status (it fails 4/38 engine constraints, and v2.234 showed it needs the largest forced g_R4). This is a novel per-framework consistency diagnostic from the curvature moment tower -- extending v2.234/v2.261 to concrete framework predictions.",
+  "honest_scope": "The MINIMAL tower (single effective state) is the floor of the Hankel-allowed region; a framework's TRUE higher-curvature couplings could be larger (more spectral states) -- the geometric tower is the lower envelope, not a unique prediction. The x = g_R3/g_R2 diagnostic inherits the engine's representative-O(1)-prefactor caveat (v2.261): the operator<->moment indexing is structural, so 'marginal' is a representative statement about the toy couplings, not an operator-exact decoupling claim. The framework couplings themselves are the engine's encoded (toy) values. A theory-structure diagnostic, not a new bound. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Caron-Huot, Mazac, Rastelli, Simmons-Duffin, JHEP 07 (2021) 110 -- moment problem / EFT-hedron",
+    "this repo: v2.261 (moment-tower structure), v2.234 (g_R4 mandate); engine frameworks()"
+  ]
+}
