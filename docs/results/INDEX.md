@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (369 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (370 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -418,3 +418,4 @@ Auto-generated front door to the full research program (369 notes). Regenerate w
 | v2.256 | [v2.256 - Synthesis: the QG-phenomenology + swampland arc, cross-verifi](2026-06-29-v2.256-qnm-qg-phenomenology-synthesis.md) | The session's third sub-program (v2.251-v2.255) pivoted off black holes to ask, sector by sector: |
 | v2.257 | [v2.257 - Black-hole thermodynamics: entropy, Hawking temperature, evap](2026-06-29-v2.257-qnm-black-hole-thermodynamics.md) | A fresh fundamental-QG thread, reconnecting to the engine's entropy constraints |
 | v2.258 | [v2.258 - The holographic bound, the Bekenstein bound, and the cosmic e](2026-06-29-v2.258-qnm-holographic-bound.md) | Continuing the entropy thread (v2.257), reconnecting to the engine's `bh_entropy_positivity` / |
+| v2.259 | [v2.259 - The cosmological constant problem: 'the worst prediction in p](2026-06-29-v2.259-qnm-cosmological-constant-problem.md) | A fresh fundamental-QG cycle, connecting to the engine's `cc_naturalness` experiment. The observed |

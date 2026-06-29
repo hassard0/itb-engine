@@ -1,0 +1,45 @@
+{
+  "version": "v2.259",
+  "method": "observed rho_Lambda ~ (2.3 meV)^4 vs QFT vacuum estimate rho_vac ~ M_cutoff^4; overshoot = (M_cutoff/rho_Lambda^{1/4})^4; de Sitter swampland conjecture",
+  "dark_energy_scale_meV": 2.3,
+  "vacuum_energy_overshoot": [
+    {
+      "cutoff": "Planck",
+      "cutoff_eV": 1.22e+28,
+      "overshoot_ratio": 7.91640452971509e+122
+    },
+    {
+      "cutoff": "GUT",
+      "cutoff_eV": 2e+25,
+      "overshoot_ratio": 5.717532455930333e+111
+    },
+    {
+      "cutoff": "electroweak (TeV)",
+      "cutoff_eV": 1000000000000.0,
+      "overshoot_ratio": 3.573457784956458e+58
+    },
+    {
+      "cutoff": "QCD (0.2 GeV)",
+      "cutoff_eV": 200000000.0,
+      "overshoot_ratio": 5.717532455930331e+43
+    },
+    {
+      "cutoff": "electron mass",
+      "cutoff_eV": 511000.0,
+      "overshoot_ratio": 2.4365327682862763e+33
+    }
+  ],
+  "planck_overshoot": 7.91640452971509e+122,
+  "de_sitter_conjecture": {
+    "statement": "|grad V| >= c V / M_Pl -- a stable positive CC may be forbidden in QG",
+    "implication": "dark energy as QUINTESSENCE (rolling field), not a true Lambda",
+    "links": "Swampland Distance Conjecture (v2.255); engine swampland sector"
+  },
+  "finding": "The cosmological constant problem is the largest theory-vs-observation gap in physics. The observed dark energy is a ~2.3 meV scale, but the QFT vacuum energy ~M_cutoff^4 overshoots it by ~8e+122 at the Planck cutoff (the famous ~1e122), ~4e+58 even at the electroweak scale, and still ~2e+33 at the electron mass -- there is NO cutoff at which naive QFT gets it remotely right. A consistent quantum-gravity theory must explain this ~120-order suppression (and the small positive value). The QG/swampland angle sharpens it: the de Sitter conjecture suggests a true positive Lambda is forbidden in quantum gravity, so the acceleration would be quintessence (a rolling field obeying |grad V| >= c V/M_Pl) rather than a constant -- a falsifiable prediction (a time-varying dark-energy equation of state w != -1) that ties the CC problem to the Swampland Distance Conjecture (v2.255) and the engine's cc_naturalness / swampland sector. The CC problem is thus both the sharpest QG naturalness puzzle and a place where the swampland program makes contact with observation.",
+  "honest_scope": "The vacuum-energy estimate rho_vac ~ M_cutoff^4 is the NAIVE QFT scaling -- the true story involves cancellations, the cosmological-constant renormalization, SUSY (which would soften it to the SUSY-breaking scale, still ~1e60 off), and the measure/anthropic and sequestering proposals; the ~1e122 is the famous order-of-magnitude statement of the problem, not a precise prediction. The de Sitter conjecture is CONTROVERSIAL (its constant c and even its validity are debated; many string constructions claim metastable dS). The observed rho_Lambda is well-measured. Self-contained reconstruction of a standard fundamental puzzle and its QG framing, not a new result. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Weinberg, Rev. Mod. Phys. 61 (1989) 1 -- the cosmological constant problem",
+    "Obied, Ooguri, Spodyneiko, Vafa (2018); Agrawal, Obied, Steinhardt, Vafa (2018) -- de Sitter conjecture",
+    "this repo: v2.255 (Swampland Distance Conjecture); engine cc_naturalness"
+  ]
+}
