@@ -1,0 +1,69 @@
+{
+  "version": "v2.272",
+  "method": "Omega_GW(f) = (2 pi^2/3)(f^2/H_0^2) h_c^2; spectral-index map h_c~f^alpha -> Omega_GW~f^(2 alpha+2), PTA gamma = 3-2 alpha; primordial Omega_GW ~ (1/24) Omega_r r A_s",
+  "H0_si": 2.1840570317563187e-18,
+  "spectral_zoo": [
+    {
+      "name": "SMBH binaries",
+      "alpha": -0.6666666666666666,
+      "omega_slope": 0.6666666666666667,
+      "timing_gamma": 4.333333333333333
+    },
+    {
+      "name": "inflation (scale-invariant)",
+      "alpha": -1.0,
+      "omega_slope": 0.0,
+      "timing_gamma": 5.0
+    },
+    {
+      "name": "cosmic strings (plateau)",
+      "alpha": -1.0,
+      "omega_slope": 0.0,
+      "timing_gamma": 5.0
+    }
+  ],
+  "nanograv": {
+    "amplitude_at_1yr": 2.4e-15,
+    "f_ref_hz": 3.168808781402895e-08,
+    "omega_gw_at_1yr": 7.97801936193941e-09,
+    "smbhb_gamma": 4.333333333333333,
+    "note": "measured 15yr gamma ~ 3.2 is mildly shallower than the SMBHB 13/3 ~ 4.33"
+  },
+  "primordial_inflation": [
+    {
+      "r": 0.036,
+      "omega_gw": 2.835e-16
+    },
+    {
+      "r": 0.01,
+      "omega_gw": 7.875000000000002e-17
+    },
+    {
+      "r": 0.001,
+      "omega_gw": 7.875000000000002e-18
+    }
+  ],
+  "primordial_max_omega_at_r0p036": 2.835e-16,
+  "detector_sensitivities": {
+    "PTA (nHz)": 1e-09,
+    "LISA (mHz)": 1e-13,
+    "LIGO design (~100 Hz)": 1e-09
+  },
+  "consistency_checks": {
+    "smbhb_omega_slope_two_thirds": true,
+    "scale_invariant_omega_flat": true,
+    "smbhb_timing_gamma_13_over_3": true,
+    "gamma_plus_omega_slope_is_five": true,
+    "primordial_inflation_below_all_detectors": true,
+    "nanograv_omega_order_1e_minus_8": true
+  },
+  "all_checks_pass": true,
+  "finding": "The stochastic GW background is diagnosed by its SPECTRAL SHAPE, and the arithmetic linking the characteristic-strain slope alpha, the energy-density slope (2 alpha + 2) and the pulsar-timing index gamma (3 - 2 alpha) is exact (verified). Supermassive-black-hole binaries give h_c ~ f^-2/3, so Omega_GW ~ f^+2/3 and gamma = 13/3 ~ 4.33; a scale-invariant inflationary or cosmic-string background is FLAT in Omega_GW (gamma = 5); a phase transition is peaked -- so the slope alone separates the candidates. The NANOGrav 15yr nHz signal (A ~ 2.4e-15 at 1/yr) converts to Omega_GW ~ 8.0e-09 and sits at the SMBH-binary prediction (its measured gamma ~ 3.2 is mildly shallower than 13/3, a live question). The decisive QG point is the GAP: the PRIMORDIAL inflationary background, fixed by the tensor-to-scalar ratio via Omega_GW ~ (1/24) Omega_r r A_s, is at most ~3e-16 (at the current r < 0.036) -- below the PTA, LISA and LIGO sensitivities (~1e-9 to 1e-13) by orders of magnitude. So a stochastic detection is astrophysical (binaries) or exotic (strings, phase transitions), NOT a direct image of inflation: seeing the inflationary graviton background needs a dedicated future mission, and that gap is itself the quantitative statement of how faint the quantum-gravitational vacuum signal is.",
+  "honest_scope": "The h_c <-> Omega_GW <-> gamma conversions are EXACT (standard definitions). The NANOGrav amplitude (A ~ 2.4e-15) and the SMBHB slope are source-backed (NANOGrav 15yr); the measured gamma ~ 3.2 is mildly shallower than the nominal 13/3, which the collaboration flags -- reported honestly, not tuned. The primordial estimate Omega_GW ~ (1/24) Omega_r r A_s is the standard ORDER-OF-MAGNITUDE result; it omits the detailed transfer function, reheating history and spectral tilt n_T (which can mildly blue-tilt the spectrum), and Omega_r, H0 are fixed to fiducial values -- so the ~1e-16 ceiling is order-of-magnitude, but the conclusion (primordial background far below current detectors) is robust across the uncertainty. Detector sensitivities are representative peak values, not full power-law-integrated curves. A GW-cosmology / spectral-classification result, not an engine constraint refit.",
+  "references": [
+    "Maggiore, 'Gravitational Wave Experiments and Early Universe Cosmology', Phys. Rept. 331 (2000) 283",
+    "NANOGrav Collaboration, 'The NANOGrav 15 yr Data Set: Evidence for a GW Background', ApJL 951 (2023) L8",
+    "Caprini, Figueroa, 'Cosmological backgrounds of gravitational waves', Class. Quantum Grav. 35 (2018) 163001",
+    "this repo: v2.253 (inflation tensor spectrum / r), v2.271 (graviton-observables synthesis)"
+  ]
+}
