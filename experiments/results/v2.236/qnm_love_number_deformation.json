@@ -1,0 +1,43 @@
+{
+  "version": "v2.236",
+  "method": "first-order perturbation theory on the self-adjoint static even-parity operator; induced response (B/A) = -(eps/W0) int P_l^2^2 V dx for V=1/x^n; stable overlap integral, no unstable outward integration",
+  "l2_sensitivity": [
+    {
+      "n": 6,
+      "overlap_integral": 4.800000000000001,
+      "closed_form": 4.800000000000001,
+      "match": true
+    },
+    {
+      "n": 8,
+      "overlap_integral": 0.6857142857142857,
+      "closed_form": 0.6857142857142853,
+      "match": true
+    },
+    {
+      "n": 10,
+      "overlap_integral": 0.22857142857142854,
+      "closed_form": 0.22857142857142876,
+      "match": true
+    }
+  ],
+  "l3_sensitivity": [
+    {
+      "n": 10,
+      "overlap_integral": 17.14285714285714
+    },
+    {
+      "n": 12,
+      "overlap_integral": 5.714285714285714
+    }
+  ],
+  "gr_baseline_zero": -0.0,
+  "linear_in_eps": true,
+  "finding": "Any localized (near-horizon / higher-curvature) deformation LIFTS the GR-zero tidal Love number, linearly in the deformation strength. The induced response is the convergent overlap integral I = int_1^inf P_l^2(x)^2 / x^n dx (verified against the closed form to 1e-6: n=6 -> 4.800, n=8 -> 0.686, n=10 -> 0.229 for l=2), which is exactly zero with no deformation (the GR baseline, v2.235) and scales as eps (verified: doubling/quadrupling eps doubles/quadruples the response). The sensitivity DECREASES with deformation localization (larger n -> smaller overlap with the x^l tidal field). So a measured nonzero tidal Love number is the new-physics signal, and this overlap integral is the transfer function mapping a near-horizon deformation to the observable -- the tidal-sector analog of the v2.231 photon-sphere-deviation null test.",
+  "honest_scope": "First-order (linear response), static, electric-type (even-parity), Schwarzschild baseline. The reported quantity is the response OVERLAP INTEGRAL (and a proxy B/A with a representative Wronskian W0=24); the absolute Love-number value folds in the Love-number convention normalization (the M^{2l+1} factors and the exact Wronskian) -- the robust, verified physics is that the GR-zero is lifted LINEARLY by any convergent (localized) deformation, with the P_l^2-overlap as the transfer function. The deformation must fall faster than x^{-(2l+1)} for a convergent response (near-horizon new physics); a non-localized tidal-scale deformation needs the full matched calculation. The specific deformation profile is illustrative, not a derived QG metric. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Binnington & Poisson, PRD 80 (2009) 084018; Damour & Nagar, PRD 80 (2009) 084035",
+    "Cardoso, Franzin, Maselli, Pani, Raposo (2017) -- Love numbers of exotic compact objects",
+    "this repo: v2.235 (BH Love number = 0), v2.231 (photon-sphere deviation null test)"
+  ]
+}
