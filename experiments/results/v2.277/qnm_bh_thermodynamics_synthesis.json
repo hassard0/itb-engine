@@ -1,0 +1,73 @@
+{
+  "version": "v2.277",
+  "method": "cross-verify the six BH-thermodynamics modules for the shared area law S=A/4, the common Hawking temperature 1/(8 pi M) in SI and natural units, saturated entropy bounds, the ln3 area-quantum entropy, and the greybody/Page/phase structures",
+  "area_is_the_unifying_object": [
+    {
+      "cycle": "v2.257",
+      "topic": "thermodynamics",
+      "area_role": "the area is ENTROPY (S = A/4)"
+    },
+    {
+      "cycle": "v2.258",
+      "topic": "holographic bound",
+      "area_role": "the area is the BOUND (S <= A/4, saturated)"
+    },
+    {
+      "cycle": "v2.273",
+      "topic": "greybody",
+      "area_role": "the area RADIATES (barrier-filtered Hawking)"
+    },
+    {
+      "cycle": "v2.274",
+      "topic": "area quantization",
+      "area_role": "the area is QUANTIZED (dA = 4 ln3)"
+    },
+    {
+      "cycle": "v2.275",
+      "topic": "Page curve",
+      "area_role": "the area is the ISLAND (information returns)"
+    },
+    {
+      "cycle": "v2.276",
+      "topic": "Hawking-Page",
+      "area_role": "the area has a PHASE (free-energy transition)"
+    }
+  ],
+  "natural_units_T_H": 0.039788735772973836,
+  "consistency_checks": [
+    {
+      "name": "bekenstein_holographic_S_BH_all_equal",
+      "pass": true
+    },
+    {
+      "name": "hawking_T_is_1_over_8piM_across_units",
+      "pass": true
+    },
+    {
+      "name": "entropy_area_law_S_prop_M2_T_prop_invM",
+      "pass": true
+    },
+    {
+      "name": "area_quantum_entropy_is_ln3",
+      "pass": true
+    },
+    {
+      "name": "page_point_and_time_consistent",
+      "pass": true
+    },
+    {
+      "name": "greybody_unity_and_hawking_page_sign_change",
+      "pass": true
+    }
+  ],
+  "checks_passed": 6,
+  "checks_total": 6,
+  "all_pass": true,
+  "finding": "The six-cycle black-hole thermodynamics sub-arc is one structure, and all 6/6 cross-program checks pass. The unifying object is the horizon AREA: it is the entropy S = A/4 (v2.257), the bound that S = A/4 saturates (v2.258, Bekenstein = holographic = S_BH verified equal), it is quantized in units of dA = 4 ln3 carrying entropy ln3 (v2.274), it radiates through the barrier at its photon sphere (v2.273, greybody -> 1 at high frequency), its remaining value is the island that returns the information (v2.275, Page curve), and its free energy drives a phase transition (v2.276, Hawking-Page). The Hawking temperature 1/(8 pi M) is literally the same number in the SI treatment (v2.257) and the natural-units modules (v2.273/274/276, verified via T_H(M_Pl)/T_Pl = 1/8pi), and the area law scales as S ~ M^2, T ~ 1/M, evaporation ~ M^3 consistently. So 'black hole thermodynamics' is not six topics but one -- the horizon area, read as entropy, bound, quantum, radiator, island and phase. This is the session's sixth cross-verified synthesis capstone (after v2.242, v2.250, v2.256, v2.265, v2.271).",
+  "honest_scope": "A synthesis / cross-verification capstone: every check is a consistency relation among results already established and caveated in v2.257-v2.276 (the area quantum's ln3 is a source-backed input, the Page curve is the phenomenological island model, the greybody is WKB-limited at low frequency, the Hawking-Page result is AdS_4-specific). No new bound is derived; the value is showing the six treatments are mutually consistent and are all the horizon area in disguise. The SI<->natural-units temperature bridge is exact; the thermodynamic scaling laws are exact. A QG / BH-structure result, not an engine constraint refit.",
+  "references": [
+    "Bekenstein, 'Black holes and entropy', PRD 7 (1973) 2333",
+    "Hawking, 'Particle creation by black holes', CMP 43 (1975) 199",
+    "this repo: v2.257, v2.258, v2.273, v2.274, v2.275, v2.276"
+  ]
+}
