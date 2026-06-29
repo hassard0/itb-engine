@@ -1,0 +1,53 @@
+{
+  "version": "v2.280",
+  "method": "PPN weak-field tests: deflection (1+gamma)/2 4GM/c^2 b, perihelion (2+2gamma-beta)/3 6 pi GM/c^2 a(1-e^2), redshift g h/c^2; GR = gamma=beta=1",
+  "classic_tests": [
+    {
+      "test": "light deflection",
+      "ppn_factor": "(1+gamma)/2",
+      "GR_value": "1.7515 arcsec (solar limb)",
+      "measurement": "VLBI gamma = 0.99992 +/- 0.00023"
+    },
+    {
+      "test": "Shapiro time delay",
+      "ppn_factor": "(1+gamma)/2",
+      "GR_value": "round-trip ~ 250 us past the Sun",
+      "measurement": "Cassini gamma-1 = (2.1 +/- 2.3)e-5 (tightest)"
+    },
+    {
+      "test": "perihelion precession",
+      "ppn_factor": "(2+2gamma-beta)/3",
+      "GR_value": "42.99 arcsec/century (Mercury)",
+      "measurement": "observed 42.98 +/- 0.04 (anomalous)"
+    },
+    {
+      "test": "gravitational redshift",
+      "ppn_factor": "1 (equivalence principle)",
+      "GR_value": "2.455e-15 (Pound-Rebka, 22.5 m)",
+      "measurement": "confirmed to ~1% (1960); GPS 38 us/day"
+    }
+  ],
+  "light_deflection_GR_arcsec": 1.7515431832043753,
+  "newton_deflection_arcsec": 0.8757715916021876,
+  "mercury_precession_GR_arcsec_century": 42.98937331373558,
+  "pound_rebka_redshift": 2.454934655124764e-15,
+  "gamma_cassini_bound": 2.3e-05,
+  "consistency_checks": {
+    "light_deflection_GR_1p75_arcsec": true,
+    "newton_deflection_is_half_GR": true,
+    "mercury_precession_43_per_century": true,
+    "deflection_scales_1_plus_gamma": true,
+    "mercury_ppn_factor_2_plus_2gamma_minus_beta": true,
+    "pound_rebka_redshift_2p5e_minus_15": true,
+    "cassini_gamma_bound_tight": true
+  },
+  "all_checks_pass": true,
+  "finding": "The four classic tests of general relativity all reduce, in the weak field, to the two Eddington PPN parameters gamma and beta, and GR's gamma=beta=1 passes every one. Light grazing the Sun is deflected by 1.7515 arcsec (the famous 1.75 inch), and because deflection scales as (1+gamma)/2 the Newtonian gamma=0 prediction is exactly HALF (0.8758 arcsec) -- the discriminant Eddington's 1919 eclipse used to choose Einstein over Newton. The Shapiro time delay shares that (1+gamma)/2 factor, and the Cassini spacecraft measured gamma - 1 = (2.1 +/- 2.3)e-5, the tightest confirmation of GR's space-curvature sector. Mercury's perihelion precesses by 42.99 arcsec/century (the anomalous 43 inch Le Verrier could not explain with Newton), mixing gamma and beta as (2+2gamma-beta)/3. And the gravitational redshift (Dnu/nu = g h/c^2 = 2.45e-15 over the Pound-Rebka tower) tests the equivalence principle that underlies any metric theory -- the same effect GPS corrects at 38 us/day. Together with the v2.278/v2.279 binary pulsars (strong field), the PPN solar-system tests (weak field) bracket general relativity across the full range of gravitational potentials.",
+  "honest_scope": "Exact leading-order PPN formulas with standard solar and Mercury parameters; the deflection (1.7505 arcsec), Mercury precession (~43 arcsec/century) and Pound-Rebka shift (~2.46e-15) reproduce the textbook GR values to the precision of the inputs. The measured bounds (Cassini gamma, VLBI gamma, observed Mercury anomaly) are the source-backed published values, cited not re-derived. The Mercury 43 arcsec is the GR CONTRIBUTION after subtracting the ~5025 arcsec/century of equinox precession and ~530 from planetary perturbations (the classic Newtonian-residual bookkeeping), not the raw observed rate. Point-mass, weak-field, leading PPN order; the Sun's quadrupole J2 adds a tiny correction not included. A classical-GR / PPN-test result, not an engine constraint refit.",
+  "references": [
+    "Will, 'The confrontation between general relativity and experiment', Living Rev. Rel. 17 (2014) 4",
+    "Bertotti, Iess, Tortora, 'A test of general relativity using radio links with the Cassini spacecraft', Nature 425 (2003) 374",
+    "Pound, Rebka, 'Apparent weight of photons', PRL 4 (1960) 337",
+    "this repo: v2.278/v2.279 (binary-pulsar strong-field tests)"
+  ]
+}
