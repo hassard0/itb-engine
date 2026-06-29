@@ -1,0 +1,44 @@
+{
+  "version": "v2.221",
+  "method": "8-parameter joint Fisher of the 220+221 ringdown, white-noise inner product int_0^inf d_i h d_j h dt; per-mode coefficients read from the JOINT covariance (each mode marginalized over the other); M=1",
+  "joint_coefficients": {
+    "fund": {
+      "R_f": 2.4142438150825423,
+      "R_tau": 9.176742135483709
+    },
+    "overtone": {
+      "R_f": 15.509466158432266,
+      "R_tau": 13.970896857274198
+    }
+  },
+  "isolated_coefficients_v2219_v2220": {
+    "fund": {
+      "R_f": 0.5537,
+      "R_tau": 2.0007
+    },
+    "overtone": {
+      "R_f": 3.774,
+      "R_tau": 2.529
+    }
+  },
+  "covariance_inflation": {
+    "fund_freq": 4.360201941633632,
+    "fund_damp": 4.586765699746943,
+    "overtone_freq": 4.109556480771666,
+    "overtone_damp": 5.524277128222301
+  },
+  "mode_correlations": {
+    "freq": 0.8655131529868603,
+    "damping": 0.8530573489093204
+  },
+  "amplitude_independent": true,
+  "overtone_advantage_joint_equal_snr": 140.06704514642465,
+  "overtone_best_channel": "damping",
+  "finding": "Mode covariance inflates BOTH modes' resolvability by ~4-5.5x (driven by strong frequency / damping correlations between the overlapping modes: corr(w0,w1)=+0.87, corr(tau0,tau1)=+0.85). So the v2.219/v2.220 single-mode coefficients were OPTIMISTIC by this factor. The inflation is independent of the amplitude ratio (a geometric Schur-complement property, validated). Crucially, because both modes degrade by a SIMILAR factor, the overtone's R4-reach advantage only falls from 177x (isolated, v2.220) to 140x (joint) -- still ~2 orders of magnitude, still concentrated in the overtone damping channel. The v2.220 conclusion is ROBUST to mode covariance.",
+  "honest_scope": "Equal mode self-SNR comparison (the overtone is typically excited weaker; the reach scales as 1/rho_n); white-noise / t=0-start Fisher (v2.219 idealizations); two modes only (higher overtones would add further covariance); qEFT coefficients carry the v2.217 perturbative-delicacy caveat (dtq_1=171.35, valid for gamma << 6e-3). This REFINES v2.220 (its single-mode reaches are optimistic by the ~4-5.5x inflation) without overturning it. Parity-odd g_R4_c3 stays dark (v2.209); full isospectrality splitting still needs the un-sourceable polar correction (v2.218).",
+  "references": [
+    "Berti, Cardoso, Will, PRD 73 (2006) 064030 -- QNM values + multi-mode ringdown Fisher",
+    "Silva, Ghosh, Buonanno, PRD 107 (2023) 044030 (arXiv:2205.05132) -- qEFT coefficients",
+    "this repo: v2.219 (isolated resolvability), v2.220 (per-mode reach)"
+  ]
+}
