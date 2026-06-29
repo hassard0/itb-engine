@@ -1,0 +1,53 @@
+{
+  "version": "v2.215",
+  "method": "source-backed delta_V (2205.05132) decomposed in the McManus basis, contracted with source-backed e_10 (1901.01265) via v2.214 machinery",
+  "e_j_sourced": {
+    "0": [
+      0.24725,
+      0.092643
+    ],
+    "1": [
+      0.15985,
+      0.018208
+    ],
+    "2": [
+      0.096632,
+      -0.0024155
+    ],
+    "3": [
+      0.058491,
+      -0.0037179
+    ],
+    "4": [
+      0.036679,
+      -0.0004387
+    ],
+    "10": [
+      0.0036853,
+      0.0065244
+    ]
+  },
+  "r4_odd_parity_sensitivity": {
+    "r4_odd_parity_delta_V": "delta_V_2^- = -432 eta_2 (r_g/r)^10  (Silva-Ghosh-Buonanno)",
+    "r_g_convention": "r_g = 2M = r_H = 2 (standard gravitational radius; M=1)",
+    "alpha_10_per_eta2_analytic": -1728.0,
+    "alpha_10_per_eta2_numeric": [
+      -1728.0000000251157,
+      0.0
+    ],
+    "decomposition_cross_check_ok": true,
+    "e_10_M1": [
+      0.00184265,
+      0.0032622
+    ],
+    "d_omega_d_eta2_re": -3.1840992,
+    "d_omega_d_eta2_im": -5.6370816,
+    "interpretation": "The engine computes the R4 (quartic, parity-even operator) odd-parity l=2 ringdown sensitivity d(omega)/d(eta_2) = -1728 * e_10 ~ -3.184 -5.637 i (M=1) by combining a source-backed modified potential (2205.05132) with a source-backed transfer coefficient (McManus e_10). eta_2 > 0 lowers the ringdown frequency. This is the parity-even R4 slice; the parity-odd operator axis g_R4_c3 stays dark (v2.209)."
+  },
+  "milestone": "First source-backed beyond-GR (R4 quartic) ringdown sensitivity computed in-house: two independent published results combined via the validated contraction machinery.",
+  "claim_gate": "closed on the NUMBER: the r_g=2M normalization and the completeness of the single-(r_g/r)^10 odd-parity form are taken from the search-surfaced expression and need verification against the 2205.05132 appendix; cross-validation against the repo's qEFT coefficient (delta_omega_qeft_0=-0.2114) needs the eta_2<->gamma map. SOLID: e_10 sourced, R4 quartic odd-parity -> j=10 basis structure, exact contraction machinery. Parity-odd g_R4_c3 dark (v2.209); even-parity (Zerilli) sector and systematics + review still required before a framework claim.",
+  "references": [
+    "Silva, Ghosh, Buonanno, PRD 107 (2023) 044030 (arXiv:2205.05132) -- modified RW potential",
+    "McManus, Berti, Macedo, Kimura, Maselli, Cardoso, PRD 99 (2019) 104077 -- e_j"
+  ]
+}
