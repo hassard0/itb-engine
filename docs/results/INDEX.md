@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (419 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (420 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -468,3 +468,4 @@ Auto-generated front door to the full research program (419 notes). Regenerate w
 | v2.306 | [v2.306 - The finite-cutoff moment bound: Hausdorff beats Stieltjes](2026-06-29-v2.306-qnm-finite-cutoff-hausdorff-bound.md) | A fresh swing in a new sector. Every positivity bound the engine uses is a STIELTJES moment condition -- |
 | v2.307 | [v2.307 - Higher-curvature corrections to Starobinsky inflation: n_s is](2026-06-29-v2.307-qnm-higher-curvature-inflation.md) | A fresh swing into COSMOLOGY. Starobinsky inflation IS the R^2 (g_R2) corner of the engine's curvature |
 | v2.308 | [v2.308 - CMB spectroscopy of the curvature tower? A clean hypothesis, ](2026-06-29-v2.308-qnm-curvature-tower-cmb-spectroscopy.md) | v2.307 found the cubic curvature operator R^3 (g_R3) shows up in the scalar tilt n_s. The clean |
+| v2.309 | [v2.309 - The joint carved curvature region: intersecting all the tower](2026-06-29-v2.309-qnm-joint-curvature-region.md) | The curvature-carving arc bounded each operator SEPARATELY -- the g_R2 four-principle bracket (v2.302), |

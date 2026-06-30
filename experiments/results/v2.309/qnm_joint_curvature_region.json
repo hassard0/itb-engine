@@ -1,0 +1,76 @@
+{
+  "version": "v2.309",
+  "matter_sector_g4": 0.5,
+  "joint_region_bbox": {
+    "g_R2": [
+      0.0012500000000000844,
+      0.9925
+    ],
+    "g_R3": [
+      -0.495,
+      0.4949999999999999
+    ],
+    "g_R4": [
+      0.0,
+      2.0
+    ]
+  },
+  "joint_region_feasible_fraction_of_box": 0.11089500083986677,
+  "frameworks": [
+    {
+      "framework": "string_tree_eft",
+      "g_4": 0.5,
+      "g_R2": 0.2,
+      "g_R3": 0.15,
+      "gR4_moment_floor": 0.11249999999999999,
+      "feasible_with_gR4_zero": false,
+      "feasible_at_gR4_floor": true,
+      "engine_classes_all_satisfied_at_floor": true
+    },
+    {
+      "framework": "asymptotic_safety",
+      "g_4": 0.4,
+      "g_R2": 0.15,
+      "g_R3": 0.1,
+      "gR4_moment_floor": 0.06666666666666668,
+      "feasible_with_gR4_zero": false,
+      "feasible_at_gR4_floor": true,
+      "engine_classes_all_satisfied_at_floor": true
+    },
+    {
+      "framework": "lqg_induced",
+      "g_4": 0.6,
+      "g_R2": 0.3,
+      "g_R3": 0.3,
+      "gR4_moment_floor": 0.3,
+      "feasible_with_gR4_zero": false,
+      "feasible_at_gR4_floor": true,
+      "engine_classes_all_satisfied_at_floor": true
+    },
+    {
+      "framework": "cdt",
+      "g_4": 0.55,
+      "g_R2": 0.22,
+      "g_R3": 0.15,
+      "gR4_moment_floor": 0.10227272727272727,
+      "feasible_with_gR4_zero": false,
+      "feasible_at_gR4_floor": true,
+      "engine_classes_all_satisfied_at_floor": true
+    }
+  ],
+  "consistency_checks": {
+    "joint_region_nonempty": true,
+    "joint_region_bounded_within_box": true,
+    "moment_tower_excludes_gR4_zero_when_cubic_on": true,
+    "every_framework_enters_at_its_moment_floor": true,
+    "every_framework_outside_with_gR4_zero": true,
+    "vectorized_region_matches_engine_classes": true
+  },
+  "all_checks_pass": true,
+  "finding": "Intersecting the six curvature constraints the arc derived separately -- the g_R2 bracket (GSL + QFC), the g_R3 bounds (CEMZ causality + cubic positivity), and the g_R4 conditions (Riemann^4 positivity + moment-tower mandate) -- yields a single JOINT carved region in (g_R2, g_R3, g_R4) that is nonempty and bounded: for the representative matter sector g_4 = 0.5 it occupies g_R2 in [0.00, 0.99], g_R3 in [-0.49, 0.49], g_R4 in [0.00, 2.00] -- only 11.1% of the EFT box, a tightly carved sliver. The per-operator bounds are therefore MUTUALLY CONSISTENT: they do not conflict, they nest into one bounded ladder where the matter scale g_4 caps g_R2 (QFC), g_R2 and g_4 cap g_R3 (CEMZ/cubic), and g_R3 with g_R2 floors g_R4 (moment tower). The joint picture also reproduces v2.292 from a new direction: the moment-tower mandate forces g_R4 > 0 strictly whenever g_R3 != 0, so EVERY framework with its default g_R4 = 0 sits just OUTSIDE the joint region and enters exactly at its moment-tower floor g_R4 = g_R3^2/g_R2 -- verified for all four frameworks, and cross-checked point-by-point against the engine's own constraint classes (the vectorized region and the engine agree). So the separately-derived tower bounds are one coherent object: a bounded, ladder-ordered curvature region that the consistent frameworks touch from the moment-tower floor.",
+  "honest_scope": "This is a synthesis-as-computation: it intersects constraints already in the engine (GSL, QFC, CEMZ, cubic positivity, Riemann^4 positivity, moment tower) rather than adding a new bound, and the vectorized feasibility is cross-checked against the engine's constraint classes point-by-point (they agree to 1e-9). The joint region is computed for a single representative matter sector (g_4 = 0.5); the bounding-box numbers scale with g_4 and the O(1) constraint prefactors (kappa_CEMZ = 0.8, alpha_QFC = 0.5, the EFT box = 2), so the exact ranges are convention-dependent -- the robust content is STRUCTURAL: the six separately-derived bounds are mutually consistent, the joint region is nonempty and bounded (a small sliver of the box), ladder-ordered (matter -> g_R2 -> g_R3 -> g_R4), and the frameworks enter precisely at the moment-tower floor (reproducing v2.292). The g_R2 'four principle' bracket of v2.302 is represented here by its two engine members GSL + QFC (the entanglement/null-energy members are encodings of the same wall); parity-odd couplings set to zero. Toy basis, O(1) prefactors. A consolidating capstone of the curvature-carving arc.",
+  "references": [
+    "this repo: v2.292 (moment tower), v2.302 (g_R2 bracket), v2.303 (CEMZ/cubic on g_R3)",
+    "engine constraints: generalized_second_law, quantum_focusing, cemz_causality, cubic_parity, curvature_dispersion_tower"
+  ]
+}
