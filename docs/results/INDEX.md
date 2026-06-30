@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (425 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (426 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -474,3 +474,4 @@ Auto-generated front door to the full research program (425 notes). Regenerate w
 | v2.312 | [v2.312 - What framework does the engine prefer? Constructing the most-](2026-06-30-v2.312-qnm-engine-preferred-framework.md) | Taking the new-theory mandate literally: instead of testing community frameworks, ask what framework the |
 | v2.313 | [v2.313 - Is the engine-preferred framework metric-robust? Three robust](2026-06-30-v2.313-qnm-preferred-framework-robustness.md) | v2.312 constructed the engine's preferred framework as the point maximizing the worst-case constraint |
 | v2.314 | [v2.314 - What limits the engine-preferred framework? A balance of ampl](2026-06-30-v2.314-qnm-preferred-framework-equilibrium.md) | v2.312/v2.313 constructed and validated the engine-preferred framework (string-like matter, trimmed |
+| v2.315 | [v2.315 - The consistency scorecard: universality is the decisive arbit](2026-06-30-v2.315-qnm-consistency-scorecard.md) | After the long new-theory arc, consolidate: rank every candidate theory on one scorecard and audit that |

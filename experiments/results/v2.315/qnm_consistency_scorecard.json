@@ -1,0 +1,91 @@
+{
+  "version": "v2.315",
+  "scorecard": [
+    {
+      "theory": "engine_preferred",
+      "curvature": {
+        "g_R2": 0.15,
+        "g_R3": 0.085
+      },
+      "min_margin": 0.005084999999999998,
+      "worst_case_signed_distance": 0.02,
+      "binding_constraint": "t_hooft_anomaly_matching",
+      "binding_family": "C_UNIVERSALITY",
+      "feasible": true
+    },
+    {
+      "theory": "pure_gr",
+      "curvature": {
+        "g_R2": 0.0,
+        "g_R3": 0.0
+      },
+      "min_margin": 0.0,
+      "worst_case_signed_distance": 0.0,
+      "binding_constraint": "scalar_positivity_g4",
+      "binding_family": "A_AMPLITUDE",
+      "feasible": true
+    },
+    {
+      "theory": "string_tree_eft",
+      "curvature": {
+        "g_R2": 0.2,
+        "g_R3": 0.15
+      },
+      "min_margin": -0.04000000000000001,
+      "worst_case_signed_distance": -0.025982792098465244,
+      "binding_constraint": "repulsive_force_conjecture",
+      "binding_family": "C_UNIVERSALITY",
+      "feasible": false
+    },
+    {
+      "theory": "cdt",
+      "curvature": {
+        "g_R2": 0.22,
+        "g_R3": 0.15
+      },
+      "min_margin": -0.04839999999999997,
+      "worst_case_signed_distance": -0.030392202528408782,
+      "binding_constraint": "repulsive_force_conjecture",
+      "binding_family": "C_UNIVERSALITY",
+      "feasible": false
+    },
+    {
+      "theory": "asymptotic_safety",
+      "curvature": {
+        "g_R2": 0.15,
+        "g_R3": 0.1
+      },
+      "min_margin": -0.0525,
+      "worst_case_signed_distance": -0.037692803327431246,
+      "binding_constraint": "repulsive_force_conjecture",
+      "binding_family": "C_UNIVERSALITY",
+      "feasible": false
+    },
+    {
+      "theory": "lqg_induced",
+      "curvature": {
+        "g_R2": 0.3,
+        "g_R3": 0.3
+      },
+      "min_margin": -0.11999999999999997,
+      "worst_case_signed_distance": -0.06790942019691511,
+      "binding_constraint": "repulsive_force_conjecture",
+      "binding_family": "C_UNIVERSALITY",
+      "feasible": false
+    }
+  ],
+  "consistency_checks": {
+    "preferred_strictly_feasible_and_most_robust": true,
+    "all_community_frameworks_infeasible": true,
+    "all_community_bound_by_repulsive_force": true,
+    "preferred_curvature_gR3_trimmed_below_all_community": true,
+    "universality_family_is_decisive_throughout": true
+  },
+  "all_checks_pass": true,
+  "finding": "The consistency scorecard ranks every candidate by worst-case margin and exposes a sharp, coherent picture of the whole new-theory arc. Ranked: the engine-preferred framework is the unique strictly-feasible, most-robust theory (min margin +0.0051); pure GR is marginal (0.0000, on its positivity walls); and all four community frameworks are infeasible (string -0.040, cdt -0.048, asymptotic_safety -0.053, lqg -0.120). The decisive fact is the binding-constraint column: ALL FOUR community frameworks fail for the SAME reason -- every one is bound by repulsive_force_conjecture, the swampland member of the UNIVERSALITY family -- and the engine-preferred framework is bounded by t_hooft anomaly-matching, the OTHER member of the same universality family. So across the entire candidate set, the universality family (anomaly + swampland/repulsive-force) is the decisive arbiter: it kills every community proposal and it sets the robustness ceiling of the preferred one, with amplitude positivity always a step behind (v2.314). The engine-preferred framework is, precisely, the theory that clears the repulsive-force wall the community frameworks crash into -- by trimming the curvature (its g_R3 = 0.085 sits below every community value) -- while balancing against the anomaly wall on the other side. This ties the arc together: the carved interior is small and bounded by universality-vs-amplitude (v2.314); the community frameworks all overshoot the same universality wall (this scorecard); and the preferred framework is the unique trade-off point that threads between them (v2.312/v2.313). The audit confirms these cross-cycle results are mutually consistent, with no contradiction.",
+  "honest_scope": "The scorecard and every audit check are the engine's literal check() output on the full 38-constraint stack -- no schematic mapping. The ranking is by raw min-margin (the binding family is identified by the gradient-normalized worst-case signed distance, which can pick a different constraint than the raw min-margin when scales differ; here both agree that universality binds). The engine-preferred framework is the v2.313 metric-robust point, itself an approximate optimum (its exact coordinates are convention-dependent), so its exact margin (+0.005) is not canonical -- but 'strictly feasible and more robust than every named framework' is sign-based and robust. 'Universality decisive' means it is the worst-case family for all five non-pure-GR theories under the default O(1) prefactors; the specific constraint (repulsive force vs t_hooft) and ordering shift with those prefactors, but the structural claim (one principle family arbitrates both the failures and the preferred point) is the robust content. This is a consolidating audit of prior cycles, not a new bound. Toy basis, O(1) prefactors.",
+  "references": [
+    "this repo: v2.312/v2.313 (engine-preferred framework), v2.314 (amplitude-vs-universality equilibrium), v2.311 (lqg box)",
+    "engine constraint classes: C_UNIVERSALITY (anomaly + swampland/repulsive-force), A_AMPLITUDE (positivity)"
+  ]
+}
