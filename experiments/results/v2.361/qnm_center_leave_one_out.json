@@ -1,0 +1,89 @@
+{
+  "version": "v2.361",
+  "gw_speed_margin": 4.999887349652778e-16,
+  "tightest_theoretical_margin": 0.0203,
+  "margins_incomparable": true,
+  "theoretical_chebyshev_radius_full": 0.0368,
+  "center_full": [
+    0.5529,
+    0.3666,
+    0.4358,
+    0.1782,
+    0.0445,
+    0.0471
+  ],
+  "leave_one_out": [
+    {
+      "constraint": "bnossw_monogamy",
+      "radius_increase": 0.0058,
+      "group": "core"
+    },
+    {
+      "constraint": "anomaly_cancellation",
+      "radius_increase": 0.0055,
+      "group": "core"
+    },
+    {
+      "constraint": "generalized_anomaly_inflow",
+      "radius_increase": 0.0051,
+      "group": "core"
+    },
+    {
+      "constraint": "t_hooft_anomaly_matching",
+      "radius_increase": 0.0,
+      "group": "core"
+    },
+    {
+      "constraint": "graviton_forward_positivity",
+      "radius_increase": 0.0,
+      "group": "core"
+    },
+    {
+      "constraint": "swampland_distance_conjecture",
+      "radius_increase": 0.0,
+      "group": "core"
+    },
+    {
+      "constraint": "dispersion_tower_g6_squared_bound",
+      "radius_increase": 0.0,
+      "group": "core"
+    },
+    {
+      "constraint": "scalar_positivity_g4",
+      "radius_increase": 0.0,
+      "group": "slack-control"
+    },
+    {
+      "constraint": "hofman_maldacena_wedge",
+      "radius_increase": 0.0,
+      "group": "slack-control"
+    },
+    {
+      "constraint": "cubic_curvature_positivity",
+      "radius_increase": 0.0,
+      "group": "slack-control"
+    },
+    {
+      "constraint": "eft_validity_box",
+      "radius_increase": 0.0,
+      "group": "slack-control"
+    }
+  ],
+  "max_core_radius_increase": 0.0058,
+  "max_slack_radius_increase": 0.0,
+  "n_core_meaningful": 0,
+  "consistency_checks": {
+    "margins_are_not_cross_comparable": true,
+    "theoretical_radius_is_positive": true,
+    "slack_controls_barely_move_radius": true,
+    "core_opens_radius_at_least_as_much_as_slack": true,
+    "no_single_drop_blows_prediction_open": true
+  },
+  "all_checks_pass": true,
+  "finding": "The engine's central prediction is well-posed -- pinned by a few theoretical constraints and robust to dropping the rest -- but establishing that required first fixing a methodological trap. THE TRAP (honest discovery): a naive Chebyshev radius over ALL constraints is ill-defined, because the engine's margins are not cross-comparable -- the gw_speed_bound margin is ~5e-16 (its bound is itself 5e-16 in absolute units, v2.358) while theoretical margins are O(0.01-1) (tightest 0.020). So the all-constraint min-margin is dominated by gw_speed's tiny absolute scale, and a naive leave-one-out is spuriously dominated by 'dropping gw_speed' -- an artifact. Any program computation that aggregates margins across constraints (a min, a gradient-normalized worst-margin) inherits this and must restrict to comparably-scaled constraints. THE RESULT (with data constraints kept for feasibility but excluded from the radius objective): the theoretical Chebyshev radius is 0.037, and re-optimizing it with each theoretical constraint removed, the always-slack controls (scalar positivity, Hofman-Maldacena wedge, cubic-curvature positivity, EFT box) barely move it (max increase 0.000) while the binding core (anomaly/universality family + graviton forward positivity + the matter dispersion tower) opens it more (max increase 0.006), with 0 of 7 core constraints moving it meaningfully. Crucially no single drop blows the prediction open (max increase 0.006 < 0.5), so the central prediction is over-determined by a small core and invariant to the slack remainder -- the well-posedness a method-as-proposal needs: the engine's answer is a stable feature of the consistency geometry, dominated by an identifiable handful (the v2.325 core), not balanced on one knife-edge condition.",
+  "honest_scope": "The methodological caveat (margins not cross-comparable) is exact and important -- it is a real limitation of aggregating the engine's signed-distance margins, surfaced by gw_speed's 5e-16 scale. The radius itself is found by a seeded annealed random ascent (a LOCAL search, not a proved global optimum), so the radius and the increases are estimates/lower-bounds -- a better optimizer could raise any radius, which would only sharpen the slack-vs-core separation if the full radius rose too. 'Radius' is in the engine's mixed theoretical-margin units and the 0.02 'meaningful' threshold is conventional; the robust content is the SEPARATION (slack controls ~0 vs core opening it more) and that no single drop explodes it, not the absolute numbers. The core/slack sets are from v2.325's sample-based tally (the cosmic-birefringence data constraint, a v2.325 core member, is necessarily excluded from the radius objective here by the scale issue, so this validates the THEORETICAL core's well-posedness; the data constraints' role is in v2.358). Conditional on the full (screened) stack + toy basis. Robust content: the central prediction's tightness is set by a small theoretical core and unchanged by dropping slack constraints; and the engine's margins are not cross-comparable (a caveat for the whole program). Toy basis, O(1) prefactors.",
+  "references": [
+    "this repo: v2.325 (active-constraint core), v2.358 (gw_speed's 5e-16 scale -- the source of the incomparability), v2.345/v2.346 (prefactor-value robustness, the complementary axis)",
+    "this repo: v2.317 (the constructed center), v2.329 (birefringence caveat); Chebyshev-center / max-min-margin construction"
+  ]
+}
