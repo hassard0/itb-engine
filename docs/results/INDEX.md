@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (422 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (423 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -471,3 +471,4 @@ Auto-generated front door to the full research program (422 notes). Regenerate w
 | v2.309 | [v2.309 - The joint carved curvature region: intersecting all the tower](2026-06-29-v2.309-qnm-joint-curvature-region.md) | The curvature-carving arc bounded each operator SEPARATELY -- the g_R2 four-principle bracket (v2.302), |
 | v2.310 | [v2.310 - Is lqg the consistency boundary BECAUSE of its parity violati](2026-06-29-v2.310-qnm-lqg-parity-innocence.md) | lqg_induced is repeatedly flagged as the engine's consistency boundary (v2.262, v2.299) AND it is the |
 | v2.311 | [v2.311 - What CP-even couplings bind lqg? An outlier cubic, and an uno](2026-06-30-v2.311-qnm-lqg-failure-attribution.md) | v2.310 showed lqg's 6 failures are CP-even (parity-toggle-invariant) and not relieved by uniform |
+| v2.312 | [v2.312 - What framework does the engine prefer? Constructing the most-](2026-06-30-v2.312-qnm-engine-preferred-framework.md) | Taking the new-theory mandate literally: instead of testing community frameworks, ask what framework the |

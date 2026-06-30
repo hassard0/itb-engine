@@ -1,0 +1,99 @@
+{
+  "version": "v2.312",
+  "n_constraints": 38,
+  "pure_gr": {
+    "feasible": true,
+    "min_margin": 0.0,
+    "n_saturated_at_origin": 29,
+    "n_strictly_positive": 9,
+    "saturated_constraints": [
+      "bekenstein_tight",
+      "bnossw_monogamy",
+      "causality_bound",
+      "cemz_causality",
+      "cft_flat_space_bound",
+      "cross_sector_efthedron",
+      "cubic_curvature_positivity",
+      "cubic_graviton_matter_bound",
+      "dispersion_tower_g6_squared_bound",
+      "generalized_anomaly_inflow",
+      "graviton_forward_positivity",
+      "graviton_mixed_positivity",
+      "hofman_maldacena_wedge",
+      "holographic_subadditivity",
+      "left_handed_graviton_positivity",
+      "matter_s3_positivity",
+      "parity_violating_cubic_bound",
+      "parity_violating_positivity",
+      "quantum_focusing_conjecture",
+      "repulsive_force_conjecture",
+      "right_handed_graviton_positivity",
+      "scalar_convexity_g6_vs_g4",
+      "scalar_positivity_g4",
+      "scalar_positivity_g6",
+      "scalar_positivity_g8",
+      "scalar_wgc",
+      "spin_four_positivity",
+      "wald_entropy_positivity",
+      "weak_gravity_conjecture"
+    ]
+  },
+  "engine_preferred_framework": {
+    "couplings": {
+      "g_4": 0.5687500000000001,
+      "g_6": 0.4,
+      "g_8": 0.35,
+      "g_R2": 0.18562499999999998,
+      "g_R3": 0.09999999999999999,
+      "g_R2_parity": 0.0,
+      "g_R3_parity": 0.0
+    },
+    "worst_case_margin": 0.006334453125,
+    "strictly_feasible": true,
+    "more_robust_than_pure_gr": true,
+    "distinct_from_community_frameworks": true
+  },
+  "frameworks": [
+    {
+      "framework": "pure_gr",
+      "min_margin": 0.0,
+      "feasible": true
+    },
+    {
+      "framework": "string_tree_eft",
+      "min_margin": -0.04000000000000001,
+      "feasible": false
+    },
+    {
+      "framework": "asymptotic_safety",
+      "min_margin": -0.0525,
+      "feasible": false
+    },
+    {
+      "framework": "lqg_induced",
+      "min_margin": -0.11999999999999997,
+      "feasible": false
+    },
+    {
+      "framework": "cdt",
+      "min_margin": -0.04839999999999997,
+      "feasible": false
+    }
+  ],
+  "consistency_checks": {
+    "pure_gr_feasible_but_marginal": true,
+    "majority_of_constraints_saturate_at_pure_gr": true,
+    "feasible_interior_is_nonempty": true,
+    "preferred_framework_is_nonzero_and_strictly_feasible": true,
+    "preferred_more_robust_than_pure_gr": true,
+    "preferred_distinct_from_all_community_frameworks": true,
+    "no_community_higher_derivative_framework_is_feasible": true
+  },
+  "all_checks_pass": true,
+  "finding": "Asked what framework the engine PREFERS -- the point maximizing the worst-case constraint margin over the whole 7-coupling space -- the engine constructs a genuine NONZERO candidate, distinct from every input. pure GR is feasible but MARGINAL: at the origin 29 of the 38 constraints saturate simultaneously (homogeneous positivity / causality / swampland forms vanishing at zero couplings), so pure GR sits on 29 walls with worst-case margin exactly 0. But the feasible set has a real (small) INTERIOR: a multi-seed coordinate-ascent search finds a strictly-interior point with all 38 margins positive (worst-case margin +0.0063), at g_4 = 0.57, g_6 = 0.40, g_8 = 0.35, g_R2 = 0.19, g_R3 = 0.10, parity = 0. This Chebyshev center is the engine's preferred framework: a string-tree-EFT-like matter sector (g_4, g_6, g_8 close to the string values 0.5/0.4/0.4) with TRIMMED curvature couplings (g_R2, g_R3 pulled below the string 0.2/0.15 into the feasible interior). It is MORE robust than pure GR (strictly interior vs marginal on 29 walls) and feasible where all four community frameworks are INFEASIBLE (string -0.040, asymptotic_safety -0.053, cdt -0.048, lqg -0.120, all negative worst-case margin). So the engine does not merely tolerate GR and reject the candidates -- it points to a concrete NEW framework at the most-interior point of the carved region: keep the string-like matter sector, but soften the curvature corrections until every consistency wall clears. That is the engine's own answer to 'what higher-derivative gravity is most robustly consistent', and it matches no framework on the menu.",
+  "honest_scope": "The decisive claims are SIGN-based and independent of the heterogeneous margin scales: 'pure GR is feasible but on 29 walls', 'a point with all 38 margins strictly positive exists' (nonempty interior), 'the preferred point is strictly feasible and nonzero', and 'no community higher-derivative framework is feasible' depend only on margin signs, not normalization. The 'worst-case margin' magnitude does mix units, so the EXACT preferred point is the argmax of a scale-dependent objective and is not unique/canonical -- a different robustness metric (e.g. normalized margins) would move it; what is robust is that SOME strictly-interior point exists, it is nonzero, more robust than pure GR, and unlike any community framework. The interior point was found by multi-seed coordinate ascent (an earlier coarse random scan missed it and wrongly suggested an empty interior -- corrected here); the optimum is approximate (grid-quantized) and seed-dependent in its exact coordinates. Default 38-constraint stack, no opt-in extensions; couplings restricted to g >= 0 (positive-coupling orthant). The 'string-like matter, trimmed curvature' reading is an interpretation of one approximate optimum, not a derived UV completion. Toy basis, O(1) prefactors. A constructive new-theory swing: the engine's own preferred consistent EFT.",
+  "references": [
+    "this repo: v2.283 (frameworks marginally infeasible, only pure_gr feasible), v2.285-288 (feasible wedge under subsets)",
+    "Chebyshev center of a feasible region; the EFT-hedron (Arkani-Hamed et al, Caron-Huot-Van Duong)"
+  ]
+}
