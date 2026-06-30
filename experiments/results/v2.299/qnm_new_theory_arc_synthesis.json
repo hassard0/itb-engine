@@ -1,0 +1,103 @@
+{
+  "version": "v2.299",
+  "method": "re-verify the load-bearing claims of the v2.292-v2.298 new-theory arc together through the arc's own modules; surface the convergent verdict on lqg",
+  "arc": [
+    {
+      "cycle": "v2.292",
+      "result": "g_R4 engine-internal; moment tower mandates the ringdown-active operator"
+    },
+    {
+      "cycle": "v2.293",
+      "result": "proposed the shared-spectrum cross-sector principle (calibrated band)"
+    },
+    {
+      "cycle": "v2.294",
+      "result": "rigorously demoted it: 2x2 tilted-Hankel implied by the two towers (B>=0)"
+    },
+    {
+      "cycle": "v2.295",
+      "result": "negative is structural (tilted-Hankel = sum of PSDs); real content needs w monotone"
+    },
+    {
+      "cycle": "v2.296",
+      "result": "third handle: w<=W gives a derived relative-coupling lower bound W_+"
+    },
+    {
+      "cycle": "v2.297",
+      "result": "method-as-proposal made falsifiable: carving bounds g_R4, excludes lqg"
+    },
+    {
+      "cycle": "v2.298",
+      "result": "helicity-resolved tower DERIVES the dark parity-odd Riemann^4 g_R4_p"
+    }
+  ],
+  "framework_arc_verdicts": {
+    "string_tree_eft": {
+      "x_ratio": 0.7499999999999999,
+      "W_plus": 0.40625000000000056,
+      "carved_gR4_band": [
+        0.115,
+        0.345
+      ],
+      "carving_excludes": false,
+      "g_R4_parity_forced": 0.0,
+      "parity_violating": false
+    },
+    "asymptotic_safety": {
+      "x_ratio": 0.6666666666666667,
+      "W_plus": 0.3888888888888891,
+      "carved_gR4_band": [
+        0.07,
+        0.53
+      ],
+      "carving_excludes": false,
+      "g_R4_parity_forced": 0.0,
+      "parity_violating": false
+    },
+    "lqg_induced": {
+      "x_ratio": 1.0,
+      "W_plus": 0.7999999999999997,
+      "carved_gR4_band": [
+        null,
+        null
+      ],
+      "carving_excludes": true,
+      "g_R4_parity_forced": -0.0015311004784689664,
+      "parity_violating": true
+    },
+    "cdt": {
+      "x_ratio": 0.6818181818181818,
+      "W_plus": 0.4076923076923084,
+      "carved_gR4_band": [
+        0.105,
+        0.37
+      ],
+      "carving_excludes": false,
+      "g_R4_parity_forced": 0.0,
+      "parity_violating": false
+    }
+  },
+  "lqg_flags": {
+    "moment_tower_saturated": true,
+    "largest_W_plus": true,
+    "excluded_by_carving": true,
+    "forced_parity_odd_quartic": true
+  },
+  "consistency_checks": {
+    "all_curvature_frameworks_have_a_mandated_g_R4": true,
+    "lqg_saturates_moment_tower": true,
+    "lqg_has_largest_cross_sector_coupling": true,
+    "lqg_excluded_by_carving": true,
+    "only_lqg_forced_parity_odd_quartic": true,
+    "four_independent_structures_converge_on_lqg": true
+  },
+  "checks_passed": 6,
+  "checks_total": 6,
+  "all_pass": true,
+  "finding": "The seven-cycle new-theory arc forms one coherent investigation, and all 6/6 cross-verifications hold. After the loop was redirected from reconstructing community physics to inventing new QG theory, it (1) made the ringdown-active Riemann^4 operator g_R4 engine-internal and showed the curvature moment tower mandates it, (2) proposed a shared-spectrum cross-sector principle, rigorously demoted its over-claim, proved the negative structural, and rescued the real content (ratio monotonicity from a monotone spectral weight) plus a third handle (the W_+ relative-coupling bound), (3) turned the whole method into a falsifiable carving that bounds g_R4 and excludes inconsistent frameworks, and (4) derived the previously-dark parity-odd Riemann^4 from a helicity-resolved tower. The UNIFYING result, visible only across the whole arc: every one of these four independent new structures singles out the SAME framework, lqg_induced, as the consistency boundary -- it saturates the moment tower (x = 1.00 = 1, the boundary), carries the largest cross-sector relative coupling (W_+ = 0.80), is EXCLUDED by the carving (empty g_R4 band), and is the ONLY framework forced to carry a parity-odd quartic (g_R4_p = -0.00153, a ringdown split). Four orthogonal new constraints, one convergent verdict -- a robust outcome of the new theory, not any single cycle's artifact. The arc's genuine deliverable is therefore twofold: a precise, honest characterization of what the engine's moment/cross-sector structure can and cannot force (with over-claims demoted and dark coefficients derived), and a method -- swampland-complete EFT carving -- that produces falsifiable, region-valued QG predictions and robustly identifies the boundary of consistency. This is the session's eighth cross-verified synthesis capstone, and the close of the user-directed new-theory arc.",
+  "honest_scope": "A synthesis / cross-verification capstone: every check re-runs an already-established and caveated result of v2.292-v2.298 through the arc's own modules; it adds no new constraint. The convergent lqg verdict is the central observation -- it is robust ACROSS the four structures, but each structure carries its own assumption (the cross-sector handles need the shared-spectrum / monotone-w / bounded-w premises; the carving ceiling is O(1)-prefactor-dependent, v2.287; the parity-odd g_R4_p is a mandate floor, not a full determination, and does not close the v2.209 sourcing gap). So 'lqg is the consistency boundary' is a statement about the engine's TOY encoding of lqg under these structures, consistent across them, not a claim about physical loop quantum gravity. The arc's new theory is genuine but conditional and honestly bounded throughout -- the over-claim in v2.293 was demoted in v2.294, which is itself part of the deliverable. Toy basis, O(1) prefactors.",
+  "references": [
+    "this repo: v2.292, v2.293, v2.294, v2.295, v2.296, v2.297, v2.298 (the new-theory arc)",
+    "this repo: v2.234/v2.261/v2.262 (the moment-tower foundations), v2.209 (dark parity), v2.218 (parity-split ringdown)"
+  ]
+}
