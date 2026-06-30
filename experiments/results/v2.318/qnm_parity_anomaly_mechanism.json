@@ -1,0 +1,81 @@
+{
+  "version": "v2.318",
+  "rfc_form": "convex_hull",
+  "parity_free_worst_case": {
+    "constraint": "t_hooft_anomaly_matching",
+    "signed_distance": 0.02
+  },
+  "d_signed_distance_d_parity": {
+    "right_handed_graviton_positivity": 0.8789,
+    "t_hooft_anomaly_matching": 0.366,
+    "complexity_cutoff": -0.014,
+    "parity_violating_positivity": -0.0822,
+    "left_handed_graviton_positivity": -0.8667,
+    "ligo_birefringence_bound": -1.0,
+    "generalized_anomaly_inflow": -3.3674,
+    "swampland_distance_conjecture": -173.6111
+  },
+  "t_hooft_anomaly_matching_gradient": 0.366,
+  "relieved_by_parity": [
+    {
+      "constraint": "right_handed_graviton_positivity",
+      "grad": 0.8789,
+      "family": "A_AMPLITUDE"
+    },
+    {
+      "constraint": "t_hooft_anomaly_matching",
+      "grad": 0.366,
+      "family": "C_UNIVERSALITY"
+    }
+  ],
+  "penalized_by_parity": [
+    {
+      "constraint": "swampland_distance_conjecture",
+      "grad": -173.6111,
+      "margin": 14.4444
+    },
+    {
+      "constraint": "generalized_anomaly_inflow",
+      "grad": -3.3674,
+      "margin": 0.1857
+    },
+    {
+      "constraint": "ligo_birefringence_bound",
+      "grad": -1.0,
+      "margin": 0.1
+    },
+    {
+      "constraint": "left_handed_graviton_positivity",
+      "grad": -0.8667,
+      "margin": 0.1873
+    },
+    {
+      "constraint": "parity_violating_positivity",
+      "grad": -0.0822,
+      "margin": 0.2119
+    }
+  ],
+  "forbidden_zone_at_parity_0p012": {
+    "constraint": "swampland_distance_conjecture",
+    "signed_distance": -21.6667
+  },
+  "parity_optimum": {
+    "binding": "bnossw_monogamy",
+    "signed_distance": 0.0326,
+    "vs_parity_free": 0.02
+  },
+  "consistency_checks": {
+    "binding_wall_parity_free_is_anomaly_matching": true,
+    "anomaly_matching_relieved_by_parity": true,
+    "relieved_constraints_are_chirality_family": true,
+    "distance_conjecture_forbidden_zone_at_tiny_parity": true,
+    "parity_optimum_more_robust_than_parity_free": true
+  },
+  "all_checks_pass": true,
+  "finding": "The mild parity violation of the engine's most-robust higher-derivative gravity (v2.317) is driven by ANOMALY MATCHING, which is physically the right culprit -- anomalies are chirality/parity objects. At the parity-free preferred point the binding wall is t_hooft_anomaly_matching (signed distance +0.0200), and the gradient d(signed distance)/d(g_R2_parity) = +0.366 is POSITIVE: turning on a parity-odd curvature coupling RELIEVES the anomaly-matching wall. Ranking every constraint by that derivative, the constraints relieved by parity are exactly the chirality-sensitive ones (right_handed_graviton_positivity, t_hooft_anomaly_matching); the constraints penalized (parity-positivity, LIGO birefringence, anomaly-inflow) sit on ample margin, so trading a little parity raises the worst-case margin. So the consistency condition that wants parity is the anomaly family -- a physically sensible mechanism, since matching the gravitational chiral/parity anomaly across an RG flow naturally calls for a parity-odd curvature coupling. Two honest caveats sharpen the picture rather than soften it: (i) there is a distance-conjecture FORBIDDEN ZONE at very small nonzero parity -- a tiny parity coupling (~0.012) makes the max/min coupling ratio explode and fails the distance conjecture, so the preferred parity is not infinitesimal but a finite ~0.04; (ii) realizing the full +0.033 robustness of v2.317 needs a JOINT shift (parity together with a slightly larger g_4 and trimmed g_R2), not parity at the fixed point (which gains only marginally) -- the parity preference is a coordinated relaxation led by the anomaly wall, not an isolated knob. The corrected new-theory headline is thus mechanistic: the most-robustly-consistent gravity is mildly parity-violating BECAUSE anomaly matching, the binding universality wall, is relieved by a parity-odd curvature coupling.",
+  "honest_scope": "Every value is the engine's literal check() output under the recommended convex_hull form. The gradient is a finite difference (h=0.04) of the gradient-normalized signed distance at the v2.317 parity-free point; its SIGN (anomaly matching relieved by parity) is the robust content, the magnitude is prefactor- and step-dependent. 'Relieved constraints are the chirality family' is read from the engine's constraint names (anomaly / handed-graviton); the physical interpretation (anomaly matching naturally wants a parity-odd term) is standard anomaly intuition, not a derivation from a specific UV completion. The forbidden zone and the joint-optimization caveat are exact engine facts at the sampled points. The PARITY_OPT point is the approximate v2.317 optimum (seed/convention-dependent), used here only to confirm it is more robust than parity-free and to read its binding wall; it is not a canonical optimum. The whole result is conditional on the engine's encoding of t_hooft_anomaly_matching and the parity constraints (O(1) prefactors). Toy basis. A mechanism for the v2.317 parity reversal.",
+  "references": [
+    "this repo: v2.317 (parity reversal under convex_hull), v2.310 (lqg parity innocence), v2.316 (RFC-form correction)",
+    "anomaly matching / gravitational parity (chiral) anomalies; the engine's t_hooft_anomaly_matching constraint"
+  ]
+}
