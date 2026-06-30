@@ -1,0 +1,106 @@
+{
+  "version": "v2.306",
+  "method": "treat (g_4, g_6, g_8) as moments of a spectral density; contrast the Stieltjes (infinite-support) positivity tower with the Hausdorff (finite-support) conditions; verify by explicit construction of the two-atom UV-completing measure",
+  "stieltjes_bound": "g_6^2 <= g_4 g_8  (infinite support; what positivity gives)",
+  "hausdorff_ceiling": "g_8 <= S * g_6  for a finite cutoff S  (the NEW finite-support bound)",
+  "S_min_formula": "S_min = g_8 / g_6  (minimal spectral support consistent with the couplings)",
+  "frameworks": [
+    {
+      "framework": "string_tree_eft",
+      "g_4": 0.5,
+      "g_6": 0.4,
+      "g_8": 0.4,
+      "stieltjes_g6sq_le_g4g8": true,
+      "S_min_g8_over_g6": 1.0,
+      "ceiling_at_S_min_g8_le_Sg6": true,
+      "two_atom_valid": true,
+      "atoms": [
+        0.0,
+        1.0
+      ],
+      "weights": [
+        0.19999999999999984,
+        0.8000000000000002
+      ]
+    },
+    {
+      "framework": "asymptotic_safety",
+      "g_4": 0.4,
+      "g_6": 0.3,
+      "g_8": 0.3,
+      "stieltjes_g6sq_le_g4g8": true,
+      "S_min_g8_over_g6": 1.0,
+      "ceiling_at_S_min_g8_le_Sg6": true,
+      "two_atom_valid": true,
+      "atoms": [
+        0.0,
+        1.0
+      ],
+      "weights": [
+        0.25,
+        0.75
+      ]
+    },
+    {
+      "framework": "lqg_induced",
+      "g_4": 0.6,
+      "g_6": 0.45,
+      "g_8": 0.4,
+      "stieltjes_g6sq_le_g4g8": true,
+      "S_min_g8_over_g6": 0.888888888888889,
+      "ceiling_at_S_min_g8_le_Sg6": true,
+      "two_atom_valid": true,
+      "atoms": [
+        0.0,
+        0.888888888888889
+      ],
+      "weights": [
+        0.1562500000000001,
+        0.8437499999999999
+      ]
+    },
+    {
+      "framework": "cdt",
+      "g_4": 0.55,
+      "g_6": 0.4,
+      "g_8": 0.35,
+      "stieltjes_g6sq_le_g4g8": true,
+      "S_min_g8_over_g6": 0.8749999999999998,
+      "ceiling_at_S_min_g8_le_Sg6": true,
+      "two_atom_valid": true,
+      "atoms": [
+        0.0,
+        0.8749999999999998
+      ],
+      "weights": [
+        0.16883116883116867,
+        0.8311688311688313
+      ]
+    }
+  ],
+  "hausdorff_demo": {
+    "g_4": 1.0,
+    "g_6": 0.5,
+    "g_8": 1.0,
+    "cutoff_S": 1.0,
+    "satisfies_stieltjes": true,
+    "excluded_by_finite_cutoff": true,
+    "S_min": 2.0
+  },
+  "consistency_checks": {
+    "all_frameworks_satisfy_stieltjes": true,
+    "two_atom_measure_reproduces_every_framework": true,
+    "S_min_equals_g8_over_g6": true,
+    "ceiling_saturated_at_S_min": true,
+    "hausdorff_strictly_stronger_than_stieltjes": true,
+    "finite_cutoff_blocks_couplings_below_S_min": true
+  },
+  "all_checks_pass": true,
+  "finding": "Every positivity bound the engine uses is a STIELTJES moment condition -- the Wilson couplings are moments of a spectral density on the whole half-line mu in [0, infinity), giving only the one-sided tower g_6^2 <= g_4 g_8. But a genuine EFT has a FINITE cutoff, so its UV-completing spectral density has BOUNDED support, and a moment sequence of a measure on [0, S] must satisfy the HAUSDORFF conditions -- strictly stronger than Stieltjes. They add a CEILING the infinite-support bound never supplies: normalizing m_0 = g_4, the higher coupling obeys g_8 <= S * g_6 for cutoff S, equivalently the spectral support cannot be narrower than S_min = g_8/g_6. This is verified constructively: the two-atom measure with atoms at {0, g_8/g_6} and weights {1 - g_6^2/(g_4 g_8), g_6^2/(g_4 g_8)} reproduces (g_4, g_6, g_8) exactly for every framework, sits inside [0, g_8/g_6], and has non-negative weights precisely when Stieltjes holds -- so g_8/g_6 is the minimal cutoff consistent with the couplings. The bound has teeth Stieltjes lacks: the point (g_4, g_6, g_8) = (1, 0.5, 1.0) satisfies positivity (0.25 <= 1.0) yet is EXCLUDED by any cutoff S < 2.0 -- a finite cutoff forbids couplings that infinite-support positivity allows. So 'the EFT has a cutoff' is not a slogan but a quantitative upper bound on the tower: g_8 <= S g_6. All engine frameworks pass (their towers already decay fast enough), with S_min ranging 0.875 (cdt) to 1.0 (string, AS) -- they live at the edge of the finite-support window, which is where weakly-coupled towers should sit.",
+  "honest_scope": "The Hausdorff conditions and the two-atom construction are EXACT mathematics (the truncated Hausdorff moment problem); the verification reproduces the moments to 1e-12 and the weight-positivity <-> Stieltjes equivalence is exact. The PHYSICAL identification of the moment variable with a literal cutoff scale S is schematic: in the toy basis the couplings are dimensionless O(1) numbers, so S_min = g_8/g_6 is a statement in normalized moment units, not a GeV cutoff -- the robust content is the STRUCTURE (finite support adds an upper bound g_8 <= S g_6 that positivity misses, and S_min = g_8/g_6 is its threshold), not the numeric scale. The bound is derived for the 3-term matter tower (g_4, g_6, g_8); extending to longer towers adds more Hausdorff determinant conditions (future work). It is implemented as a standalone experiment, not wired into the 38-constraint stack (to avoid a feasibility cascade); promotion to an opt-in constraint is a candidate next step. Toy basis, O(1) prefactors. A fresh-sector new-theory result.",
+  "references": [
+    "Hausdorff moment problem (measure on a finite interval); truncated/principal representations (Krein-Nudelman)",
+    "this repo: v2.264 (species/cutoff scale), dispersion_tower.py (the Stieltjes tower g_6^2<=g_4 g_8)",
+    "Caron-Huot, Van Duong 2021 (EFT-hedron); Bellazzini et al (finite-energy positivity / arcs)"
+  ]
+}
