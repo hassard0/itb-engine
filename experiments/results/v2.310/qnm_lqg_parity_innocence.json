@@ -1,0 +1,276 @@
+{
+  "version": "v2.310",
+  "lqg_coefficients": {
+    "g_4": 0.6,
+    "g_6": 0.45,
+    "g_R2": 0.3,
+    "g_8": 0.4,
+    "g_R3": 0.3,
+    "g_R2_parity": 0.08,
+    "g_R3_parity": 0.04
+  },
+  "full_failures": [
+    "bnossw_monogamy",
+    "cft_flat_space_bound",
+    "complexity_cutoff",
+    "cross_sector_efthedron",
+    "graviton_forward_positivity",
+    "repulsive_force_conjecture"
+  ],
+  "parity_off_failures": [
+    "bnossw_monogamy",
+    "cft_flat_space_bound",
+    "complexity_cutoff",
+    "cross_sector_efthedron",
+    "graviton_forward_positivity",
+    "repulsive_force_conjecture"
+  ],
+  "parity_sensitive_constraints_at_lqg": [],
+  "parity_headroom_first_failure_multiplier": 1.1,
+  "headroom_scan": [
+    {
+      "mult": 1.0,
+      "g_R2_parity": 0.08,
+      "new_parity_failures": []
+    },
+    {
+      "mult": 1.1,
+      "g_R2_parity": 0.088,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow"
+      ]
+    },
+    {
+      "mult": 1.2,
+      "g_R2_parity": 0.096,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow"
+      ]
+    },
+    {
+      "mult": 1.3,
+      "g_R2_parity": 0.104,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 1.4,
+      "g_R2_parity": 0.112,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 1.5,
+      "g_R2_parity": 0.12,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 1.6,
+      "g_R2_parity": 0.128,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 1.7,
+      "g_R2_parity": 0.136,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 1.8,
+      "g_R2_parity": 0.144,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 1.9,
+      "g_R2_parity": 0.152,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 2.0,
+      "g_R2_parity": 0.16,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 2.1,
+      "g_R2_parity": 0.168,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 2.2,
+      "g_R2_parity": 0.176,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 2.3,
+      "g_R2_parity": 0.184,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 2.4,
+      "g_R2_parity": 0.192,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 2.5,
+      "g_R2_parity": 0.2,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 2.6,
+      "g_R2_parity": 0.208,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 2.7,
+      "g_R2_parity": 0.216,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 2.8,
+      "g_R2_parity": 0.224,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "left_handed_graviton_positivity",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 2.9,
+      "g_R2_parity": 0.232,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "left_handed_graviton_positivity",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 3.0,
+      "g_R2_parity": 0.24,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "left_handed_graviton_positivity",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 3.1,
+      "g_R2_parity": 0.248,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "left_handed_graviton_positivity",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 3.2,
+      "g_R2_parity": 0.256,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "left_handed_graviton_positivity",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 3.3,
+      "g_R2_parity": 0.264,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "left_handed_graviton_positivity",
+        "ligo_birefringence_bound"
+      ]
+    },
+    {
+      "mult": 3.4,
+      "g_R2_parity": 0.272,
+      "new_parity_failures": [
+        "generalized_anomaly_inflow",
+        "left_handed_graviton_positivity",
+        "ligo_birefringence_bound"
+      ]
+    }
+  ],
+  "magnitude_scan": [
+    {
+      "scale": 1.0,
+      "n_fail": 6
+    },
+    {
+      "scale": 0.9,
+      "n_fail": 6
+    },
+    {
+      "scale": 0.8,
+      "n_fail": 7
+    },
+    {
+      "scale": 0.7,
+      "n_fail": 7
+    },
+    {
+      "scale": 0.6,
+      "n_fail": 7
+    },
+    {
+      "scale": 0.5,
+      "n_fail": 7
+    }
+  ],
+  "consistency_checks": {
+    "lqg_infeasible_full": true,
+    "parity_toggle_off_leaves_failures_identical": true,
+    "all_lqg_failures_are_CP_even": true,
+    "lqg_parity_inside_carved_window": true,
+    "parity_headroom_exists_before_constraints_bite": true,
+    "uniform_downscaling_does_not_heal": true,
+    "other_frameworks_parity_toggle_is_noop": true
+  },
+  "all_checks_pass": true,
+  "finding": "lqg_induced is the engine's consistency boundary, but NOT because of its parity violation -- the natural hypothesis is refuted by the engine's own verdict. lqg fails 6 constraints (bnossw_monogamy, cft_flat_space_bound, complexity_cutoff, cross_sector_efthedron, graviton_forward_positivity, repulsive_force_conjecture), and toggling its parity sector OFF (g_R2_parity = g_R3_parity = 0) leaves that failure set IDENTICAL: all 6 are CP-even (matter/curvature magnitude conditions), none of them reads the parity couplings. So the parity sector is innocent of lqg's infeasibility. lqg's parity violation is itself CONSISTENT but marginal: at its actual value (g_R2_parity = 0.08) zero parity-specific constraints fire, yet the engine tolerates scaling lqg's parity UP by only ~10% (factor 1.1) before the first parity constraint (generalized anomaly inflow) bites -- so lqg sits JUST inside the carved parity window, marginal on parity as it is on everything else, but parity is NOT among its actual failures. And the CP-even tension is not a simple magnitude problem either: uniformly shrinking lqg's ordinary couplings does NOT heal the failures (it adds one), so the tension is structural in lqg's coupling RATIOS, not in the overall scale or the parity. The clean separation: lqg's boundary status is a CP-even, shape-of-the-couplings effect; its much-remarked parity violation is a consistent, sub-threshold feature riding along -- a striking framework, but its quantum-gravity tension and its parity violation are independent facts.",
+  "honest_scope": "Every verdict here is the engine's literal output on the full 38-constraint stack (no schematic mapping): the toggle, the headroom multiplier, and the magnitude scan are direct check() results. The headroom multiplier and which parity constraint bites first depend on the O(1) parity-constraint prefactors (kappa_pv, the LIGO-birefringence and anomaly-inflow normalizations), so the exact factor is convention-dependent -- the robust content is STRUCTURAL: (i) lqg's failures are CP-even and parity-toggle-invariant; (ii) lqg's parity is strictly inside the carved parity window (headroom > 1); (iii) uniform downscaling does not heal the CP-even failures. The 'ratios not magnitude' reading is supported by the downscaling probe but not exhaustively diagnosed (the precise binding combination of couplings is not isolated here). lqg is the only parity-violating framework, so the toggle is a genuine no-op for the others. Toy basis, O(1) prefactors. A fresh diagnostic that refutes a natural hypothesis with the engine's own verdict.",
+  "references": [
+    "this repo: v2.262 / v2.299 (lqg flagged as the consistency boundary), v2.269 (GW birefringence)",
+    "engine constraints: cubic_parity, parity_violation, anomaly_flow, cosmic_birefringence"
+  ]
+}
