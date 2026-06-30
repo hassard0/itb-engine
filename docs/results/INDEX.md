@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (448 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (449 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -497,3 +497,4 @@ Auto-generated front door to the full research program (448 notes). Regenerate w
 | v2.335 | [v2.335 - The parity sector shares an anomaly budget: the data squeezes](2026-06-30-v2.335-qnm-parity-anomaly-budget.md) | A new seed -- the SECOND parity coupling `g_R3_parity` (cubic parity), ignored throughout the program (the |
 | v2.336 | [v2.336 - The constructed theory's ringdown-active quartic curvature: t](2026-06-30-v2.336-qnm-ringdown-quartic-floor.md) | A fresh seed reconnecting to the project's namesake -- quasi-normal modes / ringdown. The program has |
 | v2.337 | [v2.337 - The ringdown prediction is a firm floor but a loose magnitude](2026-06-30-v2.337-qnm-ringdown-prediction-sharpness.md) | v2.336 gave the moment-tower FLOOR on the constructed theory's ringdown-active quartic curvature `g_R4`. |
+| v2.338 | [v2.338 - Is the constructed theory ghost-free? Positivity IS the EFT u](2026-06-30-v2.338-qnm-ghost-freedom.md) | The deepest, most standard objection to ANY higher-derivative gravity is the Ostrogradsky / massive-spin-2 |
