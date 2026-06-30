@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (429 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (430 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -478,3 +478,4 @@ Auto-generated front door to the full research program (429 notes). Regenerate w
 | v2.316 | [v2.316 - Correction: the "all frameworks infeasible" verdict was a dep](2026-06-30-v2.316-qnm-rfc-form-correction.md) | Robust (unaffected or independently confirmed): |
 | v2.317 | [v2.317 - The corrected preferred framework: re-establishing v2.312-315](2026-06-30-v2.317-qnm-preferred-framework-convex-hull.md) | v2.316 showed the recent arc's feasibility verdicts used the deprecated `matter_product` repulsive-force |
 | v2.318 | [v2.318 - Why does consistency reward mild parity violation? Anomaly ma](2026-06-30-v2.318-qnm-parity-anomaly-mechanism.md) | v2.317 found that under the corrected `convex_hull` encoding the engine's most-robust higher-derivative |
+| v2.319 | [v2.319 - Chiral primordial gravitational waves: a CMB parity discrimin](2026-06-30-v2.319-qnm-chiral-primordial-gw.md) | A fresh swing into a new sector. The corrected preferred framework (v2.317/v2.318) carries a mild |

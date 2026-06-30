@@ -1,0 +1,77 @@
+{
+  "version": "v2.319",
+  "model": "Pi = tanh(kappa * g_R2_parity * (k/k_pivot)^n)  (Chern-Simons inflation, bounded, chromatic)",
+  "schematic_constants": {
+    "kappa": 4.0,
+    "n_chroma": 0.5
+  },
+  "chirality_table": [
+    {
+      "theory": "pure_gr",
+      "g_R2_parity": 0.0,
+      "chirality_Pi": 0.0,
+      "parity_violating": false,
+      "predicts_CMB_TB_EB": false,
+      "handedness": "none"
+    },
+    {
+      "theory": "string_tree_eft",
+      "g_R2_parity": 0.0,
+      "chirality_Pi": 0.0,
+      "parity_violating": false,
+      "predicts_CMB_TB_EB": false,
+      "handedness": "none"
+    },
+    {
+      "theory": "asymptotic_safety",
+      "g_R2_parity": 0.0,
+      "chirality_Pi": 0.0,
+      "parity_violating": false,
+      "predicts_CMB_TB_EB": false,
+      "handedness": "none"
+    },
+    {
+      "theory": "lqg_induced",
+      "g_R2_parity": 0.08,
+      "chirality_Pi": 0.30950692121263845,
+      "parity_violating": true,
+      "predicts_CMB_TB_EB": true,
+      "handedness": "right"
+    },
+    {
+      "theory": "cdt",
+      "g_R2_parity": 0.0,
+      "chirality_Pi": 0.0,
+      "parity_violating": false,
+      "predicts_CMB_TB_EB": false,
+      "handedness": "none"
+    },
+    {
+      "theory": "engine_preferred",
+      "g_R2_parity": 0.038,
+      "chirality_Pi": 0.15084011534525318,
+      "parity_violating": true,
+      "predicts_CMB_TB_EB": true,
+      "handedness": "right"
+    }
+  ],
+  "chiral_theories": [
+    "engine_preferred",
+    "lqg_induced"
+  ],
+  "consistency_checks": {
+    "parity_even_frameworks_zero_chirality": true,
+    "parity_violating_frameworks_nonzero_chirality": true,
+    "chirality_sign_tracks_parity_coupling": true,
+    "chirality_bounded_physical": true,
+    "chirality_is_chromatic": true,
+    "TB_EB_is_a_clean_parity_discriminator": true
+  },
+  "all_checks_pass": true,
+  "finding": "The corrected new-theory finding -- that the engine's most-robust higher-derivative gravity is mildly parity-violating, driven by anomaly matching (v2.317/v2.318) -- makes a concrete, falsifiable COSMOLOGICAL prediction: chiral primordial gravitational waves. A gravitational Chern-Simons / Pontryagin coupling g_R2_parity during inflation makes the two circular polarizations of the primordial tensor spectrum unequal, a net chirality Pi = (P_R - P_L)/(P_R + P_L) = tanh(kappa * g_R2_parity * (k/k_pivot)^n), reproducing the standard Chern-Simons-inflation features (one helicity enhanced, |Pi| < 1, Pi -> 0 as the coupling -> 0, and chromatic -- growing with wavenumber). The observable is parity-odd CMB TB and EB cross-correlations, the target of LiteBIRD and CMB-S4. This is a CLEAN DISCRIMINATOR: the parity-even frameworks (pure_gr, string_tree_eft, asymptotic_safety, cdt) predict Pi = 0 exactly -- zero TB, zero EB -- while only the engine-preferred framework (g_R2_parity ~ 0.038) and lqg_induced (0.080) predict a nonzero chirality, both right-handed (the sign is set by the positive parity coupling). So a future detection of primordial GW chirality / CMB TB-EB would favor the parity-violating frameworks -- the engine-preferred one and lqg -- and a null result tightens the parity coupling toward zero, disfavoring them. The corrected preferred framework thus comes with its own observational test, in a different sector (CMB tensor parity) from the constraint-space structure that built it -- and the test cleanly separates it, plus lqg, from the parity-even proposals.",
+  "honest_scope": "The discriminator and the sign are the robust content; the MAGNITUDE is schematic. The map from the engine's Pontryagin coupling g_R2_parity to the Chern-Simons chirality (kappa) and the chromatic index n are O(1) placeholders -- the CS-coupling-to-chirality amplitude is not sourced here, so the actual Pi VALUE (and whether it is within LiteBIRD/CMB-S4 reach) is not predicted. What IS robust and prefactor-independent: (i) parity-even gravity gives Pi = 0 exactly (a symmetry statement, TB = EB = 0), (ii) a nonzero g_R2_parity gives Pi != 0 with sign = sign(g_R2_parity), (iii) the chirality is bounded |Pi| < 1 and chromatic, reproducing the standard CS-inflation structure. The parity-violating set (engine_preferred, lqg) is exact (only these two have g_R2_parity != 0). The engine_preferred parity value (0.038) is the v2.317 approximate optimum (convention-dependent); its SIGN (positive -> right-handed) is the robust prediction. Single-field CS inflation; back-reaction and the detailed transfer to TB/EB not modelled. Toy basis, O(1) prefactors. A fresh-sector falsifiable signature of the corrected parity finding.",
+  "references": [
+    "Lue, Wang, Kamionkowski 1999; Alexander, Martin 2004 (chiral GW from Chern-Simons inflation); LiteBIRD / CMB-S4 (TB/EB)",
+    "this repo: v2.317/v2.318 (parity-violating preferred framework, anomaly mechanism), v2.269 (GW propagation birefringence -- distinct)"
+  ]
+}
