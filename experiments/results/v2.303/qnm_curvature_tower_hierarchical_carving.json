@@ -1,0 +1,86 @@
+{
+  "version": "v2.303",
+  "method": "apply the CEMZ causality bound |g_R3|<=0.8 sqrt(g_4 g_R2) and the cubic positivity bound g_R3<=g_4^2 to the frameworks; identify which binds; assemble the hierarchical carving of the curvature tower (a different principle at each order)",
+  "constants": {
+    "kappa_cemz": 0.8,
+    "kappa_cubic": 1.0
+  },
+  "framework_cubic_bounds": [
+    {
+      "framework": "string_tree_eft",
+      "g_4": 0.5,
+      "g_R2": 0.2,
+      "g_R3": 0.15,
+      "cemz_bound": 0.2529822128134704,
+      "cubic_bound": 0.25,
+      "g_R3_binding": "unitarity(cubic positivity)",
+      "g_R3_satisfies_both": true,
+      "gR4_floor_from_gR3": 0.11249999999999999,
+      "crossover_gR2": 0.19531249999999997
+    },
+    {
+      "framework": "asymptotic_safety",
+      "g_4": 0.4,
+      "g_R2": 0.15,
+      "g_R3": 0.1,
+      "cemz_bound": 0.19595917942265426,
+      "cubic_bound": 0.16000000000000003,
+      "g_R3_binding": "unitarity(cubic positivity)",
+      "g_R3_satisfies_both": true,
+      "gR4_floor_from_gR3": 0.06666666666666668,
+      "crossover_gR2": 0.1
+    },
+    {
+      "framework": "lqg_induced",
+      "g_4": 0.6,
+      "g_R2": 0.3,
+      "g_R3": 0.3,
+      "cemz_bound": 0.33941125496954283,
+      "cubic_bound": 0.36,
+      "g_R3_binding": "causality(CEMZ)",
+      "g_R3_satisfies_both": true,
+      "gR4_floor_from_gR3": 0.3,
+      "crossover_gR2": 0.3374999999999999
+    },
+    {
+      "framework": "cdt",
+      "g_4": 0.55,
+      "g_R2": 0.22,
+      "g_R3": 0.15,
+      "cemz_bound": 0.2782804340948174,
+      "cubic_bound": 0.30250000000000005,
+      "g_R3_binding": "causality(CEMZ)",
+      "g_R3_satisfies_both": true,
+      "gR4_floor_from_gR3": 0.10227272727272727,
+      "crossover_gR2": 0.25996093750000004
+    }
+  ],
+  "causality_bound_frameworks": [
+    "lqg_induced",
+    "cdt"
+  ],
+  "unitarity_bound_frameworks": [
+    "string_tree_eft",
+    "asymptotic_safety"
+  ],
+  "hierarchical_carving": {
+    "g_R2_Ricci2": "FOUR principles: GSL (lower) + entanglement/unitarity/null-energy (upper) [v2.302]",
+    "g_R3_Ricci3": "CAUSALITY (CEMZ, |g_R3|<=0.8 sqrt(g_4 g_R2)) + unitarity (cubic g_R3<=g_4^2) [this cycle]",
+    "g_R4_Riemann4": "the MOMENT TOWER mandate g_R4 >= g_R3^2/g_R2 [v2.292]"
+  },
+  "consistency_checks": {
+    "cemz_bound_is_causality_geometric_mean": true,
+    "frameworks_satisfy_both_cubic_bounds": true,
+    "causality_binds_for_some_frameworks": true,
+    "unitarity_binds_for_others": true,
+    "lqg_cdt_causality_string_as_unitarity": true,
+    "hierarchy_has_three_distinct_principles_per_order": true
+  },
+  "all_checks_pass": true,
+  "finding": "Causality independently carves the cubic curvature, and the consistency conditions carve the whole curvature tower hierarchically -- a different principle at each order. The CEMZ graviton-causality bound, |g_R3| <= 0.8 sqrt(g_4 g_R2) (no shock-wave time advance without an infinite higher-spin tower), bounds the cubic curvature by the geometric mean of the matter coupling g_4 and the leading curvature g_R2 -- a genuinely different functional form and physical origin from the cubic positivity bound g_R3 <= g_4^2. The two are complementary, with the crossover at g_R2 = g_4^3/kappa^2: CAUSALITY is the active bound on g_R3 for lqg_induced and cdt (larger curvature relative to g_4^3), while UNITARITY (cubic positivity) binds string_tree_eft and asymptotic_safety. So causality is not redundant -- it is the decisive cubic-curvature constraint for the more strongly-curved frameworks, exactly the regime where the 'higher-derivative gravity needs a tower' physics bites. Stacking this on the earlier sub-arcs gives the unifying picture: the curvature tower is carved order by order by DISTINCT consistency principles -- g_R2 bracketed by four (thermodynamics, entanglement, unitarity, null energy, v2.302), g_R3 by causality and unitarity (this cycle), g_R4 floored by the moment tower (v2.292) -- and they CHAIN: the matter couplings carve g_R2, causality/unitarity carve g_R3, and the moment tower floors the ringdown-active g_R4 from g_R3. The entire higher-curvature sector is determined by the matter sector through a ladder of different quantum-gravity consistency conditions, one per rung. That ladder -- not any single bound -- is the engine's picture of how consistency alone constrains higher-derivative gravity.",
+  "honest_scope": "The CEMZ bound (kappa=0.8, geometric-mean form) and the cubic positivity bound (kappa=1, g_4^2) are the engine's representative O(1) encodings; the literal CEMZ result is a statement about the required higher-spin tower scale, here reduced to the low-energy coupling bound (the engine's own honest framing). The crossover g_R2 = g_4^3/kappa^2 and which framework is causality- vs unitarity-bound shift with the prefactors, but the STRUCTURAL content -- causality and unitarity are distinct, complementary bounds on g_R3, and a different principle constrains each curvature order -- is prefactor-robust (the geometric-mean causality form and the g_4^2 unitarity form cross for any O(1) kappas). The hierarchical-carving map summarizes results across v2.292/v2.302/this cycle; it is an organizing statement, not a new bound. Toy basis, O(1) prefactors. A fresh-sector new-theory result: causality on the cubic curvature, completing the hierarchical carving.",
+  "references": [
+    "Camanho, Edelstein, Maldacena, Zhiboedov, 'Causality Constraints on Corrections to the Graviton Three-Point Coupling', JHEP 02 (2016) 020",
+    "this repo: v2.302 (g_R2 four-principle bracket), v2.292 (g_R4 moment tower); src/itb/constraints/cemz_causality.py"
+  ]
+}
