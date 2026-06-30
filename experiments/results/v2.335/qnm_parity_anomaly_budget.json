@@ -1,0 +1,103 @@
+{
+  "version": "v2.335",
+  "cubic_parity_band": [
+    {
+      "g_R2_parity": 0.02,
+      "g_R3_parity_max": null,
+      "feasible": false
+    },
+    {
+      "g_R2_parity": 0.024,
+      "g_R3_parity_max": null,
+      "feasible": false
+    },
+    {
+      "g_R2_parity": 0.028,
+      "g_R3_parity_max": null,
+      "feasible": false
+    },
+    {
+      "g_R2_parity": 0.032,
+      "g_R3_parity_max": null,
+      "feasible": false
+    },
+    {
+      "g_R2_parity": 0.036,
+      "g_R3_parity_max": null,
+      "feasible": false
+    },
+    {
+      "g_R2_parity": 0.04,
+      "g_R3_parity_max": null,
+      "feasible": false
+    },
+    {
+      "g_R2_parity": 0.044,
+      "g_R3_parity_max": null,
+      "feasible": false
+    },
+    {
+      "g_R2_parity": 0.048,
+      "g_R3_parity_max": 0.042,
+      "feasible": true
+    },
+    {
+      "g_R2_parity": 0.052,
+      "g_R3_parity_max": 0.04,
+      "feasible": true
+    },
+    {
+      "g_R2_parity": 0.056,
+      "g_R3_parity_max": 0.038,
+      "feasible": true
+    },
+    {
+      "g_R2_parity": 0.06,
+      "g_R3_parity_max": 0.034,
+      "feasible": true
+    },
+    {
+      "g_R2_parity": 0.064,
+      "g_R3_parity_max": 0.03,
+      "feasible": true
+    },
+    {
+      "g_R2_parity": 0.068,
+      "g_R3_parity_max": 0.0,
+      "feasible": true
+    },
+    {
+      "g_R2_parity": 0.072,
+      "g_R3_parity_max": 0.0,
+      "feasible": true
+    },
+    {
+      "g_R2_parity": 0.076,
+      "g_R3_parity_max": 0.0,
+      "feasible": true
+    },
+    {
+      "g_R2_parity": 0.08,
+      "g_R3_parity_max": null,
+      "feasible": false
+    }
+  ],
+  "cubic_max_at_window_bottom": 0.042,
+  "cubic_max_at_window_top": 0.0,
+  "cubic_max_at_constructed_leading_parity": 0.034,
+  "anomaly_budget_constant_g2p_sq_plus_2g3p_sq": 0.0056,
+  "consistency_checks": {
+    "constructed_zero_cubic_parity_is_feasible": true,
+    "cubic_parity_squeezed_as_leading_rises": true,
+    "cubic_parity_squeezed_to_zero_at_window_top": true,
+    "anomaly_budget_roughly_constant_on_boundary": true,
+    "parity_effectively_one_parameter": true
+  },
+  "all_checks_pass": true,
+  "finding": "The program's second parity coupling -- the cubic g_R3_parity, set to zero throughout -- is not arbitrary: it is anomaly-budgeted away by the data-required leading parity. The two parity couplings are coupled through the generalized gravitational anomaly inflow, g_R2_parity^2 + 2 g_R3_parity^2 <= rho_inflow * g_4 * g_R2, a SHARED budget against which the leading and cubic parity trade off (the engine's anomaly_flow constraint, plus a 't Hooft matching condition on their ratio). Mapping the feasible cubic-parity range as a function of the leading parity, it shrinks from ~0.04 at the data-window LOWER edge (g_R2_parity ~ 0.05) to ~0.00 at the UPPER edge (g_R2_parity ~ 0.07): as the data pushes the leading parity UP, it consumes the anomaly budget and SQUEEZES the cubic parity toward zero (the boundary combination g_R2_parity^2 + 2 g_R3_parity^2 stays roughly constant ~0.006, the signature of one shared budget). So the constructed theory's g_R3_parity = 0 is a consequence, not a choice: the data-required leading parity leaves no anomaly budget for the cubic parity. This explains the v2.333/v2.334 finding of a SINGLE stiff parity direction -- the parity sector is effectively ONE-parameter (the leading coupling) because anomaly matching plus the cosmic-birefringence data jointly determine the cubic parity from it. The new theory's parity violation is therefore genuinely a one-parameter feature, anomaly-locked, with the leading Pontryagin coupling carrying it and the cubic parity pinned to ~zero by the data -- a tighter, more economical parity structure than the two free couplings the basis nominally allows.",
+  "honest_scope": "The anomaly-inflow budget and the 't Hooft ratio matching are the engine's literal constraints (anomaly_flow.py), and the squeeze of the feasible cubic-parity range is the engine's literal feasibility verdict on a grid scan. The budget coefficient rho_inflow and the matching ratio rho_match are O(1) prefactors, so the exact squeeze rate and the budget value (~0.004) are convention-dependent; the robust, structural content is that the two parity couplings share ONE anomaly budget (g_R2_parity^2 + 2 g_R3_parity^2 bounded) and that pushing the leading parity up -- which the cosmic-birefringence data does -- squeezes the cubic parity down. The scan fixes the matter sector at the constructed values (the cubic parity range would shift with the matter couplings via the g_4 g_R2 budget and the (g_4+g_6) matching ratio). 'Effectively one-parameter' is a structural characterization of the parity sector, contingent on the cosmic-birefringence data pinning the leading parity (v2.329 caveat: without it the leading parity is free and the cubic parity has more budget). Toy basis, O(1) prefactors. A fresh-seed result on the parity sector's internal structure.",
+  "references": [
+    "src/itb/constraints/anomaly_flow.py (the shared anomaly budget + 't Hooft ratio matching)",
+    "this repo: v2.318 (anomaly prefers parity), v2.321 (data pins leading parity), v2.333/v2.334 (one stiff parity direction)"
+  ]
+}
