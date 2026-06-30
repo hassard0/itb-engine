@@ -1,0 +1,68 @@
+{
+  "version": "v2.288",
+  "method": "re-verify the load-bearing claims of the v2.281-v2.287 engine arc together through the real check()/Theory API, separating the robust conclusions from the canonical-only ones",
+  "arc": [
+    {
+      "cycle": "v2.281",
+      "result": "engine encodes the reconstructed GW/swampland bounds; lqg the lone GW-sector failure"
+    },
+    {
+      "cycle": "v2.282",
+      "result": "lqg's anomaly is curvature-driven (all 6 failures heal with curvature off)"
+    },
+    {
+      "cycle": "v2.283",
+      "result": "only pure_gr strictly feasible; string/AS/cdt miss by repulsive_force alone"
+    },
+    {
+      "cycle": "v2.284",
+      "result": "string/cdt sit on the WGC line; AS/lqg below it (matter product < g_R2)"
+    },
+    {
+      "cycle": "v2.285",
+      "result": "a feasible higher-derivative witness exists -> region is not just GR"
+    },
+    {
+      "cycle": "v2.286",
+      "result": "feasible region is a curvature wedge: g_R2 <= ~0.2, x capped by positivity"
+    },
+    {
+      "cycle": "v2.287",
+      "result": "g_R2 wall prefactor-robust; positivity verdict on frameworks NOT robust"
+    }
+  ],
+  "framework_feasibility": {
+    "pure_gr": true,
+    "string_tree_eft": false,
+    "asymptotic_safety": false,
+    "lqg_induced": false,
+    "cdt": false
+  },
+  "consistency_checks": {
+    "witness_is_feasible_higher_derivative": true,
+    "inside_wedge_feasible": true,
+    "above_x_ceiling_infeasible": true,
+    "only_pure_gr_strictly_feasible": true,
+    "lqg_fails_forward_positivity_canonical": true,
+    "witness_robust_to_positivity_prefactors": true,
+    "lqg_positivity_verdict_is_prefactor_dependent": true
+  },
+  "checks_passed": 7,
+  "checks_total": 7,
+  "all_pass": true,
+  "robust_conclusions": [
+    "the engine's feasible region is NOT just general relativity (a higher-derivative witness is feasible)",
+    "it is a bounded curvature wedge; the g_R2 ceiling ~0.2 is prefactor-robust (anomaly + repulsive)",
+    "the engine independently encodes the reconstructed GW/swampland phenomenology (v2.281)"
+  ],
+  "canonical_only_conclusions": [
+    "the specific positivity ratio ceiling x ~ 0.83 (moves to [0.6,1.2] across prefactors, v2.287)",
+    "the lqg-fails-positivity-while-others-pass separation (verdict flips across the prefactor range)"
+  ],
+  "finding": "The seven-cycle engine-reconnection arc forms one coherent investigation, and all 7/7 load-bearing claims re-verify together. After a long from-scratch phenomenology run, turning back to the engine showed it already encodes the same GW/swampland bounds (v2.281), and mapping its feasible region revealed a bounded curvature WEDGE: a higher-derivative theory IS allowed (the v2.285 witness is feasible, so the region is not just GR), but only with g_R2 below ~0.2 and the cubic curvature capped by the forward-limit positivity. Crucially, the v2.287 realism sweep separates what is robust from what is not. ROBUST: the wedge exists, and its g_R2 wall holds for every prefactor (it is set by anomaly cancellation and the repulsive-force conjecture, not by the tunable positivity knobs -- verified here, the witness stays feasible across the full graviton_fwd_c x efthedron_alpha range). CANONICAL-ONLY: the positivity ratio ceiling and therefore the lqg-vs-others verdict, which flips across the prefactor range (verified -- lqg fails graviton_forward_positivity at canonical but not at loose prefactors). So the honest headline of the whole arc is a robust geometric fact (a non-trivial but bounded higher-derivative feasible region) plus a clearly-flagged prefactor-dependent detail (the fine framework rankings) -- the realism program drawing exactly the line it exists to draw. This is the session's seventh cross-verified synthesis capstone.",
+  "honest_scope": "A synthesis / cross-verification capstone: every check re-runs an already-established and caveated result of v2.281-v2.287 through the real engine API; it adds no new constraint and changes no coupling. The robust-vs-canonical split is the central honest content -- it PRESERVES the v2.287 demotion of the positivity-ranking detail rather than re-asserting the cleaner v2.286 picture. Wedge boundaries use the hand-built matter completion of v2.285/v2.286; the engine's couplings are the toy basis with O(1) representative prefactors. A consistency result on the engine's feasible-region geometry, not a claim about a physical theory.",
+  "references": [
+    "this repo: v2.281, v2.282, v2.283, v2.284, v2.285, v2.286, v2.287",
+    "this repo: src/itb/engine.py, experiments/stack.py (CANONICAL prefactors + ranges)"
+  ]
+}

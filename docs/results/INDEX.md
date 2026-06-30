@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (398 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (399 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -447,3 +447,4 @@ Auto-generated front door to the full research program (398 notes). Regenerate w
 | v2.285 | [v2.285 - The feasible region is not just GR: a higher-derivative theor](2026-06-29-v2.285-qnm-feasible-higher-derivative.md) | The v2.281-v2.284 sub-arc showed that none of the engine's toy frameworks (string, AS, cdt, lqg) are |
 | v2.286 | [v2.286 - Mapping the feasible curvature region: the (g_R2, g_R3) wedge](2026-06-29-v2.286-qnm-feasible-curvature-region.md) | v2.285 exhibited a feasible higher-derivative theory and found the `g_R2` ceiling (anomaly x repulsive |
 | v2.287 | [v2.287 - Is the feasible curvature wedge robust? The realism program a](2026-06-29-v2.287-qnm-wedge-robustness.md) | The v2.286 wedge (`g_R2 <= ~0.2`, positivity ratio ceiling `x = g_R3/g_R2 ~ 0.83`) was mapped at the |
+| v2.288 | [v2.288 - Synthesis capstone: the engine feasible-region investigation ](2026-06-29-v2.288-qnm-feasible-region-synthesis.md) | Seven cycles turned the loop back from a long from-scratch phenomenology run to the engine itself and |
