@@ -1,0 +1,36 @@
+{
+  "version": "v2.340",
+  "wgc_family_margins": {
+    "weak_gravity_conjecture": {
+      "margin": 0.5343,
+      "signed_distance": 0.4403
+    },
+    "scalar_wgc": {
+      "margin": 0.136,
+      "signed_distance": 0.0907
+    },
+    "repulsive_force_conjecture": {
+      "margin": 0.2988,
+      "signed_distance": 0.1748
+    }
+  },
+  "deep_consistency_trilogy": {
+    "unitarity_no_ghost_v2338": "all 20 amplitude-positivity constraints satisfied, min signed-dist +0.050",
+    "causality_no_time_advance_v2339": "CEMZ at 35% of bound (deepest inside), most headroom",
+    "weak_gravity_extremal_decay_v2340": "WGC family satisfied, min signed-dist +0.091"
+  },
+  "consistency_checks": {
+    "wgc_family_all_satisfied": true,
+    "wgc_satisfied_with_margin": true,
+    "weak_gravity_conjecture_satisfied": true,
+    "repulsive_force_convex_hull_satisfied": true,
+    "trilogy_complete_three_pillars": true
+  },
+  "all_checks_pass": true,
+  "finding": "The constructed theory satisfies the Weak Gravity Conjecture, completing the deep-consistency trilogy. The WGC is the canonical swampland requirement -- gravity must be the weakest force, equivalently a large extremal black hole must be able to DECAY -- and for higher-derivative gravity it is a positivity statement on the curvature corrections (Kats-Motl-Padi, Hamada-Noumi-Shiu): the higher-derivative terms must shift the extremal mass-charge ratio so the corrected extremal black hole is super-extremal and sheds charge, leaving no stable remnant. The engine's WGC family -- weak_gravity_conjecture (+0.534), scalar_wgc (+0.136), and the convex_hull repulsive_force conjecture (+0.299) -- is satisfied by the constructed theory with comfortable margin (smallest signed distance +0.091), so its corrections are WGC-consistent: extremal black holes decay, no remnants. This is the THIRD pillar. With v2.338 (unitarity / no ghost -- all amplitude-positivity constraints clear by +0.050) and v2.339 (causality / no graviton time-advance -- CEMZ at 35% of bound, the most headroom of any candidate), the constructed theory now passes ALL THREE deep consistency / swampland requirements that a higher-derivative gravity must face -- unitarity, causality, and the weak gravity conjecture -- each with margin. And all three point the same way: unitarity and causality both require a unitary, higher-spin (string-like) UV completion, and the WGC is the swampland's statement that such a completion is in the landscape rather than the swampland. So the engine's constructed higher-derivative gravity is not just a feasible point but a candidate that clears the standard objections to its entire class -- ghost-free, causal, and WGC-satisfying -- with a UV completion pointed toward string-like physics. That is the strongest internal-consistency statement the program can make about its new theory.",
+  "honest_scope": "The WGC family margins are the engine's literal check() output under convex_hull; the constructed theory satisfies all three with a clear (non-marginal) margin. The encodings are the engine's O(1) representative forms of the standard results (the WGC / scalar-WGC and the convex_hull repulsive-force conjecture, the v2.316-corrected form), so the exact margins are convention-dependent -- the robust content is that the constructed theory is comfortably inside the WGC region, not on its boundary. The 'extremal black hole decay / no remnant' interpretation is the standard physical content of the higher-derivative WGC (Kats-Motl-Padi, Hamada-Noumi-Shiu); the engine encodes the positivity condition, not an explicit extremal-BH computation. The 'trilogy complete' / 'passes all three deep requirements' framing is a synthesis of v2.338/v2.339/this cycle (each a margin verification, not a from-scratch derivation), and 'string-like UV' is a qualitative inference, not a constructed completion. The WGC family includes scalar_wgc which reads matter couplings, so this is a CP-even, essentially data-independent property (it does not rest on the cosmic-birefringence signal). Toy basis, O(1) prefactors. The third pillar of the deep-consistency certification.",
+  "references": [
+    "Arkani-Hamed-Motl-Nicolis-Vafa 2006 (WGC); Kats-Motl-Padi 2006, Hamada-Noumi-Shiu 2018 (higher-derivative WGC / extremal BH decay)",
+    "this repo: v2.338 (unitarity/ghost), v2.339 (causality/CEMZ), v2.316 (convex_hull repulsive force), v2.317 (constructed framework)"
+  ]
+}
