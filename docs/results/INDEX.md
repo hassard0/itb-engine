@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (444 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (445 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -493,3 +493,4 @@ Auto-generated front door to the full research program (444 notes). Regenerate w
 | v2.331 | [v2.331 - The universal repair: every named framework moves toward the ](2026-06-30-v2.331-qnm-universal-repair.md) | v2.330 found lqg's minimal repair to theory+data consistency is to trim its outlier cubic while keeping its |
 | v2.332 | [v2.332 - The consistent+observed region is connected: one continuous f](2026-06-30-v2.332-qnm-region-connectivity.md) | The repair arc (v2.330/v2.331) found several feasible theories -- the constructed framework and the |
 | v2.333 | [v2.333 - The consistent+observed family is effectively 3-dimensional: ](2026-06-30-v2.333-qnm-effective-dimension.md) | The connected feasible family (v2.332) lives in 6 Wilson couplings, but how many are GENUINELY free? The |
+| v2.334 | [v2.334 - Predictions concentrated in the pinned direction: the matter ](2026-06-30-v2.334-qnm-prediction-invariance.md) | v2.333 found the consistent+observed family is effectively ~3-dimensional, with the soft (free) directions |
