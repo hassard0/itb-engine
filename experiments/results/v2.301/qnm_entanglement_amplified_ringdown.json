@@ -1,0 +1,79 @@
+{
+  "version": "v2.301",
+  "method": "chain the v2.300 entanglement/positivity caps on g_R2 with the v2.292 moment-tower floor g_R4>=g_R3^2/g_R2: the minimum forced g_R4 = g_R3^2/min(entanglement,positivity); compute the entanglement amplification of the ringdown floor",
+  "framework_floors": [
+    {
+      "framework": "string_tree_eft",
+      "g_4": 0.5,
+      "g_6": 0.4,
+      "g_R3": 0.15,
+      "entanglement_bound": 0.6666666666666667,
+      "positivity_bound": 0.4472135954999579,
+      "binding_sector": "positivity",
+      "gR4_floor": 0.05031152949374527,
+      "gR4_floor_positivity_only": 0.05031152949374527,
+      "amplification": 1.0
+    },
+    {
+      "framework": "asymptotic_safety",
+      "g_4": 0.4,
+      "g_6": 0.3,
+      "g_R3": 0.1,
+      "entanglement_bound": 0.5142857142857143,
+      "positivity_bound": 0.34641016151377546,
+      "binding_sector": "positivity",
+      "gR4_floor": 0.028867513459481294,
+      "gR4_floor_positivity_only": 0.028867513459481294,
+      "amplification": 1.0
+    },
+    {
+      "framework": "lqg_induced",
+      "g_4": 0.6,
+      "g_6": 0.45,
+      "g_R3": 0.3,
+      "entanglement_bound": 0.7714285714285716,
+      "positivity_bound": 0.5196152422706632,
+      "binding_sector": "positivity",
+      "gR4_floor": 0.1732050807568877,
+      "gR4_floor_positivity_only": 0.1732050807568877,
+      "amplification": 1.0
+    },
+    {
+      "framework": "cdt",
+      "g_4": 0.55,
+      "g_6": 0.4,
+      "g_R3": 0.15,
+      "entanglement_bound": 0.6947368421052633,
+      "positivity_bound": 0.469041575982343,
+      "binding_sector": "positivity",
+      "gR4_floor": 0.04797016118001234,
+      "gR4_floor_positivity_only": 0.04797016118001234,
+      "amplification": 1.0
+    }
+  ],
+  "asymmetric_test_point": {
+    "g_4": 5.0,
+    "g_6": 0.5,
+    "g_R3": 0.4,
+    "AM_over_GM": 1.7392527130926085,
+    "entanglement_bound": 1.3636363636363638,
+    "positivity_bound": 1.5811388300841898,
+    "gR4_floor": 0.11733333333333335,
+    "gR4_floor_positivity_only": 0.10119288512538815,
+    "amplification": 1.1595018087284057
+  },
+  "consistency_checks": {
+    "frameworks_positivity_floored": true,
+    "frameworks_amplification_is_one": true,
+    "asymmetric_entanglement_binds": true,
+    "asymmetric_amplification_exceeds_one": true,
+    "amplification_equals_AMoverGM_times_2_3": true
+  },
+  "all_checks_pass": true,
+  "finding": "Chaining entanglement monogamy with the curvature moment tower gives a concrete new prediction: entanglement structure AMPLIFIES the irreducible ringdown-active Riemann^4 coefficient for asymmetric UV completions. The moment tower forces g_R4 >= g_R3^2/g_R2, so the smallest g_R4 a consistent theory can carry is g_R3^2 divided by the LARGEST allowed g_R2 -- and g_R2 is capped by the tighter of entanglement (3 g_4 g_6/(g_4+g_6), harmonic) and positivity (sqrt(g_4 g_6), geometric). For the engine's frameworks, all mildly asymmetric, positivity is the binding cap, so their ringdown floor is the positivity value and entanglement adds no amplification (factor 1). But for an asymmetric matter sector (here g_4=5, g_6=0.5) entanglement is the tighter cap, so it RAISES the ringdown floor by the factor (2/3) AM/GM(g_4,g_6) = 1.160 over the positivity-only floor -- entanglement forces a larger minimum Riemann^4 deformation than unitarity and causality alone require. So the information-theoretic and amplitude sectors do not just bound the leading curvature complementarily (v2.300); chained through the moment tower they make a sharper statement about the OBSERVABLE ringdown operator: in the asymmetric regime where entanglement bites, a consistent higher-curvature gravity must ring MORE than positivity predicts. This is the 'it from qubit' structure reaching the ringdown -- entanglement amplifying a gravitational-wave observable through the consistency chain.",
+  "honest_scope": "An exact chaining of two of the engine's encoded bounds (BNOSSW monogamy prefactor 1/3, positivity kappa=1) with the v2.292/v2.234 moment-tower floor -- algebra, verified. The amplification factor (2/3) AM/GM is prefactor-ROBUST in form (AM/GM >= 1 always, so entanglement amplifies whenever it is the binding cap), though the threshold AM/GM = 1.5 and the crossover shift with the O(1) prefactors (as in v2.300). The 'ringdown floor' is on the dimensionless coupling g_R4; mapping it to an actual QNM deformation carries the v2.215 sensitivity and v2.209 dark-parity caveats and the EFT length-scale, so 'rings MORE' is the coupling-level statement, with the observable amplitude honestly uncertain. The engine's frameworks are positivity-floored (amplification 1); the amplification is realized only for asymmetric matter sectors. Toy basis, O(1) prefactors. A fresh-sector new-theory result chaining entanglement to the ringdown observable.",
+  "references": [
+    "this repo: v2.300 (entanglement vs positivity), v2.292 (moment-tower g_R4 floor), v2.234 (g_R4 mandate)",
+    "Bao et al, 'The Holographic Entropy Cone' (monogamy); Caron-Huot et al 2021 (positivity)"
+  ]
+}
