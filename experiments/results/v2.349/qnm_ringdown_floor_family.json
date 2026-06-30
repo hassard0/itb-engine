@@ -1,0 +1,26 @@
+{
+  "version": "v2.349",
+  "n_samples": 2137,
+  "constructed_floor": 0.042,
+  "family_floor_min": 0.0,
+  "family_floor_median": 0.0298,
+  "family_floor_max": 0.165,
+  "family_gR3_min": 0.0,
+  "family_gR3_max": 0.1993,
+  "floor_guaranteed_family_wide": false,
+  "gR3_can_vanish_in_family": true,
+  "consistency_checks": {
+    "enough_samples": true,
+    "constructed_floor_matches_moment_tower": true,
+    "min_floor_is_family_minimum": true,
+    "floor_varies_across_family": true,
+    "verdict_is_coherent": true
+  },
+  "all_checks_pass": true,
+  "finding": "The ringdown floor is NOT guaranteed family-wide: it COLLAPSES toward zero on part of the feasible region (family-minimum floor 0.000, reached where g_R3 falls to 0.000). The firm floor (0.042) is a property of the constructed CENTER and of members with sizeable g_R3, not of every consistent+observed theory. So a pure-GR ringdown would refute the g_R3 != 0 members (incl. the constructed theory) but NOT the small-g_R3 sub-family, whose ringdown is indistinguishable from GR at this order. The ringdown is a discriminator for the center, not a family-wide guarantee. This extends the ringdown channel (v2.336 floor, v2.337 floor-firm/magnitude-loose) from the constructed center to the whole consistent+observed family, the curvature-sector parallel of v2.341's center->family extension for the consistency trilogy. The moment-tower floor g_R4 >= g_R3^2/g_R2 is exact; what varies across the family is g_R3 (the parity-even cubic), and since no current data constraint reads g_R3 from below, the family extends to small g_R3 where the floor weakens. The honest testability shape of the ringdown channel therefore depends on WHERE in the family the true theory sits: maximal (a guaranteed deviation) at the constructed center, vanishing on the small-g_R3 edge.",
+  "honest_scope": "The family is a seeded random-walk sample of the feasible region (Metropolis-like, near-uniform target, step 0.03), so the EXACT minimum floor and minimum g_R3 are sampler-dependent (a finite walk may not reach the true extremal g_R3); the qualitative verdict (does g_R3 reach near zero feasibly?) is the robust content, not the precise 3-decimal extremum. The moment-tower floor g_R3^2/g_R2 is exact arithmetic, but g_R3, g_R2 are the toy-basis couplings and the g_R4->ringdown-shift map is rank-1 schematic (v2.336, the deep-research-flagged limitation), so 'ringdown floor' means the g_R4 lower bound, not a sourced frequency shift. This is a CP-even, curvature-sector property, independent of the cosmic-birefringence data (unlike the parity channel). The family itself rests on the full consistent+observed stack (incl. the data constraints; the parity members carry the v2.329 caveat, but the floor is parity-independent). Toy basis, O(1) prefactors. A center->family extension of the ringdown floor.",
+  "references": [
+    "this repo: v2.336 (g_R4 ringdown floor at the center), v2.337 (floor firm / magnitude loose), v2.341 (center->family extension method), v2.333 (family structure)",
+    "this repo: moment tower g_R4 >= g_R3^2/g_R2; CEMZ bounds g_R3 from above (no data lower bound on g_R3)"
+  ]
+}
