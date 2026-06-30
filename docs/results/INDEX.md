@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (410 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (411 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -459,3 +459,4 @@ Auto-generated front door to the full research program (410 notes). Regenerate w
 | v2.297 | [v2.297 - Swampland-complete EFT carving: the method as a falsifiable Q](2026-06-29-v2.297-qnm-method-as-proposal.md) | SIXTH SLICE of the new-theory arc -- the method-as-proposal (the third user-chosen direction), made |
 | v2.298 | [v2.298 - The helicity-resolved curvature moment tower: deriving the da](2026-06-29-v2.298-qnm-helicity-resolved-tower.md) | SEVENTH SLICE / fresh swing of the new-theory arc. v2.292 gave the engine the parity-BLIND curvature |
 | v2.299 | [v2.299 - Synthesis capstone: the new-theory arc (v2.292-v2.298), cross](2026-06-29-v2.299-qnm-new-theory-arc-synthesis.md) | The loop, after the user redirected it from reconstructing community physics toward inventing new QG |
+| v2.300 | [v2.300 - It from qubit: entanglement monogamy and positivity are compl](2026-06-29-v2.300-qnm-entanglement-vs-positivity.md) | A fresh swing (milestone v2.300) in a sector the new-theory arc had not engaged -- the |
