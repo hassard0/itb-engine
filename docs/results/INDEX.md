@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (470 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (471 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -519,3 +519,4 @@ Auto-generated front door to the full research program (470 notes). Regenerate w
 | v2.357 | [v2.357 - The parity and screening channels are correlated: stronger bi](2026-06-30-v2.357-qnm-parity-screening-correlation.md) | v2.356 mapped three observationally independent falsification channels and flagged that the underlying |
 | v2.358 | [v2.358 - Data-leverage audit: which of the four ingested-data constrai](2026-06-30-v2.358-qnm-data-leverage-audit.md) | The program advertises "four ingested-data constraints." Which actually constrain the constructed theory, |
 | v2.359 | [v2.359 - Observational fingerprints: each framework's signature across](2026-06-30-v2.359-qnm-framework-fingerprints.md) | The session built a three-channel falsifiability map (v2.356) and the program earlier scored frameworks on |
+| v2.360 | [v2.360 - Does the theory actually FIT the birefringence data, or merel](2026-06-30-v2.360-qnm-birefringence-goodness-of-fit.md) | The parity headline has always been stated as "consistent at 2-sigma" -- a weak claim, since the 2-sigma band |
