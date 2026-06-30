@@ -1,0 +1,56 @@
+{
+  "version": "v2.355",
+  "g_R2_max_unscreened": 0.06263,
+  "constructed_sector_violations_nobire": {
+    "0.0616": [
+      "graviton_forward_positivity",
+      "cross_sector_efthedron",
+      "anomaly_cancellation"
+    ],
+    "0.05": [
+      "graviton_forward_positivity",
+      "cross_sector_efthedron",
+      "anomaly_cancellation"
+    ],
+    "0.04": [
+      "graviton_forward_positivity",
+      "cross_sector_efthedron",
+      "anomaly_cancellation"
+    ],
+    "0.03": [
+      "graviton_forward_positivity",
+      "cross_sector_efthedron",
+      "anomaly_cancellation"
+    ]
+  },
+  "cp_even_cause": [
+    "anomaly_cancellation",
+    "cross_sector_efthedron",
+    "graviton_forward_positivity"
+  ],
+  "unscreened_nobire_feasible_point": {
+    "g_4": 0.4183,
+    "g_6": 0.2235,
+    "g_8": 0.2679,
+    "g_R2": 0.0305,
+    "g_R3": 0.0231,
+    "g_R2_parity": 0.0265
+  },
+  "unscreened_nobire_branch_exists": true,
+  "unscreened_withbire_empty": true,
+  "n_search": 30000,
+  "consistency_checks": {
+    "constructed_sector_small_gR2_infeasible_without_data": true,
+    "cause_is_exactly_the_cp_even_constraints": true,
+    "unscreened_branch_exists_without_birefringence": true,
+    "that_branch_has_smaller_couplings": true,
+    "with_birefringence_unscreened_still_empty": true
+  },
+  "all_checks_pass": true,
+  "finding": "The screening mandate is PARTLY robust, with a clean split: the constructed SECTOR mandates screening data-independently, but the DATA is what selects that sector. (A) Holding the constructed matter+curvature couplings (g_4, g_6, g_8, g_R3) and setting parity = 0 with birefringence OFF, a small g_R2 at or below the unscreened Eot-Wash cap is STILL infeasible at every value tested -- and the cause is exactly three CP-EVEN, data-independent constraints (graviton forward positivity, cross-sector EFThedron, anomaly cancellation), none of them parity or data constraints. So GIVEN the constructed sector, screening is forced with no appeal to the cosmic-birefringence detection at all -- a genuinely data-independent statement, unlike the parity headline. (B) But the global unscreened-emptiness of v2.354 is NOT data-independent: if the matter sector is released and birefringence dropped, an unscreened feasible theory DOES exist, at SMALLER couplings (e.g. g_4 ~ 0.42, g_6 ~ 0.22, g_R2 ~ 0.03, a genuinely different point) -- whereas with birefringence ON the unscreened region stays empty (re-confirmed here). So the cosmic-birefringence data is what excludes the small-coupling unscreened alternative and pins the theory to the screening-mandated constructed sector. Net: screening is robustly mandated FOR THE CONSTRUCTED THEORY by CP-even consistency alone, but the universality of the mandate (no unscreened theory anywhere) rests on the same birefringence data as everything else. This sharpens v2.354 honestly: the third channel's prediction is stronger than the parity headline (its core is data-independent) but not absolute (its universality is data-linked).",
+  "honest_scope": "Both branch-existence statements are EMPIRICAL searches (random samples, not proofs): 'an unscreened branch exists without birefringence' is established by exhibiting one feasible point (robust -- a witness), while 'with birefringence the unscreened region is empty' is a not-found result over a modest sample here (8000; v2.354 used 30000) corroborated by the analytic g_R2 lower bound -- it is strong evidence, not proof. Part (A) is near-deterministic (a grid over g_R2 at the fixed constructed sector), and its data-independence is genuine: the three CP-even constraints carry no parity/data input. The g_R2_max ~ 0.063 cap is an order-of-magnitude Eot-Wash DATA reading (v2.354 scope), and the CP-even constraints carry their own O(1) prefactors (graviton_fwd_c, efthedron_alpha -- both v2.345-slack, but they DO shift the exact sector boundary). So 'the constructed sector mandates screening' is robust in structure; the exact couplings where the CP-even wall sits are prefactor-dependent. The whole picture still uses the toy-basis stack. Robust content: screening is data-independent GIVEN the constructed sector (CP-even), but the data selects that sector over an unscreened small-coupling branch. Toy basis, O(1) prefactors. The robustness refinement of v2.354.",
+  "references": [
+    "this repo: v2.354 (the screening mandate), v2.350 (birefringence -> g_4 g_R2 floor), v2.345 (graviton_fwd_c + efthedron_alpha are slack prefactors), v2.329 (birefringence caveat)",
+    "this repo: src/itb/constraints/submm_gravity.py (unscreened cap); graviton forward positivity + cross-sector EFThedron + anomaly cancellation (the CP-even g_R2-raising constraints)"
+  ]
+}
