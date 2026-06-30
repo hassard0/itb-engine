@@ -1,0 +1,55 @@
+{
+  "version": "v2.346",
+  "n_samples": 1200,
+  "seed": 0,
+  "joint_feasible_fraction": 0.4117,
+  "oat_independence_estimate": 0.3777,
+  "min_single_axis_oat_fraction": 0.7778,
+  "n_feasible": 494,
+  "top_violators": [
+    {
+      "constraint": "bnossw_monogamy",
+      "count": 279,
+      "rate": 0.2325
+    },
+    {
+      "constraint": "scalar_wgc",
+      "count": 270,
+      "rate": 0.225
+    },
+    {
+      "constraint": "matter_s3_positivity",
+      "count": 170,
+      "rate": 0.1417
+    },
+    {
+      "constraint": "complexity_cutoff",
+      "count": 123,
+      "rate": 0.1025
+    },
+    {
+      "constraint": "generalized_anomaly_inflow",
+      "count": 89,
+      "rate": 0.0742
+    },
+    {
+      "constraint": "cft_flat_space_bound",
+      "count": 72,
+      "rate": 0.06
+    }
+  ],
+  "consistency_checks": {
+    "enough_samples": true,
+    "joint_fraction_is_a_probability": true,
+    "joint_below_single_axis_oat": true,
+    "some_draws_feasible": true,
+    "top_violator_is_a_load_bearing_constraint": true
+  },
+  "all_checks_pass": true,
+  "finding": "Under JOINT uniform variation of all 11 O(1) prefactors over their declared bands, the constructed theory stays feasible only 41% of the time -- far below the >=78%-per-axis figure the one-at-a-time sweep (v2.345) reported, and close to the 38% an independent-breaks model would predict. So the v2.345 OAT view WAS optimistic, exactly as its caveat warned: the constructed point is genuinely marginal under joint O(1) ignorance -- each single prefactor leaves >=78% headroom, but varying all of them together puts the point outside the feasible region most of the time. The joint fraction sitting near the independence product means the six load-bearing breaks are roughly INDEPENDENT (they act through different constraints -- anomaly inflow, BNOSSW monogamy, the CFT bound, the complexity cutoff, matter s^3 positivity, scalar WGC -- rather than one common mode), so they compound multiplicatively rather than reinforcing or cancelling. The point is still a GENUINE feasible point (494 of 1200 draws feasible, and feasible at canonical), not a knife-edge artifact -- but its feasibility has a thin JOINT cushion, not a fat interior one. This is the honest, quantified completion of the v2.345 marginality picture: the constructed theory is the center of a small consistent+observed region whose walls are reached by joint O(1) prefactor motion well within the declared ignorance, so the result's robust content is its STRUCTURE (it exists, it beats the community frameworks, its qualitative features) rather than the precise feasibility of the single Chebyshev-center point under adversarial prefactor choices.",
+  "honest_scope": "The joint fraction depends on the SAMPLING MEASURE -- uniform-independent over each declared band is a convention; correlated priors (the prefactors are not physically independent) or different band widths would move the number. The bands are the engine's own factor-of-~2 conventions (PLAUSIBLE_RANGES), not published uncertainties, so the ~feasible-fraction is a statement about the engine's declared ignorance, not a physical probability. It is a Monte Carlo estimate (finite n, one seed) so it carries sampling error (~1-2% at this n). 'Feasible' is the binary all-constraints-satisfied for the single constructed point under the toy-basis stack with the 4 data constraints (incl. the cosmic-birefringence hint, v2.329 caveat). The OAT-independence estimate reuses the 9-point grid fractions from v2.345, themselves coarse. Robust content: joint feasibility is markedly below the single-axis OAT figure and near the independence product, so the constructed point is marginal (not robust) under joint O(1) variation, and the load-bearing breaks act through distinct constraints. Toy basis. The honest joint-excursion completion of the v2.345 sensitivity audit.",
+  "references": [
+    "this repo: v2.345 (OAT prefactor sweep, the single-axis precursor), v2.344 (anomaly_rho), v2.333 (~3D tiny region), v2.332 (non-convex family), v2.329 (birefringence caveat)",
+    "this repo: experiments/stack.py (PLAUSIBLE_RANGES, 11 O(1) prefactors)"
+  ]
+}
