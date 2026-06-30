@@ -1,0 +1,88 @@
+{
+  "version": "v2.287",
+  "method": "sweep the knife-edge positivity prefactors graviton_fwd_c in [0.8,1.6] and efthedron_alpha in [0.8,1.5] over the documented realism ranges; remeasure the wedge's g_R2 ceiling and x = g_R3/g_R2 ceiling at each",
+  "prefactor_samples": [
+    {
+      "graviton_fwd_c": 0.8,
+      "efthedron_alpha": 0.8,
+      "x_ceiling": 1.2,
+      "gR2_ceiling": 0.15
+    },
+    {
+      "graviton_fwd_c": 0.8,
+      "efthedron_alpha": 1.1,
+      "x_ceiling": 1.1,
+      "gR2_ceiling": 0.15
+    },
+    {
+      "graviton_fwd_c": 0.8,
+      "efthedron_alpha": 1.5,
+      "x_ceiling": 0.8,
+      "gR2_ceiling": 0.15
+    },
+    {
+      "graviton_fwd_c": 1.2,
+      "efthedron_alpha": 0.8,
+      "x_ceiling": 0.8,
+      "gR2_ceiling": 0.15
+    },
+    {
+      "graviton_fwd_c": 1.2,
+      "efthedron_alpha": 1.1,
+      "x_ceiling": 0.8,
+      "gR2_ceiling": 0.15
+    },
+    {
+      "graviton_fwd_c": 1.2,
+      "efthedron_alpha": 1.5,
+      "x_ceiling": 0.8,
+      "gR2_ceiling": 0.15
+    },
+    {
+      "graviton_fwd_c": 1.6,
+      "efthedron_alpha": 0.8,
+      "x_ceiling": 0.6,
+      "gR2_ceiling": 0.15
+    },
+    {
+      "graviton_fwd_c": 1.6,
+      "efthedron_alpha": 1.1,
+      "x_ceiling": 0.6,
+      "gR2_ceiling": 0.15
+    },
+    {
+      "graviton_fwd_c": 1.6,
+      "efthedron_alpha": 1.5,
+      "x_ceiling": 0.6,
+      "gR2_ceiling": 0.15
+    }
+  ],
+  "x_ceiling_range": [
+    0.6,
+    1.2
+  ],
+  "gR2_ceiling_range": [
+    0.15,
+    0.15
+  ],
+  "canonical": {
+    "graviton_fwd_c": 1.2,
+    "efthedron_alpha": 1.1,
+    "x_ceiling": 0.8,
+    "gR2_ceiling": 0.15
+  },
+  "consistency_checks": {
+    "wedge_exists_for_all_prefactors": true,
+    "gR2_ceiling_robust_to_positivity_prefactors": true,
+    "x_ceiling_prefactor_sensitive": true,
+    "positivity_framework_verdicts_NOT_robust": true,
+    "canonical_reproduces_v286_picture": true
+  },
+  "all_checks_pass": true,
+  "finding": "Applying the engine's own realism program to the v2.286 wedge splits the two walls sharply -- and, honestly, demotes one of the v2.286 conclusions. The g_R2 ceiling is ROCK-SOLID ROBUST: sweeping the positivity prefactors over their full documented ranges leaves it at 0.15 for EVERY sample (spread 0.00), because it is set by anomaly cancellation and the repulsive-force conjecture, not by the tunable positivity knobs -- so 'higher-derivative gravity carries g_R2 only up to ~0.2' is a genuinely robust conclusion. But the positivity ratio ceiling x = g_R3/g_R2 is strongly prefactor-SENSITIVE, ranging from 0.60 (tight graviton_fwd_c=1.6) to 1.20 (loose 0.8) -- canonical 0.80 -- and that range STRADDLES the framework ratios. Since string/AS/cdt sit at x ~ 0.67-0.75 and lqg at x = 1.0, and the x ceiling sweeps from 0.6 to 1.2 across the engine's O(1) uncertainty, WHICH frameworks fail the positivity wall is NOT robust: at loose prefactors lqg's x=1.0 is inside the wall (it would pass the positivity), and at tight prefactors string's x=0.75 is outside it (it would fail too). So the canonical-prefactor v2.286 picture (lqg out, the others in) is the CANONICAL verdict, not a prefactor-robust one -- a realism-program caveat on v2.282/v2.286 that this sweep surfaces rather than buries. What survives robustly is weaker but real: the feasible wedge EXISTS for every prefactor, and its g_R2 wall is fixed; only the fine positivity-ratio verdicts on individual frameworks live within the prefactor noise.",
+  "honest_scope": "An engine-driven realism sweep using the real build_stack(prefactors=...) / check() API over the repo's DOCUMENTED prefactor ranges (graviton_fwd_c [0.8,1.6], efthedron_alpha [0.8,1.5]); the wedge boundaries are re-measured with the same v2.285/v2.286 hand-built matter completion, resolved to the 0.01 ceiling step. Only the two dominant positivity prefactors are swept (a 3x3 endpoints+canonical grid), which is already enough to show the x verdict is non-robust; a full joint sweep would only widen the x range further. The g_R2 ceiling robustness is structural (anomaly/repulsive are not prefactors). The honest headline is the DEMOTION of the v2.286 lqg-vs-others positivity separation to a canonical-only statement -- preserved, not papered over, as the realism program prescribes. Toy basis with O(1) representative prefactors. A robustness / realism result on the v2.286 geometry, not a new constraint or a claim about a physical theory.",
+  "references": [
+    "this repo: v2.286 (feasible curvature wedge), v2.282 (lqg anomaly), v2.262 (moment tower)",
+    "this repo: experiments/stack.py CANONICAL + documented prefactor ranges"
+  ]
+}
