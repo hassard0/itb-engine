@@ -1,0 +1,71 @@
+{
+  "version": "v2.321",
+  "cosmic_birefringence": {
+    "beta_measured_deg": 0.34,
+    "sigma_deg": 0.09,
+    "kappa_beta_deg_per_unit": 3.4,
+    "exclusion_of_parity_even_sigma": 3.6
+  },
+  "frameworks_vs_data": [
+    {
+      "framework": "pure_gr",
+      "g_R2_parity": 0.0,
+      "beta_pred_deg": 0.0,
+      "cosmic_bire_data_margin": -0.16000000000000003,
+      "data_favored": false
+    },
+    {
+      "framework": "string_tree_eft",
+      "g_R2_parity": 0.0,
+      "beta_pred_deg": 0.0,
+      "cosmic_bire_data_margin": -0.16000000000000003,
+      "data_favored": false
+    },
+    {
+      "framework": "asymptotic_safety",
+      "g_R2_parity": 0.0,
+      "beta_pred_deg": 0.0,
+      "cosmic_bire_data_margin": -0.16000000000000003,
+      "data_favored": false
+    },
+    {
+      "framework": "lqg_induced",
+      "g_R2_parity": 0.08,
+      "beta_pred_deg": 0.272,
+      "cosmic_bire_data_margin": 0.11199999999999999,
+      "data_favored": true
+    },
+    {
+      "framework": "cdt",
+      "g_R2_parity": 0.0,
+      "beta_pred_deg": 0.0,
+      "cosmic_bire_data_margin": -0.16000000000000003,
+      "data_favored": false
+    }
+  ],
+  "data_required_parity_threshold": 0.0475,
+  "data_central_parity": 0.1,
+  "data_band_1sigma_parity": [
+    0.07352941176470588,
+    0.12647058823529414
+  ],
+  "anomaly_preferred_parity": 0.038,
+  "joint_consistency_plus_data_window": [
+    0.0475,
+    0.078
+  ],
+  "consistency_checks": {
+    "parity_even_frameworks_excluded_by_data": true,
+    "data_requires_nonzero_parity": true,
+    "data_central_value_positive_definite_handedness": true,
+    "consistency_and_data_agree_on_sign": true,
+    "joint_consistency_plus_data_window_nonempty": true
+  },
+  "all_checks_pass": true,
+  "finding": "The measured cosmic birefringence favors parity-violating gravity, and it converges with the consistency analysis. The engine's cosmic_birefringence_data constraint encodes the Minami-Komatsu / Eskilt-Komatsu measurement beta = 0.34 +/- 0.09 deg -- nonzero at ~3.6 sigma -- via beta_pred = 3.4 deg * g_R2_parity, so a nonzero beta DEMANDS a parity-odd coupling. Read against the candidates this is a clean data discriminator: the four parity-EVEN frameworks (pure_gr, string_tree_eft, asymptotic_safety, cdt) all predict beta = 0 and are DISFAVORED by the data (cosmic_bire_data margin -0.16, i.e. excluded at ~3.6 sigma), while the data REQUIRES g_R2_parity >= 0.048 (its 2-sigma lower edge) and centers on g_R2_parity = 0.10 (1-sigma band [0.074, 0.126]). lqg (parity 0.08) sits inside that band; the constructed preferred framework's anomaly-preferred parity (0.038, v2.318) is below the 2-sigma data edge -- so consistency and data AGREE on the sign and the existence of parity violation (both want g_R2_parity > 0, right-handed), with the data preferring a somewhat larger magnitude than anomaly matching alone. Crucially they are mutually satisfiable: a constructed framework with parity in the joint window [0.048, 0.078] passes BOTH all the consistency constraints AND the cosmic birefringence data. So three independent lines now point the same way -- a consistency condition (anomaly matching, v2.318), a real measurement (cosmic birefringence, this cycle), and a future observable (chiral primordial GW, v2.319, sourced by the SAME g_R2_parity) -- all selecting mild, right-handed parity violation and disfavoring the parity-even frameworks. The new-theory program's parity finding is thus not just internally motivated but aligned with the one tantalizing parity-odd signal in current cosmological data.",
+  "honest_scope": "The discriminator and the sign are robust; the exact magnitude is encoding-dependent. The cosmic-birefringence DETECTION is itself ~3.6 sigma (Minami-Komatsu 2020; Eskilt-Komatsu 2022) -- tantalizing, not confirmed -- and the engine's beta_pred = 3.4 deg * g_R2_parity is an order-of-magnitude normalization (the engine's docstring says so), so the data-required parity (~0.047 threshold, ~0.10 central) carries that O(1) normalization uncertainty; what is robust is that a NONZERO measured beta requires g_R2_parity != 0 with sign(beta) = sign(g_R2_parity), excluding parity-even gravity. The frameworks' exclusion (parity-even -> beta = 0 -> disfavored) is exact given the data constraint. The 'convergence' is a same-sign, same-order-of-magnitude agreement between the anomaly optimum (0.038) and the data band (~0.07-0.13 at 1 sigma), not a precise coincidence -- the data wants somewhat more parity than anomaly matching alone, and the joint window is where both are satisfied. The chiral-GW link (v2.319) shares the same schematic g_R2_parity -> observable map. This is real published data read through the engine's toy encoding; the qualitative alignment is the result, not a fit. Toy basis, O(1) prefactors.",
+  "references": [
+    "Minami & Komatsu PRL 125 221301 (2020); Eskilt & Komatsu 2022 (cosmic birefringence beta=0.34+/-0.09 deg)",
+    "this repo: v2.318 (anomaly matching prefers parity), v2.319 (chiral primordial GW), src/itb/constraints/cosmic_birefringence.py"
+  ]
+}
