@@ -1,0 +1,75 @@
+{
+  "version": "v2.327",
+  "box_feasible_fraction": 0.0005,
+  "n_box_samples": 20000,
+  "coupling_extents": {
+    "g_4": {
+      "interval": [
+        0.401,
+        0.593
+      ],
+      "width": 0.192,
+      "center": 0.529,
+      "relative_width": 0.363
+    },
+    "g_6": {
+      "interval": [
+        0.304,
+        0.448
+      ],
+      "width": 0.144,
+      "center": 0.4,
+      "relative_width": 0.36
+    },
+    "g_8": {
+      "interval": [
+        0.304,
+        0.53
+      ],
+      "width": 0.226,
+      "center": 0.4,
+      "relative_width": 0.565
+    },
+    "g_R2": {
+      "interval": [
+        0.115,
+        0.227
+      ],
+      "width": 0.112,
+      "center": 0.193,
+      "relative_width": 0.58
+    },
+    "g_R3": {
+      "interval": [
+        0.028,
+        0.16
+      ],
+      "width": 0.132,
+      "center": 0.09,
+      "relative_width": 1.467
+    },
+    "g_R2_parity": {
+      "interval": [
+        0.048,
+        0.078
+      ],
+      "width": 0.03,
+      "center": 0.06,
+      "relative_width": 0.5
+    }
+  },
+  "tightest_coupling": "g_R2_parity",
+  "consistency_checks": {
+    "constructed_point_is_feasible": true,
+    "theory_data_region_is_tiny": true,
+    "parity_is_the_tightest_pinned_coupling": true,
+    "parity_interval_matches_cosmic_birefringence_window": true,
+    "matter_sector_looser_than_parity": true
+  },
+  "all_checks_pass": true,
+  "finding": "The constructed both-consistent theory (v2.322) is tightly pinned: only 10/20000 points of a +/-0.25 coupling box around it are theory+data feasible (a fraction 5.0e-04), so the combined consistency and current-data constraints select a tiny region. And the pinning is DIFFERENTIAL -- the deterministic 1D feasible interval through the constructed point is narrowest for the parity coupling and widest for the matter sector: g_R2_parity is pinned to [0.048, 0.078] (width 0.030 -- exactly the cosmic-birefringence DATA window of v2.321), the leading curvature g_R2 to width ~0.11, the cubic g_R3 ~0.13, and the matter couplings g_4/g_6/g_8 the loosest at width 0.14-0.23. So the new theory's predictivity is concentrated in the PARITY sector -- the one piece pinned by a real measurement rather than only by consistency -- and that is precisely the sector that carries its falsifiable cosmological signatures (chiral primordial GW v2.319, gravitational leptogenesis v2.324, the baryon-asymmetry link). The theory is therefore most sharply predicted exactly where it is most testable: a tighter future cosmic-birefringence measurement, or a chiral-GW detection, narrows the parity window directly, while the matter/curvature sectors are left as a bounded but looser consistency-determined region that future matter-sector data (collider positivity, GW dispersion) would tighten. The combined theory+data constraints thus do not merely permit the constructed gravity -- they pin its observationally-relevant sector to a narrow, falsifiable window.",
+  "honest_scope": "All values are the engine's literal check() output under convex_hull + all four data constraints. The 1D extents are deterministic line searches through the constructed point (step 0.002) -- exact for THAT point's cross-sections; the full region is 6-dimensional and non-box, so the 1D widths characterize the region's extent through the chosen point, not its global diameter. The box-fraction (~5e-4) is from uniform sampling of a +/-0.25 box and is a rough size proxy (the region is small enough that only ~10 hits land), so it indicates 'tiny' robustly but its exact value is noisy. The parity window's width and its match to the cosmic-birefringence data window are the robust, data-pinned content; the matter/curvature widths depend on the O(1) constraint prefactors and the constructed center (convention-dependent). The cosmic-birefringence pinning carries its ~3.6-sigma-detection and order-of-magnitude-map caveats (v2.321). The qualitative result -- parity sharply pinned by data, matter/curvature looser by consistency -- is the durable content. Toy basis, O(1) prefactors. A rigorous extent-measurement completing the v2.322 existence result.",
+  "references": [
+    "this repo: v2.322 (theory+data existence), v2.321 (cosmic-birefringence parity window), v2.319/v2.324 (parity-sector signatures)"
+  ]
+}

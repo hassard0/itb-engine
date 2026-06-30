@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (437 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (438 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -486,3 +486,4 @@ Auto-generated front door to the full research program (437 notes). Regenerate w
 | v2.324 | [v2.324 - Gravitational leptogenesis: the preferred parity coupling lin](2026-06-30-v2.324-qnm-gravitational-leptogenesis.md) | A bold fresh swing into a new sector -- the matter-antimatter asymmetry. The same parity coupling |
 | v2.325 | [v2.325 - The active constraint core: which consistency conditions do t](2026-06-30-v2.325-qnm-active-constraint-core.md) | A rigorous, dictionary-free, engine-internal cycle (a deliberate return from the schematic-magnitude |
 | v2.326 | [v2.326 - The parity coupling is bounded below by both the swampland di](2026-06-30-v2.326-qnm-parity-hierarchy-bound.md) | A rigorous follow-up tying the v2.325 active-core finding (the swampland distance conjecture is the TOP |
+| v2.327 | [v2.327 - How predictive is the constructed theory? The extent of the t](2026-06-30-v2.327-qnm-theory-data-region-extent.md) | v2.322 showed the EXISTENCE of a higher-derivative gravity satisfying both theoretical consistency and the |
