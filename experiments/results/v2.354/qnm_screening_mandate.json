@@ -1,0 +1,29 @@
+{
+  "version": "v2.354",
+  "g_R2_max_unscreened": 0.06263,
+  "constructed_g_R2": 0.193,
+  "constructed_over_bound_factor": 3.08,
+  "constructed_violations_screened": [],
+  "constructed_violations_unscreened": [
+    "submm_gravity_yukawa_bound"
+  ],
+  "analytic_g4_min_for_unscreened": 0.5903,
+  "n_search": 30000,
+  "unscreened_feasible_point": null,
+  "unscreened_region_empty": true,
+  "consistency_checks": {
+    "constructed_violates_unscreened_bound": true,
+    "only_submm_fails_at_constructed_unscreened": true,
+    "constructed_feasible_when_screened": true,
+    "unscreened_region_empirically_empty": true,
+    "analytic_g4_floor_exceeds_half": true
+  },
+  "all_checks_pass": true,
+  "finding": "The constructed theory MANDATES screening of its R^2 fifth force: an unscreened dark-energy-scale f(R) scalaron is excluded. The submm_screened=True flag used throughout the program is therefore LOAD-BEARING, not a convenience. The unscreened Eot-Wash bound caps g_R2 <= 0.0626, but the constructed theory has g_R2 = 0.193 -- 3.1x above it -- and under the unscreened stack the constructed point fails ONLY the sub-mm bound (everything else holds), while when screened it is fully feasible. The high g_R2 is not an accident: the consistency + observed constraints FORCE it. Analytically, the anomaly-inflow budget (g_R2_parity^2 <= rho g_4 g_R2) plus the cosmic-birefringence floor (g_R2_parity >= 0.0471) give g_R2 >= 0.0471^2/(rho g_4) = 0.037/g_4, so meeting the unscreened cap would require g_4 >= 0.59 -- a thin sliver -- and the remaining constraints (graviton forward positivity, cross-sector EFThedron, anomaly cancellation, which also push g_R2 up) close even that: a search of 30000 random points over the plausible box under the unscreened stack finds NO feasible theory. So the unscreened consistent+observed region is empty, and the theory makes a definite third-channel prediction (after parity/birefringence and ringdown): the R^2 scalaron must be screened (chameleon / Vainshtein / dark-sector). This is falsifiable in the same Eot-Wash channel that motivates it -- a confirmed unscreened dark-energy-scale fifth force would exclude the constructed theory outright. It also reframes the parity headline's companion: the SAME birefringence floor + anomaly inflow that v2.350 used to lower-bound g_4 g_R2 is what pushes g_R2 past the Eot-Wash cap and forces screening.",
+  "honest_scope": "The emptiness of the unscreened region is an EMPIRICAL search result (a large random sample, not an analytic proof), but it is corroborated by the analytic lower bound on g_R2 (anomaly inflow + birefringence -> g_R2 >= 0.037/g_4, needing g_4 >= 0.59 even before the other three g_R2-raising constraints) and by the constructed point failing only the sub-mm bound unscreened. The g_R2_max ~ 0.063 is a DATA reading with order-of-magnitude uncertainty (the Eot-Wash curve points are read off the published figure, and the alpha=1/3 scalaron strength + the 2.4 meV dark-energy cutoff are the model inputs) -- so the exact 3.08x violation factor is soft, but the qualitative gap (g_R2 ~ 0.19 forced, cap ~ 0.06) is an order of magnitude clear. The result also inherits the anomaly prefactor rho (v2.344) and the cosmic-birefringence detection being real (v2.329): if birefringence is a systematic, g_R2_parity can vanish, the anomaly floor on g_R2 relaxes, and a small-g_R2 unscreened branch might reopen -- so the screening mandate is contingent on the same data as the parity headline. Robust content: the consistency+observed constraints force g_R2 well above the unscreened Eot-Wash cap, so the theory requires a screened scalaron -- a real, falsifiable third channel. Toy basis, O(1) prefactors.",
+  "references": [
+    "this repo: src/itb/constraints/submm_gravity.py (unscreened Eot-Wash cap g_R2 <= 0.063, alpha=1/3 f(R) scalaron); experiments/stack.py (submm_screened flag)",
+    "this repo: v2.350 (birefringence -> g_4 g_R2 floor, the same mechanism), v2.344 (anomaly rho), v2.329 (birefringence caveat), v2.347 (parity birefringence channel)",
+    "Lee et al PRL 124,101101 (2020); Kapner et al PRL 98,021101 (2007) (Eot-Wash sub-mm gravity)"
+  ]
+}
