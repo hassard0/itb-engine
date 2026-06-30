@@ -1,0 +1,47 @@
+{
+  "version": "v2.358",
+  "data_constraint_rows": [
+    {
+      "constraint": "cosmic_birefringence_data",
+      "signed_distance": 0.0129,
+      "classification": "BINDING",
+      "role": "parity channel (the one tight data constraint)"
+    },
+    {
+      "constraint": "submm_gravity_yukawa_bound",
+      "signed_distance_screened": 1.0,
+      "satisfied_unscreened": false,
+      "classification": "VACUOUS(screened)/LOAD-BEARING(unscreened)",
+      "role": "screening channel via config switch (v2.354)"
+    },
+    {
+      "constraint": "gw_speed_bound",
+      "ratio_to_bound": 2.253006944444445e-05,
+      "classification": "BLIND",
+      "role": "GW170817 speed test, frequency-blind to higher-derivative dispersion"
+    },
+    {
+      "constraint": "gw_dispersion_bound",
+      "signed_distance": 0.6388,
+      "classification": "SLACK",
+      "role": "intra-messenger dispersion, present but far from binding"
+    }
+  ],
+  "birefringence_signed_distance": 0.0129,
+  "gw_speed_ratio_to_bound": 2.253006944444445e-05,
+  "gw_dispersion_signed_distance": 0.6388,
+  "consistency_checks": {
+    "birefringence_is_binding": true,
+    "gw_speed_is_blind_not_binding": true,
+    "gw_dispersion_is_slack": true,
+    "submm_vacuous_screened_active_unscreened": true,
+    "birefringence_is_the_only_active_data_bind_when_screened": true
+  },
+  "all_checks_pass": true,
+  "finding": "Of the program's four ingested-data constraints, only ONE actively binds the constructed theory in the standard (screened) configuration: cosmic birefringence (signed-distance ~0.013 -- tight, the parity channel). The sub-mm gravity bound is VACUOUS as configured (screened) but LOAD-BEARING when unscreened (the screening channel, v2.354) -- a configuration switch, not a free bind. The two gravitational-wave-propagation constraints do NOT bind: gw_speed is BLIND (its deviation is ~2e-05 of the GW170817 bound, because higher-derivative gravity gives a frequency-SUPPRESSED dispersion ~(E_GW/E_cutoff)^2 ~ 1e-20 at LIGO frequencies, not the frequency-independent speed shift GW170817 tested), and gw_dispersion is SLACK (signed-distance ~0.64). This includes an honest self-correction: at 4-decimal display the gw_speed margin prints as +0.0000, which LOOKS like a knife-edge bind -- but the gw_speed bound is itself 5e-16, and the deviation is ~2e-5 of that, so the margin is essentially the FULL bound (maximally slack), not zero. The +0.0000 is a display artifact of a tiny absolute scale. So the consistent+observed region's data leverage is essentially birefringence (binding) plus submm-when-unscreened; the two GW constraints are honest sector-DOCUMENTATION (which experiment probes which operator) rather than active discriminators. This sharpens the whole data story: the program's single point of empirical failure is the birefringence detection (v2.329) precisely because it is the only data constraint that actually binds -- the GW constraints cannot rescue or refute the parity headline, and the screening channel's data role is a binary screened/unscreened switch, not a graded fit.",
+  "honest_scope": "The classification is exact (the engine's own margins / ratio-to-bound at the constructed point), and the self-correction is genuine -- the gw_speed +0.0000 is the full 5e-16 bound, verified by its ratio_to_bound ~ 2e-5. The thresholds (BINDING < 0.05 signed-distance, BLIND < 1e-3 ratio) are conventional cut points, but the separations are large (birefringence 0.013 vs gw_dispersion 0.64 vs gw_speed 2e-5), so the verdicts are not threshold-sensitive. This is the constructed POINT's data-leverage; over the family the birefringence tightness varies but it remains the binding data constraint (v2.333: parity is the stiffest direction). The gw_speed blindness is a physics statement from the engine's dispersion model (frequency-suppressed (E_GW/E_cutoff)^2) with its O(1) kappa_c and the dark-energy cutoff -- robust by orders of magnitude (the deviation is ~1e-20 vs a 5e-16 bound), but it would bite for an ultra-low cutoff below a few micro-eV (documented in the constraint). submm's screened/unscreened switch carries the v2.354/v2.355 caveats. Toy basis, O(1) prefactors. A data-leverage completeness audit with a recorded display-artifact self-correction.",
+  "references": [
+    "this repo: src/itb/constraints/gw_speed.py (frequency-blind), gw_dispersion.py, cosmic_birefringence.py, submm_gravity.py",
+    "this repo: v2.329 (birefringence is the single point of failure -- here shown to be the ONLY binding data constraint), v2.354/v2.355 (screening config switch), v2.333 (parity is the stiffest direction)"
+  ]
+}
