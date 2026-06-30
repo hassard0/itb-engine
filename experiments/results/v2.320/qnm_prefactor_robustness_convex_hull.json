@@ -1,0 +1,24 @@
+{
+  "version": "v2.320",
+  "n_draws": 60,
+  "jitter": "each of 11 prefactors * exp(U[ln 0.5, ln 2]) (log-uniform O(1)), rfc_form=convex_hull",
+  "fractions": {
+    "interior_nonempty": 0.6833333333333333,
+    "not_universal_exclusion": 0.13333333333333333,
+    "constructed_beats_community": 0.9833333333333333,
+    "lqg_is_boundary": 0.9166666666666666
+  },
+  "consistency_checks": {
+    "constructed_beats_community_prefactor_robust": true,
+    "lqg_is_the_boundary_prefactor_robust": true,
+    "community_feasibility_is_marginal_and_fragile": true,
+    "interior_can_vanish_under_jitter_documented": true
+  },
+  "all_checks_pass": true,
+  "finding": "Applying the realism program to the corrected arc -- jittering all 11 tunable constraint prefactors by an O(1) log-uniform factor (in [1/2, 2]) over 60 draws under the recommended convex_hull form -- splits the corrected results cleanly into a prefactor-ROBUST core and a prefactor-FRAGILE layer, and the split is itself the honest refinement. ROBUST: the constructed Chebyshev candidate is more robust than every community framework in 98% of draws, and lqg is the least-robust community framework in 92% -- so 'the engine prefers a constructed higher-derivative gravity over the named proposals' and 'lqg is the boundary framework' are not artifacts of the canonical prefactors; they survive the O(1) uncertainty. FRAGILE: the v2.317 statement that three community frameworks are feasible under convex_hull holds at only 13% of the prefactor draws -- in the other ~87% ALL four community frameworks are infeasible even under convex_hull. So the community higher-derivative frameworks are not comfortably consistent; they sit on the KNIFE'S EDGE -- marginally feasible at the canonical prefactors (margins ~ +0.005, v2.317), but pushed back out by most O(1) prefactor perturbations. The fully honest picture is therefore between the two earlier extremes: not the matter_product 'universal exclusion' artifact (v2.315/v2.316), and not the v2.317 'comfortably feasible' reading either, but MARGINALLY feasible on a thin prefactor sliver. What is solid across both the RFC-form correction and the prefactor uncertainty: a constructed framework robustly beats the named ones, and lqg is robustly the worst. (The strictly-feasible constructed interior itself exists in 68% of draws -- also marginal, consistent with the small ~0.005-0.03 worst-case margins throughout.)",
+  "honest_scope": "This is the realism program applied to the corrected claim: all values are the engine's literal check() output across a 60-draw O(1) log-uniform prefactor ensemble under convex_hull. The constructed candidate is a LIGHT coordinate ascent from the v2.317 point (18 iters, coarse) re-run per draw -- a conservative witness (a fuller optimization would only RAISE the 98% 'constructed beats community' fraction), not a global optimum. The jitter range [1/2, 2] is a representative O(1) choice; a wider range weakens the fractions, a narrower one strengthens them -- the qualitative split (constructed-beats-community robust; community-feasibility fragile) is the content, not the exact percentages. The 'knife's edge' reading is the honest synthesis of v2.315 (artifact exclusion), v2.317 (canonical-prefactor feasibility), and this ensemble (fragile feasibility). Only the 11 documented tunable prefactors are jittered; constraint functional forms and the convex_hull RFC are held fixed -- this tests house-number robustness, not street robustness. Toy basis. A robustness audit that refines, not overturns, the v2.316/v2.317 correction.",
+  "references": [
+    "this repo: v2.317 (corrected preferred framework), v2.316 (RFC-form correction), v2.313 (metric robustness)",
+    "the engine's 11 tunable prefactors (experiments/stack.py CANONICAL); the realism-program discipline"
+  ]
+}
