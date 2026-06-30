@@ -1,0 +1,25 @@
+{
+  "version": "v2.337",
+  "moment_tower_floor": 0.042,
+  "gR4_feasible_range": [
+    0.05,
+    0.6
+  ],
+  "gR4_range_width": 0.55,
+  "gR4_relative_spread": 1.69,
+  "parity_relative_spread": 0.15,
+  "ceiling_constraint": "complexity_cutoff",
+  "consistency_checks": {
+    "gR4_floor_is_the_moment_tower": true,
+    "gR4_range_is_wide": true,
+    "ringdown_much_looser_than_parity": true,
+    "gR4_ceiling_is_a_theory_constraint_not_data": true,
+    "ringdown_floor_firm_magnitude_loose": true
+  },
+  "all_checks_pass": true,
+  "finding": "The constructed theory's ringdown prediction is a firm FLOOR but a loose MAGNITUDE -- an honest asymmetry with the sharp parity prediction. The ringdown-active quartic curvature g_R4 spans a WIDE feasible range [0.05, 0.60] -- a relative spread of ~169%, roughly a 10x window -- whereas the parity prediction has only ~15% spread (v2.334). The floor is firm: it is the moment-tower mandate g_R4 >= g_R3^2/g_R2 = 0.042 (v2.336), so a nonzero minimum ringdown deviation is guaranteed. But the ceiling (0.60) is set by the complexity_cutoff -- a THEORY constraint -- and nothing in between pins g_R4, because NO data constraint reads it: g_R4 is the opt-in curvature-tower coupling, observationally unconstrained, so it is only theory-bounded. This is exactly why the ringdown is loose while the parity is sharp: the cosmic-birefringence data PINS the parity coupling (v2.334) but no current measurement touches g_R4. So the honest shape of the constructed theory's testability is: a SHARP parity prediction (data-pinned, the headline) and a FLOORED-BUT-LOOSE ringdown prediction (theory-bounded). The ringdown channel can therefore CONFIRM a minimum quartic-curvature deviation -- and a ringdown consistent with pure GR below the floor would REFUTE the theory -- but it does not sharply predict the deviation's size; a future curvature-sector measurement sensitive to g_R4 would sharpen the ringdown the way cosmic birefringence sharpened the parity. The v2.336 ringdown discriminator (ordering by floor) stands; this cycle adds that the floor, not the magnitude, is the firm part.",
+  "honest_scope": "The g_R4 range and the ceiling constraint are the engine's literal feasibility verdict with the curvature tower on; the floor (g_R3^2/g_R2) is exact. The exact range [0.05, 0.60] depends on the complexity-cutoff prefactor (c_max and the g_R4 weight as a dimension-8 operator), so the WIDTH is convention-dependent -- the robust content is the CONTRAST: the ringdown (g_R4) is only theory-bounded (floor firm, magnitude loose) because no data constraint reads it, while the parity is data-pinned (sharp). The ~15% parity spread is the v2.334 value (itself contingent on the birefringence data, v2.329). The g_R4->ringdown-shift size remains schematic (rank-1 qNM->R^4, v2.336), so 'a minimum ringdown deviation' refers to the g_R4 floor, not a sourced frequency shift. This is a curvature-sector (CP-even) characterization, independent of the cosmic-birefringence data. Toy basis, O(1) prefactors. A completion of v2.336 (floor -> full range).",
+  "references": [
+    "this repo: v2.336 (g_R4 ringdown floor), v2.334 (sharp parity prediction), v2.292 (moment tower), v2.325 (complexity cutoff)"
+  ]
+}
