@@ -1,0 +1,85 @@
+{
+  "version": "v2.359",
+  "unscreened_cap": 0.0626,
+  "parity_band_g_R2_parity": [
+    0.047,
+    0.153
+  ],
+  "fingerprints": [
+    {
+      "framework": "engine_constructed",
+      "beta_pred": 0.204,
+      "g_R2_parity": 0.06,
+      "ringdown_floor": 0.042,
+      "g_R2": 0.193,
+      "parity_status": "consistent",
+      "screening": "must-screen"
+    },
+    {
+      "framework": "pure_gr",
+      "beta_pred": 0.0,
+      "g_R2_parity": 0.0,
+      "ringdown_floor": 0.0,
+      "g_R2": 0.0,
+      "parity_status": "excluded(beta=0)",
+      "screening": "no-fifth-force/ok"
+    },
+    {
+      "framework": "string_tree_eft",
+      "beta_pred": 0.0,
+      "g_R2_parity": 0.0,
+      "ringdown_floor": 0.112,
+      "g_R2": 0.2,
+      "parity_status": "excluded(beta=0)",
+      "screening": "must-screen"
+    },
+    {
+      "framework": "asymptotic_safety",
+      "beta_pred": 0.0,
+      "g_R2_parity": 0.0,
+      "ringdown_floor": 0.067,
+      "g_R2": 0.15,
+      "parity_status": "excluded(beta=0)",
+      "screening": "must-screen"
+    },
+    {
+      "framework": "lqg_induced",
+      "beta_pred": 0.272,
+      "g_R2_parity": 0.08,
+      "ringdown_floor": 0.3,
+      "g_R2": 0.3,
+      "parity_status": "consistent",
+      "screening": "must-screen"
+    },
+    {
+      "framework": "cdt",
+      "beta_pred": 0.0,
+      "g_R2_parity": 0.0,
+      "ringdown_floor": 0.102,
+      "g_R2": 0.22,
+      "parity_status": "excluded(beta=0)",
+      "screening": "must-screen"
+    }
+  ],
+  "n_parity_even_excluded": 4,
+  "parity_consistent_frameworks": [
+    "engine_constructed",
+    "lqg_induced"
+  ],
+  "n_non_gr": 4,
+  "n_non_gr_must_screen": 4,
+  "consistency_checks": {
+    "parity_excludes_all_parity_even": true,
+    "constructed_parity_consistent": true,
+    "only_constructed_and_lqg_parity_consistent": true,
+    "screening_is_generic_all_non_gr": true,
+    "constructed_has_mildest_ringdown_floor": true
+  },
+  "all_checks_pass": true,
+  "finding": "Laying the named frameworks' observational signatures side by side across the three channels shows which channel actually discriminates -- and tempers one of the program's headlines. (1) The PARITY channel is the unique discriminator: cosmic birefringence needs g_R2_parity in [0.047, 0.153], so beta = 0 EXCLUDES the four parity-even frameworks (pure_gr, string_tree_eft, asymptotic_safety, cdt); only the constructed theory (beta_pred 0.204) and lqg_induced (beta_pred 0.272) are parity-consistent -- and lqg is theory-excluded elsewhere (v2.322), leaving the constructed theory uniquely consistent. (2) The SCREENING mandate is GENERIC, not distinctive: every non-GR framework has g_R2 above the unscreened Eot-Wash cap 0.063 (string 0.20, AS 0.15, cdt 0.22, lqg 0.30, constructed 0.19), so ALL of them require a screened R^2 scalaron -- screening does NOT discriminate the constructed theory from the community frameworks. This honestly tempers v2.354: the screening mandate is a real and falsifiable prediction, but it is a generic feature of higher-derivative gravity with sizable g_R2, shared by string/AS/cdt/lqg, not a fingerprint of the constructed theory specifically. Only pure_gr escapes screening (it has no R^2 term) -- but pure_gr is parity-excluded. (3) The RINGDOWN floor ORDERS the frameworks: the constructed theory has the mildest nonzero floor (0.042 vs AS 0.067, cdt 0.102, string 0.112, lqg 0.300), consistent with v2.336 -- a fingerprint, not yet an exclusion (no ringdown data). Net: the constructed theory's OBSERVATIONAL distinctiveness lives entirely in the parity channel; its ringdown is the mildest and its screening is generic. So the parity (birefringence) datum is not just the only binding data constraint (v2.358) but the only channel that observationally SEPARATES the constructed theory from the named frameworks.",
+  "honest_scope": "The fingerprints are exact arithmetic on the engine's encoded framework couplings, but those couplings are the engine's TOY encodings of each framework (e.g. 'string_tree_eft' is the toy (0.5,0.4,0.4,0.2,...) point, NOT the actual Veneziano coefficients), so the per-channel numbers are relative statements among the engine's framework set, not literal predictions of real string theory / AS / CDT / LQG. The beta map (3.4 deg * g_R2_parity) and the Eot-Wash cap are the same toy/order-of-magnitude inputs as the per-channel cycles (v2.347/v2.354). The parity exclusion of the parity-even four rests on the birefringence detection being real (v2.329); if it is a systematic, beta = 0 is allowed and the parity channel stops discriminating (then NO channel separates the frameworks, since screening is generic and ringdown has no data) -- a sharp statement of how much rides on birefringence. The ringdown floor magnitudes are coupling ratios, not sourced frequency shifts (rank-1 map, v2.336). Robust content: parity is the discriminating channel, screening is generic across non-GR frameworks, and the constructed theory has the mildest ringdown. Toy basis, O(1) prefactors. A per-channel framework fingerprint joining v2.322 and v2.356.",
+  "references": [
+    "this repo: v2.322 (frameworks scored on theory+data), v2.356 (three-channel falsifiability map), v2.354 (screening mandate -- here shown generic), v2.336 (constructed has mildest ringdown), v2.358 (birefringence is the only binding data constraint)",
+    "this repo: v2.329 (birefringence caveat), v2.342 (constructed closest to string in coupling space)"
+  ]
+}
