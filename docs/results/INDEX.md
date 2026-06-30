@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (406 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (407 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -455,3 +455,4 @@ Auto-generated front door to the full research program (406 notes). Regenerate w
 | v2.293 | [v2.293 - The cross-sector moment principle: matter and curvature share](2026-06-29-v2.293-qnm-cross-sector-moment-principle.md) | SECOND SLICE of the new-theory arc (swing for breakthroughs; honest negatives reported). v2.292 gave |
 | v2.294 | [v2.294 - The rigorous cross-sector bound (and an honest correction to ](2026-06-29-v2.294-qnm-cross-sector-tilted-hankel.md) | THIRD SLICE of the new-theory arc (swing for breakthroughs; honest negatives reported). v2.293 proposed |
 | v2.295 | [v2.295 - When does the shared spectrum bite? The cross-sector constrai](2026-06-29-v2.295-qnm-cross-sector-weight-structure.md) | FOURTH SLICE of the new-theory arc. v2.293 proposed the shared-spectral-density cross-sector principle |
+| v2.296 | [v2.296 - The cutoff bracket: a derived lower bound on the relative cur](2026-06-29-v2.296-qnm-cross-sector-cutoff-bracket.md) | FIFTH SLICE of the new-theory arc, completing the cross-sector characterization. The v2.295 map left a |
