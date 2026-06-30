@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (455 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (456 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -504,3 +504,4 @@ Auto-generated front door to the full research program (455 notes). Regenerate w
 | v2.342 | [v2.342 - The constructed theory is string-like in two independent sens](2026-06-30-v2.342-qnm-string-like-two-senses.md) | The trilogy (v2.338-v2.341) concluded the constructed theory's UV completion must be string-like (unitarity |
 | v2.343 | [v2.343 - The matter sector requires a multi-state tower, not a single ](2026-06-30-v2.343-qnm-spectral-tower.md) | The trilogy (v2.338 unitarity, v2.339 causality) concluded the constructed theory's UV is a higher-spin |
 | v2.344 | [v2.344 - How robust is the data-pinned parity window to the anomaly-in](2026-06-30-v2.344-qnm-parity-prefactor-robustness.md) | The program's most load-bearing -- and most-caveated -- result is the parity prediction: the constructed |
+| v2.345 | [v2.345 - Which of the engine's 11 O(1) prefactors is the constructed t](2026-06-30-v2.345-qnm-prefactor-sensitivity-sweep.md) | v2.344 audited ONE prefactor (`anomaly_rho`) against ONE result (the parity window). The honest global |
