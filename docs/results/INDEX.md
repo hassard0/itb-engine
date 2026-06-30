@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (401 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (402 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -450,3 +450,4 @@ Auto-generated front door to the full research program (401 notes). Regenerate w
 | v2.288 | [v2.288 - Synthesis capstone: the engine feasible-region investigation ](2026-06-29-v2.288-qnm-feasible-region-synthesis.md) | Seven cycles turned the loop back from a long from-scratch phenomenology run to the engine itself and |
 | v2.289 | [v2.289 - Relativistic stellar structure: the TOV equation, the Buchdah](2026-06-29-v2.289-qnm-tov-compactness.md) | A fresh sector (relativistic astrophysics) bridging the v2.273-v2.277 black-hole thread and the |
 | v2.290 | [v2.290 - The neutron-star maximum mass: the TOV limit and the stabilit](2026-06-29-v2.290-qnm-tov-maximum-mass.md) | Builds on v2.289 (TOV machinery, Buchdahl bound). Why can't a neutron star be arbitrarily heavy? |
+| v2.291 | [v2.291 - The tidal deformability of a neutron star: the GW170817 obser](2026-06-29-v2.291-qnm-ns-tidal-deformability.md) | Closes the loop between the relativistic stellar structure of v2.289/v2.290 (TOV, Buchdahl, maximum |

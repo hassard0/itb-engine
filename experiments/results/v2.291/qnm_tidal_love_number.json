@@ -1,0 +1,28 @@
+{
+  "version": "v2.235",
+  "method": "static (omega=0) even-parity Schwarzschild perturbation mapped to the associated Legendre equation (x=r/M-1, m=2); the horizon-regular solution is the polynomial P_l^2 with no decaying tail -> k_l = 0; verified analytically (ODE residual) and by direct integration",
+  "love_numbers": [
+    {
+      "l": 2,
+      "P_l2_ode_residual": 0.0,
+      "is_polynomial_degree_l": true,
+      "integrated_tail_fraction": 3.122494649322888e-10,
+      "love_number_k_l": 0.0
+    },
+    {
+      "l": 3,
+      "P_l2_ode_residual": 0.0,
+      "is_polynomial_degree_l": true,
+      "integrated_tail_fraction": 4.933433643084337e-10,
+      "love_number_k_l": 0.0
+    }
+  ],
+  "all_zero": true,
+  "finding": "The Schwarzschild black-hole tidal Love numbers VANISH (electric-type, l=2 and l=3). The horizon-regular static perturbation is the associated Legendre polynomial P_l^2(x) (P_2^2 = 3(x^2-1), P_3^2 = 15x(x^2-1)), which solves the perturbation ODE to machine precision (residual < 1e-9) and is a PURE growing polynomial -- it carries no x^{-l-1} induced-response tail (direct integration confirms a tail fraction < 1e-6), so the induced multipole is zero and k_l = 0 exactly. This is the sharp GR prediction (Binnington-Poisson; Damour-Nagar): a measured nonzero tidal Love number would falsify the black-hole hypothesis and signal an exotic compact object or new physics -- a clean complement to the ringdown tests, probed by LIGO/Virgo through the inspiral waveform phase rather than the post-merger ringdown.",
+  "honest_scope": "Static (conservative), electric-type (even-parity), l=2 and l=3, 4D Schwarzschild (non-rotating): in this case k_l = 0 EXACTLY (verified). Known subtleties beyond this scope: the magnetic (odd-parity) Love numbers also vanish for Schwarzschild but the analytic continuation in l has a logarithmic-running subtlety; KERR has nonzero DYNAMICAL (frequency-dependent) and dissipative tidal responses; and higher-curvature / exotic objects give nonzero k_l (the signal). This is the GR baseline against which those are measured, not a new bound. Parity-odd g_R4_c3 stays dark (v2.209).",
+  "references": [
+    "Binnington & Poisson, PRD 80 (2009) 084018 -- relativistic tidal Love numbers",
+    "Damour & Nagar, PRD 80 (2009) 084035; Hinderer, ApJ 677 (2008) 1216",
+    "this repo: v2.218 (Zerilli/static perturbation machinery)"
+  ]
+}
