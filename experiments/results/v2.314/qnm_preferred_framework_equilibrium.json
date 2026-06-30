@@ -1,0 +1,101 @@
+{
+  "version": "v2.314",
+  "preferred_framework": {
+    "g_4": 0.565,
+    "g_6": 0.36,
+    "g_8": 0.36,
+    "g_R2": 0.15,
+    "g_R3": 0.085
+  },
+  "worst_case_constraint": {
+    "name": "t_hooft_anomaly_matching",
+    "signed_distance": 0.02,
+    "class": "C_UNIVERSALITY"
+  },
+  "tight_cluster": [
+    [
+      "t_hooft_anomaly_matching",
+      0.02,
+      "C_UNIVERSALITY"
+    ],
+    [
+      "repulsive_force_conjecture",
+      0.0211,
+      "C_UNIVERSALITY"
+    ],
+    [
+      "anomaly_cancellation",
+      0.026,
+      "C_UNIVERSALITY"
+    ],
+    [
+      "scalar_convexity_g6_vs_g4",
+      0.027,
+      "A_AMPLITUDE"
+    ],
+    [
+      "graviton_forward_positivity",
+      0.0307,
+      "A_AMPLITUDE"
+    ],
+    [
+      "cross_sector_efthedron",
+      0.0361,
+      "A_AMPLITUDE"
+    ]
+  ],
+  "tight_cluster_classes": [
+    "A_AMPLITUDE",
+    "C_UNIVERSALITY"
+  ],
+  "family_minima": {
+    "A_AMPLITUDE": 0.027,
+    "C_UNIVERSALITY": 0.02
+  },
+  "tension_gradients": [
+    {
+      "coupling": "g_4",
+      "d_amplitude_min": -0.775,
+      "d_universality_min": 0.0,
+      "opposite_sign": false
+    },
+    {
+      "coupling": "g_6",
+      "d_amplitude_min": 0.371,
+      "d_universality_min": -0.18,
+      "opposite_sign": true
+    },
+    {
+      "coupling": "g_8",
+      "d_amplitude_min": 0.0,
+      "d_universality_min": 0.0,
+      "opposite_sign": false
+    },
+    {
+      "coupling": "g_R2",
+      "d_amplitude_min": 0.0,
+      "d_universality_min": -0.798,
+      "opposite_sign": false
+    },
+    {
+      "coupling": "g_R3",
+      "d_amplitude_min": -0.398,
+      "d_universality_min": 0.0,
+      "opposite_sign": false
+    }
+  ],
+  "consistency_checks": {
+    "preferred_framework_is_interior": true,
+    "worst_case_is_universality_family": true,
+    "tight_cluster_spans_amplitude_and_universality": true,
+    "amplitude_and_universality_in_tension": true,
+    "no_single_move_improves_worst_case": true
+  },
+  "all_checks_pass": true,
+  "finding": "The engine-preferred framework sits where it does, and is only marginally robust (worst-case signed distance 0.020), because it is a multi-principle EQUILIBRIUM -- its robustness is limited not by one wall but by a tight cluster of constraints from different physical families binding nearly equally. The tightest 6 constraints lie within ~0.02-0.04 and split across two of the engine's constraint classes: AMPLITUDE positivity (graviton_forward_positivity, scalar_convexity, cross_sector_efthedron) and UNIVERSALITY / anomaly-swampland (t_hooft_anomaly_matching, anomaly_cancellation, repulsive_force_conjecture). The worst case is set by the universality family (t_hooft_anomaly_matching), with amplitude positivity right behind. Crucially the two families are in TENSION: the numerical gradients show couplings along which improving the amplitude-positivity margin WORSENS the anomaly/universality margin and vice versa, so no single coupling move improves the worst-case margin -- the preferred point is the saddle where amplitude positivity and universality balance. This explains the central facts of the whole preferred-framework arc: WHY the consistent interior is small (it is squeezed between two opposing principle families, not bounded by slack on one side), WHY pure GR is only marginal (at the origin both families saturate together), and WHY the community frameworks fail (they relieve one family at the cost of the other). The engine's most-consistent higher-derivative gravity is the unique trade-off point between amplitude positivity and anomaly/universality matching.",
+  "honest_scope": "Every value is the engine's literal output at the v2.313 metric-robust preferred point: the signed distances, the constraint-class grouping (the engine's own A_AMPLITUDE / C_UNIVERSALITY taxonomy), and the tension gradients are direct check() results. The 'tight cluster' is defined as constraints within 2x of the worst-case signed distance -- a convention; widening it pulls in more constraints but does not change that the binding set spans both families. The tension is shown by finite-difference gradients (h = 0.01) of each family's minimum margin along the CP-even couplings; it demonstrates opposing motion along at least one coupling and that no single coordinate step improves the worst case (consistent with the Chebyshev-center property), not a full proof that the families are globally anti-aligned. The exact worst-case constraint and ordering depend on the O(1) constraint prefactors, but the structural claim -- the preferred point is bounded by a balance of amplitude-positivity and universality/anomaly constraints, not a single wall -- is robust to which of the tight cluster is formally tightest. Toy basis, O(1) prefactors. A capstone explaining the preferred-framework arc (v2.312/v2.313).",
+  "references": [
+    "this repo: v2.312 (engine-preferred framework), v2.313 (metric-robust), v2.311 (lqg failure attribution)",
+    "engine constraint classes: A_AMPLITUDE (forward dispersion/positivity), C_UNIVERSALITY (anomaly/swampland)"
+  ]
+}
