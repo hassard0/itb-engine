@@ -1,0 +1,78 @@
+{
+  "version": "v2.298",
+  "method": "extend the v2.292 parity-blind curvature moment tower to the engine's left/right helicity split: (g_R3 +/- g_R3_p)^2 <= (g_R2 +/- g_R2_p)(g_R4 +/- g_R4_p); read off the forced g_R4 and the parity-odd g_R4_p per framework",
+  "framework_helicity": [
+    {
+      "framework": "pure_gr",
+      "has_curvature": false
+    },
+    {
+      "framework": "string_tree_eft",
+      "has_curvature": true,
+      "parity_violating": false,
+      "g_R2_parity": 0.0,
+      "g_R3_parity": 0.0,
+      "parity_blind_g_R4": 0.11249999999999999,
+      "floor_L": 0.11249999999999999,
+      "floor_R": 0.11249999999999999,
+      "g_R4_forced": 0.11249999999999999,
+      "g_R4_parity_forced": 0.0,
+      "ringdown_splits": false
+    },
+    {
+      "framework": "asymptotic_safety",
+      "has_curvature": true,
+      "parity_violating": false,
+      "g_R2_parity": 0.0,
+      "g_R3_parity": 0.0,
+      "parity_blind_g_R4": 0.06666666666666668,
+      "floor_L": 0.06666666666666668,
+      "floor_R": 0.06666666666666668,
+      "g_R4_forced": 0.06666666666666668,
+      "g_R4_parity_forced": 0.0,
+      "ringdown_splits": false
+    },
+    {
+      "framework": "lqg_induced",
+      "has_curvature": true,
+      "parity_violating": true,
+      "g_R2_parity": 0.08,
+      "g_R3_parity": 0.04,
+      "parity_blind_g_R4": 0.3,
+      "floor_L": 0.30421052631578943,
+      "floor_R": 0.30727272727272736,
+      "g_R4_forced": 0.3057416267942584,
+      "g_R4_parity_forced": -0.0015311004784689664,
+      "ringdown_splits": true
+    },
+    {
+      "framework": "cdt",
+      "has_curvature": true,
+      "parity_violating": false,
+      "g_R2_parity": 0.0,
+      "g_R3_parity": 0.0,
+      "parity_blind_g_R4": 0.10227272727272727,
+      "floor_L": 0.10227272727272727,
+      "floor_R": 0.10227272727272727,
+      "g_R4_forced": 0.10227272727272727,
+      "g_R4_parity_forced": 0.0,
+      "ringdown_splits": false
+    }
+  ],
+  "consistency_checks": {
+    "helicity_towers_valid": true,
+    "parity_conserving_no_odd_quartic": true,
+    "parity_conserving_reduces_to_v292": true,
+    "parity_violating_forces_dark_g_R4_parity": true,
+    "parity_violating_predicts_ringdown_split": true,
+    "only_lqg_is_parity_violating": true
+  },
+  "all_checks_pass": true,
+  "finding": "Splitting the curvature moment tower by graviton helicity DERIVES the previously-dark parity-odd Riemann^4 coefficient from consistency. The engine already splits the graviton into left and right helicities with separate positivity bounds; extending that split to the new quartic level gives two helicity-resolved Cauchy-Schwarz towers, (g_R3 +/- g_R3_p)^2 <= (g_R2 +/- g_R2_p)(g_R4 +/- g_R4_p), whose floors fix BOTH the parity-even g_R4 and the parity-ODD g_R4_p together. For the parity-conserving frameworks (string_tree_eft, asymptotic_safety, cdt: g_*_parity = 0) the two helicity towers coincide, so g_R4_p = 0 and the result reduces exactly to the v2.292 parity-blind mandate -- no parity-odd quartic, no ringdown splitting. But lqg_induced, the lone parity-violating framework (g_R2_parity = 0.08, g_R3_parity = 0.04), has DIFFERENT left and right floors (L = 0.3042, R = 0.3073), so the helicity towers FORCE a nonzero parity-odd Riemann^4 coefficient g_R4_p = -0.00153 -- the Bresciani Im(K_minus) / g_R4_c3 component that v2.209 found 'dark' (not source-backed) is here ILLUMINATED, its floor derived from the lower parity couplings by consistency rather than imported. And because the left and right graviton modes carry different Riemann^4 deformations, the helicity towers PREDICT a parity-split ringdown for any parity-violating UV completion -- exactly the isospectrality-breaking discriminator of v2.218, now forced by the moment structure. So a single idea (resolve the curvature moment tower by helicity) extends the g_R4 mandate, derives the dark parity-odd quartic, and ties the new operator to a concrete ringdown signature -- the kind of cross-connecting new structure the arc was for.",
+  "honest_scope": "The helicity-resolved towers are the left/right analog of the engine's existing helicity positivity (LeftHanded/RightHandedGravitonPositivity at g_R2), now extended to the new quartic g_R4 -- exact Cauchy-Schwarz given the helicity decomposition. The forced g_R4_p is the MANDATE FLOOR (a lower bound from the two helicity towers, like the v2.292 g_R4 floor), not a full determination of the un-source-backed parity-odd operator; for lqg's small parity couplings it is small (~1.6e-3). 'Illuminates the dark component' means consistency DERIVES a floor for g_R4_c3 from the lower parity couplings -- it does NOT resolve the v2.209 sourcing gap (the operator's normalization / sign convention still needs the literal dispersion derivation). The parity-split-ringdown connection to v2.218 is structural (left and right modes carry different deformations); the magnitude inherits the v2.209 dark-parity and O(1)-prefactor caveats. Only lqg is parity-violating among the engine's frameworks. A new-engine-theory result: the helicity-resolved moment tower, deriving the dark parity-odd Riemann^4 from consistency. Toy basis, O(1) prefactors.",
+  "references": [
+    "this repo: v2.292 (parity-blind g_R4 tower), v2.209 (dark parity-odd g_R4_c3), v2.218 (isospectrality-breaking ringdown discriminator)",
+    "Caron-Huot, Mazac, Rastelli, Simmons-Duffin / Caron-Huot et al 2024 (helicity / parity positivity)",
+    "Bresciani et al, arXiv:2504.12855 (the K_plus / Re/Im K_minus R4 basis)"
+  ]
+}

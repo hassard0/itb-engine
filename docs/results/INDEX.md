@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (408 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (409 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -457,3 +457,4 @@ Auto-generated front door to the full research program (408 notes). Regenerate w
 | v2.295 | [v2.295 - When does the shared spectrum bite? The cross-sector constrai](2026-06-29-v2.295-qnm-cross-sector-weight-structure.md) | FOURTH SLICE of the new-theory arc. v2.293 proposed the shared-spectral-density cross-sector principle |
 | v2.296 | [v2.296 - The cutoff bracket: a derived lower bound on the relative cur](2026-06-29-v2.296-qnm-cross-sector-cutoff-bracket.md) | FIFTH SLICE of the new-theory arc, completing the cross-sector characterization. The v2.295 map left a |
 | v2.297 | [v2.297 - Swampland-complete EFT carving: the method as a falsifiable Q](2026-06-29-v2.297-qnm-method-as-proposal.md) | SIXTH SLICE of the new-theory arc -- the method-as-proposal (the third user-chosen direction), made |
+| v2.298 | [v2.298 - The helicity-resolved curvature moment tower: deriving the da](2026-06-29-v2.298-qnm-helicity-resolved-tower.md) | SEVENTH SLICE / fresh swing of the new-theory arc. v2.292 gave the engine the parity-BLIND curvature |
