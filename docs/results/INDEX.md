@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (414 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (415 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -463,3 +463,4 @@ Auto-generated front door to the full research program (414 notes). Regenerate w
 | v2.301 | [v2.301 - Entanglement amplifies the irreducible ringdown: chaining mon](2026-06-29-v2.301-qnm-entanglement-amplified-ringdown.md) | A fresh swing combining the two new sectors. v2.300 found entanglement monogamy and positivity cap the |
 | v2.302 | [v2.302 - The curvature coupling bracketed by four QG principles, three](2026-06-29-v2.302-qnm-curvature-bracket-four-principles.md) | A fresh swing completing the information-theoretic sub-arc (v2.300 entanglement-vs-positivity, v2.301 |
 | v2.303 | [v2.303 - Causality carves the cubic curvature: the hierarchical carvin](2026-06-29-v2.303-qnm-curvature-tower-hierarchical-carving.md) | A fresh swing engaging CEMZ causality -- the deep "higher-derivative gravity needs a higher-spin tower" |
+| v2.304 | [v2.304 - Is the consistent theory space convex? A non-convexity counte](2026-06-29-v2.304-qnm-feasible-region-convexity.md) | A deliberate pivot from the "which principle bounds which coupling" sub-arc to a STRUCTURAL property of |

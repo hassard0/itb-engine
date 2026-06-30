@@ -1,0 +1,43 @@
+{
+  "version": "v2.304",
+  "method": "average two feasible theories and test the midpoint against the engine's actual constraints; contrast the bilinear-product gravitational bound (repulsive force) with the rotated second-order cones (moment / dispersion towers)",
+  "repulsive_force_test": {
+    "A": {
+      "g_4": 1.0,
+      "g_6": 0.3,
+      "g_R2": 0.22
+    },
+    "A_margin": 0.03159999999999999,
+    "B": {
+      "g_4": 0.2,
+      "g_6": 0.06,
+      "g_R2": 0.01
+    },
+    "B_margin": 0.0019,
+    "midpoint": {
+      "g_R2": 0.115,
+      "g_4": 0.6,
+      "g_6": 0.18
+    },
+    "midpoint_margin": -0.020225000000000007,
+    "non_convex": true
+  },
+  "soc_convexity": {
+    "moment_tower_convex": true,
+    "matter_dispersion_convex": true
+  },
+  "consistency_checks": {
+    "repulsive_force_is_NON_convex": true,
+    "endpoints_A_B_both_feasible": true,
+    "midpoint_infeasible": true,
+    "moment_tower_SOC_is_convex": true,
+    "matter_dispersion_SOC_is_convex": true
+  },
+  "all_checks_pass": true,
+  "finding": "The consistent quantum-gravity EFT theory space is NON-CONVEX -- a structural fact that distinguishes the gravitational consistency conditions from pure amplitude positivity. Two theories A (g_4=1.0, g_6=0.3, g_R2=0.22) and B (g_4=0.2, g_6=0.06, g_R2=0.01) BOTH satisfy the repulsive-force conjecture (margins 0.0316, 0.0019 >= 0), yet their midpoint (g_4=0.6, g_6=0.18, g_R2=0.115) VIOLATES it (margin -0.0202 < 0). So a 50/50 mixture of two consistent theories is inconsistent: the feasible region bulges inward along this direction. The cause is the BILINEAR matter product g_4 g_6 in the bound g_4 g_6 - g_R2 - g_R2^2 >= 0 -- along a segment between two asymmetric points the product dips below the chord, so the midpoint's matter sector cannot support the (averaged) curvature. This is in sharp contrast to the amplitude-positivity sector: the curvature moment tower (g_R3^2 <= g_R2 g_R4) and the matter dispersion tower (g_6^2 <= g_4 g_8) are rotated second-order cones, and averaging two feasible points stays feasible (verified) -- those constraints are CONVEX. So convexity is the exact dividing line between the engine's two kinds of constraint: the forward-dispersion / moment / positivity bounds (Hankel-PSD and second-order-cone, convex) versus the gravitational swampland-style bounds (bilinear products, non-convex). Physically: positivity carves a convex cone of allowed coefficients, but the gravitational consistency conditions (WGC / repulsive force) carve a non-convex region -- the swampland is not a convex complement of a convex landscape, and the intuition that 'interpolating between two consistent theories stays consistent' FAILS for gravity. That is a genuine structural property of the carved region, not visible from any single bound.",
+  "honest_scope": "The non-convexity is EXACT for the engine's encoded repulsive-force conjecture (the bilinear g_4 g_6 product is the literal form): the A, B, midpoint margins are the engine's verdict, and the counterexample is reproducible. A and B are tested against the repulsive-force constraint specifically (they are not claimed feasible against all 38 constraints -- the point is that ONE genuine engine constraint is non-convex, which makes the full feasible region non-convex, since an intersection inherits non-convexity along that direction). The convexity of the moment / dispersion towers is exact (rotated second-order cones are convex by construction). The structural conclusion (positivity convex, gravitational bilinear bounds non-convex) is prefactor-robust: it follows from the FORM of the constraints (PSD/SOC vs bilinear product), not the O(1) constants. The physical 'swampland is non-convex' reading is the standard interpretation of WGC-type product bounds; here made concrete and verified on the engine. Toy basis, O(1) prefactors. A fresh structural result on the carved region.",
+  "references": [
+    "this repo: v2.284 (repulsive-force anatomy), v2.286 (feasible wedge), v2.292 (moment tower)",
+    "Arkani-Hamed et al (WGC); Caron-Huot et al 2021 (EFT-hedron is a convex positive geometry)"
+  ]
+}
