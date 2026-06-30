@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (432 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (433 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -481,3 +481,4 @@ Auto-generated front door to the full research program (432 notes). Regenerate w
 | v2.319 | [v2.319 - Chiral primordial gravitational waves: a CMB parity discrimin](2026-06-30-v2.319-qnm-chiral-primordial-gw.md) | A fresh swing into a new sector. The corrected preferred framework (v2.317/v2.318) carries a mild |
 | v2.320 | [v2.320 - Does the surviving claim survive prefactor jitter? Robust cor](2026-06-30-v2.320-qnm-prefactor-robustness-convex-hull.md) | After the v2.316 RFC-form correction, the surviving headline (v2.317) is: under `convex_hull` the engine |
 | v2.321 | [v2.321 - The measured cosmic birefringence favors parity-violating gra](2026-06-30-v2.321-qnm-cosmic-birefringence-favors-parity.md) | The new-theory program's parity finding (the preferred framework is mildly parity-violating, driven by |
+| v2.322 | [v2.322 - Theory vs data: no named framework satisfies both, but a cons](2026-06-30-v2.322-qnm-theory-vs-data-scorecard.md) | The capstone question of the program: scored on BOTH theoretical consistency and current observational |
