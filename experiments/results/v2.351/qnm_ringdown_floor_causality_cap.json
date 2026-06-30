@@ -1,0 +1,27 @@
+{
+  "version": "v2.351",
+  "cemz_kappa": 0.8,
+  "cap_coefficient_kappa_squared": 0.64,
+  "constructed_floor": 0.042,
+  "constructed_cap": 0.3386,
+  "constructed_saturation": 0.124,
+  "family_floor_min": 0.0,
+  "family_floor_max": 0.165,
+  "family_max_saturation_of_cap": 0.4493,
+  "family_respects_cap": true,
+  "n_samples": 2137,
+  "consistency_checks": {
+    "cap_coefficient_is_cemz_kappa_squared": true,
+    "constructed_floor_below_cap": true,
+    "family_floor_always_below_cap": true,
+    "floor_bracketed_zero_to_cap": true,
+    "cap_is_nontrivial_saturation_below_one": true
+  },
+  "all_checks_pass": true,
+  "finding": "A new exact CP-even cross-sector corollary: CAUSALITY caps the ringdown floor by the leading matter coupling. The moment tower forces a ringdown floor g_R4 >= g_R3^2/g_R2, and CEMZ causality bounds g_R3^2 <= kappa^2 g_4 g_R2; dividing by g_R2 caps the floor itself: g_R4_floor <= kappa^2 * g_4 = 0.64 * g_4. So the guaranteed-minimum ringdown deviation cannot be made arbitrarily large -- causality ties its maximum to the leading matter coupling g_4. The engine confirms the analytic cap across the whole consistent+observed family (every member's floor stays below kappa^2 g_4), with a maximum saturation of 0.45 (the family reaches ~45% of the causality cap where CEMZ is most nearly saturated). This is the CP-even companion to v2.350's parity-routed bound, and it COMPLETES the ringdown-floor picture: combining with v2.349 (the floor collapses to 0 where g_R3 -> 0), the guaranteed ringdown floor is fully bracketed 0 <= g_R4_floor <= kappa^2 g_4 -- vanishing on the small-g_R3 edge and capped by causality x matter on the other. For the constructed theory the floor 0.042 sits at 12% of its causality cap 0.339, so the center is far from the causality boundary in the ringdown sector -- consistent with the v2.339 causality headroom. The ringdown floor is therefore not a free magnitude: it is pinned between zero and a causality-set, matter-scaled ceiling.",
+  "honest_scope": "The cap is exact ALGEBRA: dividing the CEMZ bound (g_R3^2 <= kappa^2 g_4 g_R2) by g_R2 gives the moment-tower floor's ceiling, no approximation, and the feasible family respecting it is a genuine numerical confirmation (and the cap CANNOT be violated by any feasible point since it follows analytically from CEMZ). But the inputs are toy-basis encodings: the CEMZ form and its prefactor kappa = cemz_kappa (default 0.8, a v2.345-slack prefactor) and the moment-tower form (no prefactor). So the cap COEFFICIENT (kappa^2 = 0.64) scales as kappa^2 -- an O(1) change in the causality prefactor moves it -- though kappa was found slack for feasibility (v2.345). The g_R4 -> ringdown-shift map is rank-1 schematic (v2.336), so 'ringdown floor' is the g_R4 lower bound, not a sourced frequency shift. This is a CP-even, data-independent statement (it uses only causality + the curvature moment tower, no parity data). The family check is a seeded random-walk sample, so the saturation maximum is sampler-dependent, but the cap itself is analytic. Toy basis, O(1) prefactors. A derived cross-sector cap completing the v2.349 floor bracket.",
+  "references": [
+    "this repo: src/itb/constraints/cemz_causality.py (|g_R3| <= kappa sqrt(g_4 g_R2)); src/itb/constraints/curvature_dispersion_tower.py (g_R3^2 <= g_R2 g_R4)",
+    "this repo: v2.349 (floor collapses to 0 where g_R3->0, the lower bracket), v2.350 (parity-routed cross-sector bound), v2.339 (causality headroom), v2.336 (g_R4 ringdown floor)"
+  ]
+}
