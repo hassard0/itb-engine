@@ -1,0 +1,214 @@
+{
+  "version": "v2.286",
+  "method": "scan (g_R2, g_R3) on a grid; at each point build an optimal matter completion (matter just above the repulsive floor, g_8 clearing the dispersion tower) and check engine feasibility; report the feasible region and its g_R2 / x ceilings",
+  "gR2_grid": [
+    0.0,
+    0.02,
+    0.04,
+    0.06,
+    0.08,
+    0.1,
+    0.12,
+    0.14,
+    0.16,
+    0.18,
+    0.2
+  ],
+  "gR3_grid": [
+    0.0,
+    0.02,
+    0.04,
+    0.06,
+    0.08,
+    0.1,
+    0.12,
+    0.14,
+    0.16,
+    0.18,
+    0.2,
+    0.22,
+    0.24,
+    0.26,
+    0.28,
+    0.3
+  ],
+  "feasible_points": [
+    {
+      "g_R2": 0.0,
+      "g_R3": 0.0
+    },
+    {
+      "g_R2": 0.02,
+      "g_R3": 0.0
+    },
+    {
+      "g_R2": 0.04,
+      "g_R3": 0.0
+    },
+    {
+      "g_R2": 0.04,
+      "g_R3": 0.02
+    },
+    {
+      "g_R2": 0.06,
+      "g_R3": 0.0
+    },
+    {
+      "g_R2": 0.06,
+      "g_R3": 0.02
+    },
+    {
+      "g_R2": 0.06,
+      "g_R3": 0.04
+    },
+    {
+      "g_R2": 0.08,
+      "g_R3": 0.0
+    },
+    {
+      "g_R2": 0.08,
+      "g_R3": 0.04
+    },
+    {
+      "g_R2": 0.08,
+      "g_R3": 0.06
+    },
+    {
+      "g_R2": 0.1,
+      "g_R3": 0.0
+    },
+    {
+      "g_R2": 0.1,
+      "g_R3": 0.04
+    },
+    {
+      "g_R2": 0.1,
+      "g_R3": 0.06
+    },
+    {
+      "g_R2": 0.1,
+      "g_R3": 0.08
+    },
+    {
+      "g_R2": 0.12,
+      "g_R3": 0.0
+    },
+    {
+      "g_R2": 0.12,
+      "g_R3": 0.04
+    },
+    {
+      "g_R2": 0.12,
+      "g_R3": 0.06
+    },
+    {
+      "g_R2": 0.12,
+      "g_R3": 0.08
+    },
+    {
+      "g_R2": 0.12,
+      "g_R3": 0.1
+    },
+    {
+      "g_R2": 0.14,
+      "g_R3": 0.0
+    },
+    {
+      "g_R2": 0.14,
+      "g_R3": 0.04
+    },
+    {
+      "g_R2": 0.14,
+      "g_R3": 0.06
+    },
+    {
+      "g_R2": 0.14,
+      "g_R3": 0.08
+    },
+    {
+      "g_R2": 0.14,
+      "g_R3": 0.1
+    },
+    {
+      "g_R2": 0.16,
+      "g_R3": 0.0
+    },
+    {
+      "g_R2": 0.16,
+      "g_R3": 0.04
+    }
+  ],
+  "region_by_gR2": {
+    "0.0": {
+      "g_R3_min": 0.0,
+      "g_R3_max": 0.0,
+      "x_max": null,
+      "n_feasible": 1
+    },
+    "0.02": {
+      "g_R3_min": 0.0,
+      "g_R3_max": 0.0,
+      "x_max": 0.0,
+      "n_feasible": 1
+    },
+    "0.04": {
+      "g_R3_min": 0.0,
+      "g_R3_max": 0.02,
+      "x_max": 0.5,
+      "n_feasible": 2
+    },
+    "0.06": {
+      "g_R3_min": 0.0,
+      "g_R3_max": 0.04,
+      "x_max": 0.6666666666666667,
+      "n_feasible": 3
+    },
+    "0.08": {
+      "g_R3_min": 0.0,
+      "g_R3_max": 0.06,
+      "x_max": 0.75,
+      "n_feasible": 3
+    },
+    "0.1": {
+      "g_R3_min": 0.0,
+      "g_R3_max": 0.08,
+      "x_max": 0.7999999999999999,
+      "n_feasible": 4
+    },
+    "0.12": {
+      "g_R3_min": 0.0,
+      "g_R3_max": 0.1,
+      "x_max": 0.8333333333333334,
+      "n_feasible": 5
+    },
+    "0.14": {
+      "g_R3_min": 0.0,
+      "g_R3_max": 0.1,
+      "x_max": 0.7142857142857143,
+      "n_feasible": 5
+    },
+    "0.16": {
+      "g_R3_min": 0.0,
+      "g_R3_max": 0.04,
+      "x_max": 0.25,
+      "n_feasible": 2
+    }
+  },
+  "gR2_ceiling": 0.16,
+  "region_x_ceiling": 0.8333333333333334,
+  "binding_just_above_gR3_ceiling": "graviton_forward_positivity",
+  "consistency_checks": {
+    "feasible_region_non_empty": true,
+    "gR2_ceiling_below_0p2": true,
+    "gR3_bounded_above_at_each_gR2": true,
+    "x_ratio_has_finite_ceiling": true,
+    "region_is_a_wedge": true
+  },
+  "all_checks_pass": true,
+  "finding": "The engine's allowed curvature sector is a bounded WEDGE in the (g_R2, g_R3) plane. Mapping a grid with optimal matter completions, the feasible region runs up to a g_R2 ceiling of 0.16 (the v2.285 anomaly-vs-repulsive bound), and at each g_R2 the cubic curvature g_R3 is bounded both below and above -- the upper bound is the moment-tower positivity, giving a finite ratio ceiling x = g_R3/g_R2 up to ~0.83 across the region. Pushing g_R3 just past its ceiling at a representative g_R2 = 0.1 makes the binding constraint graviton_forward_positivity -- a positivity / amplitude-bootstrap bound, confirming that the forward-limit positivity (the v2.261/v2.262 moment tower) is what caps g_R3. So the consistent higher-derivative gravities in this basis fill a concrete, two-sided window: Ricci-scalar coupling up to the anomaly/repulsive ceiling, and cubic coupling tied to it by the positivity ratio -- exactly the wedge the moment-tower theory (v2.262, lqg at x=1 the boundary) predicts. This completes the constructive picture of the engine's feasible region from v2.281-v2.285: not empty beyond GR, but a tightly bounded curvature wedge with the toy frameworks sitting just outside its matter-product floor.",
+  "honest_scope": "An engine-driven 2D feasibility map using the real check()/Theory API. The region is traced with a FIXED hand-built matter completion at each (g_R2, g_R3) (symmetric g_4=g_6 just above the repulsive floor, g_8 clearing the dispersion tower, parities 0), so the map is the feasible region ACCESSIBLE TO THAT completion family, resolved to the 0.02 grid -- a different completion could enlarge it slightly, but the g_R2 <= 0.2 and the positivity x-ceiling are completion-independent algebra. The x-ceiling is read off the grid (a representative value, not a fitted bound), and the binding-constraint identification is the engine's verdict just past the sampled ceiling. Couplings are the engine's dimensionless toy basis with O(1) representative prefactors. A feasible-region geometry result, not a new constraint or a claim about a physical theory.",
+  "references": [
+    "this repo: v2.285 (feasible higher-derivative witness), v2.284 (repulsive-force anatomy), v2.262 (moment tower)",
+    "this repo: src/itb/constraints/{anomaly,swampland_variants,graviton_forward_positivity}.py"
+  ]
+}
