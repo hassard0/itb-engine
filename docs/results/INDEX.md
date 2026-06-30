@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (460 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (461 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -509,3 +509,4 @@ Auto-generated front door to the full research program (460 notes). Regenerate w
 | v2.347 | [v2.347 - The parity sector is pinched between two birefringence observ](2026-06-30-v2.347-qnm-parity-birefringence-pinch.md) | A fresh sector after the marginality arc (v2.344-346): a concrete falsifiable forecast. The parity coupling |
 | v2.348 | [v2.348 - Does the theory survive re-centering under the REAL GW-birefr](2026-06-30-v2.348-qnm-parity-recenter-real-gw.md) | v2.347 found the constructed parity value 0.06 in tension with the engine's own estimate of the real LIGO O3 |
 | v2.349 | [v2.349 - Is the ringdown floor guaranteed across the whole consistent+](2026-06-30-v2.349-qnm-ringdown-floor-family.md) | A fresh sector after the parity arc: the OTHER prediction channel, ringdown. v2.336/v2.337 established the |
+| v2.350 | [v2.350 - A cross-sector inequality: cosmic birefringence puts a LOWER ](2026-06-30-v2.350-qnm-birefringence-parity-even-floor.md) | A genuine swing rather than another audit (the mandated "cross-sector moment" direction). The program has |

@@ -1,0 +1,25 @@
+{
+  "version": "v2.350",
+  "birefringence_lower_edge": 0.04706,
+  "anomaly_rho": 0.06,
+  "derived_lower_bound_g4_gR2": 0.03691,
+  "constructed_g4_gR2": 0.1021,
+  "family_min_g4_gR2": 0.04265,
+  "family_margin_above_bound": 0.0057,
+  "bound_without_birefringence_data": 0.0,
+  "n_samples": 2137,
+  "consistency_checks": {
+    "derived_bound_is_positive": true,
+    "derived_bound_matches_closed_form": true,
+    "constructed_respects_bound": true,
+    "whole_feasible_family_respects_bound": true,
+    "bound_vanishes_without_birefringence_data": true
+  },
+  "all_checks_pass": true,
+  "finding": "A new exact cross-sector corollary of the program: cosmic birefringence -- a PARITY observable -- places a LOWER bound on the PARITY-EVEN leading-matter x leading-curvature product, g_4 * g_R2 >= (beta_lower)^2 / rho ~ 0.0369. The chain is two exact constraints: the birefringence data bounds the parity coupling from below (g_R2_parity >= 0.0471 at 2-sigma), and the gravitational anomaly-inflow budget bounds it from above THROUGH the parity-even couplings (g_R2_parity^2 <= rho * g_4 * g_R2); chaining them eliminates the parity coupling entirely and leaves a bound on g_4 * g_R2 alone. So the parity measurement, routed through the anomaly inflow, props up the parity-EVEN sector: a theory that MATCHES the cosmic-birefringence detection cannot have an arbitrarily weak leading matter coupling or leading curvature coupling -- their product is floored. The engine confirms it: across the whole consistent+observed family the minimum g_4 * g_R2 stays above the derived bound (margin +0.0057), and the constructed theory sits comfortably above it (0.1021 vs 0.0369, ~2.8x). The result is genuinely DATA-sourced and cross-sector: without the birefringence detection the parity lower edge drops to ~0 (the measurement excludes zero at ~3.8 sigma, so its own ~3.8-sigma edge reaches g_R2_parity ~ 0) and the bound vanishes -- it is the DETECTION, not the operator content, that floors the parity-even product. This is a new consequence in a DIFFERENT sector than the parity coupling the data obviously constrains, and it is the cross-sector companion to the parity headline: the same anomaly inflow that v2.335 used to couple the two parity-odd couplings also couples the parity-odd DATA to the parity-even matter+curvature sector.",
+  "honest_scope": "The corollary is exact ALGEBRA given the two engine constraints (a Cauchy-Schwarz-style chain, no approximation), and the engine's feasible family respecting it is a genuine numerical confirmation -- but both input constraints are toy-basis encodings: the birefringence map (beta = 3.4 deg * g_R2_parity, with the 0.34 +/- 0.09 deg data) and the anomaly-inflow form + its prefactor rho (the v2.344 load-bearing prefactor, default 0.06). So the NUMBER 0.0369 scales as 1/rho and as beta_lower^2 -- an O(1) change in rho or an O(1) re-normalization of the birefringence map moves it -- and the bound is only as firm as the cosmic-birefringence DETECTION itself (the ~3.6-sigma hint, v2.329 caveat: if it is a systematic, beta_lower -> 0 and the bound disappears). The ROBUST content is the STRUCTURE: a parity observable, via anomaly inflow, lower-bounds the parity-even matter x curvature product -- a real cross-sector bridge -- with a magnitude set by (data lower edge)^2 / (anomaly prefactor). The family check is a seeded random-walk sample, so 'whole family' is sampled, not proven, but the inequality is analytic so no feasible point can violate it regardless. Toy basis, O(1) prefactors. A new derived cross-sector inequality, data-sourced.",
+  "references": [
+    "this repo: src/itb/constraints/cosmic_birefringence.py (beta=0.34+/-0.09 deg, lower edge 0.0471); src/itb/constraints/anomaly_flow.py (g_R2_parity^2 + 2 g_R3_parity^2 <= rho g_4 g_R2)",
+    "this repo: v2.335 (anomaly inflow couples the parity-odd couplings), v2.344 (rho is load-bearing), v2.329 (birefringence detection caveat), v2.343 (Cauchy-Schwarz chaining in the matter sector)"
+  ]
+}
