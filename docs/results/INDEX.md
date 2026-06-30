@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (439 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (440 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -488,3 +488,4 @@ Auto-generated front door to the full research program (439 notes). Regenerate w
 | v2.326 | [v2.326 - The parity coupling is bounded below by both the swampland di](2026-06-30-v2.326-qnm-parity-hierarchy-bound.md) | A rigorous follow-up tying the v2.325 active-core finding (the swampland distance conjecture is the TOP |
 | v2.327 | [v2.327 - How predictive is the constructed theory? The extent of the t](2026-06-30-v2.327-qnm-theory-data-region-extent.md) | v2.322 showed the EXISTENCE of a higher-derivative gravity satisfying both theoretical consistency and the |
 | v2.328 | [v2.328 - Falsifiability roadmap: what would confirm or refute the cons](2026-06-30-v2.328-qnm-falsifiability-roadmap.md) | A forward-looking, actionable synthesis (distinct from the v2.323 findings-ledger): how is the constructed |
+| v2.329 | [v2.329 - Adversarial audit: how robust is the parity conclusion to the](2026-06-30-v2.329-qnm-adversarial-audit.md) | The most honest capstone: maximally steelman the case AGAINST the program's headline (the constructed |
