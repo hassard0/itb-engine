@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (421 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (422 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -470,3 +470,4 @@ Auto-generated front door to the full research program (421 notes). Regenerate w
 | v2.308 | [v2.308 - CMB spectroscopy of the curvature tower? A clean hypothesis, ](2026-06-29-v2.308-qnm-curvature-tower-cmb-spectroscopy.md) | v2.307 found the cubic curvature operator R^3 (g_R3) shows up in the scalar tilt n_s. The clean |
 | v2.309 | [v2.309 - The joint carved curvature region: intersecting all the tower](2026-06-29-v2.309-qnm-joint-curvature-region.md) | The curvature-carving arc bounded each operator SEPARATELY -- the g_R2 four-principle bracket (v2.302), |
 | v2.310 | [v2.310 - Is lqg the consistency boundary BECAUSE of its parity violati](2026-06-29-v2.310-qnm-lqg-parity-innocence.md) | lqg_induced is repeatedly flagged as the engine's consistency boundary (v2.262, v2.299) AND it is the |
+| v2.311 | [v2.311 - What CP-even couplings bind lqg? An outlier cubic, and an uno](2026-06-30-v2.311-qnm-lqg-failure-attribution.md) | v2.310 showed lqg's 6 failures are CP-even (parity-toggle-invariant) and not relieved by uniform |
