@@ -1,0 +1,22 @@
+{
+  "version": "v2.341",
+  "n_family_samples": 2137,
+  "family_worst_signed_distance": {
+    "causality": 0.0519,
+    "unitarity": 0.0,
+    "wgc": 0.0045
+  },
+  "consistency_checks": {
+    "causality_has_headroom_throughout_family": true,
+    "unitarity_binds_the_family": true,
+    "wgc_near_binding": true,
+    "causality_is_the_least_constraining_pillar": true,
+    "all_three_satisfied_everywhere_in_family": true
+  },
+  "all_checks_pass": true,
+  "finding": "Across the whole consistent+observed family, the three deep requirements of higher-derivative gravity are NOT equally binding -- and the one the new theory evades most easily is CAUSALITY. Taking the worst (smallest) gradient-normalized margin anywhere in the family for each requirement family: causality (CEMZ + causality bound + Hofman-Maldacena) never drops below +0.052, so the family is ROBUSTLY causal everywhere -- a direct consequence of the trimmed cubic curvature that gives the constructed theory ~65% causality headroom (v2.339), preserved across the family. UNITARITY (forward positivity, the matter dispersion tower, the EFT-hedron / spin-4 positivities) by contrast reaches +0.000 -- it is a binding wall of the family -- and the WGC (weak gravity, scalar-WGC, repulsive force) reaches +0.004, near-binding. So of the three classic objections, the new theory's existence is bounded by UNITARITY and the swampland WGC, while causality is comfortably satisfied throughout. This sharpens the trilogy (v2.338-v2.340): all three hold at the constructed point with margin, but only unitarity and the WGC are operative limits on the family -- the graviton-forward-positivity (unitarity) and repulsive-force/WGC walls are exactly the active constraints v2.325 identified as carving the region, while causality, despite being the most famous obstruction to higher-derivative gravity, is not a binding wall here because the consistent theories all keep their cubic curvature well below the CEMZ bound. So the new theory's defining trimmed-curvature feature buys it causality for free, and what it must still trade off against is positivity (unitarity) and the weak gravity conjecture.",
+  "honest_scope": "The 'worst margin anywhere in the family' is taken over a random-walk sample (~2000 feasible points, seeded, step 0.03), so the minima are reached only insofar as the sampler reaches the family boundary; that unitarity hits ~0 (binding) and causality stays ~+0.05 is the engine's literal signed-distance output, robust to that. The exact minima depend on the O(1) constraint prefactors (the CEMZ kappa, the positivity normalizations, the WGC encodings), so the values (0.05, 0.00, 0.004) are convention-dependent -- the robust, structural content is the ORDERING: causality has clear headroom while unitarity binds and the WGC nearly binds, consistent with v2.339 (causality headroom from trimmed cubic) and v2.325 (the active core contains graviton-forward-positivity and repulsive force, not the causality bound). The grouping of constraints into 'unitarity / causality / WGC' families is by physical role (the engine's A_AMPLITUDE positivity vs the causality bounds vs the WGC family). The family is the cosmic-birefringence-constrained one, but the three pillars here are CP-even and their binding/headroom pattern is data-independent. Toy basis, O(1) prefactors. A family-level sharpening of the v2.338-v2.340 trilogy.",
+  "references": [
+    "this repo: v2.338 (unitarity), v2.339 (causality headroom), v2.340 (WGC), v2.325 (active constraint core), v2.332 (connected family)"
+  ]
+}

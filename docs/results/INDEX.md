@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (451 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (452 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -500,3 +500,4 @@ Auto-generated front door to the full research program (451 notes). Regenerate w
 | v2.338 | [v2.338 - Is the constructed theory ghost-free? Positivity IS the EFT u](2026-06-30-v2.338-qnm-ghost-freedom.md) | The deepest, most standard objection to ANY higher-derivative gravity is the Ostrogradsky / massive-spin-2 |
 | v2.339 | [v2.339 - The constructed theory is causal with the most headroom: trim](2026-06-30-v2.339-qnm-causality-headroom.md) | The companion to v2.338 (ghost/unitarity). The OTHER deep objection to higher-derivative gravity is |
 | v2.340 | [v2.340 - The constructed theory satisfies the Weak Gravity Conjecture:](2026-06-30-v2.340-qnm-wgc-extremal-decay.md) | The third pillar, completing the deep-consistency trilogy (v2.338 unitarity / no-ghost; v2.339 causality / |
+| v2.341 | [v2.341 - Which deep requirement bounds the theory? Causality has headr](2026-06-30-v2.341-qnm-trilogy-binding.md) | The trilogy (v2.338 unitarity, v2.339 causality, v2.340 WGC) certified the constructed POINT. Across the |
