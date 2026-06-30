@@ -1,0 +1,70 @@
+{
+  "version": "v2.292",
+  "method": "add the Riemann^4 operator g_R4 + the curvature dispersion-tower constraints (g_R4>=0, g_R3^2<=g_R2 g_R4) to the engine (opt-in via include_curvature_tower); demonstrate the mandate binds each curvature framework at g_R4=0 and heals at the forced minimum g_R3^2/g_R2; cross-check the minima vs v2.234",
+  "new_constraints": [
+    "curvature_riemann4_positivity",
+    "curvature_moment_tower_g_R4_mandate"
+  ],
+  "framework_mandate": [
+    {
+      "framework": "pure_gr",
+      "g_R2": 0.0,
+      "g_R3": 0.0,
+      "forced_gR4_min": 0.0,
+      "feasible_at_gR4_0": true,
+      "feasible_at_forced_min": true,
+      "mandate_binds": false
+    },
+    {
+      "framework": "string_tree_eft",
+      "g_R2": 0.2,
+      "g_R3": 0.15,
+      "forced_gR4_min": 0.11249999999999999,
+      "feasible_at_gR4_0": false,
+      "feasible_at_forced_min": true,
+      "mandate_binds": true
+    },
+    {
+      "framework": "asymptotic_safety",
+      "g_R2": 0.15,
+      "g_R3": 0.1,
+      "forced_gR4_min": 0.06666666666666668,
+      "feasible_at_gR4_0": false,
+      "feasible_at_forced_min": true,
+      "mandate_binds": true
+    },
+    {
+      "framework": "lqg_induced",
+      "g_R2": 0.3,
+      "g_R3": 0.3,
+      "forced_gR4_min": 0.3,
+      "feasible_at_gR4_0": false,
+      "feasible_at_forced_min": true,
+      "mandate_binds": true
+    },
+    {
+      "framework": "cdt",
+      "g_R2": 0.22,
+      "g_R3": 0.15,
+      "forced_gR4_min": 0.10227272727272727,
+      "feasible_at_gR4_0": false,
+      "feasible_at_forced_min": true,
+      "mandate_binds": true
+    }
+  ],
+  "consistency_checks": {
+    "curvature_tower_constraints_wired_optin": true,
+    "mandate_binds_for_all_curvature_frameworks": true,
+    "frameworks_feasible_at_forced_gR4_minimum": true,
+    "pure_gr_needs_no_gR4": true,
+    "forced_minima_match_v234": true
+  },
+  "all_checks_pass": true,
+  "finding": "The engine now carries the Riemann^4 (g_R4) operator -- the first ringdown-active curvature operator -- and the curvature dispersion-tower constraints g_R4 >= 0 and g_R3^2 <= g_R2 g_R4, the exact analog of the matter tower g_6^2 <= g_4 g_8. This is the authorized g_R4 core-engine extension, and its bite is real: taken at g_R4 = 0 (the default), every curvature framework is INFEASIBLE against the new tower because its literature g_R2, g_R3 already violate g_R3^2 <= g_R2 * 0 -- and each becomes feasible exactly when g_R4 reaches its forced minimum g_R3^2/g_R2 (string 0.1125, asymptotic-safety 0.0667, cdt 0.1023, lqg 0.30, reproducing v2.234), while pure_gr needs none. So the engine's OWN positivity logic now MANDATES that a consistent UV completion carrying Ricci^2 and Ricci^3 corrections must also carry a nonzero Riemann^4 -- the operator that actually deforms the black-hole ringdown (v2.233). What was an external analysis in v2.234 is now engine-internal structure: the ringdown sector is no longer imported, it is forced by the engine's constraint geometry. This is the first slice; the next promotes g_R4 into the framework encoders and the default stack (handling the complexity/distance cascade), then builds the cross-sector moment principle that links the matter tower g_4/g_6/g_8 and the curvature tower g_R2/g_R3/g_R4 into one structure.",
+  "honest_scope": "A genuine core-engine extension: g_R4 and its two constraints are new first-class engine code (src/itb/constraints/curvature_dispersion_tower.py), wired opt-in into build_stack. The mandate g_R3^2 <= g_R2 g_R4 is the v2.234 result (the curvature-sector Cauchy-Schwarz of the v2.261 Stieltjes moment tower), now enforced rather than analyzed; it inherits the engine's representative-O(1)-prefactor caveat (the literal dispersion derivation carries Gegenbauer/spin weights the toy basis sets to 1). The frameworks' source files are UNCHANGED this slice -- the g_R4 values are applied on the fly -- to avoid perturbing the complexity_cutoff and distance_conjecture margins; so 'feasible at the forced minimum' is against the curvature tower alone, not the full 38-constraint stack (the full integration is the next slice). The parity-odd g_R4_c3 component (v2.209) stays dark. A new-engine-theory result, the authorized first step of the g_R4 arc.",
+  "references": [
+    "this repo: v2.234 (the g_R4 mandate), v2.261 (curvature Stieltjes moment tower), v2.233 (Riemann^4 ringdown-active)",
+    "Caron-Huot, Mazac, Rastelli, Simmons-Duffin, JHEP 07 (2021) 110 (the moment / EFT-hedron tower)",
+    "src/itb/constraints/curvature_dispersion_tower.py (new), experiments/stack.py (include_curvature_tower)"
+  ]
+}

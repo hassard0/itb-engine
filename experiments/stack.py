@@ -28,6 +28,10 @@ from itb.constraints.cross_sector_efthedron import CrossSectorEFThedron
 from itb.constraints.complexity_cutoff import ComplexityCutoff
 from itb.constraints.cubic_parity import ParityViolatingCubicBound
 from itb.constraints.dispersion_tower import DispersionTowerCauchySchwarz, ScalarPositivityG8
+from itb.constraints.curvature_dispersion_tower import (
+    CurvatureRiemann4Positivity,
+    CurvatureMomentTowerMandate,
+)
 from itb.constraints.distance_conjecture import DistanceConjecture
 from itb.constraints.eft_validity import EFTValidityBox
 from itb.constraints.generalized_second_law import GeneralizedSecondLaw
@@ -233,7 +237,8 @@ def build_stack(prefactors: dict[str, float] | None = None,
                 include_gw_speed: bool = False,
                 gw_speed_low_cutoff: bool = True,
                 include_gw_dispersion: bool = False,
-                gw_dispersion_low_cutoff: bool = True) -> list[Constraint]:
+                gw_dispersion_low_cutoff: bool = True,
+                include_curvature_tower: bool = False) -> list[Constraint]:
     """Assemble the canonical constraint stack, overriding the tunable knife-edge
     prefactors with `prefactors` (missing keys fall back to CANONICAL).
 
@@ -298,6 +303,10 @@ def build_stack(prefactors: dict[str, float] | None = None,
     if include_gw_dispersion:
         # --- DATA: fourth experiment (v1.85, tensor dispersion, the proper probe) ---
         stack.append(GWDispersionBound(low_cutoff=gw_dispersion_low_cutoff))
+    if include_curvature_tower:
+        # --- v2.292: the g_R4 (Riemann^4) curvature dispersion tower (opt-in core-engine extension) ---
+        stack.append(CurvatureRiemann4Positivity())
+        stack.append(CurvatureMomentTowerMandate())
     return stack
 
 
