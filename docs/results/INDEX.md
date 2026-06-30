@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (417 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (418 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -466,3 +466,4 @@ Auto-generated front door to the full research program (417 notes). Regenerate w
 | v2.304 | [v2.304 - Is the consistent theory space convex? A non-convexity counte](2026-06-29-v2.304-qnm-feasible-region-convexity.md) | A deliberate pivot from the "which principle bounds which coupling" sub-arc to a STRUCTURAL property of |
 | v2.305 | [v2.305 - The exact non-convexity criterion: the dent is a boundary lay](2026-06-29-v2.305-qnm-nonconvexity-exact-criterion.md) | v2.304 showed the consistent theory space is non-convex via one counterexample. Two quantitative |
 | v2.306 | [v2.306 - The finite-cutoff moment bound: Hausdorff beats Stieltjes](2026-06-29-v2.306-qnm-finite-cutoff-hausdorff-bound.md) | A fresh swing in a new sector. Every positivity bound the engine uses is a STIELTJES moment condition -- |
+| v2.307 | [v2.307 - Higher-curvature corrections to Starobinsky inflation: n_s is](2026-06-29-v2.307-qnm-higher-curvature-inflation.md) | A fresh swing into COSMOLOGY. Starobinsky inflation IS the R^2 (g_R2) corner of the engine's curvature |

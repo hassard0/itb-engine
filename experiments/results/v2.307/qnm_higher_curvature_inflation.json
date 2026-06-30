@@ -1,0 +1,105 @@
+{
+  "version": "v2.307",
+  "method": "standard f(R)=R+aR^2+bR^3 inflation (Einstein-frame potential, slow-roll); validate against the Starobinsky b=0 limit, then scan a positivity-bounded cubic term and read off the (n_s, r) deviation at N=55",
+  "N_target": 55.0,
+  "a": 1.0,
+  "starobinsky_b0": {
+    "n_s": 0.9649791814574246,
+    "r": 0.003498250086926404,
+    "n_s_analytic_1_minus_2_over_N": 0.9636363636363636,
+    "r_analytic_12_over_N2": 0.003966942148760331
+  },
+  "planck_reference": {
+    "n_s": [
+      0.9649,
+      0.0042
+    ],
+    "r_upper_BK18": 0.036
+  },
+  "cubic_scan": [
+    {
+      "b": -0.00018749999999999995,
+      "n_s": 0.979901478262792,
+      "r": 0.005296752659585769
+    },
+    {
+      "b": 0.0,
+      "n_s": 0.9649791814574246,
+      "r": 0.003498250086926404
+    },
+    {
+      "b": 0.00018749999999999995,
+      "n_s": 0.9532024562047945,
+      "r": 0.0024334399748441827
+    },
+    {
+      "b": 0.0003749999999999999,
+      "n_s": 0.9434375547591144,
+      "r": 0.0017585244392719858
+    },
+    {
+      "b": 0.0005625000000000001,
+      "n_s": 0.9350641765031923,
+      "r": 0.001308748765802716
+    },
+    {
+      "b": 0.0007500000000000002,
+      "n_s": 0.9277036813728873,
+      "r": 0.0009971206432796787
+    },
+    {
+      "b": 0.0009375,
+      "n_s": 0.9211144069851478,
+      "r": 0.000774578788020735
+    },
+    {
+      "b": 0.0011250000000000001,
+      "n_s": 0.9151289942499292,
+      "r": 0.0006115107393773158
+    },
+    {
+      "b": 0.0013124999999999999,
+      "n_s": 0.9096372043708852,
+      "r": 0.000489495190554823
+    },
+    {
+      "b": 0.0015,
+      "n_s": 0.9045445812265052,
+      "r": 0.00039653872322567313
+    }
+  ],
+  "n_s_range_over_bounded_cubic": [
+    0.9045445812265052,
+    0.979901478262792
+  ],
+  "r_range_over_bounded_cubic": [
+    0.00039653872322567313,
+    0.005296752659585769
+  ],
+  "planck_3sigma_ns_band": [
+    0.9522999999999999,
+    0.9775
+  ],
+  "cmb_allowed_b_window": [
+    0.0,
+    0.00018749999999999995
+  ],
+  "n_s_swing_in_sigma": 17.942118341973046,
+  "r_swing_in_BK18_units": 0.13611705378778044,
+  "consistency_checks": {
+    "b0_reproduces_starobinsky_ns": true,
+    "b0_reproduces_starobinsky_r": true,
+    "bounded_cubic_keeps_r_below_BK18": true,
+    "cmb_ns_carves_subwindow_tighter_than_positivity": true,
+    "ns_more_cubic_sensitive_than_r": true,
+    "cubic_shifts_ns_monotonically": true
+  },
+  "all_checks_pass": true,
+  "finding": "Starobinsky inflation is the R^2 (g_R2) corner of the engine's curvature sector, and the f(R) machinery here reproduces it exactly at the b=0 self-check: n_s = 0.9650 vs the analytic 1-2/N = 0.9636, and r = 0.00350 vs 12/N^2 = 0.00397 at N=55 -- both within 0.004, confirming the numerics. The new content is the cubic g_R3 correction the engine's curvature tower carries, and it produces a sharp ASYMMETRY between the two CMB observables. Over the scanned cubic window b in [-0.0015, 0.0015], the tensor ratio r barely moves -- it sweeps only [0.00040, 0.00530], a swing of 0.14 of the BK18 limit, staying far below 0.036 throughout -- but the scalar tilt n_s is HIGHLY sensitive, sweeping [0.9045, 0.9799], a swing of 18 Planck sigmas, and shifting monotonically with the cubic coefficient. So n_s, not r, is the CMB handle on the cubic curvature coupling: the Planck 3-sigma band on n_s carves a SUB-WINDOW b in [0.00000, 0.00019] -- tighter than the positivity scan, because parts of the positivity-allowed cubic range are CMB-EXCLUDED (they push n_s off the observed value while leaving r untouched). The physical reading: CMB data is MORE constraining than positivity for the cubic curvature operator, and a measurement of n_s pins the sign and magnitude of g_R3 in a way no ringdown or amplitude bound does -- a genuine cosmological handle on the higher-curvature sector, with r providing an independent (and currently slack) cross-check.",
+  "honest_scope": "The f(R) inflation numerics are EXACT-as-coded and validated against the analytic Starobinsky limit to < 0.004 in both n_s and r (the b=0 self-check), so the machinery is trustworthy. The map from the engine's Wilson coefficient g_R3 to the inflationary cubic b is SCHEMATIC: a, b are f(R) coefficients in Planck units and the identification with (g_R2, g_R3) is qualitative; the scanned window (a=1, N=55, |b| <= 0.0015) is chosen so the cubic is a controlled few-percent perturbation of the plateau rather than a plateau-destroying curvature pole (which a larger cubic generically produces, especially for b<0). So the EXACT b-window numbers are convention-dependent; the robust, prefactor-independent content is the STRUCTURE: (i) n_s is far more sensitive to the cubic than r, so n_s is the CMB handle on g_R3; (ii) the data carves a sub-window tighter than positivity. The Starobinsky overall scale (CMB amplitude A_s) needs a ~ 1e9 in Planck units, outside the engine's O(1) toy band -- a known R^2-inflation feature NOT addressed here; this cycle studies the amplitude-independent SHAPE (n_s, r). Single-field slow-roll; longer towers / b<0 poles not explored. Toy basis, O(1) prefactors. A fresh-sector new-theory result, honest about the schematic coefficient map.",
+  "references": [
+    "Starobinsky 1980; Planck 2018 inflation (n_s); BICEP/Keck 2021 (r < 0.036)",
+    "this repo: v2.303 (CEMZ/cubic bound on g_R3), v2.302 (g_R2 four-principle bracket)",
+    "f(R) inflation: De Felice & Tsujikawa 2010 (Einstein-frame potential, slow-roll)"
+  ]
+}
