@@ -1,0 +1,85 @@
+{
+  "version": "v2.295",
+  "method": "construct positive 4-point spectral measures with monotone vs peaked relative weight w; verify the tilted-Hankel H(t)=H_m+t H_c is PSD for all t (so w>=0 adds nothing at 2x2 and 3x3); show monotone w => monotone ratios r_k=c_k/m_k while peaked w (passing both towers) breaks it; test the engine frameworks' r_k",
+  "weight_cases": {
+    "monotone": {
+      "r": [
+        0.42500000000000004,
+        0.5236363636363637,
+        0.6033407572383075
+      ],
+      "ratios_monotone": true,
+      "tilted_hankel_decomposes": true,
+      "matter_tower_ok": true,
+      "curv_tower_ok": true
+    },
+    "peaked": {
+      "r": [
+        0.6170000000000001,
+        0.6787272727272727,
+        0.6337861915367484
+      ],
+      "ratios_monotone": false,
+      "tilted_hankel_decomposes": true,
+      "matter_tower_ok": true,
+      "curv_tower_ok": true
+    }
+  },
+  "framework_ratios": [
+    {
+      "framework": "string_tree_eft",
+      "r": [
+        0.4,
+        0.37499999999999994,
+        0.28124999999999994
+      ],
+      "ratios_monotone": true
+    },
+    {
+      "framework": "asymptotic_safety",
+      "r": [
+        0.37499999999999994,
+        0.33333333333333337,
+        0.22222222222222227
+      ],
+      "ratios_monotone": true
+    },
+    {
+      "framework": "lqg_induced",
+      "r": [
+        0.5,
+        0.6666666666666666,
+        0.7499999999999999
+      ],
+      "ratios_monotone": true
+    },
+    {
+      "framework": "cdt",
+      "r": [
+        0.39999999999999997,
+        0.37499999999999994,
+        0.2922077922077922
+      ],
+      "ratios_monotone": true
+    }
+  ],
+  "constraint_by_assumption_on_w": {
+    "w_ge_0": "no new cross-sector constraint (exactly the two separate towers)",
+    "w_monotone": "ratio monotonicity r_k = c_k/m_k monotone (the genuine v2.293 content)",
+    "w_le_W_cutoff": "one-sided bracket: W m_k - c_k Hankel-PSD (uses the EFT cutoff scale W)"
+  },
+  "consistency_checks": {
+    "tilted_hankel_decomposes_at_all_orders": true,
+    "w_ge_0_adds_nothing": true,
+    "monotone_w_gives_monotone_ratios": true,
+    "nonmonotone_w_breaks_monotone_ratios": true,
+    "frameworks_have_monotone_ratios": true
+  },
+  "all_checks_pass": true,
+  "finding": "The cross-sector question is now settled, and the real constraint identified. The STRUCTURAL fact is decisive: the tilted measure's Hankel is H(t) = H_matter + t H_curv, a nonnegative combination of two PSD matrices, hence PSD for all t >= 0 automatically (verified at 2x2 AND 3x3). So the BARE shared-measure hypothesis 'w >= 0 on a common support' can NEVER add a cross-sector constraint at any moment order -- it is exactly the two separate towers, and v2.294's 2x2 negative was not special but structural. The genuine new information requires a STRONGER statement about the relative weight w(M^2). The physically motivated one -- a Regge-like tower where higher-mass states couple to curvature monotonically relative to matter -- is that w is MONOTONE; then the ratios r_k = c_k/m_k, x^k-weighted averages of one monotone w, are themselves monotone in k. This BITES: a constructed coupling set from a PEAKED (non-monotone) weight satisfies BOTH towers (its matter and curvature Hankels are PSD) yet has non-monotone r_k, so it cannot come from a monotone shared weight -- a genuine constraint the towers miss. And the engine's frameworks all have monotone r_k (string, asymptotic-safety, cdt decreasing; lqg increasing), so they behave exactly as if the shared spectral weight is monotone. So v2.293's ratio monotonicity was real after all -- but its correct premise is 'w monotone', not 'w >= 0', and v2.294 was right that the bare hypothesis is empty. The honest synthesis: the cross-sector constraint's strength is precisely the structure assumed on w (nothing / ratio-monotonicity / cutoff-bracket), a clean map of where new theory can be extracted.",
+  "honest_scope": "Rigorous results: the tilted-Hankel decomposition H(t)=H_m+t H_c (hence 'w>=0 adds nothing at all orders') is an exact linear-algebra fact, verified numerically at 2x2 and 3x3 on constructed positive measures. The monotone-w => monotone-r_k implication is exact (x^k weighting moves mass monotonically along the support), and the peaked-weight counterexample is exact (built from a valid positive measure, passes both towers, breaks ratio monotonicity). The ASSUMPTION 'w monotone' is a physical refinement (motivated by the Regge tower), NOT a theorem -- a UV completion with a non-monotone curvature/matter coupling ratio would evade the ratio-monotonicity constraint while remaining consistent. So the honest status of the cross-sector constraint is conditional on that structural assumption about w, now stated explicitly (correcting v2.293's implicit premise and completing v2.294's negative). The engine couplings are the toy basis with O(1) prefactors; g_R4 at the v2.234 forced minimum. A new-engine-theory result: a definitive structural characterization of when the shared-spectrum idea adds information.",
+  "references": [
+    "this repo: v2.293 (ratio band), v2.294 (rigorous 2x2 negative), v2.292 (g_R4 tower), v2.261 (Stieltjes moments)",
+    "Caron-Huot, Mazac, Rastelli, Simmons-Duffin, JHEP 07 (2021) 110 (moment problem)"
+  ]
+}
