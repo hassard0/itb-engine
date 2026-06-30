@@ -1,0 +1,31 @@
+{
+  "version": "v2.353",
+  "matter_fixed_ratio_r": 0.4645,
+  "predicted_cubic_at_constructed": 0.02787,
+  "predicted_cubic_window": [
+    0.02188,
+    0.03637
+  ],
+  "self_consistent_cubic_window": [
+    0.02188,
+    0.03039
+  ],
+  "anomaly_edge_bound_form": 0.07827,
+  "anomaly_edge_under_equality": 0.06542,
+  "predicted_point_violations": [],
+  "predicted_feasible": true,
+  "consistency_checks": {
+    "ratio_is_matter_fixed": true,
+    "cubic_becomes_a_nonzero_prediction": true,
+    "predicted_cubic_feasible_in_current_engine": true,
+    "equality_tightens_quadratic_upper_edge": true,
+    "cubic_is_data_pinned_narrow_window": true
+  },
+  "all_checks_pass": true,
+  "finding": "If 't Hooft anomaly matching is taken in its physically-motivated EQUALITY form (the engine currently uses the conservative bound), the parity-odd CUBIC g_R3_parity -- unpredicted in v2.352 -- becomes a SECOND parity-odd prediction, locked to the data-pinned quadratic by a matter-fixed ratio r = rho_match (g_4 + g_6) = 0.4645: g_R3_parity = r * g_R2_parity. At the constructed quadratic this gives g_R3_parity ~ 0.0279, and across the data-pinned quadratic window [0.0471, 0.0783] the cubic is pinned to [0.02188, 0.03637] (and, self-consistently with the equality also tightening the quadratic, to the slightly narrower [0.02188, 0.03039]) -- a narrow, data-tracking prediction rather than the symmetric [-0.036, 0.036] bound of v2.352. The upgrade has two further consequences: it TIGHTENS the quadratic too (the cubic eats into the anomaly budget, so the joint anomaly+equality upper edge on g_R2_parity drops from 0.0783 to 0.0654), and the predicted cubic sits INSIDE the engine's current bound-form feasible window (the predicted point is feasible against the full stack: True), so the equality is consistent with everything already imposed. So the theory has a latent SECOND parity-odd prediction that switches on under a single, well-motivated constraint upgrade -- and it would be testable the same way as the first: the cubic Pontryagin coupling drives a chiral signal whose size is now fixed (not just bounded) by the same cosmic-birefringence data that pins the quadratic. This converts the v2.352 'one parity-odd prediction, the cubic unpredicted' into 'two parity-odd predictions, both data-pinned' -- CONDITIONAL on the matching being an equality.",
+  "honest_scope": "This is explicitly CONDITIONAL and does NOT change the core engine: the engine still encodes 't Hooft matching as a bound with slack (v2.352), and this cycle computes what the EQUALITY form would predict, presented as a conditional. The equality is physically motivated (anomaly matching is an equality in field theory) but the engine's docstring is explicit that the exact ratio 'depends on which fermion content the UV theory ultimately includes', so r = rho_match(g_4+g_6) is itself a toy proxy with an O(1) prefactor rho_match = 0.5 -- the predicted MAGNITUDE 0.028 scales with rho_match and with the matter couplings, so it is illustrative, not sharp. The matching fixes the RATIO/magnitude, not the SIGN, so even under the equality g_R3_parity is predicted only up to sign unless a further input fixes the handedness. The whole thing inherits the quadratic's dependence on the cosmic-birefringence data being real (v2.329) and on the anomaly prefactor rho (v2.344). Robust content: IF matching is an equality, the cubic is locked to the quadratic by a matter-fixed ratio (a structural statement), becomes data-pinned, and tightens the quadratic -- and the predicted value is feasible now. Toy basis, O(1) prefactors. A conditional second prediction, the constructive sequel to v2.352's flagged upgrade point.",
+  "references": [
+    "this repo: v2.352 (the cubic is unpredicted; flagged the equality-upgrade point), src/itb/constraints/anomaly_flow.py (tHooftAnomalyMatching, the bound-vs-equality encoding)",
+    "this repo: v2.347/v2.348 (g_R2_parity data-pinned + GW), v2.344 (anomaly upper edge + rho), v2.335 (anomaly couples the parity couplings), v2.329 (birefringence caveat)"
+  ]
+}
