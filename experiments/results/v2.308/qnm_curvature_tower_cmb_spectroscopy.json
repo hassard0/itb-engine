@@ -1,0 +1,121 @@
+{
+  "version": "v2.308",
+  "method": "f(R)=R+aR^2+bR^3+cR^4 inflation; the running alpha_s is a wide-baseline slope of n_s in e-folds, validated against the Starobinsky -2/N^2; map each curvature operator to the CMB observable it dominates",
+  "starobinsky_b0c0": {
+    "n_s": 0.9649791814574246,
+    "r": 0.003498250086926404,
+    "alpha_s": -0.0006413243958620973,
+    "alpha_analytic_minus2overN2": -0.0006611570247933885
+  },
+  "planck_reference": {
+    "n_s": [
+      0.9649,
+      0.0042
+    ],
+    "alpha_s": [
+      -0.0045,
+      0.0067
+    ],
+    "r_upper_BK18": 0.036
+  },
+  "quartic_scan": [
+    {
+      "c": 0.0,
+      "n_s": 0.9649791814574246,
+      "r": 0.003498250086926404,
+      "alpha_s": -0.0006413243958620973
+    },
+    {
+      "c": 4.166666666666665e-06,
+      "n_s": 0.9351742496231217,
+      "r": 0.0018191892391228115,
+      "alpha_s": 6.831793940315078e-05
+    },
+    {
+      "c": 8.333333333333334e-06,
+      "n_s": 0.9156818654509972,
+      "r": 0.0010851194838720198,
+      "alpha_s": 0.0002711088368024417
+    }
+  ],
+  "cubic_scan": [
+    {
+      "b": -0.00016666666666666674,
+      "n_s": 0.9780320293690705,
+      "r": 0.005042154925896547,
+      "alpha_s": -0.0009144837491681212
+    },
+    {
+      "b": 0.0,
+      "n_s": 0.9649791814574246,
+      "r": 0.003498250086926404,
+      "alpha_s": -0.0006413243958620973
+    },
+    {
+      "b": 0.00016666666666666653,
+      "n_s": 0.9543918864489571,
+      "r": 0.0025283225487333603,
+      "alpha_s": -0.0004856926040802012
+    },
+    {
+      "b": 0.00033333333333333327,
+      "n_s": 0.9454729407733513,
+      "r": 0.0018848400390645802,
+      "alpha_s": -0.00038949532570193847
+    },
+    {
+      "b": 0.0005,
+      "n_s": 0.9377272481038045,
+      "r": 0.00144000453364475,
+      "alpha_s": -0.0003262694876846606
+    },
+    {
+      "b": 0.0006666666666666665,
+      "n_s": 0.9308674946147258,
+      "r": 0.0011223469877583916,
+      "alpha_s": -0.00028213812756274214
+    },
+    {
+      "b": 0.0008333333333333333,
+      "n_s": 0.9246910289734557,
+      "r": 0.0008893632750306721,
+      "alpha_s": -0.00025033092918008704
+    },
+    {
+      "b": 0.001,
+      "n_s": 0.9190599551176666,
+      "r": 0.00071467879789678,
+      "alpha_s": -0.00022650089989822986
+    }
+  ],
+  "swings": {
+    "quartic_alpha_swing": 0.0009124332326645389,
+    "quartic_ns_swing": 0.049297316006427394,
+    "cubic_ns_swing": 0.05897207425140394,
+    "cubic_alpha_swing": 0.0006879828492698914
+  },
+  "moment_tower_forced": {
+    "b_pinned": 0.0002,
+    "c_floor_gR4_ge_gR3sq_over_gR2": 4e-08,
+    "ns_shift_from_floor_quartic": 0.00028376761238779746,
+    "alpha_floor": -0.00045525147927532596,
+    "running_deviation_from_starobinsky": 0.00018607291658677134,
+    "planck_running_sigma": 0.0067
+  },
+  "spectroscopy_hypothesis": "REFUTED: R^4 -> running does NOT hold; the quartic is also an n_s handle",
+  "consistency_checks": {
+    "b0c0_reproduces_starobinsky_ns": true,
+    "b0c0_reproduces_starobinsky_running_minus2overN2": true,
+    "running_insensitive_to_both_higher_operators": true,
+    "cubic_and_quartic_degenerate_in_ns_no_spectroscopy": true,
+    "moment_tower_floor_quartic_negligible": true
+  },
+  "all_checks_pass": true,
+  "finding": "The clean hypothesis going in -- a CMB 'spectroscopy' where each higher curvature operator imprints on a higher derivative of the spectrum (R^2->r, R^3->n_s, R^4->running) -- is REFUTED by the data, and the honest negative is itself the result. The f(R) machinery is validated by a strict b=c=0 self-check (n_s reproduces 1-2/N, and the running reproduces the Starobinsky -2/N^2: alpha_s = -0.00064 vs -0.00066, within 5e-5). But the quartic R^4 does NOT show up in the running: over the scanned quartic window the running swings only 0.14 Planck-running-sigma while n_s swings 11.7 sigma -- the quartic is ANOTHER n_s handle, just like the cubic (which swings n_s 14.0 sigma and the running only 0.10 sigma). Two robust facts emerge instead. (1) The running is INSENSITIVE to the entire higher-curvature tower at engine-relevant magnitudes -- it stays pinned at the Starobinsky -2/N^2 whether the cubic or quartic is on -- so a near-Starobinsky running is a robust engine prediction, and a future detection of a large |alpha_s| would signal physics BEYOND a perturbative higher-curvature plateau, not a specific operator. (2) The cubic and quartic are DEGENERATE in n_s: both shift the tilt and neither shifts the running, so the CMB shape observables (r, n_s, alpha_s) CANNOT spectroscopically separate g_R3 from g_R4. This sharpens v2.307: n_s constrains a COMBINATION of the higher-curvature couplings, not g_R3 alone -- UNLESS the quartic is independently small. And it is: with the cubic pinned to b~2e-4, the moment-tower floor g_R4 >= g_R3^2/g_R2 forces only c >= 4.0e-08, whose effect on n_s (2.8e-04) and on the running (1.9e-04) is utterly negligible. So WITHIN the engine the moment tower breaks the degeneracy by fiat -- the forced quartic is so small that n_s does track g_R3 (v2.307 survives), but only because the moment floor makes g_R4 negligible, not because the CMB can see the difference.",
+  "honest_scope": "The headline is a REFUTED hypothesis honestly reported: the (r, n_s, alpha_s) <-> (R^2, R^3, R^4) spectroscopy does NOT hold -- the running is insensitive to the higher operators and the cubic/quartic are degenerate in n_s. The f(R) numerics are validated against the analytic Starobinsky limit in all three observables (n_s to < 0.004, running to < 5e-5 of -2/N^2; the wide-baseline slope cancels the smooth n_s bias, confirmed numerically), so the negative is a real physical degeneracy, not a numerical artifact. The map from (g_R3, g_R4) to (b, c) is SCHEMATIC (Planck-unit f(R) coefficients); the scan windows (|b|<=1e-3, |c|<=2.5e-5) keep the higher operators as controlled perturbations of the plateau (not poles). The robust, prefactor-independent content: (i) near-Starobinsky running is an engine prediction insensitive to the curvature tower; (ii) n_s constrains a g_R3/g_R4 COMBINATION, degeneracy-broken within the engine only because the moment-tower floor makes the quartic negligible. The Starobinsky amplitude (a~1e9) is not addressed (shape only); single-field slow-roll; b<0/c<0 poles unexplored. Toy basis, O(1) prefactors. A fresh-sector result building on v2.307; a clean hypothesis refuted and replaced by the honest structure.",
+  "references": [
+    "Starobinsky 1980; Planck 2018 inflation (n_s, running alpha_s); BICEP/Keck 2021 (r<0.036)",
+    "f(R) inflation: De Felice & Tsujikawa 2010",
+    "this repo: v2.307 (n_s <-> cubic), v2.292 (moment tower g_R4>=g_R3^2/g_R2), v2.303 (CEMZ/cubic)"
+  ]
+}
