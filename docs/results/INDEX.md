@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (449 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (450 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -498,3 +498,4 @@ Auto-generated front door to the full research program (449 notes). Regenerate w
 | v2.336 | [v2.336 - The constructed theory's ringdown-active quartic curvature: t](2026-06-30-v2.336-qnm-ringdown-quartic-floor.md) | A fresh seed reconnecting to the project's namesake -- quasi-normal modes / ringdown. The program has |
 | v2.337 | [v2.337 - The ringdown prediction is a firm floor but a loose magnitude](2026-06-30-v2.337-qnm-ringdown-prediction-sharpness.md) | v2.336 gave the moment-tower FLOOR on the constructed theory's ringdown-active quartic curvature `g_R4`. |
 | v2.338 | [v2.338 - Is the constructed theory ghost-free? Positivity IS the EFT u](2026-06-30-v2.338-qnm-ghost-freedom.md) | The deepest, most standard objection to ANY higher-derivative gravity is the Ostrogradsky / massive-spin-2 |
+| v2.339 | [v2.339 - The constructed theory is causal with the most headroom: trim](2026-06-30-v2.339-qnm-causality-headroom.md) | The companion to v2.338 (ghost/unitarity). The OTHER deep objection to higher-derivative gravity is |

@@ -1,0 +1,60 @@
+{
+  "version": "v2.339",
+  "cemz_bound_form": "|g_R3| <= 0.8 * sqrt(g_4 * g_R2)",
+  "causality_table": [
+    {
+      "theory": "engine_constructed",
+      "g_R3": 0.09,
+      "cemz_bound": 0.256,
+      "headroom": 0.166,
+      "fraction_of_bound": 0.352,
+      "causal": true
+    },
+    {
+      "theory": "asymptotic_safety",
+      "g_R3": 0.1,
+      "cemz_bound": 0.196,
+      "headroom": 0.096,
+      "fraction_of_bound": 0.51,
+      "causal": true
+    },
+    {
+      "theory": "cdt",
+      "g_R3": 0.15,
+      "cemz_bound": 0.278,
+      "headroom": 0.128,
+      "fraction_of_bound": 0.539,
+      "causal": true
+    },
+    {
+      "theory": "string_tree_eft",
+      "g_R3": 0.15,
+      "cemz_bound": 0.253,
+      "headroom": 0.103,
+      "fraction_of_bound": 0.593,
+      "causal": true
+    },
+    {
+      "theory": "lqg_induced",
+      "g_R3": 0.3,
+      "cemz_bound": 0.339,
+      "headroom": 0.039,
+      "fraction_of_bound": 0.884,
+      "causal": true
+    }
+  ],
+  "consistency_checks": {
+    "all_candidates_satisfy_cemz_causality": true,
+    "constructed_is_deepest_inside_the_causality_bound": true,
+    "lqg_is_nearest_the_causality_boundary": true,
+    "constructed_has_smallest_cubic_and_most_headroom": true,
+    "constructed_well_inside_under_half_the_bound": true
+  },
+  "all_checks_pass": true,
+  "finding": "The constructed theory is causal with the MOST headroom of any candidate, and the reason is exactly its defining feature -- the trimmed cubic curvature. Camanho-Edelstein-Maldacena-Zhiboedov showed a graviton crossing a shock wave acquires a time ADVANCE (a causality violation) unless the cubic graviton coupling is bounded, |g_R3| <= 0.8 sqrt(g_4 g_R2), or an infinite higher-spin tower intervenes at the cutoff. The constructed theory (g_R3 = 0.09) sits at only 35% of its CEMZ bound (0.256) -- the deepest inside the causality region of all candidates -- whereas lqg (g_R3 = 0.30, the outlier cubic) sits at 88% of its bound, right at the causality edge. So the same trimmed cubic curvature that made the constructed theory consistent (the smallest g_R3, and the smallest ringdown deviation, v2.336) also makes it the most CAUSAL: it uses barely a third of its causality budget, while lqg's large cubic curvature pushes it to ~90% of the edge, near a graviton time-advance. Every candidate is formally causal (all satisfy CEMZ), but the constructed theory has by far the most room. CEMZ's deeper content sharpens this: even satisfying the bound, the EFT's causality REQUIRES a higher-spin tower at the cutoff -- string theory's Regge tower is the canonical example -- so the constructed theory's UV completion must contain higher-spin states, pointing again to a string-like UV, the same one v2.338's unitarity (ghost-freedom) analysis pointed to. Together v2.338 and this cycle show the constructed theory clears BOTH deep consistency requirements of higher-derivative gravity -- unitarity (no ghost) and causality (no time-advance) -- with margin, and both point its UV completion toward unitary, string-like, higher-spin physics.",
+  "honest_scope": "The CEMZ bound is the engine's representative O(1) encoding (kappa = 0.8, the geometric-mean form of the graviton-time-advance result), so the exact fractions-of-bound (35%, 88%, ...) are convention-dependent; the robust content is the ORDERING -- the constructed theory has the smallest cubic curvature and the most causality headroom, lqg the largest cubic and the least -- which is prefactor-independent (it follows from the g_R3 values and the common sqrt(g_4 g_R2) scale). The 'causality requires a higher-spin tower' statement is the standard interpretation of the CEMZ result (the cubic graviton coupling's causality needs the tower), not a computation of the tower scale here; 'string-like UV' is the pairing with v2.338's unitarity reading, a qualitative inference, not a constructed completion. All candidates formally satisfy the bound; 'most/least headroom' is a comparison, not a pass/fail. This is a CP-even, data-independent property (no cosmic-birefringence dependence). Toy basis, O(1) prefactors. The causality companion to the v2.338 ghost-freedom result.",
+  "references": [
+    "Camanho-Edelstein-Maldacena-Zhiboedov 2016 (causality constraints on the graviton 3-pt coupling; higher-spin tower)",
+    "this repo: v2.338 (ghost-freedom/unitarity), v2.303 (CEMZ on the cubic), v2.336 (trimmed cubic -> mildest ringdown), v2.317 (constructed framework)"
+  ]
+}
