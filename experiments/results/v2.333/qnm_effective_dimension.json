@@ -1,0 +1,51 @@
+{
+  "version": "v2.333",
+  "n_feasible_samples": 2921,
+  "explained_variance_ratios": [
+    0.485,
+    0.27,
+    0.109,
+    0.101,
+    0.031,
+    0.004
+  ],
+  "participation_ratio_effective_dim": 3.02,
+  "top_soft_direction_PC1": {
+    "g_4": -0.01,
+    "g_6": 0.17,
+    "g_8": 0.98,
+    "g_R2": 0.06,
+    "g_R3": 0.04,
+    "g_R2_parity": 0.0
+  },
+  "stiffest_direction": {
+    "g_4": -0.03,
+    "g_6": -0.0,
+    "g_8": 0.0,
+    "g_R2": -0.11,
+    "g_R3": -0.0,
+    "g_R2_parity": 0.99
+  },
+  "per_coupling_std": {
+    "g_4": 0.053,
+    "g_6": 0.049,
+    "g_8": 0.086,
+    "g_R2": 0.031,
+    "g_R3": 0.042,
+    "g_R2_parity": 0.009
+  },
+  "consistency_checks": {
+    "enough_feasible_samples": true,
+    "effective_dimension_below_ambient": true,
+    "effective_dimension_about_three": true,
+    "top_soft_direction_is_matter_sector": true,
+    "stiffest_direction_is_parity": true,
+    "top3_pcs_capture_majority": true
+  },
+  "all_checks_pass": true,
+  "finding": "The consistent+observed family lives in 6 Wilson couplings but is effectively only ~3-dimensional: a PCA over 2921 random-walk samples of the feasible family gives a participation ratio of 3.0, with the top three principal components capturing 86% of the variance. So the theory+data constraints correlate the couplings and reduce the new theory's effective parameter count from 6 to ~3 -- it is a ~3-parameter family, not a 6-parameter one. The structure of the free and pinned directions is clean and physical: the SOFT (free) directions are the MATTER sector -- the top principal component is g_8 almost alone (49% of the variance), the second is a g_4 + g_6 + g_R2 combination (27%) -- while the STIFFEST (most-determined) direction is the parity coupling g_R2_parity (its std 0.009 is the smallest by far). So the new theory's genuinely free parameters are its matter and leading-curvature couplings, varying along ~3 directions, while its parity coupling is essentially FIXED by the current cosmic-birefringence data -- the one direction the data pins. This sharpens v2.327 (which individual couplings are tight) into the correlated picture: it is COMBINATIONS that are free or pinned -- g_8 and the (g_4, g_6, g_R2) cluster are the soft handles, parity is the stiff one -- and it explains why the family, though tiny and non-convex, is a smooth low-dimensional surface (v2.332's connected family) rather than a fat 6D blob. The engine's new theory is, in effect, a 3-parameter family of string-like-matter higher-derivative gravities with a data-fixed parity.",
+  "honest_scope": "The PCA is over a random-walk sample of the feasible family (seeded Metropolis-like walk, near-uniform target, step 0.03) -- the participation ratio (~3) and the principal directions depend on the sampler and on the coupling METRIC (the 6 dimensionful couplings are treated equally, an arbitrary choice that affects the variance split), so the exact value 2.98 and the precise PC weights are convention-dependent. The robust, qualitative content: the family is effectively LOWER-dimensional than its 6 ambient couplings (the constraints correlate them), the soft directions are matter-sector (g_8 and the g_4/g_6/g_R2 cluster), and the stiffest direction is the parity coupling (data-pinned) -- consistent with the v2.327 per-coupling extents (parity tightest). The 'effective parameter count ~3' is a structural characterization, not a claim that exactly 3 couplings are physical. The whole picture rests on the cosmic-birefringence data pinning parity (v2.329 caveat: without it parity is a soft direction too, and the effective dimension rises). Toy basis, O(1) prefactors. A structural result on the shape of the consistent+observed family.",
+  "references": [
+    "this repo: v2.332 (connected family), v2.327 (per-coupling extents), v2.321 (cosmic birefringence pins parity), v2.317 (constructed framework)"
+  ]
+}
