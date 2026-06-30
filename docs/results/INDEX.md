@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (458 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (459 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -507,3 +507,4 @@ Auto-generated front door to the full research program (458 notes). Regenerate w
 | v2.345 | [v2.345 - Which of the engine's 11 O(1) prefactors is the constructed t](2026-06-30-v2.345-qnm-prefactor-sensitivity-sweep.md) | v2.344 audited ONE prefactor (`anomaly_rho`) against ONE result (the parity window). The honest global |
 | v2.346 | [v2.346 - How marginal is the constructed theory under JOINT O(1) prefa](2026-06-30-v2.346-qnm-prefactor-joint-excursion.md) | v2.345 swept each of the 11 knife-edge prefactors one-at-a-time (OAT) and found the constructed theory |
 | v2.347 | [v2.347 - The parity sector is pinched between two birefringence observ](2026-06-30-v2.347-qnm-parity-birefringence-pinch.md) | A fresh sector after the marginality arc (v2.344-346): a concrete falsifiable forecast. The parity coupling |
+| v2.348 | [v2.348 - Does the theory survive re-centering under the REAL GW-birefr](2026-06-30-v2.348-qnm-parity-recenter-real-gw.md) | v2.347 found the constructed parity value 0.06 in tension with the engine's own estimate of the real LIGO O3 |

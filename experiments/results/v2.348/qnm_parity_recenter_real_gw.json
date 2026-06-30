@@ -1,0 +1,39 @@
+{
+  "version": "v2.348",
+  "original_g_R2_parity": 0.06,
+  "recentered_g_R2_parity": 0.0486,
+  "gw_bound_real": 0.05,
+  "original_violations_standard": [],
+  "original_violations_real_gw": [
+    "ligo_birefringence_bound"
+  ],
+  "recentered_violations_real_gw": [],
+  "changed_couplings": [
+    "g_R2_parity"
+  ],
+  "original_parity_window": [
+    0.0471,
+    0.0783
+  ],
+  "recentered_parity_window": [
+    0.0471,
+    0.05
+  ],
+  "original_window_width": 0.0312,
+  "recentered_window_width": 0.0029,
+  "consistency_checks": {
+    "original_feasible_under_standard_stack": true,
+    "original_infeasible_under_real_gw": true,
+    "gw_bound_is_what_kills_the_original": true,
+    "recentered_feasible_under_real_gw": true,
+    "only_parity_coupling_changed": true,
+    "prediction_window_sharpened": true
+  },
+  "all_checks_pass": true,
+  "finding": "The construction SURVIVES the v2.347 tension -- the real GW-birefringence bound does not empty the consistent+observed region against the full stack, it just sharpens the parity prediction. Verified end-to-end: (1) the original construction (g_R2_parity = 0.06) is feasible under the standard stack but goes infeasible when the GW bound is tightened from the toy 0.1 to the engine's own real-O3 estimate 0.05, and the constraint that kills it is EXACTLY the GW birefringence bound (ligo_birefringence_bound), nothing else -- so the tension is real and localized to the parity sector. (2) Re-centering the parity coupling to the middle of the surviving window [0.0471, 0.05], g_R2_parity = 0.0486, is FEASIBLE against the full tightened stack (zero violations) -- the theory is restored by moving one coupling. (3) Only the parity coupling changes; the matter and curvature couplings are untouched (parity is the stiff, decoupled direction, v2.333), so every non-parity prediction of the theory is unaffected. The net effect of taking the real GW bound seriously is therefore NOT a falsification but a SHARPENING: the parity prediction window narrows from [0.0471, 0.0783] (width 0.0312) to [0.0471, 0.05] (width 0.0029), a ~11x tighter pin, centered at ~0.0485 instead of 0.06. This makes the program self-correcting: v2.347 surfaced the tension, v2.348 resolves it and verifies the resolution globally -- the new theory is a parity-violating construction whose parity coupling is now pinned to a narrow window straddled by the CMB floor below and the real GW bound above, exactly the near-term falsification straddle v2.347 identified.",
+  "honest_scope": "The 0.05 real-O3 GW figure is the engine's own docstring estimate (order-of-magnitude, with cutoff-scale + propagation-distance uncertainty, v2.347 scope), so the re-centered value 0.0485 and the ~10x sharpening are illustrative of the STRUCTURE (a narrow CMB-floor-to-real-GW window), not precise numbers -- an O(1) shift in either birefringence map moves both edges. The feasibility checks are exact against the toy-basis stack with the 4 data constraints, but the stack and maps are the toy encodings. Re-centering changes only g_R2_parity because parity is nearly decoupled in the engine's encoding (v2.333); a real UV theory could correlate parity with the matter sector (the anomaly-matching constraint hints at this), which would couple the re-centering to other couplings -- not captured here. Everything rests on the CMB hint being real (v2.329); if it is a systematic there is no parity requirement and no window to re-center. Robust content: under the real GW bound the full region is non-empty (the theory survives), the tension is localized to the GW constraint, and the parity prediction sharpens rather than dies. Toy basis, order-of-magnitude prefactors. The global-feasibility completion of v2.347.",
+  "references": [
+    "this repo: v2.347 (the two-birefringence pinch, two-constraint view), v2.333 (parity is the stiff/decoupled direction), v2.329 (CMB hint caveat)",
+    "this repo: src/itb/constraints/parity_violation.py (LIGOBirefringenceBound toy 0.1 / real ~0.05); experiments/stack.py"
+  ]
+}
