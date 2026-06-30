@@ -1,0 +1,56 @@
+{
+  "version": "v2.328",
+  "constructed_g_R2_parity": 0.06,
+  "roadmap": [
+    {
+      "test": "cosmic_birefringence",
+      "status": "MEASURED (~3.6 sigma, unconfirmed)",
+      "constructed_prediction": "beta = 0.204 deg (window 0.16-0.27)",
+      "parity_even_prediction": "beta = 0 (excluded by the measurement)",
+      "current_verdict": "consistent at ~1.5 sigma (constructed sits at the LOW edge; the central beta=0.34 prefers more parity, lqg-like)",
+      "what_future_data_does": "a confirmed >5 sigma beta favors parity-violating gravity and pins the parity coupling; a null (beta->0) kills the parity sector and revives the parity-even frameworks"
+    },
+    {
+      "test": "chiral_primordial_GW (CMB TB/EB)",
+      "status": "FUTURE (LiteBIRD, CMB-S4)",
+      "constructed_prediction": "right-handed chirality Pi = +0.24 (sign definite)",
+      "parity_even_prediction": "Pi = 0 (zero TB, zero EB)",
+      "current_verdict": "not yet measured -- the cleanest future discriminator",
+      "what_future_data_does": "a detection of nonzero TB/EB with right-handed sign confirms; a null at sensitivity tightens the parity coupling downward"
+    },
+    {
+      "test": "gravitational_leptogenesis (eta_B)",
+      "status": "MEASURED eta_B~6e-10 (magnitude unsourced here)",
+      "constructed_prediction": "nonzero, definite-sign baryon asymmetry (sign-consistent with matter excess)",
+      "parity_even_prediction": "eta_B = 0 from this mechanism (cannot source the asymmetry gravitationally)",
+      "current_verdict": "consistency, not a sharp test (the magnitude is scale-dependent, v2.324)",
+      "what_future_data_does": "fixing the inflationary scale / reheating would turn the sign-correlation into a magnitude test"
+    },
+    {
+      "test": "matter_sector (collider positivity, GW dispersion)",
+      "status": "FUTURE / loose",
+      "constructed_prediction": "matter couplings in a bounded but wide consistency window (g_4~0.4-0.6 etc., v2.327)",
+      "parity_even_prediction": "same matter windows (this sector does not discriminate on parity)",
+      "current_verdict": "the loosely-pinned sector (v2.327) -- not yet constraining",
+      "what_future_data_does": "tighter matter-sector positivity / dispersion data narrows g_4/g_6/g_8/g_R2/g_R3"
+    }
+  ],
+  "beta_predicted_deg": 0.204,
+  "beta_measured_deg": 0.34,
+  "beta_tension_sigma": 1.5111111111111115,
+  "chirality_predicted": 0.23549574953849794,
+  "consistency_checks": {
+    "three_parity_probes_present": true,
+    "parity_even_predicts_zero_on_all_parity_probes": true,
+    "constructed_predictions_right_handed_aligned": true,
+    "constructed_beta_within_measurement": true,
+    "constructed_beta_at_low_edge_of_band": true
+  },
+  "all_checks_pass": true,
+  "finding": "The constructed theory is falsifiable through three correlated probes of its single parity coupling, all of which the parity-even frameworks predict to be exactly zero -- so the measurement suite is a clean discriminator. (1) COSMIC BIREFRINGENCE (measured, ~3.6 sigma): the constructed framework predicts beta = 0.20 deg (the theory+data window spans 0.16-0.27 deg), consistent with the measured 0.34 +/- 0.09 deg at ~1.5 sigma but sitting at the LOW edge -- the central value mildly prefers MORE parity (toward lqg's larger coupling); a confirmed >5 sigma beta would favor parity-violating gravity and a null would revive the parity-even frameworks. (2) CHIRAL PRIMORDIAL GW (future, LiteBIRD / CMB-S4): the cleanest future discriminator -- the constructed theory predicts a right-handed Pi = +0.24 (nonzero TB/EB), zero for parity-even gravity; a detection confirms, a null tightens the parity coupling down. (3) GRAVITATIONAL LEPTOGENESIS (eta_B): a sign-consistent baryon asymmetry, a consistency rather than a sharp test (magnitude scale-dependent). Plus the MATTER SECTOR, which is the loosely-pinned region (v2.327) future collider-positivity / GW-dispersion data would tighten -- but which does not discriminate on parity. The roadmap is concrete: a single parity coupling, fixed to a narrow window by current birefringence data, predicts a definite right-handed CMB-TB/EB chirality as the decisive next test, and the whole parity-violating story stands or falls on whether the cosmic-birefringence signal confirms. The theory is genuinely refutable -- a confirmed beta=0 would end it -- which is the point.",
+  "honest_scope": "This is a forward-looking synthesis, not a new engine result; the predictions are the same schematic maps as v2.319/v2.321/v2.324 (beta = 3.4 deg * g_R2_parity, Pi = tanh(4 g_R2_parity)) with O(1) normalizations, so the MAGNITUDES (beta=0.20 deg, Pi=+0.23) are order-of-magnitude, not precision predictions, and the '~1.5 sigma' is illustrative. The ROBUST content is structural and is what makes the roadmap meaningful: parity-even gravity predicts exactly zero on all three parity probes (a symmetry statement), the constructed theory predicts a definite right-handed sign on each, and the three are correlated (one coupling), so the suite discriminates and the theory is refutable. The cosmic-birefringence detection is itself ~3.6 sigma and unconfirmed; a null would falsify the parity sector. The matter-sector entry is the v2.327 loose region. No new physics is claimed here beyond organizing the existing predictions into a testability map. Toy basis, O(1) prefactors.",
+  "references": [
+    "this repo: v2.321 (cosmic birefringence), v2.319 (chiral GW), v2.324 (leptogenesis), v2.327 (predictivity extent), v2.322 (theory+data)",
+    "LiteBIRD / CMB-S4 (future CMB TB/EB); Minami-Komatsu / Eskilt-Komatsu (cosmic birefringence)"
+  ]
+}
