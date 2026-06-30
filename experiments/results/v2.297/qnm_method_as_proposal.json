@@ -1,0 +1,75 @@
+{
+  "version": "v2.297",
+  "method": "intersect the g_R4-bounding constraints (curvature moment-tower mandate + Riemann^4 positivity + EFT validity + complexity, g_R4 weighted dim-8) and read off the carved g_R4 band per framework -- the method's falsifiable ringdown prediction",
+  "thesis": "swampland-complete EFT carving: intersect ALL consistency conditions, the surviving feasible region IS the QG-phenomenology prediction",
+  "framework_gR4_bands": [
+    {
+      "framework": "pure_gr",
+      "has_curvature": false
+    },
+    {
+      "framework": "string_tree_eft",
+      "has_curvature": true,
+      "g_R4_floor_mandate": 0.11249999999999999,
+      "g_R4_carved_min": 0.115,
+      "g_R4_carved_max": 0.345,
+      "band_width": 0.22999999999999998,
+      "floor_matches_mandate": true,
+      "ceiling_below_validity_box": true
+    },
+    {
+      "framework": "asymptotic_safety",
+      "has_curvature": true,
+      "g_R4_floor_mandate": 0.06666666666666668,
+      "g_R4_carved_min": 0.07,
+      "g_R4_carved_max": 0.53,
+      "band_width": 0.46,
+      "floor_matches_mandate": true,
+      "ceiling_below_validity_box": true
+    },
+    {
+      "framework": "lqg_induced",
+      "has_curvature": true,
+      "g_R4_floor_mandate": 0.3,
+      "g_R4_carved_min": null,
+      "g_R4_carved_max": null,
+      "band_width": null,
+      "floor_matches_mandate": false,
+      "ceiling_below_validity_box": false,
+      "carving_rejects": true
+    },
+    {
+      "framework": "cdt",
+      "has_curvature": true,
+      "g_R4_floor_mandate": 0.10227272727272727,
+      "g_R4_carved_min": 0.105,
+      "g_R4_carved_max": 0.37,
+      "band_width": 0.265,
+      "floor_matches_mandate": true,
+      "ceiling_below_validity_box": true
+    }
+  ],
+  "admitted": [
+    "string_tree_eft",
+    "asymptotic_safety",
+    "cdt"
+  ],
+  "rejected": [
+    "lqg_induced"
+  ],
+  "consistency_checks": {
+    "admitted_frameworks_get_a_finite_gR4_band": true,
+    "band_floor_is_the_moment_tower_mandate": true,
+    "band_ceiling_is_finite_below_validity": true,
+    "method_yields_region_valued_predictions": true,
+    "carving_rejects_the_overlarge_curvature_framework": true
+  },
+  "all_checks_pass": true,
+  "finding": "The five-cycle g_R4/cross-sector arc culminates in the engine's actual original claim, made falsifiable: swampland-complete EFT carving. Rather than proposing a single quantum-gravity Lagrangian, the engine intersects every consistency condition and treats the surviving feasible region as the prediction. Applied to the one OBSERVABLE higher-curvature operator -- the ringdown-active Riemann^4 coefficient g_R4 -- the carving bounds it to a finite band for the admitted frameworks: the curvature moment-tower mandate sets the FLOOR (g_R4 >= g_R3^2/g_R2, verified to match), and EFT validity plus complexity set a finite CEILING (well below the validity box) -- string_tree_eft g_R4 in [0.115, 0.345], asymptotic_safety [0.07, 0.53], cdt [0.105, 0.37]. So the method predicts not a point but a RANGE, the right epistemic status for a carving: the consistent theory space is a region. And the carving does more than bound -- it EXCLUDES: lqg_induced gets an EMPTY band (its curvature sector is so over-large that even the mandated minimum g_R4 pushes its weighted complexity over the cutoff), so the method rejects lqg's Riemann^4 sector outright -- the same recurring anomaly the whole arc has flagged, now appearing as non-existence of any consistent g_R4. The falsifiable content is sharp: a Riemann^4 coefficient inferred from a future ringdown measurement that lands OUTSIDE the carved band would falsify the consistency conditions, the carving, or the framework -- the same way a measured Wilson coefficient outside a positivity bound would. This reframes the whole arc: the g_R4 extension (v2.292) gave the engine the observable operator, the cross-sector characterization (v2.293-v2.296) mapped what the moment structure can and cannot force, and this cycle states what it is all FOR -- a falsifiable, region-valued QG prediction carved from consistency alone, the engine's genuine and original contribution.",
+  "honest_scope": "The carved g_R4 band is the engine's literal feasibility verdict on the g_R4-bounding sub-stack (moment-tower mandate + positivity + EFT validity + complexity), exact for those constraints. It is NOT the full 38-constraint carving (the frameworks fail other constraints, e.g. repulsive_force, independently of g_R4 -- v2.283); this isolates the operator's own band. The CEILING depends on choices the toy basis fixes to O(1): the complexity c_max = 1.5, the validity box = 2.0, and the g_R4 complexity weight (set to 3.0 as a dim-8 operator) -- v2.287 showed such boundaries move with the prefactors, so the band is a representative range, not a calibrated number. The map from g_R4 to an actual ringdown QNM shift carries the v2.215 sensitivity AND the v2.209 dark-parity caveat (the parity-odd Riemann^4 component is not source-backed), so 'falsifiable by ringdown' is the channel, with the observable deformation honestly uncertain. The thesis (carving = prediction) is a methodological proposal, not a theorem. A new-engine-theory result: the method made concrete and falsifiable on the observable operator, with all the O(1)/dark-parity uncertainty stated.",
+  "references": [
+    "this repo: v2.292 (g_R4 extension), v2.293-v2.296 (cross-sector characterization), v2.234 (mandate)",
+    "this repo: v2.215 (R4->QNM sensitivity), v2.209 (dark parity-odd component), v2.285-v2.287 (feasible region/realism)",
+    "Caron-Huot et al 2021 (EFT-hedron); Adams et al 2006 (positivity = causality, the carving's seed)"
+  ]
+}
