@@ -1,0 +1,73 @@
+{
+  "version": "v2.317",
+  "rfc_form": "convex_hull",
+  "scorecard": [
+    {
+      "theory": "asymptotic_safety",
+      "min_margin": 0.0036,
+      "geom_margin": 0.019205531989934396,
+      "feasible": true,
+      "binding": "graviton_forward_positivity"
+    },
+    {
+      "theory": "string_tree_eft",
+      "min_margin": 0.006,
+      "geom_margin": 0.01280368799328961,
+      "feasible": true,
+      "binding": "graviton_forward_positivity"
+    },
+    {
+      "theory": "cdt",
+      "min_margin": 0.00726,
+      "geom_margin": 0.010826763169816024,
+      "feasible": true,
+      "binding": "bnossw_monogamy"
+    },
+    {
+      "theory": "pure_gr",
+      "min_margin": 0.0,
+      "geom_margin": 0.0,
+      "feasible": true,
+      "binding": "scalar_positivity_g4"
+    },
+    {
+      "theory": "lqg_induced",
+      "min_margin": -0.07499999999999996,
+      "geom_margin": -0.04743416490252566,
+      "feasible": false,
+      "binding": "cft_flat_space_bound"
+    }
+  ],
+  "constructed_preferred_framework": {
+    "couplings": {
+      "g_4": 0.529,
+      "g_6": 0.4,
+      "g_8": 0.4,
+      "g_R2": 0.193,
+      "g_R3": 0.09,
+      "g_R2_parity": 0.038,
+      "g_R3_parity": 0.0
+    },
+    "geom_margin": 0.033052876105570964
+  },
+  "parity_test": {
+    "parity_free_geom_margin": 0.033052876105570964,
+    "parity_zero_geom_margin": 0.02,
+    "g_R2_parity": 0.0375
+  },
+  "most_robust_community_framework": "asymptotic_safety",
+  "consistency_checks": {
+    "three_community_frameworks_feasible": true,
+    "lqg_is_the_only_infeasible_framework": true,
+    "constructed_center_beats_all_community": true,
+    "corrected_preferred_has_mild_parity": true,
+    "parity_improves_robustness": true
+  },
+  "all_checks_pass": true,
+  "finding": "Re-running the preferred-framework construction and the scorecard under the engine's recommended convex_hull repulsive-force form gives the corrected quantitative picture, with the v2.312-v2.315 results split into what survives and what changes. (1) The CORE survives: the engine still prefers a distinct CONSTRUCTED framework -- the Chebyshev center has geometric margin +0.0331, more robust than every community framework (best community asymptotic_safety at +0.0192). So 'the engine points to a higher-derivative gravity more robust than the named proposals' holds under the corrected encoding too. (2) FEASIBILITY corrected: three community frameworks are now feasible with a clean robustness ranking asymptotic_safety > string_tree_eft > cdt > pure_GR(marginal) > lqg_induced -- the only infeasible one -- replacing the 'all community infeasible / only pure GR' framing. (3) PARITY REVERSAL -- the genuinely new finding: the corrected preferred framework carries a MILD PARITY VIOLATION (g_R2_parity ~ 0.038), and forcing parity to zero costs ~40% of the robustness (0.0331 -> 0.0200). Under the corrected encoding consistency mildly PREFERS a parity-violating theory -- the opposite of the parity-free preferred framework found under the deprecated form (v2.312/v2.313), which we now see was an artifact of the matter_product repulsive-force term suppressing the parity direction. So the corrected headline is sharper and more surprising than the original: the most-robustly-consistent higher-derivative gravity is a string-like, mildly parity-violating theory distinct from every named framework, and among the named frameworks asymptotic safety is the most consistent while lqg alone is excluded.",
+  "honest_scope": "All values are the engine's literal check() output under build_stack(rfc_form='convex_hull') -- the recommended form (v2.316). The constructed center is an approximate, seed-dependent multi-seed coordinate-ascent argmax of the geometric (gradient-normalized) worst-case margin, not a proven global optimum; its exact coordinates and margin are convention- and search-dependent. The robust, sign-based claims are: three community frameworks feasible / lqg alone infeasible (v2.316), the constructed center strictly beats every community framework, and parity-free optimization yields a strictly lower margin than parity-free (so the mild parity violation is a real feature, not noise -- the 0.033-vs-0.020 gap is well above the grid step). The exact parity magnitude (~0.04) and the community ranking order (AS vs string vs cdt are close: 0.019/0.013/0.011) depend on the O(1) prefactors. The 'parity reversal' is specific to comparing the two RFC encodings; it says the deprecated form suppressed the parity direction, not that nature is parity-violating. Toy basis, O(1) prefactors. A corrected re-establishment of v2.312-v2.315.",
+  "references": [
+    "this repo: v2.316 (RFC-form correction), v2.312/v2.313 (preferred framework, deprecated form), v2.315 (scorecard, corrected)",
+    "engine: build_stack(rfc_form='convex_hull') -- the recommended repulsive-force encoding"
+  ]
+}
