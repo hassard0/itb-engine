@@ -1,0 +1,60 @@
+{
+  "version": "v2.326",
+  "hierarchies": [
+    {
+      "theory": "pure_gr",
+      "g_R2_parity": 0.0,
+      "hierarchy": 0.0,
+      "parity_violating": false
+    },
+    {
+      "theory": "string_tree_eft",
+      "g_R2_parity": 0.0,
+      "hierarchy": 3.3333333333333335,
+      "parity_violating": false
+    },
+    {
+      "theory": "asymptotic_safety",
+      "g_R2_parity": 0.0,
+      "hierarchy": 4.0,
+      "parity_violating": false
+    },
+    {
+      "theory": "lqg_induced",
+      "g_R2_parity": 0.08,
+      "hierarchy": 15.0,
+      "parity_violating": true
+    },
+    {
+      "theory": "cdt",
+      "g_R2_parity": 0.0,
+      "hierarchy": 3.666666666666667,
+      "parity_violating": false
+    },
+    {
+      "theory": "engine_constructed",
+      "g_R2_parity": 0.06,
+      "hierarchy": 8.816666666666668,
+      "parity_violating": true
+    }
+  ],
+  "max_even_hierarchy": 4.0,
+  "min_odd_hierarchy": 8.816666666666668,
+  "distance_conjecture_parity_lower_bound": 0.026500000000000003,
+  "implied_R_max": 19.962264150943394,
+  "data_parity_lower_bound": 0.048,
+  "consistency_checks": {
+    "parity_violation_stretches_hierarchy": true,
+    "distance_conjecture_lower_bounds_parity": true,
+    "both_distance_and_data_push_parity_up": true,
+    "cosmic_birefringence_is_the_tighter_bound": true,
+    "lqg_sits_near_the_distance_conjecture_limit": true
+  },
+  "all_checks_pass": true,
+  "finding": "The swampland distance conjecture -- the top carving constraint of v2.325 -- and the cosmic birefringence data both lower-bound the parity coupling, from two independent directions. The distance conjecture caps the coupling HIERARCHY (max/min nonzero coupling <= R_max), and the data-favored parity-violating theories carry a small parity coupling amid larger matter couplings, which STRETCHES that hierarchy: the parity-even frameworks have a tame hierarchy (~3-4, max 4.0), while the parity-violating ones are stretched -- the constructed framework to 8.8 and lqg to 15.0, the latter near the distance-conjecture limit. This is exactly why the distance conjecture is the dominant carver (v2.325): it reacts to the hierarchy that the data-demanded parity violation creates. And it bites from below -- if the parity coupling shrinks too far, max/min explodes, so the distance conjecture forbids g_R2_parity < 0.027 (implied R_max ~ 20) on the constructed matter sector. Cosmic birefringence independently requires g_R2_parity >= 0.048 (v2.321), tighter than the distance bound. So BOTH a swampland consistency condition and a real measurement push the parity coupling UP -- it cannot be too small -- a convergence that joins the program's two dominant threads: the distance conjecture (the top carving constraint) and the parity violation (anomaly-preferred, data-required). The parity coupling is pinned not-too-small from two sides, and lqg's near-limit hierarchy is yet another face of its boundary status (alongside its outlier cubic g_R3, v2.311).",
+  "honest_scope": "The coupling hierarchies (max/min) are EXACT arithmetic on the encoded couplings; the distance-conjecture lower bound and the implied R_max are the engine's literal check() output (R_max ~ 20 is the engine's O(1) prefactor for the distance conjecture, so the 0.026 bound scales with it). The robust, structural content is: parity violation stretches the coupling hierarchy (parity-even ~3-4 vs parity-violating ~9-15), so the distance conjecture is the dominant carver because of the parity feature the data demands; and BOTH the distance conjecture and cosmic birefringence lower-bound the parity coupling (it can't be too small), with the data tighter. The exact numbers (8.8, 15.0, the 0.026/0.048 bounds) depend on the constructed matter sector (convention-dependent) and the R_max / beta-map prefactors; the DIRECTION of both bounds (lower) and the convergence are robust. The cosmic-birefringence bound carries its ~3.6-sigma-detection and order-of-magnitude-map caveats (v2.321). Toy basis, O(1) prefactors. A rigorous tie between the v2.325 active core and the parity finding.",
+  "references": [
+    "this repo: v2.325 (distance conjecture is the top binder), v2.321 (cosmic birefringence lower-bounds parity), v2.311 (lqg g_R3 outlier)",
+    "the swampland distance conjecture (coupling-hierarchy bound); src/itb/constraints/swampland.py"
+  ]
+}
