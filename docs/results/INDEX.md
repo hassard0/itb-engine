@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (404 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (405 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -453,3 +453,4 @@ Auto-generated front door to the full research program (404 notes). Regenerate w
 | v2.291 | [v2.291 - The tidal deformability of a neutron star: the GW170817 obser](2026-06-29-v2.291-qnm-ns-tidal-deformability.md) | Closes the loop between the relativistic stellar structure of v2.289/v2.290 (TOV, Buchdahl, maximum |
 | v2.292 | [v2.292 - The g_R4 core-engine extension: the Riemann^4 operator become](2026-06-29-v2.292-qnm-gr4-engine-extension.md) | FIRST SLICE of the user-authorized new-theory arc (after the loop was redirected from reconstructing |
 | v2.293 | [v2.293 - The cross-sector moment principle: matter and curvature share](2026-06-29-v2.293-qnm-cross-sector-moment-principle.md) | SECOND SLICE of the new-theory arc (swing for breakthroughs; honest negatives reported). v2.292 gave |
+| v2.294 | [v2.294 - The rigorous cross-sector bound (and an honest correction to ](2026-06-29-v2.294-qnm-cross-sector-tilted-hankel.md) | THIRD SLICE of the new-theory arc (swing for breakthroughs; honest negatives reported). v2.293 proposed |
