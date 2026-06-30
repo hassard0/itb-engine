@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (399 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (400 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -448,3 +448,4 @@ Auto-generated front door to the full research program (399 notes). Regenerate w
 | v2.286 | [v2.286 - Mapping the feasible curvature region: the (g_R2, g_R3) wedge](2026-06-29-v2.286-qnm-feasible-curvature-region.md) | v2.285 exhibited a feasible higher-derivative theory and found the `g_R2` ceiling (anomaly x repulsive |
 | v2.287 | [v2.287 - Is the feasible curvature wedge robust? The realism program a](2026-06-29-v2.287-qnm-wedge-robustness.md) | The v2.286 wedge (`g_R2 <= ~0.2`, positivity ratio ceiling `x = g_R3/g_R2 ~ 0.83`) was mapped at the |
 | v2.288 | [v2.288 - Synthesis capstone: the engine feasible-region investigation ](2026-06-29-v2.288-qnm-feasible-region-synthesis.md) | Seven cycles turned the loop back from a long from-scratch phenomenology run to the engine itself and |
+| v2.289 | [v2.289 - Relativistic stellar structure: the TOV equation, the Buchdah](2026-06-29-v2.289-qnm-tov-compactness.md) | A fresh sector (relativistic astrophysics) bridging the v2.273-v2.277 black-hole thread and the |

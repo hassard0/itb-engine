@@ -1,0 +1,61 @@
+{
+  "version": "v2.289",
+  "method": "Schwarzschild interior solution + RK4 TOV integration (uniform density, G=c=1); Buchdahl bound from central-pressure divergence; compactness beta=2GM/Rc^2 for real objects",
+  "buchdahl_bound": 0.8888888888888888,
+  "tov_check": {
+    "beta_target": 0.4,
+    "Pc_over_rho": 0.17027121329158343,
+    "P_surface_over_Pc": 0.0,
+    "mR_over_M": 1.0,
+    "P_mid_numeric": 0.006044639430913167,
+    "P_mid_analytic": 0.006044639439159807
+  },
+  "compactness_hierarchy": [
+    {
+      "name": "Sun",
+      "M_sun": 1.0,
+      "R_km": 696000.0,
+      "compactness_beta": 4.244030384161546e-06,
+      "has_photon_sphere": false
+    },
+    {
+      "name": "white dwarf",
+      "M_sun": 0.6,
+      "R_km": 7000.0,
+      "compactness_beta": 0.0002531867269179802,
+      "has_photon_sphere": false
+    },
+    {
+      "name": "neutron star (canonical)",
+      "M_sun": 1.4,
+      "R_km": 12.0,
+      "compactness_beta": 0.3446152671939175,
+      "has_photon_sphere": false
+    },
+    {
+      "name": "ultracompact star (limit)",
+      "M_sun": 2.0,
+      "R_km": 8.85,
+      "compactness_beta": 0.6675356265257482,
+      "has_photon_sphere": true
+    }
+  ],
+  "neutron_star_beta": 0.3446152671939175,
+  "consistency_checks": {
+    "buchdahl_bound_is_8_9": true,
+    "central_pressure_diverges_at_buchdahl": true,
+    "tov_reproduces_analytic_interior": true,
+    "tov_mass_matches": true,
+    "neutron_star_below_buchdahl_and_bh": true,
+    "photon_sphere_onset_at_two_thirds": true
+  },
+  "all_checks_pass": true,
+  "finding": "Relativistic stellar structure caps how compact matter can be. The TOV equation -- the general-relativistic hydrostatic equilibrium, in which pressure both responds to AND sources gravity -- makes the central pressure of a uniform-density star diverge at compactness beta = 2GM/Rc^2 = 8/9, the BUCHDAHL BOUND: no static star can be more compact without infinite central pressure (verified, and the RK4 TOV integration reproduces the analytic Schwarzschild interior pressure profile to 1e-4 with the right total mass, validating the solver). This sets a clean compactness hierarchy: the Sun (beta ~ 4e-6), a white dwarf (~3e-4), a canonical 1.4 Msun neutron star (beta ~ 0.345), the Buchdahl limit (0.889), and a black hole (1.0). Between beta = 2/3 and Buchdahl lie ULTRACOMPACT stars, compact enough (R < 3GM/c^2) to have a photon sphere OUTSIDE their surface -- they would ring with light like a black hole and could mimic the v2.229-v2.230 ringdown/shadow, the horizonless 'exotic compact object' the v2.247 echo searches probe. So a neutron star sits safely below both the Buchdahl and black-hole limits, and the same compactness that the v2.270 GW170817 tidal-deformability measurement constrains is the quantity bounded here from first principles.",
+  "honest_scope": "Exact analytic results (Schwarzschild interior solution, Buchdahl bound 8/9) plus a first-principles RK4 TOV integration verified against the analytic profile to 1e-4 -- both for the UNIFORM-DENSITY (incompressible) star, the cleanest case. A realistic neutron star needs a microphysical equation of state P(rho) (the TOV integration then gives the M-R curve and the maximum mass / TOV limit), which this cycle does not model -- the quoted neutron-star beta ~ 0.34 uses representative M = 1.4 Msun, R = 12 km. The Buchdahl bound and the photon-sphere onset (beta = 2/3) are EOS-independent geometric results. GW170817's tidal-deformability constraint on the EOS is referenced, not re-derived. A classical-GR / relativistic-astrophysics result, not an engine constraint refit.",
+  "references": [
+    "Tolman, 'Static solutions of Einstein's field equations for spheres of fluid', Phys. Rev. 55 (1939) 364",
+    "Oppenheimer, Volkoff, 'On massive neutron cores', Phys. Rev. 55 (1939) 374",
+    "Buchdahl, 'General relativistic fluid spheres', Phys. Rev. 116 (1959) 1027",
+    "this repo: v2.270 (GW170817 / tidal deformability), v2.230 (photon sphere), v2.247 (echoes / ECOs)"
+  ]
+}
