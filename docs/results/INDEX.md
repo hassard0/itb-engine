@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (435 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (436 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -484,3 +484,4 @@ Auto-generated front door to the full research program (435 notes). Regenerate w
 | v2.322 | [v2.322 - Theory vs data: no named framework satisfies both, but a cons](2026-06-30-v2.322-qnm-theory-vs-data-scorecard.md) | The capstone question of the program: scored on BOTH theoretical consistency and current observational |
 | v2.323 | [v2.323 - The new-theory program ledger: robust findings, schematic pre](2026-06-30-v2.323-qnm-program-ledger.md) | ROBUST (encoding + prefactor independent) -- re-confirmed here, 6/6 checks: |
 | v2.324 | [v2.324 - Gravitational leptogenesis: the preferred parity coupling lin](2026-06-30-v2.324-qnm-gravitational-leptogenesis.md) | A bold fresh swing into a new sector -- the matter-antimatter asymmetry. The same parity coupling |
+| v2.325 | [v2.325 - The active constraint core: which consistency conditions do t](2026-06-30-v2.325-qnm-active-constraint-core.md) | A rigorous, dictionary-free, engine-internal cycle (a deliberate return from the schematic-magnitude |

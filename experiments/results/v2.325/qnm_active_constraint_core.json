@@ -1,0 +1,85 @@
+{
+  "version": "v2.325",
+  "n_constraints": 42,
+  "n_sampled_theories": 480,
+  "n_active": 29,
+  "n_always_slack": 13,
+  "top_binding": [
+    {
+      "constraint": "swampland_distance_conjecture",
+      "count": 120
+    },
+    {
+      "constraint": "cosmic_birefringence_data",
+      "count": 74
+    },
+    {
+      "constraint": "bnossw_monogamy",
+      "count": 50
+    },
+    {
+      "constraint": "generalized_anomaly_inflow",
+      "count": 46
+    },
+    {
+      "constraint": "t_hooft_anomaly_matching",
+      "count": 44
+    },
+    {
+      "constraint": "graviton_forward_positivity",
+      "count": 29
+    },
+    {
+      "constraint": "dispersion_tower_g6_squared_bound",
+      "count": 28
+    },
+    {
+      "constraint": "cross_sector_efthedron",
+      "count": 22
+    }
+  ],
+  "dominant_core": [
+    "swampland_distance_conjecture",
+    "cosmic_birefringence_data",
+    "bnossw_monogamy",
+    "generalized_anomaly_inflow",
+    "t_hooft_anomaly_matching",
+    "graviton_forward_positivity",
+    "dispersion_tower_g6_squared_bound"
+  ],
+  "core_families": {
+    "C_UNIVERSALITY": 4,
+    "B_INFORMATION": 1,
+    "A_AMPLITUDE": 2
+  },
+  "always_slack_constraints": [
+    "cubic_curvature_positivity",
+    "eft_validity_box",
+    "generalized_second_law",
+    "gw_dispersion_bound",
+    "gw_speed_bound",
+    "hofman_maldacena_wedge",
+    "ligo_graviton_mass_bound",
+    "scalar_positivity_g4",
+    "scalar_positivity_g6",
+    "scalar_positivity_g8",
+    "species_scale_bound",
+    "submm_gravity_yukawa_bound",
+    "wald_entropy_positivity"
+  ],
+  "consistency_checks": {
+    "active_core_smaller_than_full_stack": true,
+    "distance_conjecture_is_top_binder": true,
+    "cosmic_birefringence_data_in_active_core": true,
+    "anomaly_universality_dominant_in_core": true,
+    "scalar_positivities_always_slack": true,
+    "small_core_carries_majority_of_binding": true
+  },
+  "all_checks_pass": true,
+  "finding": "The engine's 42 consistency conditions are far from equally important: sampling realistic higher-derivative theories (the five frameworks and the constructed candidate, jittered), only 29 of 42 are ever ACTIVE (binding or violated), and 13 are always slack. The carving is dominated by a small CORE -- the constraints accounting for 80% of all binding events are just 7: swampland_distance_conjecture, cosmic_birefringence_data, bnossw_monogamy, generalized_anomaly_inflow, t_hooft_anomaly_matching, graviton_forward_positivity, dispersion_tower_g6_squared_bound. The single top binder is the swampland distance conjecture (it bounds the max/min coupling spread, so it bites whenever a small parity coupling sits amid larger matter couplings -- this IS the v2.318 'forbidden zone' at tiny parity), followed by the cosmic birefringence DATA constraint and the anomaly/universality family (generalized anomaly inflow, t'Hooft anomaly matching, BNOSSW monogamy), then graviton forward positivity and the matter dispersion tower. So the operative consistency conditions for realistic higher-derivative gravity are a handful drawn from three families -- swampland (distance conjecture), universality/anomaly (the decisive family of v2.314/v2.315), and the one tight piece of real data (cosmic birefringence) -- plus the leading amplitude-positivity walls. The 13 always-slack constraints are the ones trivially satisfied by realistic positive-coupling theories: the scalar positivities (g >= 0), the loose data bounds (GW speed, GW dispersion, sub-mm gravity, species scale, graviton mass), and a few structural bounds (GSL, EFT box, Hofman-Maldacena wedge, Wald entropy, cubic curvature positivity). This is a rigorous, dictionary-free map of WHICH consistency conditions actually do the work -- consistent with, and explaining, the binding patterns the whole program kept encountering.",
+  "honest_scope": "Every value is the engine's literal check() output under convex_hull + all four data constraints. 'Active' is relative to the SAMPLE -- realistic positive-coupling theories jittered (sigma 0.06) around the frameworks and the constructed candidate -- so the tally is 'active for realistic higher-derivative gravity', not 'non-redundant in general'. The always-slack set is slack FOR THESE theories: e.g. scalar_positivity_g4 (g_4 >= 0) would bind for negative couplings, excluded by the positive-orthant sample, so its slackness reflects the physical regime, not true redundancy. The exact counts and the 80%-core membership shift with the sample width and seed; the robust content is structural -- a small core dominated by the distance conjecture, the universality/anomaly family, and the cosmic birefringence data does the carving, while the scalar positivities and the loose data bounds are slack. This complements (does not re-derive) the feasible-region and preferred-framework results. Toy basis, O(1) prefactors. A rigorous engine-internal audit.",
+  "references": [
+    "this repo: v2.318 (distance-conjecture forbidden zone), v2.314/v2.315 (universality decisive), v2.321/v2.322 (cosmic birefringence)",
+    "engine constraint classes; the full convex_hull + data stack"
+  ]
+}
