@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (452 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (453 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -501,3 +501,4 @@ Auto-generated front door to the full research program (452 notes). Regenerate w
 | v2.339 | [v2.339 - The constructed theory is causal with the most headroom: trim](2026-06-30-v2.339-qnm-causality-headroom.md) | The companion to v2.338 (ghost/unitarity). The OTHER deep objection to higher-derivative gravity is |
 | v2.340 | [v2.340 - The constructed theory satisfies the Weak Gravity Conjecture:](2026-06-30-v2.340-qnm-wgc-extremal-decay.md) | The third pillar, completing the deep-consistency trilogy (v2.338 unitarity / no-ghost; v2.339 causality / |
 | v2.341 | [v2.341 - Which deep requirement bounds the theory? Causality has headr](2026-06-30-v2.341-qnm-trilogy-binding.md) | The trilogy (v2.338 unitarity, v2.339 causality, v2.340 WGC) certified the constructed POINT. Across the |
+| v2.342 | [v2.342 - The constructed theory is string-like in two independent sens](2026-06-30-v2.342-qnm-string-like-two-senses.md) | The trilogy (v2.338-v2.341) concluded the constructed theory's UV completion must be string-like (unitarity |
