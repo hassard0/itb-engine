@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (466 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (467 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -515,3 +515,4 @@ Auto-generated front door to the full research program (466 notes). Regenerate w
 | v2.353 | [v2.353 - What the theory predicts for the parity-odd cubic IF anomaly ](2026-06-30-v2.353-qnm-thooft-equality-cubic-prediction.md) | v2.352 showed the parity-odd cubic `g_R3_parity` is UNPREDICTED (every constraint reading it is even), and |
 | v2.354 | [v2.354 - The theory MANDATES screening: an unscreened dark-energy-scal](2026-06-30-v2.354-qnm-screening-mandate.md) | A genuinely fresh channel. Every consistent+observed cycle so far has used `submm_screened=True`, treating |
 | v2.355 | [v2.355 - Is the screening mandate data-independent? Partly: the constr](2026-06-30-v2.355-qnm-screening-mandate-robustness.md) | v2.354 showed the consistent+observed (birefringence-on) region is unscreened-EMPTY, so the theory mandates |
+| v2.356 | [v2.356 - The falsifiability map: how to kill the constructed theory, i](2026-06-30-v2.356-qnm-falsifiability-map.md) | The session (v2.343-355) established that the constructed theory makes predictions in three observationally |

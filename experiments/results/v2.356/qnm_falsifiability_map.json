@@ -1,0 +1,62 @@
+{
+  "version": "v2.356",
+  "constructed": {
+    "g_4": 0.529,
+    "g_6": 0.4,
+    "g_8": 0.4,
+    "g_R2": 0.193,
+    "g_R3": 0.09,
+    "g_R2_parity": 0.06
+  },
+  "constructed_feasible": true,
+  "channels": [
+    {
+      "channel": "parity",
+      "observable": "CMB polarization / GW birefringence",
+      "prediction": "g_R2_parity in [0.047, 0.078], > 0",
+      "falsifier": "beta=0 or GW-birefringence bound below 0.0471",
+      "status": "supported (3.6-sigma hint), pressured by real GW bound",
+      "data_dependence": "full",
+      "verified": true
+    },
+    {
+      "channel": "ringdown",
+      "observable": "BH quasinormal modes (LISA/ET)",
+      "prediction": "g_R4 floor = 0.042, bracketed [0, 0.339]",
+      "falsifier": "pure-GR ringdown below the floor (g_R3!=0 members)",
+      "status": "below current precision; future-instrument",
+      "data_dependence": "none (CP-even)",
+      "verified": true
+    },
+    {
+      "channel": "screening",
+      "observable": "Eot-Wash sub-mm fifth force",
+      "prediction": "R^2 scalaron screened; g_R2=0.193 is 3.1x over cap 0.063",
+      "falsifier": "detected unscreened dark-energy-scale fifth force",
+      "status": "consistent now (screened evades Eot-Wash)",
+      "data_dependence": "partial (core data-independent)",
+      "verified": true
+    }
+  ],
+  "ringdown_floor": 0.042,
+  "ringdown_cap": 0.3386,
+  "submm_unscreened_cap": 0.06263,
+  "screening_over_factor": 3.08,
+  "n_channels": 3,
+  "n_not_fully_data_dependent": 2,
+  "consistency_checks": {
+    "constructed_feasible_on_program_stack": true,
+    "parity_channel_falsifier_verified": true,
+    "ringdown_channel_bracket_verified": true,
+    "screening_channel_falsifier_verified": true,
+    "three_observationally_distinct_channels": true,
+    "at_least_one_channel_not_fully_data_dependent": true
+  },
+  "all_checks_pass": true,
+  "finding": "The constructed theory is falsifiable in THREE observationally independent channels, each with a definite refuting observation -- and the three are not redundant: they probe different physics (CMB/GW parity, black-hole ringdown, laboratory fifth-force) and have different data-dependence, so the theory cannot be dismissed or confirmed in one stroke. (1) PARITY: it predicts a strictly positive, right-handed parity coupling g_R2_parity in [0.047, 0.078]; beta = 0 refutes it (verified: g_R2_parity = 0 is infeasible, the cosmic_birefringence constraint fails), and a GW-birefringence bound below the CMB floor 0.0471 closes the window (v2.347) -- supported now by the 3.6-sigma hint but pressured by the real GW bound, and FULLY data-dependent (v2.329). (2) RINGDOWN: it predicts a minimum quartic-curvature deviation g_R4 >= 0.042, bracketed 0 <= floor <= 0.339 by causality x matter (v2.349/351); a pure-GR ringdown below the floor refutes the g_R3 != 0 members (incl. the constructed theory) -- below current precision, a LISA/ET-era channel, and CP-even / data-INDEPENDENT (though the magnitude is rank-1 schematic). (3) SCREENING: it predicts the R^2 fifth force must be screened (g_R2 = 0.193 is 3.1x over the unscreened Eot-Wash cap 0.063; verified the constructed point fails ONLY the sub-mm bound unscreened); a detected unscreened dark-energy-scale fifth force refutes it -- consistent now, with a data-INDEPENDENT core (v2.355). The decision-relevant bottom line: the theory's most testable prediction (parity) is fully data-contingent and already under near-term pressure, while its two data-independent-core predictions (ringdown, screening) are robust but harder to reach -- so a skeptic's strongest line is the parity channel's data-dependence, and the theory's strongest claim is the screening channel's data-independent core. Of the three channels, 2 are not fully data-dependent, so the theory is not a single-datum construct.",
+  "honest_scope": "This is a SYNTHESIS, but every threshold is re-computed from the engine here (the parity falsifier by an infeasibility check, the ringdown bracket by exact arithmetic, the screening factor against the Eot-Wash cap), not asserted from prior cycles. Each channel inherits its own caveats, carried verbatim: parity rests on the birefringence detection being real (v2.329) and on toy birefringence maps (v2.347); the ringdown floor magnitude is rank-1 schematic (v2.336, the deep-research-flagged limitation) and the cap coefficient scales as cemz_kappa^2 (v2.351); the screening cap is an order-of-magnitude Eot-Wash data reading and its universality is data-linked (v2.354/355). The window numbers (parity [0.047,0.078]) use the default anomaly_rho (v2.344). 'Three independent channels' refers to the OBSERVABLES being distinct, not to statistical independence of the underlying couplings (they are correlated through the constraints). The map characterizes the CONSTRUCTED center; family-level statements (e.g. the ringdown floor collapses for small g_R3) are in the per-channel cycles. Toy basis, O(1) prefactors. A verified falsifiability synthesis, superseding nothing -- it complements the v2.323 robustness-tier ledger with the prediction/refutation view.",
+  "references": [
+    "this repo: v2.347/v2.348 (parity channel + GW pinch), v2.349/v2.351 (ringdown floor + causality bracket), v2.354/v2.355 (screening mandate + robustness)",
+    "this repo: v2.323 (robustness-tier ledger, the complementary synthesis), v2.329 (birefringence caveat), v2.336 (rank-1 ringdown map), v2.344 (anomaly rho)"
+  ]
+}
