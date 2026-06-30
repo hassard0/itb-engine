@@ -1,0 +1,151 @@
+{
+  "version": "v2.344",
+  "declared_anomaly_rho_band": [
+    0.03,
+    0.12
+  ],
+  "birefringence_2sigma_band": [
+    0.0471,
+    0.1529
+  ],
+  "g4_times_gR2": 0.1021,
+  "threshold_rho_window_opens": 0.0217,
+  "threshold_rho_constructed_survives": 0.0353,
+  "scan": [
+    {
+      "anomaly_rho": 0.03,
+      "anomaly_upper_edge": 0.0553,
+      "joint_window": [
+        0.0471,
+        0.0553
+      ],
+      "window_width": 0.0082,
+      "window_nonempty": true,
+      "constructed_0p06_survives": false,
+      "engine_anomaly_satisfied": false
+    },
+    {
+      "anomaly_rho": 0.0412,
+      "anomaly_upper_edge": 0.0649,
+      "joint_window": [
+        0.0471,
+        0.0649
+      ],
+      "window_width": 0.0178,
+      "window_nonempty": true,
+      "constructed_0p06_survives": true,
+      "engine_anomaly_satisfied": true
+    },
+    {
+      "anomaly_rho": 0.0525,
+      "anomaly_upper_edge": 0.0732,
+      "joint_window": [
+        0.0471,
+        0.0732
+      ],
+      "window_width": 0.0261,
+      "window_nonempty": true,
+      "constructed_0p06_survives": true,
+      "engine_anomaly_satisfied": true
+    },
+    {
+      "anomaly_rho": 0.06,
+      "anomaly_upper_edge": 0.0783,
+      "joint_window": [
+        0.0471,
+        0.0783
+      ],
+      "window_width": 0.0312,
+      "window_nonempty": true,
+      "constructed_0p06_survives": true,
+      "engine_anomaly_satisfied": true
+    },
+    {
+      "anomaly_rho": 0.0638,
+      "anomaly_upper_edge": 0.0807,
+      "joint_window": [
+        0.0471,
+        0.0807
+      ],
+      "window_width": 0.0336,
+      "window_nonempty": true,
+      "constructed_0p06_survives": true,
+      "engine_anomaly_satisfied": true
+    },
+    {
+      "anomaly_rho": 0.075,
+      "anomaly_upper_edge": 0.0875,
+      "joint_window": [
+        0.0471,
+        0.0875
+      ],
+      "window_width": 0.0404,
+      "window_nonempty": true,
+      "constructed_0p06_survives": true,
+      "engine_anomaly_satisfied": true
+    },
+    {
+      "anomaly_rho": 0.0862,
+      "anomaly_upper_edge": 0.0938,
+      "joint_window": [
+        0.0471,
+        0.0938
+      ],
+      "window_width": 0.0467,
+      "window_nonempty": true,
+      "constructed_0p06_survives": true,
+      "engine_anomaly_satisfied": true
+    },
+    {
+      "anomaly_rho": 0.0975,
+      "anomaly_upper_edge": 0.0998,
+      "joint_window": [
+        0.0471,
+        0.0998
+      ],
+      "window_width": 0.0527,
+      "window_nonempty": true,
+      "constructed_0p06_survives": true,
+      "engine_anomaly_satisfied": true
+    },
+    {
+      "anomaly_rho": 0.1087,
+      "anomaly_upper_edge": 0.1054,
+      "joint_window": [
+        0.0471,
+        0.1054
+      ],
+      "window_width": 0.0583,
+      "window_nonempty": true,
+      "constructed_0p06_survives": true,
+      "engine_anomaly_satisfied": true
+    },
+    {
+      "anomaly_rho": 0.12,
+      "anomaly_upper_edge": 0.1107,
+      "joint_window": [
+        0.0471,
+        0.1107
+      ],
+      "window_width": 0.0636,
+      "window_nonempty": true,
+      "constructed_0p06_survives": true,
+      "engine_anomaly_satisfied": true
+    }
+  ],
+  "consistency_checks": {
+    "window_nonempty_across_declared_band": true,
+    "parity_required_positive_across_band": true,
+    "constructed_survives_at_default_rho": true,
+    "constructed_excluded_at_band_bottom": true,
+    "closed_form_matches_engine_constraint": true
+  },
+  "all_checks_pass": true,
+  "finding": "The parity prediction's QUALITATIVE core is robust to the one load-bearing prefactor, but its specific magnitude is not -- and the threshold is quantified. The constructed theory needs a positive parity coupling g_R2_parity, pinned from below by the cosmic-birefringence data (2-sigma band [0.0471, 0.1529]) and from above by the gravitational anomaly-inflow budget whose prefactor anomaly_rho is an O(1) choice. Stress-testing across the engine's OWN declared plausible band anomaly_rho in [0.03, 0.12]: the joint (data AND anomaly) window for g_R2_parity stays NON-EMPTY and strictly positive at every rho in the band (it would only close below rho = 0.0217, well outside the declared band), so 'parity violation is required, beta = 0 excluded' holds regardless of the prefactor -- the headline is robust. What is NOT robust is the specific constructed VALUE 0.06: it survives the anomaly budget only for rho >= 0.0353, so in the lowest ~17% of the declared band, [0.03, 0.0353), the constructed 0.06 would VIOLATE the budget and the window center shifts down to ~0.051. So the EXISTENCE and SIGN of the parity prediction are prefactor-robust; its precise MAGNITUDE tracks the prefactor and is contingent on anomaly_rho being near its default 0.06 rather than its floor. The closed-form window edges match the engine's actual GeneralizedAnomalyInflow constraint exactly at every grid point (a theory placed at the sqrt(rho g_4 g_R2) edge has anomaly margin 0). This is the honest sensitivity of the program's most load-bearing result: the parity headline you should trust is 'g_R2_parity > 0, in [0.047, ~0.08]', not the single digit 0.06.",
+  "honest_scope": "This is a sensitivity analysis of two specific constraints (cosmic_birefringence + generalized_anomaly_inflow), not the full stack -- other constraints could in principle tighten the window further, so the windows here are UPPER bounds on the feasible parity range (the true joint-with-everything window is a subset). The anomaly budget's FORM (g_R2_parity^2 + 2 g_R3_parity^2 <= rho g_4 g_R2) and the birefringence map (beta = 3.4 deg * g_R2_parity) are the engine's toy encodings; the threshold values (0.0217, 0.0353) are exact arithmetic GIVEN those forms, but inherit the toy-basis and O(1)-prefactor caveats. The [0.03, 0.12] band is the engine's own declared range for anomaly_rho (experiments/stack.py), itself a convention -- a wider band would widen the fragility region. The whole result still rests on the cosmic-birefringence data being real (the ~3.6-sigma hint, v2.329 caveat); if it is a systematic, the lower edge vanishes and parity becomes a soft direction with no positivity requirement. Robust content: across the declared prefactor band the parity window is non-empty and positive (the sign/existence is prefactor-robust), and the specific 0.06 requires rho >= 0.0353. Toy basis. A robustness audit of the load-bearing parity result, reported with its fragility.",
+  "references": [
+    "this repo: experiments/stack.py (anomaly_rho default 0.06, declared band [0.03,0.12]); src/itb/constraints/anomaly_flow.py; src/itb/constraints/cosmic_birefringence.py (beta=0.34+/-0.09 deg)",
+    "this repo: v2.329 (birefringence is the single point of failure), v2.335 (anomaly budget couples the parity couplings), v2.321 (birefringence pins parity)",
+    "Minami & Komatsu PRL 125,221301 (2020); Eskilt & Komatsu 2022; Alvarez-Gaume-Witten 1984 (anomaly inflow)"
+  ]
+}
