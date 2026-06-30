@@ -1,0 +1,112 @@
+{
+  "version": "v2.316",
+  "default_rfc_form": "matter_product",
+  "scores_matter_product": [
+    {
+      "framework": "pure_gr",
+      "min_margin": 0.0,
+      "feasible": true,
+      "n_fail": 0,
+      "binding": "scalar_positivity_g4",
+      "binding_family": "A_AMPLITUDE"
+    },
+    {
+      "framework": "string_tree_eft",
+      "min_margin": -0.04000000000000001,
+      "feasible": false,
+      "n_fail": 1,
+      "binding": "repulsive_force_conjecture",
+      "binding_family": "C_UNIVERSALITY"
+    },
+    {
+      "framework": "asymptotic_safety",
+      "min_margin": -0.0525,
+      "feasible": false,
+      "n_fail": 1,
+      "binding": "repulsive_force_conjecture",
+      "binding_family": "C_UNIVERSALITY"
+    },
+    {
+      "framework": "lqg_induced",
+      "min_margin": -0.11999999999999997,
+      "feasible": false,
+      "n_fail": 6,
+      "binding": "repulsive_force_conjecture",
+      "binding_family": "C_UNIVERSALITY"
+    },
+    {
+      "framework": "cdt",
+      "min_margin": -0.04839999999999997,
+      "feasible": false,
+      "n_fail": 1,
+      "binding": "repulsive_force_conjecture",
+      "binding_family": "C_UNIVERSALITY"
+    }
+  ],
+  "scores_convex_hull": [
+    {
+      "framework": "pure_gr",
+      "min_margin": 0.0,
+      "feasible": true,
+      "n_fail": 0,
+      "binding": "scalar_positivity_g4",
+      "binding_family": "A_AMPLITUDE"
+    },
+    {
+      "framework": "string_tree_eft",
+      "min_margin": 0.006,
+      "feasible": true,
+      "n_fail": 0,
+      "binding": "graviton_forward_positivity",
+      "binding_family": "A_AMPLITUDE"
+    },
+    {
+      "framework": "asymptotic_safety",
+      "min_margin": 0.0036,
+      "feasible": true,
+      "n_fail": 0,
+      "binding": "graviton_forward_positivity",
+      "binding_family": "A_AMPLITUDE"
+    },
+    {
+      "framework": "lqg_induced",
+      "min_margin": -0.07499999999999996,
+      "feasible": false,
+      "n_fail": 5,
+      "binding": "cft_flat_space_bound",
+      "binding_family": "A_AMPLITUDE"
+    },
+    {
+      "framework": "cdt",
+      "min_margin": 0.00726,
+      "feasible": true,
+      "n_fail": 0,
+      "binding": "bnossw_monogamy",
+      "binding_family": "B_INFORMATION"
+    }
+  ],
+  "newly_feasible_under_convex_hull": [
+    "asymptotic_safety",
+    "cdt",
+    "string_tree_eft"
+  ],
+  "still_infeasible_under_convex_hull": [
+    "lqg_induced"
+  ],
+  "lqg_binding_under_convex_hull": "cft_flat_space_bound",
+  "consistency_checks": {
+    "default_rfc_form_is_matter_product": true,
+    "matter_product_excludes_all_community": true,
+    "convex_hull_makes_three_community_feasible": true,
+    "lqg_infeasible_under_both_forms": true,
+    "engine_docstring_documents_the_artifact": true
+  },
+  "all_checks_pass": true,
+  "finding": "The recent arc's decisive verdict -- 'all community frameworks infeasible, all bound by repulsive_force_conjecture, universality decisive' (v2.315), and 'the engine prefers a unique constructed framework over every community one' (v2.312) -- is an ARTIFACT of a deprecated constraint encoding, which the engine itself documents. build_stack() defaults the repulsive-force conjecture to its matter_product form (g_4*g_6 - g_R2 - gamma*g_R2^2 >= 0); the RepulsiveForceConjecture docstring states this form 'excludes EVERY candidate framework for any gamma>0 -- a 100% universal exclusion that is an artifact of the spurious product (the encoded frameworks all have g_4*g_6 ~ g_R2 by construction)', and recommends the physically-corrected convex_hull form (g_4 - g_R2 - gamma*g_R2^2 >= 0) for new analyses. Re-scoring under the recommended form changes the picture decisively: three of the four community frameworks become FEASIBLE -- string_tree_eft (+0.0060), asymptotic_safety (+0.0036), and cdt (+0.0073) -- and only lqg_induced remains infeasible (-0.075), now bound by cft_flat_space_bound (a cubic-curvature / CFT condition), exactly the 'real discriminating physics' the docstring points to and the outlier-g_R3 mechanism v2.311 already identified. So the honest correction: the 'universal exclusion' and 'engine prefers a unique framework' headlines of v2.312-v2.315 were specific to the deprecated default form; under the engine's recommended form the community higher-derivative frameworks (except lqg) ARE in the consistent region. What survives is narrower but real: lqg is infeasible under BOTH forms -- the genuine boundary framework -- and its infeasibility traces to its outlier cubic curvature (v2.311's primary finding), not to the repulsive-force box (v2.311's secondary, matter_product-specific finding). The carving / convexity / moment-tower / finite-cutoff / cosmology results, which do not invoke the repulsive-force conjecture, are unaffected. Future cycles should pass form='convex_hull'.",
+  "honest_scope": "This is a self-correction, and the correction itself is the engine's literal verdict: the form-dependence is direct check() output, and the artifact is documented in the engine's own RepulsiveForceConjecture docstring (citing a prior 2026-06-08 realism study). The default build_stack() uses matter_product, so every recent cycle that called build_stack() with no rfc_form argument inherited it -- the affected headlines are the FEASIBILITY verdicts that depended on the repulsive-force constraint (v2.312 'engine-preferred framework more robust than all community', v2.315 'all community infeasible / universality decisive', and the 'only pure GR feasible' framing). Results that do not involve the repulsive-force conjecture -- the curvature carving (v2.292/v2.302/v2.303/v2.309), convexity (v2.304/v2.305), finite-cutoff Hausdorff (v2.306), and cosmology (v2.307/v2.308) -- are unaffected. lqg's boundary status (v2.310/v2.311) is partly robust: lqg is infeasible under both forms, and its outlier-g_R3 primary mechanism holds, but its repulsive-vs-anomaly box (v2.311 secondary) was matter_product-specific. The exact convex_hull margins still carry the O(1) prefactor caveat. Toy basis, O(1) prefactors. An honest correction of the recent arc's central feasibility claims.",
+  "references": [
+    "src/itb/constraints/swampland_variants.py (RepulsiveForceConjecture docstring; the artifact note)",
+    "this repo: v2.315 (scorecard, now corrected), v2.312 (preferred framework), v2.311 (lqg g_R3 outlier -- robust)",
+    "docs/results/2026-06-08-* (the prior prefactor-realism study that found the matter_product artifact)"
+  ]
+}
