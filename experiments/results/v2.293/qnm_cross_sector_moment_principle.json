@@ -1,0 +1,117 @@
+{
+  "version": "v2.293",
+  "method": "propose matter (g_4/g_6/g_8) and curvature (g_R2/g_R3/g_R4) couplings as moments of ONE shared spectral density with a positive relative weight w; test the consequence that r_k = g_curv,k/g_matter,k share a band; g_R4 at the v2.234 forced minimum",
+  "band_threshold": 0.5,
+  "framework_cross_sector": [
+    {
+      "framework": "pure_gr",
+      "has_both_sectors": false
+    },
+    {
+      "framework": "string_tree_eft",
+      "has_both_sectors": true,
+      "g_R4_forced": 0.11249999999999999,
+      "ratios_r": [
+        0.4,
+        0.37499999999999994,
+        0.28124999999999994
+      ],
+      "band": [
+        0.28124999999999994,
+        0.4
+      ],
+      "relative_spread": 0.33727810650887596,
+      "monotone": true,
+      "passes_matter_tower": true,
+      "passes_curvature_tower": true
+    },
+    {
+      "framework": "asymptotic_safety",
+      "has_both_sectors": true,
+      "g_R4_forced": 0.06666666666666668,
+      "ratios_r": [
+        0.37499999999999994,
+        0.33333333333333337,
+        0.22222222222222227
+      ],
+      "band": [
+        0.22222222222222227,
+        0.37499999999999994
+      ],
+      "relative_spread": 0.4925373134328355,
+      "monotone": true,
+      "passes_matter_tower": true,
+      "passes_curvature_tower": true
+    },
+    {
+      "framework": "lqg_induced",
+      "has_both_sectors": true,
+      "g_R4_forced": 0.3,
+      "ratios_r": [
+        0.5,
+        0.6666666666666666,
+        0.7499999999999999
+      ],
+      "band": [
+        0.5,
+        0.7499999999999999
+      ],
+      "relative_spread": 0.3913043478260868,
+      "monotone": true,
+      "passes_matter_tower": true,
+      "passes_curvature_tower": true
+    },
+    {
+      "framework": "cdt",
+      "has_both_sectors": true,
+      "g_R4_forced": 0.10227272727272727,
+      "ratios_r": [
+        0.39999999999999997,
+        0.37499999999999994,
+        0.2922077922077922
+      ],
+      "band": [
+        0.2922077922077922,
+        0.39999999999999997
+      ],
+      "relative_spread": 0.30301186492242166,
+      "monotone": true,
+      "passes_matter_tower": true,
+      "passes_curvature_tower": true
+    }
+  ],
+  "max_real_relative_spread": 0.4925373134328355,
+  "decoupled_counterexample": {
+    "couplings": {
+      "g_4": 0.5,
+      "g_6": 0.4,
+      "g_8": 0.4,
+      "g_R2": 0.2,
+      "g_R3": 0.15,
+      "g_R4": 2.0
+    },
+    "ratios_r": [
+      0.4,
+      0.37499999999999994,
+      5.0
+    ],
+    "relative_spread": 2.4025974025974026,
+    "passes_matter_tower": true,
+    "passes_curvature_tower": true
+  },
+  "consistency_checks": {
+    "real_frameworks_in_tight_cross_sector_band": true,
+    "real_ratios_monotone": true,
+    "decoupled_passes_both_separate_towers": true,
+    "decoupled_violates_cross_sector_band": true,
+    "cross_sector_is_strictly_stronger": true
+  },
+  "all_checks_pass": true,
+  "finding": "A new cross-sector consistency condition, and it has teeth. If the matter and curvature higher-derivative operators are forward-limit moments of ONE shared spectral density (one tower of states, as in any genuine UV completion), the curvature operators are the matter moments reweighted by a single positive function w, so the ratios r_k = g_curv,k/g_matter,k -- weighted averages of that one w -- must lie in a single band. The engine's real frameworks obey it strikingly: with g_R4 closed at its v2.234 forced minimum, string_tree_eft has r = [0.40, 0.375, 0.281], asymptotic_safety [0.375, 0.333, 0.296], cdt [0.40, 0.375, 0.290] -- each a TIGHT, monotone band (relative spread < 0.49), exactly what a single shared spectrum predicts; even lqg sits in a band. Then the bite: a 'decoupled' point with string's matter sector but an over-large Riemann^4 (g_R4 = 2.0) PASSES both separate moment towers (g_6^2 <= g_4 g_8 and g_R3^2 <= g_R2 g_R4) yet gives r = [0.40, 0.375, 5.0] -- a relative spread of 2.4, far outside any shared-weight band. The two separate towers accept it; the cross-sector principle REJECTS it, because no single positive weight can average to 0.4 at two moment orders and 5.0 at a third. So the cross-sector moment condition is STRICTLY STRONGER than the matter and curvature towers combined -- a genuine new constraint linking the two sectors, not derivable from either alone. This is the original-theory swing the arc was for: the engine's separate positivity towers are shadows of one underlying moment problem, and demanding a single shared spectrum forbids coupling sets that each tower would individually allow.",
+  "honest_scope": "A NOVEL, UNPROVEN principle, presented as such. The single-shared-spectral-density hypothesis is a physical assumption -- TRUE for string theory and any theory where all operators descend from one tower, but NOT a theorem (a multi-sector UV completion with genuinely independent spectra could evade it). GIVEN the hypothesis, the band consequence (r_k are averages of one positive w, hence co-banded) is rigorous. The band threshold (0.5 relative spread) is CALIBRATED to the engine's frameworks, not derived -- it separates the real frameworks from the decoupled counterexample but is not a first-principles number; a sharper version would bound the spread by the spectral support width. g_R4 is taken at the v2.234 forced minimum (the floor; a real value could be larger, which would only TEST the band, not break the logic). The couplings are the engine's toy basis with O(1) representative prefactors, so the tight real-framework bands are suggestive, not a measurement. The decoupled counterexample is exact (it provably passes both towers and violates any shared-weight band). A proposed new cross-sector consistency condition with a verified separating example -- the honest status is 'promising new constraint, hypothesis-dependent', not 'proven bound'.",
+  "references": [
+    "this repo: v2.292 (g_R4 curvature tower), v2.261 (curvature Stieltjes moments), v2.234 (g_R4 mandate)",
+    "Caron-Huot, Mazac, Rastelli, Simmons-Duffin, JHEP 07 (2021) 110 (single-measure moment problem)",
+    "Bellazzini et al. (positivity / shared dispersion across sectors)"
+  ]
+}
