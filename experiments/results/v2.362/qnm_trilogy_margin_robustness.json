@@ -1,0 +1,43 @@
+{
+  "version": "v2.362",
+  "group_stats": {
+    "unitarity": {
+      "worst_margin": 0.0497,
+      "best_margin": 0.2272,
+      "n": 9
+    },
+    "causality": {
+      "worst_margin": 0.1221,
+      "best_margin": 0.2376,
+      "n": 3
+    },
+    "wgc": {
+      "worst_margin": 0.0907,
+      "best_margin": 0.4403,
+      "n": 3
+    }
+  },
+  "all_group_margin_min": 0.0497,
+  "all_group_margin_max": 0.4403,
+  "margin_max_min_ratio": 8.9,
+  "worst_margins": {
+    "unitarity": 0.0497,
+    "causality": 0.1221,
+    "wgc": 0.0907
+  },
+  "causality_to_unitarity_ratio": 2.46,
+  "consistency_checks": {
+    "groups_exclude_data_constraints": true,
+    "group_margins_comparably_scaled": true,
+    "no_pathological_scale_margin_in_groups": true,
+    "v2341_ordering_holds_at_center": true,
+    "ordering_robust_to_O1_rescaling": true
+  },
+  "all_checks_pass": true,
+  "finding": "v2.341's 'which deep requirement binds' headline SURVIVES the v2.361 margin-incomparability caveat -- audited and robust. The caveat (margins not cross-comparable, driven by gw_speed's 5e-16 scale) only threatens computations that aggregate margins across constraints of DIFFERENT natural scales. v2.341's three groups (unitarity, causality, WGC) contain NONE of the data / pathological-scale constraints -- they are all theoretical positivity/causality/swampland conditions -- and at the constructed point their margins are comparably scaled: every group margin lies in [0.05, 0.44], a max/min ratio of 9, vs the ~1e13 ratio gw_speed would introduce. So the comparison v2.341 made is between like-scaled quantities, not a normalization artifact. And v2.341's ordering holds at the center: causality is the loosest (worst margin 0.122), WGC intermediate (0.091), unitarity the tightest (0.050) -- exactly the 'causality has headroom, unitarity+WGC bind' conclusion. The ordering is robust to the O(1) prefactor uncertainty: it would take a 2.5x rescaling of the loosest-vs-tightest to flip it, well above O(1) prefactor noise. So the deep-requirement-binding headline is not an artifact of the incomparable-margin issue -- it is a genuine comparison among comparably-scaled theoretical constraints. This closes the v2.361 -> v2.341 implication loop honestly: the newly-found caveat is real, but it does not reach v2.341 (which never included the pathological-scale data constraints in its aggregation), and the program's margin-aggregating headlines should be (and here, are) checked against it.",
+  "honest_scope": "This audits v2.341 at the CONSTRUCTED POINT; v2.341's actual conclusion was family-level (worst over ~2100 samples). The SCALE-comparability being audited is a per-constraint property (independent of the point), so checking it at the center suffices to establish that the family-level comparison is also between comparable scales -- but the exact family worst-margins (and thus the precise ordering gaps) are in v2.341, not re-derived here. The margins are the engine's signed-distance values with their O(1)-prefactor dependence; 'comparably scaled' means within a factor of ~tens, not identical -- the ordering's robustness is quantified by the 2.5x flip ratio, which is the honest measure (a >tens-fold per-constraint rescaling, which only the excluded data constraints have, could still matter; O(1) prefactor noise cannot). The 50x and 1.5x thresholds are conventional. This is conditional on the same toy basis + screened stack as the rest. Robust content: v2.341's groups are data-free and comparably scaled, and its ordering survives O(1) rescaling, so the which-binds headline is not a margin-incomparability artifact. Toy basis, O(1) prefactors. A QC audit hardening v2.341 against the v2.361 caveat.",
+  "references": [
+    "this repo: v2.361 (margins not cross-comparable -- the caveat audited here), v2.341 (which deep requirement binds -- the headline audited), v2.358 (gw_speed's 5e-16 scale)",
+    "this repo: v2.338 (unitarity), v2.339 (causality), v2.340 (WGC)"
+  ]
+}
