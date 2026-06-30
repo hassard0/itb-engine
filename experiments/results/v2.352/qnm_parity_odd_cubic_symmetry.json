@@ -1,0 +1,29 @@
+{
+  "version": "v2.352",
+  "delta": 0.02,
+  "n_asymmetric_constraints": 0,
+  "asymmetric_constraints": {},
+  "feasible_window_gR3p": [
+    -0.035,
+    0.035
+  ],
+  "window_center": 0.0,
+  "anomaly_closed_form_edge": 0.03554,
+  "gR3p_zero_feasible": true,
+  "gR2p_zero_feasible": false,
+  "consistency_checks": {
+    "full_stack_reflection_symmetric_in_gR3p": true,
+    "gR3p_zero_is_feasible": true,
+    "window_symmetric_about_zero": true,
+    "center_is_zero": true,
+    "edge_matches_anomaly_closed_form": true,
+    "contrast_gR2p_zero_infeasible": true
+  },
+  "all_checks_pass": true,
+  "finding": "The construction's g_R3_parity = 0 is VERIFIED as the Chebyshev center of a symmetric window, not an untested assumption -- and the parity-odd CUBIC is the one parity coupling the program leaves UNPREDICTED. Every constraint that reads g_R3_parity does so through an even function of it (g_R3_parity^2 or |g_R3_parity|), so the entire feasibility is invariant under the reflection g_R3_parity -> -g_R3_parity: at +/- 0.02 all 42 stack margins are identical (0 asymmetric), the feasible window [-0.035, 0.035] is symmetric about zero, and its center is 0.0. The binding edge matches the closed-form anomaly-inflow bound |g_R3_parity| <= sqrt((rho g_4 g_R2 - g_R2_parity^2)/2) = 0.0355. This both justifies the program's long-standing choice to fix g_R3_parity = 0 (it IS the center, and the 6-coupling family sampler loses nothing by dropping it) and draws a clean, honest asymmetry: the parity-odd QUADRATIC g_R2_parity is data-PINNED away from zero (setting it to 0 is infeasible: True feasible, because cosmic birefringence requires g_R2_parity >= 0.047), whereas the parity-odd CUBIC g_R3_parity is UNPINNED (zero is feasible and central, no datum breaks its reflection symmetry). So the theory makes exactly ONE parity-odd prediction (the quadratic, the birefringence headline) and ZERO for the cubic -- the cubic is bounded (|g_R3_parity| <~ 0.036) but unpredicted. A would-be second parity-odd prediction would require a constraint or datum that breaks the g_R3_parity reflection symmetry (e.g. a genuine 't Hooft ratio EQUALITY rather than the engine's bound, or a parity-odd-cubic observable); none is currently in the engine.",
+  "honest_scope": "The reflection symmetry is EXACT and structural: it follows from every g_R3_parity-reading constraint being an even function, demonstrated by identical full-stack margins at +/- delta (not a fit). So 'g_R3_parity = 0 is the center' and 'the cubic is unpredicted' are robust against the toy-basis NUMBERS -- they would survive any reparametrization that preserves the even structure (positivity/anomaly bounds are generically even in a parity-odd coupling). The contingent parts are the window WIDTH (the edge 0.036 scales with the anomaly prefactor rho, v2.344, and the other couplings) and the contrast resting on the birefringence data being real (v2.329: if it is a systematic, g_R2_parity = 0 becomes feasible too and BOTH parity-odd couplings are unpredicted). The engine's t_hooft_anomaly_matching is encoded as an upper BOUND with slack, not the equality its docstring motivates -- if it were an equality fixing |g_R3_parity|/|g_R2_parity|, the symmetry would break and the cubic WOULD be predicted (up to sign); that is the single most likely place a future constraint upgrade changes this verdict. Toy basis, O(1) prefactors. A gap-closing verification of the program's one fixed coupling.",
+  "references": [
+    "this repo: src/itb/constraints/cubic_parity.py + anomaly_flow.py + complexity_cutoff.py (the g_R3_parity-reading constraints, all even)",
+    "this repo: v2.321/v2.347 (g_R2_parity data-pinned), v2.335 (anomaly couples the parity couplings), v2.333/v2.341 (6-coupling family drops g_R3_parity), v2.329 (birefringence caveat)"
+  ]
+}

@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (462 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (463 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -511,3 +511,4 @@ Auto-generated front door to the full research program (462 notes). Regenerate w
 | v2.349 | [v2.349 - Is the ringdown floor guaranteed across the whole consistent+](2026-06-30-v2.349-qnm-ringdown-floor-family.md) | A fresh sector after the parity arc: the OTHER prediction channel, ringdown. v2.336/v2.337 established the |
 | v2.350 | [v2.350 - A cross-sector inequality: cosmic birefringence puts a LOWER ](2026-06-30-v2.350-qnm-birefringence-parity-even-floor.md) | A genuine swing rather than another audit (the mandated "cross-sector moment" direction). The program has |
 | v2.351 | [v2.351 - A CP-even cross-sector cap: causality bounds the ringdown flo](2026-06-30-v2.351-qnm-ringdown-floor-causality-cap.md) | The CP-even companion to v2.350 (which routed a parity observable to the parity-even sector). Can two exact |
+| v2.352 | [v2.352 - Is g_R3_parity = 0 the verified center, or an untested assump](2026-06-30-v2.352-qnm-parity-odd-cubic-symmetry.md) | The program has held the parity-odd CUBIC coupling `g_R3_parity = 0` throughout -- it is not even in the |
