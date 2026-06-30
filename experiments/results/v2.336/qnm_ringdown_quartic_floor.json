@@ -1,0 +1,56 @@
+{
+  "version": "v2.336",
+  "gR4_floors": [
+    {
+      "theory": "pure_gr",
+      "g_R2": 0.0,
+      "g_R3": 0.0,
+      "gR4_floor": 0.0
+    },
+    {
+      "theory": "engine_constructed",
+      "g_R2": 0.193,
+      "g_R3": 0.09,
+      "gR4_floor": 0.042
+    },
+    {
+      "theory": "asymptotic_safety",
+      "g_R2": 0.15,
+      "g_R3": 0.1,
+      "gR4_floor": 0.0667
+    },
+    {
+      "theory": "cdt",
+      "g_R2": 0.22,
+      "g_R3": 0.15,
+      "gR4_floor": 0.1023
+    },
+    {
+      "theory": "string_tree_eft",
+      "g_R2": 0.2,
+      "g_R3": 0.15,
+      "gR4_floor": 0.1125
+    },
+    {
+      "theory": "lqg_induced",
+      "g_R2": 0.3,
+      "g_R3": 0.3,
+      "gR4_floor": 0.3
+    }
+  ],
+  "constructed_gR4_floor": 0.042,
+  "consistency_checks": {
+    "constructed_requires_nonzero_quartic_curvature": true,
+    "constructed_feasible_at_the_gR4_floor": true,
+    "gR4_floor_is_the_moment_tower_value": true,
+    "constructed_has_the_smallest_gR4_floor_among_higher_derivative": true,
+    "pure_gr_has_zero_ringdown_quartic": true
+  },
+  "all_checks_pass": true,
+  "finding": "Reconnecting to the project's namesake -- ringdown -- the constructed theory makes a CP-even, curvature-sector prediction to complement its parity-sector signatures: a nonzero but MINIMAL ringdown-active quartic curvature. The quartic g_R4 is the operator that deforms the (2,2,0) Schwarzschild quasi-normal mode, and with the curvature tower on the moment-tower mandate g_R4 >= g_R3^2/g_R2 FORCES it nonzero whenever the cubic g_R3 is nonzero: the constructed theory (g_R3 = 0.09, g_R2 = 0.193) requires g_R4 >= 0.042, and g_R4 = 0 is infeasible. Crucially, because the constructed theory carries the most TRIMMED cubic curvature, its quartic floor (0.042) is the SMALLEST of all candidates -- below asymptotic_safety (0.067), cdt (0.10), string (0.11), and far below lqg (0.30) -- so it predicts the MILDEST ringdown deviation among the higher-derivative frameworks, while pure GR (g_R3 = 0) has g_R4 = 0 and no shift at all. So the ringdown channel is a clean, ordered CP-even discriminator: a sufficiently precise (2,2,0) ringdown measurement would place each candidate by the size of its quartic-curvature deviation -- pure GR at zero, the constructed theory just above it, and the community frameworks (larger trimmed-less curvature) higher up -- testing the curvature sector that the parity-sector probes (birefringence, chiral GW) do NOT. The constructed theory's trimmed curvature, which made it consistent in the first place, thus also makes it the most GR-like in ringdown -- the hardest of the higher-derivative candidates to distinguish from Einstein gravity by a ringdown measurement.",
+  "honest_scope": "The g_R4 FLOOR is rigorous and exact: the moment-tower mandate g_R4 >= g_R3^2/g_R2 is the engine's literal constraint (v2.292), the floor values are exact arithmetic, and the feasibility verdicts (g_R4 = 0 infeasible, floor feasible) are the engine's literal output with the curvature tower on. What is SCHEMATIC is the map from g_R4 to an actual ringdown frequency/damping shift: the deep-research thread established that the published qNM->R^4 sensitivity is only a rank-1 (single-combination) ray with order-of-magnitude coefficients, so the SIZE of the (2,2,0) deviation per unit g_R4 is not sourced here -- only the floor on g_R4 and the ORDERING of the candidates (constructed smallest, pure GR zero) are claimed. The floors depend on the encoded g_R2, g_R3 (toy O(1) values); the ordering follows from the constructed theory's trimmed cubic curvature and is robust to that. This is a curvature-sector (CP-even) prediction, independent of the cosmic-birefringence data (it does not use g_R2_parity), so unlike the parity headline it does NOT rest on the v2.329 birefringence caveat. Toy basis, O(1) prefactors. A fresh-seed result reconnecting to the ringdown thread.",
+  "references": [
+    "this repo: v2.292 (moment tower g_R4 >= g_R3^2/g_R2), v2.309 (joint region g_R4 floors), v2.317 (constructed framework)",
+    "the (2,2,0) quasi-normal mode / quartic-curvature ringdown deformation (rank-1 qNM->R^4 sensitivity, deep-research thread)"
+  ]
+}
