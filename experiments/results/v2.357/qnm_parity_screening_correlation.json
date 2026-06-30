@@ -1,0 +1,42 @@
+{
+  "version": "v2.357",
+  "anomaly_rho": 0.06,
+  "submm_unscreened_cap": 0.06263,
+  "constructed_g_4": 0.529,
+  "over_cap_ladder": [
+    {
+      "g_R2_parity": 0.0471,
+      "anomaly_min_g_R2": 0.0699,
+      "over_cap_factor": 1.116
+    },
+    {
+      "g_R2_parity": 0.06,
+      "anomaly_min_g_R2": 0.1134,
+      "over_cap_factor": 1.811
+    },
+    {
+      "g_R2_parity": 0.078,
+      "anomaly_min_g_R2": 0.1917,
+      "over_cap_factor": 3.06
+    }
+  ],
+  "over_cap_at_parity_floor": 1.116,
+  "ratio_observed_floor_to_edge": 2.743,
+  "ratio_if_quadratic": 2.743,
+  "family_corr_gR2_gR2parity": 0.449,
+  "n_samples": 2137,
+  "consistency_checks": {
+    "mandate_active_even_at_parity_floor": true,
+    "over_cap_increases_with_parity": true,
+    "scaling_is_quadratic": true,
+    "family_gR2_gR2parity_positively_correlated": true,
+    "family_respects_anomaly_floor": true
+  },
+  "all_checks_pass": true,
+  "finding": "The parity and screening channels are POSITIVELY CORRELATED, not independent: stronger cosmic birefringence forces a quadratically deeper screening mandate. The anomaly-inflow budget g_R2_parity^2 <= rho g_4 g_R2 ties the parity coupling to g_R2 (g_R2 >= g_R2_parity^2/(rho g_4)), and g_R2 is exactly what the unscreened Eot-Wash bound caps, so the screening over-cap factor f = g_R2_parity^2/(rho g_4 g_R2_max) scales as g_R2_parity^2. Across the data-pinned parity window [0.047, 0.078] at the constructed g_4, f runs 1.12 -> 1.81 -> 3.06 -- and crucially it exceeds 1 EVEN AT THE BIREFRINGENCE FLOOR, so the screening mandate is locked in by the parity data itself (at the constructed g_4): the minimum parity the birefringence data allows already forces g_R2 above the unscreened cap. The engine confirms the linkage -- over the feasible family g_R2 and g_R2_parity are positively correlated (corr = 0.45) and every member respects the anomaly floor. This mechanistically explains v2.355 (the screening mandate's universality is data-linked: it is the SAME anomaly inflow + birefringence floor that pushes g_R2 past the cap) and refines v2.356's three-channel map: the channels are observationally distinct but parity and screening are PHYSICALLY coupled through g_R2, with a quadratic amplification -- so a future tightening of the birefringence signal (raising the parity floor) would DEEPEN the screening mandate, while a downward revision would relax both together. The two channels are one correlated prediction wearing two observational hats.",
+  "honest_scope": "The correlation is EXACT algebra at fixed g_4 (the anomaly floor on g_R2 chained with the screening cap), and the family positive-correlation is a genuine engine cross-check -- but the OVER-CAP NUMBERS (1.12 -> 3.06) are at the constructed g_4 = 0.529 and scale as 1/g_4, so a larger g_4 weakens the amplification (the family correlation corr ~ 0.x is below 1 precisely because g_4 also varies). Both inputs are toy-basis: the anomaly prefactor rho (v2.344, load-bearing) and the order-of-magnitude Eot-Wash cap (v2.354). The whole linkage rests on the birefringence detection being real (v2.329) -- it is the parity DATA that drives g_R2 up; without it the correlation is vacuous (no parity floor). 'Mandate active at the parity floor' uses the 2-sigma birefringence lower edge and the default rho; a smaller rho or a larger g_4 could drop the floor factor below 1, reopening a thin unscreened window at the parity floor (consistent with v2.355's small-coupling branch). Robust content: the parity and screening channels are physically coupled through g_R2 via the anomaly, with f ~ g_R2_parity^2, so they are not independent and move together. Toy basis, O(1) prefactors. A cross-channel correlation refining v2.356.",
+  "references": [
+    "this repo: v2.356 (three-channel map, flagged the coupling correlation), v2.350 (birefringence -> g_4 g_R2 floor), v2.354/v2.355 (screening mandate + data-linked universality)",
+    "this repo: src/itb/constraints/anomaly_flow.py (the linking constraint) + submm_gravity.py (the cap), v2.344 (rho), v2.329 (birefringence caveat)"
+  ]
+}

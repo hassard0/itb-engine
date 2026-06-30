@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (467 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (468 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -516,3 +516,4 @@ Auto-generated front door to the full research program (467 notes). Regenerate w
 | v2.354 | [v2.354 - The theory MANDATES screening: an unscreened dark-energy-scal](2026-06-30-v2.354-qnm-screening-mandate.md) | A genuinely fresh channel. Every consistent+observed cycle so far has used `submm_screened=True`, treating |
 | v2.355 | [v2.355 - Is the screening mandate data-independent? Partly: the constr](2026-06-30-v2.355-qnm-screening-mandate-robustness.md) | v2.354 showed the consistent+observed (birefringence-on) region is unscreened-EMPTY, so the theory mandates |
 | v2.356 | [v2.356 - The falsifiability map: how to kill the constructed theory, i](2026-06-30-v2.356-qnm-falsifiability-map.md) | The session (v2.343-355) established that the constructed theory makes predictions in three observationally |
+| v2.357 | [v2.357 - The parity and screening channels are correlated: stronger bi](2026-06-30-v2.357-qnm-parity-screening-correlation.md) | v2.356 mapped three observationally independent falsification channels and flagged that the underlying |
