@@ -1,0 +1,24 @@
+{
+  "version": "v2.379",
+  "birefringence_lower_edge": 0.0471,
+  "anomaly_rho": 0.06,
+  "g4_gR2_floor_v2350": 0.037,
+  "bh_entropy_lower_bound": 0.2719,
+  "constructed_delta_S_ext": 0.4575,
+  "matter_only_floor_v2378": 0.2645,
+  "bound_without_birefringence": 0.0,
+  "consistency_checks": {
+    "birefringence_floors_g4_gR2_product": true,
+    "amgm_gives_bh_entropy_lower_bound": true,
+    "constructed_respects_the_bound": true,
+    "bound_is_data_sourced": true,
+    "bound_couples_parity_and_bh_channels": true
+  },
+  "all_checks_pass": true,
+  "finding": "A cosmological polarization measurement implies a black-hole thermodynamic floor -- the cross-sector-bridge program (v2.350/351) now reaches the black-hole channel (v2.378), linking channel 1 (parity/CMB) to channel 4 (BH extremality). Chaining three facts: (1) cosmic birefringence, through the anomaly-inflow floor, lower-bounds the matter x curvature product g_4 g_R2 >= beta_lower^2/rho = 0.037 (v2.350); (2) the Cheung-Liu-Remmen extremal-BH entropy shift is Delta S_ext = g_R2 + 0.5 g_4 (v2.378); (3) AM-GM gives g_R2 + 0.5 g_4 >= 2 sqrt(0.5 g_4 g_R2) >= 2 sqrt(0.5 * 0.037) = 0.272. So the birefringence detection GUARANTEES a minimum extremal-black-hole entropy correction Delta S_ext >= 0.27 (in higher-derivative-expansion units): every theory that fits the birefringence data has extremal black holes whose entropy shifts by at least that much -- i.e. that decay at least that strongly. The constructed theory sits above it (0.458 >= 0.272). This is genuinely a bridge from cosmology to horizon physics: a CMB parity observable sets a lower bound on a black-hole thermodynamic quantity, through two independent pieces of physics (gravitational anomaly matching and the WGC/entropy theorem). It is DATA-SOURCED -- without the birefringence detection the parity floor vanishes and the product-based bound goes to zero (only the weaker matter-only floor B g_4 survives, v2.378) -- so it is the cosmic-birefringence measurement, not just the operator content, that floors the black-hole entropy shift. It completes a small web of cross-sector inequalities the anomaly sector generates: birefringence lower-bounds the matter x curvature product (v2.350), which lower-bounds the parity coupling's companions (v2.357) AND now the black-hole entropy shift -- the parity data propagating into three other sectors through the shared anomaly/positivity structure.",
+  "honest_scope": "The AM-GM step is exact algebra; the chain's two inputs carry their own scopes. The g_4 g_R2 floor rests on the birefringence detection being real (v2.329), the toy birefringence map, and the anomaly prefactor rho (v2.344) -- so the 0.037 scales as beta_lower^2/rho. The Delta S_ext formula uses the engine's SIMPLIFIED Cheung-Liu-Remmen coefficients (A=1, B=0.5, g_C identified with g_R2, v2.378 scope) -- source-cited but toy-normalized, so the entropy shift is in higher-derivative-expansion units, not absolute. Hence the NUMBER 0.27 is toy-basis (scales as 2 sqrt(B beta_lower^2/rho)); the robust content is the STRUCTURE -- a data-sourced lower bound on the extremal-BH entropy shift exists, coupling the parity/CMB channel to the black-hole channel, and it vanishes if the birefringence detection is a systematic. The bound is a LOWER bound (the actual shift can be larger, as the constructed 0.458 shows). This is a theoretical cross-sector inequality (the BH side is not a new datum), so the only data dependence is the birefringence detection. Robust content: cosmic birefringence => Delta S_ext >= 2 sqrt(0.5 beta_lower^2/rho) > 0, a bridge from the CMB parity channel to the black-hole channel. Toy numbers, exact-algebra structure, birefringence-contingent. A fresh cross-sector-bridge swing reaching the new BH channel.",
+  "references": [
+    "this repo: v2.350 (birefringence -> g_4 g_R2 floor), v2.378 (BH channel / Wald entropy shift), v2.351 (causality -> ringdown cap, the other bridge), v2.357 (parity-screening correlation), v2.329 (birefringence caveat), v2.344 (rho)",
+    "physics: Cheung-Liu-Remmen / Reall-Santos (Delta S_ext > 0 <=> WGC); AM-GM inequality; cosmic birefringence beta=0.34+/-0.09 deg"
+  ]
+}

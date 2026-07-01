@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (489 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (490 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -538,3 +538,4 @@ Auto-generated front door to the full research program (489 notes). Regenerate w
 | v2.376 | [v2.376 - SWING (attacked, survives): the theory is string-like in BOTH](2026-06-30-v2.376-qnm-two-tower-scales.md) | v2.375 showed the curvature sector is an infinite log-convex tower. The matter sector (`g_4, g_6, g_8`) is |
 | v2.377 | [v2.377 - SWING (forward test): next-generation birefringence discrimin](2026-06-30-v2.377-qnm-parity-forward-test.md) | The parity coupling has several determinations (geometric center, anomaly-saturated v2.370, anomaly-closed |
 | v2.378 | [v2.378 - SWING (fresh sector): the theory predicts extremal black hole](2026-06-30-v2.378-qnm-extremal-bh-channel.md) | The program mapped three prediction channels (parity, ringdown, screening). Is there a fourth -- and does the |
+| v2.379 | [v2.379 - SWING (cross-sector bridge): cosmic birefringence sets a lowe](2026-06-30-v2.379-qnm-birefringence-bh-entropy-bridge.md) | The cross-sector-bridge program (v2.350 birefringence->matter x curvature, v2.351 causality->ringdown) linked |
