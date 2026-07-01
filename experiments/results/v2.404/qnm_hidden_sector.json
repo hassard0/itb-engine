@@ -1,0 +1,37 @@
+{
+  "version": "v2.404",
+  "unpinned_couplings": {
+    "g_8": {
+      "n_constraints": 5,
+      "data_constraints": [],
+      "dark": true
+    },
+    "g_C": {
+      "n_constraints": 5,
+      "data_constraints": [
+        "gw_dispersion_bound"
+      ],
+      "dark": false
+    },
+    "g_R3_parity": {
+      "n_constraints": 5,
+      "data_constraints": [],
+      "dark": true
+    }
+  },
+  "n_fully_dark": 2,
+  "consistency_checks": {
+    "g_R3_parity_is_dark": true,
+    "g_8_is_dark": true,
+    "gC_only_negligible_gw_data": true,
+    "at_least_two_of_three_fully_dark": true,
+    "hidden_sector_is_three_dimensional": true
+  },
+  "all_checks_pass": true,
+  "finding": "The candidate's three unpinned directions form a DARK hidden sector -- its testable content is genuinely lower-dimensional than its parameter space. The basis-structure audit left three couplings the theory does not pin -- g_8 (matter top-moment, v2.381), g_C (the Euler-vs-Weyl^2 c-a split, v2.399), g_R3_parity (the parity-odd cubic, v2.403) -- and checking their observability (perturb each; are any of the constraints it moves a DATA constraint?) shows essentially none is observable: g_8 and g_R3_parity move only theory bounds (scalar/spin/cubic positivity, dispersion tower, anomaly inflow/matching) with NO data constraint, and g_C touches only the gw_dispersion data bound, whose effect is negligible (v2.358). So the theory's genuine freedom lives in a ~3-dimensional hidden sector that no observational channel probes: the matter Regge edge, the Euler-Weyl^2 split, and the parity-odd cubic. This sharpens v2.380 (~2.5 observable directions): the candidate has ~5+3 consistent parameters but its testable content is lower-dimensional, with three extra directions unmeasurable -- the theory can be pinned observationally only up to this hidden sector. It also CORRECTS a qualitative aside in v2.403: the 'second, cubic-order parity observable' does NOT exist in the engine's channel set -- g_R3_parity is dark, bounded only by theory, so a nonzero parity-odd cubic would be invisible, and the anomaly-CLOSED relation (tying it to the observable quadratic birefringence) is the ONLY way it could be indirectly inferred. The honest picture that emerges from the whole audit: the candidate is a matter-dominant, near-Planckian, ghost-safe structure whose ROBUST predictions (matter-gravity locking, ghost-safety, string-like towers, the CMB-S4 test on g_4) are genuine and choice-independent, wrapped around a small hidden sector of unobservable moduli (g_8, g_C, g_R3_parity) that the constructed point fixes by ASSUMPTION (equal moments, a=c, no cubic parity) but that observation cannot reach.",
+  "honest_scope": "'Dark' means no DATA/observable constraint IN THE ENGINE'S current channel set depends on the coupling (only theory bounds do); it is a statement about the engine's nine observables, not a theorem that no observable exists -- a richer theory could have a matter-amplitude probe of g_8, a cubic-parity GW signal for g_R3_parity, or a genuine Weyl^2 dispersion for g_C. So 'hidden sector' means 'unprobed by the catalogued channels', consistent with v2.380/381's usage. The data-vs-theory split is by constraint-name marker (birefringence/cmb/submm/ligo/gw/yukawa/s4), a concrete but coarse classifier; g_C's one data touch (gw_dispersion) is real but negligible (v2.358), so calling g_C 'essentially dark' is a judgement, not a strict dark. The perturbation is at a representative point (with g_C, g_R3_parity turned on); the qualitative darkness is robust because these couplings simply do not appear in the observable maps. This is an observability audit of the unpinned directions, adding no new physical datum -- it characterizes what the theory cannot pin and cannot see, and corrects v2.403's observable aside. Robust content: the three unpinned couplings (g_8, g_C, g_R3_parity) are dark to the engine's channels (g_8/g_R3_parity fully, g_C up to a negligible GW-dispersion effect), so the candidate carries a ~3D hidden sector fixed by assumption and unreachable by the catalogued observables. Channel-set-relative darkness, robust non-appearance in observables. A hidden-sector swing.",
+  "references": [
+    "this repo: v2.381 (g_8 dark), v2.399 (g_C / c-a assumption), v2.403 (g_R3_parity assumption + the second-observable aside this corrects), v2.380 (~2.5 observable directions), v2.358 (gw dispersion negligible)",
+    "concept: observable vs dark directions; testable dimension < parameter dimension; a hidden sector of moduli"
+  ]
+}
