@@ -1,0 +1,29 @@
+{
+  "version": "v2.389",
+  "ceiling_relations_hold": {
+    "g_R2 <= sqrt(g_4)  [WGC]": true,
+    "g_R3 <= 0.8 sqrt(g_4 g_R2)  [CEMZ]": true,
+    "g_R2_parity <= sqrt(g_4 g_6) - g_R2  [graviton positivity]": true
+  },
+  "ceiling_matter_correlations": {
+    "g_R2": 0.78,
+    "g_R3": 0.8,
+    "g_R2_parity": 0.7
+  },
+  "total_gravitational_vs_matter_correlation": 0.62,
+  "n_samples": 2921,
+  "consistency_checks": {
+    "all_leading_gravitational_ceilings_matter_controlled": true,
+    "gR2_ceiling_scales_with_matter": true,
+    "gR3_ceiling_scales_with_matter": true,
+    "gR2parity_ceiling_scales_with_matter": true,
+    "total_gravitational_strength_tracks_matter": true
+  },
+  "all_checks_pass": true,
+  "finding": "The many cross-sector bounds share ONE organizing principle: MATTER DOMINANCE -- the gravitational sector has no intrinsic scale, because every gravitational coupling is capped by a matter-sector quantity and the caps scale with matter. The WGC (g_R2 <= sqrt(g_4)), CEMZ (g_R3 <= 0.8 sqrt(g_4 g_R2)), and graviton positivity (g_R2_parity <= sqrt(g_4 g_6) - g_R2) all hold across the feasible family, and each matter-controlled ceiling correlates 0.70-0.80 with the matter scale sqrt(g_4 g_6); the total gravitational strength sqrt(g_R2^2 + g_R3^2 + g_R2_parity^2) tracks the matter scale at correlation 0.62. Raise the matter sector and the gravitational sector is ALLOWED to grow; hold matter fixed and the gravitational couplings are boxed. This is 'gravity is the weakest force' -- the WGC's slogan -- realized as a systematic structural pattern across the entire higher-curvature sector, not just the single WGC inequality: the gravitational EFT is enslaved to the matter EFT, with no allowed size of its own. The division of labour is clean: the matter sector sets the gravitational sector's SCALE (all leading ceilings matter-controlled and matter-scaling), while the intra-gravitational moment tower (g_R3^2 <= g_R2 g_R4) organizes the curvature couplings AMONG themselves WITHIN that matter-set scale. This unifies the piecemeal cross-sector results -- the anomaly floor (v2.350), the birefringence->BH bridge (v2.379), the graviton ceiling (v2.387), the WGC/ghost safety (v2.385) -- as facets of one principle, and it re-reads the whole construction: the consistent theory is a MATTER theory whose gravitational corrections are the largest the matter sector will permit. It also explains why the matter sector is the load-bearing one even though it is observationally dark (v2.381): matter sets the scale of everything the four channels actually measure.",
+  "honest_scope": "The three ceiling relations are the engine's source-cited bounds (WGC alpha=1, CEMZ kappa~0.8, graviton-positivity kappa=1) -- toy O(1) prefactors, so the exact ceilings are toy-basis, but the STRUCTURE (each is a matter-sector product/root, none an absolute or purely-gravitational cap) is basis-robust and is the point. The correlations are over a sampled walk; ~0.7-0.8 is strong but not unity because the ceilings also depend on the gravitational couplings themselves (CEMZ and graviton-positivity involve g_R2), so 'matter-controlled' means matter is the leading and scale-setting input, not the sole one. NOT every gravitational bound is matter-controlled: the moment tower relates gravitational couplings to each other (intra-sector), and the screening cap on g_R2 is an absolute data bound (satisfied by screening, v2.354) -- so the honest claim is that the leading UPPER ceilings and the overall gravitational SCALE are matter-set, while intra-gravitational shape and the one data cap are separate. 'Gravity is the weakest force' is the qualitative interpretation (the WGC slogan); the engine realizes it as matter-set gravitational scale, which is suggestive of but not a derivation of the particle-WGC. This is a synthesis of prior toy-encoded bounds, so it inherits their scopes and adds no new datum beyond the unifying reading. Robust content: the leading gravitational ceilings are all matter-sector quantities that scale with matter, and total gravitational strength tracks matter -- matter dominance sets the gravitational scale. Toy prefactors, robust structure, sampled correlations. A cross-sector-principle swing.",
+  "references": [
+    "this repo: v2.378/385 (WGC / ghost), v2.387 (graviton ceiling on parity), v2.350 (anomaly floor g_4 g_R2), v2.379 (birefringence->BH bridge), v2.354 (screening cap), v2.381 (dark matter sector), v2.375 (intra-gravitational moment tower)",
+    "physics: Weak Gravity Conjecture 'gravity is the weakest force' (Arkani-Hamed et al. 2006); CEMZ causality; parity-decomposed positivity (Caron-Huot et al. 2024)"
+  ]
+}

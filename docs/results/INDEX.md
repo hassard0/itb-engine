@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (499 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (500 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -548,3 +548,4 @@ Auto-generated front door to the full research program (499 notes). Regenerate w
 | v2.386 | [v2.386 - SWING (native parity channel): the theory predicts an order-2](2026-07-01-v2.386-qnm-graviton-chirality-asymmetry.md) | The engine maps `g_R2_parity` to CMB *photon* birefringence as an order-of-magnitude proxy. But `g_R2_parity` |
 | v2.387 | [v2.387 - SWING: graviton positivity caps parity violation ~4x above th](2026-07-01-v2.387-qnm-parity-graviton-ceiling.md) | v2.386 found the left-handed graviton sector is the tighter one. So how much parity violation does graviton |
 | v2.388 | [v2.388 - SWING: the SDC hierarchy bound and the string-like tower join](2026-07-01-v2.388-qnm-sdc-tower-light-couplings.md) | v2.383 (the SDC is a hierarchy bound `max/min <= 20`) and v2.375/376 (each sector is an infinite |
+| v2.389 | [v2.389 - SWING (unifying cross-sector principle): the gravitational se](2026-07-01-v2.389-qnm-matter-dominance.md) | A run of cross-sector bounds has appeared piecemeal (WGC, CEMZ, graviton positivity, anomaly floor, |
