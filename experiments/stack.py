@@ -395,6 +395,20 @@ def effective_rigorous_stack(**build_kwargs) -> list:
             or getattr(c, "name", "") in IMPLIED_BY_RIGOROUS]
 
 
+# --- Harmless-speculative vs load-bearing toy (v2.413): of the constraints that add genuine information beyond
+# the rigorous+implied set, WHICH does the candidate actually depend on? Full-stack leverage scan (drop each,
+# measure how much the local feasible region opens):
+#   complexity_cutoff              1.11x   nearly redundant  -> HARMLESS (research-grade conjecture, but unused)
+#   swampland_distance_conjecture  1.11x   nearly redundant  -> HARMLESS (toy aspect-ratio proxy, but unused)
+#   anomaly_cancellation           1.36x   LOAD-BEARING      -> the genuine toy dependence
+#   generalized_anomaly_inflow     2.43x   LOAD-BEARING      -> the genuine toy dependence
+#   cosmic_birefringence_data      7.36x   LOAD-BEARING      -> real DATA (v2.408), not toy
+# So the candidate's real toy dependence (beyond real data) is the ANOMALY SECTOR alone; the two most
+# speculative proxies (complexity, SDC) do not shape the result.
+HARMLESS_SPECULATIVE = frozenset({"complexity_cutoff", "swampland_distance_conjecture"})
+LOAD_BEARING_TOY = frozenset({"anomaly_cancellation", "generalized_anomaly_inflow"})
+
+
 def frameworks() -> list:
     return [PureGR(), StringTreeEFT(), AsymptoticSafety(),
             LQGInduced(), CausalDynamicalTriangulation()]

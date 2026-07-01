@@ -1,0 +1,56 @@
+{
+  "version": "v2.413",
+  "full_local_feasible_fraction": 0.0047,
+  "leverage": {
+    "complexity_cutoff": {
+      "opens_x": 1.11,
+      "class": "nearly_redundant"
+    },
+    "swampland_distance_conjecture": {
+      "opens_x": 1.11,
+      "class": "nearly_redundant"
+    },
+    "anomaly_cancellation": {
+      "opens_x": 1.36,
+      "class": "load_bearing"
+    },
+    "generalized_anomaly_inflow": {
+      "opens_x": 2.43,
+      "class": "load_bearing"
+    },
+    "cosmic_birefringence_data": {
+      "opens_x": 7.36,
+      "class": "load_bearing"
+    }
+  },
+  "harmless_speculative": [
+    "complexity_cutoff",
+    "swampland_distance_conjecture"
+  ],
+  "load_bearing_toy": [
+    "anomaly_cancellation",
+    "generalized_anomaly_inflow"
+  ],
+  "scale_window_full": [
+    0.786,
+    1.07
+  ],
+  "scale_window_without_harmless": [
+    0.786,
+    1.07
+  ],
+  "consistency_checks": {
+    "complexity_is_harmless": true,
+    "sdc_is_harmless": true,
+    "harmless_set_all_redundant": true,
+    "anomaly_sector_load_bearing": true,
+    "candidate_survives_dropping_harmless": true
+  },
+  "all_checks_pass": true,
+  "finding": "The candidate's real toy-dependence is the anomaly sector alone; the two most speculative proxies are harmless. v2.412 had localized the genuine toy cuts to four constraints; testing which the candidate ACTUALLY depends on -- dropping each from the full stack and measuring how much the region opens -- the two MOST speculative proxies come out nearly redundant: complexity_cutoff (1.11x), an explicit research-grade conjecture with an arbitrary weighted-L2 form and C_max=1.5, and swampland_distance_conjecture (1.11x), the toy aspect-ratio proxy that v2.410 showed misses the real field-space physics. So despite being the toy pieces one would most worry about, the candidate barely depends on them -- and it does not depend on the complexity bound for its scale window either (identical [0.786, 1.070] with and without it; the upper edge is set by the anomaly, not complexity). The candidate's genuine toy dependence, beyond the real cosmic-birefringence datum (7.36x, real DATA per v2.408), is concentrated in ONE family: the anomaly sector (anomaly_cancellation 1.36x + generalized_anomaly_inflow 2.43x). This is a doubly constructive de-toying step: it RETIRES two speculative worries -- the candidate is robust to dropping both the complexity conjecture and the (admittedly-imperfect) swampland-distance proxy, so neither the v2.410 field-space gap nor the speculative complexity bound actually threatens the result -- and it PINPOINTS the single remaining toy family that does shape the candidate: the anomaly. The engine now tags HARMLESS_SPECULATIVE (complexity, SDC) and LOAD_BEARING_TOY (the anomaly sector) in stack.py, so the next de-toying cycle has exactly one target: derive or source the anomaly-sector inequality, or establish that its specific form (matter*curvature ~ curvature^2) is genuinely unsourceable in this gravity+matter basis and quantify what rides on it.",
+  "honest_scope": "Leverage is the opening of the LOCAL feasible fraction (constructed +/- 0.15) when a constraint is dropped from the full stack -- a local measure; a constraint could bind harder elsewhere, but 'nearly redundant locally' is exactly the statement that the candidate (which lives here) does not depend on it. 'Harmless' means low leverage AND unchanged scale window AND the constructed point still feasible -- not that the constraint is meaningless in general (the SDC and complexity bound remain speculative in FORM; the point is the candidate is robust to them). cosmic birefringence's 7.36x is real DATA leverage (v2.408), listed here only to separate it from the toy cuts. This is an engine change (HARMLESS_SPECULATIVE / LOAD_BEARING_TOY tags in stack.py) plus the leverage map that justifies it; it does not de-toy the anomaly -- it proves the candidate is robust to the two most speculative toys and isolates the anomaly as the one that matters. Robust content: dropping complexity_cutoff or the swampland-distance proxy opens the candidate region only ~1.11x and leaves the scale window unchanged, so the candidate does not depend on either; its genuine toy dependence is the anomaly sector (1.36x + 2.43x). Local leverage, form-still-speculative, birefringence-is-data. A toy-dependence-mapping cycle.",
+  "references": [
+    "this repo: v2.412 (localized toy cuts to 4), v2.410 (SDC field-space gap -- now shown harmless), v2.390 (scale window), v2.408 (birefringence is real data leverage), v2.393 (matter-sources-gravity rests on the anomaly), experiments/stack.py (new HARMLESS_SPECULATIVE / LOAD_BEARING_TOY)",
+    "physics: complexity=action / Lloyd bound (speculative EFT-complexity, no literature-exact inequality); swampland distance conjecture (Ooguri-Vafa); anomaly inflow / Green-Schwarz"
+  ]
+}
