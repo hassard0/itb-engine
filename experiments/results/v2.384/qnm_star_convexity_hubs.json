@@ -1,0 +1,74 @@
+{
+  "version": "v2.384",
+  "n_feasible_sampled": 2627,
+  "constructed_star_fraction": 0.967,
+  "safe_hub_mean_star_fraction": 0.939,
+  "unsafe_hub_mean_star_fraction": 0.739,
+  "n_safe_hubs": 34,
+  "n_unsafe_hubs": 6,
+  "corr_minCoupling_vs_starFrac": 0.897,
+  "hub_sample": [
+    {
+      "min_coupling": 0.044,
+      "star_frac": 0.922
+    },
+    {
+      "min_coupling": 0.035,
+      "star_frac": 0.921
+    },
+    {
+      "min_coupling": 0.068,
+      "star_frac": 0.967
+    },
+    {
+      "min_coupling": 0.048,
+      "star_frac": 0.919
+    },
+    {
+      "min_coupling": 0.052,
+      "star_frac": 0.939
+    },
+    {
+      "min_coupling": 0.067,
+      "star_frac": 0.95
+    },
+    {
+      "min_coupling": 0.062,
+      "star_frac": 0.965
+    },
+    {
+      "min_coupling": 0.042,
+      "star_frac": 0.93
+    },
+    {
+      "min_coupling": 0.047,
+      "star_frac": 0.955
+    },
+    {
+      "min_coupling": 0.029,
+      "star_frac": 0.889
+    },
+    {
+      "min_coupling": 0.047,
+      "star_frac": 0.931
+    },
+    {
+      "min_coupling": 0.0,
+      "star_frac": 0.693
+    }
+  ],
+  "consistency_checks": {
+    "constructed_is_a_good_hub": true,
+    "constructed_not_uniquely_best": true,
+    "star_centrality_tracks_hub_min_coupling": true,
+    "unsafe_hubs_much_worse": true,
+    "no_perfect_star_center": true
+  },
+  "all_checks_pass": true,
+  "finding": "Star-centrality in the consistent-QG-EFT landscape is governed by a hub's HIERARCHY-SAFETY, not by Chebyshev-centrality -- the tempting 'the max-margin point is the star-center' hypothesis fails honestly. Following v2.383 (the region is non-convex, pitted by swampland valleys near tiny couplings), the natural rescue is star-convexity: is the region a 'hub-and-spokes' around the constructed theory, so every consistent theory is reachable from it by a straight consistent path? The constructed point IS a good hub -- 97% of lines to random consistent theories stay consistent -- but it is NOT specially good: interior hierarchy-safe hubs (all couplings above ~0.03) average 94%, statistically the same, while hubs with a coupling at/near zero -- sitting on the swampland-valley boundary -- drop to 74%. The star-fraction correlates with the hub's smallest coupling (corr 0.90): the safer the hub (the further its couplings from zero), the more of the region it can see by straight lines. So the constructed theory is a good hub ONLY because it happens to be hierarchy-safe (its smallest coupling is 0.06, comfortably above the swampland floor); any interior hierarchy-safe theory is an equally good hub, and the Chebyshev center earns no special star-status. And no point is a PERFECT star-center: even the safest hubs lose ~4% of lines, because the swampland valleys pit the region from every vantage -- to reach a near-zero-coupling consistent theory you must curve around the hierarchy-forbidden region, not go straight. This sharpens the topology (v2.383): the region is connected and 'approximately star-convex from the safe interior' but genuinely non-star-convex at the few-percent level, and the obstruction is always the swampland hierarchy bound, never the amplitude sector. The honest upshot: the constructed theory's specialness is its max-margin robustness (v2.322/361), NOT any central hub role -- the landscape has no privileged center, only a safe interior and swampland-pitted edges.",
+  "honest_scope": "The star-fractions are Monte-Carlo estimates (finite lines per hub, sampled endpoint family), so the ~96% and ~67% carry a percent-level error and the safe/unsafe means are over a modest hub sample -- but the ORDERING (safe hubs ~equal to the constructed, unsafe hubs much worse) and the positive min-coupling/star-frac correlation are robust and follow directly from the v2.383 mechanism (the SDC hierarchy bound is the only non-convex constraint, and it bites near zero couplings). The whole result inherits v2.383's scope: the non-star-convexity is real (oracle-checked lines) but driven by the TOY SDC aspect-ratio proxy and its near-zero-coupling treatment, so the exact percentages are encoding-specific; a different SDC encoding would move them. 'Hierarchy-safe' is defined by an arbitrary min-coupling threshold (~0.03); the qualitative safe-vs-unsafe split is threshold-robust (unsafe hubs have a coupling ~0, far below any reasonable threshold). The endpoint family is the sampled connected component (v2.383). This tests star-convexity, a necessary-not-sufficient probe of the region's shape -- it does not map the full topology. Robust content: star-centrality tracks hub hierarchy-safety not Chebyshev-centrality, the constructed point is a good-but-not-special hub, and no point is a perfect star-center. Toy SDC proxy, oracle-checked lines, MC percentages. An honest hypothesis-fails swing.",
+  "references": [
+    "this repo: v2.383 (non-convex region, SDC the cause), v2.322 (unique feasibility), v2.361 (well-posedness / max-margin), v2.372 (feasible-region dimension)",
+    "geometry: star-convexity; the swampland hierarchy bound as the non-convex obstruction"
+  ]
+}
