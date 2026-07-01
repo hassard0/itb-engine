@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (483 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (484 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -532,3 +532,4 @@ Auto-generated front door to the full research program (483 notes). Regenerate w
 | v2.370 | [v2.370 - SWING: anomaly matching (taken as the exact equality it is) p](2026-06-30-v2.370-qnm-anomaly-saturation-parity.md) | v2.364 concluded the parity coupling's existence, magnitude AND sign are all data-driven -- the theory |
 | v2.371 | [v2.371 - SWING (completion): the two exact anomaly conditions CLOSE, u](2026-06-30-v2.371-qnm-anomaly-closed-parity-sector.md) | suppressed cubic** (better fit, but then 't Hooft matching is not saturated) over the **fully-matched cubic |
 | v2.372 | [v2.372 - SWING (strong form refuted): does the gravitational sector fo](2026-06-30-v2.372-qnm-gravity-from-matter-rigidity.md) | The anomaly results (v2.371) determined the parity sector from matter+curvature. The boldest structural |
+| v2.373 | [v2.373 - SWING (method-as-proposal): how predictive is the swampland-c](2026-06-30-v2.373-qnm-program-predictivity.md) | The engine's central proposal: intersecting ALL known consistency conditions (plus current data) carves the |
