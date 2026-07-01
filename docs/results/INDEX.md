@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (510 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (511 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -559,3 +559,4 @@ Auto-generated front door to the full research program (510 notes). Regenerate w
 | v2.397 | [v2.397 - SWING (method / highest-impact next step): the toy basis's ke](2026-07-01-v2.397-qnm-ca-degeneracy.md) | After ~30 swings the constraint space is genuinely explored. WHY does further constraint-mining now yield |
 | v2.398 | [v2.398 - SWING (executes v2.397): activating the Weyl^2 axis g_C resol](2026-07-01-v2.398-qnm-activate-c-axis.md) | v2.397 identified resolving the c-a degeneracy (a distinct Weyl^2 coupling `g_C != g_R2`) as the highest-impact |
 | v2.399 | [v2.399 - SWING (full c!=a exploitation): the holographic a=c is an ass](2026-07-01-v2.399-qnm-c-minus-a-modulus.md) | v2.398 activated `g_C` and found the constructed theory at a=c. With `g_C` free, does the theory *prefer* the |
+| v2.400 | [v2.400 - SWING (marginalize over the c-a modulus): the Weyl^2-sector h](2026-07-01-v2.400-qnm-weyl-sector-marginalized.md) | v2.399 downgraded a=c to a framework assumption and exposed the c-a split as a free modulus (bounded only by |

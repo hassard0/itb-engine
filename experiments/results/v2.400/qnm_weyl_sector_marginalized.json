@@ -1,0 +1,45 @@
+{
+  "version": "v2.400",
+  "c_minus_a_modulus_gC_wedge": [
+    0.112,
+    0.579
+  ],
+  "bh_entropy_shift": {
+    "a_eq_c": 0.458,
+    "marginalized": [
+      0.377,
+      0.843
+    ],
+    "headline": "extremal BHs decay (Delta S_ext > 0)"
+  },
+  "ghost_mass_over_cutoff": {
+    "a_eq_c": 2.28,
+    "marginalized": [
+      1.31,
+      2.99
+    ],
+    "headline": "ghost above cutoff (m_g/Lambda > 1)"
+  },
+  "species_cutoff_over_Mpl": {
+    "a_eq_c": 0.716,
+    "marginalized": [
+      0.747,
+      0.606
+    ],
+    "headline": "near-Planckian cutoff (0.5 < Lambda/M_Pl < 1)"
+  },
+  "consistency_checks": {
+    "bh_decay_robust_to_modulus": true,
+    "ghost_safe_robust_to_modulus": true,
+    "cutoff_near_planckian_robust": true,
+    "magnitudes_genuinely_loosen": true,
+    "all_headlines_survive_a_equals_c_assumption": true
+  },
+  "all_checks_pass": true,
+  "finding": "The Weyl^2-sector headlines survive the a=c assumption; only their magnitudes loosen -- the honest resolution of v2.399's flag. v2.399 downgraded a=c from a prediction to a framework assumption and exposed the c-a split as a free modulus bounded only by the Hofman-Maldacena wedge, so every Weyl^2-sector result computed at a=c carries that modulus. Marginalizing over the whole wedge (g_C in [0.112, 0.579] at g_R2 = 0.193): (1) the extremal-BH entropy shift Delta S_ext = A g_C + B g_4 (v2.378) moves from its a=c value 0.458 to a marginalized [0.377, 0.843], POSITIVE throughout -- extremal black holes DECAY for every allowed c-a; (2) the Weyl^2 ghost mass 1/sqrt(g_C) (v2.385) moves from 2.28 to [1.31, 2.99], ABOVE the cutoff throughout -- ghost-safe for every allowed c-a; (3) the species-scale cutoff (v2.394) moves from 0.716 to [0.606, 0.747], near-Planckian throughout. So the c-a modulus widens the ERROR BARS on these numbers by a factor of ~2 but never flips a sign or crosses a threshold: BH decay, ghost-safety, and the near-Planckian cutoff are all robust to the a=c assumption. This closes the c!=a arc (v2.397 diagnosed the c-a degeneracy -> v2.398 activated the axis -> v2.399 showed a=c is an assumption -> v2.400 marginalizes and finds the headlines survive): resolving the basis's key limitation neither breaks the candidate nor forces it off a=c, it just makes explicit that the Weyl^2-sector magnitudes carry a conformal-collider-bounded uncertainty the degenerate basis had hidden. The candidate theory's qualitative profile -- string-like, matter-dominant, WGC-complete, ghost-safe, near-Planckian, with decaying extremal black holes -- stands independent of the a=c assumption; what the resolved basis adds is honest error bars, not a different theory.",
+  "honest_scope": "The marginalization is over the c-a modulus at FIXED g_R2 = 0.193 (and fixed g_4, g_R3) -- i.e. it varies only the newly-freed Weyl^2 coupling g_C across its HM wedge, which is exactly the modulus v2.399 exposed; a fuller marginalization would also vary the other couplings over the feasible region, but the qualitative robustness (sign of Delta S_ext, ghost above cutoff, cutoff in (0.5,1)) holds a fortiori because each is monotone in g_C and stays on-side at both wedge edges. The predictions use the engine's toy coefficients (A=1, B=0.5 for the CLR entropy; 1/sqrt(g_C) O(1)-schematic ghost mass; nu=2 species) so the MAGNITUDES and their ~2x widening are toy-basis; the ROBUST content is that every headline stays on the correct side of its threshold across the entire conformal-collider-allowed range -- a sign/ordering statement, not a magnitude one. This is a marginalization of prior toy-encoded results over a prior (source-cited) wedge, adding no new datum -- its value is that it CLOSES the c!=a arc responsibly by showing the flagged a=c assumption does not threaten the qualitative candidate profile. Robust content: marginalizing the Weyl^2-sector predictions over the c-a modulus loosens their magnitudes by ~2x but preserves every qualitative headline (BH decay, ghost-safety, near-Planckian cutoff). Toy magnitudes, robust sign/threshold survival, fixed-g_R2 modulus. A marginalize-the-modulus swing.",
+  "references": [
+    "this repo: v2.399 (a=c is an assumption / c-a free modulus), v2.398 (activated c-axis / HM wedge), v2.378 (BH entropy shift), v2.385 (Weyl^2 ghost), v2.394 (species cutoff), v2.397 (c-a degeneracy diagnosis)",
+    "physics: Hofman-Maldacena 2008 (a/c wedge); Cheung-Liu-Remmen (BH entropy); Dvali (species scale)"
+  ]
+}
