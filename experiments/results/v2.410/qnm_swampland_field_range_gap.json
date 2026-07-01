@@ -1,0 +1,26 @@
+{
+  "version": "v2.410",
+  "starobinsky_field_range_Mpl": {
+    "50": 5.14,
+    "55": 5.26,
+    "60": 5.37
+  },
+  "field_range_at_N55_Mpl": 5.26,
+  "sdc_tower_mass_Mpl": 0.0052,
+  "species_cutoff_Mpl": 0.716,
+  "engine_sdc_form": "max|g|/min|g_nonzero| <= 20 (aspect-ratio / coupling-hierarchy proxy, v2.383)",
+  "consistency_checks": {
+    "starobinsky_field_range_super_planckian": true,
+    "sdc_tower_light_during_inflation": true,
+    "sdc_tower_below_species_cutoff": true,
+    "engine_sdc_is_hierarchy_not_field_range": true,
+    "swampland_complete_has_a_field_space_gap": true
+  },
+  "all_checks_pass": true,
+  "finding": "The candidate's Starobinsky inflation faces the field-range swampland tension, and the engine's SDC cannot see it -- an honest internal-consistency negative that also exposes an engine limitation. The candidate claims two things at once: it satisfies the engine's Swampland Distance Conjecture (v2.383) and its keystone g_R2 is the Starobinsky R^2 inflaton (v1.86). But Starobinsky inflation over N~55 e-folds needs a super-Planckian field excursion Delta_phi ~ 5.3 M_Pl, and the PHYSICAL (field-space) SDC then puts a tower of states at m ~ M_Pl exp(-c Delta_phi) ~ 0.005 M_Pl during inflation -- far below the candidate's own species-scale cutoff (0.72 M_Pl, v2.394) -- so the EFT would break down mid-inflation: the well-known large-field-inflation-vs-swampland tension. Yet the candidate PASSES the engine's SDC, because that SDC is a toy aspect-ratio proxy (max|g|/min|g| <= 20) that bounds coupling HIERARCHIES, not field-space DISTANCES. So the engine encodes the swampland's amplitude/hierarchy SHADOW but not its field-space GEOMETRY, which is the SDC's actual content -- and the candidate therefore passes a version of the conjecture that the real, field-range SDC would flag. This is a genuine, previously-unstated GAP in the 'swampland-complete' headline (v2.373): the carving intersects the swampland conjectures' coupling-space projections, not their moduli-space distances, so results that depend on field ranges (large-field inflation, the distance/AdS-distance conjectures proper) are outside its reach. It is the honest counterweight to the recent stability run (v2.405-407): the carving is robust and converged WITHIN what it encodes, but what it encodes of the swampland is the coupling-hierarchy face, not the geometry -- so 'swampland-complete' should read 'swampland-coupling-complete'. The constructive read: adding a genuine field-range / moduli-space constraint (a Delta_phi bound tied to the species scale) is a well-posed next core extension that would let the engine actually adjudicate the Starobinsky-vs-swampland question its current basis can only pose.",
+  "honest_scope": "The Starobinsky field range Delta_phi ~ 5.3 M_Pl is the standard R^2-inflation result (imported, not engine-computed), and the SDC tower mass uses the conjecture's O(1) coefficient c ~ 1; whether Starobinsky ACTUALLY violates the SDC is genuinely DEBATED in the literature (refined-SDC forms, the value of c, and whether the tower must be below the inflationary scale are all contested), so 'tension' is the known, unsettled large-field-vs-swampland issue, NOT a definitive violation -- the point is that the candidate INHERITS this open problem, and the engine is blind to it. The ROBUST, engine-grounded content is the LIMITATION: the engine's SDC is literally an aspect-ratio of Wilson coefficients (v2.383) with no field variable, so it cannot encode a field-space distance -- this is a fact about the encoding, not a modelling choice. The g_R2 = Starobinsky-inflaton identification is the v1.86 toy map (g_R2 as the R^2 coefficient at a high cutoff). The species cutoff 0.72 M_Pl is toy (v2.394). So this is an honest-negative / gap-identification swing: it adds no new prediction and does not claim the candidate is ruled out -- it shows the 'swampland-complete' claim covers the coupling-hierarchy projection but not the field-space geometry, using the candidate's own Starobinsky inflation as the concrete probe. Robust content: the engine's SDC bounds coupling hierarchies not field ranges, so the swampland-complete carving has a field-space gap; the candidate's Starobinsky inflation (super-Planckian excursion) sits in exactly that blind spot -- a real, debated tension the engine cannot currently adjudicate. Imported field range, debated tension, robust engine-limitation. A swampland-gap swing.",
+  "references": [
+    "this repo: v2.383 (engine SDC = aspect-ratio proxy), v1.86 (g_R2 = Starobinsky inflaton), v2.394 (species-scale cutoff), v2.373 (swampland-complete predictivity claim), v2.405-407 (stability -- the counterweight)",
+    "physics: Ooguri-Vafa swampland distance conjecture; Starobinsky R^2 inflation (super-Planckian field range); the large-field-inflation-vs-swampland debate (Obied-Ooguri-Spodyneiko-Vafa; refined SDC)"
+  ]
+}

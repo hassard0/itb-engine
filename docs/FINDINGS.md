@@ -65,7 +65,10 @@ are toy-basis; the ringdown-magnitude map and matter-operator split are blocked/
 And while the *structure* is robust on four axes, the *data-pinning* is concentrated in a **single ~3.6σ
 measurement** — cosmic birefringence is the only load-bearing datum (dropping it opens the region 7.4×; the
 other three ingested bounds don't carve it), so the candidate is structurally robust but empirically contingent
-on one unconfirmed hint → [v2.408](results/2026-07-01-v2.408-qnm-data-leverage.md).
+on one unconfirmed hint → [v2.408](results/2026-07-01-v2.408-qnm-data-leverage.md). Finally, "swampland-complete"
+is really "swampland-*coupling*-complete": the engine's SDC is a coupling-hierarchy proxy with no field variable,
+so it misses field-space distances — the candidate's Starobinsky inflation (super-Planckian excursion) sits in
+that blind spot, a real (debated) tension the engine cannot yet adjudicate → [v2.410](results/2026-07-01-v2.410-qnm-swampland-field-range-gap.md).
 
 ---
 

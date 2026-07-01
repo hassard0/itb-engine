@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (520 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (521 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -569,3 +569,4 @@ Auto-generated front door to the full research program (520 notes). Regenerate w
 | v2.407 | [v2.407 - SWING: the swampland-complete carving converges -- the feasib](2026-07-01-v2.407-qnm-carving-convergence.md) | The headline is that intersecting all consistency conditions carves a tiny (~1e-5) region (v2.373). Is that |
 | v2.408 | [v2.408 - SWING: the candidate's data-pinning hangs on one measurement ](2026-07-01-v2.408-qnm-data-leverage.md) | v2.373 gave the *aggregate* data leverage (all four ingested measurements add ~1.7×). Which of the four |
 | v2.409 | [v2.409 - SWING: the candidate does not predict a fixed shear viscosity](2026-07-01-v2.409-qnm-eta-s-modulus.md) | The early program (v1.72) reported a *fixed* η/s (~0.81 × KSS) via the holographic Gauss-Bonnet relation |
+| v2.410 | [v2.410 - SWING (honest negative / engine limitation): the candidate's ](2026-07-01-v2.410-qnm-swampland-field-range-gap.md) | The candidate claims two things at once: it satisfies the engine's Swampland Distance Conjecture (v2.383) *and* |
