@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (519 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (520 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -568,3 +568,4 @@ Auto-generated front door to the full research program (519 notes). Regenerate w
 | v2.406 | [v2.406 - SWING: the candidate is globally unique -- a multi-start sear](2026-07-01-v2.406-qnm-global-uniqueness.md) | v2.322 showed no *named* framework fits theory+data; v2.383 showed the region is connected *locally*. Is the |
 | v2.407 | [v2.407 - SWING: the swampland-complete carving converges -- the feasib](2026-07-01-v2.407-qnm-carving-convergence.md) | The headline is that intersecting all consistency conditions carves a tiny (~1e-5) region (v2.373). Is that |
 | v2.408 | [v2.408 - SWING: the candidate's data-pinning hangs on one measurement ](2026-07-01-v2.408-qnm-data-leverage.md) | v2.373 gave the *aggregate* data leverage (all four ingested measurements add ~1.7×). Which of the four |
+| v2.409 | [v2.409 - SWING: the candidate does not predict a fixed shear viscosity](2026-07-01-v2.409-qnm-eta-s-modulus.md) | The early program (v1.72) reported a *fixed* η/s (~0.81 × KSS) via the holographic Gauss-Bonnet relation |
