@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (506 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (507 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -555,3 +555,4 @@ Auto-generated front door to the full research program (506 notes). Regenerate w
 | v2.393 | [v2.393 - SWING: matter sources the leading gravitational correction --](2026-07-01-v2.393-qnm-matter-sources-gravity.md) | Matter dominance (v2.389/391) bounds the gravitational sector from *above*. Is there a bound from *below* -- |
 | v2.394 | [v2.394 - SWING: the candidate theory's actual UV cutoff -- a Dvali spe](2026-07-01-v2.394-qnm-species-scale-cutoff.md) | After 27 swings characterizing the consistent region, one central quantity was never computed: the **actual UV |
 | v2.395 | [v2.395 - SWING: CMB-S4 is a decisive make-or-break test -- matter domi](2026-07-01-v2.395-qnm-cmb-s4-decisive-test.md) | The matter-dominance arc (v2.389-393) requires a strong matter sector (large `g_4`). Can a sourced next-gen |
+| v2.396 | [v2.396 - SWING: g_R2 is the keystone coupling -- the anomaly's forcing](2026-07-01-v2.396-qnm-gR2-keystone.md) | The a-theorem reduces in the engine to `g_R2 >= 0` (docstring flags it as redundant). Does its integrate-out |

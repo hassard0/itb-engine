@@ -1,0 +1,33 @@
+{
+  "version": "v2.396",
+  "delta_a_estimate": 0.0507,
+  "species_scale_M": 0.716,
+  "gR2": 0.193,
+  "gR2_min_region": 0.089,
+  "gR2_roles": {
+    "anomaly_matching_forces_nonzero (v2.393)": true,
+    "a_theorem_monotonicity_Delta_a_ge_0 (v2.396)": true,
+    "WGC_cap_gR2_le_sqrt_g4 (v2.389)": true,
+    "Weyl2_ghost_above_cutoff (v2.385)": true,
+    "species_counter_sets_cutoff (v2.394)": true,
+    "screening_trigger_above_submm_cap (v2.354)": true,
+    "moment_tower_gR3sq_le_gR2_gR4 (v2.375)": true,
+    "parity_lock_gR2parity_from_gR2 (v2.371)": true
+  },
+  "n_roles": 8,
+  "n_samples": 2137,
+  "consistency_checks": {
+    "anomaly_forces_gR2_positive_region_wide": true,
+    "a_theorem_implied_by_anomaly": true,
+    "delta_a_positive_measures_tower": true,
+    "gR2_all_eight_roles_consistent": true,
+    "keystone_at_least_six_roles": true
+  },
+  "all_checks_pass": true,
+  "finding": "g_R2 is the theory's KEYSTONE coupling, and the a-theorem is implied by the gravitational anomaly through it. The a-theorem (Komargodski-Schwimmer) reduces in the engine to g_R2 >= 0 (the Euler-anomaly coefficient as the integrated-out Delta_a >= 0), and the integrate-out relation g_R2 ~ Delta_a/M^4 links three prior results: the gravitational anomaly FORCES g_R2 > 0 given matter (v2.393), which is exactly the a-theorem monotonicity condition, so matter sourcing the leading curvature coupling AUTOMATICALLY guarantees RG-flow monotonicity -- the same g_R2 that anomaly matching forces nonzero is what makes the a-theorem hold. And g_R2 measures the central charge the UV tower carries above the IR: Delta_a ~ g_R2 M^4 with M the species scale (v2.394, ~0.72 M_Pl) gives Delta_a ~ 0.05. The region-wide minimum g_R2 = 0.089 > 0 confirms the a-theorem is satisfied across the whole feasible family, not just the center, and never by coincidence -- always because the anomaly forbids g_R2 = 0. More broadly this exposes g_R2 as the single coupling where the theory's sectors MEET: it appears in EIGHT distinct consistency roles -- anomaly matching (v2.393), a-theorem monotonicity (this), WGC cap (v2.389), Weyl^2 ghost coefficient (v2.385), species counter (v2.394), screening trigger (v2.354), moment tower (v2.375), and parity lock (v2.371) -- all mutually consistent at g_R2 = 0.193. The leading curvature coupling is the hub where the amplitude (positivity), swampland (WGC, species, anomaly), thermodynamic (ghost, screening), and RG (a-theorem) sectors all intersect, which is why the whole construction is so tightly determined: pinning g_R2 pins the theory, and g_R2 is over-determined by eight conditions that happen to be compatible.",
+  "honest_scope": "The a-theorem -> Delta_a link uses the engine's docstring heuristic g_R2 ~ Delta_a/M^4 (a representative integrate-out relation, not a computed coefficient), and Delta_a ~ 0.05 uses the toy species scale (v2.394) -- so the NUMBER is doubly toy; the robust point is the SIGN/logic: g_R2 > 0 (anomaly-forced) is the a-theorem condition, so the two are linked, and Delta_a > 0 is guaranteed. Crucially, g_R2's EIGHT-role centrality is PARTLY a toy-basis artifact: the a_theorem docstring itself notes the basis collapses the Euler (a) and Weyl^2 (c) anomalies onto the single coefficient g_R2, so in a finer basis that resolves c - a the roles would DISTRIBUTE among distinct Ricci^2 / Weyl^2 / Euler couplings, and g_R2 would not carry all eight. So 'keystone' is a statement about THIS toy basis -- honest and useful for understanding why the construction is tight, but not a claim that one physical operator does all this work. The eight roles are each individually verified at the constructed point (and g_R2 > 0 region-wide), so the MUTUAL CONSISTENCY is a real fact about the feasible region; the interpretation of g_R2 as a single keystone is basis-dependent. This is a synthesis of prior toy-encoded results plus the one new (heuristic) a-theorem/anomaly link, adding no new datum beyond that link and the keystone reading. Robust content: g_R2 > 0 is anomaly-forced, which implies the a-theorem, and g_R2 is (in this basis) the coupling where all sectors meet, over-determined but consistent. Toy Delta_a, basis-dependent keystone, robust mutual consistency. A keystone-coupling swing.",
+  "references": [
+    "this repo: src/itb/constraints/a_theorem.py (a-theorem as g_R2>=0, integrate-out Delta_a), v2.393 (anomaly forces g_R2>0), v2.394 (species scale M), v2.389 (WGC), v2.385 (ghost), v2.354 (screening), v2.375 (moment tower), v2.371 (parity lock)",
+    "physics: Komargodski-Schwimmer 2011 (a-theorem); Alvarez-Gaume-Witten (anomaly)"
+  ]
+}
