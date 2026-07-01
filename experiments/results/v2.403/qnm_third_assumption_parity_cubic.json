@@ -1,0 +1,28 @@
+{
+  "version": "v2.403",
+  "feasible_gR3parity_range": [
+    -0.034,
+    0.035
+  ],
+  "constructed_gR3parity": 0.0,
+  "gR3parity_zero_interior": true,
+  "anomaly_closed_value": 0.028,
+  "anomaly_closed_feasible": true,
+  "upper_edge_binding": [
+    "generalized_anomaly_inflow"
+  ],
+  "consistency_checks": {
+    "gR3parity_zero_feasible": true,
+    "gR3parity_zero_is_interior_not_forced": true,
+    "anomaly_closed_nonzero_value_feasible": true,
+    "parity_cubic_is_a_free_bounded_direction": true,
+    "bounded_by_anomaly_inflow": true
+  },
+  "all_checks_pass": true,
+  "finding": "g_R3_parity = 0 is a THIRD constructed-point assumption, not a prediction. Activating the parity-odd cubic coupling as an independent axis, its feasible range is [-0.035, 0.035] with 0 sitting INTERIOR (bounded at both ends by the generalized-anomaly-inflow constraint) -- so the constructed theory's 'parity only in the quadratic g_R2_parity' is a CHOICE, specifically the anomaly-SATURATED choice (v2.370, cubic suppressed). The anomaly-CLOSED variant (v2.371) instead prefers a nonzero value g_R3_parity = r g_R2_parity ~ 0.028, which is feasible (well inside the window), so the two anomaly variants of the v2.377 fork are literally two points on this axis -- saturated (0) vs closed (0.028) -- both consistent, distinguished only by whether the second anomaly-matching condition is imposed. This adds a THIRD entry to the candidate's ASSUMPTION tier (v2.402): a=c (v2.399), g_6=g_8 (v2.392), and now g_R3_parity=0 -- three 'special-looking' constructed-point values the consistency conditions do NOT force. The systematic lesson is that the max-margin (Chebyshev) point's apparent simplicity -- holographic a=c, equal matter moments, minimal parity -- is largely ASSUMPTION, and the theory's genuine predictions are the ROBUST-tier structural ones (matter dominance, ghost-safety, string-like towers, the near-Planckian cutoff), not these tidy coincidences. Physically the consequence is real: g_R3_parity != 0 sources a SECOND, cubic-order parity observable distinct from the quadratic birefringence, so the 'minimal parity sector' assumption hides a potential extra chiral signal -- exactly the one the anomaly-closed variant predicts. The honest upshot: the parity sector is richer than the constructed point shows (a two-parameter (g_R2_parity, g_R3_parity) family bounded by anomaly inflow), and which point is realized is a genuine open question the v2.377 forward test would resolve.",
+  "honest_scope": "g_R3_parity=0 being interior to the feasible window is the robust, measure-independent finding -- it is a choice, not forced. The window edges [-0.035, 0.035] are toy-basis (set by the generalized-anomaly-inflow and cubic-parity constraints with their O(1) prefactors), so the specific 0.035 is toy; the robust content is that 0 is interior and the anomaly-closed value is feasible. The anomaly-closed value 0.028 = r g_R2_parity uses v2.371's toy r = rho_match(g4+g6) and the birefringence-derived g_R2_parity (v2.329), so it is toy-basis too; the robust point is that a nonzero g_R3_parity is allowed and even preferred by one anomaly variant. This is a basis-structure / assumption audit (like v2.392/v2.399), adding a third assumption to the tier and no new physical datum about the constructed point -- it characterizes the FREEDOM the constructed point's g_R3_parity=0 hides. 'Second parity observable' is the qualitative physical reading (a parity-odd cubic curvature operator sources cubic-order parity violation); its magnitude is unpinned (toy). Robust content: g_R3_parity=0 is an unforced constructed-point assumption (the anomaly-saturated choice), the parity-odd cubic is a free anomaly-inflow-bounded direction, and the anomaly-closed variant prefers it nonzero -- a third assumption completing the audit (a=c, g_6=g_8, g_R3_parity=0). Toy window, robust interiority. An assumption-audit swing.",
+  "references": [
+    "this repo: v2.371 (anomaly-closed system -> nonzero g_R3_parity), v2.370 (anomaly-saturated -> cubic suppressed), v2.377 (the saturated-vs-closed fork), v2.399 (a=c assumption), v2.392 (g_6=g_8 assumption), v2.402 (assumption tier), src/itb/constraints/cubic_parity.py + anomaly_flow.py",
+    "physics: gravitational anomaly inflow; parity-odd cubic curvature operator (Pontryagin x curvature)"
+  ]
+}

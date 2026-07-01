@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (513 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (514 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -562,3 +562,4 @@ Auto-generated front door to the full research program (513 notes). Regenerate w
 | v2.400 | [v2.400 - SWING (marginalize over the c-a modulus): the Weyl^2-sector h](2026-07-01-v2.400-qnm-weyl-sector-marginalized.md) | v2.399 downgraded a=c to a framework assumption and exposed the c-a split as a free modulus (bounded only by |
 | v2.401 | [v2.401 - SWING: the basis has a two-keystone structure (g_4 matter + g](2026-07-01-v2.401-qnm-two-keystone-structure.md) | v2.397 counted `g_R2`'s constraint load (26/42) to diagnose the c-a degeneracy. Generalize it: map every |
 | v2.402 | [v2.402 - CAPSTONE (refreshed): the candidate theory as a complete QG l](2026-07-01-v2.402-qnm-candidate-profile-refreshed.md) | The v2.382 capstone predates ~18 major results (ghost-safety, graviton chirality, landscape topology, the |
+| v2.403 | [v2.403 - SWING: g_R3_parity=0 is a third constructed-point assumption ](2026-07-01-v2.403-qnm-third-assumption-parity-cubic.md) | The constructed theory sets the parity-odd cubic `g_R3_parity = 0` (parity only in the quadratic). Is that |
