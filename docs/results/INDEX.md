@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (493 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (494 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -542,3 +542,4 @@ Auto-generated front door to the full research program (493 notes). Regenerate w
 | v2.380 | [v2.380 - SWING (deflationary): the four channels are not four independ](2026-06-30-v2.380-qnm-channel-correlation-structure.md) | The cross-sector bridges (v2.357 parity<->screening, v2.379 parity->BH) hinted the four prediction channels |
 | v2.381 | [v2.381 - SWING: the string-like matter identity is observationally DAR](2026-07-01-v2.381-qnm-dark-parameter.md) | v2.380 found the four channels have effective dimension ~2.5. The complement: which *couplings* are |
 | v2.382 | [v2.382 - CAPSTONE: the constructed theory as a complete candidate for ](2026-07-01-v2.382-qnm-candidate-theory-profile.md) | ROBUST (structural / rigorous-given-dispersive-structure / basis-robust) |
+| v2.383 | [v2.383 - SWING (landscape topology): the space of consistent QG EFTs i](2026-07-01-v2.383-qnm-landscape-nonconvexity.md) | Is the space of consistent quantum-gravity EFTs **convex** -- a single connected convex family, so any two |

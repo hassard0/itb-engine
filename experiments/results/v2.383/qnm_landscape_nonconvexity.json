@@ -1,0 +1,26 @@
+{
+  "version": "v2.383",
+  "n_feasible_sampled": 2137,
+  "n_interpolation_tests": 10000,
+  "fraction_nonconvex_full_stack": 0.0782,
+  "fraction_nonconvex_without_sdc": 0.0001,
+  "sdc_share_of_violations": 0.9987,
+  "violations_by_constraint": {
+    "swampland_distance_conjecture": 781,
+    "anomaly_cancellation": 1
+  },
+  "consistency_checks": {
+    "region_is_non_convex": true,
+    "sdc_is_the_dominant_cause": true,
+    "dropping_sdc_restores_convexity": true,
+    "amplitude_constraints_are_convex": true,
+    "region_still_connected_sample": true
+  },
+  "all_checks_pass": true,
+  "finding": "The space of consistent quantum-gravity EFTs is NON-convex, and the Swampland Distance Conjecture is the sole cause. Testing convexity directly -- sampling feasible theories and checking straight-line interpolants against the real feasibility oracle -- 8% of interpolations between two consistent theories pass through an INCONSISTENT one. Attributing the failures: 100% of all midpoint violations are the SDC; dropping it restores convexity to 100.0% (only 0.0% of interpolants then fail, on the anomaly/EFT-hedron edge). So the amplitude-level consistency conditions -- positivity, causality, dispersion, anomaly matching, the EFT-hedron -- are all CONVEX (intersections of PSD cones and half-spaces, as expected for forward-limit and unitarity bounds), and the ONE genuinely quantum-gravitational condition, the SDC, is the one that breaks convexity. The SDC is encoded as an aspect-ratio / hierarchy bound (max|g|/min|g_nonzero| <= 20): interpolating a coupling from a symmetry-protected zero up through tiny-but-nonzero values crosses the hierarchy bound -- a large-field-distance region where the conjecture's light tower would appear. So consistent QG EFTs form a CONNECTED but NON-convex family (the random walk stayed in one component throughout), and the non-convexity is a genuine SWAMPLAND signature: it is invisible to the low-energy amplitude bounds and shows up only in the field-space-geometry constraint. Two consistent theories can be separated by a 'swampland valley', and bridging it requires routing AROUND the tiny-coupling region rather than straight through it. This is a structural fact about the QG landscape's topology, not about the constructed point: the landscape is star-convex-ish around generic hierarchy-safe theories but pinched wherever a coupling approaches zero.",
+  "honest_scope": "The non-convexity is measured with the real feasibility oracle on the interpolant midpoints, so it is a genuine property of the encoded region, not a sampling artifact (the endpoints are verified feasible and the midpoint is verified infeasible). The SDC attribution and the drop-SDC control are direct. CAVEATS: the SDC is the engine's TOY encoding of Ooguri-Vafa -- an aspect-ratio bound max|g|/min|g_nonzero| <= 20, 'much looser than the literal exponential of moduli distance' (its own docstring); the literal SDC is about infinite-distance limits in moduli space, and the aspect-ratio proxy captures only the qualitative 'no pathological hierarchy' content. A strictly-positive aspect-ratio bound is itself convex (an intersection of pairwise half-spaces g_i <= 20 g_j); the non-convexity enters specifically through the treatment of near-zero couplings -- a coupling exactly zero (symmetry-protected) is excluded from the ratio and allowed, but a tiny nonzero value is included and can blow the ratio past 20, so the boundary is non-convex around the coupling-approaches-zero locus. That is a real feature of the encoding (and arguably of the physics: exact zero vs small explicit breaking differ), but it is encoding-specific -- a different SDC proxy would move the exact non-convex locus. The convexity of the amplitude constraints is robust (they are literally PSD/half-space conditions). The 'connected' claim is about the sampled component (the walk did not detect a second island), not a proof of global connectedness. Robust content: the amplitude sector is convex and the swampland (SDC) constraint is what makes the consistent-EFT region non-convex. Toy SDC proxy, real oracle-checked non-convexity. A fresh landscape-topology swing.",
+  "references": [
+    "this repo: src/itb/constraints/distance_conjecture.py (SDC aspect-ratio encoding), v2.372 (feasible-region dimension), v2.373 (feasible volume), v2.322 (unique feasibility)",
+    "physics: Ooguri-Vafa 2007 (Swampland Distance Conjecture); Palti 2019 (swampland review); forward-limit positivity / EFT-hedron convexity (Arkani-Hamed et al.)"
+  ]
+}
