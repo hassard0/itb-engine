@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (484 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (485 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -533,3 +533,4 @@ Auto-generated front door to the full research program (484 notes). Regenerate w
 | v2.371 | [v2.371 - SWING (completion): the two exact anomaly conditions CLOSE, u](2026-06-30-v2.371-qnm-anomaly-closed-parity-sector.md) | suppressed cubic** (better fit, but then 't Hooft matching is not saturated) over the **fully-matched cubic |
 | v2.372 | [v2.372 - SWING (strong form refuted): does the gravitational sector fo](2026-06-30-v2.372-qnm-gravity-from-matter-rigidity.md) | The anomaly results (v2.371) determined the parity sector from matter+curvature. The boldest structural |
 | v2.373 | [v2.373 - SWING (method-as-proposal): how predictive is the swampland-c](2026-06-30-v2.373-qnm-program-predictivity.md) | The engine's central proposal: intersecting ALL known consistency conditions (plus current data) carves the |
+| v2.374 | [v2.374 - SWING: which physics carves the EFT? Predictivity by constrai](2026-06-30-v2.374-qnm-predictivity-by-class.md) | v2.373 found the swampland-complete carving is ~10^-5 predictive and consistency-driven. WHICH physics does |

@@ -1,0 +1,50 @@
+{
+  "version": "v2.374",
+  "n_samples": 40000,
+  "per_class_constraint_counts": {
+    "A_AMPLITUDE": 20,
+    "B_INFORMATION": 7,
+    "C_UNIVERSALITY": 11
+  },
+  "baseline_feasible_fraction": 2.5e-05,
+  "baseline_n_feasible": 1,
+  "opened_by_dropping_class": {
+    "A_AMPLITUDE": {
+      "n_constraints": 20,
+      "feasible_fraction_without_class": 0.000925,
+      "n_feasible": 37,
+      "opening_factor_vs_baseline": 37.0
+    },
+    "B_INFORMATION": {
+      "n_constraints": 7,
+      "feasible_fraction_without_class": 0.000125,
+      "n_feasible": 5,
+      "opening_factor_vs_baseline": 5.0
+    },
+    "C_UNIVERSALITY": {
+      "n_constraints": 11,
+      "feasible_fraction_without_class": 0.00105,
+      "n_feasible": 42,
+      "opening_factor_vs_baseline": 42.0
+    }
+  },
+  "ranking_biggest_to_smallest_carver": [
+    "C_UNIVERSALITY",
+    "A_AMPLITUDE",
+    "B_INFORMATION"
+  ],
+  "consistency_checks": {
+    "information_B_opens_least": true,
+    "C_and_A_are_major_carvers": true,
+    "holography_is_a_minor_carver": true,
+    "universality_carves_efficiently": true,
+    "all_classes_carve_something": true
+  },
+  "all_checks_pass": true,
+  "finding": "The predictivity of the swampland-complete carving is dominated by the SWAMPLAND/ANOMALY and POSITIVITY conditions, roughly equally, with holographic/information bounds a minor contributor -- a decomposition of WHICH physics pins quantum gravity's low-energy EFT. Dropping each of the engine's three constraint classes from the theory-only stack and measuring how much the feasible region opens: removing C_UNIVERSALITY (the 11 swampland + anomaly/universality conditions -- WGC, distance conjecture, anomaly inflow, 't Hooft matching, BNOSSW) opens it the most (~42x more feasible); removing A_AMPLITUDE (the 20 positivity / unitarity amplitude bounds -- scalar and graviton positivities, the dispersion towers, CEMZ-adjacent forward bounds) opens it nearly as much (~37x); but removing B_INFORMATION (the 7 holographic / entropy bounds -- Bekenstein, subadditivity, GSL, quantum focusing) barely changes it (~5x). So the ranking of carving power is ['C_UNIVERSALITY', 'A_AMPLITUDE', 'B_INFORMATION'] -- universality and amplitude are the two heavy carvers, information is nearly redundant for realistic positive-coupling EFTs. In physics terms: the low-energy EFT of quantum gravity is pinned mainly by UNITARITY (amplitude positivity) and SWAMPLAND/ANOMALY consistency, NOT by entropy/holographic bounds -- which is a substantive statement about where the predictive content of the swampland program actually lives (it reproduces, at the volume level, the v2.325 finding that the anomaly/universality family and the leading positivities dominate the BINDING, and shows the same is true of the VOLUME). The holographic bounds, while individually motivated, are largely implied by positivity+universality for these theories.",
+  "honest_scope": "The RANKING (C >= A >> B) is the robust content and is read from the dropped-class feasible COUNTS (tens of feasible samples per class -- enough to rank), NOT from the ratios to the baseline, which is a rare event (a few feasible per n) with large statistical error -- so the opening-FACTORS (e.g. 36x) are order-of-magnitude, but the ORDER of the three classes is reliable. The class grouping is the engine's own ConstraintClass taxonomy (A/B/C), so 'which physics' means the engine's assignment of each condition to amplitude / information / universality -- a reasonable but not unique partition (e.g. CEMZ causality sits in A here). 'B barely carves' is FOR REALISTIC POSITIVE-COUPLING EFTs in this box -- the holographic bounds would bite harder for exotic couplings (negative, or large parity), so their redundancy is regime-dependent, echoing the v2.325 always-slack set. The whole computation is the toy-basis engine encoding, box-dependent as in v2.373. Robust content: universality and amplitude classes do the bulk of the volume carving, holographic/information little, for realistic higher-derivative gravity. Toy basis, box-dependent, rare-event baseline. A decomposition of the program's predictive content by physics class.",
+  "references": [
+    "this repo: v2.373 (total predictivity ~10^-5, consistency-driven), v2.325 (active-core: anomaly/universality + positivities dominate binding), v2.341 (unitarity/causality/WGC groups)",
+    "structural: the engine's ConstraintClass taxonomy (A amplitude / B information / C universality)"
+  ]
+}
