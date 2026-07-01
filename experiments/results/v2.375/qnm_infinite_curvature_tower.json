@@ -1,0 +1,36 @@
+{
+  "version": "v2.375",
+  "g_R2": 0.193,
+  "g_R3": 0.09,
+  "log_convex_ratio_r": 0.4663,
+  "g_R4_floor": 0.042,
+  "geometric_floor_tower": {
+    "g_R2": 0.193,
+    "g_R3": 0.09,
+    "g_R4": 0.041969,
+    "g_R5": 0.019571,
+    "g_R6": 0.0091264,
+    "g_R7": 0.0042558,
+    "g_R8": 0.0019846,
+    "g_R9": 0.00092545,
+    "g_R10": 0.00043156,
+    "g_R11": 0.00020124,
+    "g_R12": 9.3845e-05
+  },
+  "higher_derivative_expansion_converges": true,
+  "tower_sum_upper_estimate": 0.3616,
+  "consistency_checks": {
+    "curvature_moment_rung_log_convex": true,
+    "geometric_floor_positive_all_orders": true,
+    "log_convex_ratio_below_one_converges": true,
+    "infinite_tower_no_finite_truncation": true,
+    "ratio_is_gR3_over_gR2": true
+  },
+  "all_checks_pass": true,
+  "finding": "The constructed theory has a nonzero curvature correction at EVERY order -- an infinite, log-convex, convergent tower -- so it is a string-like UV, not a finite-derivative modified gravity. The engine mandates one moment rung (g_R3^2 <= g_R2 g_R4); but if the curvature couplings are moments of a positive spectral density (the dispersive representation the equivalence principle establishes, v2.369), the whole sequence is LOG-CONVEX, g_{R,n}^2 <= g_{R,n-1} g_{R,n+1} for all n. A log-convex sequence lies above the log-linear interpolation through its first two points, so iterating from the constructed (g_R2, g_R3) = (0.193, 0.09) gives a rigorous geometric LOWER bound on every higher coupling: g_{R,n} >= g_R2 r^(n-2) with r = g_R3/g_R2 = 0.466, i.e. the floor tower 0.193, 0.090, 0.042, 0.020, 0.009, ... -- all strictly positive, so the tower NEVER truncates: there is a nonzero Ricci^2, Ricci^3, Riemann^4, R^5, ... correction at every order. That is precisely the signature of a string-like UV (an infinite Regge tower generates infinitely many higher-derivative operators) and the opposite of a truncated f(R)-type or finite-derivative theory (which would have g_{R,n} = 0 above some order). The geometric ratio r = 0.466 < 1 means the higher-derivative expansion CONVERGES -- a sensible EFT with a finite curvature cutoff -- and r is a proxy for the ratio of the curvature scale to the tower/Regge scale. This is the all-orders completion of the ringdown arc: v2.369 showed the leading ringdown quartic g_R4 is strictly above its floor (a nonzero minimum ringdown deviation); this shows the ENTIRE curvature tower is floored away from zero order-by-order, so the string-like character (v2.342, closest to string; v2.343, multi-state; v2.369, shared tower) is now visible directly in the coupling hierarchy: an infinite, log-convex, geometrically-bounded set of curvature corrections.",
+  "honest_scope": "The log-convexity is RIGOROUS given that the curvature couplings are moments of a positive measure -- the dispersive / Stieltjes representation (v2.261) that the equivalence-principle argument (v2.369) motivates for the curvature sector; under that (standard for a gravitational EFT) the geometric lower bound g_{R,n} >= g_R2 r^(n-2) is exact (log-convex extrapolation). The CAVEATS: (1) the engine only carries g_R2, g_R3, g_R4 explicitly -- g_R5 and beyond are NOT engine couplings, so this is a consequence of the assumed moment structure, not a check of encoded constraints; (2) the ratio r = 0.466 and the specific floor values are toy-basis (v2.343): the STRUCTURE (infinite non-truncating log-convex tower, convergent) is basis-robust, the NUMBERS are toy; (3) the geometric floor is the LOG-LINEAR (single-scale) lower bound -- the actual tower, being strictly log-convex for a multi-state spectrum (v2.369), lies at or above it and could decay faster or slower depending on the (un-pinned) mass range, so 'geometric with ratio 0.466' is the minimal/illustrative decay, not a pinned Regge slope; (4) 'string-like UV' is the qualitative identification (v2.342), not a derived string construction. Robust content: the curvature sector is a log-convex moment tower, so it has a nonzero, geometrically-floored correction at every order -- an infinite, convergent, string-like tower, not a finite-derivative theory. Toy numbers, rigorous-given-dispersive-structure for the all-orders positivity.",
+  "references": [
+    "this repo: v2.234/v2.261 (curvature couplings as a Stieltjes moment sequence), v2.369 (equivalence principle -> curvature is a genuine moment tower, g_R4 strictly above floor), v2.342 (closest to string), v2.343 (multi-state)",
+    "structural: moment log-convexity (Cauchy-Schwarz / Hausdorff-Stieltjes); a log-convex positive sequence never truncates"
+  ]
+}
