@@ -1,0 +1,48 @@
+{
+  "version": "v2.380",
+  "n_samples": 2921,
+  "correlation_matrix": {
+    "parity": {
+      "parity": 1.0,
+      "screening": 0.46,
+      "ringdown": 0.07,
+      "BH": 0.5
+    },
+    "screening": {
+      "parity": 0.46,
+      "screening": 1.0,
+      "ringdown": 0.12,
+      "BH": 0.88
+    },
+    "ringdown": {
+      "parity": 0.07,
+      "screening": 0.12,
+      "ringdown": 1.0,
+      "BH": 0.12
+    },
+    "BH": {
+      "parity": 0.5,
+      "screening": 0.88,
+      "ringdown": 0.12,
+      "BH": 1.0
+    }
+  },
+  "screening_bh_correlation": 0.88,
+  "ringdown_max_correlation_with_others": 0.12,
+  "parity_correlation_with_g2_group": 0.5,
+  "effective_observable_dimension": 2.45,
+  "consistency_checks": {
+    "screening_and_bh_near_identical": true,
+    "ringdown_orthogonal_to_others": true,
+    "parity_partially_correlated": true,
+    "effective_dimension_below_four": true,
+    "effective_dimension_above_two": true
+  },
+  "all_checks_pass": true,
+  "finding": "The theory's four observational channels are NOT four independent tests -- their joint content collapses to an effective ~2.4 directions, not 4. Measuring the 4x4 correlation matrix of the channel observables across the feasible family: screening and black-hole extremality are NEAR-IDENTICAL (correlation 0.88) -- both are essentially linear in the leading curvature coupling g_R2 (screening = g_R2/cap, Delta S_ext = g_R2 + 0.5 g_4), so they are ONE observable, not two; ringdown is ORTHOGONAL to the other three (max correlation 0.12) because it is driven by g_R3^2/g_R2 and g_R3 is a free direction (v2.372) uncorrelated with the g_R2/g_4 scale; and parity is PARTIALLY correlated with the g_R2 group (~0.50, through the anomaly link g_R2_parity ~ sqrt(g_4 g_R2), v2.350/357, but with independent variation inside the birefringence-allowed anomaly window). So the theory's genuinely independent observable content is about two-and-a-half directions: (i) the leading matter/curvature SCALE g_R2, which sets screening, the black-hole entropy shift, AND about half of the parity signal at once; and (ii) the cubic curvature g_R3, which sets ringdown alone. This is the honest deflation of the 'four channels' story: measuring the g_R2-scale (via any of screening, BH, or partly birefringence) forecasts the others, so only RINGDOWN adds a fully orthogonal probe. It also explains WHY the cross-sector bridges exist (v2.357/379): they are the correlations within the g_R2 group made explicit. The upshot for testability: the theory is falsifiable in four channels but INDEPENDENTLY constrained in only ~2-3 -- to pin the full 5-parameter theory (v2.372) one needs both the g_R2-scale channels AND ringdown, and neither substitutes for the other.",
+  "honest_scope": "The correlations are computed over a seeded random-walk sample of the feasible family, so the exact numbers are sampler-dependent, and each channel observable uses the toy map (beta = 3.4 g_R2_parity, screening over-cap, ringdown floor g_R3^2/g_R2, Delta S_ext with the toy Cheung-Liu-Remmen coefficients) -- so the precise correlation values and the 2.5 effective dimension are toy-basis. But the STRUCTURE is basis-robust and follows from WHICH couplings each channel depends on: screening and BH are both monotone in g_R2 (hence near-identical whatever the normalization); ringdown depends on g_R3 (a direction free of g_R2/g_4, v2.372, hence orthogonal); parity depends on g_R2_parity (anomaly-linked to g_4 g_R2, hence partial). The screening=BH near-degeneracy is close to definitional (both linear in g_R2) -- an honest deflation, not a coincidence. The effective-dimension via the correlation participation ratio is a standard but convention-laden measure. This is a statement about the CONSTRUCTED-theory family's observable correlations, using the toy channel maps; a real basis would shift the numbers but keep the coupling-dependence structure. Robust content: the four channels reduce to ~2-3 independent observable directions -- screening=BH (g_R2), ringdown orthogonal (g_R3), parity partial -- so 'four channels' overstates independent testability. Toy numbers, structural coupling-dependence. A deflationary swing on the channel count.",
+  "references": [
+    "this repo: v2.356 (the three-channel map), v2.378 (BH channel), v2.357 (parity-screening correlation), v2.379 (parity->BH bridge), v2.372 (5 genuine inputs / g_R3 free), v2.350 (birefringence -> g_4 g_R2)",
+    "structural: correlation-matrix participation ratio; channel observables as functions of the Wilson couplings"
+  ]
+}
