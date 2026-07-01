@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (478 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (479 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -527,3 +527,4 @@ Auto-generated front door to the full research program (478 notes). Regenerate w
 | v2.365 | [v2.365 - The ringdown channel's quantitative readiness: floor + cap + ](2026-06-30-v2.365-qnm-ringdown-channel-readiness.md) | This session's ringdown work (v2.349 floor, v2.351 cap) was never connected to the repo's pre-existing |
 | v2.366 | [v2.366 - The rank question is ANSWERED (v2.209), correcting v2.365: pa](2026-06-30-v2.366-qnm-parity-ringdown-dark-convergence.md) | Last tick's v2.365 framed the qNM->R4 rank as "the open deep-research question." Is it actually open -- or did |
 | v2.367 | [v2.367 - BOLD SWING: matter-curvature spectral-tower unification pins ](2026-06-30-v2.367-qnm-tower-unification-conjecture.md) | The program showed the constructed theory is "string-like in two senses" (v2.342/343): its matter sector is |
+| v2.368 | [v2.368 - ATTACK on the v2.367 conjecture: a spin-2-vs-matter form fact](2026-06-30-v2.368-qnm-tower-unification-attack.md) | The retrospective's rule: attack the conjecture, don't admire it. v2.367 conjectured that a shared matter+ |
