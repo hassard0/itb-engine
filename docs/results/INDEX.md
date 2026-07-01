@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (481 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (482 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -530,3 +530,4 @@ Auto-generated front door to the full research program (481 notes). Regenerate w
 | v2.368 | [v2.368 - ATTACK on the v2.367 conjecture: a spin-2-vs-matter form fact](2026-06-30-v2.368-qnm-tower-unification-attack.md) | The retrospective's rule: attack the conjecture, don't admire it. v2.367 conjectured that a shared matter+ |
 | v2.369 | [v2.369 - RIGOROUS UPGRADE: the equivalence principle mandates g_R4 str](2026-06-30-v2.369-qnm-ringdown-floor-strict.md) | The tower-unification arc: v2.367 conjectured a sharp ringdown value (fragile); v2.368's attack downgraded it |
 | v2.370 | [v2.370 - SWING: anomaly matching (taken as the exact equality it is) p](2026-06-30-v2.370-qnm-anomaly-saturation-parity.md) | v2.364 concluded the parity coupling's existence, magnitude AND sign are all data-driven -- the theory |
+| v2.371 | [v2.371 - SWING (completion): the two exact anomaly conditions CLOSE, u](2026-06-30-v2.371-qnm-anomaly-closed-parity-sector.md) | suppressed cubic** (better fit, but then 't Hooft matching is not saturated) over the **fully-matched cubic |

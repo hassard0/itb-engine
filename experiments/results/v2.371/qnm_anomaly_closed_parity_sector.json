@@ -1,0 +1,26 @@
+{
+  "version": "v2.371",
+  "anomaly_rho": 0.06,
+  "thooft_ratio_r": 0.4645,
+  "predicted_g_R2_parity": 0.0654,
+  "predicted_g_R3_parity": 0.0304,
+  "beta_closed": 0.222,
+  "sigma_closed": 1.31,
+  "sigma_saturation_only_v2370": 0.82,
+  "sigma_center": 1.51,
+  "closed_system_feasible": true,
+  "consistency_checks": {
+    "closed_system_satisfies_inflow_equality": true,
+    "closed_system_satisfies_thooft_equality": true,
+    "predicts_nonzero_parity_odd_cubic": true,
+    "closed_system_globally_feasible": true,
+    "complete_system_fits_worse_than_saturation_only": true
+  },
+  "all_checks_pass": true,
+  "finding": "The two exact anomaly-matching conditions CLOSE into a system that uniquely determines the ENTIRE parity-odd sector from the parity-even couplings -- the strongest challenge yet to v2.364's 'parity is entirely data-driven.' Both the gravitational anomaly INFLOW (g_R2_parity^2 + 2 g_R3_parity^2 = rho g_4 g_R2) and 't Hooft MATCHING (g_R3_parity = rho_match (g_4+g_6) g_R2_parity) are exact equalities in field theory (the engine encodes them as conservative bounds). Imposed together they are two equations in two unknowns, with the unique solution g_R2_parity = 0.0654, g_R3_parity = 0.0304 -- the full parity-odd sector fixed by the parity-EVEN sector alone, no data. Verified: the solution satisfies both equalities exactly and is globally feasible against the full consistent+observed stack. So under exact anomaly matching the parity-odd sector is NOT data-driven -- it is DETERMINED, including a NONZERO parity-odd cubic (0.0304), reversing the constructed center's g_R3_parity = 0 (which was the bound-form center, v2.352). But the swing exposes an honest TENSION rather than a clean win: this COMPLETE system fits the birefringence data WORSE than the incomplete saturation-only prediction -- beta = 0.222 deg (1.31 sigma from 0.34 +/- 0.09) vs v2.370's 0.266 deg (0.82 sigma) -- because the nonzero cubic consumes anomaly budget and lowers the observable quadratic. So the data mildly prefers a SUPPRESSED cubic (better birefringence fit, but then 't Hooft matching is NOT saturated) over the fully-matched cubic (a complete theoretical determination, but a worse fit). The reading: the parity-odd sector CAN be entirely predicted from the parity-even sector by exact matching (a genuine theoretical closure, not a data readout), but current birefringence slightly disfavors the fully-matched version -- an honest, falsifiable fork. Either the 't Hooft cubic is present (complete, testable via a chiral-cubic signal) or suppressed (better fit, matching incomplete); a sharper birefringence measurement discriminates.",
+  "honest_scope": "The DEFENSIBLE core: both anomaly conditions are exact equalities in field theory, so imposing them as equalities (not the engine's bounds) is physically motivated, and the resulting 2x2 system genuinely closes (verified: unique solution, both equalities satisfied, globally feasible). The CAVEATS: the solution VALUES (0.065, 0.030) scale with the toy prefactors rho = 0.06 (v2.344) and rho_match = 0.5, and with the toy operator content (the parity content taken as exactly g_R2_parity^2 + 2 g_R3_parity^2 and the ratio as exactly rho_match(g_4+g_6)); a real fermion content would shift both -- so the STRUCTURE (closed determination of the parity-odd sector) is robust, the NUMBERS are toy. The 'fits worse' tension (1.31 vs 0.82 sigma) is real but MILD -- both are within 2 sigma, so it is a soft preference, not an exclusion; and it rests on the birefringence detection being real (v2.329). It challenges but does not overturn v2.364: the parity SIGN is still data-set (matching fixes magnitudes/ratios, not handedness). The nonzero-cubic prediction contradicts the v2.352 bound-form center but is exactly the v2.353 conditional cubic, now closed without the data input. Robust content: exact anomaly matching closes the parity-odd sector (a data-free theoretical determination), predicting a nonzero cubic, with the honest caveat that the complete version fits birefringence slightly worse. Toy numbers, field-theory-motivated structure. The completion of the v2.370 swing, with its tension reported.",
+  "references": [
+    "this repo: v2.370 (inflow saturation, one equality), v2.353 (conditional cubic from 't Hooft equality), v2.364 (parity data-driven -- challenged here), v2.352 (bound-form cubic center g_R3_parity=0), v2.344 (rho), v2.329 (birefringence caveat)",
+    "physics: 't Hooft anomaly matching + gravitational anomaly inflow, both exact equalities; birefringence beta=0.34+/-0.09 deg"
+  ]
+}
