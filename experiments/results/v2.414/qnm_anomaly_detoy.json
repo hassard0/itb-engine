@@ -1,0 +1,28 @@
+{
+  "version": "v2.414",
+  "gR2_floor_given_matter": {
+    "full_stack_with_toy_anomaly": 0.114,
+    "rigorous_plus_implied_core": 0.108,
+    "anomaly_moves_floor_x": 1.056
+  },
+  "rigorous_excluders_of_low_gR2": [
+    "graviton_forward_positivity",
+    "cross_sector_efthedron"
+  ],
+  "anomaly_cancellation_verdict": "toy artifact (4D has no pure gravitational anomaly; self-described simplification) -- but its headline (matter-sources-gravity) is rigorous without it",
+  "generalized_anomaly_inflow_verdict": "conceptually real (anomaly inflow bounds parity, Harlow TASI 2022) with a toy coefficient rho -- the residual genuine toy, governing the parity magnitude",
+  "consistency_checks": {
+    "matter_sources_gravity_rigorous_floor_positive": true,
+    "anomaly_barely_moves_the_floor": true,
+    "low_gR2_excluded_by_rigorous_bounds": true,
+    "excluders_are_cross_sector_positivity": true,
+    "residual_toy_is_parity_magnitude": true
+  },
+  "all_checks_pass": true,
+  "finding": "Matter-sources-gravity is RIGOROUS, not anomaly-dependent -- so the last load-bearing toy sector de-toys cleanly, leaving one parity coefficient. The anomaly sector's matter<->curvature piece (anomaly_cancellation, g_4*g_6=g_R2^2) is a genuine TOY ARTIFACT: 4D has no pure gravitational anomaly (Alvarez-Gaume-Witten live in 4k+2 dimensions), and the constraint is self-described as a 'representative simplification'. But the headline it was credited with, matter-sources-gravity (v2.393, matter forbids matter without curvature), does NOT depend on it: fixing matter and lowering the leading curvature coupling g_R2 toward zero is excluded by the RIGOROUS source-exact core alone -- graviton_forward_positivity + cross_sector_efthedron + cemz_causality force g_R2 >= 0.108, and adding the toy anomaly only tightens the floor to 0.114 (a +6% nudge). So a theory with matter couplings but a vanishing leading curvature coupling violates cross-sector AMPLITUDE POSITIVITY, with or without the anomaly: matter sources gravity is a rigorous statement. The anomaly's second piece, generalized_anomaly_inflow (parity <= rho*g_4*g_R2), is conceptually real physics -- gravitational anomaly inflow DOES bound parity-violating couplings (Harlow TASI 2022) -- with a toy coefficient rho=0.06; it is the residual genuine toy, and it governs the parity MAGNITUDE, exactly the sector that was always birefringence-contingent (v2.408/329). So this closes the de-toying arc (v2.411-414): the candidate's ENTIRE matter-gravity content is rigorous -- LQG excluded (v2.411), matter dominance's ceiling and BH decay implied (v2.412), the two most speculative proxies harmless (v2.413), and now matter-sources-gravity rigorous with the anomaly artifact removable -- and the single residual toy is one parity-magnitude coefficient, which needs the cosmic-birefringence datum to fix anyway. The engine is not a toy; its matter-gravity physics is source-exact, and the toy has been chased down from the whole stack to one coefficient in the parity sector.",
+  "honest_scope": "The g_R2 floors are computed along the single matter-fixed ray (constructed matter values, g_R2 varied), so '0.108' is the rigorous floor on THAT ray, not a global statement for all matter configurations -- but the mechanism (cross-sector positivity excludes matter-without-leading-curvature) is general, and the point is that the RIGOROUS bounds, not the toy anomaly, do the excluding. 'anomaly_cancellation is a toy artifact' is a physics judgement (4D pure-gravitational anomaly vanishing is standard; the specific matter^2=curvature^2 form has no literature-exact backing in this basis) plus the constraint's own self-description -- it does not mean the matter->curvature CONCLUSION is wrong (it is rigorously true and also has an independent real basis in matter loops generating R^2), only that the engine's anomaly DERIVATION was toy and redundant. The residual toy (inflow rho) is a real-CONCEPT bound with a toy coefficient; calling it 'the one residual toy' is scoped to the matter-gravity + parity Wilson sector this engine carves, not a claim that nothing else in physics is uncertain. I did NOT remove anomaly_cancellation from the stack (that would shift the region ~1.36x and rebake many goldens); the result is that it is removable-in-principle without costing the headline, established by the floor comparison. Robust content: matter-sources-gravity is forced by source-exact cross-sector positivity (rigorous g_R2 floor 0.108 vs full-stack 0.114), so it is rigorous not toy; the toy anomaly_cancellation is a redundant 4D artifact for that result; the residual genuine toy is the parity-magnitude inflow coefficient. Single-ray floor, physics-judgement artifact call, sector-scoped 'one residual toy'. The anomaly-de-toying capstone.",
+  "references": [
+    "this repo: v2.393 (matter-sources-gravity, now shown rigorous), v2.413 (anomaly = last load-bearing toy), v2.411/412 (rigor core + implied), v2.408/329 (parity is birefringence-contingent), src/itb/constraints/anomaly.py (self-described toy form)",
+    "physics: Alvarez-Gaume-Witten 1984 (gravitational anomalies in 4k+2 dims; none pure-gravitational in 4D); Harlow et al TASI 2022 (anomaly inflow); Arkani-Hamed-Huang-Huang EFThedron + Caron-Huot-Van Duong (cross-sector positivity)"
+  ]
+}

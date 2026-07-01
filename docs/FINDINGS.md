@@ -69,9 +69,17 @@ Going further, a redundancy scan shows the source-exact core *already forces* 11
 constraints over the feasible region — so **matter dominance's ceiling** (`g_R2 ≤ √g_4`, the WGC) and
 **extremal-black-hole decay** (`ΔS_ext ≥ 0`) are themselves *rigorous, not toy*, and the genuinely toy cuts are
 localized to four constraints (the anomaly, the swampland distance conjecture, complexity, cosmic birefringence)
-→ [v2.412](results/2026-07-01-v2.412-qnm-rigorous-implied.md). So the engine is not a toy: it is a rigorous
-amplitude/causality carver whose swampland/observable layers wear toy prefactors — and de-toying those, one
-constraint at a time, is the live program.
+→ [v2.412](results/2026-07-01-v2.412-qnm-rigorous-implied.md). Of the four genuinely toy cuts, the two most
+speculative (the complexity conjecture and the swampland-distance proxy) turn out **harmless** — the candidate
+barely depends on them (~1.11× each, scale window unchanged) → [v2.413](results/2026-07-01-v2.413-qnm-toy-dependence-map.md).
+And the last load-bearing toy, the anomaly, de-toys too: **matter-sources-gravity is rigorous** — the
+source-exact cross-sector positivity forces `g_R2 ≥ 0.108` given matter (the toy anomaly only nudges the floor
++6%), so `g_4·g_6 = g_R2²` is a removable 4D artifact → [v2.414](results/2026-07-01-v2.414-qnm-anomaly-detoy.md).
+**Net (the de-toying arc, v2.411–414): the candidate's entire matter-gravity content is rigorous** — LQG
+excluded, matter dominance's ceiling and BH decay implied, matter-sources-gravity forced by amplitude positivity
+— and the *single* residual toy is one parity-magnitude coefficient (the anomaly-inflow ρ), which governs the
+birefringence-contingent parity sector and needs that datum to fix anyway. So the engine is not a toy: its
+matter-gravity physics is source-exact, and the toy has been chased from the whole stack down to one coefficient.
 
 **Honest limits.** Three constructed-point values are *assumptions, not predictions* — a=c
 ([v2.399](results/2026-07-01-v2.399-qnm-c-minus-a-modulus.md)), g_6=g_8

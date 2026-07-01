@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (524 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (525 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -573,3 +573,4 @@ Auto-generated front door to the full research program (524 notes). Regenerate w
 | v2.411 | [v2.411 - ENGINE IMPROVEMENT: a first-class rigor classification, and t](2026-07-01-v2.411-qnm-rigorous-core.md) | Responding to the critique that the engine is "a toy": the toy-ness was never uniform. This cycle makes the |
 | v2.412 | [v2.412 - ENGINE IMPROVEMENT (de-toying step 1): half the proxy constra](2026-07-01-v2.412-qnm-rigorous-implied.md) | Executing the de-toying program (v2.411) by **determining true rigor**, not relabelling. Method: sample the |
 | v2.413 | [v2.413 - ENGINE IMPROVEMENT (de-toying step 2): the candidate's real t](2026-07-01-v2.413-qnm-toy-dependence-map.md) | v2.412 localized the genuine toy cuts (those adding information beyond the rigorous+implied core) to four |
+| v2.414 | [v2.414 - ENGINE IMPROVEMENT (de-toying step 3, anomaly capstone): matt](2026-07-01-v2.414-qnm-anomaly-detoy.md) | The anomaly sector was the last load-bearing toy (v2.413). It has two parts: |
