@@ -1,0 +1,47 @@
+{
+  "version": "v2.365",
+  "ringdown_floor_v2349": 0.042,
+  "ringdown_cap_v2351": 0.3386,
+  "source_p_qeft": 6,
+  "source_ref": "arXiv:2205.05132 (PhysRevD.107.044030), preserved in v2.191",
+  "engine_R4_axes": [
+    "g_R4_c1",
+    "g_R4_c2",
+    "g_R4_c3"
+  ],
+  "parspec_source_axis": "ell_qEFT_km",
+  "map_blockers": [
+    "axis_normalization",
+    "axis_normalization_missing",
+    "engine_axis_map_covariance_pushforward_missing",
+    "engine_axis_map_jacobian_missing",
+    "engine_axis_map_not_ready",
+    "engine_axis_map_target_axes_mismatch",
+    "engine_axis_orientation_missing",
+    "operator_basis_map",
+    "operator_basis_map_missing"
+  ],
+  "ready_for_framework_claim": false,
+  "readiness_ledger": {
+    "1_floor_present": true,
+    "2_cap_present": true,
+    "3_source_qeft_coefficients_present": true,
+    "4_engine_to_parspec_map_present": false
+  },
+  "n_ready_of_4": 3,
+  "consistency_checks": {
+    "floor_verified_live": true,
+    "cap_verified_live": true,
+    "source_coefficients_present_v2191": true,
+    "engine_parspec_map_still_blocked": true,
+    "deep_research_question_is_the_map_blocker": true
+  },
+  "all_checks_pass": true,
+  "finding": "The ringdown channel is quantitatively blocked at ONE precisely-identified subpiece -- and it is exactly the open deep-research question. Joining this session's structural results with the repo's pre-existing ParSpec source bridge (v2.188-191, which this session's ringdown work never referenced), the channel has 3 of 4 pieces ready: (1) the moment-tower FLOOR g_R4 >= g_R3^2/g_R2 = 0.042 (v2.349, re-verified live); (2) the causality CAP g_R4_floor <= kappa^2 g_4 = 0.339 (v2.351, live); (3) source-backed qEFT ParSpec QNM deformation coefficients from arXiv:2205.05132 (v2.191: p_qEFT = 6, a single-length-scale ell_qEFT / ParSpec-gamma deformation -> the QNM shifts, i.e. a RANK-1 ray); but (4) the operator-basis map + axis orientation from the engine's THREE R4 axes ['g_R4_c1', 'g_R4_c2', 'g_R4_c3'] onto the ParSpec ell_qEFT axis is NOT ready (ready_for_framework_claim = False; blockers include operator_basis_map_missing, engine_axis_orientation_missing, engine_axis_map_jacobian_missing). Piece (4) IS the deep-research question 'is the qNM->R4 sensitivity rank-3 or rank-1?': the public ParSpec source supplies a rank-1 ray (one ell_qEFT axis), the engine carries three R4 operator directions, and whether the three map FULL-RANK to the QNM observables or COLLAPSE to the single ParSpec ray is precisely the missing operator_basis_map + engine_axis_orientation. So the honest state of the ringdown channel is: its STRUCTURE is complete and re-verified (floor bracketed 0 <= g_R4_floor <= kappa^2 g_4, cross-checked cross-vendor), a source bridge and source coefficients exist, but a numerical delta_omega prediction -- and any ringdown-based framework exclusion -- is not claimable until the rank-3-vs-rank-1 axis map is supplied. This gives the deep-research a precise acceptance target (the v2.190 operator_basis_map contract) and connects it to the session's floor/cap, rather than leaving 'ringdown is schematic' vague.",
+  "honest_scope": "Pieces (1) and (2) are re-verified live here (exact arithmetic on the constructed couplings); pieces (3) and (4) are READ from the pre-existing, tested v2.191/v2.190 artifacts, not re-derived -- this is a synthesis/status that connects them, so it inherits their claim boundaries verbatim: the source coefficients are genuinely source-backed (arXiv:2205.05132) but the engine->ParSpec map is explicitly NOT a claim (v2.190 is a non-claiming contract; v2.191 ready_for_framework_claim = False). 'RANK-1 ray' describes the PUBLIC ParSpec source's single ell_qEFT axis as preserved in the repo -- whether a full rank-3 qNM->R4 map is achievable from other sources is exactly the open question, not answered here. The floor/cap remain in the toy-basis + rank-1-schematic-magnitude regime (v2.336): they bound the g_R4 COUPLING, not a sourced frequency shift. No framework exclusion is claimable from ringdown (unchanged). Robust content: the ringdown channel's structure is complete and its single quantitative blocker is the identified qNM->R4 operator-basis map, which is the deep-research question. Toy basis, O(1) prefactors. A cross-arc synthesis locating the one blocker, non-claiming.",
+  "references": [
+    "this repo: v2.349 (ringdown floor), v2.351 (causality cap), v2.336 (rank-1 schematic magnitude) -- the structural pieces re-verified",
+    "this repo: v2.188 (source bridge), v2.190 (engine-axis map contract, non-claiming), v2.191 (source-asset audit: p_qEFT=6, QNM coefficients) -- the ParSpec pieces read",
+    "source: arXiv:2205.05132 / PhysRevD.107.044030 (qEFT ParSpec ringdown bounds); Bresciani R4 axes g_R4_c1/c2/c3"
+  ]
+}
