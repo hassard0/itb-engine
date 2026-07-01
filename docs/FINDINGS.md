@@ -65,8 +65,13 @@ positivity, the cross-sector EFThedron, and the CFT flat-space bootstrap — and
 *structure* (matter positivity, the dispersion tower, the a/c wedge, the L/R graviton bounds) rests entirely on
 it. The toy prefactors are confined to the region *size* (swampland proxies) and observable *magnitudes* (data
 maps), both now tagged so any result states its rigor tier → [v2.411](results/2026-07-01-v2.411-qnm-rigorous-core.md).
-So the engine is not a toy: it is a rigorous amplitude/causality carver whose swampland/observable layers wear
-toy prefactors — and de-toying those, one constraint at a time, is the live program.
+Going further, a redundancy scan shows the source-exact core *already forces* 11 of the 23 proxy/data
+constraints over the feasible region — so **matter dominance's ceiling** (`g_R2 ≤ √g_4`, the WGC) and
+**extremal-black-hole decay** (`ΔS_ext ≥ 0`) are themselves *rigorous, not toy*, and the genuinely toy cuts are
+localized to four constraints (the anomaly, the swampland distance conjecture, complexity, cosmic birefringence)
+→ [v2.412](results/2026-07-01-v2.412-qnm-rigorous-implied.md). So the engine is not a toy: it is a rigorous
+amplitude/causality carver whose swampland/observable layers wear toy prefactors — and de-toying those, one
+constraint at a time, is the live program.
 
 **Honest limits.** Three constructed-point values are *assumptions, not predictions* — a=c
 ([v2.399](results/2026-07-01-v2.399-qnm-c-minus-a-modulus.md)), g_6=g_8

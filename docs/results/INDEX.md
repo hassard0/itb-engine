@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (522 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (523 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -571,3 +571,4 @@ Auto-generated front door to the full research program (522 notes). Regenerate w
 | v2.409 | [v2.409 - SWING: the candidate does not predict a fixed shear viscosity](2026-07-01-v2.409-qnm-eta-s-modulus.md) | The early program (v1.72) reported a *fixed* η/s (~0.81 × KSS) via the holographic Gauss-Bonnet relation |
 | v2.410 | [v2.410 - SWING (honest negative / engine limitation): the candidate's ](2026-07-01-v2.410-qnm-swampland-field-range-gap.md) | The candidate claims two things at once: it satisfies the engine's Swampland Distance Conjecture (v2.383) *and* |
 | v2.411 | [v2.411 - ENGINE IMPROVEMENT: a first-class rigor classification, and t](2026-07-01-v2.411-qnm-rigorous-core.md) | Responding to the critique that the engine is "a toy": the toy-ness was never uniform. This cycle makes the |
+| v2.412 | [v2.412 - ENGINE IMPROVEMENT (de-toying step 1): half the proxy constra](2026-07-01-v2.412-qnm-rigorous-implied.md) | Executing the de-toying program (v2.411) by **determining true rigor**, not relabelling. Method: sample the |

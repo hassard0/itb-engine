@@ -369,6 +369,32 @@ def rigorous_core_stack(**build_kwargs) -> list:
     return filter_by_rigor(build_stack(**build_kwargs), {"rigorous"})
 
 
+# --- Rigorous-IMPLIED constraints (v2.412): sourced_proxy/data constraints whose CUT is already made by the
+# rigorous core -- empirically, ~100% of rigorous-core-feasible points satisfy them, so their conclusions are
+# secretly rigorous (their toy prefactor does not matter: the source-exact positivity/causality already implies
+# the inequality). Determined by the v2.412 redundancy scan over the rigorous-feasible region. Notably the WGC
+# (matter dominance's gravity ceiling) and the Wald-entropy / extremal-BH-decay bound are here -- so those
+# results are rigorous, not toy. (submm-in-screened-mode and gw_speed are redundant only because they are
+# trivially satisfied / non-binding; the physically meaningful promotions are positivity-implies-swampland.)
+IMPLIED_BY_RIGOROUS = frozenset({
+    "weak_gravity_conjecture", "wald_entropy_positivity", "generalized_second_law",
+    "quantum_focusing_conjecture", "holographic_subadditivity", "t_hooft_anomaly_matching",
+    "causality_bound", "eft_validity_box", "species_scale_bound",
+    "submm_gravity_yukawa_bound", "gw_speed_bound",
+})
+
+
+def effective_rigorous_stack(**build_kwargs) -> list:
+    """Source-exact core PLUS the constraints the core already implies (v2.412) -- the effective zero-toy stack.
+
+    A conclusion resting only on this set needs no toy prefactor: it is either a source-exact bound or a bound
+    the source-exact bounds already force.
+    """
+    stack = build_stack(**build_kwargs)
+    return [c for c in stack if rigor_of(getattr(c, "name", "")) == "rigorous"
+            or getattr(c, "name", "") in IMPLIED_BY_RIGOROUS]
+
+
 def frameworks() -> list:
     return [PureGR(), StringTreeEFT(), AsymptoticSafety(),
             LQGInduced(), CausalDynamicalTriangulation()]
