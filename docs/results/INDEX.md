@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (473 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (474 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -522,3 +522,4 @@ Auto-generated front door to the full research program (473 notes). Regenerate w
 | v2.360 | [v2.360 - Does the theory actually FIT the birefringence data, or merel](2026-06-30-v2.360-qnm-birefringence-goodness-of-fit.md) | The parity headline has always been stated as "consistent at 2-sigma" -- a weak claim, since the 2-sigma band |
 | v2.361 | [v2.361 - Is the engine's central prediction well-posed? Leave-one-out ](2026-06-30-v2.361-qnm-center-leave-one-out.md) | The method-as-proposal validation (the under-done third mandated direction). The engine's headline output is a |
 | v2.362 | [v2.362 - Does v2.361's margin-incomparability caveat invalidate v2.341](2026-06-30-v2.362-qnm-trilogy-margin-robustness.md) | v2.361 discovered the engine's signed-distance margins are NOT cross-comparable (gw_speed's margin is ~5e-16 |
+| v2.363 | [v2.363 - The new-theory program ledger, v2: the three-channel state of](2026-06-30-v2.363-qnm-program-ledger-v2.md) | ROBUST (structural, survive the toy basis) |
