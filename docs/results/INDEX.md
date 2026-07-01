@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (491 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (492 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -540,3 +540,4 @@ Auto-generated front door to the full research program (491 notes). Regenerate w
 | v2.378 | [v2.378 - SWING (fresh sector): the theory predicts extremal black hole](2026-06-30-v2.378-qnm-extremal-bh-channel.md) | The program mapped three prediction channels (parity, ringdown, screening). Is there a fourth -- and does the |
 | v2.379 | [v2.379 - SWING (cross-sector bridge): cosmic birefringence sets a lowe](2026-06-30-v2.379-qnm-birefringence-bh-entropy-bridge.md) | The cross-sector-bridge program (v2.350 birefringence->matter x curvature, v2.351 causality->ringdown) linked |
 | v2.380 | [v2.380 - SWING (deflationary): the four channels are not four independ](2026-06-30-v2.380-qnm-channel-correlation-structure.md) | The cross-sector bridges (v2.357 parity<->screening, v2.379 parity->BH) hinted the four prediction channels |
+| v2.381 | [v2.381 - SWING: the string-like matter identity is observationally DAR](2026-07-01-v2.381-qnm-dark-parameter.md) | v2.380 found the four channels have effective dimension ~2.5. The complement: which *couplings* are |

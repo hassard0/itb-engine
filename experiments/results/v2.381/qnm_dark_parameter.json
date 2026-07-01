@@ -1,0 +1,83 @@
+{
+  "version": "v2.381",
+  "n_samples": 2921,
+  "coupling_observability": {
+    "g_4": {
+      "correlations": {
+        "parity": 0.39,
+        "screening": 0.46,
+        "ringdown": 0.09,
+        "BH": 0.83
+      },
+      "max_abs_corr": 0.83,
+      "status": "observable"
+    },
+    "g_6": {
+      "correlations": {
+        "parity": 0.31,
+        "screening": 0.6,
+        "ringdown": 0.1,
+        "BH": 0.58
+      },
+      "max_abs_corr": 0.6,
+      "status": "observable"
+    },
+    "g_8": {
+      "correlations": {
+        "parity": 0.0,
+        "screening": 0.09,
+        "ringdown": 0.05,
+        "BH": 0.03
+      },
+      "max_abs_corr": 0.09,
+      "status": "DARK"
+    },
+    "g_R2": {
+      "correlations": {
+        "parity": 0.46,
+        "screening": 1.0,
+        "ringdown": 0.12,
+        "BH": 0.88
+      },
+      "max_abs_corr": 1.0,
+      "status": "observable"
+    },
+    "g_R3": {
+      "correlations": {
+        "parity": 0.12,
+        "screening": 0.22,
+        "ringdown": 0.95,
+        "BH": 0.21
+      },
+      "max_abs_corr": 0.95,
+      "status": "observable"
+    },
+    "g_R2_parity": {
+      "correlations": {
+        "parity": 1.0,
+        "screening": 0.46,
+        "ringdown": 0.07,
+        "BH": 0.5
+      },
+      "max_abs_corr": 1.0,
+      "status": "observable"
+    }
+  },
+  "dark_couplings": [
+    "g_8"
+  ],
+  "consistency_checks": {
+    "g_8_is_dark": true,
+    "g_8_is_the_unique_dark_coupling": true,
+    "all_other_couplings_observable": true,
+    "g_R2_maps_to_screening_and_bh": true,
+    "g_R3_maps_to_ringdown": true
+  },
+  "all_checks_pass": true,
+  "finding": "The theory's 'string-like matter' identity is observationally DARK: of the five genuine inputs, g_8 is the UNIQUE coupling that feeds no channel (its maximum correlation with parity, screening, ringdown, or black-hole extremality is only ~0.1), while every other coupling is observable (g_R2 -> screening 1.00 / BH 0.88; g_R2_parity -> parity 1.00; g_R3 -> ringdown 0.95; g_4 -> BH 0.83; g_6 -> screening/BH ~0.6). The sting is WHAT g_8 is: the top matter dispersion coefficient, entering the matter dispersion ratio r_matter = g_6^2/(g_4 g_8) = 0.756 -- the very quantity that establishes the multi-state, string-like matter sector (v2.343). So the coupling that most directly encodes the matter tower's multi-state structure is precisely the one the four channels cannot touch. This is an honest limitation on the theory's headline: 'parity-deformed, curvature-trimmed, STRING-LIKE gravity' (v2.342) is, on its string-like MATTER side, theoretically established but observationally hidden -- parity, screening, ringdown, and BH extremality all probe the curvature+parity sector (g_R2, g_R3, g_R2_parity, with g_4 partly), and NONE probes the matter Regge structure. It sharpens the observability picture (v2.380): the ~2.5 observable directions live entirely in the curvature/parity sector; the matter multi-state structure is inferred only through consistency (the dispersion tower, the anomaly links), never measured. So a skeptic could grant the theory's four channels and still deny the 'string-like matter' claim -- there is no observation that tests it. The falsifiable, testable content of the theory is its curvature/parity sector; its matter-string-like identity is a consistency inference, not an observational prediction.",
+  "honest_scope": "The correlations are over a seeded random-walk sample with the toy channel maps (v2.380 scope), so the exact numbers are sampler- and toy-basis-dependent -- but the DARKNESS of g_8 is structural: g_8 appears in NO channel observable (parity ~ g_R2_parity, screening/BH ~ g_R2/g_4, ringdown ~ g_R3^2/g_R2), and its only role is in the matter dispersion tower g_6^2 <= g_4 g_8, which no channel reads -- so its ~0.1 residual correlation is purely the indirect family coupling, and would remain small in any basis. g_6 shows up as 'observable' (~0.6) only through its family correlation with g_R2, not a direct channel dependence -- so the matter sector's observability is entirely INDIRECT (via correlations with the curvature scale), which is the same point. The 0.25 dark threshold is conventional; g_8 at 0.09 is far below it and g_4/g_6 far above, so the verdict is not threshold-sensitive. This is a statement about the FOUR channels catalogued so far -- a future observable that read the matter dispersion directly (a graviton-matter amplitude measurement) would illuminate g_8, but none is in the engine's channel set. Robust content: g_8 (the matter-multi-state coefficient) is dark to all four channels, so the string-like matter identity is observationally hidden. Toy channel maps, structural coupling dependence. An honest-limitation swing on the theory's testable content.",
+  "references": [
+    "this repo: v2.380 (channels ~2.5 independent), v2.372 (5 genuine inputs), v2.343 (multi-state matter r=0.756), v2.342 (string-like identity), v2.356/v2.378 (the four channels)",
+    "structural: coupling-to-channel correlation; g_8 enters only the matter dispersion tower"
+  ]
+}
