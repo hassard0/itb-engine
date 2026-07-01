@@ -1,0 +1,24 @@
+{
+  "version": "v2.385",
+  "constructed_g_C": 0.193,
+  "constructed_ghost_mass_over_cutoff": 2.276,
+  "region_max_g_C": 0.2535,
+  "region_min_ghost_mass_over_cutoff": 1.986,
+  "region_max_g_4": 0.6324,
+  "wgc_bound_holds": true,
+  "g4_below_one": true,
+  "consistency_checks": {
+    "constructed_ghost_above_cutoff": true,
+    "whole_region_ghost_safe": true,
+    "wgc_ties_gC_to_sqrt_g4": true,
+    "wgc_plus_g4_below_one_forces_gC_below_one": true,
+    "ghost_comfortably_above_cutoff": true
+  },
+  "all_checks_pass": true,
+  "finding": "The constructed theory answers the single most-cited objection to higher-derivative gravity -- the Ostrogradsky/Weyl^2 spin-2 ghost -- and the QG-consistency conditions keep the ghost safely above the EFT cutoff. The Weyl^2 coupling g_C sources a massive spin-2 ghost at m_g^2 ~ Lambda^2/g_C, so the ghost sits above the cutoff (an artifact of truncation, not a physical low-energy instability) exactly when g_C < 1, i.e. m_g/Lambda = 1/sqrt(g_C) > 1. For the constructed theory g_C = g_R2 = 0.193, so m_g/Lambda = 2.28 -- the ghost is at ~2.3x the cutoff. The whole feasible region is ghost-safe: g_R2 <= 0.254 everywhere, so m_g/Lambda >= 1.99 (the ghost never comes within a factor of two of the cutoff). The guarantee is the WEAK GRAVITY CONJECTURE: the engine's WGC is g_R2 <= sqrt(g_4), and with g_4 < 1 across the feasible region this forces g_R2 < 1 -- the ghost above the cutoff. So the SAME weak-gravity condition that makes extremal black holes decay (v2.378) also protects the theory from its own higher-derivative ghost: the Ostrogradsky instability is kept trans-cutoff by quantum-gravity consistency, not by hand. The deeper resolution is the infinite tower (v2.375): a finite-derivative truncation carries the ghost as a genuine pole, but the full string-like log-convex tower is what a ghost-free UV completion (string theory, non-local gravity) looks like from the EFT side, so the trans-cutoff ghost is precisely the truncation artifact the tower resolves. Net: higher-derivative gravity's headline pathology is not fatal here -- the constructed theory is a healthy EFT (ghost above cutoff) protected by the WGC and completed by an infinite tower, which is the consistent-EFT answer to 'but higher-derivative gravity has ghosts'.",
+  "honest_scope": "The ghost-mass relation m_g^2 ~ Lambda^2/g_C carries an O(1) convention factor (a 2 or a 6 depending on the normalization of C^2 and the definition of the cutoff), so 'm_g/Lambda = 1/sqrt(g_C)' is O(1)-schematic -- the ROBUST, parametric content is g_C < 1 => ghost above the cutoff, which the feasible region satisfies with room to spare (g_C <= 0.25, m_g/Lambda >= 2). g_C (Weyl^2) is IDENTIFIED with g_R2 in the engine's toy basis; the physical Ostrogradsky ghost is specifically the Weyl^2 (spin-2) one, so a genuine basis separating Weyl^2 from Ricci^2 could shift which coupling carries the ghost -- here g_R2 stands in for g_C. 'Ghost above cutoff = safe' is the standard EFT stance: the ghost is an artifact of truncating an infinite-derivative (non-local / stringy) UV completion, NOT a proof of unitarity of a specific UV theory -- this shows the ghost is not a LOW-ENERGY pathology, not that a UV completion exists (though the tower, v2.375, is the natural candidate). The WGC used is the engine's simplified g_R2 <= sqrt(g_4) (v2.378 scope, alpha=1); 'g_4 < 1' is an empirical feature of the feasible region (max 0.63), robust but not a single hard constraint. Robust content: the feasible region keeps the Weyl^2 ghost parametrically above the cutoff, guaranteed by the WGC -- higher-derivative gravity's headline ghost is trans-cutoff here, not fatal. O(1)-schematic mass, toy g_C=g_R2, EFT-sense safety. A swing at the #1 objection.",
+  "references": [
+    "this repo: v2.378 (WGC / extremal-BH decay -- the same condition), v2.375 (infinite string-like tower -- the ghost's UV resolution), v2.322 (unique feasibility), src/itb/constraints/weak_gravity*.py",
+    "physics: Ostrogradsky instability; Weyl^2 spin-2 ghost (Stelle 1977); infinite-derivative/non-local ghost-free gravity (Biswas-Mazumdar-Siegel); WGC (Arkani-Hamed et al. 2006)"
+  ]
+}
