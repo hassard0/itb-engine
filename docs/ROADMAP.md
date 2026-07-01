@@ -1,9 +1,30 @@
 # ITB Engine Research Roadmap
 
-This roadmap starts from the v2.208 state. It is a research plan, not a solved
-quantum-gravity claim.
+A research plan, not a solved quantum-gravity claim. The program has run through two phases: the **foundational
+phase** (island census -> data confrontation -> R4/GWOSC live-data frontier, up to ~v2.208) and the **swing /
+candidate phase** (v2.367-v2.407), which constructed and exhaustively stress-tested a single candidate low-energy
+QG EFT. See [FINDINGS.md](FINDINGS.md) for what was found.
 
-## Current State
+## Current frontier (v2.407)
+
+The candidate theory is **complete under the engine's toy basis** ([v2.402 capstone](results/2026-07-01-v2.402-qnm-candidate-profile-refreshed.md)):
+a matter-dominant, near-Planckian, ghost-safe, string-like, globally-unique consistent EFT with a decisive
+~2030 test (CMB-S4). Genuine further progress must come from one of four places -- plain constraint-mining is
+**saturated** (the carving has converged, [v2.407](results/2026-07-01-v2.407-qnm-carving-convergence.md); all
+constraints collapse onto the g_4/g_R2 keystone pair, [v2.401]):
+
+1. **Basis refinement.** The c!=a (Euler vs Weyl^2) degeneracy is now resolved and activated
+   ([v2.397-401](results/2026-07-01-v2.397-qnm-ca-degeneracy.md)). Still open: splitting the matter operators
+   (g_4/g_6/g_8) into independent spin structures, and the **g_R4 rank-3 sub-structure** -- the highest-value
+   remaining core extensions.
+2. **Real normalization.** Every magnitude is O(1)-toy; a physical calibration of the prefactors would turn the
+   robust *structure* into quantitative predictions (the structure is prefactor-robust, [v2.405]).
+3. **The R4/GWOSC live-data route** (parked below). Its key blocker is unchanged: no source-backed full-rank
+   qNM->R4 sensitivity map exists in the public literature ([v2.209] / the pyRing-Bresciani no-map ledger).
+4. **Observation.** CMB-S4 (~2030) is the decisive make-or-break test of the matter-dominant construction
+   ([v2.395]); next-gen GW-birefringence would probe the parity chirality ([v2.386/387]).
+
+## Parked route: R4/GWOSC live-data (foundational phase, from v2.208)
 
 The strongest live-data route is the R4/GWOSC/ParSpec path. The repo can now:
 

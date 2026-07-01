@@ -1,11 +1,71 @@
 # ITB Engine — Findings
 
-*What the Information-Theoretic Bootstrap engine discovered, in one page.*
-Each finding links to its full dated note. For the current live-data frontier see the [**v2.208 R4 ParSpec pyRing likelihood-rerun packet**](results/2026-06-21-v2.208-r4-parspec-pyring-likelihood-rerun-packet.md), the [**v2.207 R4 ParSpec qNM-to-Bresciani source-route graph**](results/2026-06-21-v2.207-r4-parspec-qnm-bresciani-source-route-graph.md), and the [**v2.206 R4 ParSpec public-likelihood packet gate**](results/2026-06-21-v2.206-r4-parspec-public-likelihood-packet.md). For the forward plan see [**ROADMAP.md**](ROADMAP.md). For all notes grouped by theme see [results/TAXONOMY.md](results/TAXONOMY.md); for the chronological list see [results/INDEX.md](results/INDEX.md). For the forward-looking status of every prediction, see the [master scorecard](results/2026-06-08-v1.83-master-scorecard.md). For a publication-style overview of the whole program, see the [**v2.0 research report**](results/2026-06-09-v2.0-RESEARCH-REPORT.md).
+*What the Information-Theoretic Bootstrap engine has found. Current as of v2.407.*
+
+**Start here:** the section ★ below is the current headline — one near-unique, falsifiable candidate QG EFT and
+its most robust findings. §1–9 that follow are the *foundational program* (v1.7x–v2.2x): the island census, the
+Euler-vs-Weyl² unifications, the data confrontation, and the R4/GWOSC live-data frontier. The single most
+complete, live-verified snapshot of the candidate is the [**v2.402 capstone**](results/2026-07-01-v2.402-qnm-candidate-profile-refreshed.md).
+Navigation: [ROADMAP.md](ROADMAP.md) (forward plan) · [CONSTRAINTS.md](CONSTRAINTS.md) (what's encoded) ·
+[results/INDEX.md](results/INDEX.md) (every cycle, chronological) · [results/TAXONOMY.md](results/TAXONOMY.md)
+(by theme) · [v2.0 research report](results/2026-06-09-v2.0-RESEARCH-REPORT.md) (early-program overview).
 
 > **Read with the honest frame.** Most constraint prefactors and cross-sector mappings are O(1)/order-of-magnitude placeholders. The repo's *realism program* tells you which conclusions survive that uncertainty. Throughout, the **robust content is signs, orderings, structure, and which experiment constrains what** — not precise coordinates. Several findings below are deliberately *negative* or *self-correcting*; that's the point.
 
 ---
+
+## ★ The current picture (v2.407): a single, near-unique, falsifiable candidate
+
+Intersecting every consistency condition leaves a **single, tiny, connected region** of coupling space — *one*
+candidate low-energy QG EFT, not a landscape.
+
+**The candidate in one sentence:** a **matter-dominant, five-parameter (+ a small dark hidden sector),
+~10⁻⁵-predictive** low-energy QG EFT — **near-Planckian** (cutoff ~0.72 M_Pl), **ghost-safe**, **string-like**,
+**WGC-complete** — whose gravitational sector is **both forced into existence and capped in size by its matter
+sector**. Live-verified profile → [**v2.402**](results/2026-07-01-v2.402-qnm-candidate-profile-refreshed.md).
+
+**It is genuinely near-unique.** The feasible region is ~10⁻⁵ of the O(1) box and *consistency-driven* (data
+adds only ~1.7×, [v2.373](results/2026-06-30-v2.373-qnm-program-predictivity.md)); **no named framework fits**
+theory+data ([v2.322]); a multi-start search funnels to a **single global island** of one parity handedness
+([v2.406](results/2026-07-01-v2.406-qnm-global-uniqueness.md)); and the carving has **converged** — near-saturated,
+so ~10⁻⁵ is a settled answer, not an overestimate ([v2.407](results/2026-07-01-v2.407-qnm-carving-convergence.md)).
+
+**The robust findings (structure, basis-independent):**
+- **Matter–gravity locking (the spine).** The anomaly *forbids matter without curvature* (matter forces the
+  leading curvature coupling, [v2.393](results/2026-07-01-v2.393-qnm-matter-sources-gravity.md)); matter *sets*
+  the gravitational scale ([v2.389](results/2026-07-01-v2.389-qnm-matter-dominance.md)) and *caps* gravity at
+  **≤40%** of its own strength, adversarially confirmed ([v2.391](results/2026-07-01-v2.391-qnm-matter-dominance-hard-bound.md)).
+  Structurally: a **two-keystone basis** (g_4 + g_R2 drive 67%/60% of all constraints,
+  [v2.401](results/2026-07-01-v2.401-qnm-two-keystone-structure.md)).
+- **Ghost-safe & near-Planckian.** The Weyl² Ostrogradsky ghost sits *above* the cutoff, forced there by the
+  WGC ([v2.385](results/2026-07-01-v2.385-qnm-ghost-safety.md)); the genuine UV cutoff is a **Dvali species scale
+  ~0.72 M_Pl** ([v2.394](results/2026-07-01-v2.394-qnm-species-scale-cutoff.md)).
+- **String-like, not finite-derivative.** The curvature (and matter) couplings form infinite **log-convex moment
+  towers** — corrections at every order ([v2.375](results/2026-06-30-v2.375-qnm-infinite-curvature-tower.md)).
+- **Extremal black holes decay** (ΔS_ext>0, WGC automatic, [v2.378](results/2026-06-30-v2.378-qnm-extremal-bh-channel.md)); and
+  **parity is a chirality structure** — an order-2 left/right graviton asymmetry locked to the CMB handedness
+  ([v2.386](results/2026-07-01-v2.386-qnm-graviton-chirality-asymmetry.md)).
+
+**The decisive test — CMB-S4 (~2030).** The construction *requires* a large matter self-coupling; mapped to the
+inflationary observable CMB-S4 will measure, that is **>10σ tension** with single-field slow-roll — a
+**make-or-break test** that also gives the otherwise-dark matter sector a handle
+([v2.395](results/2026-07-01-v2.395-qnm-cmb-s4-decisive-test.md)).
+
+**Why trust it — four robustness axes.** The central claim survives across the feasible *family*, under *basis
+resolution* (splitting Euler from Weyl², the c≠a arc [v2.398–401]), *adversarially* ([v2.391]), and under *O(1)
+toy-prefactor variation* ([v2.405](results/2026-07-01-v2.405-qnm-prefactor-sensitivity.md)). "Toy numbers,
+robust structure" is now *verified*, not asserted.
+
+**Honest limits.** Three constructed-point values are *assumptions, not predictions* — a=c
+([v2.399](results/2026-07-01-v2.399-qnm-c-minus-a-modulus.md)), g_6=g_8
+([v2.392](results/2026-06-30-v2.392-qnm-g6-g8-artifact.md)), g_R3_parity=0
+([v2.403](results/2026-07-01-v2.403-qnm-third-assumption-parity-cubic.md)) — and the theory carries a **~3D dark
+hidden sector** no observable probes ([v2.404](results/2026-07-01-v2.404-qnm-hidden-sector.md)). All magnitudes
+are toy-basis; the ringdown-magnitude map and matter-operator split are blocked/unsourceable ([v2.209], [v2.397]).
+
+---
+
+## Earlier program — foundations (v1.7x–v2.2x)
 
 ## 1. How constrained is a consistent quantum-gravity EFT?
 
