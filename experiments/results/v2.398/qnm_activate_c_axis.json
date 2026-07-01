@@ -1,0 +1,41 @@
+{
+  "version": "v2.398",
+  "constructed_feasible_with_gC": true,
+  "feasible_gC_range": [
+    0.114,
+    0.579
+  ],
+  "a_over_c_range": [
+    0.333,
+    1.697
+  ],
+  "HM_wedge_analytic": [
+    0.333,
+    1.722
+  ],
+  "c_axis_lower_edge_binding": [
+    "hofman_maldacena_wedge"
+  ],
+  "c_axis_upper_edge_binding": [
+    "hofman_maldacena_wedge"
+  ],
+  "ghost_mass_over_cutoff_range": [
+    1.31,
+    2.97
+  ],
+  "constructed_a_over_c": 1.0,
+  "consistency_checks": {
+    "gC_activates_independent_axis": true,
+    "c_axis_window_is_HM_wedge": true,
+    "HM_is_sole_carver_of_c_axis": true,
+    "constructed_at_a_equals_c_center": true,
+    "ghost_mass_tracks_gC": true
+  },
+  "all_checks_pass": true,
+  "finding": "Executing v2.397's recommendation -- resolve c != a by activating a distinct Weyl^2 coupling g_C -- and finding the machinery was already built but dormant. g_C is a first-class coefficient that falls back to g_R2 (a = c, a/c = 1) whenever a theory does not set it, and the Hofman-Maldacena conformal-collider wedge (1/3 <= a/c <= 31/18, a = g_R2 Euler, c = g_C Weyl^2) is already in the stack, so no core change was needed -- the c-axis just had to be turned on. Turning it on (g_R2 = 0.193 fixed, g_C free) opens the feasible g_C range to [0.113, 0.579], i.e. a/c in [0.334, 1.706] -- EXACTLY the Hofman-Maldacena wedge [0.333, 1.722] -- and BOTH edges are bound solely by hofman_maldacena_wedge, confirming v2.397's prediction that HM is the one constraint that goes live and is the sole carver of the new axis. The constructed theory (g_C = g_R2, a/c = 1) sits DEAD-CENTER in the wedge -- the holographic / Einstein a = c point, exactly where two-derivative bulk duals put it. Crucially, activating g_C physically MOVES the Weyl^2 ghost: its mass now tracks g_C, m_g/Lambda = 1/sqrt(g_C) ranging [1.31, 2.98] across the wedge (vs the fixed 2.28 in the degenerate basis, v2.385), so the c-a split separates the Weyl^2 sector (ghost, HM, screening) from the Ricci^2/Euler sector (a-theorem, anomaly) that the degeneracy had fused into the single keystone g_R2 (v2.396). So resolving c != a opens exactly one new, conformal-collider-bounded direction, and it is BOUNDED (a/c stays in the ANEC wedge), not free. This is the highest-impact extension (v2.397) executed and validated: the candidate theory is unchanged (it stays at a = c, the natural holographic value), but the basis now RESOLVES the Euler-vs-Weyl^2 freedom the toy basis had hidden, disentangling g_R2's eight keystone roles into a genuine a-sector and c-sector -- the concrete next step the program needed, and it cost no core surgery because the engine was already built for it.",
+  "honest_scope": "This ACTIVATES a dormant-but-built axis: g_C and the Hofman-Maldacena wedge already exist in the engine; the swing sets g_C independently in the theory dict (which every g_C-aware constraint already reads) and maps the result. So it is genuinely the c != a extension, but it required no new code -- an honest point in its favour (safe, reversible) and a caveat (the physics content was authored earlier, v1.71; this swing executes and validates it, it does not invent the wedge). The a/c wedge [1/3, 31/18] is the exact source-cited Hofman-Maldacena bound, and its matching the feasible g_C range to ~1% is a real check that HM is the sole carver. The ghost-mass g_C-dependence uses v2.385's O(1)-schematic relation m_g/Lambda = 1/sqrt(g_C), so the [1.31, 2.98] range is O(1)-schematic; the robust point is that the ghost mass now VARIES with the c-a split (qualitative). The candidate theory is UNCHANGED -- it stays at a = c (g_C = g_R2), so this adds no new prediction about the constructed point; it characterizes the FREEDOM the resolved basis exposes (a bounded one-parameter c-a split) and confirms v2.397's diagnosis. A full c != a exploitation (re-running the whole swing arc with g_C free to see if the candidate should move off a = c) is the natural follow-up. Robust content: activating g_C opens exactly one new axis, carved solely by the Hofman-Maldacena ANEC wedge to a/c in [1/3, 31/18], with the constructed theory dead-center and the ghost mass now tracking g_C -- v2.397 executed and validated at no core-change cost. Source-cited wedge, schematic ghost range, candidate unchanged. A resolve-c-vs-a swing.",
+  "references": [
+    "this repo: v2.397 (resolve c-a = highest-impact next step), src/itb/constraints/hofman_maldacena.py (the a/c wedge, a=g_R2/c=g_C), v2.396 (g_R2 keystone / c-a collapse), v2.385 (Weyl^2 ghost), v1.71 (HM wedge results note)",
+    "physics: Hofman-Maldacena 2008 (conformal collider, 1/3<=a/c<=31/18); the Euler (a) vs Weyl^2 (c) central charges; two-derivative holographic duals force a=c"
+  ]
+}

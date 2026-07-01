@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (508 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (509 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -557,3 +557,4 @@ Auto-generated front door to the full research program (508 notes). Regenerate w
 | v2.395 | [v2.395 - SWING: CMB-S4 is a decisive make-or-break test -- matter domi](2026-07-01-v2.395-qnm-cmb-s4-decisive-test.md) | The matter-dominance arc (v2.389-393) requires a strong matter sector (large `g_4`). Can a sourced next-gen |
 | v2.396 | [v2.396 - SWING: g_R2 is the keystone coupling -- the anomaly's forcing](2026-07-01-v2.396-qnm-gR2-keystone.md) | The a-theorem reduces in the engine to `g_R2 >= 0` (docstring flags it as redundant). Does its integrate-out |
 | v2.397 | [v2.397 - SWING (method / highest-impact next step): the toy basis's ke](2026-07-01-v2.397-qnm-ca-degeneracy.md) | After ~30 swings the constraint space is genuinely explored. WHY does further constraint-mining now yield |
+| v2.398 | [v2.398 - SWING (executes v2.397): activating the Weyl^2 axis g_C resol](2026-07-01-v2.398-qnm-activate-c-axis.md) | v2.397 identified resolving the c-a degeneracy (a distinct Weyl^2 coupling `g_C != g_R2`) as the highest-impact |
