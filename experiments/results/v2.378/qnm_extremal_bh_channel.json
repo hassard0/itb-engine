@@ -1,0 +1,56 @@
+{
+  "version": "v2.378",
+  "wald_coefficients_A_B": [
+    1.0,
+    0.5
+  ],
+  "constructed_delta_S_ext": 0.4575,
+  "matter_only_floor_B_g4": 0.2645,
+  "constructed_extremal_bh_decays": true,
+  "framework_delta_S_ext": [
+    {
+      "framework": "pure_gr",
+      "g_4": 0.0,
+      "delta_S_ext": 0.0,
+      "extremal_bh_decays": false
+    },
+    {
+      "framework": "string_tree_eft",
+      "g_4": 0.5,
+      "delta_S_ext": 0.45,
+      "extremal_bh_decays": true
+    },
+    {
+      "framework": "asymptotic_safety",
+      "g_4": 0.4,
+      "delta_S_ext": 0.35,
+      "extremal_bh_decays": true
+    },
+    {
+      "framework": "lqg_induced",
+      "g_4": 0.6,
+      "delta_S_ext": 0.6,
+      "extremal_bh_decays": true
+    },
+    {
+      "framework": "cdt",
+      "g_4": 0.55,
+      "delta_S_ext": 0.495,
+      "extremal_bh_decays": true
+    }
+  ],
+  "consistency_checks": {
+    "constructed_wald_entropy_shift_positive": true,
+    "extremal_bh_decays_wgc_satisfied": true,
+    "matter_positivity_guarantees_positive_floor": true,
+    "wgc_automatic_for_all_positive_g4_frameworks": true,
+    "fourth_channel_identified": true
+  },
+  "all_checks_pass": true,
+  "finding": "The constructed theory makes a definite BLACK-HOLE prediction -- a fourth channel beyond parity, ringdown, and screening: extremal Reissner-Nordstrom black holes DECAY. By the Cheung-Liu-Remmen / Reall-Santos theorem (engine's wald_entropy_positivity), the leading higher-derivative shift to the near-extremal entropy at fixed mass and charge is Delta S_ext = A g_C + B g_4, and Delta S_ext > 0 is equivalent to the WGC (the extremality bound moves so q_ext/m_ext > 1 and the black hole can shed charge). For the constructed theory Delta S_ext = 0.193 + 0.5*0.529 = 0.458 > 0, so it predicts extremal RN black holes are unstable. The bold part is WHY it is guaranteed: the matter term alone gives a positive floor B g_4 = 0.265 > 0, so for ANY theory with g_4 > 0 -- matter forward positivity, an unavoidable unitarity condition -- the shift is positive regardless of the curvature sector. So the WGC is not an extra assumption imposed on the theory; it is a CONSEQUENCE of matter positivity, and the constructed theory is 'WGC-complete by construction'. Quantum gravity's deepest self-consistency demand -- that no stable extremal black holes remain (else they would be exactly stable remnants, forbidden) -- is automatically met. Every named framework with g_4 > 0 shares this (the fourth channel is generic, like screening v2.359: a prediction, not a discriminator), which is the honest point -- it strengthens the constructed theory's QG self-consistency credentials rather than distinguishing it. This adds the black-hole-extremality channel to the theory's profile: the constructed theory is a parity-violating, curvature-trimmed, string-like gravity whose extremal black holes decay, satisfying the WGC by virtue of its (unavoidable) matter positivity.",
+  "honest_scope": "The formula Delta S_ext = A g_C + B g_4 with A = 1, B = 0.5 is the engine's SIMPLIFIED encoding of the Cheung-Liu-Remmen / Reall-Santos result -- source-cited (JHEP 10 (2018) 004; JHEP 04 (2018) 021) but with O(1) placeholder coefficients; the real coefficients depend on the specific extremal background and the full operator basis. g_C (Weyl^2) is identified with g_R2 in the engine (0.193) -- a genuine basis separates Weyl^2 from Ricci^2, so the g_C contribution is toy; the g_4 floor (0.265) is the robust, basis-cleaner part (matter forward positivity is unambiguous). Delta S_ext is the leading correction in units of the higher-derivative expansion relative to the Bekenstein-Hawking entropy, NOT an absolute entropy. The 'WGC automatic from matter positivity' is the CLR theorem's content applied here -- rigorous in structure (positive coefficients times positive couplings), toy in the coefficient values. The fourth channel is NON-DISCRIMINATING (every positive-g_4 higher-derivative gravity satisfies it, verified across the frameworks) -- so it is a genuine prediction of the theory (extremal BHs decay) but not a way to tell it apart from other higher-derivative gravities, exactly like the screening mandate (v2.359). This is a THEORETICAL (not data) channel, so it carries no birefringence caveat. Robust content: matter positivity guarantees Delta S_ext > 0, so the theory predicts extremal-BH decay and satisfies the WGC by construction. Toy coefficients, rigorous positivity structure. A fresh-sector swing identifying the black-hole channel.",
+  "references": [
+    "this repo: src/itb/constraints/bh_entropy_positivity.py (Wald entropy / WGC), v2.340 (WGC extremal decay), v2.359 (screening generic -- the parallel non-discriminating channel), v2.356 (the three-channel map this extends)",
+    "physics: Cheung-Liu-Remmen JHEP 10 (2018) 004; Reall-Santos JHEP 04 (2018) 021 (Delta S_ext > 0 <=> WGC)"
+  ]
+}
