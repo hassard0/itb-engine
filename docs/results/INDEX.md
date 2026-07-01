@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (486 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (487 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -535,3 +535,4 @@ Auto-generated front door to the full research program (486 notes). Regenerate w
 | v2.373 | [v2.373 - SWING (method-as-proposal): how predictive is the swampland-c](2026-06-30-v2.373-qnm-program-predictivity.md) | The engine's central proposal: intersecting ALL known consistency conditions (plus current data) carves the |
 | v2.374 | [v2.374 - SWING: which physics carves the EFT? Predictivity by constrai](2026-06-30-v2.374-qnm-predictivity-by-class.md) | v2.373 found the swampland-complete carving is ~10^-5 predictive and consistency-driven. WHICH physics does |
 | v2.375 | [v2.375 - SWING (all orders): the curvature sector is a log-convex mome](2026-06-30-v2.375-qnm-infinite-curvature-tower.md) | The engine mandates one moment rung, `g_R3^2 <= g_R2 g_R4`. If the curvature couplings are moments of a |
+| v2.376 | [v2.376 - SWING (attacked, survives): the theory is string-like in BOTH](2026-06-30-v2.376-qnm-two-tower-scales.md) | v2.375 showed the curvature sector is an infinite log-convex tower. The matter sector (`g_4, g_6, g_8`) is |

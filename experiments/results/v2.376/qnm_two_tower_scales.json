@@ -1,0 +1,39 @@
+{
+  "version": "v2.376",
+  "constructed_r_matter_g6_over_g4": 0.7561,
+  "constructed_r_curv_gR3_over_gR2": 0.4663,
+  "family_r_matter": {
+    "mean": 0.718,
+    "range": [
+      0.456,
+      0.995
+    ]
+  },
+  "family_r_curv": {
+    "mean": 0.397,
+    "range": [
+      0.0,
+      0.833
+    ]
+  },
+  "curvature_faster_decaying_fraction": 0.893,
+  "scale_separation_ratio_of_ratios": {
+    "mean": 0.566,
+    "constructed": 0.617
+  },
+  "n_samples": 2921,
+  "consistency_checks": {
+    "both_sectors_are_log_convex_towers": true,
+    "curvature_decays_faster_at_center": true,
+    "curvature_faster_robust_across_family": true,
+    "matter_tower_ratio_larger_on_average": true,
+    "scale_separation_below_one": true
+  },
+  "all_checks_pass": true,
+  "finding": "The theory is string-like in BOTH sectors -- two infinite log-convex towers -- with the gravitational tower systematically HARDER (faster-decaying) than the matter tower, and this survives an artifact attack. Both the matter couplings (g_4, g_6, g_8) and the curvature couplings (g_R2, g_R3, g_R4) are log-convex moment sequences, so each generates an infinite geometric-floor tower (v2.375). Their within-sector decay ratios at the constructed point are r_matter = g_6/g_4 = 0.756 and r_curv = g_R3/g_R2 = 0.466, so the curvature tower's higher operators are more suppressed order-by-order -- a higher effective cutoff for the gravitational higher-curvature corrections than for the matter ones. The attack: r_matter = 0.756 coincides with the dispersion ratio only because g_6 = g_8 at the center, so is 'curvature harder than matter' a g_6=g_8 artifact? No: across the feasible family the curvature tower decays faster than the matter tower in 89% of samples (r_curv < r_matter, means 0.40 vs 0.72), so it is a genuine structural feature, not an artifact of the center. So 'string-like in two senses' (v2.342: closest to string in coupling space; UV string-like by unitarity+causality) sharpens to 'string-like in both SECTORS as infinite towers, at DIFFERENT scales': the matter and gravitational sectors both have infinitely many higher-derivative corrections, but the gravitational tower is harder, with a dimensionless scale separation r_curv/r_matter ~ 0.57-0.62. Physically the graviton's higher-curvature corrections converge faster than matter's higher-derivative ones -- the two towers are distinct (confirming v2.368's refutation of an identical-spectrum shared tower), with gravity the more strongly suppressed of the two.",
+  "honest_scope": "Both towers being log-convex moment sequences is rigorous given the dispersive representation (v2.261/v2.369); the WITHIN-sector decay ratios (g_6/g_4, g_R3/g_R2) are clean dimensionless decay rates of each sector's OWN geometric floor. The 'curvature harder than matter' comparison is robust (89% of the family, so not a g_6=g_8 artifact -- the attack survives), but it COMPARES ratios across two sectors whose couplings carry different dimensions/normalizations in the engine's O(1)-normalized toy basis, so reading it as a literal physical scale separation inherits that toy-basis caveat -- the robust content is the ORDERING (gravity faster-decaying), not the precise 0.57-0.62 number. The ~11% of the family where curvature decays slower are the edge (small g_R2 / large g_R3, near the CEMZ boundary). g_R5+ and g_10+ are not engine couplings (the towers are the assumed moment structure, v2.375 caveat). The family is a seeded random walk (sampled). Robust content: both sectors are infinite log-convex towers, and the gravitational tower is faster-decaying than the matter tower across ~89% of the feasible family. Toy basis for the numbers, rigorous-given-dispersive-structure for the tower existence, robust for the ordering. A two-tower structural swing that survives its artifact attack.",
+  "references": [
+    "this repo: v2.375 (curvature infinite log-convex tower), v2.343 (matter dispersion tower / multi-state), v2.342 (closest to string), v2.368 (form-factor difference -> distinct spectra), v2.369 (shared support via equivalence principle)",
+    "structural: within-sector moment log-convexity decay ratios; cross-sector comparison"
+  ]
+}
