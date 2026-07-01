@@ -1,0 +1,58 @@
+{
+  "version": "v2.411",
+  "tier_counts": {
+    "rigorous": 19,
+    "sourced_proxy": 17,
+    "data": 6
+  },
+  "rigorous_core_size": 19,
+  "constructed_feasible_under_rigorous_core": true,
+  "local_feasible_fraction": {
+    "full_stack": 0.0053,
+    "rigorous_core": 0.2473,
+    "core_looser_x": 46.4
+  },
+  "frameworks_under_rigorous_core": {
+    "pure_gr": {
+      "feasible": true,
+      "rigorous_violations": []
+    },
+    "string_tree_eft": {
+      "feasible": true,
+      "rigorous_violations": []
+    },
+    "asymptotic_safety": {
+      "feasible": true,
+      "rigorous_violations": []
+    },
+    "lqg_induced": {
+      "feasible": false,
+      "rigorous_violations": [
+        "cft_flat_space_bound",
+        "graviton_forward_positivity",
+        "cross_sector_efthedron"
+      ]
+    },
+    "cdt": {
+      "feasible": true,
+      "rigorous_violations": []
+    }
+  },
+  "excluded_by_rigorous_core": [
+    "lqg_induced"
+  ],
+  "consistency_checks": {
+    "rigor_registry_complete": true,
+    "rigorous_core_nontrivial": true,
+    "candidate_in_rigorous_core": true,
+    "rigorous_core_excludes_a_framework": true,
+    "toy_tiers_do_most_of_the_size_carving": true
+  },
+  "all_checks_pass": true,
+  "finding": "The engine now has a first-class rigor classification, and it isolates a real, zero-toy result: the source-exact amplitude/causality core alone excludes LQG-induced gravity. The 42 constraints split 19 RIGOROUS (source-exact amplitude positivity / causality / bootstrap -- Adams-Nicolis-Rattazzi, Caron-Huot et al, CEMZ, Hofman-Maldacena, EFThedron), 17 SOURCED_PROXY (real conjectures via toy O(1) proxy forms -- WGC, swampland, anomaly, entropy bounds), and 6 DATA (real measurements via O(1) observable maps). Running the central logic on the RIGOROUS core alone -- 19 bounds, no toy input: the constructed candidate is feasible under it; it carves a nontrivial region (locally ~46x larger than the full stack, since the swampland/data tiers do most of the SIZE carving); and it EXCLUDES LQG-induced gravity -- a genuine, zero-toy statement that LQG's low-energy couplings violate source-exact amplitude/causality positivity -- while pure GR, string tree-EFT, asymptotic safety, and CDT survive the rigorous core. So the engine's real content is now explicit and separable: (1) LQG-induced gravity is excluded by amplitude/causality with NO toy input; (2) the candidate's amplitude STRUCTURE (matter positivity, the g_6^2<=g_4 g_8 dispersion tower, the a/c wedge, the parity-decomposed L/R graviton bounds) is rigorous. What remains toy is confined to the region SIZE (swampland proxies) and the observable MAGNITUDES (data maps) -- and both layers are now TAGGED, so every downstream result can state its rigor tier instead of inheriting a blanket 'toy' caveat. This is the concrete de-toying step: the engine is not a toy, it is a rigorous amplitude/causality carver whose swampland and observable layers wear toy prefactors -- now made first-class so the real conclusions (rigorous-only) are usable on their own. The next de-toying targets follow directly: replace each SOURCED_PROXY form with its literature-exact inequality (the WGC convex-hull bound, a field-range SDC, the Dvali species count) and each DATA map with a derived observable relation -- moving constraints from proxy/data into the rigorous tier one at a time, each a checkable improvement.",
+  "honest_scope": "The rigor classification is a defensible JUDGEMENT keyed to each constraint's published citation, not a theorem; 'rigorous' means the inequality STRUCTURE is the source result (the positivity/causality/bootstrap bound), while overall units/prefactors may still be simplified (e.g. Lambda=1) -- so 'rigorous' is 'source-exact in form', not 'zero approximation'. A few borderline calls (e.g. cft_flat_space, cross_sector_efthedron use simplified EFThedron slices) could be argued into sourced_proxy; the LQG-exclusion result is robust to those because LQG fails a core positivity bound, not a borderline one. The LQG exclusion itself rests on the LQG-induced FRAMEWORK ENCODING -- a model of LQG's low-energy Wilson coefficients, which is uncertain -- so it is 'LQG as encoded here violates source-exact positivity', not a theorem about all of loop quantum gravity. The local feasible fractions are box-sample estimates (percent noise). This cycle is a genuine ENGINE change (a new capability in stack.py: RIGOR/rigor_of/filter_by_rigor/rigorous_core_stack) plus the real result it enables; it does NOT itself make the toy prefactors real -- it makes the toy-vs-real boundary explicit and shows the rigorous side is already productive, and it lays out the de-toying path (proxy/data -> rigorous, one constraint at a time). Robust content: 19/42 constraints are source-exact amplitude/causality bounds; the candidate's amplitude structure and the exclusion of LQG-induced gravity rest on those alone (zero toy input), while the region size and the string-like-framework exclusions need the toy-prefactor tiers -- now all tagged. Judgement-based tiering, encoding-conditional LQG exclusion, source-exact-in-form. An engine-rigor-capability cycle.",
+  "references": [
+    "this repo: experiments/stack.py (new RIGOR registry + rigorous_core_stack), v2.322 (no framework fits, full stack), v2.373 (~1e-5 predictivity), v2.405 (prefactor robustness), v2.410 (the swampland field-space gap this reframes)",
+    "physics: Adams-Nicolis-Rattazzi 2006 & Caron-Huot et al 2021/2024 (amplitude positivity); Camanho-Edelstein-Maldacena-Zhiboedov 2014 (causality); Hofman-Maldacena 2008 (a/c wedge); Arkani-Hamed-Huang-Huang (EFThedron)"
+  ]
+}

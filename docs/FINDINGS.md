@@ -56,6 +56,18 @@ resolution* (splitting Euler from Weyl², the c≠a arc [v2.398–401]), *advers
 toy-prefactor variation* ([v2.405](results/2026-07-01-v2.405-qnm-prefactor-sensitivity.md)). "Toy numbers,
 robust structure" is now *verified*, not asserted.
 
+**The rigorous core is real physics — the toy-ness is tagged and confined.** The 42 constraints are now
+rigor-classified in `experiments/stack.py`: **19 are source-exact** amplitude-positivity / causality / bootstrap
+bounds (Adams–Nicolis–Rattazzi, Caron-Huot et al, CEMZ, Hofman-Maldacena, Arkani-Hamed EFThedron), 17 are real
+conjectures via toy O(1) *proxy* forms, 6 are real measurements via O(1) observable maps. The **rigorous core
+alone (zero toy input) already excludes LQG-induced gravity** — its couplings violate graviton forward
+positivity, the cross-sector EFThedron, and the CFT flat-space bootstrap — and the candidate's amplitude
+*structure* (matter positivity, the dispersion tower, the a/c wedge, the L/R graviton bounds) rests entirely on
+it. The toy prefactors are confined to the region *size* (swampland proxies) and observable *magnitudes* (data
+maps), both now tagged so any result states its rigor tier → [v2.411](results/2026-07-01-v2.411-qnm-rigorous-core.md).
+So the engine is not a toy: it is a rigorous amplitude/causality carver whose swampland/observable layers wear
+toy prefactors — and de-toying those, one constraint at a time, is the live program.
+
 **Honest limits.** Three constructed-point values are *assumptions, not predictions* — a=c
 ([v2.399](results/2026-07-01-v2.399-qnm-c-minus-a-modulus.md)), g_6=g_8
 ([v2.392](results/2026-06-30-v2.392-qnm-g6-g8-artifact.md)), g_R3_parity=0

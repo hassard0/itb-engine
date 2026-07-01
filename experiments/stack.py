@@ -310,6 +310,65 @@ def build_stack(prefactors: dict[str, float] | None = None,
     return stack
 
 
+# --- Rigor classification (v2.411): make the toy-vs-real distinction first-class. -----------------
+# Every constraint is tagged by how much its FORM depends on toy O(1) input:
+#   "rigorous"      : source-exact amplitude positivity / causality / bootstrap bound. The inequality
+#                     structure is the published result (Adams-Nicolis-Rattazzi, Caron-Huot et al,
+#                     CEMZ, Hofman-Maldacena, Arkani-Hamed EFThedron); only overall units/prefactor are
+#                     simplified. A conclusion resting on these alone needs ZERO toy input.
+#   "sourced_proxy" : a real conjecture/theorem (WGC, swampland distance/species, anomaly matching,
+#                     GSL/Bekenstein/QFC, complexity) encoded via a toy O(1) proxy FORM -- the physics
+#                     is real, the specific inequality is a placeholder.
+#   "data"          : a real measurement, but mapped to the couplings through an O(1) observable map.
+RIGOR = {
+    # --- rigorous: source-exact amplitude positivity / causality / bootstrap (19) ---
+    "scalar_positivity_g4": "rigorous", "scalar_positivity_g6": "rigorous",
+    "scalar_positivity_g8": "rigorous", "scalar_convexity_g6_vs_g4": "rigorous",
+    "dispersion_tower_g6_squared_bound": "rigorous", "graviton_forward_positivity": "rigorous",
+    "graviton_mixed_positivity": "rigorous", "matter_s3_positivity": "rigorous",
+    "spin_four_positivity": "rigorous", "cubic_curvature_positivity": "rigorous",
+    "cubic_graviton_matter_bound": "rigorous", "cross_sector_efthedron": "rigorous",
+    "cemz_causality": "rigorous", "hofman_maldacena_wedge": "rigorous",
+    "cft_flat_space_bound": "rigorous", "parity_violating_positivity": "rigorous",
+    "left_handed_graviton_positivity": "rigorous", "right_handed_graviton_positivity": "rigorous",
+    "parity_violating_cubic_bound": "rigorous",
+    # --- sourced_proxy: real conjecture/theorem via a toy O(1) proxy form (17) ---
+    "weak_gravity_conjecture": "sourced_proxy", "scalar_wgc": "sourced_proxy",
+    "swampland_distance_conjecture": "sourced_proxy", "species_scale_bound": "sourced_proxy",
+    "repulsive_force_conjecture": "sourced_proxy", "anomaly_cancellation": "sourced_proxy",
+    "generalized_anomaly_inflow": "sourced_proxy", "t_hooft_anomaly_matching": "sourced_proxy",
+    "bekenstein_tight": "sourced_proxy", "holographic_subadditivity": "sourced_proxy",
+    "bnossw_monogamy": "sourced_proxy", "quantum_focusing_conjecture": "sourced_proxy",
+    "generalized_second_law": "sourced_proxy", "wald_entropy_positivity": "sourced_proxy",
+    "complexity_cutoff": "sourced_proxy", "causality_bound": "sourced_proxy",
+    "eft_validity_box": "sourced_proxy",
+    # --- data: real measurement mapped through an O(1) observable map (6) ---
+    "cosmic_birefringence_data": "data", "gw_speed_bound": "data", "gw_dispersion_bound": "data",
+    "ligo_birefringence_bound": "data", "ligo_graviton_mass_bound": "data",
+    "submm_gravity_yukawa_bound": "data",
+}
+
+
+def rigor_of(name: str) -> str:
+    """Rigor tier of a constraint by name; unknown -> 'sourced_proxy' (conservative)."""
+    return RIGOR.get(name, "sourced_proxy")
+
+
+def filter_by_rigor(stack: list, tiers) -> list:
+    """Keep only constraints whose rigor tier is in `tiers` (a set/list of tier strings)."""
+    tiers = set(tiers)
+    return [c for c in stack if rigor_of(getattr(c, "name", "")) in tiers]
+
+
+def rigorous_core_stack(**build_kwargs) -> list:
+    """The rigorous core: only the source-exact amplitude/causality/bootstrap constraints -- ZERO toy input.
+
+    Accepts the same kwargs as build_stack(); data/birefringence flags are irrelevant here since data
+    constraints are excluded by tier, but they are passed through so callers can reuse one kwargs dict.
+    """
+    return filter_by_rigor(build_stack(**build_kwargs), {"rigorous"})
+
+
 def frameworks() -> list:
     return [PureGR(), StringTreeEFT(), AsymptoticSafety(),
             LQGInduced(), CausalDynamicalTriangulation()]
