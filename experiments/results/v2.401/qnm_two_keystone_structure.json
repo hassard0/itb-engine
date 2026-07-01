@@ -1,0 +1,86 @@
+{
+  "version": "v2.401",
+  "n_total_constraints": 42,
+  "constraint_load": {
+    "g_4": {
+      "count": 28,
+      "fraction": 0.67
+    },
+    "g_6": {
+      "count": 17,
+      "fraction": 0.4
+    },
+    "g_8": {
+      "count": 5,
+      "fraction": 0.12
+    },
+    "g_R2": {
+      "count": 25,
+      "fraction": 0.6
+    },
+    "g_R3": {
+      "count": 10,
+      "fraction": 0.24
+    },
+    "g_R2_parity": {
+      "count": 9,
+      "fraction": 0.21
+    },
+    "g_C": {
+      "count": 5,
+      "fraction": 0.12
+    }
+  },
+  "ranked": [
+    [
+      "g_4",
+      28
+    ],
+    [
+      "g_R2",
+      25
+    ],
+    [
+      "g_6",
+      17
+    ],
+    [
+      "g_R3",
+      10
+    ],
+    [
+      "g_R2_parity",
+      9
+    ],
+    [
+      "g_8",
+      5
+    ],
+    [
+      "g_C",
+      5
+    ]
+  ],
+  "keystone_pair": [
+    "g_4",
+    "g_R2"
+  ],
+  "free_pair": [
+    "g_C",
+    "g_8"
+  ],
+  "consistency_checks": {
+    "two_keystones_over_half": true,
+    "matter_g4_is_top_keystone": true,
+    "keystones_are_matter_and_curvature": true,
+    "no_third_keystone": true,
+    "gC_and_g8_are_the_free_pair": true
+  },
+  "all_checks_pass": true,
+  "finding": "The basis has a TWO-keystone structure -- g_4 (matter, 67%) and g_R2 (curvature, 60%) -- and it IS the matter-gravity locking made structural, with no third hidden degeneracy. Generalizing v2.397 (which counted only g_R2's load to diagnose the c-a degeneracy), mapping the constraint load of every coupling shows the construction's tightness is carried by a keystone PAIR: g_4 drives 28 of the 42 constraints and g_R2 drives 25, then the load falls off sharply -- g_6 40%, g_R3 24%, g_R2_parity 21%, and the free/dark pair g_8 and g_C at 12%. Two things follow. FIRST, the two keystones are exactly the two sectors of the matter-gravity locking (v2.389-393): the matter coupling g_4 and the leading curvature coupling g_R2 are the most over-determined couplings, and they are precisely the pair that source, scale, and cap each other (matter forces g_R2 via the anomaly, v2.393; matter dominance caps gravity, v2.389/391). g_4 is even MORE load-bearing than g_R2, consistent with matter dominance and with CMB-S4 being the decisive test of g_4 (v2.395) -- the theory's single most-constrained coupling is exactly the one a near-future experiment will measure. SECOND, the sharp fall-off after the pair means there is NO third keystone and no second hidden degeneracy of the c-a kind: the c-a resolution correctly landed g_C in the low-load / nearly-free bin (12%, bounded only by the Hofman-Maldacena wedge), validating v2.399 that c-a is a nearly-free modulus, and the two dark/free couplings (g_8, the matter top-moment, v2.381; g_C, the Weyl^2 axis, v2.399) are exactly the two the theory does not pin. So the whole construction rests on a two-coupling spine -- the matter+curvature keystone pair -- with everything else either derived from them or left free within a bounded modulus; that is why the feasible region is so small (v2.373) yet has genuine unpinned directions (g_8, g_C). It is the structural fingerprint of matter-gravity locking: two locked keystones, a tail of derived couplings, and two free moduli.",
+  "honest_scope": "The load count is a concrete perturb-and-count measure (bump each coupling by 0.01, count which of the 42 margins move), exact for THIS stack configuration; a different opt-in constraint set shifts the exact numbers but not the qualitative two-keystone-plus-two-free structure. 'Keystone' is basis-dependent, as v2.397 flagged: part of g_R2's load reflects the constraints that genuinely involve the leading curvature coupling, and now that g_C is activated g_R2's load dropped from 26 (v2.397) to 25 as the Weyl^2 pieces separated off -- so the count is sensitive to the basis resolution. The claim 'g_4 is the top keystone' is a robust ordering (28 vs 25, and it reflects real physics -- g_4 appears in the matter positivity, both anomalies, the WGC, the BH entropy, the species scale, and CMB-S4), but the precise fractions are stack-specific. 'No third degeneracy' is a statement about the CURRENT basis (post-c-a-resolution); a further resolution -- e.g. splitting the matter operators g_4/g_6/g_8 into their independent spin structures, or resolving the g_R4 rank-3 sub-structure (blocked as unsourceable, v2.209) -- could reveal more, so it means 'no MORE degeneracy is visible without a finer basis', not 'the basis is complete'. This is a structural map of the constraint set, adding no physical datum about the candidate; its value is showing WHY the construction is tight (a keystone pair) and confirming the c-a resolution landed g_C correctly (low-load, free). Robust content: the basis has two keystones (g_4 matter, g_R2 curvature -- the matter-gravity locking) and two free couplings (g_8, g_C), with a sharp load fall-off and no third c-a-type degeneracy visible. Concrete count, basis-dependent labels, robust two-keystone ordering. A basis-structure-map swing.",
+  "references": [
+    "this repo: v2.397 (g_R2 load / c-a degeneracy), v2.389-393 (matter-gravity locking), v2.395 (CMB-S4 tests g_4), v2.399 (c-a free modulus), v2.381 (g_8 dark), v2.373 (small feasible region)",
+    "concept: constraint-load / over-determination map; keystone vs free couplings; matter-gravity locking as a structural fingerprint"
+  ]
+}
