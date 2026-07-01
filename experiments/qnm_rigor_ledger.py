@@ -61,8 +61,8 @@ def run() -> dict:
     ledger = [
         {"claim": "LQG-induced gravity is excluded", "tier": "rigorous",
          "established_by": lqg_v, "ref": "v2.411"},
-        {"claim": "matter sources gravity (matter forces a leading curvature coupling, g_R2 >= %.3f given matter)" % ms_floor,
-         "tier": "rigorous", "established_by": ["graviton_forward_positivity", "cross_sector_efthedron"], "ref": "v2.414"},
+        {"claim": "the higher-curvature (g_R3) and parity couplings force the leading curvature coupling g_R2 > 0 (g_R2 >= %.3f at the candidate; within-gravity self-forcing -- matter alone does NOT, corrected v2.416)" % ms_floor,
+         "tier": "rigorous", "established_by": ["graviton positivity", "parity-decomposed positivity"], "ref": "v2.416"},
         {"claim": "matter dominance -- gravity is bounded by matter (WGC ceiling g_R2 <= sqrt(g_4))",
          "tier": "rigorous_implied", "established_by": ["weak_gravity_conjecture (forced by rigorous core)"], "ref": "v2.412"},
         {"claim": "extremal black holes decay (Delta S_ext >= 0)", "tier": "rigorous_implied",

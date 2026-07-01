@@ -1,0 +1,46 @@
+{
+  "version": "v2.416",
+  "gR2_floor_v2414_config_matter_plus_gR3_parity": 0.108,
+  "gR2_floor_matter_only": 0.0,
+  "matter_with_tiny_gR2_is_feasible": true,
+  "cubic_curvature_forcers": [
+    "graviton_mixed_positivity",
+    "cubic_graviton_matter_bound",
+    "cft_flat_space_bound",
+    "graviton_forward_positivity",
+    "cemz_causality",
+    "holographic_subadditivity",
+    "quantum_focusing_conjecture",
+    "parity_violating_positivity",
+    "left_handed_graviton_positivity",
+    "right_handed_graviton_positivity",
+    "parity_violating_cubic_bound",
+    "causality_bound",
+    "weak_gravity_conjecture"
+  ],
+  "parity_forcers": [
+    "graviton_mixed_positivity",
+    "cft_flat_space_bound",
+    "holographic_subadditivity",
+    "quantum_focusing_conjecture",
+    "parity_violating_positivity",
+    "left_handed_graviton_positivity",
+    "right_handed_graviton_positivity",
+    "causality_bound",
+    "weak_gravity_conjecture"
+  ],
+  "consistency_checks": {
+    "matter_alone_does_not_force_gR2": true,
+    "cubic_curvature_forces_gR2": true,
+    "parity_forces_gR2": true,
+    "floor_appears_only_with_gR3_or_parity": true,
+    "v2414_was_misattributed": true
+  },
+  "all_checks_pass": true,
+  "finding": "SELF-CORRECTION: 'matter sources gravity' (v2.393/v2.414) is mis-attributed -- the rigorous g_R2 floor is forced by the cubic-curvature and parity couplings, not matter. v2.414 concluded that amplitude positivity forces a nonzero leading curvature coupling GIVEN MATTER, and read the resulting g_R2 floor (0.108) as matter sourcing gravity. But that test held g_R3=0.09 and g_R2_parity=0.06 fixed, and isolating shows those, not matter, impose the floor: with g_R3=0 and parity=0, a theory with the full matter sector and g_R2 -> 0.001 is FEASIBLE (floor 0.0), so matter alone forces nothing; whereas g_R3=0.09 alone (no matter, no parity) at g_R2 -> 0 violates graviton positivity, and parity=0.06 alone violates parity-decomposed positivity. So the correct rigorous statement is that the gravitational sector's OWN higher structure is SELF-forcing: the cubic curvature coupling g_R3 and the parity coupling each independently require a nonzero leading curvature coupling g_R2 via amplitude positivity -- matter does not. The apparent matter->gravity link in the full stack came from the TOY anomaly (g_4*g_6 = g_R2^2), which v2.414 itself showed is a removable 4D artifact; with the toy removed, the matter->gravity forcing goes with it. This corrects the v2.415 rigor ledger: the entry 'matter sources gravity [rigorous]' is replaced by 'the higher-curvature/parity couplings force the leading curvature term [rigorous]'. The net rigorous picture is unchanged in spirit and arguably cleaner -- amplitude positivity still forces a nonzero g_R2 at the candidate (which HAS g_R3 and parity), and the result is now correctly a within-gravity positivity statement rather than a cross-sector matter claim -- but the specific 'matter sources gravity' headline was wrong and is retracted. Reporting it because the honest trail is the point: the de-toying arc's other results (LQG excluded, matter dominance's WGC ceiling, BH decay, the a/c wedge, the towers) are untouched; only the matter->curvature forcing was mis-attributed, and catching it strengthens the ledger.",
+  "honest_scope": "This is a self-correction found by isolating the forcing variable (setting g_R3 and parity to zero), so it is a direct, reproducible feasibility fact, not a sampled estimate. It retracts the 'matter sources gravity is rigorous' claim of v2.414 and the corresponding v2.415 ledger row; it does NOT retract the other de-toying results (LQG exclusion, WGC/Wald implied, harmless speculative toys, the anomaly being a removable artifact) -- those stand. The corrected positive statement ('g_R3 and parity each force g_R2 > 0 via graviton/parity positivity') carries the usual v2.411 'rigorous = source-exact in form' caveat and is verified here on the effective rigorous+implied core along the tested rays. It remains TRUE that at the candidate point (which has g_R3 and parity) g_R2 is rigorously bounded below -- the candidate's g_R2 > 0 is rigorous; only the ATTRIBUTION to matter was wrong. Whether matter sources gravity in real physics (via matter loops generating R^2) is a separate, true RG statement the engine does not encode -- so the retraction is about what the ENGINE establishes, not about the physics of matter loops. Robust content: matter alone does not rigorously force the leading curvature coupling in this basis; the cubic-curvature and parity couplings do; v2.393/414's 'matter sources gravity' is corrected to a within-gravity self-forcing statement. Isolation-based, retracts one row, other results intact. A self-correction cycle.",
+  "references": [
+    "this repo: v2.414 (the mis-attributed matter-sources-gravity, now corrected), v2.393 (original), v2.415 (ledger row corrected here), v2.411/412 (rigor core + implied, untouched)",
+    "physics: amplitude positivity within the gravitational sector (graviton forward positivity, cubic-graviton positivity, parity-decomposed positivity -- Caron-Huot et al); matter loops generating R^2 is a separate RG statement not encoded here"
+  ]
+}

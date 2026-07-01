@@ -78,14 +78,18 @@ localized to four constraints (the anomaly, the swampland distance conjecture, c
 → [v2.412](results/2026-07-01-v2.412-qnm-rigorous-implied.md). Of the four genuinely toy cuts, the two most
 speculative (the complexity conjecture and the swampland-distance proxy) turn out **harmless** — the candidate
 barely depends on them (~1.11× each, scale window unchanged) → [v2.413](results/2026-07-01-v2.413-qnm-toy-dependence-map.md).
-And the last load-bearing toy, the anomaly, de-toys too: **matter-sources-gravity is rigorous** — the
-source-exact cross-sector positivity forces `g_R2 ≥ 0.108` given matter (the toy anomaly only nudges the floor
-+6%), so `g_4·g_6 = g_R2²` is a removable 4D artifact → [v2.414](results/2026-07-01-v2.414-qnm-anomaly-detoy.md).
-**Net (the de-toying arc, v2.411–414): the candidate's entire matter-gravity content is rigorous** — LQG
-excluded, matter dominance's ceiling and BH decay implied, matter-sources-gravity forced by amplitude positivity
-— and the *single* residual toy is one parity-magnitude coefficient (the anomaly-inflow ρ), which governs the
-birefringence-contingent parity sector and needs that datum to fix anyway. So the engine is not a toy: its
-matter-gravity physics is source-exact, and the toy has been chased from the whole stack down to one coefficient.
+And the last load-bearing toy, the anomaly, de-toys too: the `g_4·g_6 = g_R2²` form is a removable 4D artifact
+(4D has no pure gravitational anomaly) → [v2.414](results/2026-07-01-v2.414-qnm-anomaly-detoy.md). *(Correction,
+[v2.416](results/2026-07-01-v2.416-qnm-gravity-self-forcing.md): v2.414 also claimed "matter sources gravity"
+rigorously — that was mis-attributed. Matter alone does not force the leading curvature coupling; the candidate's
+`g_R2 > 0` is rigorously forced instead by its own **cubic-curvature (g_R3) and parity couplings** via graviton
+positivity — gravity's structure is self-forcing, not matter-sourced.)*
+**Net (the de-toying arc, v2.411–416): the candidate's entire matter-gravity content is rigorous** — LQG
+excluded, matter dominance's ceiling and BH decay implied, the leading curvature coupling forced positive by the
+gravitational sector's own higher structure — and the *single* residual toy is one parity-magnitude coefficient
+(the anomaly-inflow ρ), which governs the birefringence-contingent parity sector and needs that datum to fix
+anyway. So the engine is not a toy: its matter-gravity physics is source-exact, and the toy has been chased from
+the whole stack down to one coefficient.
 
 **Honest limits.** Three constructed-point values are *assumptions, not predictions* — a=c
 ([v2.399](results/2026-07-01-v2.399-qnm-c-minus-a-modulus.md)), g_6=g_8
