@@ -1,0 +1,62 @@
+{
+  "version": "v2.372",
+  "matter_fixed_at": [
+    0.529,
+    0.4,
+    0.4
+  ],
+  "gravitational_ranges_at_fixed_matter": {
+    "g_R2": {
+      "range": [
+        0.108,
+        0.228
+      ],
+      "extent": 0.12,
+      "free_at_fixed_matter": true
+    },
+    "g_R3": {
+      "range": [
+        0.0,
+        0.186
+      ],
+      "extent": 0.186,
+      "free_at_fixed_matter": true
+    },
+    "g_R2_parity": {
+      "range": [
+        0.047,
+        0.085
+      ],
+      "extent": 0.038,
+      "free_at_fixed_matter": false
+    }
+  },
+  "n_samples": 8709,
+  "genuine_input_count": 5,
+  "genuine_inputs": [
+    "g_4",
+    "g_6",
+    "g_8",
+    "g_R2",
+    "g_R3"
+  ],
+  "determined_or_bounded_couplings": [
+    "g_R2_parity (anomaly, v2.371)",
+    "g_R3_parity (anomaly, v2.371)",
+    "g_R4 (bounded: strict floor v2.369 + causality cap v2.351)"
+  ],
+  "consistency_checks": {
+    "leading_curvature_free_at_fixed_matter": true,
+    "g_R2_has_substantial_freedom": true,
+    "g_R3_has_substantial_freedom": true,
+    "strong_form_gravity_from_matter_refuted": true,
+    "genuine_input_count_is_five": true
+  },
+  "all_checks_pass": true,
+  "finding": "The bold rigidity hypothesis -- that the gravitational sector follows from the matter sector -- is REFUTED in its strong form, and the honest residue is a clean parameter count. Fixing the matter couplings (g_4, g_6, g_8) at the constructed values and mapping the feasible gravitational sub-space, the LEADING CURVATURE couplings stay substantially free: g_R2 spans [0.108, 0.228] (extent 0.12) and g_R3 spans [0.0, 0.186] (extent 0.186). So gravity's higher-derivative structure is NOT a function of the matter content -- the two leading curvature couplings are genuine independent inputs, not consequences. But the WEAK form survives and is exactly the recent swing arc: given (matter + the two leading curvature couplings), the PARITY sector is DETERMINED (the closed anomaly system, v2.371) and the ringdown quartic is BOUNDED (the strict moment floor, v2.369, and the causality cap, v2.351). So the theory's rigidity is PARTIAL and countable: of the 7 Wilson couplings (g_4, g_6, g_8, g_R2, g_R3, g_R2_parity, g_R3_parity), only 5 are GENUINE inputs -- 3 matter + 2 leading curvature -- while the 2 parity couplings are determined by them (anomaly matching) and the ringdown quartic is bounded by them. Consistency + data + anomaly matching thus reduce the higher-derivative gravity of the constructed theory from ~8 couplings to 5 free directions, with the parity sector and the ringdown magnitude following. That is a real, honest measure of the program's predictive rigidity: strong (parity fully fixed, ringdown bounded) but not total (the leading matter and curvature couplings remain free) -- quantum gravity's low-energy EFT is constrained to a 5-parameter family here, not to a point and not to a function of the matter content.",
+  "honest_scope": "The gravitational ranges are from a seeded feasible random walk (matter held fixed), so the extents are sampled lower bounds on the true feasible ranges -- a better sampler could only WIDEN them, strengthening the 'free' verdict, not the rigidity. The 0.05 'free' threshold is conventional but the separation is clear (g_R2/g_R3 extents 0.12/0.19 vs the data-pinned parity 0.038). The '5 genuine inputs' count treats the parity sector as determined via the EXACT anomaly matching of v2.371 -- which is a field-theory-motivated but toy-prefactor determination (v2.371 scope: the values are toy, the closure is structural), and the ringdown 'bounded' rests on the strict floor (v2.369, equivalence principle) and cap (v2.351); if anomaly matching is not saturated (the v2.371 fork), the parity couplings revert to free and the count rises toward 7. The whole thing is the toy-basis engine encoding, and the parity determination inherits the birefringence caveat only for the FIT, not the count (the count is data-independent -- anomaly matching needs no data). Robust content: at fixed matter the leading curvature is free (strong rigidity refuted), while parity is determined and ringdown bounded, giving ~5 genuine inputs. Toy basis. A rigidity swing: strong form refuted, weak form (a 5-parameter reduction) established.",
+  "references": [
+    "this repo: v2.371 (parity sector determined by anomaly matching), v2.369/351 (ringdown quartic strict floor + cap), v2.333 (feasible region ~3D -- the data+consistency reduction), v2.327 (per-coupling extents)",
+    "structural: parameter-counting the constructed theory's genuine degrees of freedom"
+  ]
+}
