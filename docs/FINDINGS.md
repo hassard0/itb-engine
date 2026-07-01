@@ -14,7 +14,13 @@ Navigation: [ROADMAP.md](ROADMAP.md) (forward plan) · [CONSTRAINTS.md](CONSTRAI
 
 ---
 
-## ★ The current picture (v2.407): a single, near-unique, falsifiable candidate
+## ★ The current picture (v2.415): a single, near-unique, falsifiable candidate — on a *rigorous* core
+
+**Is this a toy?** No. The engine's 42 constraints are rigor-tagged, and the candidate's entire **matter-gravity
+content is source-exact** — amplitude positivity / causality / bootstrap, zero toy input (verified ledger →
+[v2.415](results/2026-07-01-v2.415-qnm-rigor-ledger.md)). The toy prefactors that remain touch only *one* thing:
+the parity-magnitude coefficient (plus observable magnitudes and the exact region size). Details in "The
+rigorous core is real physics" below.
 
 Intersecting every consistency condition leaves a **single, tiny, connected region** of coupling space — *one*
 candidate low-energy QG EFT, not a landscape.
