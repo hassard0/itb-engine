@@ -1,0 +1,32 @@
+{
+  "version": "v2.386",
+  "constructed_L_coupling": 0.253,
+  "constructed_R_coupling": 0.133,
+  "constructed_LR_asymmetry": 1.9,
+  "constructed_margins": {
+    "left": 0.148,
+    "right": 0.194
+  },
+  "family_LR_asymmetry": {
+    "mean": 2.09,
+    "min": 1.5,
+    "max": 3.9
+  },
+  "family_left_tighter_fraction": 1.0,
+  "family_asymmetry_above_1p5_fraction": 1.0,
+  "n_samples": 2627,
+  "consistency_checks": {
+    "constructed_LR_asymmetry_order_unity": true,
+    "constructed_left_sector_tighter": true,
+    "whole_region_left_tighter": true,
+    "asymmetry_is_large_not_tiny": true,
+    "handedness_locked_to_positive_gR2parity": true
+  },
+  "all_checks_pass": true,
+  "finding": "The theory predicts a LARGE, order-2 left/right graviton asymmetry, native to the parity coupling and locked to the CMB handedness -- the parity sector's most direct signature, in the gravitational-wave sector rather than the CMB proxy. The engine's polarization-decomposed positivity (Caron-Huot-de Rham-Tolley-Zhou 2024) gives INDEPENDENT bounds on the two circular graviton polarizations, (g_R2 +/- g_R2_parity)^2 <= kappa g_4 g_6, so left and right gravitons have different effective quartic self-couplings g_R2 +/- g_R2_parity -- the amplitude face of gravitational-wave birefringence. For the constructed theory the left coupling is 0.253 and the right 0.133, a 1.9:1 ratio, and the left-handed sector sits correspondingly closer to its positivity bound (margin 0.148 vs 0.194). Across the whole feasible region the asymmetry is order-2 (mean 2.1, range 1.5-3.9) and the left-handed sector is tighter in 100% of theories; the asymmetry RATIO is independent of the bound normalization kappa, so it is robust. The handedness -- LEFT stronger than RIGHT -- is locked to the sign of g_R2_parity, which the CMB birefringence beta > 0 selects (v2.364): flip the measured CMB rotation and the graviton asymmetry flips with it. So the SAME parity violation seen in the CMB makes left-handed gravitational waves order-2 more strongly self-interacting than right-handed. This is a large, native, CROSS-MESSENGER chirality prediction -- order-unity, unlike the ~1e-19 GW propagation-speed birefringence (v2.358) -- and it reframes the parity test: the coupling's cleanest home is the graviton sector's left/right asymmetry, with the CMB as the (toy-mapped) low-energy shadow. It also sharpens the observability picture (v2.380/381): parity is not one channel but a chirality STRUCTURE, and its gravitational face carries an order-unity signal the CMB proxy hides.",
+  "honest_scope": "The polarization-decomposed positivity is source-cited (Caron-Huot et al. 2024) and the L/R decomposition g_R2 +/- g_R2_parity is exact given the parity structure. The asymmetry RATIO (g_R2+g_R2_parity)/(g_R2-g_R2_parity) is kappa-INDEPENDENT, so the order-2 asymmetry is robust to the bound normalization; only the MARGINS depend on kappa (=1 engine convention). CAVEATS: the asymmetry is the AMPLITUDE-level (quartic-coupling) chirality, the same parity structure as GW propagation birefringence but NOT identical to the kinematic speed birefringence (which is separately tiny, gw_speed v2.358) -- 'GW birefringence' here means the coupling chirality, honestly distinct from the propagation-speed effect; a fully physical GW-birefringence amplitude would need the dCS->waveform map, which is not in the engine. The MAGNITUDE of g_R2_parity is toy and birefringence-contingent (v2.329/329), but the asymmetry RATIO ~2 follows from g_R2_parity/g_R2 ~ 0.3 (fixed by the birefringence band + positivity), so it is robust across the feasible region while the absolute couplings are toy-basis. The handedness-to-beta locking uses the engine's sign convention (v2.364). The family is a sampled walk. Robust content: the feasible region has an order-2 left/right graviton coupling asymmetry, left always tighter, locked to the CMB-selected handedness -- a native, cross-messenger, order-unity chirality prediction. Toy magnitudes, robust ratio, source-cited bound. A native-parity-channel swing.",
+  "references": [
+    "this repo: src/itb/constraints/parity_violation.py (polarization-decomposed positivity), v2.364 (beta>0 selects handedness), v2.358 (tiny GW speed birefringence), v2.380/381 (observability), v2.329 (birefringence caveat)",
+    "physics: Caron-Huot, de Rham, Tolley, Zhou 2024 (parity-decomposed positivity); gravitational Chern-Simons / Pontryagin -> GW birefringence (Creminelli et al. 2018; Conde-Yin 2025)"
+  ]
+}
