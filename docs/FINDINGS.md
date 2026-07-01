@@ -62,6 +62,10 @@ robust structure" is now *verified*, not asserted.
 ([v2.403](results/2026-07-01-v2.403-qnm-third-assumption-parity-cubic.md)) — and the theory carries a **~3D dark
 hidden sector** no observable probes ([v2.404](results/2026-07-01-v2.404-qnm-hidden-sector.md)). All magnitudes
 are toy-basis; the ringdown-magnitude map and matter-operator split are blocked/unsourceable ([v2.209], [v2.397]).
+And while the *structure* is robust on four axes, the *data-pinning* is concentrated in a **single ~3.6σ
+measurement** — cosmic birefringence is the only load-bearing datum (dropping it opens the region 7.4×; the
+other three ingested bounds don't carve it), so the candidate is structurally robust but empirically contingent
+on one unconfirmed hint → [v2.408](results/2026-07-01-v2.408-qnm-data-leverage.md).
 
 ---
 

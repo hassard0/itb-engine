@@ -1,0 +1,38 @@
+{
+  "version": "v2.408",
+  "full_local_feasible_fraction": 0.0047,
+  "per_datum_leverage": {
+    "cosmic_birefringence": {
+      "fraction_without": 0.0343,
+      "opens_x": 7.4
+    },
+    "submm_screening": {
+      "fraction_without": 0.0047,
+      "opens_x": 1.0
+    },
+    "gw_speed": {
+      "fraction_without": 0.0047,
+      "opens_x": 1.0
+    },
+    "gw_dispersion": {
+      "fraction_without": 0.0047,
+      "opens_x": 1.0
+    }
+  },
+  "birefringence_opens_x": 7.4,
+  "other_data_max_opens_x": 1.0,
+  "consistency_checks": {
+    "birefringence_is_load_bearing": true,
+    "other_data_constraints_non_binding": true,
+    "single_load_bearing_datum": true,
+    "full_region_small": true,
+    "birefringence_dominates_by_far": true
+  },
+  "all_checks_pass": true,
+  "finding": "The candidate's data-pinning hangs on ONE measurement -- cosmic birefringence is the only load-bearing datum. Of the four ingested measurements, dropping cosmic birefringence opens the local feasible region 7.4x, while dropping the sub-mm bound, the GW speed bound, or the GW dispersion bound opens it 1.0x (no change). Sub-mm is satisfied throughout the local region -- the theory screens (v2.354), so the bound mandates screening as a qualitative FEATURE but never bites inside the feasible region -- and GW speed/dispersion are frequency-suppressed and non-binding (v2.358). So only cosmic birefringence actively CARVES the candidate. This sharpens the falsifiability picture to a precise, honest statement: the candidate's DATA support is concentrated in one ~3.6-sigma hint (v2.329) -- if that hint evaporates, the data-pinning largely vanishes (the region grows ~7x and the theory-only Z2 handedness mirror returns, two islands, v2.406). The complete honest picture is therefore two-sided: the candidate's STRUCTURE is robust on four independent axes (family, basis, adversarial, prefactor -- v2.405-407), but its DATA-pinning is birefringence-CONTINGENT, resting on a single unconfirmed measurement. These are not in tension -- the swampland-complete carving (theory constraints) does most of the work (v2.373: data adds only ~1.7x aggregate), and the one datum that does bind is birefringence, which both pins the parity magnitude AND breaks the mirror to select a unique candidate. So 'the one experiment to watch' is unambiguous: cosmic birefringence (LiteBIRD / CMB-S4). It is the candidate's single empirical lifeline -- and CMB-S4's independent test of the matter sector (v2.395, the large-g_4 requirement) is the SECOND, orthogonal near-future probe, so the two make-or-break measurements are birefringence (parity/data-pinning) and the CMB-S4 inflationary self-coupling (matter dominance).",
+  "honest_scope": "Leverage is measured as the growth of the LOCAL feasible fraction (constructed +/- 0.15) when a constraint is dropped, so the 7.4x is a local number; the global leverage would differ, but birefringence's DOMINANCE (the only data constraint that binds locally) is robust. 'Sub-mm opens 1.0x' means it does not shrink the local feasible region -- NOT that it is irrelevant: it mandates that the theory screen (v2.354), a real qualitative constraint on the theory's nature, but that requirement is satisfied throughout the local box so dropping it does not enlarge the region; its region-SHRINKING leverage is ~0 while its role is real. GW speed/dispersion are genuinely non-binding (frequency-suppressed, v2.358). The 'drop birefringence -> Z2 returns' link is the v2.406 mechanism (birefringence sign-selects the handedness). This is a per-constraint leverage audit of the four data inputs; it adds no new physical datum, it QUANTIFIES the pervasive 'birefringence-contingent' caveat. The birefringence detection itself is a ~3.6-sigma HINT (v2.329), not a discovery, with detector-angle-calibration systematics. Robust content: of the four ingested measurements only cosmic birefringence carves the candidate region (7.4x local leverage vs 1.0x for the others), so the candidate is structurally robust but data-pinned by a single unconfirmed measurement -- LiteBIRD/CMB-S4 is the empirical lifeline. Local leverage, sub-mm role-vs-leverage distinguished, hint-contingent. A data-leverage swing.",
+  "references": [
+    "this repo: v2.373 (aggregate data leverage ~1.7x), v2.406 (birefringence breaks the Z2 handedness mirror), v2.404 (channels dark/non-binding), v2.358 (GW speed/dispersion non-binding), v2.354 (sub-mm mandates screening), v2.329 (birefringence ~3.6-sigma hint caveat), v2.395 (CMB-S4 matter test)",
+    "physics: cosmic birefringence beta=0.34+/-0.09 deg (Minami-Komatsu / Eskilt-Komatsu); Eot-Wash sub-mm; GW speed/dispersion (LIGO/GW170817)"
+  ]
+}
