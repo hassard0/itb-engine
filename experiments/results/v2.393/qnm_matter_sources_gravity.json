@@ -1,0 +1,33 @@
+{
+  "version": "v2.393",
+  "anomaly_c_anom": 1.0,
+  "anomaly_tolerance": 0.2,
+  "pure_gr_feasible": true,
+  "matter_only_feasible": false,
+  "matter_only_violations": [
+    "anomaly_cancellation"
+  ],
+  "matter_g4g6": 0.212,
+  "anomaly_forced_gR2_band": [
+    0.108,
+    0.642
+  ],
+  "feasible_gR2_with_matter_only": [
+    0.108,
+    0.226
+  ],
+  "consistency_checks": {
+    "pure_gr_is_consistent": true,
+    "matter_without_curvature_forbidden": true,
+    "matter_plus_leading_curvature_ok": true,
+    "anomaly_forces_gR2_floor_above_zero": true,
+    "gR2_zero_forbidden_given_matter": true
+  },
+  "all_checks_pass": true,
+  "finding": "Matter SOURCES the leading gravitational correction -- the converse of matter dominance. Matter dominance (v2.389/391) bounds the gravitational sector from above; this finds the bound from below. A direct feasibility test shows pure GR (all couplings zero) is consistent, but a theory with a matter sector and ZERO higher-curvature gravity is INCONSISTENT -- it violates anomaly cancellation. The engine's 4D gravitational-anomaly constraint is a slab |g_4 g_6 - g_R2^2| <= 0.2, so given the matter product g_4 g_6 = 0.212 it forces the leading curvature coupling g_R2 into a band [0.108, 0.642] around sqrt(g_4 g_6); the lower edge 0.108 > 0 means g_R2 = 0 is FORBIDDEN. Matter cannot exist without a nonzero leading gravitational correction: the anomaly locks g_R2 to matter. Combined with matter dominance, the leading curvature coupling is pinned from BOTH sides -- the anomaly floors it (>= 0.108) and the WGC/screening cap it, so with only g_R2 turned on the feasible band is [0.108, 0.226], nonzero at both ends. So the higher-curvature gravitational sector is neither absent nor free: it is SOURCED into existence by matter (from below, via the anomaly) and bounded in size by matter (from above, via positivity/WGC). This completes the matter-gravity locking picture -- (i) matter forces the leading gravitational correction to exist (this swing), (ii) matter sets its scale and caps its strength at <=40% of matter's (v2.389/391), (iii) the moment tower organizes the higher curvature couplings among themselves (v2.375) -- and re-reads 'quantum gravity is not general relativity' concretely: GR with matter is inconsistent in this engine; consistency demands the higher-curvature completion, and demands it be matter-sized. Pure GR survives only in the empty (no-matter) limit.",
+  "honest_scope": "The 4D gravitational-anomaly-cancellation constraint is the engine's TOY simplification (Alvarez-Gaume-Witten representative, c_anom=1, tolerance=0.2) -- and physically 4D gravity has no perturbative gravitational anomaly for the graviton alone (the AGW anomaly is for chiral matter in 4k+2 dimensions), so 'matter sources g_R2' is a statement WITHIN this toy encoding of anomaly matching, not a first-principles 4D theorem; the robust structural content is that an anomaly-MATCHING (equality/slab) condition between the matter product and the leading curvature coupling forbids the g_R2 = 0 corner, which is the generic consequence of ANY matching condition of this shape. The band edges (0.108, 0.642) and the feasible [0.108, 0.226] scale with the toy tolerance (0.2) and c_anom (1) -- toy-basis numbers; the ROBUST facts are qualitative: pure GR feasible, matter-only forbidden by the anomaly, g_R2=0 forbidden given matter, g_R2 forced into a nonzero band. This is theory-only (no data); data narrows the band further. The wide tolerance (0.2 vs g_4 g_6 = 0.212) means the anomaly is a loose band, not a sharp locking -- it forbids zero and far values but permits a range, so 'matter determines g_R2' overstates it; 'matter forces g_R2 nonzero and into a band' is exact. Robust content: consistency (anomaly matching) forbids matter without a nonzero leading gravitational correction -- matter sources gravity from below, complementing matter dominance from above. Toy anomaly encoding, robust forbid-the-zero-corner structure. A matter-sources-gravity swing.",
+  "references": [
+    "this repo: v2.389/391 (matter dominance, gravity bounded above by matter), src/itb/constraints/anomaly.py (4D anomaly slab), v2.371 (anomaly determines parity), v2.375 (moment tower organizes curvature), v2.322 (feasibility)",
+    "physics: Alvarez-Gaume-Witten 1984 (gravitational anomalies), Bardeen-Zumino; 't Hooft anomaly matching"
+  ]
+}
