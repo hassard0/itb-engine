@@ -1,0 +1,38 @@
+{
+  "version": "v2.394",
+  "nu": 2.0,
+  "N_max": 3.0,
+  "constructed_N_species": 1.952,
+  "constructed_cutoff_over_Mpl": 0.716,
+  "min_cutoff_from_Nmax": 0.577,
+  "family_N_species": {
+    "mean": 1.85,
+    "min": 1.368,
+    "max": 2.361
+  },
+  "family_cutoff_over_Mpl": {
+    "mean": 0.737,
+    "min": 0.651,
+    "max": 0.855
+  },
+  "species_bound_saturation": {
+    "mean": 0.62,
+    "max": 0.79
+  },
+  "ghost_scale_over_Mpl": 1.63,
+  "n_samples": 2627,
+  "consistency_checks": {
+    "cutoff_sub_planckian": true,
+    "cutoff_near_planckian": true,
+    "cutoff_tightly_bounded": true,
+    "species_bound_not_saturated": true,
+    "ghost_above_cutoff_consistent": true
+  },
+  "all_checks_pass": true,
+  "finding": "The candidate theory's actual UV cutoff -- the energy where gravity goes strongly coupled -- is a Dvali species scale of ~0.72 M_Pl, tightly predicted, and never computed in the prior 27 swings. With N light species the cutoff is Lambda_species/M_Pl = 1/sqrt(N), N = 1 + nu(|g_R2|+|g_C|+|g_R3|); the couplings count the same string-like tower (v2.375). For the constructed couplings N = 1.95, so Lambda_species = 0.72 M_Pl. Across the WHOLE feasible family N in [1.37, 2.36], so the cutoff is tightly bounded at Lambda_species/M_Pl in [0.65, 0.86] (mean 0.74) -- the theory is a NEAR-PLANCKIAN EFT, valid up to ~0.7 M_Pl before a tower of ~2 effective species makes gravity strong. The species bound (N <= 3) is only ~62% saturated (max 79%), so the theory keeps its cutoff comfortably above the strong-coupling floor 1/sqrt(3) = 0.577 M_Pl -- it does not push its tower to the maximum. This closes the EFT's validity ladder self-consistently: the cutoff ~0.72 M_Pl sits below the Weyl^2 ghost, which at 2.28x the cutoff (v2.385) is at ~1.6 M_Pl, safely above -- so the ghost is trans-cutoff exactly as required, and the species tower is what UV-completes the EFT at 0.72 M_Pl. This is the answer to 'where does this quantum-gravity EFT break down': not at M_Pl, but at ~0.7 M_Pl, lowered modestly by its own light tower -- a genuinely sub-Planckian but near-Planckian cutoff that the consistent region pins to a ~30% window. It also grounds the tower/species picture (v2.375/388): the ~2 species here are the low-lying end of the infinite log-convex tower, and the species bound is the information-theoretic (holographic, class-B) face of the same tower the moment conditions (class A/C) generate -- the one place the least-carving B sector (v2.374) sets a physical scale.",
+  "honest_scope": "The species scale Lambda_species = M_Pl/sqrt(N) with N = 1 + nu(|g_R2|+|g_C|+|g_R3|) is the engine's TOY encoding of Dvali's species scale (nu = 2, N_max = 3 are toy O(1) parameters, and counting species by a linear sum of |couplings| is a proxy -- physically N is the number of tower STATES below the cutoff, not a coupling sum). So the specific 0.72 M_Pl and the [0.65, 0.86] window are toy-basis and scale with nu; g_C is identified with g_R2 (Weyl^2/Ricci^2). The ROBUST content is structural: the cutoff is sub-Planckian (N > 1 always, since the anomaly forces g_R2 > 0, v2.393, so there is always at least a partial species tower) but near-Planckian (N stays O(1) because matter dominance + scale rigidity keep the couplings O(0.1), v2.389/390), and it is TIGHTLY bounded because the feasible couplings are tightly bounded -- a ~30% window, not a free cutoff. The ghost-ladder consistency (ghost at 2.28x cutoff = ~1.6 M_Pl) reuses v2.385's O(1)-schematic ghost-mass relation, so '~1.6 M_Pl' is schematic; the robust point is the ORDERING (cutoff < ghost). This is a computation within the toy species encoding, not a first-principles species-scale derivation. Robust content: the candidate is a near-Planckian EFT with a tightly-pinned sub-Planckian cutoff (~0.7 M_Pl in this encoding), set by its light tower, with the ghost safely above -- a self-consistent validity ladder. Toy nu/N_max, robust near-Planckian + tightly-bounded structure. A UV-cutoff swing.",
+  "references": [
+    "this repo: src/itb/constraints/species_scale.py (Dvali species scale), v2.385 (ghost above cutoff), v2.375/388 (string-like tower / light-coupling count), v2.393 (anomaly forces g_R2>0 -> N>1), v2.389/390 (matter dominance / scale rigidity keep couplings O(0.1)), v2.374 (B/information sector carves least)",
+    "physics: Dvali (species scale); van de Heisteeg, Vafa, Wiesner (species scale & the swampland)"
+  ]
+}

@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (504 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (505 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -553,3 +553,4 @@ Auto-generated front door to the full research program (504 notes). Regenerate w
 | v2.391 | [v2.391 - SWING (adversarial): matter dominance is a hard bound -- grav](2026-07-01-v2.391-qnm-matter-dominance-hard-bound.md) | v2.389 established matter dominance correlationally (each gravitational ceiling scales with matter, corr |
 | v2.392 | [v2.392 - SWING (honest negative): g_6 = g_8 is a Chebyshev-center arti](2026-07-01-v2.392-qnm-g6-g8-artifact.md) | The constructed theory has `g_6 = g_8 = 0.4` exactly. In moment language (matter tower `m_0=g_4, m_1=g_6, |
 | v2.393 | [v2.393 - SWING: matter sources the leading gravitational correction --](2026-07-01-v2.393-qnm-matter-sources-gravity.md) | Matter dominance (v2.389/391) bounds the gravitational sector from *above*. Is there a bound from *below* -- |
+| v2.394 | [v2.394 - SWING: the candidate theory's actual UV cutoff -- a Dvali spe](2026-07-01-v2.394-qnm-species-scale-cutoff.md) | After 27 swings characterizing the consistent region, one central quantity was never computed: the **actual UV |
