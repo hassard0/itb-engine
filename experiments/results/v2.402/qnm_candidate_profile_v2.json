@@ -1,0 +1,62 @@
+{
+  "version": "v2.402",
+  "constructed": {
+    "g_4": 0.529,
+    "g_6": 0.4,
+    "g_8": 0.4,
+    "g_R2": 0.193,
+    "g_R3": 0.09,
+    "g_R2_parity": 0.06
+  },
+  "live_checks": {
+    "constructed_feasible": true,
+    "no_framework": true,
+    "matter_forces_gravity": true,
+    "cutoff_over_Mpl": 0.716,
+    "cmb_s4_tension_sigma": 17.6
+  },
+  "profile": {
+    "spine": "two keystones g_4 (matter, 67% constraint load) + g_R2 (curvature, 60%) = matter-gravity locking (v2.401); everything else derived or free",
+    "free_moduli": "g_8 (matter top-moment, dark, v2.381) and g_C (Weyl^2 axis, a=c an assumption not a prediction, bounded by the Hofman-Maldacena wedge, v2.398/399)",
+    "matter_gravity_locking": "matter FORCES the leading curvature coupling via the anomaly (v2.393), SETS the gravitational scale (v2.389), and CAPS gravity at <=40% of matter's strength (hard bound, v2.391); scale-rigid to a factor ~3 (v2.390)",
+    "uv": "near-Planckian species-scale cutoff ~0.72 M_Pl (v2.394); Weyl^2 ghost trans-cutoff ~1.6 M_Pl, WGC-forced (v2.385); infinite log-convex string-like towers both sectors (v2.375/376); SDC+tower fix ~4 curvature/~11 matter light couplings (v2.388)",
+    "channels": "four -- parity/CMB-birefringence (data-pinned), ringdown (bracketed), screening (mandate), BH-extremality (WGC-automatic) (v2.356/378) -- reducing to ~2.5 independent observable directions (v2.380); parity's native face is an order-2 L/R graviton chirality asymmetry locked to the CMB handedness (v2.386), ~4x below its graviton ceiling (v2.387)",
+    "landscape": "the consistent-EFT region is connected but NON-convex, the swampland (SDC) the sole cause (v2.383); no privileged center (star-centrality = hierarchy-safety, v2.384)",
+    "falsifiability": "CMB-S4 (~2030) is a decisive make-or-break test -- the matter-dominant construction requires g_4 in [0.33,0.63], excluded at >10 sigma if CMB-S4 confirms single-field slow-roll (v2.395); gives the gravitationally-dark matter sector a non-gravitational observable"
+  },
+  "robustness_tiers": {
+    "ROBUST (structure / basis-robust, live-verified here)": [
+      "constructed uniquely satisfies theory+data; no named framework does (v2.322)",
+      "matter sources gravity (anomaly forbids matter without curvature) AND caps it (<=40%, hard bound) -- two-sided matter-gravity locking (v2.389-393)",
+      "ghost-safe, near-Planckian cutoff ~0.72 M_Pl, ghost trans-cutoff (v2.385/394)",
+      "infinite string-like towers, ~1e-5 predictive consistency-driven region, four channels -> ~2.5 observable directions (v2.372-380)",
+      "two-keystone + two-free-moduli basis structure; non-convex swampland-pitted landscape (v2.383/401)"
+    ],
+    "ANOMALY-DETERMINED / DATA-PINNED (field-theory, toy prefactors)": [
+      "parity-odd sector closed by anomaly matching (v2.371), order-2 graviton chirality (v2.386), forward-testable (v2.377/387)",
+      "CMB-S4 make-or-break test of the large g_4 matter dominance requires (v2.395)"
+    ],
+    "ASSUMPTIONS (constructed-point choices, NOT predictions)": [
+      "a = c (holographic Weyl^2=Euler) -- a framework default; c-a is a free HM-bounded modulus (v2.399)",
+      "g_6 = g_8 (matter top moments equal) -- a Chebyshev-center coincidence (v2.392)"
+    ],
+    "TOY / OPEN (magnitudes toy-basis; open moduli & blocked refinements)": [
+      "all specific NUMBERS toy-basis; Weyl^2-sector magnitudes carry the c-a modulus (headlines survive, v2.400)",
+      "ringdown magnitude rank-1 unsourceable (v2.209); g_R4 rank-3 sub-structure blocked; matter-operator split not done"
+    ]
+  },
+  "consistency_checks": {
+    "constructed_uniquely_feasible": true,
+    "matter_sources_gravity": true,
+    "ghost_safe_and_near_planckian": true,
+    "cmb_s4_decisive_tension": true,
+    "profile_assembled": true
+  },
+  "all_checks_pass": true,
+  "finding": "The candidate theory, refreshed and live-verified after the v2.383-401 arc. In one sentence: a five-parameter (plus two free moduli g_8, g_C), ~1e-5-predictive, consistency-DRIVEN, matter-DOMINANT candidate for quantum gravity's low-energy EFT -- a near-Planckian (cutoff ~0.72 M_Pl), ghost-safe, string-like, WGC-complete theory whose gravitational sector is BOTH forced into existence (the anomaly forbids matter without curvature, v2.393) and capped in size (<=40% of matter's strength, a hard bound, v2.391) by its matter sector. Re-verified live: the constructed point uniquely satisfies theory+data (no named framework does), matter forces a nonzero leading curvature coupling, the theory is ghost-safe with a near-Planckian cutoff, and it is in 17.6-sigma tension with the CMB-S4 forecast. The structural spine is a two-keystone pair (g_4 matter 67%, g_R2 curvature 60%) that IS the matter-gravity locking, with everything else derived from them or left free within a bounded modulus (v2.401). The two free moduli are the matter top-moment g_8 (dark, v2.381) and the Weyl^2 axis g_C (the c-a split, an assumption not a prediction, bounded by the conformal-collider wedge, v2.399); marginalizing the Weyl^2-sector predictions over that modulus preserves every qualitative headline (v2.400). The honest tiering separates the ROBUST structure (unique feasibility, two-sided matter-gravity locking, ghost-safety, near-Planckian cutoff, string-like towers, the four channels, the non-convex swampland landscape) from the ANOMALY-DETERMINED parity sector, the ASSUMPTIONS the characterization exposed (a=c and g_6=g_8 are constructed-point choices, not predictions), and the TOY/OPEN magnitudes and blocked refinements (ringdown rank / g_R4 sub-structure). The decisive experimental statement is CMB-S4 (~2030): the matter-dominant construction stakes itself on a large matter self-coupling, excluded at >10 sigma if CMB-S4 confirms single-field slow-roll -- a genuine, sharp, near-future make-or-break test that also gives the gravitationally-dark matter sector a non-gravitational observable. Net: a genuine, self-consistent, falsifiable, matter-dominant candidate low-energy EFT for quantum gravity, complete under the engine's toy basis, whose testable content is its curvature/parity sector plus the CMB-S4 matter test, and whose remaining frontier is basis refinement (matter-operator split, the unsourceable g_R4 rank-3), not further constraint-mining.",
+  "honest_scope": "Every ROBUST-tier claim marked live is re-verified by check()/re-computation here; the other entries are pointers to their cycles (a ledger). 'ROBUST / basis-robust' means the QUALITATIVE structure survives the toy basis, not the numbers -- every specific value (couplings, the ~1e-5, the 2.5, the 0.72 M_Pl cutoff, the 17.6 sigma) is toy-basis and often prefactor/box/normalization dependent, as each cycle's scope records. This capstone ADDS the honest recognition (new since v2.382) that TWO of the constructed point's special values are ASSUMPTIONS not predictions -- a=c (v2.399) and g_6=g_8 (v2.392) -- which downgrades any result that leaned on them (the a=c ones carry the c-a modulus, checked in v2.400). The CMB-S4 tension rests on the toy identification of g_4 with the inflationary self-coupling (v2.395); the parity sector rests on the birefringence detection (v2.329). This is a consolidation -- it inherits all per-cycle caveats verbatim and adds no new datum beyond the live re-verification and the assumption-recognition. The candidate is a low-energy EFT proposal within the engine's toy basis -- a coherent, falsifiable, matter-dominant STRUCTURE, not a first-principles construction. Toy basis, O(1) prefactors, two explicit assumptions, one decisive near-future test. A refreshed, live-verified, honestly-tiered capstone of the v2.367-401 swing arc.",
+  "references": [
+    "this repo: v2.382 (prior capstone, here refreshed), v2.389-393 (matter-gravity locking), v2.394 (species cutoff), v2.395 (CMB-S4), v2.397-401 (c-a resolution + keystone structure), v2.385 (ghost), v2.386/387 (graviton chirality), v2.375/376 (towers), v2.383/384 (landscape), v2.399/392 (assumptions)",
+    "physics: WGC, SDC, Hofman-Maldacena, Dvali species scale, Cheung-Liu-Remmen, Komargodski-Schwimmer, cosmic birefringence, CMB-S4 Science Book"
+  ]
+}
