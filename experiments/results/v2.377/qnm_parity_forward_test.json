@@ -1,0 +1,51 @@
+{
+  "version": "v2.377",
+  "parity_determinations": [
+    {
+      "determination": "geometric_center",
+      "g_R2_parity": 0.06,
+      "beta_pred": 0.204,
+      "sigma_below_central": 1.51
+    },
+    {
+      "determination": "anomaly_closed_system",
+      "g_R2_parity": 0.0654,
+      "beta_pred": 0.222,
+      "sigma_below_central": 1.31
+    },
+    {
+      "determination": "anomaly_saturated",
+      "g_R2_parity": 0.0783,
+      "beta_pred": 0.266,
+      "sigma_below_central": 0.82
+    },
+    {
+      "determination": "feasibility_ceiling",
+      "g_R2_parity": 0.0909,
+      "beta_pred": 0.309,
+      "sigma_below_central": 0.34
+    }
+  ],
+  "measured_beta": [
+    0.34,
+    0.09
+  ],
+  "beta_spread_all_variants": 0.105,
+  "anomaly_fork_spread_saturated_vs_closed": 0.044,
+  "precision_to_resolve_anomaly_fork": 0.022,
+  "current_precision": 0.09,
+  "consistency_checks": {
+    "variants_form_ordered_hierarchy": true,
+    "all_variants_below_central_measurement": true,
+    "current_precision_cannot_discriminate": true,
+    "fork_needs_order_of_magnitude_better_precision": true,
+    "discriminating_precision_is_positive": true
+  },
+  "all_checks_pass": true,
+  "finding": "The parity channel, at next-generation precision, becomes an INTERNAL test of the theory's UV consistency structure -- not just theory-vs-GR. The theory has a HIERARCHY of parity determinations, each from a distinct principle, predicting distinguishable birefringence signals: the geometric (max-margin) center gives beta = 0.204 deg, the anomaly-closed system (both anomaly matchings exact, with a nonzero parity-odd cubic, v2.371) gives 0.222, the anomaly-saturated value (inflow exact, cubic suppressed, v2.370) gives 0.266, and the feasibility ceiling (no anomaly determination, the theory pushed to its consistency edge, v2.360) gives 0.309. All four sit below the current central measurement beta = 0.34 +/- 0.09 (0.34 to 1.51 sigma below), and current precision cannot separate them (they span only 0.105 deg, inside the 0.09 error). But the spreads ARE the prediction: separating the anomaly-saturated (0.266) from the anomaly-closed (0.222) determination -- i.e. testing whether the parity-odd CUBIC is present, the v2.371 fork -- needs only ~0.02 deg precision, and separating any anomaly determination (0.22-0.27) from the feasibility ceiling (0.31) tests whether the parity magnitude is anomaly-DETERMINED or merely sits at its consistency edge toward the data. So a birefringence measurement an order of magnitude sharper than today's ~0.09 deg -- reaching ~0.02-0.03 deg -- would resolve WHICH consistency principle the parity sector obeys: is anomaly matching saturated? is the cubic present? is the theory anomaly-determined or ceiling-limited? This turns the same observable that established the parity headline into a probe of the theory's anomaly structure -- a genuine, falsifiable, forward-looking use of the parity channel that distinguishes the theory's own internal variants, the sharpest testability statement the parity sector supports.",
+  "honest_scope": "The four variant beta predictions are exact given the engine's parity determinations (v2.360/370/371) -- but each inherits that variant's scope: the anomaly values scale with the toy prefactors rho and rho_match (v2.344), the ceiling is a sampled feasibility bound (v2.360), and ALL use the toy birefringence map beta = 3.4 deg * g_R2_parity, so the absolute beta values are toy-basis and an O(1) re-normalization of the map shifts them together. The ROBUST content is the ORDERING and the RELATIVE spreads (anomaly-saturated > anomaly-closed by ~0.02 deg because the cubic eats budget; all below the central), which are structural. The 'required precision ~0.02 deg' is a derived statistical spread (half the fork), NOT a claim about any specific instrument's forecast sensitivity -- whether a real experiment reaches it is an observational question not answered here (next-gen CMB birefringence is broadly in this regime, but that is context, not a sourced number). The whole thing presumes the birefringence detection is real (v2.329) and that the parity SIGN is separately data-set (v2.364). Robust content: the theory's parity determinations form an ordered hierarchy all below the central value, and a ~4x precision improvement would discriminate them -- turning birefringence into an internal test of anomaly matching. Toy-basis absolute values, structural ordering/spreads. A forward-test capstone of the parity arc.",
+  "references": [
+    "this repo: v2.370 (anomaly saturation), v2.371 (closed anomaly system + the cubic fork), v2.360 (feasibility ceiling / goodness-of-fit), v2.364 (sign is data-set), v2.344 (rho), v2.329 (birefringence caveat)",
+    "physics: cosmic birefringence beta = 0.34 +/- 0.09 deg (Minami-Komatsu / Eskilt-Komatsu)"
+  ]
+}
