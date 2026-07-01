@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (474 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (475 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -523,3 +523,4 @@ Auto-generated front door to the full research program (474 notes). Regenerate w
 | v2.361 | [v2.361 - Is the engine's central prediction well-posed? Leave-one-out ](2026-06-30-v2.361-qnm-center-leave-one-out.md) | The method-as-proposal validation (the under-done third mandated direction). The engine's headline output is a |
 | v2.362 | [v2.362 - Does v2.361's margin-incomparability caveat invalidate v2.341](2026-06-30-v2.362-qnm-trilogy-margin-robustness.md) | v2.361 discovered the engine's signed-distance margins are NOT cross-comparable (gw_speed's margin is ~5e-16 |
 | v2.363 | [v2.363 - The new-theory program ledger, v2: the three-channel state of](2026-06-30-v2.363-qnm-program-ledger-v2.md) | ROBUST (structural, survive the toy basis) |
+| v2.364 | [v2.364 - Is the constructed theory's RIGHT-handedness a prediction or ](2026-06-30-v2.364-qnm-handedness-data-readout.md) | v2.352 showed the parity-odd cubic is symmetric (unpredicted); v2.360 showed the parity-odd quadratic's |
