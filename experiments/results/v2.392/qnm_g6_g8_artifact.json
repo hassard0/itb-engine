@@ -1,0 +1,27 @@
+{
+  "version": "v2.392",
+  "constructed_g8_over_g6": 1.0,
+  "family_g8_over_g6": {
+    "mean": 1.161,
+    "min": 0.544,
+    "max": 3.219,
+    "std": 0.296
+  },
+  "fraction_near_equal_0p9_1p1": 0.351,
+  "fraction_g8_above_g6": 0.679,
+  "n_samples": 2921,
+  "consistency_checks": {
+    "ratio_ranges_widely": true,
+    "not_pinned_near_one": true,
+    "constructed_equality_is_interior_not_forced": true,
+    "spans_below_and_above_one": true,
+    "top_matter_ratio_is_free": true
+  },
+  "all_checks_pass": true,
+  "finding": "g_6 = g_8 is a Chebyshev-CENTER ARTIFACT, not a consistency prediction -- an honest negative that removes a tempting numerical coincidence. The constructed theory has g_6 = g_8 = 0.4 exactly, i.e. the top matter moment ratio g_8/g_6 = 1, which read as a spectrum-edge diagnostic would put a matter state exactly at the Regge/spectrum edge. But across the feasible family g_8/g_6 ranges [0.54, 3.2] (mean 1.16, std 0.30), with only 35% near-equal and 68% having g_8 > g_6, so the top matter moment ratio is a FREE, unconstrained direction -- the constructed point's exact g_8/g_6 = 1 is a coincidence of the max-margin construction (the value 1.0 sits interior to the [0.54, 3.2] range), not forced physics. So the 'matter state at the Regge edge' reading is NOT robust: the matter spectrum edge varies widely across consistent theories. This dovetails exactly with g_8 being the DARK parameter (v2.381): the top matter moment is both observationally invisible AND dynamically free, so nothing -- neither data nor consistency -- pins where the matter Regge tower ends. It also refines the honest tiering of the candidate (v2.382): coincidental equalities among the constructed couplings (g_6 = g_8, and also g_6 = g_8 driving r_matter = g_6/g_4, v2.376) must be checked against the family before being read as structure -- here the check fails, so g_6 = g_8 belongs in the 'toy-basis center coincidence' bin, not the 'robust structure' bin. The positive residue: the matter dispersion tower g_6^2 <= g_4 g_8 leaves g_8 with real headroom (mean 1.66x its floor), confirming the matter sector's top moment is the loose, free, dark corner of the theory -- consistent with matter dominance setting the SCALE (v2.389) but not the internal matter spectrum shape.",
+  "honest_scope": "The g_8/g_6 range is measured over a seeded random-walk sample of the feasible region, so the exact bounds [0.54, 3.2] and std 0.30 are sampler- and toy-basis-dependent -- but the REFUTATION is robust and not a marginal call: the ratio clearly spans a factor >5 with 1.0 well interior, so g_6 = g_8 is not forced under any reasonable reading. The 'spectrum-edge' interpretation of the moment ratio (m_{k+1}/m_k -> support edge) is the standard moment-problem heuristic, used here only to motivate why g_8/g_6 = 1 looked meaningful; the result stands regardless of that interpretation (it is simply that g_8/g_6 is free). This is a negative result -- it removes a claim rather than adding one -- so it has no toy-magnitude overclaim risk; the only caveat is the sampled-family scope. Robust content: g_6 = g_8 at the constructed point is a max-margin coincidence, the top matter moment ratio ranges freely (~0.5-3), and the matter Regge edge is unconstrained -- consistent with g_8 being dark (v2.381). An honest-negative swing that keeps the prediction list clean.",
+  "references": [
+    "this repo: v2.381 (g_8 is the dark parameter), v2.376 (matter tower ratio r_matter=g_6/g_4), v2.382 (candidate ledger / tiering), v2.343 (matter dispersion tower), v2.389 (matter dominance sets scale not internal shape)",
+    "concept: truncated moment problem, moment ratio as spectrum-edge diagnostic; Chebyshev-center coincidences vs family-robust structure"
+  ]
+}

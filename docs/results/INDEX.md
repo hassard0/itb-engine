@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (502 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (503 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -551,3 +551,4 @@ Auto-generated front door to the full research program (502 notes). Regenerate w
 | v2.389 | [v2.389 - SWING (unifying cross-sector principle): the gravitational se](2026-07-01-v2.389-qnm-matter-dominance.md) | A run of cross-sector bounds has appeared piecemeal (WGC, CEMZ, graviton positivity, anomaly floor, |
 | v2.390 | [v2.390 - SWING: the consistent theory has a definite absolute scale --](2026-07-01-v2.390-qnm-scale-rigidity.md) | Matter dominance (v2.389) shows matter sets the gravitational scale. But is the theory *scale-invariant* -- |
 | v2.391 | [v2.391 - SWING (adversarial): matter dominance is a hard bound -- grav](2026-07-01-v2.391-qnm-matter-dominance-hard-bound.md) | v2.389 established matter dominance correlationally (each gravitational ceiling scales with matter, corr |
+| v2.392 | [v2.392 - SWING (honest negative): g_6 = g_8 is a Chebyshev-center arti](2026-07-01-v2.392-qnm-g6-g8-artifact.md) | The constructed theory has `g_6 = g_8 = 0.4` exactly. In moment language (matter tower `m_0=g_4, m_1=g_6, |
