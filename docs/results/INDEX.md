@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (497 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (498 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -546,3 +546,4 @@ Auto-generated front door to the full research program (497 notes). Regenerate w
 | v2.384 | [v2.384 - SWING (a tempting hypothesis fails honestly): star-centrality](2026-07-01-v2.384-qnm-star-convexity-hubs.md) | v2.383 showed the consistent-EFT region is non-convex (pitted by swampland valleys near tiny couplings). The |
 | v2.385 | [v2.385 - SWING (the #1 objection): the constructed theory's Ostrograds](2026-07-01-v2.385-qnm-ghost-safety.md) | The most-cited objection to higher-derivative gravity is the Ostrogradsky instability: the Weyl^2 term |
 | v2.386 | [v2.386 - SWING (native parity channel): the theory predicts an order-2](2026-07-01-v2.386-qnm-graviton-chirality-asymmetry.md) | The engine maps `g_R2_parity` to CMB *photon* birefringence as an order-of-magnitude proxy. But `g_R2_parity` |
+| v2.387 | [v2.387 - SWING: graviton positivity caps parity violation ~4x above th](2026-07-01-v2.387-qnm-parity-graviton-ceiling.md) | v2.386 found the left-handed graviton sector is the tighter one. So how much parity violation does graviton |
