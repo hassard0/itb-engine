@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (515 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (516 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -564,3 +564,4 @@ Auto-generated front door to the full research program (515 notes). Regenerate w
 | v2.402 | [v2.402 - CAPSTONE (refreshed): the candidate theory as a complete QG l](2026-07-01-v2.402-qnm-candidate-profile-refreshed.md) | The v2.382 capstone predates ~18 major results (ghost-safety, graviton chirality, landscape topology, the |
 | v2.403 | [v2.403 - SWING: g_R3_parity=0 is a third constructed-point assumption ](2026-07-01-v2.403-qnm-third-assumption-parity-cubic.md) | The constructed theory sets the parity-odd cubic `g_R3_parity = 0` (parity only in the quadratic). Is that |
 | v2.404 | [v2.404 - SWING: the candidate's three unpinned directions form a dark ](2026-07-01-v2.404-qnm-hidden-sector.md) | The basis-structure audit left three couplings the theory does not pin: g_8 (matter top-moment, v2.381), g_C |
+| v2.405 | [v2.405 - SWING (new robustness axis): the central claim is empirically](2026-07-01-v2.405-qnm-prefactor-sensitivity.md) | Every result carries a honest-scope caveat: *structure robust, numbers toy*. That has been asserted but never |
