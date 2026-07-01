@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (476 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (477 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -525,3 +525,4 @@ Auto-generated front door to the full research program (476 notes). Regenerate w
 | v2.363 | [v2.363 - The new-theory program ledger, v2: the three-channel state of](2026-06-30-v2.363-qnm-program-ledger-v2.md) | ROBUST (structural, survive the toy basis) |
 | v2.364 | [v2.364 - Is the constructed theory's RIGHT-handedness a prediction or ](2026-06-30-v2.364-qnm-handedness-data-readout.md) | v2.352 showed the parity-odd cubic is symmetric (unpredicted); v2.360 showed the parity-odd quadratic's |
 | v2.365 | [v2.365 - The ringdown channel's quantitative readiness: floor + cap + ](2026-06-30-v2.365-qnm-ringdown-channel-readiness.md) | This session's ringdown work (v2.349 floor, v2.351 cap) was never connected to the repo's pre-existing |
+| v2.366 | [v2.366 - The rank question is ANSWERED (v2.209), correcting v2.365: pa](2026-06-30-v2.366-qnm-parity-ringdown-dark-convergence.md) | Last tick's v2.365 framed the qNM->R4 rank as "the open deep-research question." Is it actually open -- or did |

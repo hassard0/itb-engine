@@ -1,0 +1,36 @@
+{
+  "version": "v2.366",
+  "v2209_route_status": "qnm_to_bresciani_full_rank_unsourceable_parity_odd_axis_dark",
+  "required_rank_for_claim": 3,
+  "full_rank_3_source_backed": false,
+  "source_backed_observable_rank": 2,
+  "observable_engine_axes": [
+    "g_R4_c1",
+    "g_R4_c2"
+  ],
+  "dark_axes": [
+    "g_R4_c3"
+  ],
+  "g_R4_c3": {
+    "parity": "odd",
+    "public_qnm_observable": false,
+    "operator": "Im(c_minus) = Q2.Q2tilde (parity-odd / CP-violating)"
+  },
+  "ringdown_floor_parity_blind": true,
+  "ringdown_floor": 0.042,
+  "consistency_checks": {
+    "v2209_rank3_unsourceable": true,
+    "v2209_parity_odd_axis_g_R4_c3_dark": true,
+    "v2209_sourceable_observable_rank_is_2": true,
+    "engine_ringdown_floor_is_parity_blind": true,
+    "corrects_v2365_open_framing_to_determined": true
+  },
+  "all_checks_pass": true,
+  "finding": "The qNM->R4 rank question is ANSWERED, not open -- correcting last tick's v2.365 framing. v2.365 called the rank 'the open deep-research question'; but the repo already DETERMINED it in v2.209 (fetched 2026-06-29 from the primary literature), which this cycle surfaces and reads from its tested artifact. The source-cited determination: a source-backed rank-3 qNM->Bresciani map does NOT exist (full_rank_3 = False); the Bresciani basis (arXiv:2504.12855) is rank 3 but carries no QNM apparatus; the only public ringdown analysis (arXiv:2411.17893) is rank 1 per parity-even theory (max parity-even sourceable rank 2) and EXPLICITLY defers the parity sector; so the parity-odd third axis g_R4_c3 = Im(c_minus) = Q2.Q2tilde is a DARK axis, unconstrained by any current ringdown observable. The source-backed observable rank is therefore 2 (the two parity-even directions g_R4_c1, g_R4_c2), and the parity-odd curvature operator is observationally dark. So the corrected status is: the ringdown blocker is not 'determine the rank' but a DETERMINED NEGATIVE -- a full-rank ringdown discriminator is unsourceable from current public data, and the defensible product is a parity-even, rank-1-per-theory nonclaiming null test. THE CONVERGENCE (the genuinely new content): this reinforces the session's central parity result from an independent direction. The theory's distinguishing feature is its parity violation, and its observability rides ENTIRELY on cosmic birefringence -- now confirmed TWO independent ways: (a) birefringence is the only BINDING data constraint (v2.358, the data-leverage side), and (b) the parity-odd curvature operator is DARK to ringdown (v2.209, the observable-rank side). The engine's own ringdown observable is parity-blind by construction -- its floor g_R3^2/g_R2 uses only parity-EVEN couplings, re-verified live (invariant under flipping the parity-odd couplings). So parity has exactly ONE observational window, birefringence, for two structurally independent reasons -- which is why the whole parity headline (existence v2.321, magnitude v2.360, sign v2.364) is birefringence-contingent (v2.329): there is no second observational handle on the parity sector, in the data OR in the curvature/ringdown channel.",
+  "honest_scope": "The rank determination is READ from the tested v2.209 artifact (a source-cited observability/rank statement, not a manufactured projection -- v2.209 preserves the negative result); the parity-blindness of the engine's ringdown floor is re-verified live. This is a correction + synthesis, so it inherits v2.209's claim boundary: it records WHICH rank is sourceable (2, parity-even) and which axis is dark (g_R4_c3), NOT a ringdown prediction or framework exclusion (framework_claims_ready_now = False, unchanged). 'Dark' means dark to CURRENT PUBLIC sources -- the parity-odd shift is computable-in-principle (Cano et al. arXiv:2307.07431 via rotation-induced mixing) with no attached public likelihood, so a future polarization/rotation-resolved source could illuminate g_R4_c3. The convergence is a structural reading (two independent reasons parity is birefringence-only), not a new computation; it rests on the session's v2.358 data-leverage result and v2.209's literature determination. The correction of v2.365 is the honest point: v2.365's 'open question' framing was incomplete because it did not reference v2.209. Toy basis for the engine couplings; the rank facts are source-cited (not toy). An honest self-correction joining v2.209 to the session's parity findings.",
+  "references": [
+    "this repo: v2.209 (sourceable-rank determination, 2026-06-29 -- the answer), v2.365 (the incomplete 'open question' framing corrected here), v2.358 (birefringence the only binding data), v2.329 (the single point of failure)",
+    "this repo: v2.321/v2.360/v2.364 (parity existence/magnitude/sign, all birefringence-contingent); v2.349 (ringdown floor, parity-even)",
+    "sources: arXiv:2504.12855 (Bresciani basis, no QNM), arXiv:2411.17893 (public qEFT ringdown, rank-1 parity-even, defers parity-odd), arXiv:2307.07431 (parity-odd shift, no public likelihood)"
+  ]
+}
