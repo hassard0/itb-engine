@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (517 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (518 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -566,3 +566,4 @@ Auto-generated front door to the full research program (517 notes). Regenerate w
 | v2.404 | [v2.404 - SWING: the candidate's three unpinned directions form a dark ](2026-07-01-v2.404-qnm-hidden-sector.md) | The basis-structure audit left three couplings the theory does not pin: g_8 (matter top-moment, v2.381), g_C |
 | v2.405 | [v2.405 - SWING (new robustness axis): the central claim is empirically](2026-07-01-v2.405-qnm-prefactor-sensitivity.md) | Every result carries a honest-scope caveat: *structure robust, numbers toy*. That has been asserted but never |
 | v2.406 | [v2.406 - SWING: the candidate is globally unique -- a multi-start sear](2026-07-01-v2.406-qnm-global-uniqueness.md) | v2.322 showed no *named* framework fits theory+data; v2.383 showed the region is connected *locally*. Is the |
+| v2.407 | [v2.407 - SWING: the swampland-complete carving converges -- the feasib](2026-07-01-v2.407-qnm-carving-convergence.md) | The headline is that intersecting all consistency conditions carves a tiny (~1e-5) region (v2.373). Is that |

@@ -1,0 +1,31 @@
+{
+  "version": "v2.407",
+  "n_points": 8000,
+  "n_constraints": 42,
+  "n_orders_averaged": 300,
+  "final_feasible_fraction_local_box": 0.0043,
+  "marginal_drop_first_third": 0.0555,
+  "marginal_drop_last_third": 0.003,
+  "taper_ratio": 18.3,
+  "curve_deciles": {
+    "5": 0.5926,
+    "10": 0.3434,
+    "20": 0.1152,
+    "30": 0.0347,
+    "42": 0.0043
+  },
+  "consistency_checks": {
+    "region_shrinks_to_small_fraction": true,
+    "marginal_shrinkage_tapers": true,
+    "taper_is_order_of_magnitude": true,
+    "carving_converged_not_still_steep": true,
+    "final_region_nonempty": true
+  },
+  "all_checks_pass": true,
+  "finding": "The swampland-complete carving CONVERGES -- the feasible region is near-saturated, so the ~1e-5 predictive volume is a converged answer, not a transient overestimate. Precomputing the per-point per-constraint satisfaction matrix on a local box around the constructed point and averaging the cumulative-feasible-fraction curve over random constraint orders (removing stack-order bias): the feasible fraction falls from 1.0 to ~0.005, and the marginal shrinkage per added constraint TAPERS strongly -- the first third of the constraints (order-averaged) do most of the carving, the last third add an order of magnitude less (taper ratio ~ 18x). So the intersection is near-saturated: the strong amplitude/swampland conditions carve the region early, and the remaining conditions largely re-cut already-excluded volume rather than opening new cuts. The consequence for the program's headline: the ~1e-5 predictive region (v2.373) is a CONVERGED property of the swampland-complete intersection, not an artifact of an incomplete constraint list -- adding more conditions of the SAME KIND (further positivity bounds, further swampland conjectures in the current basis) would move it little, so the predictivity claim is stable. This complements v2.406 (a single global island) and v2.405 (prefactor-robust): the carving produces ONE region, of a size that has CONVERGED and does NOT depend on the toy prefactors -- three independent senses in which the consistency-driven candidate is a stable output of the method, not a fragile coincidence. The honest limit stays sharp: convergence is with respect to the CURRENT KIND of constraint; a genuinely NEW physical condition (a real ringdown rank-3 map, a resolved matter-operator basis) could still cut further, which is exactly the frontier the basis-refinement program (v2.397) targets.",
+  "honest_scope": "Convergence is measured on a LOCAL box (constructed +/- 0.15), so it is the local saturation of the carving; the global ~1e-5 is over the full a-priori box (v2.373), and the local result supports -- but does not re-measure -- global saturation. The taper is ORDER-AVERAGED over random constraint orders, so it is not a stack-order artifact, but 'the last third add little' is an averaged statement -- specific constraints (the strong positivity/anomaly ones) carve a lot wherever they appear in the order. 'Converged' means the marginal carving per constraint of the CURRENT KIND tapers; it does NOT mean the region cannot shrink further -- a genuinely new physical constraint (not a re-cut of the same physics) could carve substantially, and the basis-refinement frontier (v2.397, resolving c-a done, matter-operator split / g_R4 rank-3 open) is exactly where such new cuts would come from. So the claim is 'the carving has converged with respect to the current constraint set', a statement about diminishing returns of the SAME kind of condition, not a proof the true region equals ~1e-5. The satisfaction matrix is exact (real check() per point); the box sample and order count are finite (percent-level noise). Robust content: on a local box the feasible fraction saturates and the marginal shrinkage per constraint tapers by ~an order of magnitude (order-averaged), so the swampland-complete carving is near-saturated and the ~1e-5 predictive region is a converged output for the current constraint kind. Local box, order-averaged, current-constraint-kind convergence. A carving-convergence swing.",
+  "references": [
+    "this repo: v2.373 (~1e-5 predictive region), v2.374 (by-class carving), v2.406 (single global island), v2.405 (prefactor robustness), v2.397 (basis-refinement frontier = source of genuinely new cuts)",
+    "concept: constraint-accumulation / carving convergence; diminishing marginal carving; saturation of an intersection"
+  ]
+}
