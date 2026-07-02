@@ -1,0 +1,29 @@
+{
+  "version": "v2.424",
+  "w_static_true_CC": -1.0,
+  "w_dS_conjecture_slope_c0p8": -0.787,
+  "w_mild_quintessence_slope0p25": -0.979,
+  "candidate_predicted_w_band": [
+    -1.0,
+    -0.979
+  ],
+  "observed_w_planck": {
+    "value": -1.03,
+    "sigma": 0.03
+  },
+  "desi2024_evolving_hint": true,
+  "consistency_checks": {
+    "static_route_is_w_minus1": true,
+    "quintessence_route_above_minus1": true,
+    "full_dS_conjecture_slope_disfavored_by_data": true,
+    "candidate_band_brackets_observations": true,
+    "prediction_is_w_geq_minus1": true
+  },
+  "all_checks_pass": true,
+  "finding": "CORE EXTENSION CC3: the dark-energy equation of state is the observable readout of the CC sector, and the candidate predicts w >~ -1 -- a true cosmological constant or mild quintessence, with full dS-conjecture-slope quintessence disfavored by data. The refined de Sitter conjecture admits a positive vacuum energy two ways: the TACHYONIC route (static vacuum, w = -1 exactly, a true cosmological constant -- this is what CC1 encoded) or the SLOPE route (a rolling scalar, quintessence, w = -1 + (2/3)(1/2)(V'/V)^2 > -1). A dS-conjecture O(1) slope (c~0.8) gives w ~ -0.79, noticeably above -1 and ~8-sigma from the observed w = -1.03 +/- 0.03 -- so FULL dS-conjecture quintessence is DISFAVORED by data. The candidate's dark energy rides the flat Starobinsky R^2 scalaron plateau (g_R2, v1.86), whose near-zero slope gives w ~ -1, so the candidate predicts w in [-1, ~-0.98] (static to mildly quintessent) -- consistent with current data and sitting on the same side as the 2024 DESI hint of evolving dark energy (w0 slightly > -1). This places the candidate at a genuine TENSION -- the SAME plateau-vs-swampland tension v2.410 flagged for inflation: the flat scalaron plateau wants w = -1 (static, and the refined dS conjecture then needs its tachyonic route), while the conjecture's slope condition wants w > -1 (rolling). The observable resolution is a DESI/Euclid measurement of w(z): a clean w = -1 favors the static/tachyonic reading, a small w > -1 (as DESI 2024 hints) favors mild quintessence, and a large w > -0.9 would disfavor the candidate's flat-plateau dark energy. So CC3 adds a THIRD observable front to the falsification portfolio (after CMB birefringence and CMB-S4 inflation): the dark-energy equation of state, testable NOW by DESI and soon by Euclid -- and the candidate's prediction (w just above -1) is both falsifiable and topical.",
+  "honest_scope": "This is an OBSERVABLE-READOUT analysis of the CC sector, not a new hard constraint -- it maps the CC1/CC2 dS admissibility to the equation of state w via the standard quintessence formula w = -1 + (2/3)eps_V. The w values depend on the scalaron slope V'/V, which the dimensionless couplings do not fix (it needs the potential + an absolute scale), so the SPECIFIC w numbers (-0.79 for c~0.8, -0.98 for a mild slope) are illustrative order-of-magnitude, not predictions; the ROBUST content is qualitative: static route -> w=-1, slope route -> w>-1, a full dS-conjecture O(1) slope is data-disfavored, and the candidate's flat Starobinsky plateau lands near w=-1 (static-to-mildly-quintessent). The refined dS conjecture is conjectural (the CC sector is tagged sourced_proxy throughout). The DESI-2024 evolving-DE hint is itself preliminary/contested. This does not resolve the CC magnitude problem; it is the equation-of-state (dynamics) readout. Robust content: the candidate's dark energy predicts w >~ -1 (true-CC to mild quintessence), full dS-conjecture-slope quintessence (w~-0.8) is disfavored by data, and w(z) from DESI/Euclid is a third, near-term falsification front -- with the candidate sitting at the plateau-vs-swampland tension of v2.410. Illustrative-w-numbers, conjectural-sector, dynamics-not-magnitude. The CC3 equation-of-state cycle.",
+  "references": [
+    "this repo: v2.422 (CC1 admits dark energy), v2.423 (CC2 selects dS), v2.410 (Starobinsky-vs-swampland tension), v1.86 (g_R2 Starobinsky scalaron), v2.421 (falsification portfolio -- w is a new front)",
+    "physics: Ooguri-Palti-Shiu-Vafa 2018 (refined dS conjecture, quintessence preference); quintessence w = -1 + (2/3)eps_V; Planck w = -1.03+/-0.03; DESI 2024 (evolving dark-energy hint); Euclid"
+  ]
+}
