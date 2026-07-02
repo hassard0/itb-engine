@@ -85,12 +85,14 @@ v2.414 also claimed "matter sources gravity" rigorously — mis-attributed. The 
 the candidate's `g_R2 > 0` is forced by exactly one thing — the **cubic-curvature coupling g_R3 acting together
 with matter** (matter alone leaves g_R2 free; g_R3 needs matter to exist; parity doesn't force it) — a genuine
 matter × cubic-curvature positivity bound, not "matter sources gravity" nor "gravity self-forces".)*
-**Net (the de-toying arc, v2.411–417): the candidate's entire matter-gravity content is rigorous** — LQG
+**Net (the de-toying arc, v2.411–418): the candidate's entire matter-gravity content is rigorous** — LQG
 excluded, matter dominance's ceiling and BH decay implied, the leading curvature coupling forced positive by the
-matter × cubic-curvature pair — and the *single* residual toy is one parity-magnitude coefficient
-(the anomaly-inflow ρ), which governs the birefringence-contingent parity sector and needs that datum to fix
-anyway. So the engine is not a toy: its matter-gravity physics is source-exact, and the toy has been chased from
-the whole stack down to one coefficient.
+matter × cubic-curvature pair. And even the *single* residual toy — the parity magnitude — turns out mostly
+rigorous+data: it has a **rigorous ceiling** (g_R2_parity ≤ 0.267 from parity-decomposed positivity), the
+birefringence **data** pins it to ≈[0.048, 0.152], and the toy anomaly-inflow coefficient only tightens the upper
+edge to 0.078 — so the candidate value (0.06) needs no toy at all → [v2.418](results/2026-07-01-v2.418-qnm-parity-window.md).
+So the engine is not a toy: the candidate is essentially rigorous + data throughout — source-exact matter-gravity
+structure, and a parity coupling that is rigorously bounded, data-pinned, and only *sharpened* by the lone toy.
 
 **Honest limits.** Three constructed-point values are *assumptions, not predictions* — a=c
 ([v2.399](results/2026-07-01-v2.399-qnm-c-minus-a-modulus.md)), g_6=g_8
