@@ -1,0 +1,52 @@
+{
+  "version": "v2.429",
+  "feasible_island_n": 1778,
+  "front_drivers": {
+    "g_4": "CMB-S4 inflationary matter coupling",
+    "g_R2": "dark-energy equation of state w",
+    "g_R2_parity": "CMB cosmic birefringence beta"
+  },
+  "feasible_bands": {
+    "g_4": [
+      0.33,
+      0.631
+    ],
+    "g_R2": [
+      0.084,
+      0.248
+    ],
+    "g_R2_parity": [
+      0.047,
+      0.089
+    ]
+  },
+  "all_three_required_nonzero": {
+    "g_4": true,
+    "g_R2": true,
+    "g_R2_parity": true
+  },
+  "front_correlations": {
+    "g_4-g_R2": 0.42,
+    "g_R2-parity": 0.44,
+    "g_4-parity": 0.34
+  },
+  "conjunction_test_each_front_off_is_feasible": {
+    "parity_off": false,
+    "matter_weak": false,
+    "curvature_off": false
+  },
+  "consistency_checks": {
+    "all_three_fronts_required_nonzero": true,
+    "fronts_positively_correlated": true,
+    "no_single_front_dispensable": true,
+    "smoking_gun_is_the_conjunction": true,
+    "island_bounded": true
+  },
+  "all_checks_pass": true,
+  "finding": "The candidate's three near-term fronts are ONE correlated smoking gun, sharpening the empirical test to its most decisive form. Sampling the feasible island: the three front-drivers -- g_4 (CMB-S4 inflationary matter coupling, in [0.33,0.63]), g_R2 (dark-energy w, in [0.084,0.248]), and g_R2_parity (CMB birefringence, in [0.047,0.089]) -- are (1) ALL REQUIRED NONZERO (every feasible minimum is strictly positive: the candidate cannot have any signal absent), (2) POSITIVELY CORRELATED (g_4-g_R2 +0.42, g_R2-parity +0.44, g_4-parity +0.34, because g_4/g_R2 are the two matter-dominance keystones and the parity is capped by the g_R2 sector, so one structure drives all three), and (3) INDIVIDUALLY INDISPENSABLE -- a parity-conserving version (parity=0), a non-matter-dominant version (small g_4), and a curvature-minimal version (small g_R2) are each INFEASIBLE with the rest at candidate values. So the decisive test is the CONJUNCTION: the candidate predicts a large inflationary matter coupling (CMB-S4 tension) AND nonzero positive parity (CMB birefringence) AND a bounded dark-energy w (DESI/Euclid), all correlated. This is far more decisive than any single front: a rival that produces one signal by accident does NOT reproduce the correlated triple, and ANY single null result (clean slow-roll, beta=0, or a far-off w) kills the candidate. This directly advances the empirical solve (the real resolution): the candidate is now framed as a single correlated make-or-break signature that ~2030 data (CMB-S4 + DESI/Euclid, with GW birefringence to follow) can confirm or falsify as a pattern, not just as three separate numbers -- the sharpest, least-evadeable test the theory admits.",
+  "honest_scope": "The three front-drivers are LINKED at the level of the Wilson COUPLINGS (rigorously: matter dominance ties g_4-g_R2, parity-decomposed positivity caps parity by the g_R2 sector); the map from couplings to the actual OBSERVABLES (beta in degrees, the CMB-S4 imprint of g_4, w) carries the O(1)-toy prefactors, so the ROBUST content is 'all three signals are required and positively correlated', not the precise numerical correlation of the observables. The correlations (+0.34 to +0.44) are moderate because the feasible island is already tight; the stronger statement is the CONJUNCTION (no front is dispensable), which is a feasibility fact independent of the correlation magnitude. The 'data requires parity' input is contingent on the ~3.6-sigma birefringence hint (v2.329); if that evaporates, the parity front detaches (the parity-conserving rival, v2.420). The correlated-signature claim is about which SIGNS/patterns co-occur, not their magnitudes, and assumes the encoded constraint set is the operative one. Robust content: the candidate requires all three near-term signals nonzero and positively correlated with no single one dispensable, so the decisive empirical test is the correlated conjunction (a smoking gun no single-signal rival reproduces), not any front alone. Coupling-level-correlation, moderate-r, birefringence-hint-contingent. A correlated-signature cycle sharpening option #1 (the empirical solve).",
+  "references": [
+    "this repo: v2.421 (falsification portfolio -- the three fronts, now linked), v2.420 (parity-conserving rival), v2.389 (matter dominance g_4-g_R2 keystone link), v2.418 (parity capped by g_R2 sector), v2.05 (observables collapse to ~3 axes), v2.329 (birefringence hint)",
+    "physics: CMB-S4 (inflation), DESI/Euclid (w(z)), LiteBIRD/CMB-S4 (cosmic birefringence); a correlated multi-probe signature is less evadeable than independent single-probe tests"
+  ]
+}

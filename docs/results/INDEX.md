@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (539 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (540 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -588,3 +588,4 @@ Auto-generated front door to the full research program (539 notes). Regenerate w
 | v2.426 | [v2.426 - RIGOROUS EXTENSION (MT): the matter moment tower's next rung ](2026-07-01-v2.426-qnm-matter-tower.md) | A rigorous, low-risk core extension in the "make it real" direction (the ROADMAP's thrust #2). The engine had |
 | v2.427 | [v2.427 - the rigorous core is robust to its own simplified prefactor: ](2026-07-01-v2.427-qnm-rigorous-prefactor-audit.md) | The de-toying arc tagged the amplitude/causality bounds "rigorous" meaning **source-exact in *form*** (v2.411) — |
 | v2.428 | [v2.428 — Research Report II: a rigor-tiered candidate quantum-gravity ](2026-07-02-v2.428-RESEARCH-REPORT-II.md) | (2026-06-09), which predates the candidate arc, the de-toying program, and the cosmological-constant sector. For |
+| v2.429 | [v2.429 - the correlated make-or-break signature: the candidate's three](2026-07-02-v2.429-qnm-correlated-signature.md) | Acting on **option #1** from the "what would actually solve it" discussion — sharpen the *empirical* test (the |
