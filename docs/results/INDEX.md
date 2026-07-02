@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (554 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (555 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -603,3 +603,4 @@ Auto-generated front door to the full research program (554 notes). Regenerate w
 | v2.441 | [v2.441 - the candidate's Starobinsky inflation survives its own swampl](2026-07-02-v2.441-qnm-inflation-survives-tower.md) | Dreaming — connecting three parts of the program that had never met: the inflation sector (g_R2 as the Starobinsky |
 | v2.442 | [v2.442 - the four-experiment / three-keystone unified verdict: LiteBIR](2026-07-02-v2.442-qnm-four-front-verdict.md) | Dreaming, consolidating. v2.441 gave the candidate a fourth near-term front (LiteBIRD r ≈ 0.004 / n_s ≈ 0.964 from |
 | v2.443 | [v2.443 - the candidate-specific inflationary fingerprint: chiral primo](2026-07-02-v2.443-qnm-chiral-gw.md) | Dreaming. v2.442 flagged that the candidate's scalar inflation observables (n_s ≈ 0.964, r ≈ 0.004) are |
+| v2.444 | [v2.444 - computing the v2.443 crux: the chiral-GW amplitude is Plancki](2026-07-02-v2.444-qnm-chiral-gw-amplitude.md) | v2.443 claimed the candidate's parity coupling makes the primordial GW spectrum chiral (a candidate-specific |
