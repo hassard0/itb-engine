@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (530 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (531 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -579,3 +579,4 @@ Auto-generated front door to the full research program (530 notes). Regenerate w
 | v2.417 | [v2.417 - the definitive feasibility lattice: the leading curvature cou](2026-07-01-v2.417-qnm-curvature-forcing-lattice.md) | Two prior cycles gave imprecise attributions for why g_R2 is bounded below at the candidate: v2.414 said "matter |
 | v2.418 | [v2.418 - even the "one residual toy" is mostly rigorous+data: the pari](2026-07-01-v2.418-qnm-parity-window.md) | The de-toying arc (v2.411–417) concluded the candidate's single residual toy is the parity-magnitude coefficient |
 | v2.419 | [v2.419 - what the rigorous core alone determines: a broad FAMILY, not ](2026-07-01-v2.419-qnm-rigorous-family.md) | Completing the rigorous-core arc (v2.411–418): having shown the candidate's structural claims are rigorous, the |
+| v2.420 | [v2.420 - the alternatives map: which consistent-QG archetypes rival th](2026-07-01-v2.420-qnm-archetype-alternatives.md) | Pivoting from "is the candidate rigorous" (the v2.411–419 arc) to the complementary physical question: what |

@@ -1,0 +1,87 @@
+{
+  "version": "v2.420",
+  "archetype_table": {
+    "A_candidate": {
+      "rigorous_feasible": true,
+      "rigorous_violations": [],
+      "full_feasible": true,
+      "full_violations": [],
+      "rejection_cause": "survives"
+    },
+    "B_parity_conserving": {
+      "rigorous_feasible": true,
+      "rigorous_violations": [],
+      "full_feasible": false,
+      "full_violations": [
+        "cosmic_birefringence_data"
+      ],
+      "rejection_cause": "data_only"
+    },
+    "C_curvature_minimal": {
+      "rigorous_feasible": true,
+      "rigorous_violations": [],
+      "full_feasible": false,
+      "full_violations": [
+        "anomaly_cancellation",
+        "swampland_distance_conjecture",
+        "cosmic_birefringence_data"
+      ],
+      "rejection_cause": "toy_plus_data"
+    },
+    "D_curvature_heavy": {
+      "rigorous_feasible": false,
+      "rigorous_violations": [
+        "cft_flat_space_bound",
+        "left_handed_graviton_positivity"
+      ],
+      "full_feasible": false,
+      "full_violations": [
+        "cft_flat_space_bound",
+        "bekenstein_tight",
+        "bnossw_monogamy",
+        "left_handed_graviton_positivity",
+        "scalar_wgc",
+        "repulsive_force_conjecture"
+      ],
+      "rejection_cause": "rigorous"
+    },
+    "E_matter_light": {
+      "rigorous_feasible": false,
+      "rigorous_violations": [
+        "graviton_mixed_positivity",
+        "cubic_graviton_matter_bound",
+        "cft_flat_space_bound",
+        "parity_violating_positivity",
+        "left_handed_graviton_positivity"
+      ],
+      "full_feasible": false,
+      "full_violations": [
+        "graviton_mixed_positivity",
+        "cubic_graviton_matter_bound",
+        "cft_flat_space_bound",
+        "bekenstein_tight",
+        "bnossw_monogamy",
+        "parity_violating_positivity",
+        "left_handed_graviton_positivity",
+        "generalized_anomaly_inflow",
+        "scalar_wgc",
+        "repulsive_force_conjecture"
+      ],
+      "rejection_cause": "rigorous"
+    }
+  },
+  "consistency_checks": {
+    "candidate_survives": true,
+    "parity_conserving_rig_ok_data_rejected": true,
+    "curvature_heavy_rigorously_excluded": true,
+    "matter_light_rigorously_excluded": true,
+    "live_rival_is_parity_conserving": true
+  },
+  "all_checks_pass": true,
+  "finding": "The alternatives map: the candidate's single live rival is the parity-conserving QG EFT, separated from it by exactly the cosmic-birefringence datum; every other archetype is either rigorously excluded or matter-gravity-structurally disfavored. Evaluating five qualitatively distinct consistent-QG archetypes against the rigorous core and the full theory+data stack: the 'too much gravity' archetype (D, large g_R2) and the 'too little matter' archetype (E) are RIGOROUSLY EXCLUDED -- source-exact amplitude positivity (cft_flat_space + left-handed-graviton positivity for D; graviton-mixed + cubic-graviton-matter positivity for E) forbids them with zero toy input, a clean statement that consistency bounds the gravity/matter balance from both sides. The 'curvature-minimal' archetype (C) survives the rigorous core but is rejected with help from toy constraints (the anomaly and the aspect-ratio SDC) plus data. And the headline: the 'parity-conserving' archetype (B) -- the candidate with its parity coupling switched off -- is RIGOROUSLY CONSISTENT and is rejected by exactly ONE thing, the cosmic-birefringence measurement. So B is the candidate's single live rival: a perfectly consistent parity-conserving quantum gravity that only the (contingent, ~3.6-sigma) birefringence datum separates from the candidate, and that returns as viable if the birefringence hint fades -- matching the Z2 handedness mirror (v2.406) and the load-bearing-datum finding (v2.408). The forward-looking net is sharp: the candidate-versus-alternative question reduces to 'is cosmic birefringence real?' -- every other archetype is settled independent of that measurement (D, E rigorously excluded; C structurally/toy-disfavored). This complements the de-toying arc from the outside: not 'is the candidate rigorous' but 'what are the consistent alternatives and what rejects each', and the answer is that the only surviving alternative hinges on one experiment.",
+  "honest_scope": "The five archetypes are representative single points chosen to probe distinct qualitative features (parity on/off, curvature high/low, matter high/low), not an exhaustive clustering of the feasible family -- they demonstrate that these archetype CLASSES are separated by the stated causes, not that they are the only archetypes. The rigorous exclusions of D and E carry the v2.411 'source-exact in form' caveat; D and E are also chosen somewhat extreme, so 'rigorously excluded' means these representative points are, establishing the class is positivity-bounded, not a precise boundary. B's rejection 'by cosmic_birefringence_data ONLY' is the exact full-stack violation list for that point (birefringence wants nonzero positive parity; B has parity=0); it is contingent on the birefringence hint being real (~3.6-sigma, v2.329). C's rejection mixes toy (anomaly, SDC) and data, so C is NOT a clean rigorous exclusion -- flagged. Robust content: 'too much gravity' and 'too little matter' archetypes are rigorously excluded by amplitude positivity; the parity-conserving archetype is rigorously consistent and rejected only by the cosmic-birefringence datum, making it the candidate's single data-contingent rival. Representative-point archetypes, contingent-datum rejection for B, C-rejection mixed. An alternatives-mapping cycle.",
+  "references": [
+    "this repo: v2.406 (single island / Z2 mirror), v2.408 (birefringence the load-bearing datum), v2.411 (rigorous core / exclusions), v2.419 (rigor determines a family), v2.329 (birefringence ~3.6-sigma hint)",
+    "physics: amplitude positivity bounding the gravity/matter balance (Caron-Huot et al EFThedron); cosmic birefringence beta=0.34+/-0.09 deg (Minami-Komatsu / Eskilt-Komatsu)"
+  ]
+}
