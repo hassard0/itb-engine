@@ -8,7 +8,8 @@ Euler-vs-Weyl² unifications, the data confrontation, and the R4/GWOSC live-data
 complete, live-verified snapshot of the candidate is the [**v2.402 capstone**](results/2026-07-01-v2.402-qnm-candidate-profile-refreshed.md).
 Navigation: [ROADMAP.md](ROADMAP.md) (forward plan) · [CONSTRAINTS.md](CONSTRAINTS.md) (what's encoded) ·
 [results/INDEX.md](results/INDEX.md) (every cycle, chronological) · [results/TAXONOMY.md](results/TAXONOMY.md)
-(by theme) · [v2.0 research report](results/2026-06-09-v2.0-RESEARCH-REPORT.md) (early-program overview).
+(by theme) · [**Research Report II**](results/2026-07-02-v2.428-RESEARCH-REPORT-II.md) (current publication-style
+synthesis: method, candidate, rigor tiering, CC sector, falsifiability, limits) · [v2.0 research report](results/2026-06-09-v2.0-RESEARCH-REPORT.md) (superseded early-program overview).
 
 > **Read with the honest frame.** Most constraint prefactors and cross-sector mappings are O(1)/order-of-magnitude placeholders. The repo's *realism program* tells you which conclusions survive that uncertainty. Throughout, the **robust content is signs, orderings, structure, and which experiment constrains what** — not precise coordinates. Several findings below are deliberately *negative* or *self-correcting*; that's the point.
 
