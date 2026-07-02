@@ -1,0 +1,57 @@
+{
+  "version": "v2.437",
+  "candidate_N": 1.566,
+  "species_table": {
+    "pure_gr": {
+      "N": 1.0,
+      "lambda_species_over_Mpl": 1.0,
+      "parity_even_distance": 0.803,
+      "has_R2": false,
+      "has_tower": false
+    },
+    "string_tree_eft": {
+      "N": 1.7,
+      "lambda_species_over_Mpl": 0.767,
+      "parity_even_distance": 0.067,
+      "has_R2": true,
+      "has_tower": true
+    },
+    "asymptotic_safety": {
+      "N": 1.5,
+      "lambda_species_over_Mpl": 0.816,
+      "parity_even_distance": 0.196,
+      "has_R2": true,
+      "has_tower": true
+    },
+    "lqg_induced": {
+      "N": 2.2,
+      "lambda_species_over_Mpl": 0.674,
+      "parity_even_distance": 0.251,
+      "has_R2": true,
+      "has_tower": true
+    },
+    "cdt": {
+      "N": 1.74,
+      "lambda_species_over_Mpl": 0.758,
+      "parity_even_distance": 0.085,
+      "has_R2": true,
+      "has_tower": true
+    }
+  },
+  "R2_bearing_N_spread": 0.24,
+  "genuine_discriminator": "the tower spectrum at the cutoff: Regge (string) vs Kaluza-Klein/decompactification (extra dims) vs none/metric-fixed-point (asymptotic safety) -- a UV/high-energy observable",
+  "consistency_checks": {
+    "candidate_has_a_tower_cutoff": true,
+    "all_R2_bearing_have_towers": true,
+    "species_scale_does_not_discriminate": true,
+    "only_no_R2_point_has_N1": true,
+    "degeneracy_robust_to_species_scale": true
+  },
+  "all_checks_pass": true,
+  "finding": "The asymptotic-safety discriminator fails at low energy: the species scale cannot tell a UV fixed point from a string, so the UV-completion degeneracy is robust, and the genuine discriminator is the tower SPECTRUM. Asymptotic safety (a UV fixed point, no tower) vs string/CDT (a fundamental scale + a tower) should be separable by the species scale -- a bare fixed point being UV-complete with no sub-Planckian cutoff (N -> 1). But computing N = 1 + nu(|g_R2|+|g_C|+|g_R3|) on each framework's low-energy point, string (N=1.70), asymptotic safety (N=1.50), and CDT (N=1.74) ALL have towers/cutoffs N ~ 1.5-1.7 -- because the species scale is built from the LOW-ENERGY curvature couplings, which the convergent completions SHARE. The only N=1 (no-tower) point is pure GR, which lacks the rigorously-required R^2 and is far/excluded. So even this semi-UV quantity is, in the engine, a low-energy quantity and cannot break the degeneracy. This honest negative SHARPENS v2.436: the UV-completion degeneracy (string ~ CDT ~ asymptotic safety at low energy) is ROBUST -- not even the species scale separates them. The genuine discriminator is the tower SPECTRUM itself -- what the light states at the cutoff ARE: a Regge trajectory (m^2 linear in spin => string), a Kaluza-Klein / decompactification tower (=> large extra dimensions), or effectively no tower with the metric running to a fixed point (=> asymptotic safety). That is a genuinely UV / high-energy observable (the pattern of resonances near the cutoff), not accessible to low-energy amplitude-carving. So the 'other paths' ARE discriminable, but only by reaching the UV -- which tells us precisely what a QG-SOLVING experiment must measure: the spectrum of states at the species / cutoff scale, not more low-energy Wilson coefficients. This closes the honest loop on the UV question: the low-energy program has extracted everything it can (a rigor-caged candidate, a named leading completion, a maximally-falsifiable low-energy verdict), and the remaining discrimination is a distinct, harder, UV measurement -- the true frontier of solving QG.",
+  "honest_scope": "The species scale is the engine's toy Dvali proxy (nu, N_max O(1)), and the frameworks are schematic O(1) encoders (v2.436 caveat), so the specific N values (1.5-1.74) are illustrative; the robust content is that they are all > 1 and clustered (spread ~0.24 among the R^2-bearing completions), so the species scale does not separate them -- not the precise numbers. 'Asymptotic safety should have N -> 1' is the idealized bare-fixed-point expectation; the engine's asymptotic safety ENCODER carries nonzero R^2/R^3 (hence N=1.5), which is itself the point -- its LOW-ENERGY couplings look like the others. The 'tower spectrum discriminates' claim is standard QG phenomenology (Regge vs KK vs fixed-point), not an engine computation; the engine cannot compute the spectrum (it carves Wilson coefficients, not the state content). This is a negative result (the species-scale discriminator fails) plus its constructive reading (the discriminator is a UV spectral observable). Robust content: all R^2-bearing UV completions share a sub-Planckian species-scale cutoff (N ~ 1.5-1.7), so the species scale does not break the UV-completion degeneracy; discriminating string vs CDT vs asymptotic safety requires the tower spectrum at the cutoff, a UV/high-energy observable outside the low-energy program. Toy-species-proxy, encoder-level, spectrum-not-computed, negative-plus-constructive. An asymptotic-safety-discriminator cycle.",
+  "references": [
+    "this repo: v2.436 (UV tournament -- degeneracy), v2.394 (species scale ~0.72 M_Pl), v2.375 (string-like tower), src/itb/constraints/species_scale.py",
+    "physics: Dvali species scale; asymptotic safety (UV fixed point, no tower); string (Regge tower); KK/decompactification (extra dimensions); the tower spectrum discriminates the UV completion"
+  ]
+}

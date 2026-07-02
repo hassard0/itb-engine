@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (547 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (548 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -596,3 +596,4 @@ Auto-generated front door to the full research program (547 notes). Regenerate w
 | v2.434 | [v2.434 - THE BOLD DECISION: the candidate's UV completion is heterotic](2026-07-02-v2.434-qnm-heterotic-identification.md) | The deepest solve-path is #4 — identify the UV completion. v2.433 established *candidate = string tree-EFT + |
 | v2.435 | [v2.435 - the axion-universality consequence: if the parity is the hete](2026-07-02-v2.435-qnm-axion-universality.md) | Following the bold UV identification (v2.434: candidate = heterotic string tree-EFT + its model-independent |
 | v2.436 | [v2.436 - other paths to solve: the candidate is a UV-convergence point](2026-07-02-v2.436-qnm-uv-tournament.md) | Asked to consider **other paths** to solving QG. The program — and the v2.433–435 arc — assumed the |
+| v2.437 | [v2.437 - the asymptotic-safety discriminator fails at low energy: the ](2026-07-02-v2.437-qnm-uv-discriminator.md) | Bold swing on a genuinely different solve-path (**asymptotic safety** = a UV fixed point, no tower; vs string/CDT |
