@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (543 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (544 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -592,3 +592,4 @@ Auto-generated front door to the full research program (543 notes). Regenerate w
 | v2.430 | [v2.430 - the 2030 verdict table: the candidate is confirmed by exactly](2026-07-02-v2.430-qnm-verdict-table.md) | Continuing option #1 (the empirical solve): turn the correlated smoking-gun signature (v2.429) into an actionable |
 | v2.431 | [v2.431 - how much does rigor force? The rigorous core cages the candid](2026-07-02-v2.431-qnm-rigorous-cage.md) | Option **#2 (rigor-forces-it)** from the "what would solve it" discussion, quantified. For each candidate |
 | v2.432 | [v2.432 - closing the "what would solve it" investigation: an honest ov](2026-07-02-v2.432-qnm-solve-synthesis.md) | The user asked what would actually solve quantum gravity; the two options advanceable in-engine were #1 |
+| v2.433 | [v2.433 - a concrete UV-embedding lead (option #4): the candidate is st](2026-07-02-v2.433-qnm-string-deformation.md) | Option **#4 (embed the candidate in a UV-complete theory)** is the deepest "solve" path. Rather than only scope |
