@@ -1,0 +1,123 @@
+{
+  "version": "v2.431",
+  "rigorous_cage": {
+    "g_4": {
+      "candidate": 0.529,
+      "floor": 0.401,
+      "floor_binder": [
+        "dispersion_tower_g6_squared_bound",
+        "matter_s3_positivity"
+      ],
+      "floor_tier": "RIGOROUS",
+      "ceiling": 0.629,
+      "ceiling_binder": [
+        "scalar_convexity_g6_vs_g4"
+      ],
+      "ceiling_tier": "RIGOROUS",
+      "both_edges_rigorous": true,
+      "ceiling_rigorous": true
+    },
+    "g_6": {
+      "candidate": 0.4,
+      "floor": 0.28,
+      "floor_binder": [
+        "scalar_convexity_g6_vs_g4"
+      ],
+      "floor_tier": "RIGOROUS",
+      "ceiling": 0.46,
+      "ceiling_binder": [
+        "dispersion_tower_g6_squared_bound"
+      ],
+      "ceiling_tier": "RIGOROUS",
+      "both_edges_rigorous": true,
+      "ceiling_rigorous": true
+    },
+    "g_8": {
+      "candidate": 0.4,
+      "floor": 0.304,
+      "floor_binder": [
+        "dispersion_tower_g6_squared_bound"
+      ],
+      "floor_tier": "RIGOROUS",
+      "ceiling": 2.0,
+      "ceiling_binder": [
+        "(unbounded by rigor)"
+      ],
+      "ceiling_tier": "unbounded/floor",
+      "both_edges_rigorous": false,
+      "ceiling_rigorous": false
+    },
+    "g_R2": {
+      "candidate": 0.193,
+      "floor": 0.109,
+      "floor_binder": [
+        "graviton_forward_positivity"
+      ],
+      "floor_tier": "RIGOROUS",
+      "ceiling": 0.373,
+      "ceiling_binder": [
+        "cft_flat_space_bound"
+      ],
+      "ceiling_tier": "RIGOROUS",
+      "both_edges_rigorous": true,
+      "ceiling_rigorous": true
+    },
+    "g_R3": {
+      "candidate": 0.09,
+      "floor": 0.0,
+      "floor_binder": [
+        "floor at 0"
+      ],
+      "floor_tier": "unbounded/floor",
+      "ceiling": 0.158,
+      "ceiling_binder": [
+        "graviton_forward_positivity"
+      ],
+      "ceiling_tier": "RIGOROUS",
+      "both_edges_rigorous": false,
+      "ceiling_rigorous": true
+    },
+    "g_R2_parity": {
+      "candidate": 0.06,
+      "floor": 0.0,
+      "floor_binder": [
+        "floor at 0"
+      ],
+      "floor_tier": "unbounded/floor",
+      "ceiling": 0.264,
+      "ceiling_binder": [
+        "left_handed_graviton_positivity"
+      ],
+      "ceiling_tier": "RIGOROUS",
+      "both_edges_rigorous": false,
+      "ceiling_rigorous": true
+    }
+  },
+  "boxed_both_edges": [
+    "g_4",
+    "g_6",
+    "g_R2"
+  ],
+  "capped_above": [
+    "g_4",
+    "g_6",
+    "g_R2",
+    "g_R3",
+    "g_R2_parity"
+  ],
+  "g8_upper_free": true,
+  "consistency_checks": {
+    "parity_even_boxed_by_rigor": true,
+    "gR3_and_parity_capped_above": true,
+    "g8_is_the_free_direction": true,
+    "boxes_are_tight": true,
+    "at_least_four_couplings_capped_above": true
+  },
+  "all_checks_pass": true,
+  "finding": "How much does rigor force? A LOT of the candidate's parity-even structure -- source-exact bounds cage it to tight windows with zero toy input and zero data. Scanning each coupling up and down from the candidate under the effective rigorous core (source-exact bounds + their rigorous consequences, no proxies, no data): g_4 is boxed to [0.40, 0.63], g_6 to [0.28, 0.46], and g_R2 to [0.11, 0.37] -- BOTH edges bound by rigorous constraints, windows a factor ~1.5-3 wide around the candidate; g_R3 (<= 0.16) and the parity coupling (<= 0.26) are capped from above by rigorous bounds. The irreducible residual freedom is exactly three understood things: (i) g_8's upper scale is unbounded by rigor -- the observationally-DARK matter direction (v2.381); (ii) the LOWER ends of g_R3 and parity are free -- a parity-conserving, cubic-curvature-minimal theory is rigorously fine, and DATA (cosmic birefringence) selects the nonzero values (this is the v2.420 rival, and the fundamental reason rigor cannot force the FULL candidate); (iii) the overall coupling scale, where rigor gives only lower/ratio bounds, is closed from above by EFT-validity and data. So the ceiling of option #2 is now quantified: rigor forces the candidate's parity-even SHAPE into a tight cage; data forces the SCALE (g_8, the upper cuts) and the PARITY (its presence and value). This is a stronger and more precise statement than 'rigor gives a loose family' (v2.419, which used the bare source-exact core): once the rigorous consequences are included, the parity-even sector is caged, and what remains open is precisely the physically-understood dark scale and data-selected parity -- so rigor gets much of the way to forcing the candidate, and the gap is exactly the part physics tells us needs measurement.",
+  "honest_scope": "The cage is a 1-D scan of each coupling with the OTHERS held at candidate values, so the edges are conditional slice bounds, not the full 6-D rigorous region (which is looser -- couplings can co-vary); the robust content is WHICH edges are rigorously bound vs free, not the exact window widths. 'Effective rigorous core' = source-exact bounds PLUS the constraints they imply over the feasible region (v2.412); the cage EDGES are reported as bound by a source-exact ('rigorous'-tier) constraint per the classification, but a few implied constraints (themselves rigorous consequences) participate. Rigorous bounds carry the v2.411 'source-exact in form' caveat (prefactors may be O(1)-simplified; shown headline-robust in v2.427). g_8's 'unbounded by rigor' is within the scan cap (2.0); it is the known dark direction, not literally infinite. The parity floor being free (parity-conserving allowed) is the v2.420 result and is why rigor cannot force the full candidate. Robust content: source-exact bounds box the parity-even couplings g_4/g_6/g_R2 on both sides and cap g_R3/parity from above (on the candidate slice), leaving free only g_8's scale (dark) and the lower ends of g_R3/parity (data-selected) -- so rigor forces the shape, data forces the scale and parity. Slice-conditional, effective-core, source-exact-in-form. A rigorous-cage cycle quantifying option #2.",
+  "references": [
+    "this repo: v2.419 (bare rigorous core = loose family), v2.412 (implied-by-rigorous), v2.417 (matter x cubic-curvature forcing), v2.418 (parity ceiling), v2.420 (parity-conserving rival = why rigor can't force parity), v2.381 (g_8 dark), v2.427 (rigorous headlines prefactor-robust)",
+    "physics: amplitude positivity gives lower/ratio bounds + (via WGC-type consequences) some upper caps; the scale + parity are data-selected"
+  ]
+}
