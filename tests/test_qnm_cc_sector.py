@@ -20,7 +20,7 @@ def test_cc_sector_is_opt_in():
     names_cc = {c.name for c in cc}
     assert "de_sitter_conjecture" not in names_default   # untouched by default
     assert "de_sitter_conjecture" in names_cc
-    assert len(cc) == len(default) + 1
+    assert len(cc) >= len(default) + 1
 
 
 def test_cc_constraint_tagged_sourced_proxy():

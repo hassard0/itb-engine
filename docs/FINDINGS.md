@@ -98,8 +98,12 @@ structure, and a parity coupling that is rigorously bounded, data-pinned, and on
 coupling `g_Lambda` and a first swampland constraint (the refined de Sitter conjecture), wired opt-in and tagged
 `sourced_proxy` (conjectural, per the rigor tiering). The candidate *admits* a positive dark energy, capped at
 `g_Lambda ≤ g_R2` — the keystone curvature coupling that drives inflation also bounds the dark energy the theory
-can carry → [v2.422](results/2026-07-01-v2.422-qnm-cc-sector.md). This addresses the *structural* CC question
-(is a positive Λ admissible, what bounds it), not the CC *magnitude* problem (the engine has no absolute scale).
+can carry → [v2.422](results/2026-07-01-v2.422-qnm-cc-sector.md). Adding the AdS distance conjecture (CC2) puts a
+*floor* on |Λ| from the tower, and since the candidate's tower is bounded that floor exceeds EFT-validity — so
+the **candidate is pushed off anti-de Sitter and selects a de Sitter / Minkowski vacuum** (`g_Lambda ∈ [0, g_R2]`)
+→ [v2.423](results/2026-07-01-v2.423-qnm-cc-ads-distance.md). These address the *structural* CC question (is a
+positive Λ admissible, what bounds it, which sign) — not the CC *magnitude* problem (the engine has no absolute
+scale); both CC constraints are conjectural swampland proxies, tagged `sourced_proxy` accordingly.
 
 **Honest limits.** Three constructed-point values are *assumptions, not predictions* — a=c
 ([v2.399](results/2026-07-01-v2.399-qnm-c-minus-a-modulus.md)), g_6=g_8

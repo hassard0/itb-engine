@@ -1,0 +1,28 @@
+{
+  "version": "v2.423",
+  "N_species_candidate": 1.566,
+  "ads_floor_cAdS1": 0.639,
+  "eft_validity_ceiling_on_abs_gLambda": 0.602,
+  "allowed_windows": {
+    "ads_branch": null,
+    "ds_minkowski_branch": [
+      0.0,
+      0.192
+    ]
+  },
+  "c_AdS_threshold_for_ads_to_open": 0.943,
+  "consistency_checks": {
+    "cc2_present_and_tagged": true,
+    "ads_floor_from_tower": true,
+    "ads_branch_empty_at_cAdS1": true,
+    "dS_branch_survives": true,
+    "dS_selected_over_ads": true
+  },
+  "all_checks_pass": true,
+  "finding": "CORE EXTENSION CC2: the AdS distance conjecture selects de Sitter -- the candidate admits dS/Minkowski but NOT anti-de Sitter. Adding the AdS distance conjecture (Lust-Palti-Vafa 2019) as a floor on the vacuum-energy magnitude set by the species-scale tower -- |g_Lambda| >= c_AdS/N (alpha=1/2), since a small |Lambda| would require a parametrically light tower the candidate does not have -- gives, at c_AdS=1 and the candidate's N=1.566, an AdS floor |g_Lambda| >= 0.639. But EFT-validity/complexity caps |g_Lambda| <= ~0.60 (the vacuum energy cannot exceed the cutoff). The floor EXCEEDS the ceiling, so the AdS branch is EMPTY -- no anti-de Sitter vacuum is admissible. Combined with CC1's refined-dS ceiling (g_Lambda <= g_R2 ~ 0.193), the candidate's entire admissible vacuum-energy window collapses to the dS/Minkowski branch [0, 0.193]. So the two swampland conjectures plus EFT-validity SELECT de Sitter (or Minkowski) for the candidate: it 'wants to be de Sitter', and it cannot be anti-de Sitter. This is a genuine structural output of the new sector -- the candidate's bounded tower (a heavy-ish species scale, N~1.6) is exactly what forbids the small-|Lambda| AdS vacuum, so the same tower structure that makes the theory string-like (v2.375) also drives it to positive (dark-energy) or zero vacuum energy. The dS-selection is O(1)-robust (it holds for c_AdS >~ 0.94, the threshold where the AdS floor drops to the EFT ceiling), not a knife-edge, though it is c_AdS-dependent: a much smaller c_AdS would open a narrow AdS window. Net for the CC arc so far: the candidate accommodates dark energy (CC1), is bounded above by its inflaton curvature (CC1), and is pushed off anti-de Sitter by its tower (CC2) -- a coherent, if conjectural, dark-energy story emerging from the swampland sector.",
+  "honest_scope": "Both CC constraints are CONJECTURAL swampland statements encoded as proxies (tagged sourced_proxy) -- the AdS distance conjecture is unproven, the tower<->species-scale identification is a modeling choice, and c_AdS/alpha are O(1). The headline 'no AdS vacuum' is therefore an O(1)-robust structural statement (holds for c_AdS >~ 0.94), NOT a theorem: it says the AdS-distance floor and the EFT-validity ceiling are incompatible at O(1) coefficients for the candidate's tower, so a small AdS |Lambda| is disfavored -- the swampland CC-naturalness puzzle applied here. g_Lambda is dimensionless, so this is about the STRUCTURE / sign of the vacuum energy (dS vs AdS admissibility and the ceiling), NOT the CC magnitude problem (10^-120). N uses g_C=0 (the candidate's g_C is not set in this coefficient dict); a nonzero g_C would raise N and lower the floor, widening/narrowing the effect -- the qualitative 'bounded tower forbids small AdS Lambda' is the robust content. Opt-in, so no prior result changes. Robust content: with the AdS distance conjecture + EFT-validity, the candidate's bounded tower forbids a small anti-de Sitter vacuum at O(1) coefficients, so its admissible vacua are de Sitter or Minkowski (g_Lambda in [0, g_R2]); the candidate is pushed toward positive/zero vacuum energy. Conjectural-proxy, O(1)-robust-not-theorem, dimensionless-not-magnitude, g_C=0. The CC2 AdS-distance cycle.",
+  "references": [
+    "this repo: v2.422 (CC1 refined-dS ceiling), v2.394 (species scale ~0.72 M_Pl), v2.375 (string-like tower), src/itb/constraints/species_scale.py (N formula reused), src/itb/constraints/cosmological_constant.py",
+    "physics: Lust-Palti-Vafa 2019 (AdS distance conjecture); Dvali (species scale); Ooguri-Palti-Shiu-Vafa 2018 (refined dS, CC1)"
+  ]
+}

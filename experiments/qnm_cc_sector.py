@@ -51,12 +51,14 @@ def _feasible(stack, gL):
 
 def run() -> dict:
     default_stack = build_stack(**BASE)
-    cc_stack = build_stack(**BASE, include_cc_sector=True)
+    # CC1 isolates its own refined-dS constraint: disable the CC2 AdS-distance floor (cc_c_AdS=0) so this
+    # slice's window reflects the dS ceiling + EFT-validity only (CC2 has its own experiment, v2.423).
+    cc_stack = build_stack(**BASE, include_cc_sector=True, cc_c_AdS=0.0)
 
     default_names = [getattr(c, "name", "") for c in default_stack]
     cc_names = [getattr(c, "name", "") for c in cc_stack]
     cc_present = "de_sitter_conjecture" in cc_names
-    opt_in_clean = "de_sitter_conjecture" not in default_names and len(cc_stack) == len(default_stack) + 1
+    opt_in_clean = "de_sitter_conjecture" not in default_names and len(cc_stack) >= len(default_stack) + 1
 
     # full allowed g_Lambda window on the full stack + CC sector
     grid = [round(float(g), 3) for g in np.arange(-1.0, 0.6, 0.002) if _feasible(cc_stack, float(g))]

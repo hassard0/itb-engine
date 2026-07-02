@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (533 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (534 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -582,3 +582,4 @@ Auto-generated front door to the full research program (533 notes). Regenerate w
 | v2.420 | [v2.420 - the alternatives map: which consistent-QG archetypes rival th](2026-07-01-v2.420-qnm-archetype-alternatives.md) | Pivoting from "is the candidate rigorous" (the v2.411–419 arc) to the complementary physical question: what |
 | v2.421 | [v2.421 - the falsification portfolio: the concrete decision map for co](2026-07-01-v2.421-qnm-falsification-portfolio.md) | Assembling the program (post de-toying arc) into one actionable artifact: for each near/mid-future observable — |
 | v2.422 | [v2.422 - CORE EXTENSION CC1: the cosmological-constant / dark-energy s](2026-07-01-v2.422-qnm-cc-sector.md) | The engine had no vacuum-energy coupling — the one big quantum-gravity problem it never touched. This is the |
+| v2.423 | [v2.423 - CORE EXTENSION CC2: the AdS distance conjecture selects de Si](2026-07-01-v2.423-qnm-cc-ads-distance.md) | Second slice of the cosmological-constant sector (CC1 = v2.422). Adds the **AdS distance conjecture** |
