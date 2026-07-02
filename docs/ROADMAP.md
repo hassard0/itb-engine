@@ -1,28 +1,41 @@
 # ITB Engine Research Roadmap
 
-A research plan, not a solved quantum-gravity claim. The program has run through two phases: the **foundational
-phase** (island census -> data confrontation -> R4/GWOSC live-data frontier, up to ~v2.208) and the **swing /
-candidate phase** (v2.367-v2.407), which constructed and exhaustively stress-tested a single candidate low-energy
-QG EFT. See [FINDINGS.md](FINDINGS.md) for what was found.
+A research plan, not a solved quantum-gravity claim. The program has run through several phases: the
+**foundational phase** (island census -> data confrontation -> R4/GWOSC live-data frontier, up to ~v2.208); the
+**swing / candidate phase** (v2.367-v2.407), which constructed and exhaustively stress-tested a single candidate
+low-energy QG EFT; the **de-toying arc** (v2.411-419), which made the toy-vs-rigorous distinction first-class and
+showed the candidate's matter-gravity content is source-exact; and the **cosmological-constant sector**
+(v2.422-425), a new opt-in dark-energy sector. See [FINDINGS.md](FINDINGS.md) for what was found.
 
-## Current frontier (v2.407)
+## Current frontier (v2.425)
 
-The candidate theory is **complete under the engine's toy basis** ([v2.402 capstone](results/2026-07-01-v2.402-qnm-candidate-profile-refreshed.md)):
-a matter-dominant, near-Planckian, ghost-safe, string-like, globally-unique consistent EFT with a decisive
-~2030 test (CMB-S4). Genuine further progress must come from one of four places -- plain constraint-mining is
-**saturated** (the carving has converged, [v2.407](results/2026-07-01-v2.407-qnm-carving-convergence.md); all
-constraints collapse onto the g_4/g_R2 keystone pair, [v2.401]):
+The candidate theory is **complete** and its status is precisely tiered ([v2.415 rigor ledger](results/2026-07-01-v2.415-qnm-rigor-ledger.md)):
+a matter-dominant, near-Planckian, ghost-safe, string-like, globally-unique consistent EFT whose **matter-gravity
+content is rigorous** (source-exact amplitude positivity / causality: LQG excluded, matter dominance's ceiling
+and BH decay implied, the leading curvature coupling forced by matter x cubic-curvature -- de-toying arc
+v2.411-419), with the toy-dependence chased down to a single parity-magnitude coefficient (itself rigorously
+capped + data-pinned, [v2.418]). Rigor determines a **family**; data (cosmic birefringence) selects the
+**point** ([v2.419]). The candidate is falsifiable on **three independent observable fronts** -- parity
+(CMB + GW birefringence), matter (CMB-S4 inflation), and dark energy (DESI/Euclid w(z)) -- atop a rigorous
+backbone ([v2.421 falsification portfolio](results/2026-07-01-v2.421-qnm-falsification-portfolio.md)). The new
+CC sector adds a coherent dark-energy story ([v2.425 capstone](results/2026-07-01-v2.425-qnm-cc-capstone.md)):
+the candidate admits dark energy (capped at g_R2), selects de Sitter over anti-de Sitter, and predicts w >~ -1.
 
-1. **Basis refinement.** The c!=a (Euler vs Weyl^2) degeneracy is now resolved and activated
-   ([v2.397-401](results/2026-07-01-v2.397-qnm-ca-degeneracy.md)). Still open: splitting the matter operators
-   (g_4/g_6/g_8) into independent spin structures, and the **g_R4 rank-3 sub-structure** -- the highest-value
-   remaining core extensions.
-2. **Real normalization.** Every magnitude is O(1)-toy; a physical calibration of the prefactors would turn the
-   robust *structure* into quantitative predictions (the structure is prefactor-robust, [v2.405]).
-3. **The R4/GWOSC live-data route** (parked below). Its key blocker is unchanged: no source-backed full-rank
-   qNM->R4 sensitivity map exists in the public literature ([v2.209] / the pyRing-Bresciani no-map ledger).
-4. **Observation.** CMB-S4 (~2030) is the decisive make-or-break test of the matter-dominant construction
-   ([v2.395]); next-gen GW-birefringence would probe the parity chirality ([v2.386/387]).
+Both the candidate program and the CC sector are now **comprehensively developed**. The genuine next major
+thrusts (in rough order of value vs tractability):
+
+1. **New sectors** (the productive vein, like the CC sector). Candidates: a matter-content / spin-decomposed
+   sector, a neutrino/flavour sector, or the conformal-anomaly-induced vacuum energy (a *rigorous* CC ingredient
+   ~ the Euler charge a = g_R2 -- flagged but deferred, needs careful encoding to avoid a mis-attribution).
+2. **More rigorous constraints.** Add source-exact EFThedron / higher-positivity bounds the engine lacks, moving
+   more of the stack into the rigorous tier (extends the de-toying program).
+3. **Real normalization / live data.** Every magnitude is O(1)-toy; a physical prefactor calibration would turn
+   the robust *structure* into quantitative predictions. The R4/GWOSC live-data route (parked below) remains
+   blocked on the missing source-backed qNM->R4 map ([v2.209]).
+4. **Observation** (not ours to run): CMB-S4 (~2030, matter + parity), DESI/Euclid (w(z), now), next-gen
+   GW-birefringence (parity chirality).
+5. **Write-up.** The candidate + rigor tiering + CC sector are at a natural point for a publication-style
+   synthesis (the [v2.0 research report](results/2026-06-09-v2.0-RESEARCH-REPORT.md) predates all of the above).
 
 ## Parked route: R4/GWOSC live-data (foundational phase, from v2.208)
 
