@@ -15,7 +15,17 @@ synthesis: method, candidate, rigor tiering, CC sector, falsifiability, limits) 
 
 ---
 
-## ★ The current picture (v2.415): a single, near-unique, falsifiable candidate — on a *rigorous* core
+## ★ The current picture (v2.434): a single, near-unique, falsifiable candidate — on a *rigorous* core, with a named UV completion
+
+**The UV completion (v2.434):** the candidate = **heterotic string tree-EFT + its model-independent axion**, *not*
+type II. Two independent arguments: (1) given the candidate's cubic-curvature and parity couplings, a nonzero R²
+(Gauss–Bonnet) term is *rigorously required* — which tree-level type II (R⁴-only) lacks but heterotic has; (2) the
+candidate's one data-selected coupling, the **parity**, is a gravitational-Chern–Simons `R∧R̃` term, exactly the
+heterotic model-independent axion's Green–Schwarz coupling. So the candidate's single free coupling is *the
+heterotic axion*, and a cosmic-birefringence detection is (in this reading) a detection of it →
+[v2.434](results/2026-07-02-v2.434-qnm-heterotic-identification.md). A structural identification from textbook
+string facts + the engine, giving option #4 a specific target (a heterotic vacuum's coefficients vs the cage) —
+not yet a compactification computation.
 
 **Is this a toy?** No. The engine's 42 constraints are rigor-tagged, and the candidate's entire **matter-gravity
 content is source-exact** — amplitude positivity / causality / bootstrap, zero toy input (verified ledger →
