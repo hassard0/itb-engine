@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (535 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (536 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -584,3 +584,4 @@ Auto-generated front door to the full research program (535 notes). Regenerate w
 | v2.422 | [v2.422 - CORE EXTENSION CC1: the cosmological-constant / dark-energy s](2026-07-01-v2.422-qnm-cc-sector.md) | The engine had no vacuum-energy coupling — the one big quantum-gravity problem it never touched. This is the |
 | v2.423 | [v2.423 - CORE EXTENSION CC2: the AdS distance conjecture selects de Si](2026-07-01-v2.423-qnm-cc-ads-distance.md) | Second slice of the cosmological-constant sector (CC1 = v2.422). Adds the **AdS distance conjecture** |
 | v2.424 | [v2.424 - CORE EXTENSION CC3: the dark-energy equation of state — the c](2026-07-01-v2.424-qnm-cc-equation-of-state.md) | Third slice of the cosmological-constant sector (CC1 admits dark energy bounded by g_R2; CC2 selects dS/Minkowski |
+| v2.425 | [v2.425 - CC-ARC CAPSTONE: the candidate's dark-energy profile in one v](2026-07-01-v2.425-qnm-cc-capstone.md) | Ties the three cosmological-constant slices into one integrated, verified profile and folds the dark-energy |

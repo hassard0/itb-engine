@@ -1,0 +1,42 @@
+{
+  "version": "v2.425",
+  "dark_energy_profile": {
+    "admits_dark_energy": {
+      "statement": "positive cosmological constant admitted, g_Lambda in [0, g_R2]",
+      "g_Lambda_dS_window": [
+        0.0,
+        0.192
+      ],
+      "ref": "CC1 / v2.422"
+    },
+    "selects_de_sitter": {
+      "statement": "dS/Minkowski selected; anti-de Sitter excluded (bounded tower vs AdS-distance floor)",
+      "ads_branch": null,
+      "ref": "CC2 / v2.423"
+    },
+    "equation_of_state": {
+      "statement": "w >~ -1 (true-CC to mild quintessence); full dS-conjecture-slope quintessence data-disfavored",
+      "w_band": [
+        -1.0,
+        -0.979
+      ],
+      "observable": "DESI / Euclid w(z) -- a third falsification front",
+      "ref": "CC3 / v2.424"
+    }
+  },
+  "cc_sector_rigor_tier": "sourced_proxy (all CC constraints -- conjectural swampland)",
+  "consistency_checks": {
+    "cc1_admits_dark_energy": true,
+    "cc2_selects_de_sitter": true,
+    "cc3_predicts_w_near_minus1": true,
+    "sector_all_sourced_proxy": true,
+    "three_slices_consistent": true
+  },
+  "all_checks_pass": true,
+  "finding": "CC-ARC CAPSTONE: the candidate has a coherent, conjectural dark-energy profile, verified in one artifact. Integrating the three cosmological-constant slices: the candidate (1) ADMITS a positive cosmological constant, g_Lambda in [0, g_R2 ~ 0.193] -- the keystone curvature coupling that drives inflation also caps the dark energy it can carry (CC1); (2) SELECTS de Sitter / Minkowski over anti-de Sitter -- its bounded species-scale tower forbids the small-|Lambda| AdS vacuum the AdS-distance conjecture would require, so the AdS branch is empty at O(1) coefficients (CC2); and (3) PREDICTS a dark-energy equation of state w >~ -1 -- riding the flat Starobinsky scalaron plateau it lands at true-CC-to-mild-quintessence, with a full dS-conjecture-slope quintessence (w ~ -0.8) data-disfavored, testable by DESI/Euclid w(z) (CC3). So the new sector gives the candidate a genuine dark-energy story that is internally coherent (a positive, tower-bounded, nearly-static dark energy) AND falsifiable (a third near-term observable front, w(z), added to the CMB-birefringence and CMB-S4-inflation fronts of the v2.421 portfolio). Crucially the entire sector is CONJECTURAL and honestly tiered -- every CC constraint is sourced_proxy (the swampland dS/AdS conjectures), and g_Lambda is dimensionless, so this addresses the STRUCTURE of the vacuum energy (sign, admissibility, bounds, equation of state) and NOT the CC magnitude problem. This closes the CC arc: the user-chosen core extension delivered a new, self-consistent, falsifiable, honestly-tiered dark-energy sector, and the candidate now has an inflation-to-dark-energy story carried by the single keystone scalaron g_R2 (inflation at a high scale, v1.86; dark energy at a low scale, bounded by the same g_R2).",
+  "honest_scope": "A CONSOLIDATION capstone: it re-runs CC1-CC3 and asserts the integrated picture; no new physics. Every claim inherits its slice's caveats -- the CC sector is entirely conjectural (swampland dS/AdS conjectures, tagged sourced_proxy), the CC1 dS bound and CC2 AdS floor are order-of-magnitude proxies with O(1) coefficients, the CC3 w numbers are illustrative (V'/V unfixed by the dimensionless couplings), and 'selects de Sitter' is O(1)-robust not a theorem. g_Lambda is dimensionless, so NONE of this addresses the CC magnitude problem (why Lambda ~ 10^-120) -- it is the structural/observable profile only. The 'inflation-to-dark-energy from one scalaron' story is an interpretation of the g_R2 links (v1.86 inflation + CC1 dark-energy cap), not a dynamical solution. The sector is opt-in, so nothing about the prior candidate results changes. Robust content: the candidate's dark-energy profile is internally coherent (admits a positive, tower-bounded, dS-selected, w>~-1 dark energy) and adds a third falsification front (w(z)); the whole sector is conjectural and honestly tiered. Consolidation, conjectural-sector, dimensionless-not-magnitude. The CC-arc capstone.",
+  "references": [
+    "this repo: v2.422 (CC1), v2.423 (CC2), v2.424 (CC3), v2.421 (falsification portfolio), v2.415 (the de-toying-arc capstone analogue), v1.86 (g_R2 inflaton)",
+    "physics: Ooguri-Palti-Shiu-Vafa 2018 (refined dS); Lust-Palti-Vafa 2019 (AdS distance); Dvali (species scale); DESI 2024 / Euclid (w(z))"
+  ]
+}
