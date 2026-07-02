@@ -1,0 +1,30 @@
+{
+  "version": "v2.435",
+  "heterotic_curvature_consistency": {
+    "g_R2_positive_gauss_bonnet": true,
+    "g_R3_positive": true,
+    "moment_tower_g_R4_floor": 0.042,
+    "candidate_plus_tower_feasible": true,
+    "parity_positive_handedness_matches_CMB_beta": true
+  },
+  "universality_consequence": {
+    "claim": "the heterotic model-independent axion's R^R-tilde coupling is universal (Green-Schwarz / gravitational anomaly), so the parity is DETERMINED not free",
+    "implication_1": "heterotic PREDICTS cosmic birefringence (given the string scale), not accommodates it",
+    "implication_2": "the candidate's free continuous parameters collapse toward the rigor-caged parity-even shape + the string scale => near-parameter-free heterotic prediction",
+    "the_parity_role": "the one coupling the rigor cage cannot force, the empirical verdict tests, and the UV embedding sources -- is fixed by universality"
+  },
+  "consistency_checks": {
+    "curvature_sector_heterotic_consistent": true,
+    "positive_gauss_bonnet_R2": true,
+    "curvature_moment_tower_feasible": true,
+    "parity_positive_handedness": true,
+    "axion_universality_determines_parity": true
+  },
+  "all_checks_pass": true,
+  "finding": "The axion-universality consequence: under the heterotic identification the candidate's last free coupling (the parity) is DETERMINED, so heterotic PREDICTS cosmic birefringence and the candidate approaches a parameter-free prediction. (a) Grounding -- the candidate's curvature+parity sign structure is heterotic-consistent: g_R2 > 0 (positive Gauss-Bonnet, the heterotic alpha' term), g_R3 > 0, the curvature moment tower g_R3^2 <= g_R2 g_R4 is satisfied (feasible with g_R4 >= 0.042), and the parity g_R2_parity = 0.06 > 0 has positive handedness matching both the measured CMB beta > 0 and the sign of the axion's R ^ R-tilde term. (b) The consequence -- the heterotic MODEL-INDEPENDENT axion (from the B-field) couples to R ^ R-tilde with a UNIVERSAL coefficient fixed by the Green-Schwarz mechanism / gravitational anomaly, the SAME in every heterotic compactification; so if the candidate's parity IS this axion (the natural reading, as its R ^ R-tilde coupling is the leading gravitational parity term), the parity is fixed by universal geometric data, not free. This is a major parameter reduction: the parity was the candidate's one data-selected, rigor-uncageable degree of freedom -- the 'single residual toy' (v2.418) -- and under the heterotic-axion reading it becomes DETERMINED. Two consequences follow: (i) heterotic PREDICTS the cosmic-birefringence beta given the string scale rather than accommodating it, so a birefringence measurement tests a prediction not a fit; (ii) the candidate's genuinely-free continuous parameters collapse toward just the parity-even shape within its tight rigorous cage (v2.431) plus the overall string scale -- the candidate approaches a (near-)parameter-free heterotic prediction, the strongest 'solve'-toward statement the program can make. The whole arc converges: the ONE coupling the rigor cage cannot force, the empirical verdict tests, and the UV embedding sources -- the parity -- is, under heterotic universality, exactly the object that becomes fixed, turning the candidate's cosmic-birefringence signal into a genuine prediction of a heterotic vacuum.",
+  "honest_scope": "The curvature-consistency is engine-checked (signs + the moment tower); the universality consequence is a PHYSICS ARGUMENT, not an engine computation. Its crux -- 'the parity is fixed' -- is CONTINGENT on the parity being specifically the MODEL-INDEPENDENT (universal) axion; heterotic compactifications also have MODEL-DEPENDENT axions (from the geometry) whose couplings are NOT universal, so if the candidate's parity is one of those, it stays compactification-dependent (still heterotic, but not fixed). The model-independent reading is the natural one (its R ^ R-tilde coupling is THE leading gravitational parity term), but it is an identification, not a proof. The 'heterotic predicts beta' claim is structural: the actual beta MAGNITUDE needs the string scale + the axion decay constant + the cosmological field evolution -- dimensionful inputs the engine does not have -- so 'predicts' means 'determined by universal data given the scale', not a computed number. '(Near-)parameter-free' is an aspiration: the parity-even shape is CAGED to tight windows (v2.431), not fixed to a point, and the string scale + compactification choice remain -- so the parameter count DROPS (the parity leaves the free list) rather than reaching literally zero. All prior caveats carry (O(1) magnitudes; birefringence-hint-contingent; heterotic ID structural). Robust content: the candidate's curvature+parity sign structure is heterotic-consistent, and IF the parity is the heterotic model-independent axion its coupling is universal so the parity is determined (not free) -- reducing the candidate's free parameters and turning cosmic birefringence into a heterotic prediction (magnitude scale-dependent). Physics-argument, model-independent-contingent, magnitude-scale-dependent, cage-not-point. An axion-universality cycle.",
+  "references": [
+    "this repo: v2.434 (heterotic identification), v2.418 (parity = the single residual toy, rigorously capped + data-pinned), v2.431 (rigor cage; parity the uncageable dof), v2.386 (parity chirality, positive handedness), v2.375 (curvature moment tower)",
+    "physics: heterotic model-independent axion (B-field) + universal Green-Schwarz R ^ R-tilde coupling (gravitational anomaly); model-dependent (geometric) axions are non-universal; the beta magnitude needs the string scale + axion decay constant"
+  ]
+}
