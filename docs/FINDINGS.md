@@ -94,6 +94,13 @@ edge to 0.078 — so the candidate value (0.06) needs no toy at all → [v2.418]
 So the engine is not a toy: the candidate is essentially rigorous + data throughout — source-exact matter-gravity
 structure, and a parity coupling that is rigorously bounded, data-pinned, and only *sharpened* by the lone toy.
 
+**New sector — cosmological constant / dark energy (v2.422+, opt-in).** The engine now has a vacuum-energy
+coupling `g_Lambda` and a first swampland constraint (the refined de Sitter conjecture), wired opt-in and tagged
+`sourced_proxy` (conjectural, per the rigor tiering). The candidate *admits* a positive dark energy, capped at
+`g_Lambda ≤ g_R2` — the keystone curvature coupling that drives inflation also bounds the dark energy the theory
+can carry → [v2.422](results/2026-07-01-v2.422-qnm-cc-sector.md). This addresses the *structural* CC question
+(is a positive Λ admissible, what bounds it), not the CC *magnitude* problem (the engine has no absolute scale).
+
 **Honest limits.** Three constructed-point values are *assumptions, not predictions* — a=c
 ([v2.399](results/2026-07-01-v2.399-qnm-c-minus-a-modulus.md)), g_6=g_8
 ([v2.392](results/2026-06-30-v2.392-qnm-g6-g8-artifact.md)), g_R3_parity=0

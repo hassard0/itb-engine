@@ -24,6 +24,7 @@ from itb.constraints.bh_entropy_positivity import WaldEntropyPositivity
 from itb.constraints.causality import CausalityBound
 from itb.constraints.cemz_causality import CEMZCausality
 from itb.constraints.cft_flat_space import CFTFlatSpaceBound
+from itb.constraints.cosmological_constant import DeSitterConjecture
 from itb.constraints.cross_sector_efthedron import CrossSectorEFThedron
 from itb.constraints.complexity_cutoff import ComplexityCutoff
 from itb.constraints.cubic_parity import ParityViolatingCubicBound
@@ -238,7 +239,9 @@ def build_stack(prefactors: dict[str, float] | None = None,
                 gw_speed_low_cutoff: bool = True,
                 include_gw_dispersion: bool = False,
                 gw_dispersion_low_cutoff: bool = True,
-                include_curvature_tower: bool = False) -> list[Constraint]:
+                include_curvature_tower: bool = False,
+                include_cc_sector: bool = False,
+                cc_c_dS: float = 1.0) -> list[Constraint]:
     """Assemble the canonical constraint stack, overriding the tunable knife-edge
     prefactors with `prefactors` (missing keys fall back to CANONICAL).
 
@@ -307,6 +310,9 @@ def build_stack(prefactors: dict[str, float] | None = None,
         # --- v2.292: the g_R4 (Riemann^4) curvature dispersion tower (opt-in core-engine extension) ---
         stack.append(CurvatureRiemann4Positivity())
         stack.append(CurvatureMomentTowerMandate())
+    if include_cc_sector:
+        # --- v2.422 (CC1): the cosmological-constant / dark-energy sector (opt-in core extension) ---
+        stack.append(DeSitterConjecture(c_dS=cc_c_dS))
     return stack
 
 
@@ -346,6 +352,8 @@ RIGOR = {
     "cosmic_birefringence_data": "data", "gw_speed_bound": "data", "gw_dispersion_bound": "data",
     "ligo_birefringence_bound": "data", "ligo_graviton_mass_bound": "data",
     "submm_gravity_yukawa_bound": "data",
+    # --- CC / dark-energy sector (v2.422, opt-in) ---
+    "de_sitter_conjecture": "sourced_proxy",   # refined dS swampland conjecture (conjectural + scalaron-curvature proxy)
 }
 
 

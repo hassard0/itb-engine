@@ -1,0 +1,30 @@
+{
+  "version": "v2.422",
+  "stack_sizes": {
+    "default": 42,
+    "with_cc_sector": 43
+  },
+  "de_sitter_rigor_tier": "sourced_proxy",
+  "max_positive_g_Lambda_allowed": 0.192,
+  "g_Lambda_window": [
+    -0.602,
+    0.192
+  ],
+  "candidate_g_R2": 0.193,
+  "modest_ads_minkowski_ok": true,
+  "consistency_checks": {
+    "cc_sector_is_opt_in": true,
+    "cc_constraint_present_when_enabled": true,
+    "tagged_sourced_proxy": true,
+    "candidate_admits_positive_dark_energy": true,
+    "dS_bound_tracks_scalaron_curvature": true,
+    "modest_ads_and_minkowski_ok": true
+  },
+  "all_checks_pass": true,
+  "finding": "CORE EXTENSION CC1: the engine now has a cosmological-constant / dark-energy sector, and the candidate accommodates dark energy bounded by its curvature via the refined de Sitter conjecture. A dimensionless vacuum-energy parameter g_Lambda (>0 de Sitter, <0 anti-de Sitter) is added with its first swampland constraint (refined dS conjecture, Ooguri-Palti-Shiu-Vafa 2018), wired OPT-IN so the entire existing stack/frameworks/goldens are untouched and tagged 'sourced_proxy' by the rigor registry -- the honest tiering from the de-toying arc automatically files this conjectural swampland statement in the proxy layer, not the source-exact core. Physics: a positive vacuum energy at a potential extremum satisfies the refined dS conjecture only if the potential is sufficiently concave (the tachyonic second condition); the candidate's dark energy rides the Starobinsky R^2 scalaron (g_R2, v1.86), whose plateau is concave, so the condition maps to g_Lambda <= g_R2/c_dS. Result: the candidate ADMITS a positive cosmological constant up to g_Lambda <= g_R2 ~ 0.193 (c_dS=1); above that the refined-dS bound fails (too much vacuum energy for the scalaron curvature). Modest AdS and Minkowski are consistent (a large vacuum-energy magnitude is separately bounded by EFT-validity / the complexity cutoff -- the vacuum energy cannot exceed the cutoff scale). So the SAME g_R2 that drives inflation (v1.86) and anchors the theory as its keystone (v2.396) also caps the dark energy the candidate can carry -- a genuine new cross-link between the curvature sector and the cosmological constant, consistent with the refined dS swampland conjecture. This opens the CC sector honestly: the bound is conjectural+proxy (so tiered accordingly), and later slices add the AdS-distance/species-scale relation (small Lambda <-> a light tower, which the candidate's tower structure v2.375 makes computable) and the quintessence-vs-constant distinction.",
+  "honest_scope": "This is a FIRST-PROXY encoding of a CONJECTURAL statement, and it is tagged as such (sourced_proxy) -- the refined dS conjecture is itself unproven and debated, and the map from its abstract V''/V condition to the engine's dimensionless g_R2 is order-of-magnitude (the robust content is 'a positive Lambda is bounded by the scalaron curvature', the exact c_dS is O(1) and the linear g_Lambda <= g_R2 form is the simplest proxy, not a derived relation). g_Lambda is dimensionless (vacuum energy in cutoff-scale units); the engine still has no absolute scale, so this does NOT address the CC magnitude problem (why Lambda is ~10^-120 M_Pl^4) -- it addresses the STRUCTURAL question of whether a positive Lambda is admissible and what bounds it. The sector is opt-in, so nothing about the prior candidate results changes; this ADDS a sector. The 'accommodates dark energy' claim is that a positive g_Lambda is feasible up to the curvature bound, not that the observed dark-energy value is predicted. Robust content: the engine now has a dark-energy sector; a positive cosmological constant is admissible and bounded by the scalaron curvature (g_Lambda <= g_R2) under the refined dS conjecture; modest AdS/Minkowski are consistent while a large vacuum-energy magnitude is EFT-validity-bounded -- all honestly tiered as a conjectural proxy. Conjectural+proxy, dimensionless (no CC magnitude), opt-in. The CC1 core-extension cycle.",
+  "references": [
+    "this repo: v1.86 (g_R2 = Starobinsky R^2 scalaron), v2.396 (g_R2 keystone), v2.411 (rigor tiering -> the CC constraint auto-tagged sourced_proxy), v2.375 (tower structure for the future AdS-distance slice), src/itb/constraints/cosmological_constant.py",
+    "physics: Ooguri-Palti-Shiu-Vafa 2018 (refined de Sitter conjecture); Obied-Ooguri-Spodyneiko-Vafa 2018 (dS swampland); Lust-Palti-Vafa 2019 (AdS distance conjecture, for the next slice)"
+  ]
+}
