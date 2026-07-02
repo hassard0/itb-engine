@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (527 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (528 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -576,3 +576,4 @@ Auto-generated front door to the full research program (527 notes). Regenerate w
 | v2.414 | [v2.414 - ENGINE IMPROVEMENT (de-toying step 3, anomaly capstone): matt](2026-07-01-v2.414-qnm-anomaly-detoy.md) | The anomaly sector was the last load-bearing toy (v2.413). It has two parts: |
 | v2.415 | [v2.415 - CONSOLIDATION CAPSTONE: the rigor-annotated candidate profile](2026-07-01-v2.415-qnm-rigor-ledger.md) | The de-toying arc (v2.411–414) established, piecewise, that the engine's matter-gravity content is rigorous. |
 | v2.416 | [v2.416 - SELF-CORRECTION: "matter sources gravity" (v2.393/v2.414) was](2026-07-01-v2.416-qnm-gravity-self-forcing.md) | Probing whether amplitude positivity pins the leading curvature coupling g_R2 to a *matter-determined* window, |
+| v2.417 | [v2.417 - the definitive feasibility lattice: the leading curvature cou](2026-07-01-v2.417-qnm-curvature-forcing-lattice.md) | Two prior cycles gave imprecise attributions for why g_R2 is bounded below at the candidate: v2.414 said "matter |

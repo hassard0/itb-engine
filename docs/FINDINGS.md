@@ -80,13 +80,14 @@ speculative (the complexity conjecture and the swampland-distance proxy) turn ou
 barely depends on them (~1.11× each, scale window unchanged) → [v2.413](results/2026-07-01-v2.413-qnm-toy-dependence-map.md).
 And the last load-bearing toy, the anomaly, de-toys too: the `g_4·g_6 = g_R2²` form is a removable 4D artifact
 (4D has no pure gravitational anomaly) → [v2.414](results/2026-07-01-v2.414-qnm-anomaly-detoy.md). *(Correction,
-[v2.416](results/2026-07-01-v2.416-qnm-gravity-self-forcing.md): v2.414 also claimed "matter sources gravity"
-rigorously — that was mis-attributed. Matter alone does not force the leading curvature coupling; the candidate's
-`g_R2 > 0` is rigorously forced instead by its own **cubic-curvature (g_R3) and parity couplings** via graviton
-positivity — gravity's structure is self-forcing, not matter-sourced.)*
-**Net (the de-toying arc, v2.411–416): the candidate's entire matter-gravity content is rigorous** — LQG
+[v2.416](results/2026-07-01-v2.416-qnm-gravity-self-forcing.md)/[v2.417](results/2026-07-01-v2.417-qnm-curvature-forcing-lattice.md):
+v2.414 also claimed "matter sources gravity" rigorously — mis-attributed. The complete feasibility lattice shows
+the candidate's `g_R2 > 0` is forced by exactly one thing — the **cubic-curvature coupling g_R3 acting together
+with matter** (matter alone leaves g_R2 free; g_R3 needs matter to exist; parity doesn't force it) — a genuine
+matter × cubic-curvature positivity bound, not "matter sources gravity" nor "gravity self-forces".)*
+**Net (the de-toying arc, v2.411–417): the candidate's entire matter-gravity content is rigorous** — LQG
 excluded, matter dominance's ceiling and BH decay implied, the leading curvature coupling forced positive by the
-gravitational sector's own higher structure — and the *single* residual toy is one parity-magnitude coefficient
+matter × cubic-curvature pair — and the *single* residual toy is one parity-magnitude coefficient
 (the anomaly-inflow ρ), which governs the birefringence-contingent parity sector and needs that datum to fix
 anyway. So the engine is not a toy: its matter-gravity physics is source-exact, and the toy has been chased from
 the whole stack down to one coefficient.
