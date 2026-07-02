@@ -1,0 +1,92 @@
+{
+  "version": "v2.436",
+  "tournament": {
+    "pure_gr": {
+      "in_rigorous_cage": true,
+      "full_stack_violations": [
+        "cosmic_birefringence_data"
+      ],
+      "parity_even_distance": 0.803,
+      "has_R2": false,
+      "reaches_candidate": true
+    },
+    "string_tree_eft": {
+      "in_rigorous_cage": true,
+      "full_stack_violations": [
+        "cosmic_birefringence_data"
+      ],
+      "parity_even_distance": 0.067,
+      "has_R2": true,
+      "reaches_candidate": true
+    },
+    "asymptotic_safety": {
+      "in_rigorous_cage": true,
+      "full_stack_violations": [
+        "cosmic_birefringence_data"
+      ],
+      "parity_even_distance": 0.196,
+      "has_R2": true,
+      "reaches_candidate": true
+    },
+    "lqg_induced": {
+      "in_rigorous_cage": false,
+      "full_stack_violations": [
+        "cft_flat_space_bound",
+        "graviton_forward_positivity",
+        "cross_sector_efthedron"
+      ],
+      "parity_even_distance": 0.251,
+      "has_R2": true,
+      "reaches_candidate": false
+    },
+    "cdt": {
+      "in_rigorous_cage": true,
+      "full_stack_violations": [
+        "cosmic_birefringence_data"
+      ],
+      "parity_even_distance": 0.085,
+      "has_R2": true,
+      "reaches_candidate": true
+    }
+  },
+  "reachers_ranked_by_distance": [
+    [
+      "string_tree_eft",
+      0.067
+    ],
+    [
+      "cdt",
+      0.085
+    ],
+    [
+      "asymptotic_safety",
+      0.196
+    ],
+    [
+      "pure_gr",
+      0.803
+    ]
+  ],
+  "R2_bearing_reachers": [
+    "string_tree_eft",
+    "cdt",
+    "asymptotic_safety"
+  ],
+  "excluded": [
+    "lqg_induced"
+  ],
+  "consistency_checks": {
+    "multiple_UV_completions_reach": true,
+    "only_lqg_excluded": true,
+    "string_closest": true,
+    "cdt_and_AS_competitive": true,
+    "candidate_not_string_unique": true
+  },
+  "all_checks_pass": true,
+  "finding": "Other paths exist: the candidate is a UV-convergence point (string, CDT, asymptotic safety all viable), NOT string-unique -- an honest broadening and a correction to the v2.434 heterotic call. Running the full UV-completion tournament -- each framework's low-energy point vs the candidate's rigorous cage, and whether a parity deformation reaches the candidate (as for heterotic in v2.433) -- FOUR paradigms sit in the rigorous cage and are reachable (each separated from the candidate only by cosmic birefringence, i.e. a parity-conserving version of it): string tree-EFT (parity-even distance 0.067, closest), CDT (0.085, a near-tie), asymptotic safety (0.196, competitive), and pure GR (0.803, far, and lacking the rigorously-required R^2). Only LQG-induced gravity is rigorously EXCLUDED (it violates graviton positivity + the CFT bootstrap). So among the R^2-bearing UV completions the candidate requires, string is closest and best-motivated (its model-independent axion gives the cleanest parity story, v2.434-435), but CDT and asymptotic safety are genuinely competitive alternatives that the LOW-ENERGY EFT the engine carves CANNOT rule out. The candidate is a convergence point of multiple UV completions, and discriminating string vs CDT vs asymptotic safety needs genuinely UV / quantum-gravity data -- the actual UV behaviour (a string tower, a discrete-spacetime continuum limit, or a UV fixed point) -- which the amplitude-carving of a low-energy EFT does not access. This is the honest broadening the user asked for: there are OTHER viable solve-paths (CDT and asymptotic safety, not only string), and the bold 'it is heterotic' (v2.434) must be tempered to 'heterotic/string is the LEADING candidate UV completion among several the low-energy data cannot yet separate'. It also sharpens what a genuine QG-solving measurement must do: not just confirm the candidate (the correlated 2030 signature, v2.430) but REACH the UV to discriminate the completions -- a distinct, harder observational target than the low-energy fronts.",
+  "honest_scope": "The frameworks are the ENGINE's schematic O(1) encoders of each paradigm's low-energy dim-8 coefficients, not computed spectra -- so 'CDT reaches the candidate' means the engine's CDT-encoder point is in the cage and parity-deformation-close, a structural statement about the encoders, not a proof that a real CDT continuum limit yields the candidate (same caveat as the string identification, v2.433). Parity-even distance uses the dimensionless O(1) couplings (magnitudes toy). 'Reaches' requires the framework to be the parity-conserving rival (rejected only by birefringence) OR already feasible; it is a low-energy-EFT statement and cannot see UV differences. The ranking (string 0.067 < CDT 0.085 < AS 0.196) is at the encoder level; the string-vs-CDT gap is small and within the O(1) encoder uncertainty, which is exactly why 'not string-unique' is the honest reading. This TEMPERS but does not overturn v2.434: heterotic remains the best-motivated (the axion), and 'not type II' stands (pure-GR's no-R^2 point is far). Robust content: multiple R^2-bearing UV paradigms (string, CDT, asymptotic safety) sit in the candidate's rigorous cage and are parity-deformation-reachable, only LQG is excluded, so the candidate is not string-unique and the low-energy EFT cannot discriminate the UV completion -- other viable solve-paths exist. Encoder-level, toy-distances, low-energy-cannot-see-UV, tempers-not-overturns. A UV-tournament broadening cycle.",
+  "references": [
+    "this repo: v2.434 (heterotic identification -- tempered here), v2.433 (string tree-EFT + parity), v2.431 (rigorous cage), v2.411 (LQG excluded / framework sweep), v2.322 (no framework fits theory+data), v1.89 (framework phylogeny)",
+    "physics: string (tower), CDT (discrete-spacetime continuum limit), asymptotic safety (UV fixed point) are distinct UV completions; a low-energy EFT is UV-completion-agnostic among those consistent with it"
+  ]
+}

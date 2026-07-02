@@ -17,15 +17,18 @@ synthesis: method, candidate, rigor tiering, CC sector, falsifiability, limits) 
 
 ## ★ The current picture (v2.434): a single, near-unique, falsifiable candidate — on a *rigorous* core, with a named UV completion
 
-**The UV completion (v2.434):** the candidate = **heterotic string tree-EFT + its model-independent axion**, *not*
-type II. Two independent arguments: (1) given the candidate's cubic-curvature and parity couplings, a nonzero R²
-(Gauss–Bonnet) term is *rigorously required* — which tree-level type II (R⁴-only) lacks but heterotic has; (2) the
-candidate's one data-selected coupling, the **parity**, is a gravitational-Chern–Simons `R∧R̃` term, exactly the
-heterotic model-independent axion's Green–Schwarz coupling. So the candidate's single free coupling is *the
-heterotic axion*, and a cosmic-birefringence detection is (in this reading) a detection of it →
-[v2.434](results/2026-07-02-v2.434-qnm-heterotic-identification.md). A structural identification from textbook
-string facts + the engine, giving option #4 a specific target (a heterotic vacuum's coefficients vs the cage) —
-not yet a compactification computation.
+**The UV completion (v2.434, v2.436):** the candidate needs a nonzero R² (Gauss–Bonnet) term (rigorously — given
+its cubic-curvature and parity couplings, g_R2=0 violates graviton positivity + causality + cross-sector), which
+tree-level type II (R⁴-only) lacks. Among the R²-bearing UV completions, **string/heterotic is the leading and
+best-motivated** candidate — closest in the rigorous cage, and its **model-independent axion**'s Green–Schwarz
+`R∧R̃` coupling *is* the candidate's one data-selected coupling (the parity), so a cosmic-birefringence detection
+is (in this reading) a detection of the axion → [v2.434](results/2026-07-02-v2.434-qnm-heterotic-identification.md),
+[v2.435](results/2026-07-02-v2.435-qnm-axion-universality.md). **But it is *not* unique:** a full UV tournament
+finds **CDT (near-tie) and asymptotic safety (competitive)** also sit in the cage and are reachable by the same
+parity deformation — only LQG is excluded — so the low-energy EFT cannot yet discriminate string vs CDT vs
+asymptotic safety; that needs genuine UV data →
+[v2.436](results/2026-07-02-v2.436-qnm-uv-tournament.md). A structural identification (schematic O(1) encoders),
+not a compactification computation.
 
 **Is this a toy?** No. The engine's 42 constraints are rigor-tagged, and the candidate's entire **matter-gravity
 content is source-exact** — amplitude positivity / causality / bootstrap, zero toy input (verified ledger →
