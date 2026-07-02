@@ -1,0 +1,31 @@
+{
+  "version": "v2.426",
+  "stack_sizes": {
+    "default": 42,
+    "with_matter_tower": 44
+  },
+  "rung_bound": "g_8^2 <= g_6 * g_10",
+  "predicted_g10_floor": 0.4,
+  "g10_window_full_stack": [
+    0.4,
+    0.6
+  ],
+  "new_constraint_tiers": {
+    "scalar_positivity_g10": "rigorous",
+    "matter_tower_g8_squared_bound": "rigorous"
+  },
+  "consistency_checks": {
+    "matter_tower_is_opt_in": true,
+    "both_new_constraints_rigorous": true,
+    "rung_in_rigorous_core": true,
+    "predicts_g10_floor": true,
+    "floor_is_source_exact_hankel": true
+  },
+  "all_checks_pass": true,
+  "finding": "RIGOROUS EXTENSION (MT): the matter moment tower's next rung is source-exact and predicts g_10 >= g_8^2/g_6. The engine had the leading matter Hankel bound (g_6^2 <= g_4 g_8) but stopped at g_8, while the curvature sector already had its next rung (g_R3^2 <= g_R2 g_R4, v2.375). Treating the matter coefficients (g_4, g_6, g_8, g_10) as consecutive moments of the positive spectral density, the Hankel matrix is positive semi-definite, so the adjacent 2x2 minor gives g_8^2 <= g_6 g_10 -- pure Cauchy-Schwarz on a positive measure, RIGOROUS, the same source-exact moment-problem structure as the leading rung and the curvature tower. Wired opt-in and tagged rigorous; the rung lands in the rigorous core (zero toy input). For the candidate (g_6 = g_8 = 0.4) it FORCES g_10 >= 0.4 -- a rigorous prediction of the next, currently-absent matter coefficient purely from positivity -- and the full stack pins g_10 to [0.4, 0.6] (the rigorous Hankel floor plus the EFT-validity ceiling). So the 'infinite matter tower' (v2.375/v2.381), previously asserted at the level of the leading coefficients, is now made concrete by one more RIGOROUS rung, matching the curvature tower and extending the de-toying program's rigorous core by a genuine new source-exact bound rather than a toy proxy. This is exactly the 'make it real' direction: a new constraint that carries zero toy input and yields a rigorous prediction (the g_10 floor) for a coefficient a future higher-order amplitude computation could check.",
+  "honest_scope": "The bound g_8^2 <= g_6 g_10 is source-exact IN FORM (Hankel/Cauchy-Schwarz positivity of moments), carrying the v2.411 'rigorous = source-exact in form' caveat: the identification of the Wilson coefficients with CONSECUTIVE moments mu_k is the standard dispersive-tower convention (prefactors set to 1, as the leading rung already does), so the RIGOROUS content is the inequality structure and the resulting floor g_10 >= g_8^2/g_6, not a claim about the absolute normalization of g_10. The g_10 upper edge (0.6) is the EFT-validity / complexity ceiling, not part of the rung. This is opt-in, so the default stack, all frameworks, and all goldens are untouched; it ADDS a rung. The 'prediction' g_10 >= 0.4 is a lower bound (positivity forces at least this), not a determination of g_10's value. Robust content: the matter moment tower extends by one source-exact rigorous rung (g_8^2 <= g_6 g_10), forcing g_10 >= g_8^2/g_6 = 0.4 for the candidate with zero toy input, mirroring the curvature tower and making the infinite-tower claim concrete by one step. Source-exact-in-form, moment-convention, opt-in, lower-bound-not-value. The MT matter-tower cycle.",
+  "references": [
+    "this repo: v2.375/v2.381 (infinite matter+curvature towers; matter string-likeness), dispersion_tower (leading matter rung g_6^2<=g_4 g_8), v2.292 (curvature tower g_R4 precedent), v2.411 (rigor tiering)",
+    "physics: Caron-Huot-Van Duong 2021 (dispersive moments / Hankel positivity); Arkani-Hamed-Huang-Huang (EFThedron moment structure); Hamburger/Stieltjes moment problem (Hankel PSD)"
+  ]
+}

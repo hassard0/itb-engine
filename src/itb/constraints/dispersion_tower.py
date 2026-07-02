@@ -85,3 +85,73 @@ class DispersionTowerCauchySchwarz(Constraint):
         out["g_8"] = g4
         out["g_6"] = -2.0 * g6
         return out
+
+
+class ScalarPositivityG10(Constraint):
+    """g_10 >= 0: positivity of the next matter-tower moment (v2.426, MT extension)."""
+
+    name = "scalar_positivity_g10"
+    citation = "Caron-Huot et al 2021 -- fifth-order forward positivity (matter moment mu_5)"
+    constraint_class = ConstraintClass.A_AMPLITUDE
+
+    def evaluate(self, theory: Theory) -> ConstraintResult:
+        g10 = theory.coefficients.get("g_10", 0.0)
+        grad = self.gradient(theory)
+        return ConstraintResult(
+            constraint_name=self.name,
+            satisfied=g10 >= 0,
+            margin=g10,
+            signed_distance_margin=self._signed_distance(g10, grad),
+            details={"bound": "g_10 >= 0", "value": g10},
+        )
+
+    def gradient(self, theory: Theory) -> dict[str, float]:
+        out = {k: 0.0 for k in theory.coefficients}
+        out.setdefault("g_10", 0.0)
+        out["g_10"] = 1.0
+        return out
+
+
+class MatterTowerRungG10(Constraint):
+    """The next matter moment-tower rung: g_8^2 <= g_6 * g_10 (v2.426, MT extension).
+
+    The dispersion tower's chained Cauchy-Schwarz bound g_{2n}^2 <= g_{2n-2} g_{2n+2} continued one rung past
+    what the engine had (g_6^2 <= g_4 g_8): treating the matter Wilson coefficients (g_4, g_6, g_8, g_10) as
+    consecutive moments mu_k of the positive spectral density (Im of the forward amplitude), the Hankel matrix of
+    moments is positive semi-definite, so every adjacent 2x2 minor gives a log-convexity bound. This is the
+    SAME source-exact moment-problem structure the engine already uses for the leading matter rung and for the
+    curvature tower (g_R3^2 <= g_R2 g_R4, v2.375) -- pure Cauchy-Schwarz on a positive measure, RIGOROUS. Opt-in;
+    it makes the "infinite matter tower" (v2.375/v2.381) concrete by one more rung.
+
+    Reference: Caron-Huot-Van Duong 2021 (dispersive moments / Hankel positivity); Arkani-Hamed-Huang-Huang
+    (EFThedron moment structure)."""
+
+    name = "matter_tower_g8_squared_bound"
+    citation = "Caron-Huot-Van Duong 2021 (matter moment-tower Hankel positivity, next rung)"
+    constraint_class = ConstraintClass.A_AMPLITUDE
+
+    def evaluate(self, theory: Theory) -> ConstraintResult:
+        g6 = theory.coefficients.get("g_6", 0.0)
+        g8 = theory.coefficients.get("g_8", 0.0)
+        g10 = theory.coefficients.get("g_10", 0.0)
+        margin = g6 * g10 - g8 * g8
+        grad = self.gradient(theory)
+        return ConstraintResult(
+            constraint_name=self.name,
+            satisfied=margin >= 0,
+            margin=margin,
+            signed_distance_margin=self._signed_distance(margin, grad),
+            details={"bound": "g_8^2 <= g_6 * g_10", "g_6": g6, "g_8": g8, "g_10": g10, "margin": margin},
+        )
+
+    def gradient(self, theory: Theory) -> dict[str, float]:
+        g6 = theory.coefficients.get("g_6", 0.0)
+        g8 = theory.coefficients.get("g_8", 0.0)
+        g10 = theory.coefficients.get("g_10", 0.0)
+        out = {k: 0.0 for k in theory.coefficients}
+        for k in ("g_6", "g_8", "g_10"):
+            out.setdefault(k, 0.0)
+        out["g_6"] = g10
+        out["g_10"] = g6
+        out["g_8"] = -2.0 * g8
+        return out

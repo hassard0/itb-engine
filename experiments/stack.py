@@ -28,7 +28,8 @@ from itb.constraints.cosmological_constant import DeSitterConjecture, AdSDistanc
 from itb.constraints.cross_sector_efthedron import CrossSectorEFThedron
 from itb.constraints.complexity_cutoff import ComplexityCutoff
 from itb.constraints.cubic_parity import ParityViolatingCubicBound
-from itb.constraints.dispersion_tower import DispersionTowerCauchySchwarz, ScalarPositivityG8
+from itb.constraints.dispersion_tower import (DispersionTowerCauchySchwarz, ScalarPositivityG8,
+                                              ScalarPositivityG10, MatterTowerRungG10)
 from itb.constraints.curvature_dispersion_tower import (
     CurvatureRiemann4Positivity,
     CurvatureMomentTowerMandate,
@@ -242,7 +243,8 @@ def build_stack(prefactors: dict[str, float] | None = None,
                 include_curvature_tower: bool = False,
                 include_cc_sector: bool = False,
                 cc_c_dS: float = 1.0,
-                cc_c_AdS: float = 1.0) -> list[Constraint]:
+                cc_c_AdS: float = 1.0,
+                include_matter_tower: bool = False) -> list[Constraint]:
     """Assemble the canonical constraint stack, overriding the tunable knife-edge
     prefactors with `prefactors` (missing keys fall back to CANONICAL).
 
@@ -315,6 +317,10 @@ def build_stack(prefactors: dict[str, float] | None = None,
         # --- v2.422 (CC1) + v2.423 (CC2): the cosmological-constant / dark-energy sector (opt-in core extension) ---
         stack.append(DeSitterConjecture(c_dS=cc_c_dS))          # CC1: refined dS (positive-Lambda ceiling)
         stack.append(AdSDistanceConjecture(c_AdS=cc_c_AdS))     # CC2: AdS distance (negative-Lambda tower floor)
+    if include_matter_tower:
+        # --- v2.426 (MT): next matter moment-tower rung, g_8^2 <= g_6 g_10 (opt-in, source-exact Hankel positivity) ---
+        stack.append(ScalarPositivityG10())
+        stack.append(MatterTowerRungG10())
     return stack
 
 
@@ -357,6 +363,9 @@ RIGOR = {
     # --- CC / dark-energy sector (v2.422/2.423, opt-in) ---
     "de_sitter_conjecture": "sourced_proxy",   # refined dS swampland conjecture (conjectural + scalaron-curvature proxy)
     "ads_distance_conjecture": "sourced_proxy",  # AdS distance conjecture (conjectural + species-tower proxy)
+    # --- matter moment-tower extension (v2.426, opt-in) ---
+    "scalar_positivity_g10": "rigorous",         # g_10 >= 0 (forward positivity, like g_4/g_6/g_8)
+    "matter_tower_g8_squared_bound": "rigorous",  # g_8^2 <= g_6 g_10 (Hankel/Cauchy-Schwarz on moments, source-exact)
 }
 
 
