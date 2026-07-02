@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (551 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (552 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -600,3 +600,4 @@ Auto-generated front door to the full research program (551 notes). Regenerate w
 | v2.438 | [v2.438 - the low-energy amplitude does infer part of the UV: the candi](2026-07-02-v2.438-qnm-spectral-inference.md) | Bold swing on the S-matrix / spectral-density angle, done *safely* with the bound the engine already has. The |
 | v2.439 | [v2.439 - the two layers of solving quantum gravity: the program lives ](2026-07-02-v2.439-qnm-two-layers.md) | Following the most foundational other path: underneath everything the program carves is an assumption — that |
 | v2.440 | [v2.440 - the Emergent String Conjecture sharpens the candidate's UV co](2026-07-02-v2.440-qnm-emergent-string.md) | Dreaming. The UV picture had stalled at a low-energy **degeneracy** (string ≈ CDT ≈ asymptotic safety, v2.436) |
+| v2.441 | [v2.441 - the candidate's Starobinsky inflation survives its own swampl](2026-07-02-v2.441-qnm-inflation-survives-tower.md) | Dreaming — connecting three parts of the program that had never met: the inflation sector (g_R2 as the Starobinsky |

@@ -1,0 +1,39 @@
+{
+  "version": "v2.441",
+  "N_efolds": 55.0,
+  "n_s": 0.9636,
+  "r": 0.004,
+  "H_inf_over_Mpl": 6.4e-06,
+  "scalaron_field_range_Mpl": 5.26,
+  "tower_start_over_Mpl": 0.799,
+  "branches": {
+    "emergent_string_alpha_1.0": {
+      "tower_mass_end_over_Mpl": 0.00415035997232608,
+      "tower_over_H_at_end": 648.5,
+      "phi_where_tower_reaches_H": 11.73,
+      "field_range_margin": 2.23,
+      "tower_stays_above_H": true
+    },
+    "KK_alpha_1.2": {
+      "tower_mass_end_over_Mpl": 0.0014493794349396065,
+      "tower_over_H_at_end": 226.5,
+      "phi_where_tower_reaches_H": 9.78,
+      "field_range_margin": 1.86,
+      "tower_stays_above_H": true
+    }
+  },
+  "consistency_checks": {
+    "candidate_gives_starobinsky_plateau": true,
+    "n_s_in_planck_window": true,
+    "r_in_litebird_window": true,
+    "tower_stays_above_H_both_branches": true,
+    "inflation_swampland_consistent": true
+  },
+  "all_checks_pass": true,
+  "finding": "The candidate's Starobinsky inflation SURVIVES its own swampland tower: the emergent-string/KK tower stays hundreds of times above the inflationary Hubble scale throughout the scalaron's roll, so single-field R^2 inflation is self-consistent and its r ~ 0.004 LiteBIRD prediction is robust. The famous swampland-vs-inflation tension is that a large-field inflaton drags an infinite tower down (SDC: m ~ M_Pl e^{-alpha phi}); if the tower drops below the inflationary Hubble scale H the single-field description breaks. The candidate's inflation is Starobinsky (its leading curvature coupling g_R2 > 0 gives the R^2 plateau; engine observable v1.86): N=55 gives n_s = 0.964, r = 0.0040 with H_inf ~ 6e-6 M_Pl, over a scalaron field range phi ~ 5.3 M_Pl. Its own tower (v2.440) starts at the species scale ~0.8 M_Pl and, by the SDC with rate alpha ~ 1 (emergent string) to ~1.2 (KK), descends only to ~0.004 M_Pl (string) / ~0.0015 M_Pl (KK) by the end of inflation -- HUNDREDS of times above H_inf, reaching H only at phi ~ 11-12 M_Pl, more than TWICE the Starobinsky field range. So the tower is never excited: single-field Starobinsky is self-consistent for the candidate. Three consequences. (1) The swampland-inflation tension is resolved in the candidate's favour -- its inflation survives its own tower with a >2x field-range margin. (2) The prediction n_s ~ 0.964, r ~ 0.004 is robust (not spoiled by tower excitation), dead-center in the Planck sweet spot and squarely in the LiteBIRD r-window (~2030s) -- so the candidate's inflation is a FOURTH near-term falsifiable front alongside the correlated birefringence + CMB-S4 + dark-energy signature (v2.430), and it shares the same g_R2 keystone that drives the dark-energy sector (v2.422-425), tying inflation and dark energy to one coupling. (3) It links the early universe to the UV: the same tower that makes the candidate a heterotic-string XOR KK completion (v2.440) sits just a factor ~100 above the inflationary scale, so primordial observations probe physics not far below that tower. The candidate now has a coherent cosmological history on the single g_R2 scalaron -- R^2 inflation in the early universe (swampland-safe, LiteBIRD-testable) flowing to the R^2 dark-energy plateau today (w > -1, DESI-testable).",
+  "honest_scope": "The Starobinsky n_s, r are the engine's v1.86 observable (n_s=1-2/N, r=12/N^2), set by the e-fold number N (plateau geometry), NOT by g_R2's value -- so the robust statement is that a POSITIVE g_R2 (which the candidate has, forced by v2.417) gives the plateau and hence the Planck/LiteBIRD sweet spot, not that g_R2's magnitude predicts a specific r. H_inf ~ 6e-6 M_Pl and the field range phi ~ 5.3 M_Pl are the standard Starobinsky values (from A_s and N), not engine outputs. The tower-descent uses the SDC with alpha ~ 1-1.2 -- the SDC is a swampland CONJECTURE and alpha is the idealized string/KK rate; the tower start is the toy Dvali species-scale proxy (~0.8 M_Pl, v2.440) -- so the tower masses (0.004 / 0.0015 M_Pl) are order-of-magnitude, and the ROBUST content is only that the tower stays well above H_inf with a large field-range margin (>2x), which holds comfortably across the alpha range and proxy uncertainty (it would take a >2x error to overturn). 'Fourth falsifiable front' is honest: r ~ 0.004 is the Starobinsky value any positive-plateau model shares, so a LiteBIRD detection at r ~ 0.004 would CONFIRM the plateau class (incl. the candidate), not uniquely the candidate; a null at r << 0.004 or n_s far from 0.965 would disfavour it. The inflation<->dark-energy 'single g_R2' story is a structural connection (same operator at two cutoffs), not a computed unified potential. Robust content: the candidate's g_R2 gives Starobinsky-plateau inflation (n_s ~ 0.964, r ~ 0.004, Planck/LiteBIRD sweet spot), and its own swampland tower stays well above the inflationary Hubble scale throughout the roll (>2x field-range margin), so the inflation is swampland-self-consistent and the r-prediction robust -- a fourth, near-term, falsifiable front on the same keystone that drives the dark energy. N-set-not-gR2-magnitude, SDC-conjecture, proxy-tower-scale, plateau-class-not-unique, structural-not-unified-potential. An inflation-survives-tower cycle.",
+  "references": [
+    "this repo: v1.86 (StarobinskyInflation observable), v2.440 (emergent-string/KK tower), v2.417 (g_R2 forced positive), v2.422-425 (g_R2 dark-energy plateau), v2.430 (the three-front verdict)",
+    "physics: Starobinsky 1980 (R^2 inflation, n_s=1-2/N, r=12/N^2); Swampland Distance Conjecture + inflation tension (Obied-Ooguri-Spodyneiko-Vafa; Bedroya-Vafa); Planck 2018 (n_s=0.9649+/-0.0042); LiteBIRD (r ~ 1e-3 target)"
+  ]
+}
