@@ -1,0 +1,78 @@
+{
+  "version": "v2.419",
+  "rigorous_core_ranges": {
+    "g_4": [
+      0.127,
+      0.996
+    ],
+    "g_6": [
+      0.045,
+      0.992
+    ],
+    "g_8": [
+      0.352,
+      9.189
+    ],
+    "g_R2": [
+      0.0,
+      0.832
+    ],
+    "g_R3": [
+      0.0,
+      0.389
+    ],
+    "g_R2_parity": [
+      0.0,
+      0.763
+    ]
+  },
+  "full_stack_ranges": {
+    "g_4": [
+      0.336,
+      0.628
+    ],
+    "g_6": [
+      0.206,
+      0.476
+    ],
+    "g_8": [
+      0.168,
+      0.619
+    ],
+    "g_R2": [
+      0.08,
+      0.248
+    ],
+    "g_R3": [
+      0.0,
+      0.185
+    ],
+    "g_R2_parity": [
+      0.047,
+      0.089
+    ]
+  },
+  "spread_geomean_stddev": {
+    "rigorous_core": 0.2128,
+    "full_stack": 0.0378,
+    "looser_x": 5.6
+  },
+  "normalized_effective_dimension": {
+    "rigorous_core": 3.63,
+    "full_stack": 4.34
+  },
+  "consistency_checks": {
+    "rigorous_family_much_looser": true,
+    "rigor_allows_zero_curvature": true,
+    "rigor_allows_zero_parity": true,
+    "data_collapses_to_tight_island": true,
+    "candidate_inside_both": true
+  },
+  "all_checks_pass": true,
+  "finding": "What the rigorous core alone determines is a broad FAMILY, not the candidate -- data does the final collapse. Walking the rigorous-core feasible set vs the full-stack island: rigor gives a family ~5-6x looser per dimension (geom-mean stddev ~0.21 vs ~0.038), and within it the candidate's defining features are NOT forced -- the leading curvature coupling g_R2 can be ~0 (no curvature correction), the parity coupling can be 0 (parity-conserving), and g_8 can be large. The full stack -- adding the swampland/observable tiers and the cosmic-birefringence datum -- collapses this to the tight ~3-dim island pinning g_R2 to ~[0.08, 0.25] and parity to ~[0.05, 0.09] (the candidate region). So the honest scope of 'what rigor establishes about quantum gravity' is now explicit and bounded: the source-exact core delivers the framework EXCLUSIONS (LQG, v2.411) and the amplitude STRUCTURE (positivity relations, the matter x cubic-curvature forcing of v2.417 when those sectors are present), but it leaves a broad family of consistent EFTs and does NOT select the specific candidate. The candidate's coordinates (nonzero curvature, nonzero parity, moderate g_8, near-Planckian scale) are picked out by the DATA plus the swampland/observable model layers. Rigor determines the RULES and the BOUNDARIES; data determines the POINT. This is the correct, honest framing of the whole program: the engine's zero-toy content is a set of exclusions and structural relations carving a family, and the single-candidate headline (v2.406) is a rigor+data+model result, not a rigor-alone one -- exactly as the rigor ledger (v2.415) tiered it, now shown at the level of the feasible SET's geometry.",
+  "honest_scope": "Ranges are from a random-walk exploration (40k steps) seeded at the candidate, so they are lower bounds on the true feasible extent -- the rigorous family is at least this broad, plausibly broader. The 'g_R2 can be ~0 / parity can be 0' statements are the robust qualitative content (the walk reaches those edges); the exact max values (e.g. g_8 to ~9) are walk-dependent and not claimed precisely. The normalized effective dimension (scale-standardized PCA participation ratio) is a coarse shape summary, not a manifold dimension. 'Rigor does not select the candidate' is the honest complement to the de-toying arc, NOT a weakening of it: the arc's rigorous results (LQG excluded, matter dominance's ceiling, the forcing lattice) all still hold -- they are statements about EXCLUSIONS and CONDITIONAL structure, which is exactly what a family-carving core provides; they were never claims that rigor uniquely picks the candidate. Robust content: the rigorous-core feasible family is several-fold looser than the full island and permits g_R2~0 and parity~0, so rigor determines a family while data collapses it to the candidate point. Walk-based extent, coarse dimension, honest-complement-not-weakening. A rigorous-family-geometry cycle.",
+  "references": [
+    "this repo: v2.411 (rigorous core / LQG excluded), v2.415 (rigor ledger), v2.417 (matter x cubic-curvature forcing), v2.406 (single global island on the FULL stack), v1.73 (~3.4-dim full-stack island)",
+    "physics: amplitude positivity / causality carve a family; data + swampland model layers select the point"
+  ]
+}
