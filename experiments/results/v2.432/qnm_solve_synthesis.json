@@ -1,0 +1,55 @@
+{
+  "version": "v2.432",
+  "over_determination": {
+    "marginal_parity_width": 0.042,
+    "conditioned_parity_width": 0.036,
+    "narrowing_factor": 1.17,
+    "over_determined": false
+  },
+  "solve_options": {
+    "1_empirical": {
+      "status": "decision-ready",
+      "state": "correlated signature -> verdict table; candidate confirmed by 1 of 8 outcome patterns",
+      "needs": "~2030 data (CMB-S4 + DESI/Euclid, GW birefringence to follow)",
+      "in_engine": true
+    },
+    "2_rigor": {
+      "status": "at its ceiling",
+      "state": "rigor cages the parity-even shape (g_4/g_6/g_R2 boxed, g_R3/parity capped); cannot force parity (parity-conserving rigorously fine)",
+      "needs": "nothing more in-engine; the residual is the dark g_8 scale + data-selected parity",
+      "in_engine": true
+    },
+    "3_real_normalization": {
+      "status": "blocked",
+      "state": "all magnitudes O(1)-toy",
+      "needs": "a real amplitude/matching computation to de-toy the prefactors",
+      "in_engine": false
+    },
+    "4_uv_embedding": {
+      "status": "open research",
+      "state": "candidate is the low-energy EFT, not a UV completion",
+      "needs": "matching to a specific string vacuum / asymptotic-safety fixed point",
+      "in_engine": false
+    },
+    "5_write_up": {
+      "status": "done",
+      "state": "Research Report II (v2.428)",
+      "needs": "none",
+      "in_engine": true
+    }
+  },
+  "consistency_checks": {
+    "over_determination_is_weak": true,
+    "conjunction_is_the_test": true,
+    "empirical_decision_ready": true,
+    "rigor_at_ceiling": true,
+    "deeper_options_need_external_inputs": true
+  },
+  "all_checks_pass": true,
+  "finding": "Closing the 'what would solve it' investigation with an honest negative and the quantified state. (a) Over-determination test: whether rigor + the front correlations let two measurements predict the third (the strongest possible falsifiability). It does NOT -- conditioning the feasible island on the matter (g_4) and dark-energy (g_R2) fronts near the candidate narrows the parity range by only ~1.1x, because each front is pinned by its own data/constraints, not cross-predicted. So the three fronts are moderately correlated (v2.429) but not over-determined; the strongest falsifier remains the CONJUNCTION (v2.430: the candidate requires all three, confirmed by 1 of 8 patterns), not '2 predict the 3rd'. This is a genuine honest negative -- the over-determination idea was worth testing and did not hold. (b) The quantified state of the five options answering the original question: #1 empirical is DECISION-READY (correlated signature -> verdict table; a single correlated ~2030 measurement renders the verdict); #2 rigor is AT ITS CEILING (source-exact bounds cage the parity-even shape but provably cannot force the parity, since a parity-conserving theory is rigorously fine, so the residual is exactly the observationally-dark g_8 scale and the data-selected parity); #3 real-normalization is BLOCKED (needs a real matching computation to de-toy the O(1) magnitudes); #4 UV-embedding is OPEN RESEARCH (needs matching the candidate to a specific string vacuum); #5 write-up is DONE (Report II). Bottom line, honestly: the two options advanceable inside the engine are now at their ceiling -- the candidate is maximally testable and maximally rigor-forced -- and further progress toward actually settling the theory needs either the ~2030 data (which will render the verdict) or external inputs the engine does not have (a real amplitude computation, or a UV embedding). That is the honest terminus of the autonomous program: a complete, rigor-tiered, maximally-falsifiable candidate whose fate is now a matter of measurement, not further carving.",
+  "honest_scope": "The over-determination test is a conditional-width comparison on a random-walk island sample (others free), so the 1.1x is a sampled estimate; the robust content is that it is CLOSE TO 1 (no strong cross-prediction), not the precise factor -- and the reason is structural (each front is data/constraint-pinned). It does not rule out a stronger over-determination in a different observable basis, only in the g_4/g_R2 -> parity direction tested. The five-option 'state' is a synthesis of prior cycles (v2.428-431) with honest status tags, not a new computation for #3/#4/#5 (those statuses -- blocked / open / done -- are judgements about what each needs, re-stated). 'At its ceiling' for rigor means rigor cannot force the parity (v2.420) and the parity-even cage is already tight (v2.431), not that no further rigorous constraint could ever be added. All the usual caveats carry (magnitudes O(1)-toy; the low-energy EFT is not the UV completion). Robust content: the three fronts are correlated but not over-determined, so the conjunction is the test; and the two in-engine solve-options (#1 empirical, #2 rigor) are at their ceiling while #3/#4 need external inputs -- the candidate's fate is now a matter of measurement. Sampled-conditional-width, one-direction test, synthesis-status-tags. The solve-synthesis cycle.",
+  "references": [
+    "this repo: v2.429 (correlated signature), v2.430 (verdict table), v2.431 (rigorous cage), v2.428 (Research Report II), v2.420 (parity-conserving rival = rigor ceiling)",
+    "physics: the low-energy EFT is testable + rigor-constrained; the UV completion and dimensionful magnitudes need inputs beyond amplitude-carving"
+  ]
+}
