@@ -1,0 +1,27 @@
+{
+  "version": "v2.438",
+  "candidate_saturation": 0.756,
+  "saturation_table": {
+    "pure_gr": null,
+    "string_tree_eft": 0.8,
+    "asymptotic_safety": 0.75,
+    "lqg_induced": 0.844,
+    "cdt": 0.831
+  },
+  "closest_by_saturation": "asymptotic_safety",
+  "closest_by_distance": "string_tree_eft",
+  "consistency_checks": {
+    "candidate_interior_not_saturating": true,
+    "candidate_multi_state_tower": true,
+    "all_viable_completions_interior": true,
+    "saturation_ranks_differently_than_distance": true,
+    "tower_exists_but_type_inaccessible": true
+  },
+  "all_checks_pass": true,
+  "finding": "The low-energy amplitude DOES infer part of the UV: the candidate's Hankel saturation shows a multi-state tower (not a single resonance), refining v2.437. The matter dispersion bound g_6^2 <= g_4 g_8 is Cauchy-Schwarz on the positive spectral density (the Wilson coefficients are its moments): saturated (s = g_6^2/(g_4 g_8) = 1) iff the spectrum is a single massive resonance, interior (s < 1) iff two or more masses -- a tower. The candidate has s = 0.756, INTERIOR, so its implied UV is MULTI-STATE (tower-like), NOT a single resonance; every viable completion is similarly interior (string 0.80, asymptotic safety 0.75, CDT 0.83). Two consequences. (1) A genuine partial UV inference: amplitude positivity, beyond carving the couplings, ESTABLISHES that the candidate's UV is a tower (a spread spectral density), ruling out a single-resonance / weakly-coupled-single-state completion -- so the candidate is 'stringy' in the concrete sense of having many states, and the tower whose EXISTENCE v2.375 asserted from log-convexity is here confirmed from the interior saturation. (2) It still does NOT discriminate the completions: all are interior with s ~ 0.75-0.84 within the O(1) encoder spread, and the saturation RANKS them differently from the parity-even distance -- on saturation the candidate is closest to asymptotic safety (0.75), on distance closest to string (0.067) -- so no single low-energy measure picks a winner, reinforcing the robust UV-completion degeneracy (v2.436). Net, this sharpens exactly what the low-energy program can and cannot say about the UV: it CAN confirm a tower EXISTS (the candidate is a multi-state theory, s < 1), but it CANNOT see the tower's TYPE (Regge vs Kaluza-Klein vs fixed-point) -- the tower's existence is a low-energy fact, its character is the UV frontier. So the amplitude-carving program's honest UV output is: 'the candidate is a multi-state (stringy) EFT whose specific UV completion (string / CDT / asymptotic safety) the low-energy data cannot resolve -- that needs the cutoff-scale spectrum.'",
+  "honest_scope": "s = g_6^2/(g_4 g_8) is the engine's leading matter Hankel ratio; its 'saturation = single state, interior = tower' reading is the exact moment-problem interpretation (Cauchy-Schwarz equality iff a rank-1 / single-delta measure), so this part is rigorous IN STRUCTURE (v2.411 'source-exact in form' -- the coefficients-as-moments convention). BUT the candidate's g_6 = g_8 = 0.4 is a Chebyshev-center ARTIFACT (v2.392), so the precise s = 0.756 is at an artifact point, not a prediction; the robust content is only that s < 1 (interior => multi-state), which holds across the feasible region and all frameworks, not the exact value. The frameworks are schematic O(1) encoders (v2.436 caveat), so the per-framework s (0.75-0.84) and the differing rankings are encoder-level -- the point is that they cluster and rank inconsistently (degeneracy), not the specific numbers. 'Multi-state tower' is an inference about the spectral density's support (>= 2 masses), not a computed spectrum. Robust content: the candidate (and all viable completions) is interior to the leading matter positivity bound (s < 1), so its UV spectral density is multi-state -- a tower exists -- while the tower's type is not resolved by any low-energy measure, refining the UV-frontier statement of v2.437. Chebyshev-artifact-point, interior-is-robust-value-is-not, encoder-level, spectrum-inferred-not-computed. A spectral-inference cycle.",
+  "references": [
+    "this repo: v2.437 (UV discriminator = tower spectrum), v2.436 (UV degeneracy), v2.375 (log-convex tower asserted), v2.392 (g_6=g_8 Chebyshev artifact), dispersion_tower (the Hankel bound)",
+    "physics: Cauchy-Schwarz / Hankel positivity on the spectral density; saturation = single state, interior = multi-state; string/KK/fixed-point differ in the tower TYPE, not its existence"
+  ]
+}
