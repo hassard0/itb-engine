@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (549 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (550 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -598,3 +598,4 @@ Auto-generated front door to the full research program (549 notes). Regenerate w
 | v2.436 | [v2.436 - other paths to solve: the candidate is a UV-convergence point](2026-07-02-v2.436-qnm-uv-tournament.md) | Asked to consider **other paths** to solving QG. The program — and the v2.433–435 arc — assumed the |
 | v2.437 | [v2.437 - the asymptotic-safety discriminator fails at low energy: the ](2026-07-02-v2.437-qnm-uv-discriminator.md) | Bold swing on a genuinely different solve-path (**asymptotic safety** = a UV fixed point, no tower; vs string/CDT |
 | v2.438 | [v2.438 - the low-energy amplitude does infer part of the UV: the candi](2026-07-02-v2.438-qnm-spectral-inference.md) | Bold swing on the S-matrix / spectral-density angle, done *safely* with the bound the engine already has. The |
+| v2.439 | [v2.439 - the two layers of solving quantum gravity: the program lives ](2026-07-02-v2.439-qnm-two-layers.md) | Following the most foundational other path: underneath everything the program carves is an assumption — that |
