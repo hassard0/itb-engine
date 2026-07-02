@@ -15,7 +15,7 @@ synthesis: method, candidate, rigor tiering, CC sector, falsifiability, limits) 
 
 ---
 
-## ★ The current picture (v2.434): a single, near-unique, falsifiable candidate — on a *rigorous* core, with a named UV completion
+## ★ The current picture (v2.444): a single, near-unique, falsifiable candidate — rigorous core, named UV completion, coherent cosmological history
 
 **The UV completion (v2.434, v2.436):** the candidate needs a nonzero R² (Gauss–Bonnet) term (rigorously — given
 its cubic-curvature and parity couplings, g_R2=0 violates graviton positivity + causality + cross-sector), which
@@ -28,7 +28,26 @@ finds **CDT (near-tie) and asymptotic safety (competitive)** also sit in the cag
 parity deformation — only LQG is excluded — so the low-energy EFT cannot yet discriminate string vs CDT vs
 asymptotic safety; that needs genuine UV data →
 [v2.436](results/2026-07-02-v2.436-qnm-uv-tournament.md). A structural identification (schematic O(1) encoders),
-not a compactification computation.
+not a compactification computation. The **swampland Emergent String Conjecture** sharpens this to a clean
+dichotomy — the candidate's confirmed multi-state tower (v2.438) is a **heterotic-string tower XOR a Planckian-KK
+decompactification**, and any extra dimensions are Planckian (submm-invisible, so *not* the large-extra-dimensions
+scenario) → [v2.440](results/2026-07-02-v2.440-qnm-emergent-string.md).
+
+**A coherent cosmological history on the g_R2 keystone (v2.441–444).** The same R² scalaron that drives the
+dark-energy plateau (w > −1) also drives **Starobinsky inflation** (n_s ≈ 0.964, r ≈ 0.004) — and the candidate's
+inflation *survives its own swampland tower* (the tower stays >100× above the inflationary Hubble scale, so
+single-field R² inflation is self-consistent, v2.441). This gives a **four-experiment / three-keystone**
+falsifiable signature (CMB birefringence, CMB-S4 matter, DESI w, LiteBIRD r) in which **g_R2 is over-determined**
+(DESI-w + LiteBIRD-r must co-occur or the single-scalaron story fails) and so is the **parity keystone**
+(birefringence + primordial chiral GWs, locked handedness) → [v2.442](results/2026-07-02-v2.442-qnm-four-front-verdict.md),
+[v2.443](results/2026-07-02-v2.443-qnm-chiral-gw.md). *Honest:* the inflationary chiral-GW amplitude is
+Planckian-suppressed (Π ~ 10⁻⁶, unobservable), so the parity's observable signature stays the *late-time*
+birefringence, and the inflation is plateau-*class* (not uniquely the candidate) →
+[v2.444](results/2026-07-02-v2.444-qnm-chiral-gw-amplitude.md).
+
+**A two-layer solve (v2.439).** The engine carves only *higher-derivative* operators — the graviton itself is
+presupposed — so "solving QG" splits into Layer 1 (*is* gravity quantum: table-top, BMV/Diósi–Penrose) and Layer 2
+(*which* EFT: this program), observationally separate → [v2.439](results/2026-07-02-v2.439-qnm-two-layers.md).
 
 **Is this a toy?** No. The engine's 42 constraints are rigor-tagged, and the candidate's entire **matter-gravity
 content is source-exact** — amplitude positivity / causality / bootstrap, zero toy input (verified ledger →
