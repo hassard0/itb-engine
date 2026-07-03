@@ -1,0 +1,31 @@
+{
+  "version": "v2.454",
+  "thawing_relation": "wa ~ -1.5 (1 + w0), w >= -1 at all z (canonical)",
+  "thawing_line_samples": {
+    "-0.95": -0.075,
+    "-0.90": -0.15,
+    "-0.85": -0.225,
+    "-0.83": -0.255
+  },
+  "desi_central": {
+    "w0": -0.83,
+    "wa": -0.75,
+    "early_w": -1.58
+  },
+  "wa_thawing_at_desi_w0": -0.255,
+  "desi_wa_steepness_factor": 2.9,
+  "consistency_checks": {
+    "thawing_relation_scale_independent": true,
+    "candidate_predicts_mild_wa": true,
+    "candidate_matches_w0_sign": true,
+    "desi_central_steeper_than_thawing": true,
+    "desi_cpl_implies_phantom_past_canonical_cannot_reach": true
+  },
+  "all_checks_pass": true,
+  "finding": "The dark-energy consistency relation wa ~ -1.5(1+w0): the candidate's canonical thawing quintessence predicts (w0, wa) on a scale-independent line, and DESI's central hint sits off it -- making dark energy the candidate's most vulnerable front. The candidate's dark energy is the R^2 scalaron on a flat plateau, a canonical thawing quintessence (Hubble-frozen at w ~ -1 early, thawing to w > -1 today), which for a nearly-flat potential lies on the Caldwell-Linder thawing line wa ~ -1.5(1+w0) with w >= -1 at all redshift (a canonical scalar never crosses -1). This is scale-independent -- a relation between two observables -- and predicts MILD evolution (for w0 in [-0.95, -0.83], wa in [-0.08, -0.26]). Confronting DESI 2024 (DESI+CMB+SNe, CPL: w0 ~ -0.83, wa ~ -0.75): the candidate matches the w0 > -1 SIGN (dynamical, not phantom today), but DESI's central wa (-0.75) is ~2.9x STEEPER than the thawing line at that w0 (-0.26), and DESI's CPL implies an early w0+wa = -1.58 < -1 -- a phantom past a canonical thawing field CANNOT reach. So the candidate lies on the mild thawing line while DESI's central CPL hint prefers a steeper, phantom-crossing evolution the candidate is structurally unable to produce. This makes DARK ENERGY the candidate's most vulnerable front: if DESI/Euclid sharpen and confirm a steep wa or a genuine w < -1, canonical thawing quintessence -- hence this candidate's dark-energy sector -- is falsified. It completes the scale-independent relation set (inflation r-n_s line v2.452, dark-energy wa-w0 line here, birefringence beta ~ alpha_EM v2.451) and honestly names where the candidate is most likely to break -- the opposite of cherry-picking favorable fronts. It also sharpens the g_R2 over-determination (v2.442): the same scalaron gives inflation on the r-n_s line AND dark energy on the mild-thawing line, so a confirmed steep/phantom DESI wa would break the single-scalaron picture from the dark-energy side.",
+  "honest_scope": "The thawing relation wa ~ -1.5(1+w0) is the Caldwell-Linder REPRESENTATIVE line, not an exact law -- thawing models occupy a BAND in (w0, wa), and the coefficient (~1.5) depends on the potential shape and the dark-energy density fraction; the robust content is that canonical thawing predicts MILD, w >= -1 evolution (wa negative but modest, |wa| << |1+w0| x few), NOT a specific wa value. The candidate's exact (w0, wa) POINT is not computed (it needs the scalaron potential + initial conditions) -- only that it sits on the canonical thawing branch (w >= -1). DESI 2024 is a ~2.5-3.9-sigma HINT depending on the SNe sample (not a detection), and the 'phantom past' is a CPL EXTRAPOLATION (w0+wa at a->0), not a direct high-z measurement -- CPL may simply be a poor fit; a non-CPL analysis could soften the tension. So the honest statement is a TENSION IN TREND (DESI central prefers steeper wa / phantom-crossing than canonical thawing allows), not a falsification -- the candidate matches the w0 > -1 sign, and only a robust, non-CPL-dependent steep-wa/phantom result would falsify it. That w >= -1 (no phantom crossing) is a firm structural prediction of any canonical single scalar is the robust, genuinely-falsifiable core. Robust content: the candidate's canonical thawing dark energy predicts w >= -1 at all z and (w0, wa) on the mild thawing branch (wa ~ -1.5(1+w0) representatively), consistent with the DESI w0 > -1 sign but in trend-tension with DESI's steeper central wa / CPL phantom past -- making dark energy the most vulnerable front, falsifiable by a robust steep-wa or w < -1 result. Representative-line-not-exact, point-not-computed, DESI-a-hint, CPL-extrapolation-tension-in-trend, no-phantom-is-the-firm-core. A dark-energy-thawing-line cycle.",
+  "references": [
+    "this repo: v2.452 (inflation r-n_s line), v2.451 (alpha_EM birefringence), v2.449 (falsification tracker -- flagged the DESI phantom-past tension), v2.442 (g_R2 over-determination), v2.422-425 (CC sector, w > -1), v1.47 (dark-energy axion thawing quadrant)",
+    "physics: Caldwell-Linder 2005 (thawing vs freezing, wa ~ -1.5(1+w0)); DESI 2024 DR1 (w0 ~ -0.83, wa ~ -0.75, CPL); canonical scalar w >= -1; CPL w(a) = w0 + wa(1-a)"
+  ]
+}

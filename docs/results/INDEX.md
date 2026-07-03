@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (564 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (565 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -613,3 +613,4 @@ Auto-generated front door to the full research program (564 notes). Regenerate w
 | v2.451 | [v2.451 - the α_EM cosmic birefringence: the candidate's heterotic axio](2026-07-02-v2.451-qnm-alpha-em-birefringence.md) | Dreaming boldly at the biggest thing the program had ducked — an actual **dimensionful prediction of the one |
 | v2.452 | [v2.452 - the inflation consistency relation r = 3(1−n_s)²: a scale-ind](2026-07-02-v2.452-qnm-ns-r-consistency.md) | Staying in the dimensionless vein v2.451 opened. The candidate's R² (Starobinsky) inflation gives, to leading |
 | v2.453 | [v2.453 - the complete scale-independent inflation prediction set: n_s ](2026-07-02-v2.453-qnm-inflation-consistency-set.md) | Continuing the dimensionless vein. v2.452 pinned r from n_s; but the R² plateau is a **one-parameter** family (the |
+| v2.454 | [v2.454 - the dark-energy consistency relation wa ≈ −1.5(1+w0): the can](2026-07-02-v2.454-qnm-dark-energy-thawing-line.md) | The dark-energy analog of the inflation consistency line (r = 3(1−n_s)², v2.452), in the same dimensionless vein — |
