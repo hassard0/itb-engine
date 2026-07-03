@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (561 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (562 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -610,3 +610,4 @@ Auto-generated front door to the full research program (561 notes). Regenerate w
 | v2.448 | [v2.448 - the candidate's cosmological field content: two distinct scal](2026-07-02-v2.448-qnm-two-scalars.md) | A structural clarification the program had left implicit. It has repeatedly attributed dark energy/inflation to |
 | v2.449 | [v2.449 - the falsification tracker: what would kill the candidate (the](2026-07-02-v2.449-qnm-falsification-tracker.md) | v2.446 catalogued what *agrees* on the candidate (seven independent principle-areas). This cycle builds the |
 | v2.450 | [v2.450 - the candidate, written out: the explicit low-energy Lagrangia](2026-07-02-v2.450-qnm-explicit-lagrangian.md) | After ~560 result notes the program had never assembled the candidate in one place — the couplings live scattered |
+| v2.451 | [v2.451 - the α_EM cosmic birefringence: the candidate's heterotic axio](2026-07-02-v2.451-qnm-alpha-em-birefringence.md) | Dreaming boldly at the biggest thing the program had ducked — an actual **dimensionful prediction of the one |
