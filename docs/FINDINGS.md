@@ -1,6 +1,6 @@
 # ITB Engine — Findings
 
-*What the Information-Theoretic Bootstrap engine has found. Current as of v2.407.*
+*What the Information-Theoretic Bootstrap engine has found. Current as of v2.455.*
 
 **Start here:** the section ★ below is the current headline — one near-unique, falsifiable candidate QG EFT and
 its most robust findings. §1–9 that follow are the *foundational program* (v1.7x–v2.2x): the island census, the
@@ -15,7 +15,7 @@ synthesis: method, candidate, rigor tiering, CC sector, falsifiability, limits) 
 
 ---
 
-## ★ The current picture (v2.444): a single, near-unique, falsifiable candidate — rigorous core, named UV completion, coherent cosmological history
+## ★ The current picture (v2.455): a single, near-unique, falsifiable candidate — rigorous core, named UV completion, coherent cosmological history
 
 **The UV completion (v2.434, v2.436):** the candidate needs a nonzero R² (Gauss–Bonnet) term (rigorously — given
 its cubic-curvature and parity couplings, g_R2=0 violates graviton positivity + causality + cross-sector), which

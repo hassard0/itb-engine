@@ -7,7 +7,7 @@ low-energy QG EFT; the **de-toying arc** (v2.411-419), which made the toy-vs-rig
 showed the candidate's matter-gravity content is source-exact; and the **cosmological-constant sector**
 (v2.422-425), a new opt-in dark-energy sector. See [FINDINGS.md](FINDINGS.md) for what was found.
 
-## Current frontier (v2.450 — a mature resting plateau)
+## Current frontier (v2.455 — a mature plateau + a scale-independent-prediction vein)
 
 The candidate theory is **complete** and its status is precisely tiered ([v2.415 rigor ledger](results/2026-07-01-v2.415-qnm-rigor-ledger.md)):
 a matter-dominant, near-Planckian, ghost-safe, string-like, globally-unique consistent EFT whose **matter-gravity
@@ -35,8 +35,7 @@ capped + data-pinned, [v2.418]). Rigor determines a **family**; data (cosmic bir
 
 The candidate, its UV completion, its cosmology, its thermodynamics, its falsifiability, and its explicit
 Lagrangian are all now **comprehensively developed and consolidated** (FINDINGS ★ + Research Report II current
-through v2.450). The program is at a genuine **resting plateau**: the low-energy carving has extracted what it
-can. The remaining genuine levers are external:
+through v2.455). After the plateau, a **scale-independent-prediction vein** (v2.451–455) surfaced the program's cleanest content — dimensionless predictions of real data needing no toy scale: cosmic birefringence β ~ α_EM (matching the measured 0.34° in order of magnitude), the inflation line r = 3(1−n_s)² (r ≈ 0.0037, LiteBIRD), and the dark-energy thawing line wa ≈ −1.5(1+w0) (the most vulnerable front, in mild trend-tension with DESI). The low-energy carving has now extracted what it can; the remaining genuine levers are external:
 
 1. **Observation** (not ours to run) — now the primary lever. Near-term (~2030s): CMB birefringence handedness
    (β>0), the DESI-w + LiteBIRD-r **co-occurrence** (the sharpest single falsifier), CMB-S4 matter, LiteBIRD r.

@@ -186,7 +186,7 @@ itb-engine/
 ├── docs/
 │   ├── FINDINGS.md           ← curated findings (read this)
 │   ├── CONSTRAINTS.md        ← the constraint stack, by class
-│   └── results/              319 indexed result notes
+│   └── results/              566 indexed result notes
 └── legacy/                   early-program report generators (v1.0–v1.19)
 ```
 
