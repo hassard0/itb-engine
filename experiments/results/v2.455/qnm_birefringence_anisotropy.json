@@ -1,0 +1,24 @@
+{
+  "version": "v2.455",
+  "H_inf_over_Mpl": 6.4e-06,
+  "f_a_over_Mpl": 1.0,
+  "delta_theta_inflationary": 1.0185916357881302e-06,
+  "anisotropic_over_isotropic": 1.0185916357881302e-06,
+  "delta_beta_deg": 3.463211561679643e-07,
+  "current_aniso_bound_deg": 0.1,
+  "f_a_for_observable_anisotropy_over_Mpl": 3.463211561679643e-05,
+  "consistency_checks": {
+    "anisotropy_suppressed": true,
+    "far_below_current_bound": true,
+    "suppression_scale_is_Hinf_over_fa": true,
+    "observable_anisotropy_needs_subplanckian_fa": true,
+    "candidate_predicts_isotropic_birefringence": true
+  },
+  "all_checks_pass": true,
+  "finding": "The candidate's cosmic birefringence is ISOTROPIC: its anisotropic component is suppressed by H_inf/(2pi f_a) ~ 1e-6 because the model-independent axion has f_a ~ M_Pl, so any observable anisotropic birefringence would disfavor that identification -- a clean discriminator on the axion decay constant. Complementing v2.451's isotropic beta ~ alpha_EM, the same axion acquires inflationary fluctuations delta_theta ~ H_inf/(2pi f_a), imprinting an anisotropic birefringence field delta_beta/beta ~ delta_theta/Delta_theta ~ H_inf/(2pi f_a Delta_theta). Unlike the isotropic angle, this ratio depends on H_inf/f_a, so it probes f_a directly. For the candidate (f_a ~ M_Pl, H_inf ~ 6e-6 M_Pl, Delta_theta ~ O(1)) it is ~1e-6, giving delta_beta ~ 3e-7 deg -- far below the current anisotropic-birefringence bounds (~0.1 deg). So the candidate predicts a birefringence ISOTROPIC to ~1e-6, essentially no anisotropy. This is discriminating: an observable anisotropy (delta_beta ~ 0.01-0.1 deg) would require f_a ~ 1e13-1e14 GeV (sub-Planckian), NOT the model-independent axion -- so a detection of anisotropic cosmic birefringence at any observable level would disfavor the candidate's Planckian-f_a heterotic-axion identification (v2.434), while a continued null is exactly what it predicts. This adds a fourth entry to the scale-clean birefringence story -- the isotropic size (~alpha_EM), the handedness (>0), the primordial-tensor chirality (suppressed, v2.444), and now the anisotropy (suppressed, an f_a probe) -- all pointing to a Planckian-decay-constant axion, and all falsifiable in a specific direction.",
+  "honest_scope": "An ORDER-OF-MAGNITUDE estimate. The anisotropic-birefringence amplitude delta_beta/beta ~ H_inf/(2pi f_a Delta_theta) is the standard axion-fluctuation result (Caldwell-Gluscevic-Kamionkowski 2011; the axion isocurvature-birefringence literature); the H_inf and f_a are the candidate's Starobinsky/model-independent-axion values (H_inf ~ 6e-6 M_Pl real from A_s; f_a ~ M_Pl the standard model-independent-axion scale, but the exact value is compactification-dependent -- that is precisely what the anisotropy would probe). Delta_theta ~ O(1) is a plausibility input (the same misalignment as v2.451). So the robust content is the PARAMETRIC statement: delta_beta/beta ~ H_inf/(2pi f_a), which is ~1e-6 for a Planckian f_a and would be observable only for a sub-Planckian f_a -- the anisotropy amplitude is a monotonic probe of f_a. The specific 3e-7 deg is illustrative; the robust claim is 'negligible for f_a ~ M_Pl, hence isotropic birefringence, and an observable anisotropy implies a much lower f_a'. The current bound (~0.1 deg) is a rough sensitivity figure. This is a consistency/discriminator statement, not a detection forecast. Robust content: the candidate's birefringence anisotropy is suppressed by H_inf/(2pi f_a) ~ 1e-6 for the model-independent axion's Planckian f_a, so the candidate predicts essentially ISOTROPIC birefringence, and any observable anisotropic birefringence would imply a sub-Planckian f_a and disfavor the model-independent-axion identification -- a clean f_a discriminator complementing the isotropic beta ~ alpha_EM. Order-of-magnitude, f_a-standard-but-compactification-dependent, Delta_theta-O(1)-input, discriminator-not-forecast. A birefringence-anisotropy cycle.",
+  "references": [
+    "this repo: v2.451 (isotropic beta ~ alpha_EM), v2.434 (parity = heterotic model-independent axion, f_a ~ M_Pl), v2.444 (primordial chiral GW suppressed), v2.441 (H_inf ~ 6e-6 M_Pl)",
+    "physics: Caldwell-Gluscevic-Kamionkowski 2011 (anisotropic cosmic birefringence from axion fluctuations); delta_theta ~ H_inf/2pi f_a; Planck/ACT/SPT anisotropic-birefringence bounds; model-independent axion f_a ~ M_Pl"
+  ]
+}
