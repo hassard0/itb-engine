@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (555 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (556 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -604,3 +604,4 @@ Auto-generated front door to the full research program (555 notes). Regenerate w
 | v2.442 | [v2.442 - the four-experiment / three-keystone unified verdict: LiteBIR](2026-07-02-v2.442-qnm-four-front-verdict.md) | Dreaming, consolidating. v2.441 gave the candidate a fourth near-term front (LiteBIRD r ≈ 0.004 / n_s ≈ 0.964 from |
 | v2.443 | [v2.443 - the candidate-specific inflationary fingerprint: chiral primo](2026-07-02-v2.443-qnm-chiral-gw.md) | Dreaming. v2.442 flagged that the candidate's scalar inflation observables (n_s ≈ 0.964, r ≈ 0.004) are |
 | v2.444 | [v2.444 - computing the v2.443 crux: the chiral-GW amplitude is Plancki](2026-07-02-v2.444-qnm-chiral-gw-amplitude.md) | v2.443 claimed the candidate's parity coupling makes the primordial GW spectrum chiral (a candidate-specific |
+| v2.445 | [v2.445 - a new thermodynamic sector: the candidate's neutral black-hol](2026-07-02-v2.445-qnm-neutral-bh-entropy.md) | A new axis, outside the cosmology/UV arc. Higher-derivative corrections shift a black hole's entropy at fixed |

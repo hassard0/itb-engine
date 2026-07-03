@@ -1,0 +1,40 @@
+{
+  "version": "v2.445",
+  "gC_sign_scan": {
+    "+0.193": {
+      "feasible": true,
+      "violations": []
+    },
+    "+0.000": {
+      "feasible": true,
+      "violations": []
+    },
+    "-0.100": {
+      "feasible": false,
+      "violations": [
+        "hofman_maldacena_wedge"
+      ]
+    },
+    "-0.193": {
+      "feasible": false,
+      "violations": [
+        "hofman_maldacena_wedge"
+      ]
+    }
+  },
+  "neutral_Schwarzschild_delta_S_sign": "positive",
+  "consistency_checks": {
+    "gC_positivity_rigorous_causality": true,
+    "gC_positivity_independent_of_a_eq_c": true,
+    "candidate_gC_positive": true,
+    "neutral_BH_entropy_shift_positive": true,
+    "causality_and_second_law_agree": true
+  },
+  "all_checks_pass": true,
+  "finding": "A new thermodynamic sector: the candidate's neutral (Schwarzschild) black-hole entropy shift is positive, and causality and the black-hole second law agree on the sign of its Weyl^2 coupling. Higher-derivative corrections shift a black hole's entropy at fixed mass, and the sign is tied to EFT consistency (Cheung-Liu-Remmen; Goon-Penco; Reall-Santos). v2.378 covered the charged-extremal case (positive shift <=> WGC); the NEUTRAL Schwarzschild sector, untouched, is controlled by the Weyl^2 coupling g_C -- on a Ricci-flat background R^2 and Ricci^2 vanish, so the leading Wald entropy correction is proportional to +g_C. The engine verifies g_C >= 0 is RIGOROUSLY forced: g_C < 0 (candidate otherwise fixed) violates the Hofman-Maldacena conformal-collider wedge, while g_C = 0 is marginal and g_C > 0 feasible -- and this positivity is INDEPENDENT of the a=c constructed-point assumption, which only fixes the VALUE (g_C = g_R2 = 0.19), not the sign. So two independent principles converge on the Weyl^2 sign: causality / conformal-collider forces g_C >= 0 (verified), and the black-hole second law (Reall-Santos / Cheung-Liu-Remmen entropy positivity, Delta S ~ +g_C) also wants g_C >= 0 -- both give the SAME sign, and the candidate sits on it (g_C > 0). So the candidate predicts a POSITIVE Schwarzschild entropy shift, extending the extremal-charged WGC entropy positivity (v2.378) to the neutral sector, and exhibiting a genuine cross-consistency between two independent consistency principles (causality and the generalized second law) on one coupling. The magnitude is Planck-suppressed -- a structural consistency statement, not an observable -- but the sign agreement is a non-trivial check the candidate passes, adding a thermodynamic pillar to the rigorous backbone (positivity, causality, bootstrap, swampland) that the candidate already rests on, all mutually consistent on the same point.",
+  "honest_scope": "The g_C >= 0 positivity is a RIGOROUS engine result (verified: g_C < 0 violates the Hofman-Maldacena wedge, source-tagged rigorous), and it is genuinely independent of the a=c assumption -- only the g_C VALUE (0.19) uses a=c, the SIGN is causality-forced. But the 'Delta S ~ +g_C' mapping is SIGN-LEVEL, not a computed coefficient: it uses the standard result (Cheung-Liu-Remmen; Reall-Santos) that on a Ricci-flat Schwarzschild background the leading entropy correction comes from the Riemann^2/Weyl^2 term with the causal/unitary sign giving Delta S > 0 -- the exact Wald-entropy coefficient and its geometric factor are NOT recomputed here, and the identification of the engine's g_C with the standard Weyl^2 Wald coefficient (same sign convention) is an assumption (defensible: both are the coefficient of the Weyl^2 operator). So the robust claim is the SIGN CONVERGENCE (causality forces g_C >= 0, and the second-law entropy positivity wants the same sign, and the candidate has g_C > 0), NOT a computed entropy value. The magnitude is Planck-suppressed (unobservable) -- this is a consistency/structure statement, like the WGC and extremal-decay results, not a new observational front. 'Two independent principles agree' is the genuine content; whether the second-law entropy positivity is a strict requirement of every consistent EFT (vs a strong conjecture) is itself debated (Cheung-Liu-Remmen argue it; there are known caveats for non-perturbative or field-redefinition subtleties). Robust content: causality (Hofman-Maldacena) rigorously forces the candidate's Weyl^2 coupling g_C >= 0 independent of a=c, and this same positive sign gives a positive neutral-Schwarzschild entropy shift (Delta S ~ +g_C), so causality and the black-hole second law agree on the candidate's g_C sign -- a thermodynamic cross-consistency check the candidate passes, at the sign/structure level, Planck-suppressed in magnitude. Sign-level-not-coefficient, positivity-rigorous-value-from-ac, second-law-conjecture-debated, Planck-suppressed-consistency-not-observable. A neutral-BH-entropy cycle.",
+  "references": [
+    "this repo: v2.378 (extremal-charged BH decay / WGC entropy), v2.412 (WGC implied by rigorous core), v2.402 (a=c constructed-point assumption), the Hofman-Maldacena wedge constraint",
+    "physics: Cheung-Liu-Remmen 2018 (WGC from BH entropy); Goon-Penco 2019 (universal thermodynamic inequality); Reall-Santos 2019 (higher-derivative BH entropy); Wald entropy; Hofman-Maldacena conformal-collider a/c bounds"
+  ]
+}
