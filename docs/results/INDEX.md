@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (559 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (560 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -608,3 +608,4 @@ Auto-generated front door to the full research program (559 notes). Regenerate w
 | v2.446 | [v2.446 - the convergent consistency backbone (consilience): the candid](2026-07-02-v2.446-qnm-consilience.md) | The recent cycles each added "another independent principle agrees on the candidate" (ESC v2.440; BH-entropy |
 | v2.447 | [v2.447 - closing the primordial-observability question: the candidate ](2026-07-02-v2.447-qnm-cosmological-collider.md) | A fresh probe that *closes* a question. The **cosmological collider** (Arkani-Hamed–Maldacena 2015) reads off |
 | v2.448 | [v2.448 - the candidate's cosmological field content: two distinct scal](2026-07-02-v2.448-qnm-two-scalars.md) | A structural clarification the program had left implicit. It has repeatedly attributed dark energy/inflation to |
+| v2.449 | [v2.449 - the falsification tracker: what would kill the candidate (the](2026-07-02-v2.449-qnm-falsification-tracker.md) | v2.446 catalogued what *agrees* on the candidate (seven independent principle-areas). This cycle builds the |

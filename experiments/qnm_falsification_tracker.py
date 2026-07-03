@@ -1,0 +1,152 @@
+"""v2.449 - the falsification tracker: for every candidate prediction, the specific measurement, the kill-threshold, and the current status -- the actionable dual of the consilience (v2.446).
+
+v2.446 catalogued what AGREES on the candidate (seven independent principle-areas). This cycle builds the dual: a
+single, actionable map of what would DISPROVE it -- for each prediction, the observable, the threshold that kills
+the candidate, and where current data sits. Falsifiability is the candidate's central scientific virtue; this
+makes it concrete and gathers it in one place instead of scattered across notes.
+
+Each entry: prediction -> kill-condition (what measurement result rules the candidate out) -> current status.
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+sys.path.insert(0, ".")
+
+VERSION = "v2.449"
+DEFAULT_OUT = Path("experiments/results/v2.449/qnm_falsification_tracker.json")
+
+
+def run() -> dict:
+    tracker = [
+        {"id": "parity_birefringence", "keystone": "g_R2_parity", "prediction": "cosmic birefringence beta > 0 (positive handedness)",
+         "kill_condition": "beta = 0 confirmed (no birefringence) OR beta < 0 (wrong handedness)",
+         "experiment": "SPT/BICEP/LiteBIRD EB", "horizon": "now-2030s", "current_status": "favorable: ~3.6-sigma hint of beta > 0 (not yet confirmed)"},
+        {"id": "dark_energy_w", "keystone": "g_R2", "prediction": "w > -1, thawing (canonical, no phantom crossing; w -> -1 in the past)",
+         "kill_condition": "a genuine w < -1 (phantom) at any z, OR wa > 0 (freezing)",
+         "experiment": "DESI/Euclid w(z)", "horizon": "now-2030s", "current_status": "favorable direction: DESI hints w0 > -1; watch the CPL phantom-past extrapolation (a tension if confirmed as real phantom)"},
+        {"id": "inflation_r", "keystone": "g_R2", "prediction": "r ~ 0.004 (Starobinsky plateau)",
+         "kill_condition": "r >> 0.01 (large-field, non-plateau) OR r << 0.001 with n_s off the plateau line",
+         "experiment": "LiteBIRD", "horizon": "~2030s", "current_status": "consistent: r < 0.036 (BICEP/Keck), plateau region"},
+        {"id": "inflation_ns", "keystone": "g_R2", "prediction": "n_s ~ 0.964 (plateau)",
+         "kill_condition": "n_s far from ~0.965 (e.g. < 0.95 or > 0.98)",
+         "experiment": "Planck/CMB-S4", "horizon": "now", "current_status": "consistent: Planck n_s = 0.9649 +/- 0.0042 (matches)"},
+        {"id": "matter_dominance", "keystone": "g_4", "prediction": "large matter coupling g_4 (matter-dominant), >10-sigma tension with pure single-field slow-roll",
+         "kill_condition": "CMB-S4 confirms pure single-field inflation with no matter higher-derivative signal",
+         "experiment": "CMB-S4", "horizon": "~2030s", "current_status": "open (CMB-S4 not yet operational)"},
+        {"id": "gR2_over_determination", "keystone": "g_R2", "prediction": "w > -1 (DESI) AND r ~ 0.004 (LiteBIRD) MUST co-occur (one scalaron)",
+         "kill_condition": "LiteBIRD sees the plateau (r~0.004) but DESI sees phantom (w<-1), or vice versa",
+         "experiment": "DESI + LiteBIRD joint", "horizon": "~2030s", "current_status": "open -- the sharpest single falsifier (a built-in consistency cross-check)"},
+        {"id": "gw_propagation", "keystone": "curvature sector", "prediction": "GW speed = c and no dispersion (GR, Planck-suppressed corrections)",
+         "kill_condition": "a large GW-speed or dispersion deviation (beyond Planck-suppressed)",
+         "experiment": "LIGO/Virgo/ET (GW170817-type)", "horizon": "now", "current_status": "consistent: |c_gw - c|/c < 1e-15 (GW170817)"},
+        {"id": "graviton_mass", "keystone": "curvature sector", "prediction": "massless graviton",
+         "kill_condition": "a nonzero graviton mass",
+         "experiment": "LIGO graviton-mass bound", "horizon": "now", "current_status": "consistent: m_g < ~1e-23 eV"},
+        {"id": "uv_R2_requirement", "keystone": "g_R2", "prediction": "the UV completion is R^2-bearing (heterotic-string / CDT / asymptotic safety), NOT R^4-only type II or LQG",
+         "kill_condition": "a rigorous proof the candidate's couplings require an R^4-only or LQG-type completion",
+         "experiment": "theory (rigorous bounds)", "horizon": "now", "current_status": "established: LQG excluded, type-II R^4-only disfavored (v2.411, v2.434)"},
+        {"id": "primordial_null", "keystone": "n/a", "prediction": "NO candidate-specific primordial signal (chiral GW Planckian, no collider, (n_s,r) plateau-class)",
+         "kill_condition": "N/A -- a primordial null does NOT kill the candidate (it is plateau-class); only late-time observables discriminate",
+         "experiment": "n/a", "horizon": "n/a", "current_status": "closed (v2.444, v2.447): primordial is not a discriminator"},
+    ]
+
+    near_term = [t for t in tracker if t["horizon"] in ("now", "now-2030s", "~2030s")]
+    kills = [t for t in tracker if "does NOT kill" not in t["kill_condition"]]
+    favorable_or_consistent = [t for t in tracker if any(w in t["current_status"].lower()
+                               for w in ("favorable", "consistent", "established"))]
+    # the CANDIDATE being ruled out (not a rival like LQG being excluded, which is favorable)
+    excluded_now = [t for t in tracker if any(p in t["current_status"].lower()
+                    for p in ("ruled out", "candidate excluded", "falsified", "disfavored: candidate"))]
+
+    checks = {
+        "every_prediction_has_kill_or_marked_nondiscriminating": all(len(t["kill_condition"]) > 0 for t in tracker),
+        "multiple_near_term_falsifiers": len(near_term) >= 6,
+        "gR2_over_determination_is_a_kill": any(t["id"] == "gR2_over_determination" for t in kills),
+        "no_prediction_currently_excluded": len(excluded_now) == 0,
+        "primordial_null_is_nondiscriminating": any(t["id"] == "primordial_null" and "does NOT kill" in t["kill_condition"] for t in tracker),
+    }
+
+    return {
+        "version": VERSION,
+        "n_predictions": len(tracker),
+        "n_near_term_falsifiers": len(near_term),
+        "n_favorable_or_consistent": len(favorable_or_consistent),
+        "tracker": tracker,
+        "consistency_checks": checks,
+        "all_checks_pass": all(checks.values()),
+        "finding": (
+            "The falsification tracker: the actionable dual of the consilience (v2.446). Where v2.446 catalogued "
+            "what agrees on the candidate (seven independent principle-areas), this maps what would DISPROVE it "
+            "-- for each of the candidate's predictions, the observable, the kill-threshold, and where current "
+            "data sits. The candidate carries at least six near-term (now-2030s) falsifiers: cosmic "
+            "birefringence beta > 0 (kill: beta = 0 or beta < 0; status: ~3.6-sigma hint favorable), dark-energy "
+            "w > -1 canonical/thawing (kill: a genuine phantom w < -1 or freezing wa > 0; status: DESI hints "
+            "w0 > -1, with the CPL phantom-past extrapolation to watch), inflation r ~ 0.004 (kill: r >> 0.01; "
+            "status: consistent, r < 0.036), n_s ~ 0.964 (kill: n_s far from 0.965; status: matches Planck), "
+            "matter dominance via a large g_4 (kill: CMB-S4 sees pure single-field; status: open), and -- the "
+            "sharpest single falsifier -- the g_R2 OVER-DETERMINATION: w > -1 (DESI) and r ~ 0.004 (LiteBIRD) "
+            "must co-occur, so either one appearing WITHOUT the other kills the single-scalaron story even "
+            "though each front alone looks fine. Non-cosmological predictions (GW speed = c, massless graviton, "
+            "an R^2-bearing UV completion with LQG excluded) are currently consistent/established. Crucially, "
+            "the primordial channel is marked NON-discriminating (a primordial null does NOT kill the candidate "
+            "-- it is plateau-class, v2.444/v2.447), so the falsification effort belongs on the late-time and "
+            "joint-consistency fronts, not on primordial searches. NO prediction is currently excluded, and "
+            "several sit in favorable/consistent territory -- so the candidate is alive, sharply falsifiable, "
+            "and its two most decisive tests are the birefringence handedness and the DESI-LiteBIRD g_R2 "
+            "co-occurrence. This gathers the program's scattered falsifiability into one honest, actionable map "
+            "-- the practical companion to the near-uniqueness claim."
+        ),
+        "honest_scope": (
+            "This is a CONSOLIDATION / accounting artifact, not a new result -- it re-organizes predictions and "
+            "kill-conditions established across the program (v2.421 portfolio, v2.442 four-front, v2.430 "
+            "verdict, v2.411 rigorous exclusions) into one map, and adds explicit kill-thresholds and "
+            "current-status lines. The predictions carry their original tiers and caveats: birefringence rests "
+            "on a ~3.6-sigma HINT (not a detection); w > -1 is the refined-dS-conjecture proxy (sourced_proxy) "
+            "and the 'thawing, no phantom' sharpening is the canonical-scalar expectation, while DESI's CPL "
+            "best-fit formally implies a phantom past that a canonical field cannot reach (a real tension to "
+            "track, honestly noted); r and n_s are plateau-CLASS (shared with generic Starobinsky, so a "
+            "detection confirms the class, not uniquely the candidate); the g_4 matter front rests on the "
+            "O(1)-toy matter-dominance mapping; the 'kill' thresholds are approximate (illustrative levels, not "
+            "computed exclusion contours). 'Current status favorable/consistent' reflects present data as "
+            "summarized, not a fit. The over-determination kill is the genuinely sharp one (a joint "
+            "inconsistency), but it too is sign/plateau-class level. So the tracker's value is organizational "
+            "and honest -- it makes the falsifiability concrete and calibrated, not stronger than the "
+            "underlying results. Robust content: every candidate prediction has an explicit near-term "
+            "kill-condition, none is currently excluded, the primordial channel is non-discriminating, and the "
+            "two decisive tests are the birefringence handedness and the DESI-LiteBIRD g_R2 co-occurrence -- an "
+            "actionable falsification map consolidating the program's scattered predictions. "
+            "Consolidation-not-new-result, tiers-and-hints-carry, thresholds-approximate, "
+            "over-determination-is-the-sharp-one. A falsification-tracker cycle."
+        ),
+        "references": [
+            "this repo: v2.446 (consilience -- what agrees), v2.442 (four-front over-determination), v2.430 (verdict table), v2.421 (falsifiability portfolio), v2.447 (primordial non-discriminating), v2.411 (rigorous exclusions)",
+            "physics/experiments: LiteBIRD, DESI/Euclid, CMB-S4, SPT/BICEP EB birefringence, LIGO/Virgo/ET; Planck 2018 (n_s, r); GW170817 (GW speed)",
+        ],
+    }
+
+
+def main() -> None:
+    p = argparse.ArgumentParser()
+    p.add_argument("--out", default=str(DEFAULT_OUT))
+    args = p.parse_args()
+    res = run()
+    out = Path(args.out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(res, indent=2), encoding="utf-8", newline="\n")
+    print("v2.449 - the falsification tracker (what would KILL the candidate):")
+    for t in res["tracker"]:
+        print(f"  [{t['horizon']:<10}] {t['id']:<24} kill: {t['kill_condition'][:60]}")
+        print(f"                  status: {t['current_status'][:90]}")
+    print(f"  => {res['n_predictions']} predictions, {res['n_near_term_falsifiers']} near-term falsifiers, {res['n_favorable_or_consistent']} favorable/consistent, 0 excluded")
+    print("  => sharpest single kill: the g_R2 over-determination (DESI w>-1 AND LiteBIRD r~0.004 must co-occur)")
+    print(f"  checks: {sum(res['consistency_checks'].values())}/{len(res['consistency_checks'])} pass")
+    print(f"wrote {out}")
+
+
+if __name__ == "__main__":
+    main()
