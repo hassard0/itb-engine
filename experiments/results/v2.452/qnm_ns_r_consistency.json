@@ -1,0 +1,27 @@
+{
+  "version": "v2.452",
+  "relation": "r = 3 (1 - n_s)^2",
+  "n_s_measured": 0.9649,
+  "n_s_err": 0.0042,
+  "r_predicted_central": 0.0037,
+  "r_predicted_band": {
+    "low": 0.00286,
+    "high": 0.00463
+  },
+  "equivalent_N_efolds": 57.0,
+  "litebird_sigma_r": 0.001,
+  "consistency_checks": {
+    "relation_holds": true,
+    "scale_independent": true,
+    "r_pinned_near_0_004": true,
+    "e_fold_number_physical": true,
+    "litebird_testable": true
+  },
+  "all_checks_pass": true,
+  "finding": "The inflation consistency relation r = 3(1-n_s)^2: a scale-independent, parameter-free prediction that pins r ~ 0.0037 from the measured n_s -- the candidate's second dimensionless data-touching prediction. The candidate's R^2 (Starobinsky) inflation gives n_s = 1 - 2/N and r = 12/N^2; eliminating the e-fold number N yields r = 3(1-n_s)^2, a parameter-free relation between two observables in which N drops out and no scale enters -- scale-independent, exactly the spirit of the alpha_EM birefringence (v2.451). It converts the standalone 'r ~ 0.004' into a sharp JOINT prediction: with Planck's n_s = 0.9649 +/- 0.0042 the relation fixes r = 0.0037 (+0.0009/-0.0008), corresponding to N ~ 57 e-folds (the standard inflation window). LiteBIRD, targeting sigma(r) ~ 0.001, can test the relation directly: r ~ 0.0037 confirms the R^2 plateau, while an r far off the line r = 3(1-n_s)^2 (r > 0.01, or r << 0.002 at this n_s) falsifies it. So the candidate now carries TWO scale-independent predictions touching data -- beta ~ alpha_EM (the birefringence size, v2.451) and r = 3(1-n_s)^2 (the inflation consistency line) -- neither needing the string scale or any O(1)-toy magnitude; both are pure dimensionless statements the near-term experiments test. This sharpens the inflation front from a single number to a falsifiable relation, and it composes with the g_R2 over-determination (v2.442): the same scalaron must give r on the consistency line AND w > -1 in the dark energy, so a joint (n_s, r, w) measurement over-tests the single-scalaron picture on a scale-independent footing.",
+  "honest_scope": "The relation r = 3(1-n_s)^2 is the standard R^2 / Starobinsky consistency relation to leading order in 1/N; it is PLATEAU-CLASS -- shared by any plateau/R^2-like model (Higgs inflation, alpha-attractors at large N approach the same line), so a confirmation validates the plateau CLASS, not uniquely THIS candidate (same status as v2.442's n_s, r). It is genuinely scale-independent and parameter-free, which is the point, but it is not candidate-unique. There are finite-N and reheating corrections to the leading n_s = 1-2/N, r = 12/N^2 (a few % in n_s, order-1 relative in r), so r = 0.0037 is a leading-order value with ~10-20% theory uncertainty on top of the n_s-propagated band; the RELATION itself is robust to leading order. The Planck n_s (0.9649 +/- 0.0042) is real data; LiteBIRD's sigma(r) ~ 0.001 is the design target. So the robust content is: the candidate's plateau inflation obeys the scale-independent line r = 3(1-n_s)^2, which pins r ~ 0.0037 (+/-~0.001) from the measured n_s -- a sharp, LiteBIRD-testable, parameter-free prediction (plateau-class, leading-order in 1/N). Plateau-class-not-unique, leading-order-in-1/N, Planck-n_s-real + LiteBIRD-target. An n_s-r consistency-relation cycle.",
+  "references": [
+    "this repo: v2.451 (alpha_EM birefringence, scale-independent), v2.441 (Starobinsky n_s, r), v2.442 (g_R2 over-determination), v1.86 (StarobinskyInflation observable)",
+    "physics: Starobinsky 1980 (R^2 inflation); n_s = 1-2/N, r = 12/N^2 => r = 3(1-n_s)^2; Planck 2018 (n_s = 0.9649 +/- 0.0042); LiteBIRD (sigma_r ~ 1e-3)"
+  ]
+}
