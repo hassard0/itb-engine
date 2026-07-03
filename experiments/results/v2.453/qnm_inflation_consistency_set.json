@@ -1,0 +1,30 @@
+{
+  "version": "v2.453",
+  "n_s": 0.9649,
+  "predictions_at_measured_ns": {
+    "N": 57.0,
+    "r": 0.0037,
+    "n_t": -0.000462,
+    "alpha_s": -0.000616
+  },
+  "relations": {
+    "r": "3(1-n_s)^2",
+    "n_t": "-r/8 (single-field consistency)",
+    "alpha_s": "-2/N^2 = -(1-n_s)^2/2"
+  },
+  "cmb_s4_sigma_alpha_s": 0.003,
+  "consistency_checks": {
+    "r_relation_scale_independent": true,
+    "n_t_single_field_consistency": true,
+    "alpha_s_relation": true,
+    "complete_set_from_ns": true,
+    "N_in_inflation_window": true
+  },
+  "all_checks_pass": true,
+  "finding": "The complete scale-independent inflation prediction set: given n_s, the candidate's R^2 plateau pins (r, n_t, alpha_s) via three parameter-free relations -- completing v2.452, which pinned only r. Because R^2 (Starobinsky) inflation is a one-parameter family (the e-fold number N), a single measured observable fixes all the others through scale-independent relations: N = 2/(1-n_s), r = 3(1-n_s)^2, n_t = -r/8 (the single-field tensor consistency), and alpha_s = -2/N^2 = -(1-n_s)^2/2 (the running of the scalar tilt). None carries a scale or an O(1)-toy magnitude. At the Planck value n_s = 0.9649 (N ~ 57): r = 0.0037, n_t = -0.00046, alpha_s = -0.00062. So the candidate's inflation makes a COMPLETE set of scale-independent predictions from one number -- r ~ 0.0037 (LiteBIRD-testable), the tiny-but-definite tensor tilt n_t ~ -5e-4 fixed by single-field consistency, and a small negative running alpha_s ~ -6e-4 (a soft CMB-S4 target, sigma(alpha_s) ~ few x 1e-3). This completes the inflation front's scale-independent predictions begun in v2.452, and together with beta ~ alpha_EM (v2.451) the candidate now has a SCALE-INDEPENDENT CORE: a set of falsifiable predictions -- the birefringence size and the full inflation consistency set -- that need neither the string scale nor any O(1)-toy coefficient, the sharpest and most scale-clean part of the candidate's observational content.",
+  "honest_scope": "These are the standard single-field / Starobinsky consistency relations to LEADING order in 1/N, and they are PLATEAU-CLASS -- shared by any plateau/R^2-like model, so they validate the plateau CLASS, not uniquely THIS candidate (same status as v2.442/v2.452). The n_t = -r/8 relation is the generic single-field-slow-roll tensor consistency (not Starobinsky-specific); r = 3(1-n_s)^2 and alpha_s = -2/N^2 are the Starobinsky/plateau forms. Finite-N and reheating corrections shift the leading values (a few % in n_s, order-1 relative in the small quantities r, n_t, alpha_s), so the numbers are leading-order with real theory uncertainty; the RELATIONS are robust to leading order. Observability differs sharply: r ~ 0.0037 is a genuine near-term target (LiteBIRD), but n_t ~ -5e-4 is far below any foreseeable tensor-tilt sensitivity, and alpha_s ~ -6e-4 is below the nominal CMB-S4 target (sigma ~ 3e-3), so those two are 'definite but effectively unmeasurable' predictions -- honest to state, not near-term discriminators. 'Scale-independent core' is a framing of the subset of predictions free of toy scales (v2.451 + this), not a new physical result. Robust content: the candidate's plateau inflation is a one-parameter family whose (r, n_t, alpha_s) are fixed by n_s through scale-independent, parameter-free relations -- r = 3(1-n_s)^2 ~ 0.0037 (testable), n_t = -r/8 and alpha_s = -2/N^2 (definite but tiny) -- completing the inflation front's scale-clean predictions, plateau-class and leading-order-in-1/N. Plateau-class-not-unique, leading-order, n_t-and-alpha_s-effectively-unmeasurable, framing-of-a-subset. An inflation-consistency-set cycle.",
+  "references": [
+    "this repo: v2.452 (r = 3(1-n_s)^2), v2.451 (alpha_EM birefringence), v2.441 (Starobinsky n_s, r), v2.442 (over-determination)",
+    "physics: Starobinsky 1980; single-field consistency n_t = -r/8; Starobinsky alpha_s = -2/N^2; Planck 2018 (n_s = 0.9649); LiteBIRD (r), CMB-S4 (alpha_s ~ few x 1e-3)"
+  ]
+}
