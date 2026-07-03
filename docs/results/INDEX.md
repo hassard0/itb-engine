@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (557 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (558 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -606,3 +606,4 @@ Auto-generated front door to the full research program (557 notes). Regenerate w
 | v2.444 | [v2.444 - computing the v2.443 crux: the chiral-GW amplitude is Plancki](2026-07-02-v2.444-qnm-chiral-gw-amplitude.md) | v2.443 claimed the candidate's parity coupling makes the primordial GW spectrum chiral (a candidate-specific |
 | v2.445 | [v2.445 - a new thermodynamic sector: the candidate's neutral black-hol](2026-07-02-v2.445-qnm-neutral-bh-entropy.md) | A new axis, outside the cosmology/UV arc. Higher-derivative corrections shift a black hole's entropy at fixed |
 | v2.446 | [v2.446 - the convergent consistency backbone (consilience): the candid](2026-07-02-v2.446-qnm-consilience.md) | The recent cycles each added "another independent principle agrees on the candidate" (ESC v2.440; BH-entropy |
+| v2.447 | [v2.447 - closing the primordial-observability question: the candidate ](2026-07-02-v2.447-qnm-cosmological-collider.md) | A fresh probe that *closes* a question. The **cosmological collider** (Arkani-Hamed–Maldacena 2015) reads off |

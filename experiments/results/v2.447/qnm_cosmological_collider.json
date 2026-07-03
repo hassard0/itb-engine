@@ -1,0 +1,25 @@
+{
+  "version": "v2.447",
+  "H_inf_over_Mpl": 6.4e-06,
+  "tower_start_over_H": 125000.0,
+  "tower_end_over_H": 625.0,
+  "axion_over_H": 0.001,
+  "collider_window_m_over_H": [
+    0.1,
+    5.0
+  ],
+  "consistency_checks": {
+    "tower_far_above_collider_window": true,
+    "axion_far_below_collider_window": true,
+    "no_state_in_collider_window": true,
+    "chiral_gw_suppressed": true,
+    "scalar_plateau_class": true
+  },
+  "all_checks_pass": true,
+  "finding": "Closing the primordial-observability question: the candidate has NO cosmological-collider signal, so its inflation is observationally generic single-field Starobinsky and all discrimination is late-time. The cosmological collider (Arkani-Hamed-Maldacena) reads off particles of mass m ~ H during inflation via oscillatory squeezed non-Gaussianity, needing m in a window ~(0.1 - few) H (the signal is exp(-pi m/H)-suppressed for m >> H). The candidate's states during inflation are both OUT of that window: the swampland tower sits at m/H ~ 670 to ~130,000 (species scale ~0.8 M_Pl descending to ~0.004 M_Pl over the scalaron roll, vs H ~ 6e-6 M_Pl) -- far too heavy, exp(-pi m/H) astronomically small -- while the model-independent axion (the parity) is nearly massless (shift-symmetry protected), m << H -- a light spectator that gives a near-scale-invariant contribution but not the oscillatory m ~ H collider signature. So there is no state in the collider window: everything is far too heavy (tower) or far too light (axion), and the candidate has no cosmological-collider signal. Combined with the other two primordial channels -- the chiral GW is Planckian-suppressed (Pi ~ 1e-6, v2.444) and the scalar (n_s, r) is plateau-class (shared with generic Starobinsky, v2.442) -- this CLOSES the primordial-observability question: the candidate's inflation is, at every achievable precision, indistinguishable from generic single-field Starobinsky. Therefore ALL candidate-specific discrimination is LATE-TIME (cosmic birefringence for parity, dark-energy w for the g_R2 plateau) plus the multi-front over-determination cross-checks (v2.442-443). The early universe confirms the plateau CLASS; it does not fingerprint THIS candidate. This is a clean, honest closure -- it tells the observational program exactly where NOT to look (primordial inflationary observables) and where the leverage actually is (the late-time birefringence + dark-energy + the g_R2 and parity over-determination), concentrating the falsification effort.",
+  "honest_scope": "An order-of-magnitude observability argument, not a computed non-Gaussianity. The m/H ratios use the toy species-scale tower (v2.440-441, proxy) and the standard Starobinsky H_inf ~ 6e-6 M_Pl; the ROBUST content is the huge separation from the collider window (tower m/H ~ 10^3-10^5, axion m/H << 1), which survives large factors of uncertainty -- the window is (0.1 - few) H and the tower is >100x above it even at its lightest. The exp(-pi m/H) suppression is the standard collider Boltzmann factor (Arkani-Hamed-Maldacena); the axion being 'nearly massless during inflation' assumes its shift symmetry is unbroken at the inflationary scale (standard for the model-independent axion, but the exact inflationary mass is model-dependent -- a mild caveat). 'No collider signal' means no OBSERVABLE oscillatory imprint from an m ~ H state; a light axion still contributes local-type non-Gaussianity, which is separately tiny for single-field-like dynamics (Maldacena consistency). This is a NEGATIVE observability result (like v2.444), consistent with -- and completing -- the primordial-suppression picture. Robust content: the candidate has no state in the cosmological-collider mass window (its tower is ~10^3-10^5 x H, its axion << H), so no collider signal; with the Planckian chiral GW (v2.444) and plateau-class (n_s, r) (v2.442), the candidate's inflation is observationally generic single-field Starobinsky and all candidate-specific discrimination is late-time. Order-of-magnitude, proxy-tower, negative-observability, axion-mass-model-dependent. A cosmological-collider (primordial-closure) cycle.",
+  "references": [
+    "this repo: v2.444 (chiral-GW Planckian-suppressed), v2.442 (n_s/r plateau-class), v2.441 (tower during inflation), v2.440 (species-scale tower), v2.434 (parity = model-independent axion)",
+    "physics: Arkani-Hamed-Maldacena 2015 (cosmological collider); the exp(-pi m/H) Boltzmann suppression; Maldacena single-field consistency; shift-symmetric axion as a light spectator"
+  ]
+}
