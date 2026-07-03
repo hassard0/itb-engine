@@ -1,0 +1,96 @@
+{
+  "version": "v2.450",
+  "lagrangian_terms": [
+    {
+      "operator": "(M_Pl^2/2) R",
+      "coefficient": "M_Pl^2/2",
+      "field": "graviton",
+      "parity": "even",
+      "role": "Einstein-Hilbert -- the presupposed quantum graviton (NOT carved; the program is its corrections)",
+      "tier": "presupposed"
+    },
+    {
+      "operator": "R^2",
+      "coefficient": "g_R2 ~ 0.19",
+      "field": "scalaron phi (parity-even)",
+      "parity": "even",
+      "role": "inflaton (early, Starobinsky plateau) + dark-energy field (late, w > -1); the curvature keystone",
+      "tier": "rigorous (forced > 0 by matter x cubic-curvature)"
+    },
+    {
+      "operator": "R^3",
+      "coefficient": "g_R3 ~ 0.09",
+      "field": "curvature",
+      "parity": "even",
+      "role": "cubic curvature; with matter, forces g_R2 > 0",
+      "tier": "rigorous (capped above)"
+    },
+    {
+      "operator": "R^4",
+      "coefficient": "g_R4 >= 0.042 (opt-in)",
+      "field": "curvature",
+      "parity": "even",
+      "role": "quartic-curvature moment-tower rung",
+      "tier": "rigorous (tower)"
+    },
+    {
+      "operator": "C^2 (Weyl^2)",
+      "coefficient": "g_C ~ 0.19 (>= 0)",
+      "field": "curvature",
+      "parity": "even",
+      "role": "Ostrogradsky ghost sits ABOVE the cutoff; positive neutral-BH entropy shift",
+      "tier": "rigorous (g_C >= 0 by Hofman-Maldacena)"
+    },
+    {
+      "operator": "theta R ^ R-tilde",
+      "coefficient": "g_R2_parity ~ 0.06",
+      "field": "axion theta (parity-odd)",
+      "parity": "odd",
+      "role": "gravitational Chern-Simons -> cosmic birefringence; = the heterotic model-independent axion",
+      "tier": "data-selected (single residual toy magnitude)"
+    },
+    {
+      "operator": "matter dim-8 tower (O_4,O_6,O_8,O_10)",
+      "coefficient": "g_4 ~ 0.53 (dominant), g_6=g_8~0.40, g_10>=0.4",
+      "field": "matter",
+      "parity": "even",
+      "role": "the DOMINANT sector; matter dominance caps gravity at <=40% and drives ~2/3 of constraints",
+      "tier": "rigorous (positivity tower)"
+    },
+    {
+      "operator": "Lambda_vac",
+      "coefficient": "g_Lambda <= g_R2 (opt-in)",
+      "field": "vacuum",
+      "parity": "even",
+      "role": "positive cosmological constant; refined-dS-bounded",
+      "tier": "sourced_proxy (swampland)"
+    },
+    {
+      "operator": "dark hidden sector",
+      "coefficient": "~3 dim",
+      "field": "dark",
+      "parity": "n/a",
+      "role": "no current observable probe",
+      "tier": "unprobed"
+    }
+  ],
+  "scales": {
+    "UV_cutoff": "Lambda_species ~ 0.72 M_Pl (Dvali species scale; N ~ 1.6 light species)",
+    "scalaron_mass": "M ~ 3e13 GeV (fixed by A_s ~ 2.1e-9)"
+  },
+  "candidate_feasible": true,
+  "consistency_checks": {
+    "candidate_feasible": true,
+    "all_operators_listed": true,
+    "two_scalars_opposite_parity": true,
+    "matter_is_dominant": true,
+    "scales_attached": true
+  },
+  "all_checks_pass": true,
+  "finding": "The candidate, written out: the explicit low-energy Lagrangian as a concrete field theory. After ~560 result notes the program had never assembled the candidate in one place; this capstone does. The theory is Einstein gravity (the presupposed graviton) plus its higher-derivative corrections: a parity-even scalaron phi from R^2 (inflaton + dark energy, the curvature keystone g_R2 ~ 0.19, rigorously forced positive), cubic and quartic curvature (g_R3, g_R4, moment-tower rungs), a Weyl^2 term (g_C ~ 0.19 >= 0 by Hofman-Maldacena, its Ostrogradsky ghost above the cutoff), a parity-odd axion theta from the gravitational Chern-Simons term (g_R2_parity ~ 0.06, the single data-selected coefficient, = the heterotic model-independent axion, source of cosmic birefringence), and a DOMINANT matter dim-8+ tower (g_4 ~ 0.53 leading, capping gravity at <=40% and driving ~2/3 of the constraints), plus an opt-in positive cosmological constant (g_Lambda <= g_R2) and a small unprobed dark sector. Two dimensionful anchors fix the scales: a Dvali species-scale UV cutoff ~0.72 M_Pl (N ~ 1.6 light species) and a scalaron mass M ~ 3e13 GeV (from the Planck amplitude A_s). Each term carries its rigor tier -- most are rigorous (source-exact positivity/causality), the matter tower and curvature keystone included; the vacuum energy is sourced_proxy (swampland); the one data-selected magnitude is the parity coupling. The candidate is feasible against all 42 constraints. This is the single concrete reference for the theory: a matter-dominant, near-Planckian, ghost-safe, string-like EFT with two cosmological scalars of opposite parity, whose gravitational sector is forced into existence and capped in size by its matter sector. It is a synthesis artifact -- no new physics -- but it turns the scattered coupling census into an explicit, usable Lagrangian, a fitting capstone for the mature program.",
+  "honest_scope": "A SYNTHESIS / presentation artifact, not a new result -- it assembles couplings, tiers, roles, and scales established across the program into one explicit Lagrangian. The operator structure is SCHEMATIC: 'R^2, R^3, R^4, C^2' and the 'matter dim-8 tower O_4..O_10' are the operator CLASSES the engine's couplings represent, not a fully index-contracted basis with fixed field redefinitions (the engine works with the couplings, not a canonicalized action), and the matter operators O_k are generic dim-(8,10,12,14) matter self-interactions rather than a specified matter multiplet. All g_i magnitudes are O(1)-toy except where a rigorous bound is noted (g_C >= 0, g_R2 > 0 forced, the tower inequalities); the specific VALUES are the Chebyshev-center point and carry the constructed-point assumptions (a=c => g_C=g_R2, g_6=g_8, g_R3_parity=0). The two dimensionful scales are the genuine anchors: the species cutoff ~0.72 M_Pl (toy Dvali-proxy normalization) and the scalaron mass ~3e13 GeV (fixed by the real A_s measurement -- the one solidly dimensionful number). The 'presupposed graviton' line is the v2.439 point (the engine carves corrections, not Einstein gravity). Feasibility against the 42 constraints is a real engine check. Robust content: the candidate can be written as an explicit two-scalar-plus-matter higher-derivative gravity Lagrangian with the listed operator classes, rigor tiers, and two dimensionful scales, feasible against every constraint -- a concrete, usable statement of the theory, schematic in operator basis and O(1)-toy in magnitudes. Synthesis-not-new-physics, schematic-operator-basis, toy-magnitudes-except-bounds, constructed-point-values. An explicit-Lagrangian capstone cycle.",
+  "references": [
+    "this repo: v2.402 (candidate profile), v2.448 (two scalars), v2.445 (g_C >= 0 / BH entropy), v2.439 (presupposed graviton), v2.394 (species scale), v1.86 (scalaron mass), v2.446 (consilience), CONSTRAINTS.md",
+    "physics: higher-derivative gravity; f(R) scalaron; gravitational Chern-Simons axion; Weyl^2 / Ostrogradsky; Dvali species scale; Starobinsky mass from A_s"
+  ]
+}
