@@ -7,7 +7,7 @@ low-energy QG EFT; the **de-toying arc** (v2.411-419), which made the toy-vs-rig
 showed the candidate's matter-gravity content is source-exact; and the **cosmological-constant sector**
 (v2.422-425), a new opt-in dark-energy sector. See [FINDINGS.md](FINDINGS.md) for what was found.
 
-## Current frontier (v2.425)
+## Current frontier (v2.450 — a mature resting plateau)
 
 The candidate theory is **complete** and its status is precisely tiered ([v2.415 rigor ledger](results/2026-07-01-v2.415-qnm-rigor-ledger.md)):
 a matter-dominant, near-Planckian, ghost-safe, string-like, globally-unique consistent EFT whose **matter-gravity
@@ -15,27 +15,39 @@ content is rigorous** (source-exact amplitude positivity / causality: LQG exclud
 and BH decay implied, the leading curvature coupling forced by matter x cubic-curvature -- de-toying arc
 v2.411-419), with the toy-dependence chased down to a single parity-magnitude coefficient (itself rigorously
 capped + data-pinned, [v2.418]). Rigor determines a **family**; data (cosmic birefringence) selects the
-**point** ([v2.419]). The candidate is falsifiable on **three independent observable fronts** -- parity
-(CMB + GW birefringence), matter (CMB-S4 inflation), and dark energy (DESI/Euclid w(z)) -- atop a rigorous
-backbone ([v2.421 falsification portfolio](results/2026-07-01-v2.421-qnm-falsification-portfolio.md)). The new
-CC sector adds a coherent dark-energy story ([v2.425 capstone](results/2026-07-01-v2.425-qnm-cc-capstone.md)):
-the candidate admits dark energy (capped at g_R2), selects de Sitter over anti-de Sitter, and predicts w >~ -1.
+**point** ([v2.419]). Since v2.425 a broad **dream arc (v2.433–450)** carried the program to a mature plateau:
+- **UV completion** ([v2.434–440]): the candidate is a multi-state (stringy) EFT whose *leading* completion is a
+  heterotic string + its model-independent axion, but *not* uniquely so — CDT and asymptotic safety remain
+  competitive (only LQG excluded); the Emergent String Conjecture sharpens the frontier to a heterotic-string
+  **XOR** Planckian-KK dichotomy.
+- **A coherent cosmological history** ([v2.441–443]) on the R² scalaron: Starobinsky inflation (swampland-safe,
+  n_s≈0.964, r≈0.004) → R² dark-energy plateau (w>−1), a **four-experiment / three-keystone** signature with
+  **two over-determined keystones** (g_R2 via DESI-w + LiteBIRD-r; parity via birefringence + chiral-GW).
+- **A two-field late universe** ([v2.448]): a parity-even scalaron (DE/inflation) + a parity-odd axion
+  (birefringence), distinct fields.
+- **A thermodynamic pillar** ([v2.445]): causality and the black-hole second law agree on the Weyl² sign (g_C≥0).
+- **The two-layer solve** ([v2.439]): the program *presupposes* the graviton and carves its corrections — Layer 1
+  (is gravity quantum: BMV/table-top) vs Layer 2 (which EFT: this program).
+- **The consilience** ([v2.446]) and its **dual, the falsification tracker** ([v2.449]): the near-uniqueness is
+  the convergence of **seven independent theoretical-consistency areas + six measurements**; for each prediction
+  there is a kill-threshold (none currently excluded; sharpest = the g_R2 over-determination).
+- **The candidate written out** ([v2.450]): the explicit low-energy Lagrangian, one concrete reference.
 
-Both the candidate program and the CC sector are now **comprehensively developed**. The genuine next major
-thrusts (in rough order of value vs tractability):
+The candidate, its UV completion, its cosmology, its thermodynamics, its falsifiability, and its explicit
+Lagrangian are all now **comprehensively developed and consolidated** (FINDINGS ★ + Research Report II current
+through v2.450). The program is at a genuine **resting plateau**: the low-energy carving has extracted what it
+can. The remaining genuine levers are external:
 
-1. **New sectors** (the productive vein, like the CC sector). Candidates: a matter-content / spin-decomposed
-   sector, a neutrino/flavour sector, or the conformal-anomaly-induced vacuum energy (a *rigorous* CC ingredient
-   ~ the Euler charge a = g_R2 -- flagged but deferred, needs careful encoding to avoid a mis-attribution).
-2. **More rigorous constraints.** Add source-exact EFThedron / higher-positivity bounds the engine lacks, moving
-   more of the stack into the rigorous tier (extends the de-toying program).
-3. **Real normalization / live data.** Every magnitude is O(1)-toy; a physical prefactor calibration would turn
-   the robust *structure* into quantitative predictions. The R4/GWOSC live-data route (parked below) remains
-   blocked on the missing source-backed qNM->R4 map ([v2.209]).
-4. **Observation** (not ours to run): CMB-S4 (~2030, matter + parity), DESI/Euclid (w(z), now), next-gen
-   GW-birefringence (parity chirality).
-5. **Write-up.** The candidate + rigor tiering + CC sector are at a natural point for a publication-style
-   synthesis (the [v2.0 research report](results/2026-06-09-v2.0-RESEARCH-REPORT.md) predates all of the above).
+1. **Observation** (not ours to run) — now the primary lever. Near-term (~2030s): CMB birefringence handedness
+   (β>0), the DESI-w + LiteBIRD-r **co-occurrence** (the sharpest single falsifier), CMB-S4 matter, LiteBIRD r.
+   Discrimination is **late-time** — the primordial channel is closed as a candidate-discriminator ([v2.447]).
+2. **UV / string-theory computation** (needs inputs the engine lacks) — a real heterotic-vacuum calculation of the
+   R²:R³:R⁴ + axion coefficients, to confirm/refute the leading UV completion and discriminate string vs CDT vs
+   asymptotic safety (the tower *type* is a UV observable the low-energy program cannot reach).
+3. **Real normalization / live data** — every magnitude is O(1)-toy; a physical prefactor calibration (the parked
+   R4/GWOSC route) remains blocked on the missing source-backed qNM→R4 map ([v2.209]).
+4. **New sectors** (if a genuinely fresh, non-artifact one appears) — the productive vein has largely been mined;
+   further micro-sectors risk re-skinning or Planck-suppression negatives.
 
 ## Parked route: R4/GWOSC live-data (foundational phase, from v2.208)
 
