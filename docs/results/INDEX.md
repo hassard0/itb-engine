@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (588 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (589 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -637,3 +637,4 @@ Auto-generated front door to the full research program (588 notes). Regenerate w
 | v2.475 | [v2.475 - robustness check tempers v2.474: the ESC discrimination separ](2026-07-08-v2.475-qnm-esc-discrimination-robustness.md) | Two findings: |
 | v2.476 | [v2.476 - the deferred computation, executed: the exact Veneziano finge](2026-07-08-v2.476-qnm-exact-veneziano-fingerprint.md) | For many cycles the exact string fingerprint was deferred as "forward-limit amplitude bookkeeping too error-prone." |
 | v2.477 | [v2.477 - superstring correction to v2.476: the exact-string fingerprin](2026-07-08-v2.477-qnm-superstring-fingerprint-correction.md) | v2.476 executed the exact fingerprint for the **bosonic** Veneziano amplitude Γ(−s)Γ(−t)/Γ(−s−t), whose forward |
+| v2.478 | [v2.478 - the honest capstone of the fingerprint arc: the double-ratio ](2026-07-08-v2.478-qnm-fingerprint-feasible-range.md) | The fingerprint arc (v2.464–477) compared the **constructed-point** double-ratio (g_4·g_8)/g_6² = 1.32 to string |
