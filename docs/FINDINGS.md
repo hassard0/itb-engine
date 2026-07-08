@@ -1,6 +1,6 @@
 # ITB Engine — Findings
 
-*What the Information-Theoretic Bootstrap engine has found. Current as of v2.455.*
+*What the Information-Theoretic Bootstrap engine has found. Current as of v2.457.*
 
 **Start here:** the section ★ below is the current headline — one near-unique, falsifiable candidate QG EFT and
 its most robust findings. §1–9 that follow are the *foundational program* (v1.7x–v2.2x): the island census, the
@@ -15,7 +15,7 @@ synthesis: method, candidate, rigor tiering, CC sector, falsifiability, limits) 
 
 ---
 
-## ★ The current picture (v2.455): a single, near-unique, falsifiable candidate — rigorous core, named UV completion, coherent cosmological history
+## ★ The current picture (v2.457): a single, near-unique, falsifiable candidate — rigorous core, named UV completion, coherent cosmological history
 
 **The UV completion (v2.434, v2.436):** the candidate needs a nonzero R² (Gauss–Bonnet) term (rigorously — given
 its cubic-curvature and parity couplings, g_R2=0 violates graviton positivity + causality + cross-sector), which
@@ -33,11 +33,13 @@ dichotomy — the candidate's confirmed multi-state tower (v2.438) is a **hetero
 decompactification**, and any extra dimensions are Planckian (submm-invisible, so *not* the large-extra-dimensions
 scenario) → [v2.440](results/2026-07-02-v2.440-qnm-emergent-string.md).
 
-**A coherent cosmological history on the g_R2 keystone (v2.441–444).** The same R² scalaron that drives the
-dark-energy plateau (w > −1) also drives **Starobinsky inflation** (n_s ≈ 0.964, r ≈ 0.004) — and the candidate's
+**A cosmological history structured by the R² operator (v2.441–444, corrected v2.457).** The R² operator drives
+**Starobinsky inflation** (n_s ≈ 0.964, r ≈ 0.004) via a *heavy* scalaron (M ~ 3×10¹³ GeV) and *bounds* a
+**separate** quintessence dark energy (w > −1; g_Lambda ≤ g_R2) — the inflaton is negligible today (~10⁻¹¹²), so
+these are different fields ~25 orders apart, not one scalaron (v2.457). The candidate's
 inflation *survives its own swampland tower* (the tower stays >100× above the inflationary Hubble scale, so
 single-field R² inflation is self-consistent, v2.441). This gives a **four-experiment / three-keystone**
-falsifiable signature (CMB birefringence, CMB-S4 matter, DESI w, LiteBIRD r) in which **g_R2 is over-determined**
+falsifiable signature (CMB birefringence, CMB-S4 matter, DESI w, LiteBIRD r) in which **g_R2 is over-determined** *(at the operator level — a same-operator link, not a same-field lockstep, v2.457)*
 (DESI-w + LiteBIRD-r must co-occur or the single-scalaron story fails) and so is the **parity keystone**
 (birefringence + primordial chiral GWs, locked handedness) → [v2.442](results/2026-07-02-v2.442-qnm-four-front-verdict.md),
 [v2.443](results/2026-07-02-v2.443-qnm-chiral-gw.md). *Honest:* the inflationary chiral-GW amplitude is

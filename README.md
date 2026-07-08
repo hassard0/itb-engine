@@ -4,9 +4,9 @@ Constrain the space of possible quantum-gravity theories by imposing every consi
 amplitude positivity, causality, holography, the swampland, anomalies, black-hole thermodynamics — then confront
 the survivors with real experimental data and see what's left.
 
-> **Status:** v2.456 · full suite green · **[FINDINGS.md](docs/FINDINGS.md)** = curated results ·
+> **Status:** v2.457 · full suite green · **[FINDINGS.md](docs/FINDINGS.md)** = curated results ·
 > **[Research Report II](docs/results/2026-07-02-v2.428-RESEARCH-REPORT-II.md)** = publication-style synthesis ·
-> 42 rigor-tagged constraints · 14 framework encoders · ~567 result notes.
+> 42 rigor-tagged constraints · 14 framework encoders · ~568 result notes.
 
 ---
 
@@ -16,8 +16,8 @@ Intersecting every consistency condition over the space of Wilson coefficients l
 region** — one candidate low-energy quantum-gravity EFT, not a landscape. It is **matter-dominant, near-Planckian,
 ghost-safe, and string-like**, with its gravitational sector *forced into existence and capped in size* by its
 matter sector. Its leading (but not unique) UV completion is a **heterotic string + its model-independent axion**;
-its late universe is a **two-field cosmology** (an R² scalaron driving inflation → dark energy, and a parity-odd
-axion driving cosmic birefringence). The near-uniqueness is a **consilience** — the candidate is the one point
+its late universe is a **two-field cosmology** (an R² scalaron driving inflation — and *bounding* a separate
+quintessence dark energy, not being it — plus a parity-odd axion driving cosmic birefringence). The near-uniqueness is a **consilience** — the candidate is the one point
 where seven independent areas of theoretical physics *and* six measurements agree — and it is sharply falsifiable
 (see [FINDINGS.md](docs/FINDINGS.md) for the full picture and the honest tiering of every claim).
 
