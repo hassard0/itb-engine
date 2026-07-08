@@ -83,8 +83,7 @@ so ~10⁻⁵ is a settled answer, not an overestimate ([v2.407](results/2026-07-
 - **Ghost-safe & near-Planckian.** The Weyl² Ostrogradsky ghost sits *above* the cutoff, forced there by the
   WGC ([v2.385](results/2026-07-01-v2.385-qnm-ghost-safety.md)); the genuine UV cutoff is a **Dvali species scale
   ~0.72 M_Pl** ([v2.394](results/2026-07-01-v2.394-qnm-species-scale-cutoff.md)).
-- **String-like, not finite-derivative.** The curvature (and matter) couplings form infinite **log-convex moment
-  towers** — corrections at every order ([v2.375](results/2026-06-30-v2.375-qnm-infinite-curvature-tower.md)).
+- **String-like, not finite-derivative.** The couplings can form **log-convex moment towers** — the stack enforces the *first* rung (g_6² ≤ g_4·g_8, dispersion-backed); the higher rungs are *satisfiable and realized by the constructed point but not separately enforced* (audit [v2.479](results/2026-07-08-v2.479-qnm-moment-tower-enforcement-audit.md)) → [v2.375](results/2026-06-30-v2.375-qnm-infinite-curvature-tower.md).
 - **Extremal black holes decay** (ΔS_ext>0, WGC automatic, [v2.378](results/2026-06-30-v2.378-qnm-extremal-bh-channel.md)); and
   **parity is a chirality structure** — an order-2 left/right graviton asymmetry locked to the CMB handedness
   ([v2.386](results/2026-07-01-v2.386-qnm-graviton-chirality-asymmetry.md)).

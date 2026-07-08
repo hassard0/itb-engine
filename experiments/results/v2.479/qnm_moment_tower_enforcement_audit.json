@@ -1,0 +1,50 @@
+{
+  "version": "v2.479",
+  "stack_has_low_rung": true,
+  "stack_has_high_rung_constraint": false,
+  "g10_0p05_feasible": true,
+  "matter_high_ratio_at_g10_0p05": 0.125,
+  "double_ratio_ranges": {
+    "matter_low_g4g8_over_g6sq": {
+      "constructed": 1.32,
+      "range": [
+        1.0,
+        11.2
+      ],
+      "floor_enforced": true,
+      "by": "dispersion_tower_g6_squared_bound"
+    },
+    "matter_high_g6g10_over_g8sq": {
+      "constructed": 1.0,
+      "range": [
+        0.05,
+        8.8
+      ],
+      "floor_enforced": false,
+      "by": "none (no high-rung constraint)"
+    },
+    "curvature_gR2gR4_over_gR3sq": {
+      "constructed": 1.0,
+      "range": [
+        0.14,
+        null
+      ],
+      "floor_enforced": false,
+      "by": "none (no high-rung constraint)"
+    }
+  },
+  "consistency_checks": {
+    "matter_low_floor_enforced": true,
+    "matter_high_floor_not_enforced": true,
+    "no_high_rung_constraint_violated_by_small_g10": true,
+    "tower_enforced_first_rung_only": true,
+    "fingerprint_used_the_enforced_rung": true
+  },
+  "all_checks_pass": true,
+  "finding": "Self-audit (extending v2.478's feasible-range method): the 'infinite moment tower' (v2.375) is enforced in the stack only at the FIRST rung; the higher-rung double-ratios have feasible ranges that dip below 1, so the tower's log-convexity beyond the first rung is a constructed-point property, not an enforced constraint. v2.478 showed the matter-low double-ratio (g_4 g_8)/g_6^2 has range [1.0, 11.2], bounded below by 1 (floor enforced). The higher rungs differ: matter-high (g_6 g_10)/g_8^2 ranges [0.05, 8.8] and the curvature (g_R2 g_R4)/g_R3^2 ranges [0.14, wide] -- both dip below the moment-tower floor of 1. Direct check: setting g_10 = 0.05 (so (g_6 g_10)/g_8^2 = 0.12 < 1) violates NO constraint -- it is feasible. Grep confirms the stack contains dispersion_tower_g6_squared_bound (the low rung g_6^2 <= g_4 g_8) but NO high-rung constraint (g_8^2 <= g_6 g_10). So the moment tower is enforced only at the first rung; the higher-rung log-convexity holds at the constructed (Chebyshev-center) point but is not required by the feasible region. Consequence: v2.375's 'the couplings form infinite log-convex moment towers -- corrections at every order' overstated the ENFORCEMENT -- the stack enforces log-convexity at the FIRST rung (dispersion-relation-backed), and the higher tower is satisfiable and realized by the constructed point but not enforced (a structure the candidate CAN have, not one the constraints MANDATE beyond the first rung). This also confirms the fingerprint work (v2.464-478) used the matter-low double-ratio, on the genuinely-enforced rung, so v2.478's [1,11] range stands. The feasible-range method (v2.478) is proving a valuable auditing tool -- it catches constructed-point properties that had been read as enforced predictions.",
+  "honest_scope": "A stack-content audit with a direct feasibility witness (g_10 = 0.05 feasible), so the core claim -- the high-rung tower constraint is absent -- is robust (not an optimizer artifact; verified by an explicit feasible point and by the constraint-name grep). The feasible-range numbers for the higher rungs (matter-high [0.05, 8.8], curvature [0.14, ...]) carry SLSQP optimizer caveats (corners, the curvature max did not converge), but the qualitative point -- the floor of 1 is NOT enforced for the higher rungs -- rests on the explicit witness, not the optimizer. The interpretation is a NUANCE on v2.375, not a refutation: the FIRST-rung log-convexity IS enforced (dispersion-relation-backed, a genuine rigorous constraint), and the higher tower is a real POSSIBLE structure the constructed point realizes -- v2.375's error was calling the full infinite tower 'enforced' when only the first rung is. The opt-in higher couplings (g_10, g_R4) being lightly constrained is expected (they were added for the tower analysis); the honest statement is that they are lightly constrained, so the tower beyond rung 1 is descriptive. Robust content: the stack enforces the matter moment tower only at the first rung (g_6^2 <= g_4 g_8, via dispersion_tower_g6_squared_bound); the higher-rung double-ratios are feasibly < 1 (g_10 = 0.05 is a feasible witness), so the 'infinite log-convex moment tower' (v2.375) is enforced only at rung 1 and is otherwise a satisfiable constructed-point property -- tempering v2.375; the fingerprint used the enforced first rung, so v2.478 stands. First-rung-enforced-only, explicit-feasible-witness, nuance-not-refutation-of-v2375, opt-in-couplings-lightly-constrained, feasible-range-method-is-a-good-auditor. A moment-tower-enforcement-audit cycle.",
+  "references": [
+    "this repo: v2.375 (infinite moment tower -- tempered here), v2.478 (feasible-range method + matter-low [1,11]), v2.464-477 (fingerprint, used the enforced rung), v2.392 (Chebyshev-center artifacts)",
+    "physics: dispersion-relation moment positivity (first-rung g_6^2 <= g_4 g_8); Hankel/Stieltjes log-convexity (higher rungs, not separately enforced here)"
+  ]
+}
