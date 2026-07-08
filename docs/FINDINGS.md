@@ -88,6 +88,7 @@ so ~10⁻⁵ is a settled answer, not an overestimate ([v2.407](results/2026-07-
 - **Extremal black holes decay** (ΔS_ext>0, WGC automatic, [v2.378](results/2026-06-30-v2.378-qnm-extremal-bh-channel.md)); and
   **parity is a chirality structure** — an order-2 left/right graviton asymmetry locked to the CMB handedness
   ([v2.386](results/2026-07-01-v2.386-qnm-graviton-chirality-asymmetry.md)).
+- **One axion, a quadruple cosmological role.** The single parity axion is simultaneously **dark energy** (thawing quintessence, [v2.458](results/2026-07-02-v2.458-qnm-dark-energy-axion.md)), **cosmic birefringence** (θ F∧F̃, [v2.451](results/2026-07-02-v2.451-qnm-alpha-em-birefringence.md)), the **baryon asymmetry** (θ R∧R̃ → gravitational leptogenesis, [v2.324](results/2026-06-30-v2.324-qnm-gravitational-leptogenesis.md)), and **chiral primordial GW** ([v2.386](results/2026-07-01-v2.386-qnm-graviton-chirality-asymmetry.md)) — roles 2–4 from its two anomaly couplings, role 1 from its potential ([v2.470](results/2026-07-08-v2.470-qnm-axion-quadruple-role.md)). *Structural coherence, not four solved problems — each keeps its own magnitude caveats (η_B uncomputed, β order-of-magnitude, CC magnitude untouched).*
 
 **The decisive test — CMB-S4 (~2030).** The construction *requires* a large matter self-coupling; mapped to the
 inflationary observable CMB-S4 will measure, that is **>10σ tension** with single-field slow-roll — a
