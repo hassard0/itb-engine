@@ -1,0 +1,46 @@
+{
+  "version": "v2.471",
+  "scorecard": {
+    "explains_structural": {
+      "dark_energy": "parity axion, thawing quintessence w > -1 (v2.458)",
+      "cosmic_birefringence": "same axion EM anomaly, beta ~ alpha_EM order-of-mag (v2.451/v2.468)",
+      "baryon_asymmetry": "same axion gravitational anomaly, leptogenesis, eta_B uncomputed (v2.324/v2.470)",
+      "inflation": "Starobinsky R^2, n_s/r on r = 3(1-n_s)^2 (v2.441/v2.452)"
+    },
+    "compatible_axiverse_available_not_predicted": {
+      "dark_matter": "fuzzy-DM axion m ~ 1e-22 eV (identified DE axion m ~ 1e-33 eV too light)",
+      "H0_tension": "early-dark-energy axion m ~ 1e-28 eV (v2.467)",
+      "strong_CP": "QCD-coupled axion (identified axion is QCD-decoupled photophilic ALP, v2.468)"
+    },
+    "mixed_tensions_from_identified_axion": {
+      "S8_tension": "mildly HELPS (w > -1 suppresses growth, v2.469)",
+      "H0_tension": "does NOT help (canonical axion, distance probe, v2.467)"
+    },
+    "does_not_address": {
+      "CC_magnitude": "axion potential scale still tuned (v2.458)",
+      "CC_coincidence_why_now": "tied to m_axion ~ H0, same tuning, not solved",
+      "neutrino_masses": "no seesaw / RH-neutrino sector in the higher-curvature EFT",
+      "standard_model_content": "matter sector is a generic moment tower, not the specific SM",
+      "hierarchy_problem": "no electroweak-scale physics carved"
+    }
+  },
+  "counts": {
+    "explains": 4,
+    "axiverse_available": 3,
+    "unaddressed": 5
+  },
+  "consistency_checks": {
+    "explains_the_cosmological_quartet": true,
+    "axiverse_availability_is_not_prediction": true,
+    "tension_scorecard_is_mixed": true,
+    "limitations_explicitly_listed": true,
+    "candidate_is_gravitational_eft_not_TOE": true
+  },
+  "all_checks_pass": true,
+  "finding": "The candidate's honest open-problems scorecard, answering 'what does it actually explain?' across the major cosmology/particle open problems in four tiers. EXPLAINS (structural, from its own sectors, each with a magnitude caveat): dark energy (the parity axion, thawing quintessence), cosmic birefringence (the same axion's EM anomaly, beta ~ alpha_EM at order of magnitude), the baryon asymmetry (the same axion's gravitational anomaly / leptogenesis, eta_B uncomputed), and inflation (Starobinsky R^2 on the r = 3(1-n_s)^2 line) -- a coherent cosmological QUARTET from a two-field axion+scalaron sector. COMPATIBLE / AVAILABLE (the heterotic axiverse can supply it but the candidate does not predict it): dark matter (a fuzzy-DM axion m ~ 1e-22 eV -- the identified DE axion at 1e-33 eV is far too light), the H0 tension (an EDE axion m ~ 1e-28 eV), and strong-CP (a QCD-coupled axion -- the identified axion is a QCD-decoupled photophilic ALP). MIXED cosmological tensions from the identified axion: mildly HELPS S8 (w > -1 suppresses growth) but does NOT help H0 (distance probe). DOES NOT ADDRESS: the CC magnitude problem (the axion potential scale is still tuned), the CC coincidence / why-now (tied to m_axion ~ H0, the same tuning), neutrino masses (no seesaw sector), the specific Standard-Model matter content (the matter sector is a generic moment tower), and the hierarchy problem. The honest bottom line: the candidate structurally explains a coherent cosmological quartet from a two-field sector, is compatible with the other axion-shaped problems via the axiverse without predicting them, gives a mixed tension scorecard, and does not touch the particle-physics problems or the CC fine-tunings -- it is a gravitational-sector EFT candidate, NOT a theory of everything, exactly as its two-layer scope (v2.439) implies. This surfaces the dark-matter, neutrino, and CC-coincidence stances that were absent from the record, and puts the candidate's reach and limits in one honest place.",
+  "honest_scope": "An ACCOUNTING / scorecard -- a synthesis of the candidate's stances, not new computations. 'Explains' means STRUCTURAL (the sector exists with the right qualitative content), and each explained item keeps its published caveat: birefringence is order-of-magnitude with a model-dependent c_gamma, the baryon-asymmetry magnitude eta_B is uncomputed, dark energy does not solve the CC magnitude problem, inflation is class-level (Starobinsky, not uniquely this candidate). 'Axiverse-available' is explicitly NOT a prediction -- it is a model-dependent possibility (a heterotic axiverse can contain axions at these masses), so dark matter / H0 / strong-CP are compatibilities the candidate does not forbid, not things it explains. The 'does-not-address' tier is a genuine limitation list, not hedged. The dark-matter entry (fuzzy-DM axion m ~ 1e-22 eV) is the first time the candidate's DM stance is recorded, and it is the same axiverse-availability logic as H0/strong-CP (so it is coherent with, and partly repetitive of, that theme -- the genuine content is completing the accounting, not a new mechanism). The scorecard does not uniquely pick this candidate (the cosmological items are class-level). Robust content: a complete honest accounting -- the candidate structurally explains a cosmological quartet (DE + birefringence + baryon asymmetry + inflation) from a two-field sector, is axiverse-compatible (not predictive) for dark matter / H0-EDE / strong-CP, mildly helps S8 but not H0, and does not address neutrino masses / SM content / hierarchy / the CC fine-tunings -- a gravitational-sector EFT candidate, not a TOE. Accounting-not-computation, explains-is-structural-with-caveats, axiverse-available-not-predicted, surfaces-DM-neutrino-coincidence, class-level. An open-problems-scorecard cycle.",
+  "references": [
+    "this repo: v2.458 (DE), v2.451/v2.468 (birefringence/ALP), v2.324/v2.470 (baryogenesis), v2.441/v2.452 (inflation), v2.467 (H0), v2.469 (S8), v2.439 (two-layer scope), v2.389 (matter-dominance / generic matter)",
+    "physics: fuzzy dark matter (ultralight axion m ~ 1e-22 eV); string axiverse; CC magnitude + coincidence problems; seesaw neutrino masses; hierarchy problem"
+  ]
+}
