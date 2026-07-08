@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (583 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (584 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -632,3 +632,4 @@ Auto-generated front door to the full research program (583 notes). Regenerate w
 | v2.470 | [v2.470 - the parity axion's quadruple cosmological role: one field is ](2026-07-08-v2.470-qnm-axion-quadruple-role.md) | Checking the docs (while scoping a baryogenesis angle) revealed that **gravitational leptogenesis** — v2.324, where |
 | v2.471 | [v2.471 - the candidate's honest open-problems scorecard: what it expla](2026-07-08-v2.471-qnm-open-problems-scorecard.md) | A referee's question — *"so what does this candidate actually explain?"* — answered honestly across the major |
 | v2.472 | [v2.472 - the candidate's swampland-consistency is non-uniform: its inf](2026-07-08-v2.472-qnm-tcc-inflation-tension.md) | The candidate's swampland-friendliness is a selling point — it admits dS (refined-dS), selects dS/Minkowski over AdS |
+| v2.473 | [v2.473 - the swampland pattern: the candidate's aggressive-conjecture ](2026-07-08-v2.473-qnm-swampland-pattern.md) | v2.472 found the candidate violates the TCC (r ≈ 0.0037 is ~28 orders above its ceiling). This cycle adds a |
