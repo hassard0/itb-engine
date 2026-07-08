@@ -1,0 +1,29 @@
+{
+  "version": "v2.472",
+  "r_candidate": 0.0037,
+  "H_inf_GeV": 15826893193174.336,
+  "N_starobinsky": 55,
+  "N_tcc_bound": 11.9,
+  "r_ceiling_tcc": 1e-30,
+  "orders_r_above_tcc_ceiling": 28.0,
+  "swampland_scorecard": {
+    "refined_dS_conjecture": "SUPPORTS (admits dS, g_Lambda <= g_R2)",
+    "AdS_distance_conjecture": "SUPPORTS (selects dS/Minkowski over AdS)",
+    "emergent_string_conjecture": "SUPPORTS (tower fits heterotic XOR KK)",
+    "trans_planckian_censorship": "VIOLATES (r ~ 0.0037 >> 1e-30 ceiling; Starobinsky N ~ 55 > TCC bound ~12)"
+  },
+  "consistency_checks": {
+    "candidate_predicts_observable_r": true,
+    "starobinsky_violates_tcc_efolds": true,
+    "r_far_above_tcc_ceiling": true,
+    "swampland_consistency_non_uniform": true,
+    "litebird_arbitrates_disfavoring_tcc": true
+  },
+  "all_checks_pass": true,
+  "finding": "The candidate's swampland-consistency is NON-UNIFORM: its own inflation prediction (r ~ 0.0037, v2.452) sits ~27 orders above the Trans-Planckian Censorship ceiling (r <~ 1e-30, v2.263), so it VIOLATES the TCC even as it leans on refined-dS / distance / ESC. The candidate's swampland-friendliness is a selling point -- it admits dS, selects dS/Minkowski over AdS, and its tower fits the Emergent String Conjecture -- but the TCC (Bedroya-Vafa 2019), another swampland member, caps inflationary tensors at r <~ 1e-30 (primordial GWs forever unobservable, v2.263). v2.263 predates the candidate's inflation identification (v2.441) and its scale-clean tensor prediction r = 3(1-n_s)^2 ~ 0.0037 (v2.452), so the two were never connected. Connecting them: the candidate predicts r ~ 0.0037 (Starobinsky, H_inf ~ 1.6e13 GeV, N ~ 55), the TCC ceiling is r <~ 1e-30 (its e-fold bound N < ln(M_Pl/H) ~ 12 is violated ~4.6x by Starobinsky's N ~ 55), so the candidate's inflation is ~27 orders above the TCC ceiling -- a direct, sharp violation. So the candidate's swampland-consistency is non-uniform: supported by refined-dS / distance / ESC but in tension with the TCC -- an honest crack in the swampland-friendliness framing the flagship presents without this caveat. The resolution is decidable and near-term: the TCC is conjectural and widely regarded as too strong, and the candidate's r ~ 0.0037 is LiteBIRD-testable, so a B-mode detection at r ~ 1e-3 would DISFAVOR the TCC, not the candidate. The candidate therefore makes a concrete bet AGAINST the TCC -- it sides with observable high-scale inflation over the most aggressive swampland conjecture, with LiteBIRD (~2030s) as the arbiter. This both records the tension and surfaces the caveat that was missing from the flagship's swampland story.",
+  "honest_scope": "A synthesis of v2.263 (TCC caps r <~ 1e-30) and v2.452 (candidate predicts r ~ 0.0037), with the candidate-specific quantification (~27 orders) and the swampland-non-uniformity framing as the new content -- not a new computation. The tension is CLASS-LEVEL: ALL observable-r (high-scale) inflation violates the TCC, so this is not unique to the candidate -- it is the candidate inheriting the generic Starobinsky/high-scale-inflation vs TCC tension once its inflation is identified. The TCC itself is CONJECTURAL and CONTESTED (widely argued to be too strong / not derived from a consistent framework), so 'violates the TCC' is a tension with a conjecture, not a proof the candidate is wrong; the honest reading is that the candidate bets the TCC is too strong, a bet LiteBIRD arbitrates (an r ~ 1e-3 detection disfavors the TCC). The energy-scale/e-fold numbers (H_inf ~ 1.6e13 GeV, N ~ 55, TCC bound ~12) are standard order-of-magnitude slow-roll estimates. The value here is honesty + completeness: the flagship touts swampland-friendliness (refined-dS / distance / ESC) without noting that another swampland member (TCC) is violated, so this surfaces a genuine caveat and shows the candidate's swampland-consistency is selective, not uniform. Robust content: the candidate's own inflation prediction r ~ 0.0037 (v2.452) sits ~27 orders above the TCC ceiling r <~ 1e-30 (v2.263), so it violates the TCC while being supported by refined-dS / distance / ESC -- a non-uniform swampland-consistency (a class-level tension it inherits with high-scale inflation), resolved by LiteBIRD (an r detection disfavors the conjectural, contested TCC, not the candidate). Synthesis-with-new-quantification, class-level-not-candidate-unique, TCC-conjectural-and-contested, surfaces-a-missing-flagship-caveat, LiteBIRD-arbitrates. A TCC-inflation-tension cycle.",
+  "references": [
+    "this repo: v2.263 (TCC caps r <~ 1e-30), v2.452 (r = 3(1-n_s)^2 ~ 0.0037), v2.441 (inflation = Starobinsky), v2.422-424 (refined-dS / AdS-distance support), v2.440 (ESC support)",
+    "physics: Trans-Planckian Censorship Conjecture (Bedroya-Vafa 2019, contested); Starobinsky inflation H ~ 1e13 GeV, N ~ 55; LiteBIRD r-sensitivity ~1e-3"
+  ]
+}
