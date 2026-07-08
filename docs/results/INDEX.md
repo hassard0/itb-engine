@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (574 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (575 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -623,3 +623,4 @@ Auto-generated front door to the full research program (574 notes). Regenerate w
 | v2.461 | [v2.461 - the axion dark energy's swampland consistency pins f_a ~ M_Pl](2026-07-03-v2.461-qnm-axion-de-swampland.md) | A fresh positive build on the axion-DE identification (v2.458). A quintessence axion must satisfy two *competing* |
 | v2.462 | [v2.462 - holographic bug-fix: the η/s observable was a factor-of-2 err](2026-07-03-v2.462-qnm-holographic-etas-fix.md) | Examining the holographic sector (off the axion/dark-energy track) surfaced a genuine internal inconsistency — the |
 | v2.463 | [v2.463 - observable-consistency audit: post-η/s-fix, the gravitational](2026-07-03-v2.463-qnm-observable-audit.md) | The η/s bug (v2.462) was caught by cross-checking two modules against the published Brigante result — so this cycle |
+| v2.464 | [v2.464 - a scale-clean UV-embedding test: the curvature double-ratio D](2026-07-03-v2.464-qnm-scale-clean-uv-test.md) | The heterotic UV embedding (v2.434) was "blocked on the string scale." In an α′ expansion the dimensionless |
