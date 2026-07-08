@@ -1,6 +1,6 @@
 # ITB Engine — Findings
 
-*What the Information-Theoretic Bootstrap engine has found. Current as of v2.457.*
+*What the Information-Theoretic Bootstrap engine has found. Current as of v2.458.*
 
 **Start here:** the section ★ below is the current headline — one near-unique, falsifiable candidate QG EFT and
 its most robust findings. §1–9 that follow are the *foundational program* (v1.7x–v2.2x): the island census, the
@@ -15,7 +15,7 @@ synthesis: method, candidate, rigor tiering, CC sector, falsifiability, limits) 
 
 ---
 
-## ★ The current picture (v2.457): a single, near-unique, falsifiable candidate — rigorous core, named UV completion, coherent cosmological history
+## ★ The current picture (v2.458): a single, near-unique, falsifiable candidate — rigorous core, named UV completion, coherent cosmological history
 
 **The UV completion (v2.434, v2.436):** the candidate needs a nonzero R² (Gauss–Bonnet) term (rigorously — given
 its cubic-curvature and parity couplings, g_R2=0 violates graviton positivity + causality + cross-sector), which
@@ -36,7 +36,7 @@ scenario) → [v2.440](results/2026-07-02-v2.440-qnm-emergent-string.md).
 **A cosmological history structured by the R² operator (v2.441–444, corrected v2.457).** The R² operator drives
 **Starobinsky inflation** (n_s ≈ 0.964, r ≈ 0.004) via a *heavy* scalaron (M ~ 3×10¹³ GeV) and *bounds* a
 **separate** quintessence dark energy (w > −1; g_Lambda ≤ g_R2) — the inflaton is negligible today (~10⁻¹¹²), so
-these are different fields ~25 orders apart, not one scalaron (v2.457). The candidate's
+these are different fields ~25 orders apart, not one scalaron (v2.457). The dark-energy field is then the **parity axion itself** (a quintessence axion): one rolling axion sources *both* the dark energy (w > −1 thawing) and the birefringence (β ~ α_EM), so **β and (1+w0) are positively correlated** — a genuine same-field over-determination that replaces the tempered g_R2 one (v2.458). The candidate's
 inflation *survives its own swampland tower* (the tower stays >100× above the inflationary Hubble scale, so
 single-field R² inflation is self-consistent, v2.441). This gives a **four-experiment / three-keystone**
 falsifiable signature (CMB birefringence, CMB-S4 matter, DESI w, LiteBIRD r) in which **g_R2 is over-determined** *(at the operator level — a same-operator link, not a same-field lockstep, v2.457)*
