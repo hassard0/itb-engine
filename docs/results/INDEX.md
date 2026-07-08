@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (572 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (573 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -621,3 +621,4 @@ Auto-generated front door to the full research program (572 notes). Regenerate w
 | v2.459 | [v2.459 - the sharp joint prediction of the axion dark energy: β ≠ 0 re](2026-07-03-v2.459-qnm-axion-de-joint-test.md) | Sharpening v2.458 (the parity axion is the dark energy *and* the birefringence source). The robust, |
 | v2.460 | [v2.460 - honest tiering of the four experimental fronts: the matter/CM](2026-07-03-v2.460-qnm-front-robustness-tiering.md) | Applying to the last-unexamined front the same scrutiny that corrected the dark-energy sector (v2.457–459). The |
 | v2.461 | [v2.461 - the axion dark energy's swampland consistency pins f_a ~ M_Pl](2026-07-03-v2.461-qnm-axion-de-swampland.md) | A fresh positive build on the axion-DE identification (v2.458). A quintessence axion must satisfy two *competing* |
+| v2.462 | [v2.462 - holographic bug-fix: the η/s observable was a factor-of-2 err](2026-07-03-v2.462-qnm-holographic-etas-fix.md) | Examining the holographic sector (off the axion/dark-energy track) surfaced a genuine internal inconsistency — the |

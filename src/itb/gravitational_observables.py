@@ -220,18 +220,23 @@ class HolographicEtaOverS(Observable):
     """Shear viscosity / entropy density of a putative AdS/CFT dual, in KSS units.
 
     In Gauss-Bonnet / R^2 higher-derivative gravity the AdS5/CFT4 dual plasma has
-    (Brigante-Liu-Myers-Shenker-Yaida; Dr. M.-confirmed standard form)
-        eta/s = (1/4pi) (1 - 8 lambda_GB),     lambda_GB = lam_map * g_R2,
+    (Brigante-Liu-Myers-Shenker-Yaida 2008, standard form)
+        eta/s = (1/4pi) (1 - 4 lambda_GB),     lambda_GB = lam_map * g_R2,
     so a positive curvature coupling LOWERS eta/s below the KSS bound 1/4pi. We
-    report eta/s in units of 1/4pi (= 1 - 8*lam_map*g_R2): values < 1 mean KSS is
+    report eta/s in units of 1/4pi (= 1 - 4*lam_map*g_R2): values < 1 mean KSS is
     violated by the dual. Causality (Brigante et al lambda_GB <= 9/100) caps the
-    violation at eta/s >= (1 - 0.72) = 0.28 KSS-units.
+    violation at the famous floor eta/s >= 1 - 4*(9/100) = 16/25 = 0.64 KSS-units.
 
-    IMPORTANT (Dr. M.): the toy g_R2 (~0.2-0.4) CANNOT be lambda_GB directly — that
-    would give eta/s < 0 (unphysical) and violate causality. lam_map ~ 0.22 maps
-    the toy g_R2 to lambda_GB so the largest framework g_R2 (~0.4) sits just under
-    the causality bound. This mapping is order-of-magnitude; the *ordering* by g_R2
-    is the robust content.
+    NOTE (v2.462): corrected from an earlier (1 - 8 lambda_GB) implementation that
+    was a factor-of-2 error, inconsistent with the correct (1 - 4 lambda_GB) in
+    holographic_ac.py and with the Brigante 16/25 floor. This is a holographic
+    PORTRAIT contingent on an assumed Gauss-Bonnet AdS dual (flagged as a what-if
+    in holographic_ac.py); the robust content is the ordering by g_R2, not the
+    exact value, and the lam_map ~ 0.22 mapping is order-of-magnitude.
+
+    The toy g_R2 (~0.2-0.4) CANNOT be lambda_GB directly — that would over-shoot the
+    causality bound. lam_map ~ 0.22 maps the toy g_R2 to lambda_GB so the largest
+    framework g_R2 (~0.4) sits just under lambda_GB = 9/100 (eta/s ~ 16/25).
     """
 
     name = "holographic_eta_over_s"
@@ -241,10 +246,10 @@ class HolographicEtaOverS(Observable):
 
     def predict(self, theory: Theory) -> np.ndarray:
         gR2 = theory.coefficients.get("g_R2", 0.0)
-        return np.array([1.0 - 8.0 * self.lam_map * gR2])   # eta/s in units of 1/4pi
+        return np.array([1.0 - 4.0 * self.lam_map * gR2])   # eta/s in units of 1/4pi (Brigante 1-4*lambda)
 
     def jacobian(self, theory: Theory, params: list[str]) -> np.ndarray:
-        cols = [np.array([-8.0 * self.lam_map]) if p == "g_R2" else np.array([0.0])
+        cols = [np.array([-4.0 * self.lam_map]) if p == "g_R2" else np.array([0.0])
                 for p in params]
         return np.stack(cols, axis=1)
 

@@ -15,7 +15,7 @@ def test_kss_units_decrease_with_gR2():
     hi = obs.predict(Theory(coefficients={"g_R2": 0.15}))[0]
     lo = obs.predict(Theory(coefficients={"g_R2": 0.40}))[0]
     assert hi > lo
-    assert hi == pytest.approx(1 - 8*0.22*0.15)
+    assert hi == pytest.approx(1 - 4*0.22*0.15)
     assert lo > 0.0   # largest g_R2 still gives physical (positive) eta/s
 
 
@@ -29,7 +29,7 @@ def test_all_in_scope_below_KSS():
 def test_jacobian():
     obs = HolographicEtaOverS(lam_map=0.22)
     J = obs.jacobian(Theory(coefficients={"g_R2": 0.2}), ["g_R2", "g_4"])
-    assert J[0, 0] == pytest.approx(-8 * 0.22)
+    assert J[0, 0] == pytest.approx(-4 * 0.22)
     assert J[0, 1] == 0.0
 
 
