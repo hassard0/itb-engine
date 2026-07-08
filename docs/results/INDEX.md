@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (587 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (588 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -636,3 +636,4 @@ Auto-generated front door to the full research program (587 notes). Regenerate w
 | v2.474 | [v2.474 - the scale-clean fingerprint discriminates the ESC dichotomy: ](2026-07-08-v2.474-qnm-fingerprint-discriminates-esc.md) | v2.440 left the Emergent String Conjecture dichotomy **open** — the candidate's tower is a heterotic-string tower |
 | v2.475 | [v2.475 - robustness check tempers v2.474: the ESC discrimination separ](2026-07-08-v2.475-qnm-esc-discrimination-robustness.md) | Two findings: |
 | v2.476 | [v2.476 - the deferred computation, executed: the exact Veneziano finge](2026-07-08-v2.476-qnm-exact-veneziano-fingerprint.md) | For many cycles the exact string fingerprint was deferred as "forward-limit amplitude bookkeeping too error-prone." |
+| v2.477 | [v2.477 - superstring correction to v2.476: the exact-string fingerprin](2026-07-08-v2.477-qnm-superstring-fingerprint-correction.md) | v2.476 executed the exact fingerprint for the **bosonic** Veneziano amplitude Γ(−s)Γ(−t)/Γ(−s−t), whose forward |

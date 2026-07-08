@@ -1,0 +1,30 @@
+{
+  "version": "v2.477",
+  "bosonic_double_ratio": 1.2321,
+  "susy_double_ratio": 1.064,
+  "candidate_low_double_ratio": 1.322,
+  "match_bosonic_pct": 7.3,
+  "match_susy_pct": 24.2,
+  "susy_forward_residues": {
+    "1": 1.0,
+    "2": 0.5,
+    "3": 0.3333,
+    "4": 0.25,
+    "5": 0.2,
+    "6": 0.1667
+  },
+  "consistency_checks": {
+    "susy_forward_residues_are_one_over_n": true,
+    "susy_double_ratio_is_zeta3_zeta5_over_zeta4sq": true,
+    "susy_differs_from_bosonic": true,
+    "candidate_matches_bosonic_better_than_physical_susy": true,
+    "physical_match_not_established": true
+  },
+  "all_checks_pass": true,
+  "finding": "Superstring correction to v2.476: the physical open superstring forward residues are r_n = 1/n (not flat), giving double-ratio zeta(3)zeta(5)/zeta(4)^2 = 1.064 -- so v2.476's ~7% match was to the bosonic (tachyonic, unphysical) Veneziano, and the physically-relevant superstring differs (~24%) and additionally needs a kinematic prefactor. v2.476 executed the exact fingerprint for the bosonic Veneziano A = Gamma(-s)Gamma(-t)/Gamma(-s-t) (flat forward residues -> a_k = zeta(k) -> 1.232, matching the candidate's 1.322 to ~7%), but the bosonic open string is tachyonic and is not the heterotic gauge sector. The physical open superstring has the GSO/SUSY-shifted factor Gamma(-s)Gamma(-t)/Gamma(1-s-t) (times a t_8 F^4 kinematic prefactor), whose forward residues are r_n = 1/n (verified numerically), so its bare-factor moments are a_k = zeta(k+1) and the low double-ratio is zeta(3)zeta(5)/zeta(4)^2 = 1.064 -- which the candidate's 1.322 matches only to ~24%, far worse than the bosonic 1.232. Two corrections: (1) the candidate matched the bosonic (unphysical) string better than the physical superstring, so v2.476's 'exact match to a real string amplitude to ~7%' overstated -- the real (super)string value is 1.064; (2) even 1.064 is only the bare Gamma-factor, and the physical amplitude's kinematic prefactor K ~ t_8 F^4 shifts the effective moments further, so the physical fingerprint is not cleanly pinned. Honest final status: the scale-clean fingerprint TEST is executable and the flat-residue result is an exact fact about the BOSONIC Veneziano Gamma-factor, but the physically-relevant superstring fingerprint is different (1.064 bare, plus an uncomputed prefactor) and does NOT cleanly match the candidate -- the exact-string match is amplitude-dependent and remains an open item, not an established ~7% pass. This is a fast honest self-correction on the heels of the bold v2.476 swing.",
+  "honest_scope": "A self-correction from a clean numerical computation (the susy Gamma-factor forward residues are r_n = 1/n, exact). What is now clear: the 'exact string fingerprint' is amplitude-dependent -- bosonic Veneziano gives 1.232, the superstring bare Gamma-factor gives 1.064, and the full physical superstring gauge amplitude additionally has a kinematic prefactor (t_8 F^4) NOT computed here that shifts it further. So NEITHER 1.232 nor 1.064 is definitively 'the' physical fingerprint; the prefactor bookkeeping is exactly the error-prone step flagged all along, and it is genuinely unresolved. The robust content is the CORRECTION: v2.476's ~7% match was to the bosonic (tachyonic) string, not the physical superstring (which gives 1.064, ~24%), so the 'candidate matches a real string amplitude to ~7%' claim is retracted/tempered. This does NOT say the candidate is string-INCONSISTENT -- 1.064 vs 1.322 is a ~24% mismatch at the bare-factor level with the prefactor uncomputed and the candidate's 1.322 carrying the g_6=g_8 Chebyshev artifact, so the fingerprint comparison is simply not cleanly established either way. The still-robust prior content: the double-ratios are scale-independent (v2.464), the candidate's tower is multi-state/string-like in SHAPE (v2.438/v2.466), and the heterotic ID rests on its OTHER supports (required R^2, parity/Green-Schwarz). Robust content: the physical open-superstring forward residues are r_n = 1/n (SUSY shift), so its double-ratio is 1.064 not the bosonic 1.232; v2.476's ~7% candidate match was to the unphysical bosonic string, the physical superstring is ~24% off and needs an uncomputed kinematic prefactor, so the exact-string fingerprint match is NOT established -- an amplitude-dependent open item, honestly retracted from v2.476's headline. Self-correction-of-v2476, bosonic-vs-super-1.232-vs-1.064, prefactor-uncomputed, not-string-inconsistent-just-not-established, shape-and-other-supports-still-stand. A superstring-correction cycle.",
+  "references": [
+    "this repo: v2.476 (bosonic Veneziano fingerprint -- corrected here), v2.466 (flat-Regge), v2.464-465 (scale-clean fingerprint), v2.438 (string-like shape), v2.434 (heterotic ID other supports)",
+    "physics: open superstring 4-gauge amplitude K * Gamma(-s)Gamma(-t)/Gamma(1-s-t) (GSO/SUSY shift); bosonic vs super Veneziano; t_8 F^4 kinematic prefactor (uncomputed)"
+  ]
+}
