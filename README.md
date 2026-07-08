@@ -4,9 +4,9 @@ Constrain the space of possible quantum-gravity theories by imposing every consi
 amplitude positivity, causality, holography, the swampland, anomalies, black-hole thermodynamics — then confront
 the survivors with real experimental data and see what's left.
 
-> **Status:** v2.467 · full suite green · **[FINDINGS.md](docs/FINDINGS.md)** = curated results ·
+> **Status:** v2.468 · full suite green · **[FINDINGS.md](docs/FINDINGS.md)** = curated results ·
 > **[Research Report II](docs/results/2026-07-02-v2.428-RESEARCH-REPORT-II.md)** = publication-style synthesis ·
-> 42 rigor-tagged constraints · 14 framework encoders · ~578 result notes.
+> 42 rigor-tagged constraints · 14 framework encoders · ~579 result notes.
 
 ---
 
@@ -22,7 +22,7 @@ where seven independent areas of theoretical physics *and* six measurements agre
 (see [FINDINGS.md](docs/FINDINGS.md) for the full picture and the honest tiering of every claim).
 
 **Sharpest, most scale-clean predictions** (dimensionless — no string scale, no toy coefficient):
-- **Cosmic birefringence β ~ α_EM** — the heterotic axion's universal anomaly coupling gives β ~ 0.03–0.3°,
+- **Cosmic birefringence β ~ α_EM** — the heterotic axion's EM anomaly coupling gives β ~ 0.03–0.3°,
   matching the measured 0.34° in order of magnitude.
 - **Inflation line r = 3(1−n_s)²** — pins r ≈ 0.0037 from the measured n_s (LiteBIRD-testable).
 - **Dark-energy thawing line wa ≈ −1.5(1+w0), w ≥ −1** — the *most vulnerable* front, in mild tension with DESI's
