@@ -1,0 +1,48 @@
+{
+  "version": "v2.475",
+  "p_scan": [
+    {
+      "p": -1.0,
+      "regge": 1.064,
+      "kk": 1.022,
+      "separation": 0.042,
+      "candidate_favors": "Regge"
+    },
+    {
+      "p": -0.5,
+      "regge": 1.114,
+      "kk": 1.033,
+      "separation": 0.082,
+      "candidate_favors": "Regge"
+    },
+    {
+      "p": 0.0,
+      "regge": 1.232,
+      "kk": 1.05,
+      "separation": 0.182,
+      "candidate_favors": "Regge"
+    },
+    {
+      "p": 0.5,
+      "regge": 1.634,
+      "kk": 1.078,
+      "separation": 0.555,
+      "candidate_favors": "KK"
+    }
+  ],
+  "candidate_low_double_ratio": 1.322,
+  "consistency_checks": {
+    "separation_regge_gt_kk_robust": true,
+    "candidate_preference_flips_with_residues": true,
+    "favors_regge_only_for_flat_or_decreasing": true,
+    "flips_to_kk_for_growing_residues": true,
+    "tempers_v2474_overstatement": true
+  },
+  "all_checks_pass": true,
+  "finding": "Robustness check tempers v2.474: the Regge-vs-KK fingerprint separation is robust across residue models, but the candidate's preference for the heterotic-string branch is NOT -- it holds for flat/decreasing residues and flips toward KK for growing residues (typical of real string towers). v2.474 claimed the candidate's low double-ratio (1.32) favors the Regge branch (1.23) over KK (1.05), using flat residues. Varying the residue power-law r_n ~ n^p (Regge a_k = zeta(k-p), KK a_k = zeta(2k-p)): the separation Regge > KK is robust for every p (m^2~n vs m~n is a genuine spectral distinction, so the fingerprint DOES distinguish tower types in principle); but the candidate's preference is not -- it favors Regge only for flat/decreasing residues (p <~ 0, where Regge ~ 1.06-1.23) and flips toward KK once residues grow (p = 0.5 gives Regge ~ 1.64, above the candidate's 1.32, so it is closer to KK ~ 1.08). And growing residues (p > 0) are the physical case for a real string Regge tower (level degeneracies grow with mass, ~exp(sqrt(n))). So v2.474's headline 'the candidate favors the heterotic-string branch' overstated: honestly, the fingerprint separates Regge from KK robustly, but WHICH the candidate prefers is residue-model-dependent -- suggestive of the string branch for flat residues, not a robust conclusion once realistic growing residues are allowed. This is an honest self-correction that tempers v2.474 and the FINDINGS / Report II claim it seeded; the heterotic identification still rests on its other supports (the rigorously-required nonzero R^2, the parity/Green-Schwarz argument, the string-like tower shape), just not on a robust fingerprint DISCRIMINATION of Regge over KK.",
+  "honest_scope": "A robustness self-correction, using the same flat-vs-power-law-residue toy family as v2.474 (still not the exact heterotic / KK residue structures, which have specific degeneracies the power-law only caricatures). What is ROBUST and survives: the SEPARATION (Regge double-ratio > KK double-ratio) for every residue power-law tested -- because m^2~n and m~n put different zeta arguments in the moments, a genuine structural distinction, so the fingerprint is a valid discriminator IN PRINCIPLE. What is NOT robust (the correction): the candidate's 1.32 favors Regge only for p <~ 0; for growing residues (p > 0, physically typical of string level-degeneracies) the Regge value climbs above 1.32 and the candidate is closer to KK. The exact flip point (~p = 0.2-0.3) and the p > 0 values carry the usual toy caveats (the candidate's 1.32 itself partly reflects the g_6 = g_8 Chebyshev artifact; only the low rung is used). So the corrected claim is deliberately WEAKER than v2.474: the fingerprint distinguishes Regge from KK structurally, but does NOT robustly pick the string branch for the candidate -- the flat-residue preference was an artifact of the residue choice. Robust content: across residue power-laws r_n ~ n^p the Regge double-ratio always exceeds the KK one (the fingerprint separates the tower types), but the candidate's 1.32 favors Regge only for flat/decreasing residues and flips to KK for growing residues (typical of real string towers), so v2.474's 'candidate favors the heterotic-string branch' is tempered to residue-dependent / suggestive-not-robust. Self-correction-tempers-v2474, separation-robust-preference-not, growing-residues-physical-flip-to-KK, heterotic-ID-rests-on-other-supports. An ESC-discrimination-robustness cycle.",
+  "references": [
+    "this repo: v2.474 (ESC discrimination -- tempered here), v2.464-466 (scale-clean fingerprint), v2.440 (ESC dichotomy), v2.434 (heterotic ID, other supports), v2.392 (g_6=g_8 Chebyshev artifact)",
+    "physics: Regge m^2~n vs KK m~n spectra; string level-degeneracy growth ~exp(sqrt(n)) (growing residues); moment zeta-values"
+  ]
+}
