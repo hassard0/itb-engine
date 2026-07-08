@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (570 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (571 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -619,3 +619,4 @@ Auto-generated front door to the full research program (570 notes). Regenerate w
 | v2.457 | [v2.457 - honest self-correction: g_R2 *bounds* the dark energy, it doe](2026-07-03-v2.457-qnm-de-sector-reconciled.md) | The program has repeatedly said "the single R² scalaron drives inflation → dark energy" (README, FINDINGS, v2.442's |
 | v2.458 | [v2.458 - the dark-energy field *is* the parity axion: unifying dark en](2026-07-03-v2.458-qnm-dark-energy-axion.md) | v2.457 removed the heavy R² scalaron from the dark-energy role and left the question: what *is* the candidate's |
 | v2.459 | [v2.459 - the sharp joint prediction of the axion dark energy: β ≠ 0 re](2026-07-03-v2.459-qnm-axion-de-joint-test.md) | Sharpening v2.458 (the parity axion is the dark energy *and* the birefringence source). The robust, |
+| v2.460 | [v2.460 - honest tiering of the four experimental fronts: the matter/CM](2026-07-03-v2.460-qnm-front-robustness-tiering.md) | Applying to the last-unexamined front the same scrutiny that corrected the dark-energy sector (v2.457–459). The |
