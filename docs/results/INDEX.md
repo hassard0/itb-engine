@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (586 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (587 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -635,3 +635,4 @@ Auto-generated front door to the full research program (586 notes). Regenerate w
 | v2.473 | [v2.473 - the swampland pattern: the candidate's aggressive-conjecture ](2026-07-08-v2.473-qnm-swampland-pattern.md) | v2.472 found the candidate violates the TCC (r ≈ 0.0037 is ~28 orders above its ceiling). This cycle adds a |
 | v2.474 | [v2.474 - the scale-clean fingerprint discriminates the ESC dichotomy: ](2026-07-08-v2.474-qnm-fingerprint-discriminates-esc.md) | v2.440 left the Emergent String Conjecture dichotomy **open** — the candidate's tower is a heterotic-string tower |
 | v2.475 | [v2.475 - robustness check tempers v2.474: the ESC discrimination separ](2026-07-08-v2.475-qnm-esc-discrimination-robustness.md) | Two findings: |
+| v2.476 | [v2.476 - the deferred computation, executed: the exact Veneziano finge](2026-07-08-v2.476-qnm-exact-veneziano-fingerprint.md) | For many cycles the exact string fingerprint was deferred as "forward-limit amplitude bookkeeping too error-prone." |

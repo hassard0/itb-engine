@@ -1,0 +1,30 @@
+{
+  "version": "v2.476",
+  "veneziano_forward_residues_abs": {
+    "1": 1.0,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0,
+    "6": 1.0,
+    "7": 1.0
+  },
+  "exact_veneziano_forward_fingerprint": 1.2321,
+  "candidate_low_double_ratio": 1.322,
+  "frac_diff_pct": 7.3,
+  "kk_value": 1.05,
+  "consistency_checks": {
+    "veneziano_forward_residues_flat": true,
+    "exact_forward_fingerprint_is_zeta_ratio": true,
+    "candidate_matches_within_10pct": true,
+    "candidate_closer_to_veneziano_than_kk": true,
+    "resolves_v2475_forward_residues_are_flat_not_growing": true
+  },
+  "all_checks_pass": true,
+  "finding": "The deferred computation, executed: the exact open-string (Veneziano) forward fingerprint is the flat-residue zeta-ratio 1.232, matching the candidate's 1.322 to ~7% -- the v2.466 flat-residue toy is EXACT for a real string amplitude, and the v2.475 growing-residue worry does not apply to the forward moments. The Veneziano amplitude A(s,t) = Gamma(-s)Gamma(-t)/Gamma(-s-t) has s-channel level-n forward residue -(1/n!)(t+1)(t+2)...(t+n), which at t = 0 telescopes to -(n!/n!) = -1: the forward residues are EXACTLY FLAT (|r_n| = 1 for every n), verified numerically. So the forward positivity moments are a_k = sum_n 1/n^k = zeta(k) exactly, and the scale-clean low double-ratio is zeta(2)zeta(4)/zeta(3)^2 = 1.232, which the candidate's (g_4 g_8)/g_6^2 = 1.322 matches to ~7%. Three consequences: (1) the v2.466 flat-residue Regge model was not a toy -- it is exact for the Veneziano forward amplitude; (2) the v2.475 concern that physical growing residues shift the value does NOT apply to the forward moments -- the level degeneracies grow, but the forward residue (the spin sum at t = 0) telescopes to 1 for every level, so the forward fingerprint is flat regardless, and v2.475's residue-power-law scan was a general sensitivity check whose physical point (the actual Veneziano forward residues) sits exactly at flat (p = 0); (3) so the candidate's matter sector matches a REAL string amplitude's forward fingerprint to ~7% and favors the Regge (string) branch over KK (1.05) on the firm footing of an exact amplitude -- restoring the v2.474 conclusion that v2.475 had tempered. This is the first EXACT (non-toy) execution of the scale-clean UV-embedding test, and it PASSES for the candidate at the ~7% level.",
+  "honest_scope": "A genuine exact computation for the OPEN string (Veneziano), with real but bounded caveats. (1) It is the open-string amplitude; the heterotic string is CLOSED, and the closed-string (Virasoro-Shapiro) forward limit carries the t = 0 graviton pole, so the closed-string forward fingerprint needs a more careful (pole-subtracted) treatment -- NOT done here. The open-string result is the clean, exact one, and it is the natural amplitude for a gauge/current-algebra matter sector (the heterotic gauge sector is Veneziano-like), so it is a defensible model for the candidate's matter fingerprint, but 'the candidate's matter is exactly Veneziano' is an identification, not proven. (2) The forward residues are flat EXACTLY at t = 0; the numerical check uses small t (residues -> 1). (3) The candidate's 1.322 partly reflects the g_6 = g_8 Chebyshev-center artifact (v2.392), so the ~7% match carries that caveat and is a low-rung comparison (the candidate's high rung is moment-tower-floor-saturated, unusable, as in v2.474). (4) The Regge-over-KK preference uses the same KK model (m ~ n -> zeta(2k)) as v2.474 for the KK side (the KK forward residues are not computed exactly here); the robust new content is the EXACT Veneziano value (1.232, flat residues proven) and the ~7% candidate match, not a proof that KK is excluded. So this UPGRADES the fingerprint test from toy to exact (open-string) and it PASSES, and it corrects v2.475's growing-residue worry for the forward moments -- but it does not yet do the closed-string case. Robust content: the Veneziano forward residues are exactly flat (|r_n| = 1, a Gamma-function telescoping identity), so the exact open-string forward fingerprint is zeta(2)zeta(4)/zeta(3)^2 = 1.232, which the candidate matches to ~7%; this makes the v2.466 flat-residue model exact, resolves the v2.475 forward-residue question (flat, not growing), and passes the scale-clean UV-embedding test for the candidate at the open-string level. Exact-open-string-not-closed, VS-graviton-pole-deferred, Veneziano-is-a-defensible-matter-model, 1.322-has-Chebyshev-caveat, KK-side-still-modeled. An exact-Veneziano-fingerprint cycle.",
+  "references": [
+    "this repo: v2.466 (flat-Regge toy -- now exact), v2.474 (ESC discrimination), v2.475 (growing-residue tempering -- corrected for forward moments), v2.464-465 (scale-clean fingerprint), v2.434 (heterotic ID)",
+    "physics: Veneziano amplitude Gamma(-s)Gamma(-t)/Gamma(-s-t); forward residue telescoping to 1; Riemann zeta moments; heterotic gauge sector (Veneziano-like); Virasoro-Shapiro closed-string (deferred)"
+  ]
+}
