@@ -1,0 +1,47 @@
+{
+  "version": "v2.461",
+  "fa_scan": {
+    "0.5": {
+      "gradV_over_V": 2.0,
+      "one_plus_w0": 1.33,
+      "refined_dS_ok": true
+    },
+    "1.0": {
+      "gradV_over_V": 1.0,
+      "one_plus_w0": 0.33,
+      "refined_dS_ok": true
+    },
+    "1.5": {
+      "gradV_over_V": 0.67,
+      "one_plus_w0": 0.15,
+      "refined_dS_ok": false
+    },
+    "2.0": {
+      "gradV_over_V": 0.5,
+      "one_plus_w0": 0.08,
+      "refined_dS_ok": false
+    }
+  },
+  "fa_marginal_Mpl": 1.0,
+  "one_plus_w0_at_marginal": 0.33,
+  "fa_for_desi_central_Mpl": 1.4,
+  "triple_convergence": [
+    "swampland quintessence DE (refined dS + slow-roll)",
+    "scale-clean beta ~ alpha_EM (v2.451)",
+    "negligible birefringence anisotropy (v2.455)"
+  ],
+  "consistency_checks": {
+    "refined_dS_wants_fa_lesssim_Mpl": true,
+    "slow_roll_wants_fa_large": true,
+    "marginal_edge_fa_approx_Mpl": true,
+    "predicts_detectable_1plusw0": true,
+    "desi_match_wants_fa_super_planckian": true
+  },
+  "all_checks_pass": true,
+  "finding": "The axion dark energy's swampland consistency pins f_a ~ M_Pl (a triple convergence) and predicts detectable dynamical dark energy (1+w0 ~ O(0.1), not a pure CC). A quintessence axion must satisfy two competing requirements, both pointing to f_a ~ M_Pl: the refined de Sitter conjecture (|grad V|/V >= c ~ 1) wants f_a <~ M_Pl (since |grad V|/V ~ 1/f_a for the axion), while slow-roll dark energy (w near -1, 1+w0 ~ (1/3)(M_Pl/f_a)^2) wants f_a large. The sweet spot is f_a ~ M_Pl -- exactly the model-independent axion's natural value -- where the axion sits at the marginal edge of both, predicting 1+w0 ~ O(0.1-0.3), a DETECTABLE deviation from w = -1, not a pure cosmological constant. DESI's w0 ~ -0.83 (1+w0 ~ 0.17) is consistent in order of magnitude. So the candidate's dark energy cannot be a pure CC (refined dS forbids it) and cannot be arbitrarily close to w = -1 (the axion is at the marginal edge): it predicts detectable dynamical dark energy that DESI/Euclid are now probing. This is a TRIPLE CONVERGENCE on f_a ~ M_Pl -- the same decay constant is required by (1) swampland quintessence dark energy (this cycle), (2) scale-clean cosmic birefringence beta ~ alpha_EM (v2.451), and (3) negligible birefringence anisotropy (v2.455) -- so the model-independent axion (f_a ~ M_Pl) is uniquely the object that is simultaneously the dark energy, the birefringence source, and a swampland-consistent quintessence. Honest edge: matching DESI's exact central w0 ~ -0.83 wants f_a slightly super-Planckian (~1.4 M_Pl), which just violates the strict c = 1 refined dS -- the generic 'quintessence is hard in the swampland' tension, the same live tension as the DESI phantom-past (v2.454/v2.459) seen from the swampland side. So the axion-DE lives right at (or just past) the swampland boundary, which is itself the prediction: a detectable, marginal dynamical dark energy, tested by whether DESI/Euclid land at 1+w0 ~ O(0.1) (supporting) or at a pure CC / a robust phantom (falsifying).",
+  "honest_scope": "Order-of-magnitude estimates with several O(1) uncertainties. The refined-dS coefficient c is only known to be O(1) (the conjecture's exact c is debated; c = 1 is representative), so 'f_a <~ M_Pl' is order-of-magnitude. The 1+w0 ~ (1/3)(M_Pl/f_a)^2 slow-roll estimate is a MID-ROLL approximation; a THAWING axion that has only recently started rolling gives a SMALLER 1+w0 than this for the same f_a, so the specific numbers (e.g. 1+w0 ~ 0.33 at f_a = M_Pl) are upper-ish estimates and the robust content is only '1+w0 ~ O(0.1) detectable, not a pure CC and not tiny'. |grad V|/V ~ 1/f_a is the mid-potential value; near the hilltop it is larger (steeper), near the minimum smaller, so the f_a bound depends on where the field sits. The refined-dS conjecture is itself sourced_proxy (a swampland conjecture), so the whole argument is conjecture-tier, not rigorous. The 'triple convergence' is genuine (three independent considerations want f_a ~ M_Pl) but each is order-of-magnitude. The DESI-match tension (f_a ~ 1.4 M_Pl) is the honest downside -- a canonical swampland-consistent axion struggles to reach w0 as close to -1 as DESI's central hint, echoing v2.454's phantom-past tension. Robust content: a swampland-consistent (refined-dS) axion quintessence requires f_a ~ M_Pl -- the model-independent axion's value, converging with the birefringence requirements (v2.451/v2.455) -- and predicts detectable dynamical dark energy (1+w0 ~ O(0.1), not a pure CC), sitting at the marginal swampland edge (matching DESI's exact w0 mildly pushes f_a super-Planckian). Order-of-magnitude, refined-dS-c-O(1), mid-roll-overestimate, conjecture-tier, DESI-match-a-mild-tension. An axion-DE-swampland cycle.",
+  "references": [
+    "this repo: v2.458 (axion = dark energy), v2.459 (beta != 0 => w0 > -1), v2.451 (beta ~ alpha_EM, f_a ~ M_Pl), v2.455 (anisotropy => f_a ~ M_Pl), v2.454 (thawing line + DESI phantom-past tension), v2.422-425 (refined dS in the CC sector)",
+    "physics: refined de Sitter conjecture (OOSV 2018, |grad V|/V >= c); axion quintessence; 'quintessence in the swampland' tension (Agrawal-Obied-Steinhardt-Vafa 2018); DESI 2024 w0"
+  ]
+}
