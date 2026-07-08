@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (577 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (578 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -626,3 +626,4 @@ Auto-generated front door to the full research program (577 notes). Regenerate w
 | v2.464 | [v2.464 - a scale-clean UV-embedding test: the curvature double-ratio D](2026-07-03-v2.464-qnm-scale-clean-uv-test.md) | The heterotic UV embedding (v2.434) was "blocked on the string scale." In an α′ expansion the dimensionless |
 | v2.465 | [v2.465 - the scale-clean UV-embedding fingerprint: every moment-tower ](2026-07-03-v2.465-qnm-scale-clean-fingerprint.md) | v2.464 showed the curvature double-ratio D = (g_R2·g_R4)/g_R3² is scale-independent. That's a **general** feature of |
 | v2.466 | [v2.466 - executing the scale-clean UV test: the candidate's fingerprin](2026-07-03-v2.466-qnm-regge-fingerprint-match.md) | v2.464/v2.465 *opened* a scale-clean UV-embedding test (moment-tower double-ratios are scale-independent) but didn't |
+| v2.467 | [v2.467 - the candidate and the H₀ tension: the canonical axion dark en](2026-07-03-v2.467-qnm-h0-tension.md) | Any dark-energy model must answer whether it helps or hurts the H₀ tension (Planck/CMB H₀ ~ 67 vs local/SH0ES |
