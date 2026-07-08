@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (566 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (567 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -615,3 +615,4 @@ Auto-generated front door to the full research program (566 notes). Regenerate w
 | v2.453 | [v2.453 - the complete scale-independent inflation prediction set: n_s ](2026-07-02-v2.453-qnm-inflation-consistency-set.md) | Continuing the dimensionless vein. v2.452 pinned r from n_s; but the R² plateau is a **one-parameter** family (the |
 | v2.454 | [v2.454 - the dark-energy consistency relation wa ≈ −1.5(1+w0): the can](2026-07-02-v2.454-qnm-dark-energy-thawing-line.md) | The dark-energy analog of the inflation consistency line (r = 3(1−n_s)², v2.452), in the same dimensionless vein — |
 | v2.455 | [v2.455 - the candidate's cosmic birefringence is isotropic: the anisot](2026-07-03-v2.455-qnm-birefringence-anisotropy.md) | Complementing v2.451 (the isotropic angle β ~ α_EM). The same axion θ that gives the isotropic birefringence also |
+| v2.456 | [v2.456 - the parity is a one-channel object: closing the parity-observ](2026-07-03-v2.456-qnm-parity-one-channel.md) | The candidate's parity is the heterotic model-independent axion (v2.434), with a Planckian decay constant |

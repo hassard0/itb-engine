@@ -4,9 +4,9 @@ Constrain the space of possible quantum-gravity theories by imposing every consi
 amplitude positivity, causality, holography, the swampland, anomalies, black-hole thermodynamics — then confront
 the survivors with real experimental data and see what's left.
 
-> **Status:** v2.455 · full suite green · **[FINDINGS.md](docs/FINDINGS.md)** = curated results ·
+> **Status:** v2.456 · full suite green · **[FINDINGS.md](docs/FINDINGS.md)** = curated results ·
 > **[Research Report II](docs/results/2026-07-02-v2.428-RESEARCH-REPORT-II.md)** = publication-style synthesis ·
-> 42 rigor-tagged constraints · 14 framework encoders · ~566 result notes.
+> 42 rigor-tagged constraints · 14 framework encoders · ~567 result notes.
 
 ---
 
