@@ -7,7 +7,7 @@ low-energy QG EFT; the **de-toying arc** (v2.411-419), which made the toy-vs-rig
 showed the candidate's matter-gravity content is source-exact; and the **cosmological-constant sector**
 (v2.422-425), a new opt-in dark-energy sector. See [FINDINGS.md](FINDINGS.md) for what was found.
 
-## Current frontier (v2.455 — a mature plateau + a scale-independent-prediction vein)
+## Current frontier (v2.475 — a mature, self-corrected candidate at rest)
 
 The candidate theory is **complete** and its status is precisely tiered ([v2.415 rigor ledger](results/2026-07-01-v2.415-qnm-rigor-ledger.md)):
 a matter-dominant, near-Planckian, ghost-safe, string-like, globally-unique consistent EFT whose **matter-gravity
@@ -20,11 +20,12 @@ capped + data-pinned, [v2.418]). Rigor determines a **family**; data (cosmic bir
   heterotic string + its model-independent axion, but *not* uniquely so — CDT and asymptotic safety remain
   competitive (only LQG excluded); the Emergent String Conjecture sharpens the frontier to a heterotic-string
   **XOR** Planckian-KK dichotomy.
-- **A coherent cosmological history** ([v2.441–443]) on the R² scalaron: Starobinsky inflation (swampland-safe,
-  n_s≈0.964, r≈0.004) → R² dark-energy plateau (w>−1), a **four-experiment / three-keystone** signature with
-  **two over-determined keystones** (g_R2 via DESI-w + LiteBIRD-r; parity via birefringence + chiral-GW).
-- **A two-field late universe** ([v2.448]): a parity-even scalaron (DE/inflation) + a parity-odd axion
-  (birefringence), distinct fields.
+- **An axion-centric cosmological history** ([v2.441–443], **corrected v2.457–458**): the heavy R² **scalaron
+  drives Starobinsky inflation** (n_s≈0.964, r≈0.0037), while the **model-independent axion is the dark energy**
+  (thawing quintessence, w>−1) — *not* an R² scalaron plateau (that was retired v2.457). One rolling axion has a
+  **quadruple role** ([v2.470]): dark energy + cosmic birefringence (β~α_EM) + the baryon asymmetry (gravitational
+  leptogenesis) + chiral primordial GW. β and (1+w0) are over-determined (same field); f_a~M_Pl by a triple
+  convergence ([v2.461]).
 - **A thermodynamic pillar** ([v2.445]): causality and the black-hole second law agree on the Weyl² sign (g_C≥0).
 - **The two-layer solve** ([v2.439]): the program *presupposes* the graviton and carves its corrections — Layer 1
   (is gravity quantum: BMV/table-top) vs Layer 2 (which EFT: this program).
@@ -35,14 +36,16 @@ capped + data-pinned, [v2.418]). Rigor determines a **family**; data (cosmic bir
 
 The candidate, its UV completion, its cosmology, its thermodynamics, its falsifiability, and its explicit
 Lagrangian are all now **comprehensively developed and consolidated** (FINDINGS ★ + Research Report II current
-through v2.455). After the plateau, a **scale-independent-prediction vein** (v2.451–455) surfaced the program's cleanest content — dimensionless predictions of real data needing no toy scale: cosmic birefringence β ~ α_EM (matching the measured 0.34° in order of magnitude), the inflation line r = 3(1−n_s)² (r ≈ 0.0037, LiteBIRD), and the dark-energy thawing line wa ≈ −1.5(1+w0) (the most vulnerable front, in mild trend-tension with DESI). The low-energy carving has now extracted what it can; the remaining genuine levers are external:
+through v2.475). The **scale-independent-prediction vein** (v2.451–455) surfaced the cleanest content — dimensionless predictions needing no toy scale: β ~ α_EM (measured 0.34°, order of magnitude), r = 3(1−n_s)² (≈0.0037, LiteBIRD), the thawing line wa ≈ −1.5(1+w0) (mild DESI trend-tension). Since then (v2.462–475): a **scale-clean UV fingerprint** (moment-tower double-ratios are α′-independent → a heterotic-embedding test evading the string-scale wall, executable at the toy-Regge level, v2.464–466; it separates Regge vs KK but the candidate's branch-preference is residue-dependent, v2.474–475); honest **scorecards** — the DE doesn't resolve H0 but mildly helps S8 (v2.467/v2.469), the axion is a photophilic ALP that doesn't solve strong-CP (v2.468), and a complete open-problems accounting (v2.471: a gravitational-sector EFT candidate, *not* a TOE); and the **swampland-edge pattern** (v2.472–473: the candidate violates the *aggressive* conjectures — TCC on r, axion-WGC on the DE axion — exactly where it makes *observable* predictions, so LiteBIRD/DESI arbitrate the contested conjectures). One code fix (the η/s factor-of-2, v2.462) and one self-correction (v2.475 tempered v2.474) kept it honest. The low-energy carving has extracted what it can; the remaining genuine levers are external:
 
 1. **Observation** (not ours to run) — now the primary lever. Near-term (~2030s): CMB birefringence handedness
    (β>0), the DESI-w + LiteBIRD-r **co-occurrence** (the sharpest single falsifier), CMB-S4 matter, LiteBIRD r.
    Discrimination is **late-time** — the primordial channel is closed as a candidate-discriminator ([v2.447]).
 2. **UV / string-theory computation** (needs inputs the engine lacks) — a real heterotic-vacuum calculation of the
-   R²:R³:R⁴ + axion coefficients, to confirm/refute the leading UV completion and discriminate string vs CDT vs
-   asymptotic safety (the tower *type* is a UV observable the low-energy program cannot reach).
+   R²:R³:R⁴ + axion coefficients. The **scale-clean fingerprint** (v2.464–466) now gives a *partial* low-energy
+   handle (the α′-independent double-ratios), executed against a toy Regge tower (currently passing); the one
+   deferred in-house computation is the **exact Virasoro–Shapiro fingerprint** (forward-limit amplitude bookkeeping,
+   too error-prone to do reliably here). This would confirm/refute the leading UV completion.
 3. **Real normalization / live data** — every magnitude is O(1)-toy; a physical prefactor calibration (the parked
    R4/GWOSC route) remains blocked on the missing source-backed qNM→R4 map ([v2.209]).
 4. **New sectors** (if a genuinely fresh, non-artifact one appears) — the productive vein has largely been mined;
