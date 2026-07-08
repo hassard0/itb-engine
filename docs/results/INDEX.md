@@ -1,6 +1,6 @@
 # ITB Engine - Research Results Index
 
-Auto-generated front door to the full research program (579 notes). Regenerate with `python tools/build_index.py`.
+Auto-generated front door to the full research program (580 notes). Regenerate with `python tools/build_index.py`.
 
 ## Foundations (v0.x - v1.22): the original engine
 
@@ -628,3 +628,4 @@ Auto-generated front door to the full research program (579 notes). Regenerate w
 | v2.466 | [v2.466 - executing the scale-clean UV test: the candidate's fingerprin](2026-07-03-v2.466-qnm-regge-fingerprint-match.md) | v2.464/v2.465 *opened* a scale-clean UV-embedding test (moment-tower double-ratios are scale-independent) but didn't |
 | v2.467 | [v2.467 - the candidate and the H₀ tension: the canonical axion dark en](2026-07-03-v2.467-qnm-h0-tension.md) | Any dark-energy model must answer whether it helps or hurts the H₀ tension (Planck/CMB H₀ ~ 67 vs local/SH0ES |
 | v2.468 | [v2.468 - the candidate and strong-CP: the axion is a photophilic ALP (](2026-07-03-v2.468-qnm-strong-cp.md) | Confronting the candidate's axion with the strong-CP problem. If the model-independent axion has the **universal** |
+| v2.469 | [v2.469 - the candidate and the S8 tension: the thawing axion mildly he](2026-07-08-v2.469-qnm-s8-tension.md) | neutral-to-mildly-helpful, not a full resolution. |
