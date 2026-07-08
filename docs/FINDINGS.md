@@ -1,6 +1,6 @@
 # ITB Engine — Findings
 
-*What the Information-Theoretic Bootstrap engine has found. Current as of v2.460.*
+*What the Information-Theoretic Bootstrap engine has found. Current as of v2.470.*
 
 **Start here:** the section ★ below is the current headline — one near-unique, falsifiable candidate QG EFT and
 its most robust findings. §1–9 that follow are the *foundational program* (v1.7x–v2.2x): the island census, the
@@ -15,7 +15,7 @@ synthesis: method, candidate, rigor tiering, CC sector, falsifiability, limits) 
 
 ---
 
-## ★ The current picture (v2.460): a single, near-unique, falsifiable candidate — rigorous core, named UV completion, coherent cosmological history
+## ★ The current picture (v2.470): a single, near-unique, falsifiable candidate — rigorous core, named UV completion, coherent cosmological history
 
 **The UV completion (v2.434, v2.436):** the candidate needs a nonzero R² (Gauss–Bonnet) term (rigorously — given
 its cubic-curvature and parity couplings, g_R2=0 violates graviton positivity + causality + cross-sector), which
@@ -31,7 +31,7 @@ asymptotic safety; that needs genuine UV data →
 not a compactification computation. The **swampland Emergent String Conjecture** sharpens this to a clean
 dichotomy — the candidate's confirmed multi-state tower (v2.438) is a **heterotic-string tower XOR a Planckian-KK
 decompactification**, and any extra dimensions are Planckian (submm-invisible, so *not* the large-extra-dimensions
-scenario) → [v2.440](results/2026-07-02-v2.440-qnm-emergent-string.md).
+scenario) → [v2.440](results/2026-07-02-v2.440-qnm-emergent-string.md). **A scale-clean handle on the embedding (v2.464–466):** the individual curvature ratios need the (unknown) string scale, but every moment-tower *double-ratio* (g_{k−1}g_{k+1})/g_k² has α′ **cancel** — a pure number, so the candidate has a scale-clean UV **fingerprint** a string embedding must reproduce without the string scale. Executing it with a toy flat-residue Regge tower (moments = Riemann ζ-values) gives {1.23, 1.06} vs the candidate's {1.32, 1.00} — string-like in *shape* (>1, decreasing toward 1), a currently-*passing* check at the toy-Regge level → [v2.466](results/2026-07-03-v2.466-qnm-regge-fingerprint-match.md). *(Proof of concept: the exact Virasoro–Shapiro value is uncomputed; the shape is robust, the value approximate.)*
 
 **A cosmological history structured by the R² operator (v2.441–444, corrected v2.457).** The R² operator drives
 **Starobinsky inflation** (n_s ≈ 0.964, r ≈ 0.004) via a *heavy* scalaron (M ~ 3×10¹³ GeV) and *bounds* a
